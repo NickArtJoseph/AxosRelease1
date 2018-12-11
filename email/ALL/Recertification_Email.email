@@ -1,0 +1,67 @@
+<table height="400" width="550" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<!--StartFragment-->
+
+<font size="1" style="font-size: 12pt;"><font face="arial">{!Today}</font></font><div><font size="1" style="font-size: 12pt;"><font face="arial"><br></font>
+
+<font style="color: rgb(0, 0, 0); font-family: arial;" face="arial">{!Account.Name}</font><br>
+
+</font><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><font size="1" face="arial">{!Account.BillingAddress}</font></p><p style="color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><font size="1">{!City.BillingAddress},{!State.BillingAddress}, {!Zipcode.BillingAddress}</font></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><!--?xml:namespace prefix = o /--><o:p><font size="1">&nbsp;</font></o:p></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Dear Valued
+Lending Partner:</font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1"><br></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Our records
+indicate that it is time for BOFI Federal Bank to process your annual lending
+partner recertification.<o:p></o:p></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">As part of
+the process it is imperative that you inform us of either of the following
+changes of events:<o:p></o:p></font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1"><br></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><font size="1"><span style="line-height: 115%;">&nbsp;&nbsp;
+Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; </span><span style="line-height: 115%;">Has ownership structure change by more than 25% per
+individual owner?<o:p></o:p></span></font></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1"><br></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><font size="1"><span style="line-height: 115%;">&nbsp;&nbsp;
+Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp; </span><span style="line-height: 115%;">Have there been any material changes to the financial
+condition of your organization?<o:p></o:p></span></font></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">&nbsp;</font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">If you
+answered yes to either or both of the above questions, please provide
+supporting documentation.<o:p></o:p></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">&nbsp;</font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">I attest
+that the above information is true and correct.<o:p></o:p></font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><br></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Signature: &nbsp;&nbsp;&nbsp;&nbsp; ___________________________<o:p></o:p></font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1"><br></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;___________________________<o:p></o:p></font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1"><br></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Title:&nbsp;&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;___________________________<o:p></o:p></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">&nbsp;</font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">In addition,
+please submit the following items:</font></span></p><ul style="font-size: 12pt;"><li><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">Provide current year tax returns</font></span></div></li><li><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">Annual Financial Statement or Unaudited Financial Statement</font></span></div></li><li><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">Current E&amp;O Insurance and Fidelity Bond ( if applicable)</font></span></div></li><li><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">Performance review/report cards from current investors</font></span></div></li><li><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">Provide current information if company has any outstanding lawsuits and/or judgments</font></span></div></li></ul><span style="font-size: 12pt; line-height: 115%; text-indent: -0.25in;"><font size="1"><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" class="MsoNormal"><br></p></font></span><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%; text-indent: -0.25in;"><font size="1">When complete please print, sign and return to recertification information and additional items to: <a href="mailto:clientrelations@bofifederalbank.com">clientrelations@bofifederalbank.com</a></font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><font size="1">OR by mail at:</font></p><p style="font-size: 12pt;" class="MsoNormal"><span style="line-height: 18px; text-indent: -0.25in;"><font size="1">BOFI Federal Bank</font></span></p><p style="font-size: 12pt;" class="MsoNormal"><span style="line-height: 18px; text-indent: -0.25in;"><font size="1">Client Relations SFR 6th Floor</font></span></p><p style="font-size: 12pt;" class="MsoNormal"><span style="line-height: 18px; text-indent: -0.25in;"><font size="1">Wholesale/Correspondent</font></span></p><p style="font-size: 12pt;" class="MsoNormal"><span style="line-height: 18px; text-indent: -0.25in;"><font size="1">4350 La Jolla Village Drive, Suite 100<br>San Diego, CA 92122</font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><br></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNoSpacing"><font size="1">Thank you, we appreciate
+your immediate attention to our request.</font></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">BOFI Federal
+Bank appreciates your business, and we look forward to a continued prosperous
+relationship.&nbsp; &nbsp;<o:p></o:p></font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">&nbsp;</font></span></p>
+
+<p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><span style="line-height: 115%;"><font size="1">Respectfully,</font></span></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><i><span style="font-family: &quot;Brush Script MT&quot;;"><font size="1">Darin Judis</font></span></i></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><font size="1">Senior Vice President</font></p><p style="font-size: 12pt; color: rgb(0, 0, 0); font-family: arial;" class="MsoNormal"><font size="1">Wholesale/ Correspondent/Warehouse &amp;
+Multifamily Lending</font></p>
+
+<!--EndFragment--></div>]]></td>
+</tr>
+</table>

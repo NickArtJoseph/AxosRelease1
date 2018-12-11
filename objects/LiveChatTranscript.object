@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Abandoned</fullName>
+    </fields>
+    <fields>
+        <fullName>Abandoned_Chat__c</fullName>
+        <description>Used for calculating abandons</description>
+        <externalId>false</externalId>
+        <formula>IF(  Abandoned  &gt; 0, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Abandoned Chat</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ApplicationId__c</fullName>
+        <externalId>false</externalId>
+        <label>Application ID</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AverageResponseTimeOperator</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AverageResponseTimeVisitor</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Body</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Browser</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BrowserLanguage</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CaseId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ChatDisposition__c</fullName>
+        <externalId>false</externalId>
+        <label>Chat Disposition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Deposit Account</fullName>
+                    <default>false</default>
+                    <label>Deposit Account</label>
+                </value>
+                <value>
+                    <fullName>Business Account</fullName>
+                    <default>false</default>
+                    <label>Business Account</label>
+                </value>
+                <value>
+                    <fullName>Mortgage Account</fullName>
+                    <default>false</default>
+                    <label>Mortgage Account</label>
+                </value>
+                <value>
+                    <fullName>Personal Loan</fullName>
+                    <default>false</default>
+                    <label>Personal Loan</label>
+                </value>
+                <value>
+                    <fullName>Bill Pay</fullName>
+                    <default>false</default>
+                    <label>Bill Pay</label>
+                </value>
+                <value>
+                    <fullName>Debit Card</fullName>
+                    <default>false</default>
+                    <label>Debit Card</label>
+                </value>
+                <value>
+                    <fullName>Deposit Inquiry</fullName>
+                    <default>false</default>
+                    <label>Deposit Inquiry</label>
+                </value>
+                <value>
+                    <fullName>Dispute a Transaction</fullName>
+                    <default>false</default>
+                    <label>Dispute a Transaction</label>
+                </value>
+                <value>
+                    <fullName>IRA</fullName>
+                    <default>false</default>
+                    <label>IRA</label>
+                </value>
+                <value>
+                    <fullName>Wire</fullName>
+                    <default>false</default>
+                    <label>Wire</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Enrollment</fullName>
+                    <default>false</default>
+                    <label>Enrollment</label>
+                </value>
+                <value>
+                    <fullName>Not Resolved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Not Resolved</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Resolved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ChatDuration</fullName>
+    </fields>
+    <fields>
+        <fullName>ChatEmail__c</fullName>
+        <externalId>false</externalId>
+        <label>ChatEmail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChatFirstName__c</fullName>
+        <externalId>false</externalId>
+        <label>ChatFirstName</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChatLastName__c</fullName>
+        <externalId>false</externalId>
+        <label>ChatLastName</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChatPhone__c</fullName>
+        <externalId>false</externalId>
+        <label>ChatPhone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Chat_Inquiry_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Chat Inquiry Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Checking, Savings, or other deposit accounts</fullName>
+                    <default>false</default>
+                    <label>Checking, Savings, or other deposit accounts</label>
+                </value>
+                <value>
+                    <fullName>Existing Mortgage, Auto or other loans</fullName>
+                    <default>false</default>
+                    <label>Existing Mortgage, Auto or other loans</label>
+                </value>
+                <value>
+                    <fullName>All Other New Account Inquiries</fullName>
+                    <default>false</default>
+                    <label>All Other New Account Inquiries</label>
+                </value>
+                <value>
+                    <fullName>New Online Banking Help</fullName>
+                    <default>false</default>
+                    <label>New Online Banking Help</label>
+                </value>
+                <value>
+                    <fullName>Advisor Account Opening</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Advisor Account Opening</label>
+                </value>
+                <value>
+                    <fullName>Advisor Dashboard Help</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Advisor Dashboard Help</label>
+                </value>
+                <value>
+                    <fullName>Apply for a loan</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Apply for a loan</label>
+                </value>
+                <value>
+                    <fullName>Bank account features and benefits</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Bank account features and benefits</label>
+                </value>
+                <value>
+                    <fullName>Bill Pay</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Bill Pay</label>
+                </value>
+                <value>
+                    <fullName>Business Account</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Business Account</label>
+                </value>
+                <value>
+                    <fullName>Customer Information Inquiry</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Customer Information Inquiry</label>
+                </value>
+                <value>
+                    <fullName>Debit card</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Debit card</label>
+                </value>
+                <value>
+                    <fullName>Deposit Account</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Deposit Account</label>
+                </value>
+                <value>
+                    <fullName>Deposit inquiry</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Deposit inquiry</label>
+                </value>
+                <value>
+                    <fullName>Dispute a transaction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Dispute a transaction</label>
+                </value>
+                <value>
+                    <fullName>Forgot Advisor Password</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Forgot Advisor Password</label>
+                </value>
+                <value>
+                    <fullName>Forgot Advisor UserName</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Forgot Advisor UserName</label>
+                </value>
+                <value>
+                    <fullName>I am an HRB Customer</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>I am an HRB Customer</label>
+                </value>
+                <value>
+                    <fullName>IRA</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>IRA</label>
+                </value>
+                <value>
+                    <fullName>Mortgage Loan</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Mortgage Loan</label>
+                </value>
+                <value>
+                    <fullName>Open a business bank account</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Open a business bank account</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Personal Loan</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Personal Loan</label>
+                </value>
+                <value>
+                    <fullName>Question about your business bank account</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Question about your business bank account</label>
+                </value>
+                <value>
+                    <fullName>Question about your loan</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Question about your loan</label>
+                </value>
+                <value>
+                    <fullName>Speak with Relationship Manager</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Speak with Relationship Manager</label>
+                </value>
+                <value>
+                    <fullName>Types of loans</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Types of loans</label>
+                </value>
+                <value>
+                    <fullName>Wire</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Wire</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EndTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>EndedBy</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IpAddress</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>LeadId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LiveChatButtonId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LiveChatDeploymentId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LiveChatVisitorId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Location</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>MaxResponseTimeOperator</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>MaxResponseTimeVisitor</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OperatorMessageCount</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Platform</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReferrerUri</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RequestTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ScreenResolution</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SkillId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>StartTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SupervisorTranscriptBody</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UserAgent</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UserType__c</fullName>
+        <externalId>false</externalId>
+        <label>User Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Existing</fullName>
+                    <default>false</default>
+                    <label>Existing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VisitorMessageCount</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>VisitorNetwork</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>WaitTime</fullName>
+    </fields>
+    <listViews>
+        <fullName>Advisor_Chat_Overflow_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Advisor Chat Overflow</label>
+        <queue>Advisor_Chat_Overflow</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Advisor_Chat_Queue_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Advisor Chat Queue</label>
+        <queue>Advisor_Chat_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Business_Banking_Chat_Queue_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Business Banking Chat Queue</label>
+        <queue>Business_Banking_Chat_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Business_Banking_Overflow_Chats_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Business Banking Overflow Chats</label>
+        <queue>Business_Banking_Overflow_Chats</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Consumer_Deposits_Chat_Overflow_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Consumer Deposits Chat Overflow</label>
+        <queue>Consumer_Deposits_Chat_Overflow</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Consumer_Deposits_Chat_Queue_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Consumer Deposits Chat Queue</label>
+        <queue>Consumer_Deposits_Chat_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Loan_Servicing_Chat_Queue_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Loan Servicing Chat Queue</label>
+        <queue>Loan_Servicing_Chat_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UDB_Cases_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>UDB Cases</label>
+        <queue>UDB_Cases</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UDB_Chat_Queue_LiveChatTranscript</fullName>
+        <filterScope>Queue</filterScope>
+        <label>UDB Chat Queue</label>
+        <queue>UDB_Chat_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>LiveChatVisitor</customTabListAdditionalFields>
+        <customTabListAdditionalFields>StartTime</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EndTime</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>LiveChatVisitor</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>StartTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EndTime</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LiveChatVisitor</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>StartTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EndTime</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ChatPhone__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>LiveChatVisitor</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>StartTime</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EndTime</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

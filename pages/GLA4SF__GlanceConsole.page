@@ -1,0 +1,527 @@
+<apex:page showHeader="fasle" sidebar="false" standardStylesheets="false" controller="GLA4SF.GlanceConsoleController" action="{!initPage}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+
+<apex:outputPanel rendered="{!errorMessage != null}">
+    <div id="component" class="container" style="padding: 0; margin: 0; width: 100%;">
+        <div id="infoPanel" class="panel row">
+            <div class="well" style="height:500px">
+                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                    <div class="alert alert-danger" role="alert">{!errorMessage}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!errorMessage == null}">
+<style>
+#glance-logo {
+    display: block;
+    width: 63px;
+    height: 15px;
+    background: url({!$Resource.G4S__GlanceLogo}) no-repeat 0 0;
+    padding-right: 5px;
+}
+
+iframe.cobrowse {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+.waiting-screen-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3DCBF7;
+    vertical-align: middle;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+#glance-waiting-icon {
+    border: 0;
+    vertical-align: middle;
+    background: url({!$Resource.GLA4SF__GlanceSpinner2}) 50% 50%;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 100%;
+    display: block;
+    padding-right: 10px;
+}
+#waitPanel .well {
+    
+    text-align: center;
+}
+</style>
+
+<div id="component" class="container" style="padding: 0; margin: 0; width: 100%;">
+    <div id="infoPanel" class="panel row">
+        <div class="well" style="height:500px;">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div class="alert alert-danger" role="alert">You don't have an active chat window.  Please select a chat window...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="waitPanel" class="panel row" style="display: none;">
+        <div class="well" style="height: 500px;">
+            <div class="">
+                <div class="waiting-screen-text">Waiting for guest</div>
+                <div id="glance-waiting-icon" alt="Connecting..." title="Connecting..."></div>
+                <button class="btn btn-info" onclick="cobrowseConnectCancel(); return false;">Cancel</button>
+            </div>
+        </div>  
+    </div>
+    
+    <div id="startPanel" class="panel row" style="display: none;">
+        <div class="well" style="height: 500px;">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div id="cobrowseError" class="alert alert-danger" role="alert" style="display: none;"></div>
+            
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr id="buttonsPanel" style="display: block;" valign="top">
+                        <td style="vertical-align: middle;"><span id="glance-logo"></span></td>
+                        <td>&nbsp;&nbsp;</td>
+                        <td id="keyEntry" style="{!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Verbal Key', '', 'display: none;')}"><input id="key" type="text" class="form-control" placeholder="Key" style="display: inline; width: 100px;"/></td>
+                        <td id="keySpacer" style="{!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Verbal Key', '', 'display: none;')}">&nbsp;&nbsp;</td>
+                        <td><button class="btn btn-info" onclick="cobrowse(); return false;">Cobrowse</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cobrowsePanel" class="panel" style="width: 100%; height: 100%; display: none;">
+        <button class="btn btn-info" style="margin-bottom: 5px;" onclick="stop(); return false;">Stop</button>
+    </div>
+</div>
+
+<script id="cobrowsescript" charset="UTF-8" groupid="{!JSENCODE(userSettings.G4S__Group_ID__c)}" site="production" skin="Custom" src="https://www.glancecdn.net/cobrowse/CobrowseJS.ashx?group={!JSENCODE(userSettings.G4S__Group_ID__c)}&site=production&script=Agent" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/support/console/32.0/integration.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // Set height to maximum of window size to give the
+    // Cobrowe iframe as much real estate as possible.
+    $('#component').height($(window).height());
+
+    $(window).resize(function(){
+        $('#component').height($(this).height());
+    });
+});
+
+
+var initiationOption = '{!companySettings.G4S__Live_Agent_Initiation_Options__c}';
+var ieFallbackOption = '{!companySettings.G4S__IE_Fallback_Option__c}';
+var windowOption = '{!companySettings.G4S__Cobrowse_Window_Options__c}';
+var currentTabId;
+var chatTabs = [];
+
+// Detect primary tab change.
+sforce.console.onFocusedPrimaryTab(function(focusedResult) {
+    currentTabId = focusedResult.id;
+    sforce.console.setCustomConsoleComponentVisible(false);
+    updatePanels();
+});
+
+// Detect ending chats.
+sforce.console.chat.onChatEnded(function(chatEndedResult) {
+    if (chatEndedResult.success == true) {
+        for (var i = 0; i < chatTabs.length; i++) {
+            if (chatTabs[i].chatKey == chatEndedResult.chatKey) {
+                // Disable polling for cobrowse session if it's in progress.
+                chatTabs[i].lookupCobrowseSessionEnabled = false;
+                
+                // Remove cobrowse iframe if it exists.
+                $('#cobrowse-' + chatTabs[i].tabId).remove();
+                
+                // Remove the chat tab.
+                chatTabs.splice(i, 1);
+                
+                // Update the panels.
+                updatePanels();
+                
+                break;
+            }
+        }
+    }
+});
+
+// Set the initial current tab if there is one.
+sforce.console.getFocusedPrimaryTabId(function(focusedResult) {
+    if (focusedResult.success == true) {
+        currentTabId = focusedResult.id;
+        updatePanels();
+    }
+});
+
+
+// Update the panels when console button clicked.
+sforce.console.onCustomConsoleComponentButtonClicked(function(clickedResult) {
+    if (clickedResult.windowHidden == false) {
+        updatePanels();
+    }
+});
+
+// Continually check for new cobrowse windows being closed so
+// that the option to start cobrowsing can be presented again.
+if (windowOption == 'New Window') {
+    setInterval(
+        function() {
+            var chatTab = getCurrentChatTab();
+
+            if (chatTab != null && chatTab.status == 'Cobrowsing' && (chatTab.cobrowseWindow == null || chatTab.cobrowseWindow.closed == true)) {
+                chatTab.status = 'Stopped';
+                updatePanels();
+            }
+        },
+        3000 // Every 3 seconds.
+    );
+}
+
+function getCurrentChatTab() {
+    var chatTab;
+    
+    for (var i = 0; i < chatTabs.length; i++) {
+        if (chatTabs[i].tabId == currentTabId) {
+            chatTab = chatTabs[i];
+            break;
+        }
+    }
+    
+    return chatTab;
+}
+
+function updatePanels() {
+    var chatTab = getCurrentChatTab();
+
+    $('div.panel').hide();
+
+    if (chatTab == null) {
+        // Check if the current tab is for a chat. If so, create a chat tab object to keep track of its state. 
+        sforce.console.chat.getDetailsByPrimaryTabId(currentTabId, function(detailsResult) {
+            if (detailsResult.success == true) {
+                var chatTab = {
+                    tabId: currentTabId,
+                    chatKey: detailsResult.details.chatKey,
+                    sessionKey: detailsResult.details.visitorInfo.sessionKey,
+                    isInternetExplorer: (detailsResult.details.visitorInfo.browserName.indexOf('Internet Explorer') != -1)
+                };
+
+                chatTabs.push(chatTab);
+                
+                if (initiationOption == 'Instant' && !chatTab.isInternetExplorer) {
+                    cobrowse();
+                } if (chatTab.isInternetExplorer && (initiationOption == 'Automatic' || initiationOption == 'Instant') && ieFallbackOption == 'Verbal Key') {
+                    $('#keyEntry').show();
+                    $('#keySpacer').show();
+                }
+                    
+                $('#startPanel').show();
+            } else {
+                $('#infoPanel').show();
+            }
+        });
+    } else {
+        if (chatTab.status == 'Polling') {
+            $('#waitPanel').show();
+        } else if (chatTab.status == 'Cobrowsing') {
+            if (windowOption != 'New Window') {
+                $('iframe.cobrowse').hide();
+                $('#cobrowse-' + currentTabId).show();
+            }
+            
+            $('#cobrowsePanel').show();
+        } else {
+            $('#startPanel').show();
+        }
+    }
+}
+
+function cobrowse() {
+    var chatTab = getCurrentChatTab();
+
+    if ((initiationOption == 'Automatic' || initiationOption == 'Instant') && !chatTab.isInternetExplorer) {
+        var data = (initiationOption == 'Automatic' ? 'true' : 'false') + '|' + chatTab.chatKey + '|' + '{!JSENCODE(userSettings.G4S__Group_ID__c)}';
+    
+        // Send event to start cobrowse.
+        sforce.console.chat.sendCustomEvent(chatTab.chatKey, 'startCobrowse', data, function(sendResult) {
+            if (sendResult.success == true) {
+                chatTab.sessionId = chatTab.chatKey;
+
+                cobrowseConnectStart(chatTab);
+
+                // Listen for event that cobrowse was started.
+                sforce.console.chat.onCustomEvent(chatTab.chatKey, 'cobrowseStarted', function(receiveResult) {
+                    // Cobrowse started.
+                });
+                
+                sforce.console.chat.onCustomEvent(chatTab.chatKey, 'cobrowseRejected', function(receiveResult) {
+                    if (receiveResult.success) {
+                    	cobrowseConnectCancel();
+                    }
+                });
+                
+            } else {
+                alert('Error sending Cobrowse request to chat visitor.');
+            }
+        });
+    } else if (initiationOption == 'Link Via Chat' || (chatTab.isInternetExplorer && (initiationOption == 'Automatic' || initiationOption == 'Instant') && ieFallbackOption == 'Link Via Chat')) {
+        var sessionId = chatTab.chatKey;
+        var cobrowseUrl = '{!companySettings.G4S__Cobrowse_URL__c}';
+        var message = '{!JSENCODE(companySettings.G4S__Cobrowse_Invitation_Text__c)}\n'
+                    + cobrowseUrl + (cobrowseUrl.indexOf('?') == -1 ? '?' : '&') + 'visitorid=' + encodeURIComponent(sessionId);
+                        
+        // Send cobrowse link to chasitor.
+        sforce.console.chat.sendMessage(chatTab.chatKey, message, function(sendResult) {
+            if (sendResult.success == true) {
+                chatTab.sessionId = sessionId;
+    
+                cobrowseConnectStart(chatTab);
+            } else {
+                alert('Error sending Cobrowse link to chat visitor.');
+            }
+        });
+    } else if (initiationOption == 'Verbal Key' || (chatTab.isInternetExplorer && (initiationOption == 'Automatic' || initiationOption == 'Instant') && ieFallbackOption == 'Verbal Key')) {
+        var key = $.trim($('#key').val());
+        
+        if (key.length > 0) {
+            chatTab.sessionId = key;
+
+            cobrowseConnectStart(chatTab);
+        } else {
+            alert('Please enter a key.');
+        }
+    } else if (initiationOption == 'Click on Associated Field') {
+        $('#cobrowseError').hide();
+        
+        if (chatTab.associatedKeyEntryEnabled == true) {
+            var key = $.trim($('#key').val());
+        
+            if (key.length > 0) {
+                chatTab.sessionId = key;
+    
+                cobrowseConnectStart(chatTab);
+            } else {
+                alert('Please enter a key.');
+            }
+        } else {
+            sforce.console.getFocusedSubtabObjectId(function(focusedResult) {
+                if (focusedResult.success == true && focusedResult.id != null) {
+                    var recordId = focusedResult.id;
+
+                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.GlanceConsoleController.getSessionKey}', recordId, function(result, event) {
+                        if (event.status) {
+                            if (result == null) {
+                                chatTab.associatedKeyEntryEnabled = true;
+                                
+                                $('#keyEntry').show();
+                                $('#keySpacer').show();
+                                
+                                $('#cobrowseError').html('Key not found on record. Enter a key to begin Cobrowse.').show();
+                            } else {
+                                chatTab.sessionId = result;
+
+                                cobrowseConnectStart(chatTab);
+                            }
+                        } else {
+                            alert('Error getting session key.');
+                        }
+                    }, {buffer: false});
+                } else {
+                    chatTab.associatedKeyEntryEnabled = true;
+    
+                    $('#keyEntry').show();
+                    $('#keySpacer').show();
+    
+                    $('#cobrowseError').html('Key not found on record. Enter a key to begin Cobrowse.').show();
+                }
+            });
+        }
+    }
+}
+
+function stop() {
+    var chatTab = getCurrentChatTab();
+
+    GLANCE.Cobrowse.Agent.leaveSession();
+    
+    chatTab.status = 'Stopped';
+
+    updatePanels();
+    
+/*
+    if (initiationOption == 'Automatic' && !chatTab.isInternetExplorer) {
+        var data = '{!JSENCODE(userSettings.G4S__Group_ID__c)}';
+    
+        // Send event to end cobrowse.
+        sforce.console.chat.sendCustomEvent(chatTab.chatKey, 'stopCobrowse', data, function(sendResult) {
+            if (sendResult.success == true) {
+                chatTab.status = 'Stopped';
+                updatePanels();
+            } else {
+                alert('Error stopping Cobrowse.');
+            }
+        });
+    }
+*/
+}
+
+function cobrowseConnectStart(chatTab) {
+    chatTab.lookupCobrowseSessionEnabled = true;
+    chatTab.status = 'Polling';
+
+    $('#startPanel').hide();
+    $('#waitPanel').show();
+
+    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.GlanceConsoleController.initiateCobrowseSession}', chatTab.sessionKey, function(result, event) {
+        if (event.status) {
+            chatTab.cobrowseSessionId = result;
+            
+            lookupCobrowseSession(chatTab);
+        } else {
+            alert('Error initiating Cobrowse session.');
+        }
+    }, {buffer: false});
+}
+
+function cobrowseConnectCancel() {
+    var chatTab = getCurrentChatTab();
+    
+    chatTab.lookupCobrowseSessionEnabled = false;
+    
+    $('#waitPanel').hide();
+    $('#startPanel').show();
+}
+    
+function cobrowseConnectCancelTab(tabId) {
+    if (tabId === getCurrentChatTab().tabId){
+    	chatTab.lookupCobrowseSessionEnabled = false;
+        $('#waitPanel').hide();
+        $('#startPanel').show();
+    
+    }
+}
+
+function lookupCobrowseSession(chatTab) {
+    // Only poll for a session if enabled.
+    if (!chatTab.lookupCobrowseSessionEnabled) {
+        return;
+    }
+        
+    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.GlanceConsoleController.getJoinUrl}', '{!userSettings.G4S__Glance_Address__c}', chatTab.sessionId, function(result, event) {
+//console.log('looking for session: address[{!userSettings.G4S__Glance_Address__c}] key['+chatTab.sessionId+'] result['+result+']');
+        if (event.status) {
+            if (result && result.length > 0) {
+                chatTab.lookupCobrowseSessionEnabled = false;
+                startCobrowse(chatTab, result);
+            } else {
+                // Keep polling for session every 3 seconds.
+                timeout = setTimeout(
+                    function() {
+                        lookupCobrowseSession(chatTab);
+                    },
+                    3000
+                );
+            }
+        } else {
+            alert('Error polling for Cobrowse session.');
+        }
+    }, {buffer: false, escape: false});
+}
+
+function startCobrowse(chatTab, joinUrl) {
+    chatTab.status = 'Cobrowsing';
+    
+    if (joinUrl.toLowerCase().startsWith('glancepanorama:')){
+    
+    	console.log('Opening Panorama');
+    	
+    	window.location = joinUrl;
+    	
+        var currentChatTab = getCurrentChatTab();
+        if (currentChatTab.tabId == chatTab.tabId) {
+            var html = '<div class="well" style="height:500px;">'
+                     +      '<div class="col-sm-12 col-md-10 col-md-offset-1">'
+                     +          '<div class="alert alert-info" role="alert">Panorama will now be launched.</div>'
+                     +      '</div>'
+                     + '</div>';
+        
+            $('#cobrowsePanel').html(html);
+        
+            $('#cobrowsePanel').show();
+            $('#waitPanel').hide();
+        }    	
+    
+    } else if (windowOption == 'New Window') {
+        var winWidth = window.outerWidth || window.outerWidth || $(window).width();
+        var winHeight = window.outerWidth || window.outerHeight || $(window).height();
+        var windowOptionsGlance = (window.innerWidth == null) ? '' : 'width=' + winWidth + ',height=' + winHeight+',resizable=1';
+        
+        console.log('options: ' + windowOptionsGlance);
+        
+        var cobrowseWindow = window.open(joinUrl, '_blank', windowOptionsGlance);
+
+        var currentChatTab = getCurrentChatTab();
+        if (currentChatTab.tabId == chatTab.tabId) {
+            var html = '<div class="well" style="height:500px;">'
+                     +      '<div class="col-sm-12 col-md-10 col-md-offset-1">'
+                     +          '<div class="alert alert-info" role="alert">Your cobrowse viewer should open in a new tab or window. (If not, please configure this browser to allow pop-ups.)</div>'
+                     +      '</div>'
+                     + '</div>';
+        
+            $('#cobrowsePanel').html(html);
+        
+            $('#cobrowsePanel').show();
+            $('#waitPanel').hide();
+        }
+
+        currentChatTab.cobrowseWindow = cobrowseWindow;
+    } else {
+        // Add a new iframe for the new cobrowse session.
+        var iframe = $('<iframe id="cobrowse-' + currentTabId + '" src="' + joinUrl + '" class="cobrowse"></iframe>');
+        iframe.hide();
+        iframe.appendTo('#cobrowsePanel');
+        
+        GLANCE.Cobrowse.Agent.init(iframe[0]);
+        GLANCE.Cobrowse.Agent.addEventListener('sessionend', function(eventName, eventData) {
+
+        });
+        
+        var currentChatTab = getCurrentChatTab();
+        if (currentChatTab.tabId == chatTab.tabId) {
+            // Hide all cobrowse iframes in cobrowse panel.
+            $('iframe.cobrowse').hide();
+            
+            // Show the new cobrowse iframe.
+            iframe.show();
+            
+            $('#cobrowsePanel').show();
+            $('#waitPanel').hide();
+        }
+    }
+    
+    // Log the event.
+    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.GlanceConsoleController.addCobrowseSessionEvent}', chatTab.cobrowseSessionId, 'Session started', function() {}, {buffer: false});
+}
+</script>
+</apex:outputPanel>
+
+</apex:page>

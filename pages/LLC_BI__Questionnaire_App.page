@@ -1,0 +1,35 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="LLC_BI.QuestionnaireAppController">
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS,
+		'angularJS/angular-1.5.7/angular-route.min.js')}"/>
+	<nFORCE:ncPubsubIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'providers/RemotingProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'controllers/AppController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'controllers/QuestionnaireController.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'directives/checkboxQuestion.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'directives/picklistQuestion.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'directives/textQuestion.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'directives/textareaQuestion.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'filters/visible.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'constants/constants.js')}" />
+	<apex:styleSheet value="{!URLFOR($Resource.LLC_BI__Questionnaire, 'css/Questionnaire.css')}" />
+
+	<div id="ncQuestionnaire" ng-controller="AppController">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<message></message>
+						<ng-view></ng-view>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+
+	<c:QuestionnaireRoutes />
+</apex:page>

@@ -1,0 +1,56 @@
+<apex:page controller="mkto_si.StreamServiceController" action="{!doAction}" contentType="application/x-javascript; charset=utf-8" showHeader="false" standardStylesheets="false" sidebar="false">
+    <apex:pageBlock > 
+        <c:CssAndJavascript2 />
+        <!-- CSS files from One Starter -->
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/icons.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/styles.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/OneStarter.css')}"/>
+
+        <script src="{!$Resource.jqueryTools}" type="text/javascript"></script>
+        <script src="{!URLFOR($Resource.OneStarterZip,'onestarter-master/jquery.onestarter.js')}" type="text/javascript"></script>
+        <script src="{!$Resource.jScroll}" type="text/javascript"></script>
+        <script src="{!$Resource.iScroll}" type="text/javascript"></script>
+        <apex:pageBlockTable rowClasses="mkt-mobile-table-row noselect" styleClass="mkt-mobile-table" value="{!streamList.listItemsPage}" var="item"> 
+                
+            <apex:column >
+                <div class="mktStreamCell">
+                    <span style="position:absolute">
+                        <img class="mkt-mobile-hide-d" src="{!$Resource.web}/mkto/images/hot_lead.png" />
+                    </span>
+                    <apex:outputText value="{!item.sMomentDT}" styleClass="mktStreamTime mkt-mobile-time fw-semibold mkt-mobile-hide-d"/>
+                    <apex:outputPanel >
+                        <div class="{!IF(isSalesforceOne,'man f3 text-color-1 fw-semibold ng-binding mkt-link','mktStreamLead')}" style="padding-bottom: 8px{!IF(isSalesforceOne,';padding-left: 30px','')}">
+                            <apex:outputLink onclick="Marketo.actionStart();" styleClass="{!IF(isSalesforceOne,'mkt-mobile-table-row-click','')}" value="{!item.contactLink.url}" rendered="{!item.contactLink.url != null}">{!item.contactLink.name}</apex:outputLink>
+                            <apex:outputText value="{!item.contactLink.name}" rendered="{!(item.contactLink.url == null)}" />
+                        </div>
+                        <div class="mkt-mobile-hide-d" style="{!IF(isSalesforceOne,'padding-bottom: 8px;padding-left:30px','')}">
+                            <apex:outputText value="{!item.accountLink.name}" rendered="{!(item.accountLink.url == null) || isSalesforceOne}"/>
+                        </div>
+                    </apex:outputPanel>
+                    <div class="{!IF(isSalesforceOne,'','mktStreamMoment')}" style="{!IF(isSalesforceOne,'padding-left:30px;padding-top:8px','')}">
+                        <apex:outputText value="{!item.momentType+': ' }" style="font-weight: bold" rendered="{!item.momentType != null && item.momentNote != null  && (true == isSalesforceOne)}"/>
+                        <apex:outputText value="{!item.momentNote}" rendered="{!true == isSalesforceOne}"/>
+                        <div class="mkt-mobile-hide-m"></div>
+                        <apex:outputText value="{!item.momentNote}" rendered="{!(item.momentNote != null) && (false == isSalesforceOne)}"/>
+                        <apex:outputText value=" ({!item.momentType})" rendered="{!(item.momentType != null) && (false == isSalesforceOne)}"/>
+                    </div>
+                
+                    <img class="mktStreamIcon mkt-mobile-hide-m" src="{!$Resource.web}/mkto/images/hot_lead.png" />
+                
+                    <div class="mktStreamAccount mkt-mobile-hide-m">
+                        <apex:outputLink value="{!item.accountLink.url}" target="_top" rendered="{!item.accountLink.url != null}">{!item.accountLink.name}</apex:outputLink>
+                        <apex:outputText value="{!item.accountLink.name}" rendered="{!(item.accountLink.url == null)}"/>
+                    </div>
+    
+                    <div class="mktStreamTime mkt-mobile-hide-m">
+                        <apex:outputText value="{!item.sMomentDT}" />&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                        <apex:outputLink charset="utf-8" value="{!item.subscribeLinkUrl}" rendered="{!(item.subscribeLinkUrl != null)}">{!$Label.mkto_si__subscribe}</apex:outputLink>
+                    </div>                
+                </div>
+            </apex:column>
+        </apex:pageBlockTable>
+                            
+    </apex:pageBlock>
+    
+    <div class="mkt-tabs-message mkt-show-{!streamList.resultSize == 0}">{!$Label.mkto_si__lead_feed_empty_message}</div>
+</apex:page>

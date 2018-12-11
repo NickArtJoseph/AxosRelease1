@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>Salesforce.com Tip Sheets</narrowComponents>
+    <narrowComponents>standard-RecentItems</narrowComponents>
+    <narrowComponents>Tutorials</narrowComponents>
+    <narrowComponents>Housekeeping</narrowComponents>
+    <narrowComponents>qbdialer__PowerStandingsSidebar</narrowComponents>
+    <narrowComponents>Five9__Five9 Voicemails</narrowComponents>
+    <wideComponents>standard-Dashboard</wideComponents>
+    <wideComponents>standard-Tasks</wideComponents>
+    <wideComponents>standard-Calendar</wideComponents>
+    <wideComponents>Five9__Five9 ACD Status</wideComponents>
+</HomePageLayout>

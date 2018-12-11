@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_67524110</developerName>
+        <masterLabel>Phone Result</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Bad Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wrong Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Live Message</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Busy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Answer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contact</sourceValue>
+            </sourceValues>
+            <value>Not Correct Contact</value>
+        </values>
+        <values>
+            <value>Busy/No Answer</value>
+        </values>
+        <values>
+            <value>Contact/Correct Contact</value>
+        </values>
+        <values>
+            <value>Message Left</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Correct Contact</sourceValue>
+            </sourceValues>
+            <value>Correct Contact</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStackedTo100</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Activity.qbdialer__Call_Date_Time__c</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_67524110</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CALLDISPOSITION</field>
+    </columns>
+    <columns>
+        <field>Activity.isdc_dialed_phone_number__c</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>CALLDURATIONFORMATTED</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CALLTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>Activity.qbdialer__Call_Date_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_67524110</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Correct Contact Ratio By Dials</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>t</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CURPREV1</interval>
+    </timeFrameFilter>
+</Report>

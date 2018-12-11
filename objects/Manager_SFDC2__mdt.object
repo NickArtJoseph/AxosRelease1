@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This custom metadate will be used to add all the Roles (Manager and Non-manager) for all SFDC2 BU</description>
+    <fields>
+        <fullName>Bussines_Unit__c</fullName>
+        <description>Name of the Bussines Unit</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>E.g.  Business Banking, C&amp;I, Consumer Wholesale</inlineHelpText>
+        <label>Bussines Unit</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Live_Agent_Queue__c</fullName>
+        <description>This field should be used to map the Chat Queue to the corresponding Lead record type.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Live Agent Queue</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manager_Role__c</fullName>
+        <description>Save the manager role name for Restrict Ownership</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Manager Role</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>None_Manager_Role__c</fullName>
+        <description>Save the none-manager role name</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>None-Manager Role</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <description>Mapping for the Queue in the ReferraltypeSFDC2LTGN clas.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Queue Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Re_Assign_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field has the porpoise to apply the Lead assignment rules on the records created on the Site CreateLeadForm</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Re Assign Lead</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RecordType_DeveloperName__c</fullName>
+        <description>Sae the developername for BU.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>RecordType DeveloperName</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordType_Name__c</fullName>
+        <description>SAve the recordtype name for the BU.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>RecordType Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isLeadRT_SFDC2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field for Checking is the RT comming from SFDC2 and needs to be implemented in the LEadTriggerHandler</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>isLeadRT</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>newReferralAvailable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>For new Referral Ligthingn component</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>newReferralAvailable</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Manager SFDC2</label>
+    <listViews>
+        <fullName>ALL</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Bussines_Unit__c</columns>
+        <columns>isLeadRT_SFDC2__c</columns>
+        <columns>Manager_Role__c</columns>
+        <columns>None_Manager_Role__c</columns>
+        <columns>Queue_Name__c</columns>
+        <columns>Re_Assign_Lead__c</columns>
+        <columns>RecordType_DeveloperName__c</columns>
+        <columns>RecordType_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>ALL</label>
+    </listViews>
+    <listViews>
+        <fullName>FULL_fields_view</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Bussines_Unit__c</columns>
+        <columns>isLeadRT_SFDC2__c</columns>
+        <columns>Manager_Role__c</columns>
+        <columns>None_Manager_Role__c</columns>
+        <columns>Queue_Name__c</columns>
+        <columns>Live_Agent_Queue__c</columns>
+        <columns>Re_Assign_Lead__c</columns>
+        <columns>RecordType_DeveloperName__c</columns>
+        <columns>RecordType_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>FULL fields view</label>
+    </listViews>
+    <listViews>
+        <fullName>Full_view</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>NamespacePrefix</columns>
+        <columns>Bussines_Unit__c</columns>
+        <columns>isLeadRT_SFDC2__c</columns>
+        <columns>Live_Agent_Queue__c</columns>
+        <columns>Manager_Role__c</columns>
+        <columns>None_Manager_Role__c</columns>
+        <columns>Queue_Name__c</columns>
+        <columns>Re_Assign_Lead__c</columns>
+        <columns>RecordType_DeveloperName__c</columns>
+        <columns>RecordType_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Full view</label>
+    </listViews>
+    <pluralLabel>Managers SFDC2</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

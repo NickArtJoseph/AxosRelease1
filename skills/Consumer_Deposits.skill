@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skill xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <users>
+            <user>abonilla@bofi.com</user>
+            <user>bfoster@bofi.com</user>
+            <user>dgriffith@bofi.com</user>
+            <user>dcroswell@bofi.com</user>
+            <user>estefanak@bofi.com</user>
+            <user>hcanty@axos.com</user>
+            <user>jsuka@bofi.com</user>
+            <user>jgreen@bofi.com</user>
+            <user>nblackman@bofifederalbank.com</user>
+            <user>psturrup@bofi.com</user>
+            <user>rcjohnson@bofi.com</user>
+            <user>rcloughley@bofi.com</user>
+            <user>ttatum@bofi.com</user>
+            <user>zlara@bofi.com</user>
+        </users>
+    </assignments>
+    <label>Consumer Deposits</label>
+</Skill>

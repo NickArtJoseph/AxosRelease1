@@ -1,0 +1,1879 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride">
+	
+	<aura:attribute name="oldFormRecord" type="Boarding_Form__c" />
+    <aura:attribute name="newFormRecord" type="Boarding_Form__c" />
+	<aura:attribute name="newBoardingForm" type="Boarding_Form__c" default="{ 'sobjectType' : 'Boarding_Form__c' }" />
+	<aura:attribute name="oldBoardingForm" type="Boarding_Form__c" default="{ 'sobjectType' : 'Boarding_Form__c' }" />
+	<aura:attribute name="formRecordError" type="String" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<force:recordData aura:id="formRecordLoader"
+					  recordId="{!v.recordId}"
+					  layoutType="FULL"
+                      mode="EDIT"
+					  targetRecord="{!v.oldFormRecord}"
+					  targetFields="{!v.oldBoardingForm}"
+					  targetError="{!v.formRecordError}" />
+    
+    <force:recordData aura:id="boardingFormRecordCreator"
+					  layoutType="FULL"
+					  targetRecord="{!v.newFormRecord}"
+					  targetFields="{!v.newBoardingForm}"
+					  targetError="{!v.formRecordError}" />
+    
+    <div class="slds-page-header">
+        <div class="slds-media">
+            <div class="slds-media__figure">
+                <lightning:icon iconName="custom:custom67" />
+            </div>
+            <div class="slds-media__body">
+                <h3 class="slds-text-body_small slds-line-height_reset">Cloning Form</h3>
+                <h1 class="slds-page-header__title slds-truncate slds-align-middle" 
+                    title="{!v.newBoardingForm.Name}">{!v.newBoardingForm.Name}</h1>
+            </div>
+        </div>
+    </div>
+    
+    <aura:if isTrue="{!not(empty(v.formRecordError))}">
+        <ui:message title="Error" severity="error">
+            {!v.formRecordError}
+        </ui:message>
+    </aura:if>
+    
+    <br />
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <table>
+            <tr>
+                <td>
+                    <label>Boarding Form Name</label>
+                    <br />
+                    <force:outputField value="{!v.oldBoardingForm.Name}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BF Status</label>
+                    <force:inputField aura:id="BF-Status" value="{!v.oldBoardingForm.BF_Status__c}" change="{!c.handleChangeBFStatus}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Related LOQ</label>
+                    <force:inputField aura:id="Related-LOQ" value="{!v.oldBoardingForm.Related_LOQ__c}" change="{!v.handleChangeRelatedLOQ}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Opportunity</label>
+                    <force:inputField aura:id="Opportunity" value="{!v.oldBoardingForm.Opportunity__c}" change="{!c.handleChangeOpp}" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- <h3 class="slds-section-titledivider">Borrower Information</h3>
+    <div class="slds-formstacked slds-p-aroundmedium slds-m-bottomx-small">  
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        BWR Legal Name
+                        <lightning:helptext content="This is the name of the debtor entering into a contractual agreement with BofI. Source doc(1 of the
+                                                     following): Loan Agreement, SS-4, IRS TIN Verification. The IRS TIN Verification can be requested formRecord
+                                                     C&amp;I Operations." 
+                                            class="BWR-Name" />
+                    </label>
+                    <force:inputField aura:id="BWR-Legal-Name" value="{!v.oldBoardingForm.BWR_Legal_Name__c}" change="{!c.handleChangeBWRName}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Legal Name &amp; Source</label>
+                    <force:inputField aura:id="BWR-Legal-Name-SP" value="{!v.oldBoardingForm.BWR_Legal_Name_Source_Page__c}" change="{!c.handleChangeBWRNameSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *BWR Mailing Address Street
+                        <lightning:helptext content="This is the address that notices will be sent to. Source doc(1 of the following): Loan Agreement, Note, SS-4."
+                                            class="BWR-Street" />
+                    </label>
+                    <force:inputField aura:id="BWR-Mailing-Street" value="{!v.oldBoardingForm.Borrower_Mailing_Address_Street__c}" change="{!c.handleChangeBWRStreet}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Mailing Address Street Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Mailing-Street-SP" value="{!v.oldBoardingForm.BWR_Mailing_Address_Street_Source_Page__c}" change="{!c.handleChangeBWRStreetSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*BWR Mailing Address City</label>
+                    <force:inputField aura:id="BWR-Mailing-City" value="{!v.oldBoardingForm.Borrower_Mailing_Address_City__c}" change="{!c.handleChangeBWRCity}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Mailing Address City Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Mailing-City-SP" value="{!v.oldBoardingForm.BWR_Mailing_Address_City_Source_Page__c}" change="{!c.handleChangeBWRCitySP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*BWR Mailing Address State</label>
+                    <force:inputField aura:id="BWR-Mailing-State" value="{!v.oldBoardingForm.Borrower_Mailing_Address_State__c}" change="{!c.handleChangeBWRState}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Mailing Address State Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Mailing-State-SP" value="{!v.oldBoardingForm.BWR_Mailing_Address_State_Source_Page__c}" change="{!c.handleChangeBWRStateSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*BWR Mailing Address Postal Code</label>
+                    <force:inputField aura:id="BWR-Mailing-Postal-Code" value="{!v.oldBoardingForm.Borrower_Mailing_Address_Postal_Code__c}" change="{!c.handleChangeBWRPostalCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Mailing Postal Code Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.BWR_Mailing_Postal_Code_Source_Page__c}" change="{!c.handleChangeBWRPostalCodeSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*BWR Mailing Address Country</label>
+                    <force:inputField aura:id="BWR-Mailing-Country" value="{!v.oldBoardingForm.Borrower_Mailing_Address_Country__c}" change="{!c.handleChangeBWRCountry}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Mailing Country Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Mailing-Country-SP" value="{!v.oldBoardingForm.BWR_Mailing_Country_Source_Page__c}" change="{!c.handleChangeBWRCountrySP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *BWR Phone Number
+                        <lightning:helptext content="The phone number of the main point of contact for notices. Source doc(1 of the following): Loan Agreement,
+                                                     Note, other legal agreement, email, confirmation from Borrower." 
+                                            class="BWR-Phone" />
+                    </label>
+                    <force:inputField aura:id="BWR-Phone-Number" value="{!v.oldBoardingForm.Borrower_Phone_Number__c}" change="{!c.handleChangeBWRPhone}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Phone Number Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Phone-Number-SP" value="{!v.oldBoardingForm.BWR_Phone_Number_Source_Page__c}" change="{!c.handleChangeBWRPhoneSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        BWR Email Address
+                        <lightning:helptext content="The email address of the main point of contact for notices. Source doc(1 of the following): Loan Agreement,
+                                                     Note, other legal agreement, email confirmation from Borrower."
+                                            class="BWR-Email" />
+                    </label>
+                    <force:inputField aura:id="BWR-Email-Address" value="{!v.oldBoardingForm.Borrower_Email_Address__c}" change="{!c.handleChangeBWREmail}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Email Address Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Email-Address-SP" value="{!v.oldBoardingForm.BWR_Email_Address_Source_Page__c}" change="{!c.handleChangeBWREmailSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *BWR Tax ID Number
+                        <lightning:helptext content="The EIN assigned by the IRS to the Borrower's legal name. Source doc(! of the following): SS-4, IRS TIN Verification.
+                                                     The IRS TIN Verification can be requested from C&amp;I Operations. If a foreign national, refer to BSA"
+                                            class="BWR-Tax-Number" />
+                    </label>
+                    <force:inputField aura:id="BWR-Tax-ID-Number" value="{!v.oldBoardingForm.Borrower_Tax_ID_Number__c}" change="{!c.handleChangeBWRTaxNumber}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Tax ID Number Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Tax-ID-Number-SP" value="{!v.oldBoardingForm.BWR_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeBWRTaxNumberSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *BWR Tax ID Number Type
+                        <lightning:helptext content="Source doc: SS-4, IRS TIN verification. The IRS TIN Verification can be requested from C&amp;I Operations"
+                                            class="BWR-Tax-Type" />
+                    </label>
+                    <force:inputField aura:id="BWR-Tax-ID-Number-Type" value="{!v.oldBoardingForm.Borrower_Tax_ID_Number_Type__c}" change="{!c.handleChange}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Tax ID Number Type Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.BWR_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChange}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *BWR Class Code
+                        <lightning:helptext content="Option C requires additional verification from https://apps.irs.gov/app/eos/. Provide screenshot from website of
+                                                     findings. A, B,. or D: No additional source doc required."
+                                            class="BWR-Class-Code" />
+                    </label>
+                    <force:inputField aura:id="BWR-Class-Code" value="{!v.oldBoardingForm.Borrower_Class_Code__c}" change="{!c.handleChange}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR Class Code Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-Class-Code-SP" value="{!v.oldBoardingForm.BWR_Class_Code_Source_Page__c}" change="{!c.handleChange}" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <label>BWR 2 Legal Name</label>
+                    <force:inputField aura:id="BWR-2-Legal-Name" value="{!v.oldBoardingForm.BWR_2_Legal_Name__c}" change="{!c.handleChangeBWR2Name}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Legal Name &amp; Source</label>
+                    <force:inputField aura:id="BWR-2-Legal-Name-SP" value="{!v.oldBoardingForm.BWR_2_Legal_Name_Source_Page__c}" change="{!c.handleChangeBWR2NameSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Mailing Address Street</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Street" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_Street__c}" change="{!c.handleChangeBWR2Street}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Mailing Address Street Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Street-SP" value="{!v.oldBoardingForm.BWR_2_Mailing_Street_Source_Page__c}" change="{!c.handleChangeBWR2StreetSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Mailing Address City</label>
+                    <force:inputField aura:id="BWR-2-Mailing-City" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_City__c}" change="{!c.handleChangeBWR2City}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Mailing Address City Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Mailing-City-SP" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_City_Source_Page__c}" change="{!c.handleChangeBWR2CitySP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Mailing Address State</label>
+                    <force:inputField aura:id="BWR-2-Mailing-State" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_State__c}" change="{!c.handleChangeBWR2State}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Mailing Address State Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Mailing-State-SP" value="{!v.oldBoardingForm.BWR_2_Mailing_State_Source_Page__c}" change="{!c.handleChangeBWR2StateSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Mailing Address Postal Code</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Postal-Code" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_Postal_Code__c}" change="{!c.handleChangeBWR2PostalCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Mailing Postal Code Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.BWR_2_Mailing_Postal_Code_Source_Page__c}" change="{!c.handleChangeBWR2PostalCodeSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Mailing Address Country</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Country" value="{!v.oldBoardingForm.BWR_2_Mailing_Address_Country__c}" change="{!c.handleChangeBWR2Country}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Mailing Country Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Mailing-Country-SP" value="{!v.oldBoardingForm.BWR_2_Mailing_Country_Source_Page__c}" change="{!c.handleChangeBWR2CountrySP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Phone Number</label>
+                    <ui:inputPhone aura:id="BWR-2-Phone-Number" value="{!v.oldBoardingForm.BWR_2_Phone_Number__c}" change="{!c.handleChangeBWR2Phone}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Phone Number Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Phone-Number-SP" value="{!v.oldBoardingForm.BWR_2_Phone_Number_Source_Page__c}" change="{!c.handleChangeBWRPhoneSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Email Address</label>
+                    <force:inputField aura:id="BWR-2-Email-Address" value="{!v.oldBoardingForm.BWR_2_Email_Address__c}" change="{!c.handleChangeBWR2Email}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Email Address Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Email-Address-SP" value="{!v.oldBoardingForm.BWR_2_Email_Address_Source_Page__c}" change="{!c.handleChangeBWR2EmailSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Tax ID Number</label>
+                    <force:inputField aura:id="BWR-2-Tax-ID-Number" value="{!v.oldBoardingForm.BWR_2_Tax_ID_Number__c}" change="{!c.handleChangeBWR2TaxNumber}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Tax ID Number Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Tax-ID-Number-SP" value="{!v.oldBoardingForm.BWR_2_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeBWR2TaxNumberSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Tax ID Number Type</label>
+                    <force:inputField aura:id="BWR-2-Tax-ID-Number-Type" value="{!v.oldBoardingForm.BWR_2_Tax_ID_Number_Type__c}" change="{!c.handleChangeBWR2TaxNumberType}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Tax ID Number Type Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.BWR_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChangeBWR2TaxNumberType}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>BWR 2 Class Code</label>
+                    <force:inputField aura:id="BWR-2-Class-Code" value="{!v.oldBoardingForm.BWR_2_Class_Code__c}" change="{!c.handleChangeBWR2ClassCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>BWR 2 Class Code Source &amp; Page</label>
+                    <force:inputField aura:id="BWR-2-Class-Code-SP" value="{!v.oldBoardingForm.BWR_2_Class_Code_Source_Page__c}" change="{!c.handleChangeBWR2ClassCodeSP}" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3 class="slds-section-titledivider">Guarantor Information</h3>
+    <div class="slds-formstacked slds-p-aroundmedium slds-m-bottom-x-small">
+        <div class="slds-form-element">    
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Name
+                            <lightning:helptext content="This is the name of anyone guarantying the loan with BofI. This may be resource or non-resource. Source
+                                                         doc(1 of the following): Guaranty Agreement, SS-4, IRS TIN Verification. The IRS TIN Verification can be
+                                                         requested from C&amp;I Operations."
+                                                class="GTR-Name" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Name" value="{!v.oldBoardingForm.Guarantor_GTR_1_Name__c}" change="{!c.handleChangeGTRName}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Name Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Name-SP" value="{!v.oldBoardingForm.GTR_1_Name_Source_Page__c}" change="{!c.handleChangeGTRNameSP}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Mailing Street
+                            <lightning:helptext content="This is the address that notices will be sent to. Source doc(1 of the following): Guaranty Agreement, Note
+                                                         SS-4, Credit Authorization/Application (for individuals only)."
+                                                class="GTR-Street" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Mailing-Street" value="{!v.oldBoardingForm.Guarantor_1_Mailing_Street__c}" change="{!c.handleChangeGTRStreet}" />
+                    </td>
+                    <td>
+                    </td>	    					
+                    <td>
+                        <label>GTR 1 Mailing Street Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Mailing-Street-SP" value="{!v.oldBoardingForm.GTR_1_Mailing_Street_Source_Page__c}" change="{!c.handleChangeGTRStreetSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 1 Mailing City</label>
+                        <force:inputField aura:id="GTR-1-Mailing-City" value="{!v.oldBoardingForm.Guarantor_1_Mailing_City__c}" change="{!c.handleChangeGTRCity}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Mailing City Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Mailing-City-SP" value="{!v.oldBoardingForm.GTR_1_Mailing_City_Source_Page__c}" change="{!c.handleChangeGTRCityPS}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 1 Mailing State</label>
+                        <force:inputField aura:id="GTR-1-Mailing-State" value="{!v.oldBoardingForm.Guarantor_1_Mailing_State__c}" change="{!c.handleChangeGTRState}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Mailing State Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Mailing-State-SP" value="{!v.oldBoardingForm.GTR_1_Mailing_State_Source_Page__c}" change="{!c.handleChangeGTRStatePS}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 1 Mailing Postal Code/Zip</label>
+                        <force:inputField aura:id="GTR-1-Mailing-Postal-Code" value="{!v.oldBoardingForm.Guarantor_1_Mailing_Postal_Code_Zip__c}" change="{!c.handleChange}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Postal Code/Zip Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.GTR_1_Postal_Code_Zip_Source_Page__c}" change="{!c.handleChange}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 1 Mailing Country</label>
+                        <force:inputField aura:id="GTR-1-Mailing-Country" value="{!v.oldBoardingForm.Guarantor_1_Mailing_Country__c}" change="{!c.handleChange}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Mailing Country Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Mailing-Country-SP" value="{!v.oldBoardingForm.GTR_1_Mailing_Country_Source_Page__c}" change="{!c.handleChange}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Phone Number
+                            <lightning:helptext content="The phone number of the main point of contact for notices. Source doc(1 of the following): Loan
+                                                         Agreement, Note, other legal agreement, email confirmation from Guarantor, Credit Authorization/
+                                                         Application (for individuals only)."
+                                                class="GTR-Phone" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Phone-Number" value="{!v.oldBoardingForm.Guarantor_1_Phone_Number__c}" change="{!c.handleChange}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Phone Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Phone-Number-SP" value="{!v.oldBoardingForm.GTR_1_Phone_Number_Source_Page__c}" change="{!c.handleChange}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Email
+                            <lightning:helptext content="The email of the main point of contact for notices. Source doc(1 of the following): Loan Agreement,
+                                                         Note, other legal agreement, email confirmation from Guarantor, Credit Authorization/Application (for
+                                                         individuals only)."
+                                                class="GTR-Email" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Email" value="{!v.oldBoardingForm.Guarantor_1_Email__c}" change="{!c.handleChangeGTREmail}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Email Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Email-SP" value="{!v.oldBoardingForm.GTR_1_Email_Source_Page__c}" change="{!c.handleChangeGTREmailPS}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Birthdate
+                            <lightning:helptext content="Only applicable to individuals. Source doc: Credit Authorization/Application (for individuals only).
+                                                         *Enter the birth year directly in the text field; do not use the dropdown."
+                                                class="GTR-Birthdate" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Birthdate" value="{!v.oldBoardingForm.Guarantor_1_Birthdate__c}" change="{!c.handleChangeGTRBirthdate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Birthdate Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Birthdate-SP" value="{!v.oldBoardingForm.GTR_1_Birthdate_Source_Page__c}" change="{!c.handleChangeGTRBirthdateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Tax ID Number
+                            <lightning:helptext content="Source doc(1 of the following): IRS TIN Verification, Credit Authorization/Application for(individuals only).
+                                                         The IRS TIN Verification can be requested from C&amp;I Operations. If a foreign national, refer to BSA."
+                                                class="GTR-Tax-Number"/>
+                        </label>
+                        <force:inputField aura:id="GTR-1-Tax-ID-Number" value="{!v.oldBoardingForm.Guarantor_1_Tax_ID_Number__c}" change="{!c.handleChangeGTRTaxNumber}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Tax ID Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Tax-ID-Number-SP" value="{!v.oldBoardingForm.GTR_1_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeGTRTaxNumberSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Tax ID Number Type
+                            <lightning:helptext content="Source doc: SS-4, IRS TIN Verification. The IRS TIN Verificationcan be requested from C&amp;I Operations."
+                                                class="GTR-Tax-Type" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Tax-ID-Number-Type" value="{!v.oldBoardingForm.Guarantor_1_Tax_ID_Number_Type__c}" change="{!c.handleChangeTaxNumberType}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Tax ID Number Type Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.GTR_1_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChangeTaxNumberTypeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Class Code
+                            <lightning:helptext content="Option C requires additional verification from https://apps.irs.gov/app/eos/. Provide screenshot from website
+                                                         of findings. A, B  or D: No additional source doc required."
+                                                class="GTR-Class-Code" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Class-Code" value="{!v.oldBoardingForm.Guarantor_1_Class_Code__c}" change="{!c.handleChangeGTRClassCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Class Code Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Class-Code-SP" value="{!v.oldBoardingForm.GTR_1_Class_Code_Source_Page__c}" change="{!c.handleChangeGTRClassCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Contingent?
+                            <lightning:helptext content="Select Yes if this a resource guaranty. Select No for non-recourse. Source doc: Guaranty agreement(s)."
+                                                class="GTR-Contingent" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Contingent" value="{!v.oldBoardingForm.Guarantor_1_Contingent__c}" change="{!c.handleChangeGTRContingent}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Contingent? Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Contingent-SP" value="{!v.oldBoardingForm.GTR_1_Contingent_Source_Page__c}" change="{!c.handleChangeGTRContingentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            GTR 1 Gender
+                            <lightning:helptext content="Optional. Source doc: Credit Authorization/Application (for individuals only)."
+                                                class="GTR-Gender" />
+                        </label>
+                        <force:inputField aura:id="GTR-1-Gender" value="{!v.oldBoardingForm.Guarantor_1_Gender__c}" change="{!c.handleChangeGTRGender}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 1 Gender Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-1-Gender-SP" value="{!v.oldBoardingForm.GTR_1_Gender_Source_Page__c}" change="{!c.handleChangeGTRGenderSP}" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <label>GTR 2 Name</label>
+                        <force:inputField aura:id="GTR-2-Name" value="{!v.oldBoardingForm.Guarantor_2_Name__c}" change="{!c.handleChangeGTR2Name}"/>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Name Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Name-SP" value="{!v.oldBoardingForm.GTR_2_Name_Source_Page__c}" change="{!c.handleChangeGTR2NameSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Mailing Street</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Street" value="{!v.oldBoardingForm.Guarantor_2_Mailing_Street__c}" change="{!c.handleChangeGTR2Street}" />
+                    </td>
+                    <td>
+                    </td>	    					
+                    <td>
+                        <label>GTR 2 Mailing Street Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Street-SP" value="{!v.oldBoardingForm.GTR_2_Mailing_Street_Source_Page__c}" change="{!c.handleChangeGTR2StreetSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Mailing City</label>
+                        <force:inputField aura:id="GTR-2-Mailing-City" value="{!v.oldBoardingForm.Guarantor_2_Mailing_City__c}" change="{!c.handleChangeGTR2City}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Mailing City Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Mailing-City-SP" value="{!v.oldBoardingForm.GTR_2_Mailing_City_Source_Page__c}" change="{!c.handleChangeGTR2CitySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Mailing State</label>
+                        <force:inputField aura:id="GTR-2-Mailing-State" value="{!v.oldBoardingForm.Guarantor_2_Mailing_State__c}" change="{!c.handleChangeGTR2State}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Mailing State Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Mailing-State-SP" value="{!v.oldBoardingForm.GTR_2_Mailing_State_Source_Page__c}" change="{!c.handleChangeGTR2StateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Mailing Postal Code/Zip</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Postal-Code" value="{!v.oldBoardingForm.Guarantor_2_Mailing_Postal_Code_Zip__c}" change="{!c.handleChangeGTR2PostalCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Postal Code/Zip Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.GTR_2_Postal_Code_Zip_Source_Page__c}" change="{!c.handleChangeGTR2PostalCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Mailing Country</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Country" value="{!v.oldBoardingForm.Guarantor_2_Mailing_Country__c}" change="{!c.handleChangeGTR2Country}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Mailing Country Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Mailing-Country-SP" value="{!v.oldBoardingForm.GTR_2_Mailing_Country_Source_Page__c}" change="{!c.handleChangeGTR2CountrySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Phone Number</label>
+                        <force:inputField aura:id="GTR-2-Phone-Number" value="{!v.oldBoardingForm.Guarantor_2_Phone_Number__c}" change="{!c.handleChangeGTR2Phone}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Phone Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Phone-Number-SP" value="{!v.oldBoardingForm.GTR_2_Phone_Number_Source_Page__c}" change="{!c.handleChangeGTR2Phone2}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Email</label>
+                        <force:inputField aura:id="GTR-2-Email" value="{!v.oldBoardingForm.Guarantor_2_Email__c}" change="{!c.handleChangeGTR2Email}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Email Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Email-SP" value="{!v.oldBoardingForm.GTR_2_Email_Source_Page__c}" change="{!c.handleChangeGTR2EmailSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Birthdate</label>
+                        <force:inputField aura:id="GTR-2-Birthdate" value="{!v.oldBoardingForm.Guarantor_2_Birthdate__c}" change="{!c.handleChangeGTR2Birthdate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Birthdate Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Birthdate-SP" value="{!v.oldBoardingForm.GTR_2_Birthdate_Source_Page__c}" change="{!c.handleChangeGTR2BirthdateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Tax ID Number</label>
+                        <force:inputField aura:id="GTR-2-Tax-ID-Number" value="{!v.oldBoardingForm.Guarantor_2_Tax_ID_Number__c}" change="{!c.handleChangeGTR2TaxNumber}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Tax ID Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Tax-ID-Number-SP" value="{!v.oldBoardingForm.GTR_2_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeGTR2TaxNumberSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Tax ID Number Type</label>
+                        <force:inputField aura:id="GTR-2-Tax-ID-Number-Type" value="{!v.oldBoardingForm.Guarantor_2_Tax_ID_Number_Type__c}" change="{!c.handleChangeGTR2TaxNumberType}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Tax ID Number Type Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.GTR_2_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChangeGTR2TaxNumberTypeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Class Code</label>
+                        <force:inputField aura:id="GTR-2-Class-Code" value="{!v.oldBoardingForm.Guarantor_2_Class_Code__c}" change="{!c.handleChangeGTR2ClassCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Class Code Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Class-Code-SP" value="{!v.oldBoardingForm.Guarantor_2_Class_Code__c}" change="{!c.handleChangeGTR2ClassCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Contingent?</label>
+                        <force:inputField aura:id="GTR-2-Contingent" value="{!v.oldBoardingForm.Guarantor_2_Contingent__c}" change="{!c.handleChangeGTR2Contingent}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Contingent? Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Contingent-SP" value="{!v.oldBoardingForm.GTR_2_Contingent_Source_Page__c}" change="{!c.handleChangeGTR2ContingentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 2 Gender</label>
+                        <force:inputField aura:id="GTR-2-Gender" value="{!v.oldBoardingForm.Guarantor_2_Gender__c}" change="{!c.handleChangeGTR2Gender}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 2 Gender Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-2-Gender-SP" value="{!v.oldBoardingForm.GTR_2_Gender_Source_Page__c}" change="{!c.handleChangeGTR2GenderSP}" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <label>GTR 3 Name</label>
+                        <force:inputField aura:id="GTR-3-Name" value="{!v.oldBoardingForm.Guarantor_3_Name__c}" change="{!c.handleChangeGTR3Name}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Name Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Name-SP" value="{!v.oldBoardingForm.GTR_3_Name_Source_Page__c}" change="{!c.handleChangeGTR3NameSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Mailing Street</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Street" value="{!v.oldBoardingForm.Guarantor_3_Mailing_Street__c}" change="{!c.handleChangeGTR3Street}" />
+                    </td>
+                    <td>
+                    </td>	    					
+                    <td>
+                        <label>GTR 3 Mailing Street Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Street-SP" value="{!v.oldBoardingForm.GTR_3_Mailing_Street_Source_Page__c}" change="{!c.handleChangeGTR3StreetSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Mailing City</label>
+                        <force:inputField aura:id="GTR-3-Mailing-City" value="{!v.oldBoardingForm.Guarantor_3_Mailing_City__c}" change="{!c.handleChangeGTR3City}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Mailing City Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Mailing-City-SP" value="{!v.oldBoardingForm.GTR_3_Mailing_City_Source_Page__c}" change="{!c.handleChangeGTR3CitySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Mailing State</label>
+                        <force:inputField aura:id="GTR-3-Mailing-State" value="{!v.oldBoardingForm.Guarantor_3_Mailing_State__c}" change="{!c.handleChangeGTR3State}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Mailing State Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Mailing-State-SP" value="{!v.oldBoardingForm.GTR_3_Mailing_State_Source_Page__c}" change="{!c.handleChangeGTR3StateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Mailing Postal Code/Zip</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Postal-Code" value="{!v.oldBoardingForm.Guarantor_3_Mailing_Postal_Code_Zip__c}" change="{!c.handleChangeGTR3PostalCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Postal Code/Zip Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.GTR_3_Postal_Code_Zip_Source_Page__c}" change="{!c.handleChangeGTR3PostalCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Mailing Country</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Country" value="{!v.oldBoardingForm.Guarantor_3_Mailing_Country__c}" change="{!c.handleChangeGTR3Country}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Mailing Country Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Mailing-Country-SP" value="{!v.oldBoardingForm.GTR_3_Mailing_Country_Source_Page__c}" change="{!c.handleChangeGTR3CountrySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Phone Number</label>
+                        <force:inputField aura:id="GTR-3-Phone-Number" value="{!v.oldBoardingForm.Guarantor_3_Phone_Number__c}" change="{!c.handleChangeGTR3Phone}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Phone Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Phone-Number-SP" value="{!v.oldBoardingForm.GTR_3_Phone_Number_Source_Page__c}" change="{!c.handleChangeGTR3PhoneSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Email</label>
+                        <force:inputField aura:id="GTR-3-Email" value="{!v.oldBoardingForm.Guarantor_3_Email__c}" change="{!c.handleChangeGTR3Email}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Email Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Email-SP" value="{!v.oldBoardingForm.GTR_3_Email_Source_Page__c}" change="{!c.handleChangeGTR3EmailSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Birthdate</label>
+                        <force:inputField aura:id="GTR-3-Birthdate" value="{!v.oldBoardingForm.Guarantor_3_Birthdate__c}" change="{!c.handleChangeGTR3Birthdate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Birthdate Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Birthdate-SP" value="{!v.oldBoardingForm.GTR_3_Birthdate_Source_Page__c}" change="{!c.handleChangeGTR3BirthdateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Tax ID Number</label>
+                        <force:inputField aura:id="GTR-3-Tax-ID-Number" value="{!v.oldBoardingForm.Guarantor_3_Tax_ID_Number__c}" change="{!c.handleChangeGTR3TaxNumber}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Tax ID Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Tax-ID-Number-SP" value="{!v.oldBoardingForm.GTR_3_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeGTR3TaxNumberSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Tax ID Number Type</label>
+                        <force:inputField aura:id="GTR-3-Tax-ID-Number-Type" value="{!v.oldBoardingForm.Guarantor_3_Tax_ID_Number_Type__c}" change="{!c.handleChangeGTR3TaxNumberType}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Tax ID Number Type Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.GTR_3_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChangeGTR3TaxNumberTypeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Class Code</label>
+                        <force:inputField aura:id="GTR-3-Class-Code" value="{!v.oldBoardingForm.Guarantor_3_Class_Code__c}" change="{!c.handleChangeGTR3ClassCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Class Code Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Class-Code-SP" value="{!v.oldBoardingForm.Guarantor_3_Class_Code__c}" change="{!c.handleChangeGTR3ClassCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Contingent?</label>
+                        <force:inputField aura:id="GTR-3-Contingent" value="{!v.oldBoardingForm.Guarantor_3_Contingent__c}" change="{!c.handleChangeGTR3Contingent}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Contingent? Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Contingent-SP" value="{!v.oldBoardingForm.GTR_3_Contingent_Source_Page__c}" change="{!c.handleChangeGTR3ContingentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 3 Gender</label>
+                        <force:inputField aura:id="GTR-3-Gender" value="{!v.oldBoardingForm.Guarantor_3_Gender__c}" change="{!c.handleChangeGTR3Gender}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 3 Gender Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-3-Gender-SP" value="{!v.oldBoardingForm.GTR_3_Gender_Source_Page__c}" change="{!c.handleChangeGTR3GenderSP}" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <label>GTR 4 Name</label>
+                        <force:inputField aura:id="GTR-4-Name" value="{!v.oldBoardingForm.Guarantor_4_Name__c}" change="{!c.handleChangegtName}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Name Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Name-SP" value="{!v.oldBoardingForm.GTR_4_Name_Source_Page__c}" change="{!c.handleChangeGTR4NameSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Mailing Street</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Street" value="{!v.oldBoardingForm.Guarantor_4_Mailing_Street__c}" change="{!c.handleChangeGTR4Street}" />
+                    </td>
+                    <td>
+                    </td>	    					
+                    <td>
+                        <label>GTR 4 Mailing Street Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Street-SP" value="{!v.oldBoardingForm.GTR_4_Mailing_Street_Source_Page__c}" change="{!c.handleChangeGTR4StreetSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Mailing City</label>
+                        <force:inputField aura:id="GTR-4-Mailing-City" value="{!v.oldBoardingForm.Guarantor_4_Mailing_City__c}" change="{!c.handleChangeGTR4City}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Mailing City Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Mailing-City-SP" value="{!v.oldBoardingForm.GTR_4_Mailing_City_Source_Page__c}" change="{!c.handleChangeGTR4CitySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Mailing State</label>
+                        <force:inputField aura:id="GTR-4-Mailing-State" value="{!v.oldBoardingForm.Guarantor_4_Mailing_State__c}" change="{!c.handleChangeGTR4State}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Mailing State Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Mailing-State-SP" value="{!v.oldBoardingForm.GTR_4_Mailing_State_Source_Page__c}" change="{!c.handleChangeGTR4StateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Mailing Postal Code/Zip</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Postal-Code" value="{!v.oldBoardingForm.Guarantor_4_Mailing_Postal_Code_Zip__c}" change="{!c.handleChangeGTR4PostalCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Postal Code/Zip Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Postal-Code-SP" value="{!v.oldBoardingForm.GTR_4_Postal_Code_Zip_Source_Page__c}" change="{!c.handleChangeGTR4PostalCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Mailing Country</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Country" value="{!v.oldBoardingForm.Guarantor_4_Mailing_Country__c}" change="{!c.handleChangeGTR4Country}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Mailing Country Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Mailing-Country-SP" value="{!v.oldBoardingForm.GTR_4_Mailing_Country_Source_Page__c}" change="{!c.handleChangeGTR4CountrySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Phone Number</label>
+                        <force:inputField aura:id="GTR-4-Phone-Number" value="{!v.oldBoardingForm.Guarantor_4_Phone_Number__c}" change="{!c.handleChangeGTR4Phone}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Phone Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Phone-Number-SP" value="{!v.oldBoardingForm.GTR_4_Phone_Number_Source_Page__c}" change="{!c.handleChangeGTR4PhoneSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Email</label>
+                        <force:inputField aura:id="GTR-4-Email" value="{!v.oldBoardingForm.Guarantor_4_Email__c}" change="{!c.handleChangeGTR4Email}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Email Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Email-SP" value="{!v.oldBoardingForm.GTR_4_Email_Source_Page__c}" change="{!c.handleChangeGTR4EmailSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Birthdate</label>
+                        <force:inputField aura:id="GTR-4-Birthdate" value="{!v.oldBoardingForm.Guarantor_4_Birthdate__c}" change="{!c.handleChangeGTR4Birthdate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Birthdate Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Birthdate-SP" value="{!v.oldBoardingForm.GTR_4_Birthdate_Source_Page__c}" change="{!c.handleChangeGTR4BirthdateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Tax ID Number</label>
+                        <force:inputField aura:id="GTR-4-Tax-ID-Number" value="{!v.oldBoardingForm.Guarantor_4_Tax_ID_Number__c}" change="{!c.handleChangeGTR4TaxNumber}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Tax ID Number Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Tax-ID-Number-SP" value="{!v.oldBoardingForm.GTR_4_Tax_ID_Number_Source_Page__c}" change="{!c.handleChangeGTR4TaxNumberSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Tax ID Number Type</label>
+                        <force:inputField aura:id="GTR-4-Tax-ID-Number-Type" value="{!v.oldBoardingForm.Guarantor_4_Tax_ID_Number_Type__c}" change="{!c.handleChangeGTR4TaxNumberType}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Tax ID Number Type Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Tax-ID-Number-Type-SP" value="{!v.oldBoardingForm.GTR_4_Tax_ID_Number_Type_Source_Page__c}" change="{!c.handleChangeGTR4TaxNumberTypeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Class Code</label>
+                        <force:inputField aura:id="GTR-4-Class-Code" value="{!v.oldBoardingForm.Guarantor_2_Class_Code__c}" change="{!c.handleChangeGTR4ClassCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Class Code Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Class-Code-SP" value="{!v.oldBoardingForm.Guarantor_4_Class_Code__c}" change="{!c.handleChangeGTR4ClassCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Contingent?</label>
+                        <force:inputField aura:id="GTR-4-Contingent" value="{!v.oldBoardingForm.Guarantor_4_Contingent__c}" change="{!c.handleChangeGTR4Contingent}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Contingent? Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Contingent-SP" value="{!v.oldBoardingForm.GTR_4_Contingent_Source_Page__c}" change="{!c.handleChangeGTR4ContingentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>GTR 4 Gender</label>
+                        <force:inputField aura:id="GTR-4-Gender" value="{!v.oldBoardingForm.Guarantor_4_Gender__c}" change="{!c.handleChangeGTR4Gender}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>GTR 4 Gender Source &amp; Page</label>
+                        <force:inputField aura:id="GTR-4-Gender-SP" value="{!v.oldBoardingForm.GTR_4_Gender_Source_Page__c}" change="{!c.handleChangeGTR4GenderSP}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> -->
+    
+    <h3 class="slds-section-title--divider">Loan &amp; Account Information</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <table>
+            <tr>
+                <td>
+                    <label>Loan Number Source &amp; Page</label>
+                    <force:inputField aura:id="Loan-Number-SP" value="{!v.oldBoardingForm.Loan_Number_Source_Page__c}" change="{!c.handleChangeLoanNumberSP}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>DDA Account Number 1 Source &amp; Page</label>
+                    <force:inputField aura:id="DDA-Account-1-SP" value="{!v.oldBoardingForm.DDA_Account_Number_1_Source_Page__c}" change="{!c.handleChangeDDA1}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>DDA Account Number 2 Source &amp; Page</label>
+                    <force:inputField aura:id="DDA-Account-2-SP" value="{!v.oldBoardingForm.DDA_Account_Number_2_Source_Page__c}" change="{!c.handleChangeDDA2}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>DDA Account Number 3 Source &amp; Page</label>
+                    <force:inputField aura:id="DDA-Account-3-SP" value="{!v.oldBoardingForm.DDA_Account_Number_3_Source_Page__c}" change="{!c.handleChangeDDA3}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Risk Rating
+                        <lightning:helptext content="Source doc: Final CAM, reference risk rating model page"
+                                            class="Risk-Rating"  />
+                    </label>
+                    <force:inputField aura:id="Risk-Rating" value="{!v.oldBoardingForm.Risk_Rating__c}" change="{!c.handleChangeRiskRating}" /> 
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Risk Rating Source &amp; Page</label>
+                    <force:inputField aura:id="Risk-Rating-SP" value="{!v.oldBoardingForm.Risk_Rating_Source_Page__c}" change="{!c.handleChangeRiskRatingSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Branch Number</label>
+                    <force:inputField aura:id="Branch-Number" value="{!v.oldBoardingForm.Branch_Number__c}" change="{!c.handleChangeBranch}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Branch Number Source &amp; Page</label>
+                    <force:inputField aura:id="Branch-Number-SP" value="{!v.oldBoardingForm.Branch_Number_Source_Page__c}" change="{!c.handleChangeBranchSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Relationship Manager</label>
+                    <force:inputField aura:id="Relationship-Manager" value="{!v.oldBoardingForm.Relationship_Manager__c}" change="{!c.handleChangeRelMgr}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Relationship Manager Source &amp; Page</label>
+                    <force:inputField aura:id="Relationship-Manager-SP" value="{!v.oldBoardingForm.Relationship_Manager_Source_Page__c}" change="{!c.handleChangeRelMgrSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>*Primary Analyst</label>
+                    <force:inputField aura:id="Primary-Analyst" value="{!v.oldBoardingForm.Primary_Analyst__c}" change="{!c.handleChangePrimaryAnalyst}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Primary Analyst Source &amp; Page</label>
+                    <force:inputField aura:id="Primary-Analyst-SP" value="{!v.oldBoardingForm.Primary_Analyst_Source_Page__c}" change="{!c.handleChangePrimaryAnalystSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        C&amp;I Loan Type
+                        <lightning:helptext content="Assigned at LOQ level by Operations authorized designee. Source doc: C&amp;I Loan Type Matrix"
+                                            class="CI-Loan" />
+                    </label>
+                    <force:inputField aura:id="CI-Loan-Type" value="{!v.oldBoardingForm.C_I_Loan_Type__c}" change="{!c.handleChangeCILoan}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>C&amp;I Loan Type Source &amp; Page</label>
+                    <force:inputField aura:id="CI-Loan-Type-SP" value="{!v.oldBoardingForm.C_I_Loan_Type_Source_Page__c}" change="{!c.handleChangeCILoanSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Purpose Code
+                        <lightning:helptext content="Assigned at LOQ level by Operations authorized designee. Source doc: C&amp;I Loan Type Matrix"
+                                            class="Purpose-Code" />
+                    </label>
+                    <force:inputField aura:id="Purpose-Code" value="{!v.oldBoardingForm.Purpose_Code__c}" change="{!c.handleChangePurposeCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Purpose Code Source &amp; Page</label>
+                    <force:inputField aura:id="Purpose-Code-SP" value="{!v.oldBoardingForm.Purpose_Code_Source_Page__c}" change="{!c.handleChangePurposeCodeSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Collateral Code/Description</label>
+                    <force:inputField aura:id="Collateral-Code-Description" value="{!v.oldBoardingForm.Collateral_Code_Description__c}" change="{!c.handleChangeCollCodeDesc}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Coll. Code/Description Source &amp; Page</label>
+                    <force:inputField aura:id="Collateral-Code-Description-SP" value="{!v.oldBoardingForm.Coll_Code_Description_Source_Page__c}" change="{!c.handleChangeCollCodeDescSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Call Report Code
+                        <lightning:helptext content="Assigned at LOQ level by Operations authorized designee. Source doc: C&amp;I Loan Type Matrix"
+                                            class="Call-Report"/>
+                    </label>
+                    <force:inputField aura:id="Call-Report-Code" value="{!v.oldBoardingForm.Call_Report_Code__c}" change="{!c.handleChangeCallReport}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Call Report Code Source &amp; Page</label>
+                    <force:inputField aura:id="Call-Report-Code-SP" value="{!v.oldBoardingForm.Call_Report_Code_Source_Page__c}" change="{!c.handleChangeCallReportSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Loan Class Code
+                        <lightning:helptext content="The loan should fall under the same class code as Borrower 1. No additional support required."
+                                            class="Loan-Class" />
+                    </label>
+                    <force:inputField aura:id="Loan-Class-Code" value="{!v.oldBoardingForm.Loan_Class_Code__c}" change="{!c.handleChangeLoanClassCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Loan Class Code Source &amp; Page</label>
+                    <force:inputField aura:id="Loan-Class-Code-SP" value="{!v.oldBoardingForm.Loan_Class_Code_Source_Page__c}" change="{!c.handleChangeLoanClassCodeSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *NAICS Code
+                        <lightning:helptext content="Industry/Line of Business classification code. Support doc: Final CAM"
+                                            class="NAICS"/>
+                    </label>
+                    <force:inputField aura:id="NAICS-Code" value="{!v.oldBoardingForm.NAICS_Code__c}" change="{!c.handleChangeNAICS}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>NAICS Code Source &amp; Page</label>
+                    <force:inputField aura:id="NAICS-Code-SP" value="{!v.oldBoardingForm.NAICS_Code_Source_Page__c}" change="{!c.handleChangeNAICSSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Loan Term (months)
+                        <lightning:helptext content="# of months in loan term."
+                                            class="Loan-Term-M" />
+                    </label>
+                    <force:inputField aura:id="Loan-Term-Months" value="{!v.oldBoardingForm.Loan_Term_months__c}" change="{!c.handleChangeLoanTermMonth}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Loan Term (months) Source &amp; Page</label>
+                    <force:inputField aura:id="Loan-Term-Months-SP" value="{!v.oldBoardingForm.Loan_Term_months_Source_Page__c}" change="{!c.handleChangeLoanTermMonthSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Origination Date (note date)
+                        <lightning:helptext content="Date the agreements were executed by both parties. Source doc(1 of the following): Note,
+                                                     Loan Agreement, other legal agreement executed by both BofI and Borrower" 
+                                            class="Origination-D" />
+                    </label>
+                    <force:inputField aura:id="Origination-Date" value="{!v.oldBoardingForm.Origination_Date_note_date__c}" change="{!c.handleChangeOrigination}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Origination Date Source &amp; Page</label>
+                    <force:inputField aura:id="Origination-Date-SP" value="{!v.oldBoardingForm.Origination_Date_Source_Page__c}" change="{!c.handleChangeOriginationSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Maturity Date
+                        <lightning:helptext content="Date the loan will become due and payable, prior to any extension agreements taking place.
+                                                     Source doc(1 of the following): Note, Loan Agreement, other legal agreement executed by both
+                                                     BofI and Borrowers"
+                                            class="Maturity-D" />
+                    </label>
+                    <force:inputField aura:id="Maturity-Date" value="{!v.oldBoardingForm.Maturity_Date__c}" change="{!c.handleChangeMaturity}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Maturity Date Source &amp; Page</label>
+                    <force:inputField aura:id="Maturity-Date-SP" value="{!v.oldBoardingForm.Maturity_Date_Source_Page__c}" change="{!c.handleChangeMaturitySP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Projected Initial Funding Source &amp; Page</label>
+                    <force:inputField aura:id="Projected-Initial-Funding-SP" value="{!v.oldBoardingForm.Projected_Initial_Funding_Source_Page__c}" change="{!c.handleChangeProjectedFundingSP}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>
+                        Date Entered (Final Boarding)
+                        <lightning:helptext content="Date loan was entered and activated in core system and any other applicable monitoring/servicing
+                                                     systems."
+                                            class="Date-E" />
+                    </label>
+                    <force:inputField aura:id="Date-Entered" value="{!v.oldBoardingForm.Date_Entered_Final_Boarding__c}" change="{!c.handleChangeDateEntered}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Date Entered Source &amp; Page</label>
+                    <force:inputField aura:id="Date-Entered-SP" value="{!v.oldBoardingForm.Date_Entered_Source_Page__c}" change="{!c.handleChangeDateEnteredSP}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>
+                        *Term Code
+                        <lightning:helptext content="This is how the term is measured. Typically M for months"
+                                            class="Term-C" />
+                    </label>
+                    <force:inputField aura:id="Term-Code" value="{!v.oldBoardingForm.Term_Code__c}" change="{!c.handleChangeTermCode}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Term Code Source &amp; Page</label>
+                    <force:inputField aura:id="Term-Code-SP" value="{!v.oldBoardingForm.Term_Code_Source_Page__c}" change="{!c.handleChangeTermCodeSP}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Funding Date Source &amp; Page</label>
+                    <force:inputField aura:id="Funding-Date-SP" value="{!v.oldBoardingForm.Funding_Date_Source_Page__c}" change="{!c.handleChangeFundingDateSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        *Management Code
+                        <lightning:helptext content="The group that originated and will monitor the loan. For Bridge Lending select PWBD1.
+                                                     For Lender Finance select SSLF2."
+                                            class="Management-C" />
+                    </label>
+                    <force:inputField aura:id="Management-Code" value="{!v.oldBoardingForm.Management_Code__c}" change="{!c.handleChangeManagementCode}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>Management Code Source &amp; Page</label>
+                    <force:inputField aura:id="Management-Code-SP" value="{!v.oldBoardingForm.Management_Code_Source_Page__c}" change="{!c.handleChangeManagementCodeSP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        CRE Sub-Property Type
+                        <lightning:helptext content="Subject property sub-property codes. If applicable, only applies to multifamily and commercial
+                                                     properties. Source doc: Cre Sub-Property Type Codes."
+                                            class="CRE" />
+                    </label>
+                    <force:inputField aura:id="CRE-Sub-Property-Type" value="{!v.oldBoardingForm.CRE_Sub_Property_Type__c}" change="{!c.handleChangeCRE}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                    <label>CRE Sub Property Type Source &amp; Page</label>
+                    <force:inputField aura:id="CRE-Sub-Property-Type-SP" value="{!v.oldBoardingForm.CRE_Sub_Property_Type_Source_Page__c}" change="{!c.handleChangeCRESP}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>IBase</label>
+                    <force:inputField aura:id="IBase" value="{!v.oldBoardingForm.IBase_SFDC2__c}" change="{!c.handleChangeIBase}" />
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3 class="slds-section-title--divider">Payment Info</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div class="slds-form-element">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            *Payment Frequency
+                            <lightning:helptext content="This is how often payments will be due. Typically payments are due monthly."
+                                                class="Payment-Freq" />
+                        </label>
+                        <force:inputField aura:id="Payment-Frequency" value="{!v.oldBoardingForm.Payment_Frequency__c}" change="{!c.handleChangePaymentFreq}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Payment Frequency Source &amp; Page</label>
+                        <force:inputField aura:id="Payment-Frequency-SP" value="{!v.oldBoardingForm.Payment_Frequency_Source_Page__c}" change="{!c.handleChangePaymentFreqSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Payment Code
+                            <lightning:helptext content="This is how payments will be calculated. Select 2 for interests only loans."
+                                                class="Payment-C" />
+                        </label>
+                        <force:inputField aura:id="Payment-Code" value="{!v.oldBoardingForm.Payment_Code__c}" change="{!c.handleChangePaymentCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Payment Code Source &amp; Page</label>
+                        <force:inputField aura:id="Payment-Code-SP" value="{!v.oldBoardingForm.Payment_Code_Source_Page__c}" change="{!c.handleChangePaymentCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            First Payment Date
+                            <lightning:helptext content="If not specified in the loan agreement, use the following date calculations:
+                                                         CADENCE serviced loans, select the 1st of the month after the origination date.
+                                                         If the loan will be serviced within Silverlake select the 15th of the month
+                                                         following the originat"
+                                                class="First-P-D" />
+                        </label>
+                        <force:inputField aura:id="First-Payment-Date" value="{!v.oldBoardingForm.First_Payment_Date__c}" change="{!c.handleChangeFirstPayment}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>First Payment Date Source &amp; Page</label>
+                        <force:inputField aura:id="First-Payment-Date-SP" value="{!v.oldBoardingForm.First_Payment_Date_Source_Page__c}" change="{!c.handleChangeFirstPaymentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Next Due Date
+                            <lightning:helptext content="This will be the same as the First Payment Date"
+                                                class="Next-D-D" />
+                        </label>
+                        <force:inputField aura:id="Next-Due-Date" value="{!v.oldBoardingForm.Next_Due_Date__c}" change="{!c.handleChangeNextDueDate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Next Due Date Source &amp; Page</label>
+                        <force:inputField aura:id="Next-Due-Date-SP" value="{!v.oldBoardingForm.Next_Due_Date_Source_Page__c}" change="{!c.handleChangeNextDueDateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            *Send Payment Billings
+                            <lightning:helptext content="If serviced within CADENCE, select No. If serviced by a 3rd party agent, select No.
+                                                         All others select Statements."
+                                                class="Send-P-B" />
+                        </label>
+                        <force:inputField aura:id="Send-Payment-Billings" value="{!v.oldBoardingForm.Send_Payment_Billings__c}" change="{!c.handleChangeSendPayment}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Send Payment Billings Source &amp; Page</label>
+                        <force:inputField aura:id="Send-Payment-Billings-SP" value="{!v.oldBoardingForm.Send_Payment_Billings_Source_Page__c}" change="{!c.handleChangeSendPaymentSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <label>
+                            # Days Before Printing Bills
+                            <lightning:helptext content="If serviced within CADENCE, select No. If serviced by a 3rd party agent, select No. All others select Statements."
+                                class="Days-B-P-B" />
+                        </label>
+                        <force:inputField aura:id="Days-Before-Printing" value="{!v.oldBoardingForm.of_Days_Before_Printing_Bills__c}" change="{!c.handleChangeDaysBefore}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                         <label># Days Before Printing Source &amp; Page</label>
+                        <force:inputField aura:id="Days-Before-Printing-SP" value="{!v.oldBoardingForm.Days_Before_Printing_Source_Page__c}" change="{!c.handleChangeDaysBeforeP}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <h3 class="slds-section-title--divider">Rate Info</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div class="slds-form-element">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            *Rate
+                            <lightning:helptext content="Only applicable if the loan is fixed. Rate the Borrower will accrue interest at.
+                                                         Source doc(1 of the following): Loan Agreement, Note, other legal agreement"
+                                                class="Rate" />
+                        </label>
+                        <ui:inputNumber aura:id="Rate" value="{!v.oldBoardingForm.Rate__c}" format=".00" change="{!c.handleChangeRate}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-SP" value="{!v.oldBoardingForm.Rate_Source_Page__c}" change="{!c.handleChangeRateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            *Rate Index Number
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. This is the floating rate type that will
+                                                         be added to the base interest rate (rate margin). Source doc(1 of the following): Loan Agreement,
+                                                         Note, other legal agreement."
+                                                class="Rate-I-N" />
+                        </label>
+                        <force:inputField aura:id="Rate-Index-Number" value="{!v.oldBoardingForm.Rate_Index_Number__c}" change="{!c.handleChangeRateIndex}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Index Number Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Index-Number-SP" value="{!v.oldBoardingForm.Rate_Index_Number_Source_Page__c}" change="{!c.handleChangeRateIndexSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            *Rate Floor
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. The minimum rate the Borrower will accrue
+                                                         interest at. Source doc: Loan Agreement, Note, other legal agreement."
+                                                class="Rate-F" />
+                        </label>
+                        <ui:inputNumber aura:id="Rate-Floor" value="{!v.oldBoardingForm.Rate_Floor__c}" format=".00" change="{!c.handleChangeRateFloor}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Floor Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Floor-SP" value="{!v.oldBoardingForm.Rate_Floor_Source_Page__c}" change="{!c.handleChangeRateFloorSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            *Rate Margin
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. Then base interest that is added to the rate
+                                                         index number. Source doc: Loan Agreement, Note, other legal agreement."
+                                                class="Rate-M" />
+                        </label>
+                        <ui:inputNumber aura:id="Rate-Margin" value="{!v.oldBoardingForm.Rate_Margin__c}" format=".00" change="{!c.handleChangeRateMargin}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Margin Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Margin-SP" value="{!v.oldBoardingForm.Rate_Margin_Source_Page__c}" change="{!c.handleChangeRateMarginSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Rate Review Date
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. The next date the rate index number should
+                                                         be updated. Source doc(1 of the following): Loan Agreement, Note, other legal agreement. *CADENCE
+                                                         loans are only reviewed as of the 1st of the month"
+                                                class="Rate-R-D" />
+                        </label>
+                        <force:inputField aura:id="Rate-Review-Date" value="{!v.oldBoardingForm.Rate_Review_Date__c}" change="{!c.handleChangeRateReviewD}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Review Date Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Review-Date-SP" value="{!v.oldBoardingForm.Rate_Review_Date_Source_Page__c}" change="{!c.handleChangeRateReviewDSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            *Rate Review Term
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. THis is how the rate review term frequency is
+                                                         meassured. Source doc(1 of the following): Loan Agreement, Note, other legal agreement. *CADENCE
+                                                         loans are only reviewed as of the 1st of the month."
+                                                class="Rate-R-T" />
+                        </label>
+                        <force:inputField aura:id="Rate-Review-Term" value="{!v.oldBoardingForm.Rate_Review_Term__c}" change="{!c.handleChangeRateReviewT}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Review Term Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Review-Term-SP" value="{!v.oldBoardingForm.Rate_Review_Term_Source_Page__c}" change="{!c.handleChangeRateReviewTSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Rate Review Term Frequency
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. This is how often the rate should be updated.
+                                                         Source doc(1 of the following): Loan Agreement, Note, other legal agreement. *CANDENCE loans are
+                                                         only reviewed as of the 1st of the month."
+                                                class="Rate-R-T-F" />
+                        </label>
+                        <force:inputField aura:id="Rate-Review-Term-Frequency" value="{!v.oldBoardingForm.Rate_Review_Term_Frequency__c}" change="{!c.handleChangeRateReviewF}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Review Term Frequency Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Review-Term-Frequency-SP" value="{!v.oldBoardingForm.Rate_Review_Term_Frequency_Source_Page__c}" change="{!c.handleChangeRateReviewFSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Rate Review Day of Month
+                            <lightning:helptext content="Only applicable if the loan is adjustable/floating. Day of the month that the rate index number
+                                                         should be reviewed. Source doc(1 of the following): Loan Agreement, Note, other legal agreement.
+                                                         *CANDENCE loans are only reviewed as of the 1st of the month."
+                                                class="Rate-R-D-M" />
+                        </label>
+                        <force:inputField aura:id="Rate-Review-Day-Month" value="{!v.oldBoardingForm.Rate_Review_Day_of_Month__c}" change="{!c.handleChangeRateReviewM}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Rate Review Day of Month Source &amp; Page</label>
+                        <force:inputField aura:id="Rate-Review-Day-Month-SP" value="{!v.oldBoardingForm.Rate_Review_Day_of_Month_Source_Page__c}" change="{!c.handleChangeRateReviewMSP}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <h3 class="slds-section-title--divider">Collateral Information</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div class="slds-form-element">
+            <table>
+                <tr>
+                    <td>
+                        <label>LTV</label>
+                        <ui:inputNumber aura:id="LTV" value="{!v.oldBoardingForm.LTV__c}" format=".00" change="{!c.handleChangeLTV}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>LTV Source &amp; Page</label>
+                        <force:inputField aura:id="LTV-SP" value="{!v.oldBoardingForm.LTV_Source_Page__c}" change="{!c.handleChangeLTVSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Property Street
+                            <lightning:helptext content="If applicable, subject property location. Source doc: Appraisal or Appraisal Review"
+                                                class="Property-Sth" />
+                        </label>
+                        <force:inputField aura:id="Property-Street" value="{!v.oldBoardingForm.Property_Street__c}" change="{!c.handleChangePropertyStreet}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Property Street Source &amp; Page</label>
+                        <force:inputField aura:id="Property-Street-SP" value="{!v.oldBoardingForm.Property_Street_Source_Page__c}" change="{!c.handleChangePropertyStreetSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Property City</label>
+                        <force:inputField aura:id="Property-City" value="{!v.oldBoardingForm.Property_City__c}" change="{!c.handleChangePropertyCity}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Property City Source &amp; Page</label>
+                        <force:inputField aura:id="Property-City-SP" value="{!v.oldBoardingForm.Property_City_Source_Page__c}" change="{!c.handleChangePropertyCitySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Property State</label>
+                        <force:inputField aura:id="Property-State" value="{!v.oldBoardingForm.Property_State__c}" change="{!c.handleChangePropertyState}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Property State Source &amp; Page</label>
+                        <force:inputField aura:id="Property-State-SP" value="{!v.oldBoardingForm.Property_State_Source_Page__c}" change="{!c.handleChangePropertyStateSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Property Postal Code/Zip</label>
+                        <force:inputField aura:id="Property-Postal-Code" value="{!v.oldBoardingForm.Property_Postal_Code_Zip__c}" change="{!c.handleChangePropertyPostalCode}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Property Postal Code/Zip Source &amp; Page</label>
+                        <force:inputField aura:id="Property-Postal-Code-SP" value="{!v.oldBoardingForm.Property_Postal_Code_Zip_Source_Page__c}" change="{!c.handleChangePropertyPostalCodeSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Property Country</label>
+                        <force:inputField aura:id="Property-Country" value="{!v.oldBoardingForm.Property_Country__c}" change="{!c.handleChangePropertyCountry}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Property Country Source &amp; Page</label>
+                        <force:inputField aura:id="Property-Country-SP" value="{!v.oldBoardingForm.Property_Country_Source_Page__c}" change="{!c.handleChangePropertyCountrySP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Appraised Value
+                            <lightning:helptext content="If applicable, appraised value ver the Final CAM. Source doc: Appraisal or Appraisal Review."
+                                                class="Appraised-V" />
+                        </label>
+                        <force:inputField aura:id="Appraised-Value" value="{!v.oldBoardingForm.Appraised_Value__c}" change="{!c.handleChangeAppraisedV}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Appraised Value Source &amp; Page</label>
+                        <force:inputField aura:id="Appraised-Value-SP" value="{!v.oldBoardingForm.Appraised_Value_Source_Page__c}" change="{!c.handleChangeAppraisedVSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Appraisal Review Date
+                            <lightning:helptext content="If applicable, effective date of the Appraisal. Source doc: Appraisal."
+                                                class="Appraisal-R-D" />
+                        </label>
+                        <force:inputField aura:id="Appraisal-Review-Date" value="{!v.oldBoardingForm.Appraisal_Review_Date__c}" change="{!c.handleChangeAppraisalR}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Appraisal Review Date Source &amp; Page</label>
+                        <force:inputField aura:id="Appraisal-Review-Date-SP" value="{!v.oldBoardingForm.Appraisal_Review_Date_Source_Page__c}" change="{!c.handleChangeAppraisalRSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Year Built
+                            <lightning:helptext content="Year the subject property was built. Source doc: Appraisal or appraisal review."
+                                                class="Year-B" />
+                        </label>
+                        <force:inputField aura:id="Year-Built" value="{!v.oldBoardingForm.Year_Built__c}" change="{!c.handleChangeYearB}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Year Built Source &amp; Page</label>
+                        <force:inputField aura:id="Year-Built-SP" value="{!v.oldBoardingForm.Year_Built_Source_Page__c}" change="{!c.handleChangeYearBSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Collateral Insurance Exp. Date
+                            <lightning:helptext content="Source Doc: Insurance Declaration Page."
+                                                class="Coll-I-E-D" />
+                        </label>
+                        <force:inputField aura:id="Collateral-Insurance-Exp-Date" value="{!v.oldBoardingForm.Collateral_Insurance_Exp_Date__c}" change="{!c.handleChangeCollInsurance}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Coll. Insurance Exp. Date Source &amp; Page</label>
+                        <force:inputField aura:id="Collateral-Insurance-Exp-Date-SP" value="{!v.oldBoardingForm.Coll_Insurance_Exp_Date_Source_Page__c}" change="{!c.handleChangeCollInsuranceSP}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Flood Insurance Requrired?
+                            <lightning:helptext content="Source doc: Flood Zone Certificate. If Flood Cert says Yes, must provide flood insurance 
+                                                         with source docs."
+                                                class="Flood-I-R" />
+                        </label>
+                        <force:inputField aura:id="Flood-Insurance-Required" value="{!v.oldBoardingForm.Flood_Insurance_Required__c}" change="{!c.handleChangeFloodI}" />
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <label>Flood Insurance Required? Source &amp; Page</label>
+                        <force:inputField aura:id="Flood-Insurance-Required-SP" value="{!v.oldBoardingForm.Flood_Insurance_Required_Source_Page__c}" change="{!c.handleChangeFloodISP}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="slds-col modal-footer slds-modal__footer">        
+        <lightning:button variant="neutral" label="Cancel" onclick="{!c.handleCancel }" />      
+        <lightning:button variant="brand" label="Save" onclick="{!c.handleSave }" />
+    </div>
+</aura:component>

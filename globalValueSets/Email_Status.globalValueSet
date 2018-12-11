@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Deliverable</fullName>
+        <default>false</default>
+        <label>Deliverable</label>
+    </customValue>
+    <customValue>
+        <fullName>Undeliverable</fullName>
+        <default>false</default>
+        <label>Undeliverable</label>
+    </customValue>
+    <customValue>
+        <fullName>Hard Bounce</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hard Bounce</label>
+    </customValue>
+    <customValue>
+        <fullName>Blocked</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Blocked</label>
+    </customValue>
+    <description>Email Verification Status</description>
+    <masterLabel>Email Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><span style="font-size: 12pt; font-family: arial; background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},</span><span style="font-size: 12pt; font-family: arial; background-color: rgb(255, 255, 255);"><br></span><br><font face="arial" style="font-size: 12pt;">This email is in reference to
+your Bank of Internet inquiry&nbsp;</font><span style="font-size: 12pt; font-family: arial; background-color: rgb(255, 255, 255);">{!Case.CaseNumber}.&nbsp;<br></span><br><font face="arial" style="font-size: 12pt;">Tha</font>nk you for contacting&nbsp;us, we acknowledge receipt of&nbsp;the Proof of Insurance you submitted and it has been
+forwarded to our Insurance Processing Department.&nbsp;</font><font face="Arial, sans-serif">They will review the documentation, update your
+account accordingly, and advise if any additional information is needed.&nbsp;<br></font><font face="Arial, sans-serif" style=""><font face="arial" style="font-size: 12pt;"><br>If you would like further assistance, please reply to this
+email or we can also be reached by telephone at </font><b style="font-size: 12pt; font-family: arial;">1-866-923-7112</b><font face="arial" style="font-size: 12pt;">.</font><br></font><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br>We appreciate your business and commit to delivering
+value that will make BofI Federal Bank your first choice for all your banking
+needs.<br></span><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br><span style="font-size: 12pt;">Best Regards,<br></span></span><span style="font-size: 12pt; font-family: Arial, sans-serif;">{!User.FirstName}<br></span><b style="font-size: 12pt; font-family: Arial, sans-serif;">BOFI Federal Bank<br></b><span style="font-size: 12pt; font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">Loan Servicing Customer Service</span>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,3 @@
+The CAM for {!Opportunity.CI_Loan_Number__c}  {!Opportunity.Name} has been approved by {!ApprovalRequest.Process_Approver}. Please begin boarding preparations.
+
+Opportunity Link:  {!Opportunity.Link}

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">Hello&nbsp;{!Case.Contact},<br><br></font></p><p class="MsoNormal" style="font-size: 12pt;"><font face="Arial, sans-serif">Support for Quicken and Mint.com is available. You will use your username and password to link your Axos account through those third party systems.</font></p><p class="MsoNormal" style="font-size: 12pt;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal" style="font-size: 12pt;"><font face="Arial, sans-serif">If you have any trouble connecting, we recommend reaching out to Quicken's technical support team for additional assistance.&nbsp;</font></p><p style="font-family: arial;"></p><div style="font-family: arial; font-size: 12pt;"><br></div><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">We appreciate your business and look forward to your reply.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif"><br>Axos Bank&nbsp;Customer Service</font></p><div style="font-family: arial;"><font face="Arial, sans-serif"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

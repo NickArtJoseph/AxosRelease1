@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>The Bank is unable to accommodate your request for a&nbsp;{!Account.RecordType}&nbsp;Account. In evaluating your application, consumer reporting
+agency/agencies provided us with information which in whole or in part
+influences our decision. These agencies did not make the decision to disapprove
+your account application and are unable to provide you with specific reasons
+why the decision was made.<br><br>You have rights under state and federal laws. Included in
+these rights are:<br>1) The right to obtain a free copy of your consumer report
+if you make such a request to the consumer reporting agency within 60 days of
+your receipt of this notice; and<br>2) The right to dispute the completeness or accuracy of any
+information contained in such report by notifying the consumer reporting agency
+directly of your dispute.<br><br>There is no recourse to the decision the Bank has made to
+decline your application at this time. We understand that your time is
+valuable, and regret that we are unable to accommodate your request this time.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font></p><p class="MsoNormal" style="font-size: 12pt; font-family: arial;"><br></p><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 9pt; background-color: white;"><br></span></div><font face="arial" style="font-size: 12pt;"><o:p></o:p></font>]]></td>
+</tr>
+</table>

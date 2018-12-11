@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>37.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Used by Auto Lending in Salesforce1 mobile app to track emails sent from using custom button on Contact</description>
+    <label>MobileAppEmailTracking</label>
+</ApexPage>

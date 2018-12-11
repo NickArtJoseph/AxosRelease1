@@ -1,0 +1,11 @@
+<apex:page standardController="LLC_BI__Product_Package__c"
+	showHeader="false" sidebar="false">
+	<script async="async" type="text/javascript">
+		window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>');
+	</script>
+
+	<c:UniversalDocManDataService includeProductPackageDocMan="true"/>
+	<c:UniversalDocManIncludes />
+	<c:UniversalDocManRoutes />
+	<c:UniversalDocMan />
+</apex:page>

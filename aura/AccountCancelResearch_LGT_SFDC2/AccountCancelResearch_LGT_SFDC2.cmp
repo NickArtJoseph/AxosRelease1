@@ -1,0 +1,11 @@
+<aura:component controller="AccountResearchSFDC2Controller" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader">
+	<aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+
+	<div class="notification-spinner" style="height: 6rem;">
+        <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_large">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+</aura:component>

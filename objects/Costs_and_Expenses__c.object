@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bonus_to_Customer__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonus to Customer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Report_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Report Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deducted_from_Customer__c</fullName>
+        <externalId>false</externalId>
+        <label>Deducted from Customer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Expense_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Expense Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Court Docs</fullName>
+                    <default>false</default>
+                    <label>Court Docs</label>
+                </value>
+                <value>
+                    <fullName>Credit Report</fullName>
+                    <default>false</default>
+                    <label>Credit Report</label>
+                </value>
+                <value>
+                    <fullName>Customer Attorney Fee</fullName>
+                    <default>false</default>
+                    <label>Customer Attorney Fee</label>
+                </value>
+                <value>
+                    <fullName>IPA Fee</fullName>
+                    <default>false</default>
+                    <label>IPA Fee</label>
+                </value>
+                <value>
+                    <fullName>Issuer Admin Fee</fullName>
+                    <default>false</default>
+                    <label>Issuer Admin Fee</label>
+                </value>
+                <value>
+                    <fullName>Lien Searches</fullName>
+                    <default>false</default>
+                    <label>Lien Searches</label>
+                </value>
+                <value>
+                    <fullName>Mailing Expense</fullName>
+                    <default>false</default>
+                    <label>Mailing Expense</label>
+                </value>
+                <value>
+                    <fullName>Medical Underwriting</fullName>
+                    <default>false</default>
+                    <label>Medical Underwriting</label>
+                </value>
+                <value>
+                    <fullName>Notary</fullName>
+                    <default>false</default>
+                    <label>Notary</label>
+                </value>
+                <value>
+                    <fullName>OC Fees</fullName>
+                    <default>false</default>
+                    <label>OC Fees</label>
+                </value>
+                <value>
+                    <fullName>Payoff</fullName>
+                    <default>false</default>
+                    <label>Payoff</label>
+                </value>
+                <value>
+                    <fullName>UCC Filing</fullName>
+                    <default>false</default>
+                    <label>UCC Filing</label>
+                </value>
+                <value>
+                    <fullName>Waiving Fees</fullName>
+                    <default>false</default>
+                    <label>Waiving Fees</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Gifts_Entertainment__c</fullName>
+        <externalId>false</externalId>
+        <label>Gifts/Entertainment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IPA_Fee_paid_by_bofi__c</fullName>
+        <externalId>false</externalId>
+        <label>IPA Fee (paid by bofi)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Issuer_Admin_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Issuer Admin Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lien_Judgment_Search_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Lien &amp; Judgment Search Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mailing_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <label>Mailing Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Misc_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Misc. Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notary_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Notary Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OC_and_Filing_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>OC and Filing Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Cost and Expenses</relationshipLabel>
+        <relationshipName>Cost_and_Expenses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Payee__c</fullName>
+        <externalId>false</externalId>
+        <label>Payee</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UCC_1_Filing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>UCC-1 Filing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Costs and Expense</label>
+    <nameField>
+        <displayFormat>C&amp;E-{0000}</displayFormat>
+        <label>Costs and Expenses #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cost and Expenses</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Bonus_to_Customer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Credit_Report_Fees__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Gifts_Entertainment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>IPA_Fee_paid_by_bofi__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Issuer_Admin_Fee__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Lien_Judgment_Search_Fees__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Mailing_Expenses__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Misc_Fees__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Bonus_to_Customer__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Credit_Report_Fees__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Gifts_Entertainment__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IPA_Fee_paid_by_bofi__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Issuer_Admin_Fee__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Lien_Judgment_Search_Fees__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Mailing_Expenses__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Misc_Fees__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Bonus_to_Customer__c</searchFilterFields>
+        <searchFilterFields>Credit_Report_Fees__c</searchFilterFields>
+        <searchFilterFields>Gifts_Entertainment__c</searchFilterFields>
+        <searchFilterFields>IPA_Fee_paid_by_bofi__c</searchFilterFields>
+        <searchFilterFields>Issuer_Admin_Fee__c</searchFilterFields>
+        <searchFilterFields>Lien_Judgment_Search_Fees__c</searchFilterFields>
+        <searchFilterFields>Mailing_Expenses__c</searchFilterFields>
+        <searchFilterFields>Misc_Fees__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,8 @@
+Hello {!Case.OwnerFirstName},
+
+The following case has been re-assigned to you for completion.  
+
+Case Type: {!Case.RecordType}
+Case ID: {!Case.CaseNumber}
+Case Priority: {!Case.Priority}
+Next SLA Due: {!Case.Next_SLA_Due__c}

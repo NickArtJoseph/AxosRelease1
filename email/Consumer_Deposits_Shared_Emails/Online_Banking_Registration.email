@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style=""><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Hello {!Case.Contact},</span><br><br>The easiest way to access account information is through
+Online Banking.&nbsp; You can easily register
+as a new user by clicking <b style="color: rgb(0, 0, 0);"><u>here</u></b>.<br><br>The registration process involves creating a Username and
+Password as well as completing your personal information. Once you have
+completed this page you can click on the Complete Sign up button at the bottom.<br><br>The next step in the process will instruct you to set up
+your enhanced security features. These features will be used in the event you
+forget your password, or login using a new computer.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Best Regards,</font><br style="background-color: rgb(255, 255, 255);"><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">{!User.FirstName}</span><br style="background-color: rgb(255, 255, 255);"><font style="background-color: rgb(255, 255, 255);"><font color="#ff0000">[INSERT BRAND]</font>&nbsp;</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Customer Service</font></font></p>]]></td>
+</tr>
+</table>

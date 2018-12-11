@@ -1,0 +1,28 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-family: arial; font-size: 12pt;"><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">We have noticed
+transactions in your personal account that appear to be (of business nature/ in
+the name of a 3rd party).&nbsp; If you (are&nbsp;the owner of a&nbsp;business
+and would benefit from a business account/ need to add an owner to this
+account), please contact customer service at (888) 502-2967. <br>
+<br>
+(Business/3rd party) transactions cannot be accepted
+into&nbsp;your&nbsp;account. Transactions of this nature will need to cease
+immediately, or the account will be closed. <br>
+<br>
+Thank you for choosing Axos Bank™ for your banking needs.</span></p><font face="Times New Roman">
+
+</font><br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

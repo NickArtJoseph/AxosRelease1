@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span></p><span style="font-size: 12pt;"><p><br></p><font face="arial"><p><span style="font-size: 12pt;"><font face="Times New Roman"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">At this time, the
+Bank has made the decision to end our banking relationship.</span></font></span></p><p><font face="Times New Roman">
+
+<br></font></p><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><font face="Times New Roman"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">As indicated in your Deposit Account Agreement accepted during
+account application, "The Bank reserves the right to close your account
+for any reason, without cause, or notice."</span></font></span></p><p><font face="Times New Roman">
+
+<br></font></p><p style="margin-bottom: 12pt;"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">This decision is final.&nbsp; All account access is disabled.</span></p><p style="margin-bottom: 12pt;"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><font face="Times New Roman"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">Any remaining funds
+will be mailed to your address on file.</span></font></span></p><p><font face="Times New Roman">
+
+</font><br><font face="arial">Best Regards,<br></font></p></font></span><p></p><p><font face="arial"><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank™&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></font></p><p><br></p><p><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

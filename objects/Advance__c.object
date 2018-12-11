@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Advance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Release Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Advance_Docs_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Docs Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Advance_Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Request Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Advance_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Signed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Advance_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+  ISBLANK(Approval_Status__c), &quot;&quot;,
+  IF(
+    Approval_Status__c = &quot;Pending&quot;, &quot;Requested&quot;,
+    IF(
+      Approval_Status__c = &quot;Rejected&quot;, &quot;Rejected&quot;,
+      IF(
+        NOT(ISBLANK(Uncollected_Date__c)), &quot;Uncollected&quot;,
+        IF(
+          NOT(ISBLANK(Repaid_Date__c)), &quot;Repaid&quot;,
+          IF(
+            NOT(ISBLANK(Advance_Date__c)), &quot;Released&quot;,
+            IF(
+              NOT(ISBLANK(Advance_Signed_Date__c)), &quot;Signed&quot;,
+              IF(
+                NOT(ISBLANK(Advance_Docs_Date__c)), &quot;Drafted&quot;,
+                &quot;Approved&quot;
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Advance Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>Set through approval process to track the status of the approval; used as part of the formula for the Advance Status field</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Advances</relationshipLabel>
+        <relationshipName>Advances</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Repaid_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Repaid Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Uncollected_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Uncollected Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Advance</label>
+    <nameField>
+        <displayFormat>Advance-{0000}</displayFormat>
+        <label>Advance #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Advances</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Advance_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Repaid_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Uncollected_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Advance_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Amount__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Opportunity__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Repaid_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Uncollected_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Advance_Date__c</searchFilterFields>
+        <searchFilterFields>Amount__c</searchFilterFields>
+        <searchFilterFields>Opportunity__c</searchFilterFields>
+        <searchFilterFields>Repaid_Date__c</searchFilterFields>
+        <searchFilterFields>Uncollected_Date__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Repaid_Date_or_Uncollected_Date</fullName>
+        <active>true</active>
+        <description>Ensure that either Repaid Date or Uncollected Date are populated, not both</description>
+        <errorConditionFormula>AND( 
+  NOT(ISBLANK(Repaid_Date__c)),
+  NOT(ISBLANK(Uncollected_Date__c))
+)</errorConditionFormula>
+        <errorDisplayField>Uncollected_Date__c</errorDisplayField>
+        <errorMessage>Repaid Date and Uncollected Date cannot both be populated.  Please remove one of these date values.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_Opportunity_Reparenting</fullName>
+        <active>true</active>
+        <description>Only the following profiles may reparent the Advance:  Specialty Finance - Processors, Specialty Finance - Admin</description>
+        <errorConditionFormula>AND(
+  NOT(ISNEW()),
+  NOT(
+    OR(
+      $Profile.Name = &quot;Specialty Finance - Processors&quot;,
+      $Profile.Name = &quot;Specialty Finance - Admin&quot;,
+      $Profile.Name = &quot;API Service Account&quot;,
+      $Profile.Name = &quot;System Administrator&quot;
+    )
+  ),
+  ISCHANGED(Opportunity__c) 
+)</errorConditionFormula>
+        <errorMessage>Only Processors and Admin are authorized to change the Opportunity associated with this Advance.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Advance_Docs</fullName>
+        <availability>online</availability>
+        <description>Button to create advance docs.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Advance Docs</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_380}
+&amp;id={!Opportunity.Id}
+&amp;ReportId=00Oi0000005pGYI?pv0={!Advance__c.Name}
+&amp;TemplateId=a0Ni000002NfhGd
+&amp;QueryId=a0ui000000BbpEo
+?pv0={!Advance__c.Id}
+~pv1={!
+IF(ISBLANK(Advance__c.Advance_Docs_Date__c), 
+TEXT(YEAR(TODAY())) &amp; &quot;-&quot; &amp; IF(MONTH(TODAY()) &lt; 10, &quot;0&quot;, &quot;&quot;) &amp; TEXT(MONTH(TODAY())) &amp; &quot;-&quot; &amp; IF(DAY(TODAY()) &lt; 10, &quot;0&quot;, &quot;&quot;) &amp; TEXT(DAY(TODAY())), 
+TEXT(YEAR(Advance__c.Advance_Docs_Date__c)) &amp; &quot;-&quot; &amp; IF(MONTH(Advance__c.Advance_Docs_Date__c) &lt; 10, &quot;0&quot;, &quot;&quot;) &amp; TEXT(MONTH(Advance__c.Advance_Docs_Date__c)) &amp; &quot;-&quot; &amp; IF(DAY(Advance__c.Advance_Docs_Date__c) &lt; 10, &quot;0&quot;, &quot;&quot;) &amp; TEXT(DAY(Advance__c.Advance_Docs_Date__c)))}
+~pv2={!Advance__c.OpportunityId__c}
+&amp;DS7=3
+&amp;BML=Advance+Docs+for+{!Opportunity.Name}</url>
+    </webLinks>
+</CustomObject>

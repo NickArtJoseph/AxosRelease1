@@ -1,0 +1,145 @@
+<apex:page sidebar="false" controller="G4S.DownloadGlanceController" action="{!initPage}" tabstyle="Glance_User_Settings__tab" title="Glance for Salesforce - Download Glance">
+
+<script>
+var isWin = (navigator.platform.indexOf("Win") >= 0);
+var isMac = (navigator.platform.indexOf("Mac") >= 0);
+
+function openDownload(){
+	if (isWin) {
+		window.open("http://www.glance.net/sf_install_win");
+	} else {
+		window.open("http://www.glance.net/sf_install_mac");
+	}
+	return true;
+}
+</script>
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Download Glance"/>
+
+<apex:pageMessages />
+
+<apex:form >
+<apex:pageBlock title="Reminder">
+	<apex:pageBlockButtons location="top">
+		<apex:commandButton action="{!finish}" value="Return to User Settings" />
+	</apex:pageBlockButtons>
+	
+	<apex:outputText value="Here's your new Glance Address that you'll need to access Glance."/>
+	<br/><br/>
+	<apex:outputText value="{!settings.G4S__Glance_Address__c}" style="font-weight: bold;"/>
+</apex:pageBlock>
+</apex:form>
+
+<apex:pageBlock title="Download and Install Glance">
+	<apex:pageBlockButtons location="top">
+		<apex:form >
+			<apex:commandButton action="{!goNowhere}" onclick="return openDownload();" value="Download Glance" />
+		</apex:form>
+	</apex:pageBlockButtons>
+<script>
+
+// Determine the browser version.
+var ie = -1;
+var ns = -1;
+var appver = 0;
+var autoinstall = 0;
+var runtext = '';
+var actiontext = '"Save"';
+
+if (isWin) {
+    if (navigator.appName.indexOf("Microsoft Internet Explorer") != -1) {
+        ie = 1;
+                
+        if (navigator.appVersion.indexOf("MSIE 8.0") != -1) {
+		    appver = 8.0;
+        } else if (navigator.appVersion.indexOf("MSIE 7.0") != -1) {
+		    appver = 7.0;
+        } else if (navigator.appVersion.indexOf("MSIE 6.0") != -1) {
+		    appver = 6.0;
+	    } else if (navigator.appVersion.indexOf("MSIE 3.02") != -1) {
+		    appver = 3.02;
+	    } else {
+		    appver = parseFloat(navigator.appVersion);
+		}
+    } else if (navigator.appName.indexOf("Netscape") != -1) {
+	    ns = 1;
+	    appver = parseFloat(navigator.appVersion);
+	    actiontext = '"Save"';
+	    // want >= 4.04;
+    } 
+
+    if (ie == 1 && appver >= 3.02) {
+	    autoinstall = 0;
+	    if (appver > 6.0) {
+			runtext = 'Run';
+			actiontext = "\"Run\"";
+	    } else if (appver = 6.0) {				
+		    if (navigator.appMinorVersion.indexOf("SP2") != -1) {
+			    runtext = 'Run';
+			    actiontext = "\"Run\"";
+		    } else {
+			    runtext = 'Open';
+			    actiontext = "\"Open\"";
+		    }
+	    } else {
+		    runtext = "Run this program from its current location";
+		    actiontext = "\"Run\"";
+	    }
+    }
+}
+
+    if (isMac) {
+       // document.writeln("After clicking the button above:<br><br>");
+       	document.writeln("<ol>");
+        document.writeln("<li>The Glance disk image (dmg) will be downloaded and should automatically open");
+        document.writeln("<li>If necessary, double-click the Glance Package installer icon");
+        document.writeln("<li>Click \"Continue\" to install Glance in your Applications folder (Any previous version of Glance will be overwritten)");
+        document.writeln("<li>Glance will open and the Glance \"G\" icon will appear in your dock and menu bar");
+		document.writeln("</ol>");
+    }
+
+	if (autoinstall == 1) {
+	   // document.writeln("After clicking the link above:<br>");
+		document.writeln("<ol>");
+		document.writeln('<li>A Security Warning box will appear and ask "Do you want to install and run..."<br>');
+		document.writeln('<li>Click <b>Yes</b>, and the installation wizard will start and guide you the rest of the way.');
+		document.writeln("</ol>");	
+	} else if (ie == 1) {
+       // document.writeln("After clicking the link above:<br>");
+    	document.writeln("<ol>");
+		document.writeln("<li>");
+		document.writeln("In the File Download box, select  <b>" + runtext + "</b><br>");
+		document.writeln("<li>");
+		document.writeln("Upon download, the installation wizard will <b>guide you the rest of the way</b>.");
+		document.writeln("</ol>");
+	} else if (ns == 1) {		
+	    document.writeln("<ol>");		
+		document.writeln("<li>");
+		
+		if (navigator.userAgent.indexOf("Firefox") != -1) { 
+			document.writeln("Choose to <b>Save to disk</b>.<br>");
+		} else {
+			document.writeln("Choose to <b>Save it to disk</b>.<br>");
+		}
+			
+		document.writeln("<li>");
+        document.writeln("Choose to <b>Save In</b> your <b>Desktop</b> and click <b>Save</b>.&nbsp;<br>");
+        document.writeln("<li>");
+        document.writeln("After the file downloads, double-click the new <b>Glance</b> icon on your Desktop.<br>");
+        document.writeln("<li>");
+        document.writeln("The installation wizard will guide you the rest of the way.");
+		document.writeln("</ol><br>");	
+	}
+</script>
+</apex:pageBlock>
+
+<apex:pageBlock title="Free Audio Conferencing">
+	<apex:pageBlockButtons location="top">
+		<apex:form >
+			<apex:commandButton value="Get Free Conferencing" action="{!getAudio}" immediate="true" />
+		</apex:form>
+	</apex:pageBlockButtons>
+	Glance can also provide free audio conferencing. Click to update your Glance User Settings with Audio Conferencing.
+	<br/><br/>
+</apex:pageBlock>
+</apex:page>

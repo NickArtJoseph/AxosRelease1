@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__Email__c</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__HardBounce__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__Opened__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__Clicked__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__SoftBounce__c</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_EMAIL_OPT_OUT</field>
+    </columns>
+    <description>Aaron Shapiro erroneous email 5-25</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Imagine a Lender - Image-Letter</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Imagine a Lender Recipients</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__IndividualEmailResult__c@et4ae5__IndividualEmailResult__c.et4ae5__Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_CNTC_FIRST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>et4ae5__IndividualEmailResult__c.et4ae5__DateSent__c</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

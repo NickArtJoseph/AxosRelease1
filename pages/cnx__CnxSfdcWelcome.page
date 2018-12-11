@@ -1,0 +1,42 @@
+<apex:page showHeader="false" sidebar="false" >
+<apex:outputPanel >
+        <style>
+            html           { height: 90% }
+            body           { margin-top:10px; margin-left:10px; background-image: none; background-color: transparent; height: 100% }
+            #footer        { position: absolute;bottom: 2px; height:17px; width: 98%; margin-bottom:2px; }
+            #footer p,a    { color: #666666; font: 10px Arial; }
+            #footer p      { float: right;  margin: 0px; margin-right:5px; }
+            ul li, ul, li  { margin-left: -5px; }
+        </style>
+        <h1>Congratulations</h1>
+        <p>
+        The b+s Connects for Cisco Contact Center package has been successfully installed.
+        <br /><br /><b>Next steps:</b>
+        <ul type="square">
+          <li>Download Connects Gadget and install it on your Cisco Finesse servers</li>
+          <br></br>
+           <li>Create a SoftPhone Layout for your users (<b>Customize | Call Center | SoftPhone Layout</b>)</li>
+           <br></br>
+          <li>Configure the imported Call Center (<b>Customize | Call Center | Call Centers</b>)</li>
+          <li>Configure the link "Connects Gadget URL A" to the Connects Gadget on your primary Cisco Finesse server</li>
+          <li>Configure the link "Connects Gadget URL B" to the Connects Gadget on your secondary Cisco Finesse server</li>
+           <br></br>
+          <li>Add users to the Call Center</li>
+           <br></br>
+          <li>Assign license for this package to the users</li>
+          <br></br>
+        </ul>
+        Further details can be found in the Installation Guide.
+        </p>
+        <p>
+        <h1>Downloads</h1>
+        <ul type="square">
+          <li><a href="{!URLFOR($Resource.CnxSfdcResources, 'downloads/ConnectsGadget.zip')}">Connects Gadget (to copy on Finesse server)</a></li>
+          <li><a href="{!URLFOR($Resource.CnxSfdcResources, 'downloads/ConnectsSalesforce_OpenSource_3-1_Rev1.pdf')}">Open Source information</a></li>
+        </ul>
+        </p>
+        <div id="footer">
+        <p>powered by&nbsp;&nbsp;<img src="{!URLFOR($Resource.CnxSfdcResources, 'images/bs-logo_cmyk.png')}" /></p>
+        </div>
+    </apex:outputPanel>
+</apex:page>

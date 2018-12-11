@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Specialty Finance email sent when Wholesale opps changed to Funded - Closed Won</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - Funded Closed Won FVR Notification</name>
+    <style>none</style>
+    <subject>FVR Request - Wholesale Deal Funded for {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

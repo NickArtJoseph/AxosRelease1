@@ -1,0 +1,11 @@
+A new Customer Complaint Case has been created. You can access this case here: {!Case.Link}
+
+Feedback Business Unit: {!Case.Feedback_Business_Unit__c}
+
+Feedback Reason: {!Case.Feedback_Reason__c}
+
+Feedback Reason Detail: {!Case.Feedback_Reason_Detail__c}
+
+Description: {!Case.Description}
+
+...

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>Link to Welcome Page for use as Configuration Page in package</description>
+    <displayType>link</displayType>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>350</height>
+    <isResizable>true</isResizable>
+    <linkType>page</linkType>
+    <masterLabel>WelcomePageLink</masterLabel>
+    <openType>newWindow</openType>
+    <page>cnx__CnxSfdcWelcome</page>
+    <position>none</position>
+    <protected>true</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <width>480</width>
+</CustomPageWebLink>

@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>On a Certificate of Deposit account we will impose a penalty
+if you withdraw any or all of the principal before the maturity date. The fee
+for withdrawing your funds early is as follows:<br></font></p><div style="text-indent: 0px;"><ul style=""><li><font face="Arial, sans-serif" style="">CD term of 3 thru 5 months, one and a half
+months loss of interest, accrued or not;</font></li><li><font face="Arial, sans-serif" style="">CD term of 6 thru 11 months, three months loss
+of interest, accrued or not;</font></li><li><font face="Arial, sans-serif" style="">CD term of 12 thru 23 months, six months loss of
+interest, accrued or not;</font></li><li><font face="Arial, sans-serif" style="">CD term of 24 thru 35 months, twelve months loss
+of interest, accrued or not;&nbsp;</font></li><li><font face="Arial, sans-serif" style="">CD term of 36 thru 47 months, eighteen months
+loss of interest, accrued or not;</font></li><li><font face="Arial, sans-serif" style="">CD term of 48 months or greater, twenty four
+months loss of interest, accrued or not.</font></li></ul><div style="text-indent: 0px;"><font face="Arial, sans-serif" style="">We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font></div></div><p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

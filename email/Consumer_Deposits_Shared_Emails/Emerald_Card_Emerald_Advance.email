@@ -1,0 +1,11 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>We apologize for any inconvenience. Although the card is
+issued by our Bank, we do not house any customer accounts so there is no way we
+can access any account information. Please use the following contact
+information to direct your inquiry:<br><br><b>Emerald Card / Emerald Advance<br></b><b style="">Phone: 1-866-353-1266<br></b><b><br></b>Alternatively, if you are unable to make contact with a live
+representative, please call <b style="">1-877-541-2634</b>. A Direct Banker will be happy to
+transfer you to an actual representative.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font></p><p class="MsoNormal" style="font-size: 12pt; font-family: arial;"><br></p><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 9pt; background-color: white;"><br></span></div><font face="arial" style="font-size: 12pt;"><o:p></o:p></font>]]></td>
+</tr>
+</table>

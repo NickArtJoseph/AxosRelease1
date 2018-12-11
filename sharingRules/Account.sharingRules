@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Aaron_Bussey</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing rule to allow Aaron to delete notes and attachments.</description>
+        <label>Aaron Bussey</label>
+        <sharedTo>
+            <group>Aaron_Bussey</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Courts,Specialty Finance - Assignee,Specialty Finance - Law Firms,Specialty Finance - Originator,Specialty Finance - Insurance Companies,Specialty Finance - Lottery Winners,Specialty Finance - State Lotteries</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - SS Annuitants</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Accounts_for_Research_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Read Access for many BU Account Record Types. Ticket # 52541</description>
+        <label>Accounts for Research Team</label>
+        <sharedTo>
+            <group>Specialty_Finance_Researchers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Capital Markets,Consumer Wholesale,Business Account,Business Banking,Virtus Person Account,Person Account,Consumer Deposits Person Accounts,Warehouse Lending,Financial Advisor,TPO Account,WLD,IPL Account</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLO_Specialty_Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>CLO - Specialty Finance</label>
+        <sharedTo>
+            <group>Consumer_Lending_Operations</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Courts,Specialty Finance - Law Firms,Specialty Finance - Insurance Companies,Specialty Finance - Assignee,Specialty Finance - Originator</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - State Lotteries,Specialty Finance - IGT Winners,Specialty Finance - SS Annuitants,Specialty Finance - Lottery Winners</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Capital_Markets_Account_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Shares accounts with read/write by Capital Market Recrod type to owner with users of Capital Markets group.</description>
+        <label>Capital Markets Account Sharing</label>
+        <sharedTo>
+            <group>Capital_Markets</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Capital Markets</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Commercial_Leaders_Business_SFDC2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Commercial Leaders: Business SFDC2</label>
+        <sharedTo>
+            <group>Commercial_Leadership_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Account SFDC2,Brokerage SFDC2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Compliance_Email_Opt_Outs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Compliance: Email Opt Outs</label>
+        <sharedTo>
+            <group>Compliance_Email_Opt_Out</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>XX</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Consumer_Wholesale_Accounts_for_Consumer_Wholesale</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>This shares Consumer Wholesale Accounts among Consumer Wholesale team.</description>
+        <label>Consumer Wholesale Accounts for Consumer Wholesale</label>
+        <sharedTo>
+            <group>Consumer_Wholesale</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Consumer Wholesale</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Data_Analytics_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Data Analytics Team</label>
+        <sharedTo>
+            <group>Data_Analytics_Team</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - State Lotteries,Business Account,Specialty Finance - Courts,Specialty Finance - Insurance Companies,Specialty Finance - Law Firms,Specialty Finance - Assignee,Specialty Finance - Originator</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income Property Lending,Business Banking,C&amp;I - Account,Specialty Finance - Lottery Winners,Person Account,Warehouse Lending,Dealer Services,Virtus Business Account,Financial Advisor,TPO Account,WLD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Consumer Deposits Person Accounts,Specialty Finance - IGT Winners,Virtus Person Account,Dealer Services Person Accounts,Auto Lending Person Accounts</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Enterprise_2_0_Account_Sharing_Read_Only</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Shares Accpunts that are in the &quot;Big Silo&quot; as it is rolled out to BUs. For 2.0 launch this is Consumer Deposits, Virtus, Dealer Services, Business Banking, Advisor.</description>
+        <label>Enterprise 2.0 Account Sharing Read Only</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Prospecting Business,Consumer Person Account SFDC2,Prospecting Consumer PA,Business/Consumer Person Account,Prospecting Business/Consumer PA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Fiduciary_Services</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Fiduciary Services</label>
+        <sharedTo>
+            <group>Epiq_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sub_Branch_SFDC2__c</field>
+            <operation>equals</operation>
+            <value>Fiduciary Services</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Grant_TPO_Account_access_to_Eric_Nelepovitz</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Grant TPO Account access to Eric Nelepovitz</label>
+        <sharedTo>
+            <group>Eric_Nelepovitz</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>TPO Account</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Mareto_Read_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Mareto Read Access</label>
+        <sharedTo>
+            <role>Marketo</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Account SFDC2,Prospecting Business,Consumer Person Account SFDC2,Prospecting Consumer PA,Prospecting Business/Consumer PA,Business/Consumer Person Account</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketing_Accounts_SFDC2</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Account Sharing Rule for Marketing</description>
+        <label>Marketing Accounts SFDC2</label>
+        <sharedTo>
+            <group>Marketing_SFDC2</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Business Account,Business Banking,Virtus Person Account,Auto Lending Person Accounts,Person Account,Consumer Deposits Person Accounts,Dealer Services,Dealer Services Person Accounts,Virtus Business Account,Financial Advisor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Equipment Finance Group</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Research_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Research Team</label>
+        <sharedTo>
+            <group>Researchers_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Business Account,Business Banking,Virtus Person Account,Auto Lending Person Accounts,Person Account,Consumer Deposits Person Accounts,Dealer Services,Dealer Services Person Accounts,Virtus Business Account,Financial Advisor</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SFDC2_Enterprise</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>SFDC2 Enterprise</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Prospecting Business/Consumer PA,Business Account SFDC2,Brokerage SFDC2,Prospecting Business,Consumer Person Account SFDC2,Prospecting Consumer PA,Business/Consumer Person Account</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Assignee_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Assignee Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Assignee</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Court_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Court Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Courts</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Insurance_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Insurance Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Insurance Companies</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Law_Firm_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Law Firm Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Law Firms</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Lottery_Winner_Record_Types</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Lottery Winner Record Types</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Lottery Winners</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Originator_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Originator Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Originator</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Record_Types</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance State Lottery Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - State Lotteries</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_SS_Annuitant_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance SS Annuitant Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - SS Annuitants</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Specialty_Finance_IGT_Winners_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Finance Specialty Finance - IGT Winners Record Type</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - IGT Winners</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>TPO_Account_Sharing_by_Record_Type</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>TPO Account Sharing by Record Type</label>
+        <sharedTo>
+            <group>TPO</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>TPO Account</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>WHL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>WHL sharing</description>
+        <label>WHL</label>
+        <sharedTo>
+            <group>WHL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value></value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>WLD</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>WHL sharing</description>
+        <label>WLD Record Type</label>
+        <sharedTo>
+            <group>WLD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WLD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Accounts_for_Kevin_Harty</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Aloows Kevin Harty to take ownership of accounts currently owned by the Outbound Account Pool</description>
+        <label>Accounts for Kevin Harty</label>
+        <sharedTo>
+            <group>Kevin_Harty</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>Sales_Rep_Jr</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>C_I_Record_Access_for_Brandon</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>C&amp;I Record Access for Brandon</label>
+        <sharedTo>
+            <group>Brandon_Hines</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>C_I_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Capital_Markets_Account_Opp_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Shares accounts and opps with read/write with a Capital Market Group owner with users of Capital Markets group.</description>
+        <label>Capital Markets Account Opp Sharing</label>
+        <sharedTo>
+            <group>Capital_Markets</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Capital_Markets</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Financial_Advisors</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Financial Advisors</label>
+        <sharedTo>
+            <group>Financial_Advisors</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Financial_Advisors</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SFR_Management_Account_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing of Account/Contact records between James Knight and Kyle Albers [request from Brandon Hines]</description>
+        <label>SFR Management - Account Sharing</label>
+        <sharedTo>
+            <group>SFR_Management_Account_Sharing</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>SFR_Management_Account_Sharing</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_WLD_owned_Accounts_with_Credit_Office</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Share WLD owned Accounts with Credit Office</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Credit_Office_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <role>SVP_WLD</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Specialty_Deposit_Accounts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Specialty Deposit Accounts</label>
+        <sharedTo>
+            <group>Specialty_Deposits_SFDC2</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Specialty_Deposits_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>TPO_Account_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Sharing for TPO Managers and team</description>
+        <label>TPO Account Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>TPO_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>TPO_Sales_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>WLD2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>WLD</label>
+        <sharedTo>
+            <group>WLD</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>WLD</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

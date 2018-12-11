@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>EmailSFDC2Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>EmailSFDC2New</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>EmailSFDC2View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>SFDC2 Email  objects are used to allow storing an unlimited number of current and historical email addresses for Leads and Personal Accounts.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Emails</relationshipLabel>
+        <relationshipName>Email_Addresses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Email_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Status</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unverified</fullName>
+                    <default>true</default>
+                    <label>Unverified</label>
+                </value>
+                <value>
+                    <fullName>Verified</fullName>
+                    <default>false</default>
+                    <label>Verified</label>
+                </value>
+                <value>
+                    <fullName>Bad</fullName>
+                    <default>false</default>
+                    <label>Bad</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email_Type__c</fullName>
+        <description>Type of email. Will not necessarily match Parent Record Type, e.g. an employee contact with a Person Account could have an Email with Parent Record Type = &apos;Personal&apos; and Email Type = &apos;Primary Business&apos;</description>
+        <externalId>false</externalId>
+        <label>Email Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Primary Personal</fullName>
+                    <default>false</default>
+                    <label>Primary Personal</label>
+                </value>
+                <value>
+                    <fullName>Primary Business</fullName>
+                    <default>false</default>
+                    <label>Primary Business</label>
+                </value>
+                <value>
+                    <fullName>Other Personal</fullName>
+                    <default>true</default>
+                    <label>Other Personal</label>
+                </value>
+                <value>
+                    <fullName>Other Business</fullName>
+                    <default>false</default>
+                    <label>Other Business</label>
+                </value>
+                <value>
+                    <fullName>Former</fullName>
+                    <default>false</default>
+                    <label>Former</label>
+                </value>
+                <value>
+                    <fullName>JH Email</fullName>
+                    <default>false</default>
+                    <label>JH Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup to associated Lead record</description>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Emails</relationshipLabel>
+        <relationshipName>Email_Addresses</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SQL_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SQL ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Email</label>
+    <nameField>
+        <displayFormat>EML-{0000}</displayFormat>
+        <label>Email Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Emails</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Account_Email</fullName>
+        <active>true</active>
+        <label>Account Email</label>
+        <picklistValues>
+            <picklist>Email_Status__c</picklist>
+            <values>
+                <fullName>Bad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Verified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Email_Type__c</picklist>
+            <values>
+                <fullName>Former</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Personal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Personal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Email</fullName>
+        <active>true</active>
+        <label>Lead Email</label>
+        <picklistValues>
+            <picklist>Email_Status__c</picklist>
+            <values>
+                <fullName>Bad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Verified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Email_Type__c</picklist>
+            <values>
+                <fullName>Former</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Personal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Personal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>Business_Emails</fullName>
+        <active>true</active>
+        <description>Prevent Phone objects on business accounts from having primary home or mobile numbers</description>
+        <errorConditionFormula>IF( !ISNULL( Account__c) 
+&amp;&amp; !Account__r.IsPersonAccount 
+&amp;&amp; LEFT( Account__r.Account_Type_SFDC2__c ,2) != &apos;JH&apos; 
+&amp;&amp; TEXT(Email_Type__c) == &apos;Primary Personal&apos;, 
+true 
+, 
+false 
+)</errorConditionFormula>
+        <errorMessage>Business accounts can not have primary personal email addresses</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>JH_Customer</fullName>
+        <active>true</active>
+        <description>Prevent primary email addresses from being updated on JH accounts</description>
+        <errorConditionFormula>IF( !ISNULL( Account__c ) 
+&amp;&amp; LEFT( Account__r.Account_Type_SFDC2__c, 2 ) == &apos;JH&apos;
+    &amp;&amp; LEFT(  RecordType.DeveloperName , 7 ) == &apos;Primary&apos;, 
+true 
+, 
+false 
+)</errorConditionFormula>
+        <errorMessage>Primary email addresses on accounts with JH customer records must be updated in JH.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

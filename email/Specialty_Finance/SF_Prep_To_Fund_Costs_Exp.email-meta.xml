@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent when Retail opp Stage set to Prep To Fund</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - Prep To Fund Costs/Exp</name>
+    <style>none</style>
+    <subject>Please input costs and expenses for {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

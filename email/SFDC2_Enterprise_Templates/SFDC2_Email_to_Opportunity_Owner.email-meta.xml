@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email notifications to opportunity owner when Financial account is funded</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2: Email to Opportunity Owner</name>
+    <style>none</style>
+    <subject>Account Funded</subject>
+    <textOnly>The Financial Account for {!Financial_Account__c.Name} has been funded.
+
+
+
+ {!Financial_Account__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

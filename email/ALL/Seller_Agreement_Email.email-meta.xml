@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>Seller Agreement Email</name>
+    <style>freeForm</style>
+    <subject>BOFI Wholesale &amp; Correspondent Seller Agreement Documents</subject>
+    <textOnly>{!Today}
+
+{!Account.BillingAddress}
+
+Dear Valued Lending Partner:
+Please click on the url below for Seller Agreement Documents.  If you have any questions please don&apos;t hesitate to reach out to us.
+
+https://www.bofifederalbank.com/BofiFederalHome/StrategicAlliances/ThirdPartyLending/SellerApplication
+
+Regards,
+
+{!User.Name}
+{!User.Title}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

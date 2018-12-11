@@ -1,0 +1,9 @@
+An In-house Council Review Complete date has been entered for the following:
+
+Account Name: {!Opportunity.Account}
+Opportunity Name: {!Opportunity.Name}
+Originator: {!Opportunity.Originator__c}
+In-house Council Review Complete: {!Opportunity.In_House_Counsel_Review_Complete__c}
+
+Please click on the following link to access the Opportunity record:
+{!Opportunity.Link}

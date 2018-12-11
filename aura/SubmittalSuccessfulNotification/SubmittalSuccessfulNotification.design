@@ -1,0 +1,3 @@
+<design:component >
+	<design:attribute name="successMessage" label="Sucess Message" default="Record has been saved" description="Success Message for Specified Status" />
+</design:component>

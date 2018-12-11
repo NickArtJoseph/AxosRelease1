@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="arial" style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},</font><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br>You can easily deposit cash into your account by using
+Reload @ the Register.<br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br>Visit </span><a href="http://www.attheregister.com/cashreload" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">www.attheregister.com/cashreload</a><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">&nbsp; and click on Find a Store location to find a
+store nearby that supports this program. Visit that store with your Debit card
+and ask to load cash into your account at the register. In addition to your
+deposit there is a reload fee of up to $4.95.<br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br>Local customers can also use Reload @ the Register, but are
+still welcome to visit our branch between the hours of 9am - 5pm Monday to
+Friday to deposit cash as well. We are located at:<br></span><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">4350 La Jolla Village Dr Suite 140<br></b><b style="color: rgb(0, 0, 0); font-size: 12pt;"><font face="arial">San Diego, CA 92122<br></font></b><span style="color: rgb(0, 0, 0); font-size: 12pt;"><font face="arial"><b><br></b></font><font face="Arial, sans-serif">ATM Deposits are only available at the address above.<br></font></span><span style="color: rgb(0, 0, 0); font-size: 12pt;"><br><font face="Arial, sans-serif">We appreciate your business and commit to
+providing superior Banking products, support and services.<br></font></span><span style="color: rgb(0, 0, 0); font-size: 12pt;"><font face="Arial, sans-serif"><br></font></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Best Regards,<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><br style="font-family: Arial, sans-serif;"><font style="font-family: Arial, sans-serif;">Axos Bank&nbsp;</font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">Customer Service</span></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,3 @@
+The LOQ Status for {!Loan_Ops_Questionnaire__c.Opportunity__c}  has been updated from 
+{!Loan_Ops_Questionnaire__c.OldLOQStatus__c} to {!Loan_Ops_Questionnaire__c.LOQ_Status__c} 
+{!Loan_Ops_Questionnaire__c.OppLink__c}

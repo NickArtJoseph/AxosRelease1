@@ -1,0 +1,137 @@
+<apex:page standardController="Account" extensions="SNPCAPIQ.KeyDevelopmentController">
+
+    
+      <style type="text/css">
+      
+        .right {
+            float:right;
+        }
+        .custPopup{
+            background-color: white;
+            border-radius: 5px;
+            border-top: 2px red solid;
+            z-index: 9999;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+            displays in the center of the screen. First set the width. Then set
+            margin-left to negative half of what the width is. You can add
+            the height property for a fixed size pop up if you want.*/
+            width: 600px;            
+            left: 50%;
+            margin-left: -300px;
+            top:50%;
+            margin-top: -150px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+        .custPopup .content {
+            padding:10px;
+        }
+        .custPopup .controls{
+            background: lightgray;
+            padding:10px;
+        }
+        .custPopup .detailList td{
+            vertical-align:top;
+        }
+
+    </style>
+    
+   <!-- <apex:form > 
+    
+        <div class="pagination">
+        </div>
+        
+        <div class="clear"/>    
+       
+       
+       <apex:dataTable value="{!KeyModelList}" var="key" cellPadding="4" styleClass="table_results">
+        
+            <apex:column styleClass="number_column" >
+                <apex:facet name="Number">Number</apex:facet>
+                <apex:outputText value="{!key.Id}"/>
+            </apex:column>
+             <apex:column headerValue="Date" >
+                 <apex:outputText value="{!key.DateValue}"/>
+             </apex:column>
+    
+            <apex:column headerValue="Company">
+                <apex:facet name="Company">Company</apex:facet>
+                <apex:outputText value="{!key.Company}"/>
+            </apex:column>
+            
+            <apex:column headerValue="Headline">
+                <apex:facet name="Headline">Headline</apex:facet>
+                <apex:outputText value="{!key.Headline}"/>
+            </apex:column>
+            
+            <apex:column headerValue="Type" >
+                <apex:facet name="Type">Type</apex:facet>
+                <apex:outputText value="{!key.Type}"/>
+            </apex:column>
+            <apex:column headerValue="Other parties">
+                <apex:facet name="OtherParties">OtherParties</apex:facet>
+                <apex:outputText value="{!key.OtherParties}"/>
+            </apex:column>
+            <apex:column headerValue="Details">
+                <apex:facet name="Details">Details</apex:facet>
+                <apex:commandButton value="Details" action="{!showPopup}" rerender="tstpopup"/>
+                
+                <apex:outputPanel id="tstpopup">
+                    <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+                    <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">                      
+                        <div class="content">
+                        
+                                <table class="detailList" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40%;">
+                                            
+                                            <h3>Company</h3>
+                                            <p>{!key.Company} </p>
+                                            
+                                            <h3>Date</h3>
+                                            <p>{!key.DateValue} </p>               
+                
+                                            </td>
+                                            <td >
+                                                   <h3>Headline</h3>
+                                                <p>{!key.Headline} </p> 
+                                                
+                                                  <h3>Situation</h3>
+                                                <p> </p> 
+                
+                                            </td>
+                                        </tr>                                        
+                                    </tbody>
+                                </table>
+                                  
+                        </div>
+                        
+                        <div class="controls">
+                            <apex:commandLink value="Close" action="{!closePopup}" rerender="tstpopup" styleClass="right"/>
+                            <div class="clear"/>
+                        </div>
+                    </apex:outputPanel>            
+                </apex:outputPanel>
+                
+            </apex:column>
+        </apex:dataTable>
+       
+           
+        <div class="pagination">
+        </div>
+        
+     </apex:form> -->
+     
+          
+</apex:page>

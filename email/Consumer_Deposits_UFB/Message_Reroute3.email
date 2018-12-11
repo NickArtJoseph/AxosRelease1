@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Hello {!Case.Contact},</p><p><br></p><p>For security and verification purposes please send your request via secure message in Online Banking. To do so, simply log in to Online Banking from a computer, click on "Contact Us" and then choose "Click here" to send an email.</p><p><br></p><p>Alternatively, you can also reach the Bank:&nbsp;</p><p><ul><li>Via live chat Monday through Friday 7:00 AM to 6:00 PM PT.<span style="font-size: 12pt;">&nbsp;</span></li><li>By calling 877-472-9200 anytime, 24/7 and a Direct Banker will be happy to speak with your personally.</li></ul></p><p>We appreciate your business and commit to providing superior Banking products, support and services.</p><p><br></p><p>Best Regards,</p><p><br></p><p>{!User.FirstName}<br>UFB Direct Customer Service</p>]]></td>
+</tr>
+</table>

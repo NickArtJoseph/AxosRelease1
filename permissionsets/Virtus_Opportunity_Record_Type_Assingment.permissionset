@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows user to create Virtus Record Type Opportunities</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Virtus Opportunity Record Type Assingment</label>
+    <license>Salesforce</license>
+</PermissionSet>

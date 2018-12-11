@@ -1,0 +1,15 @@
+Application for "{!Application_SFDC2__c.Name}" is approved.
+
+
+Loan Officer Name: {!Application_SFDC2__c.Loan_Officer_Name__c}
+Application Type: {!Application_SFDC2__c.Application_Type__c}
+Application Id: {!Application_SFDC2__c.Application_id__c}
+Created_Date: {!Application_SFDC2__c.CreatedDate}
+Application Status: {!Application_SFDC2__c.Application_Status__c}
+Completed Date: {!Application_SFDC2__c.Completed_Date__c}
+Business Name: {!Application_SFDC2__c.Business_Name__c}
+Business City: {!Application_SFDC2__c.Business_City__c}
+Business State: {!Application_SFDC2__c.Business_State__c}
+Business Email: {!Application_SFDC2__c.Business_Email__c}
+Business main Phone: {!Application_SFDC2__c.Business_Main_Phone__c}
+Related Account: {!Application_SFDC2__c.Related_Account_SFDC2__c}

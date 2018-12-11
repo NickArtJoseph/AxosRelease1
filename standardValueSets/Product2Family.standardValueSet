@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advisor</fullName>
+        <default>false</default>
+        <label>Advisor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <label>Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Specialty</fullName>
+        <default>false</default>
+        <label>Specialty</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cash Management</fullName>
+        <default>false</default>
+        <label>Cash Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Netteller OLB</fullName>
+        <default>false</default>
+        <label>Netteller OLB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Miscellaneous</fullName>
+        <default>false</default>
+        <label>Miscellaneous</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Certificates of Deposit</fullName>
+        <default>false</default>
+        <label>Certificates of Deposit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deposit Development</fullName>
+        <default>false</default>
+        <label>Deposit Development</label>
+    </standardValue>
+</StandardValueSet>

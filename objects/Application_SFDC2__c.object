@@ -1,0 +1,2100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>SFDC2: Used to capture Application data from external systems</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>APR_Variance__c</fullName>
+        <externalId>false</externalId>
+        <label>APR Variance</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Id__c</fullName>
+        <description>Unique identifier for approved financial account</description>
+        <externalId>false</externalId>
+        <label>Account Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type_Code__c</fullName>
+        <description>Account Type Code</description>
+        <externalId>false</externalId>
+        <label>Account Type Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type_Id__c</fullName>
+        <description>Account Type Id</description>
+        <externalId>false</externalId>
+        <label>Account Type Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allow_Direct_Mail__c</fullName>
+        <description>Whether the business allows direct mail solicitation</description>
+        <externalId>false</externalId>
+        <label>Allow Direct Mail</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allow_Email_Solicit__c</fullName>
+        <description>Whether the business allows email solicitation</description>
+        <externalId>false</externalId>
+        <label>Allow Email Solicit</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allow_Share_Info__c</fullName>
+        <description>Whether the business will allow its information to be shared</description>
+        <externalId>false</externalId>
+        <label>Allow Share Info</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allow_Telemarket__c</fullName>
+        <description>Whether the business allows telemarketing</description>
+        <externalId>false</externalId>
+        <label>Allow Telemarket</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Source__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(RecordType.DeveloperName =&quot;Andera&quot;, &quot;Andera&quot;, IF(RecordType.DeveloperName =&quot;Enrollment&quot;,&quot;Enrollment&quot;,IF(RecordType.DeveloperName =&quot;TCI&quot;,&quot;TCI&quot;,IF(RecordType.DeveloperName =&quot;MeridianLink&quot;,&quot;MeridianLink&quot;,Null))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Application Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_State__c</fullName>
+        <description>Progress of Application</description>
+        <externalId>false</externalId>
+        <label>Application State</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Status__c</fullName>
+        <description>Status of Application</description>
+        <externalId>false</externalId>
+        <label>Application Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Total__c</fullName>
+        <description>Count of Applications</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Used to sum or count the number of Applications</inlineHelpText>
+        <label>Application Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Type__c</fullName>
+        <description>Type or type code of application</description>
+        <externalId>false</externalId>
+        <label>Application Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique identifier for application</description>
+        <externalId>true</externalId>
+        <label>Application Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Officer_Code__c</fullName>
+        <description>Approval Officer Code</description>
+        <externalId>false</externalId>
+        <label>Approval Officer Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Officer_Email__c</fullName>
+        <description>Approval Officer Email</description>
+        <externalId>false</externalId>
+        <label>Approval Officer Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Officer_Id__c</fullName>
+        <description>Approval Officer Id</description>
+        <externalId>false</externalId>
+        <label>Approval Officer Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Officer_Name__c</fullName>
+        <description>Approval Officer Name</description>
+        <externalId>false</externalId>
+        <label>Approval Officer Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Officer_Phone__c</fullName>
+        <description>Approval Officer Phone</description>
+        <externalId>false</externalId>
+        <label>Approval Officer Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <description>Whether or not approved</description>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Boarding_Status__c</fullName>
+        <description>Boarding status</description>
+        <externalId>false</externalId>
+        <label>Boarding Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Officer_Code__c</fullName>
+        <description>Booking Officer Code</description>
+        <externalId>false</externalId>
+        <label>Booking Officer Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Officer_Email__c</fullName>
+        <description>Booking Officer Email</description>
+        <externalId>false</externalId>
+        <label>Booking Officer Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Officer_Id__c</fullName>
+        <description>Booking Officer Id</description>
+        <externalId>false</externalId>
+        <label>Booking Officer Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Officer_Name__c</fullName>
+        <description>Booking Officer Name</description>
+        <externalId>false</externalId>
+        <label>Booking Officer Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Officer_Phone__c</fullName>
+        <description>Booking Officer Phone</description>
+        <externalId>false</externalId>
+        <label>Booking Officer Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Branch_Number__c</fullName>
+        <description>Bank branch identifier</description>
+        <externalId>false</externalId>
+        <label>Branch Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Branch__c</fullName>
+        <description>Bank branch</description>
+        <externalId>false</externalId>
+        <label>Branch</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_City__c</fullName>
+        <description>Business City</description>
+        <externalId>false</externalId>
+        <label>Business City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Country__c</fullName>
+        <description>Business Country</description>
+        <externalId>false</externalId>
+        <label>Business Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Email__c</fullName>
+        <description>Business Email</description>
+        <externalId>false</externalId>
+        <label>Business Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Mailing_Address__c</fullName>
+        <description>Business Mailing Address</description>
+        <externalId>false</externalId>
+        <label>Business Mailing Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Mailing_City__c</fullName>
+        <description>Business Mailing City</description>
+        <externalId>false</externalId>
+        <label>Business Mailing City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Mailing_Country__c</fullName>
+        <description>Business Mailing Country</description>
+        <externalId>false</externalId>
+        <label>Business Mailing Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Mailing_State__c</fullName>
+        <description>Business Mailing State</description>
+        <externalId>false</externalId>
+        <label>Business Mailing State</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Mailing_Zip_Code__c</fullName>
+        <description>Business Mailing Zip Code</description>
+        <externalId>false</externalId>
+        <label>Business Mailing Zip Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Main_Phone__c</fullName>
+        <description>Business Main Phone</description>
+        <externalId>false</externalId>
+        <label>Business Main Phone</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Name__c</fullName>
+        <description>Business Name</description>
+        <externalId>false</externalId>
+        <label>Business Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_State__c</fullName>
+        <description>Business State</description>
+        <externalId>false</externalId>
+        <label>Business State</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Zip_Code__c</fullName>
+        <description>Business Zip Code</description>
+        <externalId>false</externalId>
+        <label>Business Zip Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buy_Rate__c</fullName>
+        <description>Rate offered by loan officer</description>
+        <externalId>false</externalId>
+        <label>Buy Rate</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculated_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculated Rate</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Additional comments</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Completed_Date__c</fullName>
+        <description>Date application completed</description>
+        <externalId>false</externalId>
+        <label>Completed Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed_Time__c</fullName>
+        <description>Time application completed</description>
+        <externalId>false</externalId>
+        <label>Completed Time</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Confirmation_Number__c</fullName>
+        <description>Customer confirmation number</description>
+        <externalId>false</externalId>
+        <label>Confirmation Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Date__c</fullName>
+        <description>Date contract signed</description>
+        <externalId>false</externalId>
+        <label>Contract Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Rate__c</fullName>
+        <description>Rate of contract</description>
+        <externalId>false</externalId>
+        <label>Contract Rate</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_Date__c</fullName>
+        <description>Date application created</description>
+        <externalId>false</externalId>
+        <label>Created Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DTI__c</fullName>
+        <description>Debt to income ratio</description>
+        <externalId>false</externalId>
+        <label>DTI</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Contact Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Dealer_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Id</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Name__c</fullName>
+        <description>Auto Dealer Name</description>
+        <externalId>false</externalId>
+        <label>Dealer Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Reserve__c</fullName>
+        <description>Flat dollar amount paid to dealers</description>
+        <externalId>false</externalId>
+        <label>Dealer Reserve</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Street Address</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Type__c</fullName>
+        <description>Type of dealer</description>
+        <externalId>false</externalId>
+        <label>Dealer Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Zip_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Dealer Zip code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deciding_Officer_Code__c</fullName>
+        <description>Deciding Officer Code</description>
+        <externalId>false</externalId>
+        <label>Deciding Officer Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deciding_Officer_Email__c</fullName>
+        <description>Deciding Officer Email</description>
+        <externalId>false</externalId>
+        <label>Deciding Officer Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deciding_Officer_Id__c</fullName>
+        <description>Deciding Officer Id</description>
+        <externalId>false</externalId>
+        <label>Deciding Officer Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deciding_Officer_Name__c</fullName>
+        <description>Deciding Officer Name</description>
+        <externalId>false</externalId>
+        <label>Deciding Officer Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deciding_Officer_Phone__c</fullName>
+        <description>Deciding Officer Phone</description>
+        <externalId>false</externalId>
+        <label>Deciding Officer Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Decision_Date__c</fullName>
+        <description>Date decision on application was reached</description>
+        <externalId>false</externalId>
+        <label>Decision Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Decision_Reason__c</fullName>
+        <description>Reason for decision</description>
+        <externalId>false</externalId>
+        <label>Decision Reason</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Decision_Status__c</fullName>
+        <description>Decision status of application</description>
+        <externalId>false</externalId>
+        <label>Decision Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Declined_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Declined Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Direct_Deposit__c</fullName>
+        <description>Whether or not direct deposit was established</description>
+        <externalId>false</externalId>
+        <label>Direct Deposit</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Established_Date__c</fullName>
+        <description>Date business was established</description>
+        <externalId>false</externalId>
+        <label>Established Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Existing_Account__c</fullName>
+        <description>Existing account number</description>
+        <externalId>false</externalId>
+        <label>Existing Account</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax__c</fullName>
+        <description>Fax number</description>
+        <externalId>false</externalId>
+        <label>Fax</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fee_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Fee_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Payment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>First Payment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Funded_Amount_Financed__c</fullName>
+        <description>Loan amount financed on funded loans</description>
+        <externalId>false</externalId>
+        <label>Funded Amount Financed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Funded_Date__c</fullName>
+        <description>Date loan funded</description>
+        <externalId>false</externalId>
+        <label>Funded Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded_Maturity_Date__c</fullName>
+        <description>Date of loan maturity</description>
+        <externalId>false</externalId>
+        <label>Funded Maturity Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded_Term__c</fullName>
+        <description>Written loan term on contract on funded loans</description>
+        <externalId>false</externalId>
+        <label>Funded Term</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded_Vehicle_VIN__c</fullName>
+        <description>VIN number of vehicle funded</description>
+        <externalId>false</externalId>
+        <label>Funded Vehicle VIN #</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded_Vehicle_Value__c</fullName>
+        <description>Value of vehicle funded</description>
+        <externalId>false</externalId>
+        <label>Funded Vehicle Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Funded_Vehicle_Year__c</fullName>
+        <description>Year of vehicle funded</description>
+        <externalId>false</externalId>
+        <label>Funded Vehicle Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funded__c</fullName>
+        <description>Whether or not funded</description>
+        <externalId>false</externalId>
+        <label>Funded</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_ACH_Routing_Number__c</fullName>
+        <description>ACH routing number of funding account</description>
+        <externalId>false</externalId>
+        <label>Funding ACH Routing Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Account_Type__c</fullName>
+        <description>Type of funding account</description>
+        <externalId>false</externalId>
+        <label>Funding Account Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Amount__c</fullName>
+        <description>Amount applicant indicated the account would be funded with</description>
+        <externalId>false</externalId>
+        <label>Funding Amount</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Name_on_Account__c</fullName>
+        <description>Name on funding account</description>
+        <externalId>false</externalId>
+        <label>Funding Name on Account</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Status__c</fullName>
+        <description>Status of loan funding</description>
+        <externalId>false</externalId>
+        <label>Funding Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Type__c</fullName>
+        <description>How the applicant indicated the account would be funded</description>
+        <externalId>false</externalId>
+        <label>Funding Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_Ordered_Card__c</fullName>
+        <description>Whether the applicant has ordered a bank card</description>
+        <externalId>false</externalId>
+        <label>Has Ordered Card</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_Ordered_Checks__c</fullName>
+        <description>Whether the applicant has ordered checks</description>
+        <externalId>false</externalId>
+        <label>Has Ordered Checks</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Id_Verification_Result__c</fullName>
+        <description>Status of id verification</description>
+        <externalId>false</externalId>
+        <label>Id Verification Result</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Current_Business_Mailing_Address__c</fullName>
+        <description>Is Current Business Mailing Address?</description>
+        <externalId>false</externalId>
+        <label>Is Current Business Mailing Address?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Third_Party__c</fullName>
+        <description>Whether this is a third party application</description>
+        <externalId>false</externalId>
+        <label>Is Third Party?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LTV__c</fullName>
+        <description>Loan to value</description>
+        <externalId>false</externalId>
+        <label>LTV</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Id__c</fullName>
+        <description>Loan Id</description>
+        <externalId>false</externalId>
+        <label>Loan Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Account_Position__c</fullName>
+        <description>Account Position for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Account Position</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Approval_Date__c</fullName>
+        <description>Approval Date for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Approval Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Booking_Date__c</fullName>
+        <description>Booking Date for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Booking Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Create_Date__c</fullName>
+        <description>Create Date for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Create Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Entity_Type__c</fullName>
+        <description>Entity Type for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Entity Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_Claimed__c</fullName>
+        <description>Is Claimed for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is Claimed?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_Lender_Disclosure_Checked__c</fullName>
+        <description>Is Lender Disclosure Checked for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is Lender Disclosure Checked?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_Locked__c</fullName>
+        <description>Is Locked for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is Locked?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_Minor__c</fullName>
+        <description>Is Minor for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is Minor?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_New_Customer__c</fullName>
+        <description>Is New Customer for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is New Customer?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Is_Possible_Dupe__c</fullName>
+        <description>Is Possible Dupe for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Is Possible Dupe?</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Last_Modified__c</fullName>
+        <description>Last Modified for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Last Modified</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Status__c</fullName>
+        <description>Status for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Info_Submit_Date__c</fullName>
+        <description>Submit Date for Loan Info</description>
+        <externalId>false</externalId>
+        <label>Loan Info Submit Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Number__c</fullName>
+        <description>Loan account number</description>
+        <externalId>false</externalId>
+        <label>Loan Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Officer_Code__c</fullName>
+        <description>Loan Officer Code</description>
+        <externalId>false</externalId>
+        <label>Officer Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Officer_Email__c</fullName>
+        <description>Loan Officer Email</description>
+        <externalId>false</externalId>
+        <label>Officer Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Officer_ID__c</fullName>
+        <description>Loan Officer ID</description>
+        <externalId>false</externalId>
+        <label>Officer ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Officer_Name__c</fullName>
+        <description>Loan Officer Name</description>
+        <externalId>false</externalId>
+        <label>Officer Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Officer_Phone__c</fullName>
+        <description>Loan Officer Phone</description>
+        <externalId>false</externalId>
+        <label>Officer Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_Table__c</fullName>
+        <description>JH master table type (CD, DD, LN)</description>
+        <externalId>false</externalId>
+        <label>Master Table</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Member_Number__c</fullName>
+        <description>Business Meridian Link membership number</description>
+        <externalId>false</externalId>
+        <label>Member Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Netbank_Referral__c</fullName>
+        <description>Whether or not the applicant was referred to NetBank</description>
+        <externalId>false</externalId>
+        <label>Netbank Referral</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Used__c</fullName>
+        <description>New or used car purchase</description>
+        <externalId>false</externalId>
+        <label>New/Used</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Officer_Name__c</fullName>
+        <description>Officer Name</description>
+        <externalId>false</externalId>
+        <label>Officer Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Application_Id__c</fullName>
+        <description>Reference to previous application id if applicant was referred to NetBank</description>
+        <externalId>false</externalId>
+        <label>Original Application Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Code__c</fullName>
+        <description>Originator Code</description>
+        <externalId>false</externalId>
+        <label>Originator Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Email__c</fullName>
+        <description>Originator Email</description>
+        <externalId>false</externalId>
+        <label>Originator Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Id__c</fullName>
+        <description>Originator Id</description>
+        <externalId>false</externalId>
+        <label>Originator Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Name__c</fullName>
+        <description>Originator Name</description>
+        <externalId>false</externalId>
+        <label>Originator Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originator_Phone__c</fullName>
+        <description>Originator Phone</description>
+        <externalId>false</externalId>
+        <label>Originator Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Method__c</fullName>
+        <description>Method used to fund account</description>
+        <externalId>false</externalId>
+        <label>Payment Method</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payoff__c</fullName>
+        <externalId>false</externalId>
+        <label>Payoff</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product_Class_Name__c</fullName>
+        <description>Product Class (Savings, Money Market, Time Deposit, Checking)</description>
+        <externalId>false</externalId>
+        <label>Product Class Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <description>Financial product code</description>
+        <externalId>false</externalId>
+        <label>Product Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Financial product</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Promo_Code__c</fullName>
+        <description>Promotional code used on application</description>
+        <externalId>false</externalId>
+        <label>Promo Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate_Sheet_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Sheet Rate</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate__c</fullName>
+        <description>Rate of loan based on rate sheet</description>
+        <externalId>false</externalId>
+        <label>Rate</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referral_Source__c</fullName>
+        <description>Where the applicant was referred from</description>
+        <externalId>false</externalId>
+        <label>Referral Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referred_By__c</fullName>
+        <description>By whom the applicant was referred</description>
+        <externalId>false</externalId>
+        <label>Referred By</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>Region of Application</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Account_SFDC2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Payoff__c</fullName>
+        <externalId>false</externalId>
+        <label>Remaining Payoff</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Amount__c</fullName>
+        <description>Requested loan amount</description>
+        <externalId>false</externalId>
+        <label>Requested Amount</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <description>Application source</description>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_Date__c</fullName>
+        <description>Date application submitted</description>
+        <externalId>false</externalId>
+        <label>Submitted Date</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_ID__c</fullName>
+        <description>Tax Id</description>
+        <externalId>false</externalId>
+        <label>Tax ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <description>Length of loan requested</description>
+        <externalId>false</externalId>
+        <label>Term</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Accounts__c</fullName>
+        <description>Total number of accounts with the bank</description>
+        <externalId>false</externalId>
+        <label>Total Accounts</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Payments</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trade_In_Vehicle_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Trade In Vehicle ID</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIN__c</fullName>
+        <description>VIN number</description>
+        <externalId>false</externalId>
+        <label>VIN</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Make__c</fullName>
+        <externalId>false</externalId>
+        <label>Vehicle Make</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Mileage__c</fullName>
+        <externalId>false</externalId>
+        <label>Vehicle Mileage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Model__c</fullName>
+        <externalId>false</externalId>
+        <label>Vehicle Model</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Vehicle Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Year__c</fullName>
+        <description>Year of vehicle loan is for</description>
+        <externalId>false</externalId>
+        <label>Vehicle Year</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vesting_Name__c</fullName>
+        <description>Type of vesting (Trust, UTMA, Individual, Joint)</description>
+        <externalId>false</externalId>
+        <label>Vesting Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Application</label>
+    <listViews>
+        <fullName>Advisor</fullName>
+        <columns>NAME</columns>
+        <columns>Branch__c</columns>
+        <columns>Application_Source__c</columns>
+        <columns>Application_Type__c</columns>
+        <columns>Created_Date__c</columns>
+        <columns>Application_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>BofIAdvisor</value>
+        </filters>
+        <label>Advisor</label>
+        <sharedTo>
+            <role>Financial_Advisor_Mgr</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Business_Name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Application_Status__c</columns>
+        <columns>Application_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Auto_Lending_Indirect</fullName>
+        <columns>NAME</columns>
+        <columns>Application_Source__c</columns>
+        <columns>Application_Status__c</columns>
+        <columns>Branch__c</columns>
+        <columns>Dealer_Name__c</columns>
+        <columns>Created_Date__c</columns>
+        <columns>Completed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Application_Source__c</field>
+            <operation>equals</operation>
+            <value>TCI</value>
+        </filters>
+        <label>Auto-Lending Indirect</label>
+        <sharedTo>
+            <role>Dealer_Services_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Business_Banking</fullName>
+        <columns>NAME</columns>
+        <columns>Business_Name__c</columns>
+        <columns>Application_Status__c</columns>
+        <columns>Loan_Officer_Name__c</columns>
+        <columns>Application_Source__c</columns>
+        <columns>Account_Type_Code__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Id_Verification_Result__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Application_Source__c</field>
+            <operation>equals</operation>
+            <value>MeridianLink</value>
+        </filters>
+        <label>Business Banking</label>
+        <sharedTo>
+            <role>Business_Banking</role>
+            <role>Business_Banking_Manager</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Application Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Applications</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Andera</fullName>
+        <active>true</active>
+        <description>Applications received from the Andera system</description>
+        <label>Andera</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Enrollment</fullName>
+        <active>true</active>
+        <description>Applications received from the Enrollment system</description>
+        <label>Enrollment</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MeridianLink</fullName>
+        <active>true</active>
+        <description>Applications Received from the MeridianLink system</description>
+        <label>MeridianLink</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TCI</fullName>
+        <active>true</active>
+        <description>Applications received from the TCI system</description>
+        <label>TCI</label>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Business_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>File_Upload</listViewButtons>
+        <searchResultsAdditionalFields>Business_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>File_Upload</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>File_Upload</fullName>
+        <availability>online</availability>
+        <description>Launches custom Visualforce page to allow for manual Application uploads</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>File Upload</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!$Site.BaseUrl}/apex/ApplicationUpload</url>
+    </webLinks>
+</CustomObject>

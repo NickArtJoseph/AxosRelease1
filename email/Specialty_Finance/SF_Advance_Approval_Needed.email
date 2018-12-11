@@ -1,0 +1,17 @@
+{!Opportunity.OwnerFullName} has requested your approval for the following advance:
+
+Account Name:		{!Opportunity.Account}
+Advance Amount:	{!Advance__c.Amount__c}
+Total Advances:		{!Opportunity.Total_Advances__c} (NOT including requested amount)
+Purchase Price:		{!Opportunity.Purchase_Price_to_Customer__c}
+Spread:			{!Opportunity.Qouted_Spread__c}
+State:			{!Opportunity.GLS__c}
+Current Stage:		{!Opportunity.StageName}
+Asset Type:		{!Opportunity.RecordType}
+
+To approve or reject this item, click this link {!ApprovalRequest.External_URL} or reply to this email with one of these words in the first line of the email message: APPROVE, APPROVED, YES, REJECT, REJECTED, NO
+
+If replying via email, you can also add comments on the second line. Comments will be stored with the approval request in Salesforce CRM.
+
+Thank you,
+Salesforce

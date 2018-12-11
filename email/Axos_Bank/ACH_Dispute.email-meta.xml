@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Axos ACH Dispute</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>ACH Dispute</name>
+    <style>freeForm</style>
+    <subject>Axos Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Case.Contact},
+
+We are sorry to hear there was an unauthorized transaction on your account. We have opened an investigation and will work to reclaim the money that was lost from your account as soon as possible. To assist us in tracking your case, please complete and return the Written Statement of Unauthorized ACH Debit by:
+
+Sending a Secure Message through Online Banking with the completed form attached.
+Fax the linked form to: 858-350-0443, or
+Mail the linked form to: Axos Bank, PO Box 509127, San Diego, CA 92150-9948
+
+We appreciate your business and commit to provide superior banking support, services and products. Will will work to resolve this issue immediately.
+
+Best Regards,
+{!User.FirstName}
+Axos Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

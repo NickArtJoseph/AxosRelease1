@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><font face="arial"><br></font><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">We received an alert from our&nbsp;bill pay&nbsp;vendor of a (large/1st time payee)&nbsp;payment set to debit your account.&nbsp;</span><br><br><span style="font-size: 12pt;">Please reply to this email to confirm&nbsp;you authorized a&nbsp;bill pay&nbsp;in the amount of&nbsp;$XXXX.XX payable to XXXXX. </span><br><br>To avoid delay in processing your payment, please confirm authorization as soon as possible. If you&nbsp;did not authorize&nbsp;this item, please call us at (888) 502-2967<span style="font-size: 12pt;">.</span><br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><font face="arial">Best Regards,</font></span></p><p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></span><font face="Arial, sans-serif">Axos Bank™ Customer Service</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>Deposits received before <b style="">3:00 PM (PT) Monday through Friday,</b>
+excluding Federal Holidays, will post that same day. Deposits received after
+3:00 PM (PT) will be posted the following business day. Successful mobile
+deposits will be visible within Online Banking the day after the transaction is
+processed.<br><br>The funds will be held for<b style=""> five (5)</b> business days. For new
+accounts less than thirty (30) days old, your deposit will be held for up to
+<b style="">seven (7) </b>business days.<br><br>To view the status of your Mobile deposit in Online Banking,
+hover over Additional Services, select MyDeposit and click on History.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

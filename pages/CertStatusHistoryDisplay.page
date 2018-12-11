@@ -1,0 +1,16 @@
+<apex:page standardController="WLD_Certification__c" extensions="StatusHistoryDisplayExtension" showHeader="false" sidebar="false" tabStyle="WLD_Certification__c">
+	<apex:pageBlock >
+		<apex:pageBlockSection collapsible="false" columns="1">
+			<apex:outputPanel rendered="{!StatusHistory.size == 0}" layout="block" id="NoRecords">
+				<apex:outputText value="No records to display" />
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!StatusHistory.size > 0}" layout="block" id="HasRecords" style="overflow-y: auto; height: 135px; width: 100%;">
+				<apex:pageBlockTable value="{!StatusHistory}" var="stat" columnsWidth="70%,15%,15%">
+					<apex:column headerValue="Status">{!stat.Name}</apex:column>
+					<apex:column value="{!stat.Status_Date_Time__c}" />
+					<apex:column value="{!stat.Time_in_Status_days__c}" />
+				</apex:pageBlockTable>
+			</apex:outputPanel>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:page>

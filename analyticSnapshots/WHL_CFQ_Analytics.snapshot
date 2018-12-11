@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Analytic Snapshot of WHL recertification data</description>
+    <name>WHL_CFQ_Analytics</name>
+    <runningUser>lmonaco@bofi.com</runningUser>
+    <sourceReport>WHL_Certification_Folder/Quarterly_Certification_CFQ_Tabular</sourceReport>
+    <targetObject>Quarterly_Recertification_Analytics__c</targetObject>
+</AnalyticSnapshot>

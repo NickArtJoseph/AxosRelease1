@@ -1,0 +1,37 @@
+<apex:page controller="LeadConvertProgressController" tabStyle="Lead">
+    <apex:pageMessages />
+    <apex:sectionHeader title="Lead Conversion" description=""/>
+    <apex:form >
+    <apex:pageBlock title="Lead Information" id="leadBlock">
+        <apex:pageBlockSection collapsible="false" columns="1">
+            <apex:outputField value="{!convertedLead.Name}" />
+            <apex:outputField value="{!convertedLead.Company}" />
+            <apex:pageBlockSectionItem rendered="{!AND(validStatus, NOT(convertedLead.IsConverted))}">
+                <apex:outputLabel value="Conversion Status"/>
+                <apex:outputPanel >
+                    <apex:actionPoller action="{!pollResults}" reRender="leadBlock" interval="5"/>
+                    <apex:outputLabel value="Converting..." /><apex:image url="{!$Resource.Animated_Processing}" width="150" height="13" style="vertical-align: middle;" />
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem rendered="{!NOT(validStatus)}">
+                <apex:outputLabel value="Return to Lead" for="leadLink" />
+                <apex:outputLink id="leadLink" value="/{!convertedLead.Id}">Click here</apex:outputLink>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Converted Records" rendered="{!convertedLead.IsConverted}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Account" for="accountLink"/>
+                <apex:outputLink value="/{!convertedLead.ConvertedAccountId}" id="accountLink">{!convertedLead.ConvertedAccount.Name}</apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Contact" for="contactLink"/>
+                <apex:outputLink value="/{!convertedLead.ConvertedContactId}" id="contactLink">{!convertedLead.ConvertedContact.Name}</apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Opportunity" for="oppLink"/>
+                <apex:outputLink value="/{!convertedLead.ConvertedOpportunityId}" id="oppLink">{!convertedLead.ConvertedOpportunity.Name}</apex:outputLink>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

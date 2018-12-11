@@ -1,0 +1,33 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><font face="Times New Roman">
+
+</font><p style="margin: 0in 0in 8pt;"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">We
+have received an alert from our vendor of an online banking (login/login
+attempt) outside of your frequently used locations.&nbsp;<br>
+<br>
+The alert is in response to a (login/login attempt)&nbsp;to your online banking
+on __/__/20__ from _______, __.&nbsp;&nbsp;<br>
+<br>
+(Please note your online banking access has been restricted until this activity
+is verified.)&nbsp;<br>
+<br>
+(If you do not recognize this location and login, please access your online
+banking to verify recent activity.&nbsp;Please also&nbsp;change your username
+and password.)<br>
+<br>
+To confirm this activity (and restore access to your online banking) simply
+reply to this email.&nbsp; </span></p><p><font face="Times New Roman">
+
+</font><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><font face="arial">Best Regards,</font></span></p><p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></span></p><div><span style="font-family: Arial, sans-serif;">Axos Bank™ Customer Service</span></div><div><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

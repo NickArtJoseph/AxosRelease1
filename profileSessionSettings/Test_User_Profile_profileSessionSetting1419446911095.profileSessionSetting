@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProfileSessionSetting xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <forceLogout>false</forceLogout>
+    <profile xsi:nil="true"/>
+    <sessionTimeout>60</sessionTimeout>
+    <sessionTimeoutWarning>false</sessionTimeoutWarning>
+</ProfileSessionSetting>

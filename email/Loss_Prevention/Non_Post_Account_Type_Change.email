@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><font face="arial" style=""><br>This email is to notify you of an item presenting for deposit to your <font color="#ff0000">CHECKING/SAVINGS</font> account ending in ____. This item has been sent for deposit and coded as a <font color="#ff0000">SAVINGS/CHECKING</font> account. As a courtesy, we have posted this item to your account<span style="font-size: 12pt;">.</span><br><br></font><font face="arial">Please notify __________ of the updated account type to avoid processing delays and the item being returned in the future<span style="font-size: 12pt;">.</span></font><br><br><font face="arial">If you would like further assistance, please call us at 1-877-247-8002<span style="font-size: 12pt;">.</span></font><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><font face="Arial, sans-serif">BOFI Customer Service</font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

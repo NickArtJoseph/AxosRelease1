@@ -1,0 +1,5 @@
+<apex:page contentType="application/json" controller="G4S.GetSessionController" action="{!initPage}">
+{
+	"joinUrl": "{!joinUrl}"
+}
+</apex:page>

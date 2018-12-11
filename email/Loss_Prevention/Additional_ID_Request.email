@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial">Due to recent activity, your account has been placed under review.&nbsp; Please note that your account access will be blocked until our review is complete.&nbsp; <br>The Bank requires a copy of your driver's license or state issued ID, and any one (1) of the following documents to complete the review process:</font></span></p><p><span style="font-size: 12pt;"><font face="arial">•&nbsp;Water Bill<br><span style="font-size: 12pt;"><font face="arial">•&nbsp;Electric bill </font></span><br>•&nbsp;Gas bill <br>•&nbsp;Trash bill <br>•&nbsp;Landline (phone bill)&nbsp;<br><br><strong>Please note:</strong>&nbsp; The ID must be current and unexpired, and the bill must not be more than 30 days old and should reflect your name and residential address from your application with the Bank. Once your documents are received, an associate will contact you via email within two (2) business days.<br>&nbsp;<br>Please return your documentation via the following options:<br>1)&nbsp; Mail to: BOFI Federal Bank P.O. Box 509127, San Diego, CA&nbsp; 92150-9948<br>2)&nbsp; Fax to: 858-350-0443; or<br>3)&nbsp; Email to: <a href="mailto:customerservice@bofi.com">customerservice@bofi.com</a><br></font></span><span style="font-family: arial; font-size: 12pt;"><br>If you would like further assistance, simply reply to this email or call us at 1-877-247-8002.<br><br>Thank you for your business.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

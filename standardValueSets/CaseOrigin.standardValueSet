@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound_Call</fullName>
+        <default>true</default>
+        <label>Inbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound Call</fullName>
+        <default>false</default>
+        <label>Outbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UDB</fullName>
+        <default>false</default>
+        <label>UDB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Chat</fullName>
+        <default>false</default>
+        <label>Web Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fax</fullName>
+        <default>false</default>
+        <label>Fax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: UFB</fullName>
+        <default>false</default>
+        <label>Email: UFB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Bank of Internet</fullName>
+        <default>false</default>
+        <label>Email: Bank of Internet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Bank X</fullName>
+        <default>false</default>
+        <label>Email: Bank X</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Net Bank</fullName>
+        <default>false</default>
+        <label>Email: Net Bank</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Advisor</fullName>
+        <default>false</default>
+        <label>Email: Advisor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Business Banking</fullName>
+        <default>false</default>
+        <label>Email: Business Banking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Loan Servicing</fullName>
+        <default>false</default>
+        <label>Email: Loan Servicing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: RS Enrollment</fullName>
+        <default>false</default>
+        <label>Email: RS Enrollment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Bank X Wires</fullName>
+        <default>false</default>
+        <label>Email: Bank X Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Bank of Internet Wires</fullName>
+        <default>false</default>
+        <label>Email: Bank of Internet Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: BofI Advisor Wires</fullName>
+        <default>false</default>
+        <label>Email: BofI Advisor Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Business Banking Wires</fullName>
+        <default>false</default>
+        <label>Email: Business Banking Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: UFB Direct Wires</fullName>
+        <default>false</default>
+        <label>Email: UFB Direct Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: DepOps Secure</fullName>
+        <default>false</default>
+        <label>Email: DepOps Secure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fax: Retirement Services</fullName>
+        <default>false</default>
+        <label>Fax: Retirement Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UDB Agent</fullName>
+        <default>false</default>
+        <label>UDB Agent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey/Feedback</fullName>
+        <default>false</default>
+        <label>Survey/Feedback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: DepOps</fullName>
+        <default>false</default>
+        <label>Email: DepOps</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Axos Customer Service</fullName>
+        <default>false</default>
+        <label>Email: Axos Customer Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Advisor Wires</fullName>
+        <default>false</default>
+        <label>Email: Advisor Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Axos Wires</fullName>
+        <default>false</default>
+        <label>Email: Axos Wires</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Treasury Management</fullName>
+        <default>false</default>
+        <label>Email: Treasury Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: Nationwide</fullName>
+        <default>false</default>
+        <label>Email: Nationwide</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: NW Complaints</fullName>
+        <default>false</default>
+        <label>Email: NW Complaints</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email: NW Premier Complaints</fullName>
+        <default>false</default>
+        <label>Email: NW Premier Complaints</label>
+    </standardValue>
+</StandardValueSet>

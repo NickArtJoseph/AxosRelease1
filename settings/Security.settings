@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SecuritySettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <networkAccess>
+        <ipRanges>
+            <description>BofI Eastgate Mall</description>
+            <end>209.234.167.202</end>
+            <start>209.234.167.201</start>
+        </ipRanges>
+        <ipRanges>
+            <description>San Diego, CA HQ La Jolla Village Drive</description>
+            <end>209.118.148.254</end>
+            <start>209.118.148.254</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>209.43.14.97</end>
+            <start>209.43.14.97</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Atlanta</description>
+            <end>208.69.29.255</end>
+            <start>208.69.28.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>207.250.79.110</end>
+            <start>207.250.79.96</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>207.250.76.183</end>
+            <start>207.250.76.176</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Utah</description>
+            <end>207.224.218.170</end>
+            <start>207.224.218.170</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>207.67.98.216</end>
+            <start>207.67.98.216</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>207.67.66.222</end>
+            <start>207.67.66.192</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>207.67.53.78</end>
+            <start>207.67.53.64</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>206.246.157.6</end>
+            <start>206.246.157.1</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>199.122.126.99</end>
+            <start>199.122.126.99</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Atlanta 2</description>
+            <end>198.105.207.255</end>
+            <start>198.105.207.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Santa Clara 2</description>
+            <end>198.105.206.255</end>
+            <start>198.105.206.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Atlanta 1</description>
+            <end>198.105.203.255</end>
+            <start>198.105.202.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Santa Clara 1</description>
+            <end>198.105.201.255</end>
+            <start>198.105.200.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Amsterdam</description>
+            <end>185.111.43.255</end>
+            <start>185.111.42.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: London</description>
+            <end>185.111.41.255</end>
+            <start>185.111.40.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>BOFI USER Wifi at Towne Centre Ticket #51907</description>
+            <end>184.185.154.28</end>
+            <start>184.185.154.28</start>
+        </ipRanges>
+        <ipRanges>
+            <end>184.185.154.26</end>
+            <start>184.185.154.26</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>184.72.230.214</end>
+            <start>184.72.230.214</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Miami</description>
+            <end>181.41.168.255</end>
+            <start>181.41.168.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>VPN</description>
+            <end>172.20.62.72</end>
+            <start>172.20.62.72</start>
+        </ipRanges>
+        <ipRanges>
+            <description>VPN for Eastgate Mall</description>
+            <end>172.20.23.254</end>
+            <start>172.20.23.1</start>
+        </ipRanges>
+        <ipRanges>
+            <description>JHA Call Center Terminal Server</description>
+            <end>172.20.20.47</end>
+            <start>172.20.20.47</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Utah VPN</description>
+            <end>172.18.11.255</end>
+            <start>172.18.11.1</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Santa Clara</description>
+            <end>162.213.153.255</end>
+            <start>162.213.152.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>136.147.131.18</end>
+            <start>136.147.131.11</start>
+        </ipRanges>
+        <ipRanges>
+            <end>136.147.129.15</end>
+            <start>136.147.129.15</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>136.147.128.14</end>
+            <start>136.147.128.1</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>99.50.81.140</end>
+            <start>99.50.81.121</start>
+        </ipRanges>
+        <ipRanges>
+            <description>HQ: New Cox Circuit</description>
+            <end>70.168.55.226</end>
+            <start>70.168.55.226</start>
+        </ipRanges>
+        <ipRanges>
+            <description>San Diego, CA Data Center</description>
+            <end>69.43.196.12</end>
+            <start>69.43.196.4</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>68.232.204.99</end>
+            <start>68.232.204.99</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>68.232.203.63</end>
+            <start>68.232.203.56</start>
+        </ipRanges>
+        <ipRanges>
+            <end>68.232.200.2</end>
+            <start>68.232.200.1</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Vegas Office</description>
+            <end>68.110.137.226</end>
+            <start>68.110.137.226</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>66.231.94.252</end>
+            <start>66.231.94.250</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>66.231.94.247</end>
+            <start>66.231.94.247</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>66.231.91.251</end>
+            <start>66.231.91.251</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>66.231.91.195</end>
+            <start>66.231.91.195</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Phoenix, AZ Data Center</description>
+            <end>65.118.114.254</end>
+            <start>65.118.114.254</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Nationwide Branch</description>
+            <end>65.24.247.52</end>
+            <start>65.24.247.52</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Epiq - Jill</description>
+            <end>64.235.31.250</end>
+            <start>64.235.31.250</start>
+        </ipRanges>
+        <ipRanges>
+            <description>InsideSales IP Addresses</description>
+            <end>64.90.204.235</end>
+            <start>64.90.204.227</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Required for ExactTarget</description>
+            <end>64.79.134.164</end>
+            <start>64.79.134.164</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Conga 4</description>
+            <end>54.236.206.9</end>
+            <start>54.236.206.9</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Conga 2</description>
+            <end>54.219.145.149</end>
+            <start>54.219.145.149</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Conga 1</description>
+            <end>54.219.139.180</end>
+            <start>54.219.139.180</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Conga 3</description>
+            <end>54.85.136.135</end>
+            <start>54.85.136.135</start>
+        </ipRanges>
+        <ipRanges>
+            <description>Five9: Santa Clara 3</description>
+            <end>38.107.71.255</end>
+            <start>38.107.71.0</start>
+        </ipRanges>
+        <ipRanges>
+            <end>13.111.251.28</end>
+            <start>13.111.251.0</start>
+        </ipRanges>
+        <ipRanges>
+            <end>13.111.250.28</end>
+            <start>13.111.250.0</start>
+        </ipRanges>
+        <ipRanges>
+            <end>13.111.17.17</end>
+            <start>13.111.17.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>BofI Eastgate Mall</description>
+            <end>10.60.2.24</end>
+            <start>10.60.2.0</start>
+        </ipRanges>
+    </networkAccess>
+    <passwordPolicies>
+        <complexity>UpperLowerCaseNumericSpecialCharacters</complexity>
+        <expiration>ThirtyDays</expiration>
+        <historyRestriction>24</historyRestriction>
+        <lockoutInterval>Forever</lockoutInterval>
+        <maxLoginAttempts>ThreeAttempts</maxLoginAttempts>
+        <minimumPasswordLength>8</minimumPasswordLength>
+        <minimumPasswordLifetime>false</minimumPasswordLifetime>
+        <obscureSecretAnswer>true</obscureSecretAnswer>
+        <passwordAssistanceMessage>Please Contact the Help Desk - Access Controls (858-764-2900 or ext. 1050).</passwordAssistanceMessage>
+        <questionRestriction>DoesNotContainPassword</questionRestriction>
+    </passwordPolicies>
+    <sessionSettings>
+        <disableTimeoutWarning>false</disableTimeoutWarning>
+        <enableCSPOnEmail>true</enableCSPOnEmail>
+        <enableCSRFOnGet>true</enableCSRFOnGet>
+        <enableCSRFOnPost>true</enableCSRFOnPost>
+        <enableCacheAndAutocomplete>false</enableCacheAndAutocomplete>
+        <enableClickjackNonsetupSFDC>true</enableClickjackNonsetupSFDC>
+        <enableClickjackNonsetupUser>false</enableClickjackNonsetupUser>
+        <enableClickjackNonsetupUserHeaderless>false</enableClickjackNonsetupUserHeaderless>
+        <enableClickjackSetup>true</enableClickjackSetup>
+        <enableContentSniffingProtection>true</enableContentSniffingProtection>
+        <enablePostForSessions>false</enablePostForSessions>
+        <enableSMSIdentity>true</enableSMSIdentity>
+        <enableUpgradeInsecureRequests>true</enableUpgradeInsecureRequests>
+        <enableXssProtection>true</enableXssProtection>
+        <enforceIpRangesEveryRequest>true</enforceIpRangesEveryRequest>
+        <forceLogoutOnSessionTimeout>true</forceLogoutOnSessionTimeout>
+        <forceRelogin>false</forceRelogin>
+        <identityConfirmationOnTwoFactorRegistrationEnabled>true</identityConfirmationOnTwoFactorRegistrationEnabled>
+        <lockSessionsToDomain>false</lockSessionsToDomain>
+        <lockSessionsToIp>false</lockSessionsToIp>
+        <requireHttpOnly>false</requireHttpOnly>
+        <requireHttps>true</requireHttps>
+        <securityCentralKillSession>true</securityCentralKillSession>
+        <sessionTimeout>SixtyMinutes</sessionTimeout>
+    </sessionSettings>
+</SecuritySettings>

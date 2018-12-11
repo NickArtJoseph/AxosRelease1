@@ -1,0 +1,337 @@
+<apex:page sidebar="false" controller="G4S.UserSettingsController" action="{!initPage}" tabstyle="Glance_User_Settings__tab" title="Glance for Salesforce - User Settings">
+
+<script type="text/javascript">
+	function createEmail() {
+		var administratorUsersSelect = document.getElementById('administratorUsersSelect');
+		if (administratorUsersSelect.selectedIndex == 0) {
+			alert('Please select a Salesforce Administrator.');
+			return;
+		}
+
+		var adminEmail = administratorUsersSelect.options[administratorUsersSelect.selectedIndex].value;
+
+		var href = 'mailto:' + adminEmail;
+		href += '?cc=glance4salesforce@glance.net';
+		href += '&subject=Please arrange for me to try Glance for Salesforce';
+		href += '&body=I would like to get a 30-day free trial of Glance to use ';
+		href += 'with Salesforce, but need your help.  As our Salesforce ';
+		href += 'Administrator, could you do the following?%0A%0A';
+		href += '(1) Login to Salesforce%0A';
+		href += '(2) Choose “Glance for Salesforce”%0A';
+		href += '(3) Select the “Glance User Settings” tab%0A';
+		href += '(4) Click the button to get a free 30-day trial of Glance for our organization%0A%0A';
+		href += 'Please let me know when it\'s set up. You can contact Glance Customer Care at +1-781-646-8505 for assistance.%0A%0A';
+		href += 'Thank you!';
+
+		top.window.location.href = href;
+	}
+
+    function clearDefaultPassword() {
+    	var passwordField = document.getElementById('password');
+        if (passwordField.value == 'password') {
+            passwordField.value = '';
+        }
+    }
+
+	function disableSessionKeyField() {
+		return true;
+	}
+	
+	function clearSessionKey() {
+		sessionKeyField.value = '';
+		return true;
+	}
+	
+	function clearPhone() {
+		confPhoneField.value = '';
+		confPassField.value = '';
+		confHostField.value = '';
+		return true;
+	}
+	
+	function checkAlwaysRadio() {
+		defaultSessionKeyRadio[1].checked = true;
+		return true;
+	}
+	
+	function checkConfPhoneRadio() {
+		defaultConfPhoneRadio[1].checked = true;
+		return true;
+	}
+</script>
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="User Settings"/>
+
+<apex:outputPanel layout="block" rendered="{!syncScheduledJobCancelled}" style="padding: 5px; border: 1px solid red; background-color: pink; border-radius: 4px; margin: 4px 20px;">
+<table>
+	<tr>
+		<td><img alt="WARNING" class="msgIcon" src="/img/msg_icons/error24.png" height="24" width="24" title="WARNING"/></td>
+		<td>The Glance Sync process is configured to run, however it has been has been manually cancelled. The Glance Sync process can be restarted by updating <a href="/apex/CompanySettings">Company Settings</a>.</td>
+	</tr>
+</table>
+</apex:outputPanel>
+
+<apex:pageMessages />
+
+<apex:form >
+<apex:actionfunction name="save" action="{!save}"/>
+
+<apex:outputPanel rendered="{!ISBLANK(userSettings.Id)}">
+
+	<apex:pageBlock title="Welcome to Glance for Salesforce!" helpTitle="Help for this page" helpUrl="https://www.glance.net/sf_help_usersettings">
+		<table>
+			<tr valign="top">
+				<td>
+					You're just moments away from launching <b>on-the-fly demos</b><br/>
+					or conducting <b>collaborative support sessions</b>, all from<br/>
+					within Salesforce.<br/><br/>
+
+					<b>Watch</b> the tour. Then setup an account.
+				</td>
+				<td width="50">&nbsp;</td>
+				<td align="center">
+					<a href="http://www.glance.net/sf_tour_video" target="_blank"><img src="{!$Resource.GlanceVideo}" width="248" height="139" border="0"/></a><br/><br/>
+					<a href="http://www.glance.net/sf_tour_video" target="_blank">Watch the tour</a>
+				</td>
+			</tr>
+		</table>
+	</apex:pageBlock>
+
+	<apex:pageBlock title="New to Glance?">
+		<apex:outputPanel rendered="{!isSystemAdministrator && NOT(haveGlanceAdminUser)}">
+			Setup an account:&nbsp;&nbsp;
+			<apex:commandButton value="Go" action="{!freeTrial}" immediate="true" disabled="{!NOT(companySettings.G4S__Allow_Free_Trial__c)}"/>
+			<apex:outputText style="font-style: italic; color: #666;" value=" ({!companySettings.G4S__Free_Trial_Disabled_Message__c})" rendered="{!NOT(companySettings.G4S__Allow_Free_Trial__c) && NOT(ISBLANK(companySettings.G4S__Free_Trial_Disabled_Message__c))}"/>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!isSystemAdministrator || haveGlanceAdminUser}">
+			<apex:outputPanel rendered="{!haveGlanceAdminUser}">
+				Setup an account:&nbsp;&nbsp;
+				<apex:commandButton value="Go" action="{!freeTrial}" immediate="true" disabled="{!NOT(companySettings.G4S__Allow_Free_Trial__c)}"/>
+				<apex:outputText style="font-style: italic; color: #666;" value=" ({!companySettings.G4S__Free_Trial_Disabled_Message__c})" rendered="{!NOT(companySettings.G4S__Allow_Free_Trial__c) && NOT(ISBLANK(companySettings.G4S__Free_Trial_Disabled_Message__c))}"/>
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!NOT(haveGlanceAdminUser)}">
+				Please email your Salesforce Administrator to setup<br/>
+				a Glance account for your organization.<br/><br/>
+	
+				<apex:pageBlockSection columns="1">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Salesforce Administrator" for="password"/>
+						<apex:outputPanel layout="block" styleClass="requiredInput">
+							<div class="requiredBlock"/>
+							<select id="administratorUsersSelect">
+								<option value="">--None--</option>
+								<apex:repeat value="{!administratorUsers}" var="user">
+									<option value="{!user.Email}">{!user.Name}</option>
+								</apex:repeat>
+							</select>
+							<apex:commandButton value="Create an Email" onclick="createEmail(); return false;"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+			</apex:outputPanel>
+		</apex:outputPanel>
+	</apex:pageBlock>
+
+	<apex:pageBlock title="Already use Glance?" mode="edit">
+		<apex:pageBlockSection columns="1">
+			<apex:inputField value="{!userSettings.G4S__Glance_Address__c}" onkeydown="if (event.keyCode == 13) {event.returnValue = false; save();}"/>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Glance Password" for="password"/>
+				<apex:outputPanel layout="block" styleClass="requiredInput">
+					<div class="requiredBlock"/>
+					<input type="password" id="password" name="password" onkeydown="if (event.keyCode == 13) {event.returnValue = false; save();}"/>
+					<input type="hidden" name="defaultSessionKeyType" value="{!defaultSessionKeyType}"/>
+					<input type="hidden" name="defaultConfPhone" value="{!defaultConfPhone}"/>
+					<apex:commandButton value="Save" action="{!save}"/>
+				</apex:outputPanel>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		
+		<apex:facet name="footer">
+			<apex:panelGroup rendered="{!NOT(ISBLANK(returnId))}">
+				<table width="100%">
+					<tr>
+						<td width="50%"><apex:commandButton value="Return to {!returnObjectName}" action="{!returnToObject}" immediate="true"/></td>
+						<td width="50%"></td>
+					</tr>
+				</table>
+			</apex:panelGroup>
+		</apex:facet>
+	</apex:pageBlock>
+</apex:outputPanel>
+
+<apex:outputPanel id="editableArea" rendered="{!NOT(ISBLANK(userSettings.Id))}">
+    <apex:pageBlock title="Glance Settings" helpTitle="Help for this page" helpUrl="https://www.glance.net/sf_help_usersettings">
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!edit}" value="Edit" rendered="{!mode == 'view'}" rerender="editableArea"/>
+            <apex:commandButton action="{!save}" value="Save" rendered="{!mode == 'edit'}"/>
+            <apex:commandButton action="{!cancel}" value="Cancel" rendered="{!mode == 'edit'}" immediate="true"/>
+		    <apex:commandButton value="Get Free Glance Trial" action="{!trial}" immediate="true" rendered="{!userSettings.G4S__Glance_Address__c == ''}"/>
+		    <apex:commandButton value="Get Free Glance Phone Conferencing" action="{!getAudio}" immediate="true" rendered="{!mode == 'view' && userSettings.G4S__Default_Conference_Phone__c == '' && userSettings.G4S__Glance_Credentials__c != ''}" />
+        </apex:pageBlockButtons>
+     
+        <apex:pageBlockSection columns="1" rendered="{!mode == 'edit'}" >
+             <apex:inputField value="{!userSettings.G4S__Glance_Address__c}" id="glanceAddress"/>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection columns="1" rendered="{!mode == 'edit'}" id="theSection">
+             <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Glance Password" for="password"/>
+                <apex:outputPanel layout="block" styleClass="requiredInput">
+                    <div class="requiredBlock"/>
+                    <input type="password" id="password" name="password" value="{!password}" onfocus="clearDefaultPassword();"/>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Session_Key__c.inlineHelpText}" >
+                <apex:outputLabel value="Session Key Behavior" for="password"/>
+                <apex:panelGroup >
+                    <apex:inputHidden value="{!defaultSessionKeyType}" id="defaultSessionKeyType"/>
+                    <script>var defaultSessionKeyType = document.getElementById('{!$Component.defaultSessionKeyType}');</script>
+                    <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType != 'given' && defaultSessionKeyType != 'none'}">
+                        <input type="radio" onclick="return clearSessionKey();" name="defaultSessionKeyType" value="random" checked="checked"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType == 'given' || defaultSessionKeyType == 'none'}">
+                        <input type="radio" onclick="return clearSessionKey();" name="defaultSessionKeyType" value="random"/>
+                    </apex:outputPanel>
+                    Use a random key for each session<br/>
+                    
+                    <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType != 'given'}">
+                    	<input type="radio" name="defaultSessionKeyType" value="given" /> 
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType == 'given'}">
+                      	<input type="radio" name="defaultSessionKeyType" value="given" checked="checked"/>
+                    </apex:outputPanel>
+		            Always use this 4-digit key:&nbsp;<apex:inputText value="{!defaultSessionKey}"  maxlength="6" size="6" id="sessionKey" onclick="return checkAlwaysRadio();"/><br/>
+		            
+		            <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType != 'none'}">
+                    	<input type="radio" name="defaultSessionKeyType" value="none" /> 
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!defaultSessionKeyType == 'none'}">
+                      	<input type="radio" name="defaultSessionKeyType" value="none" checked="checked"/>
+                    </apex:outputPanel>
+                    No key
+		            
+					<script>var defaultSessionKeyRadio = document.getElementsByName('defaultSessionKeyType');</script>
+		            <script>var sessionKeyField = document.getElementById('{!$Component.sessionKey}');</script>
+                </apex:panelGroup>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem id="theSectionItem" helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Conference_Phone__c.inlineHelpText}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Conference_Phone__c.label}"/>
+                <apex:panelGroup id="theGroup" >
+                    <apex:outputPanel layout="none" rendered="{!defaultConfPhone == 'none'}">
+	                    <input type="radio" name="defaultConfPhone" value="none" onclick="return clearPhone();" checked="checked" />
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!defaultConfPhone == 'given'}">
+ 	                   <input type="radio" name="defaultConfPhone" value="none" onclick="return clearPhone();"/>
+					</apex:outputPanel>
+                    None<br/>
+                    <apex:outputPanel layout="none" rendered="{!defaultConfPhone == 'none'}">
+	                    <input type="radio" name="defaultConfPhone" value="given" /> 
+					</apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!defaultConfPhone == 'given'}">
+	                    <input type="radio" name="defaultConfPhone" value="given" checked="checked" /> 
+					</apex:outputPanel>
+					<apex:outputLabel value="Phone:"/>
+		            <apex:inputField value="{!userSettings.G4S__Default_Conference_Phone__c}" id="ConfPhone" onclick="return checkConfPhoneRadio();"/>&nbsp;
+					<script>var defaultConfPhoneRadio = document.getElementsByName('defaultConfPhone');</script>
+		            <script>var confPhoneField = document.getElementById('{!$Component.ConfPhone}');</script>
+		            <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Host_Code__c.label}:" />
+ 		            <apex:inputField value="{!userSettings.G4S__Host_Code__c}" id="ConfHost" />
+		            <script>var confHostField = document.getElementById('{!$Component.ConfHost}');</script>
+		            <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Guest_Code__c.label}:" />
+		            <apex:inputField value="{!userSettings.G4S__Guest_Code__c}" id="ConfPass" />
+		            <script>var confPassField = document.getElementById('{!$Component.ConfPass}');</script>
+               </apex:panelGroup>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.inlineHelpText}" rendered="{!companySettings.G4S__Create_Leads_From_Session_Guests__c != 'Never'}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.label}" for="createLeadsFromSessionGuests"/>
+                <apex:selectList id="createLeadsFromSessionGuests" value="{!userSettings.G4S__Create_Leads_From_Session_Guests__c}" size="1">
+                    <apex:selectOptions value="{!createLeadsFromSessionGuestsOptions}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem rendered="{!companySettings.G4S__Create_Leads_From_Session_Guests__c == 'Never'}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.inlineHelpText}" rendered="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c != null}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.label}" for="howDoYouUseSalesforce"/>
+                <apex:selectList id="howDoYouUseSalesforce" value="{!userSettings.G4S__How_Do_You_Use_Salesforce__c}" size="1">
+                    <apex:selectOptions value="{!HowDoYouUseSalesforceOptions}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.inlineHelpText}" rendered="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c == null}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            
+            <apex:inputField value="{!userSettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c}" rendered="{!chatterEnabled && companySettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Scheduling_Glance_Meeting__c.inlineHelpText}" rendered="{!chatterEnabled && NOT(companySettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c)}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Scheduling_Glance_Meeting__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            
+            <apex:inputField value="{!userSettings.G4S__Chatter_When_Starting_Glance_Session__c}" rendered="{!chatterEnabled && companySettings.G4S__Chatter_When_Starting_Glance_Session__c}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Starting_Glance_Session__c.inlineHelpText}" rendered="{!chatterEnabled && NOT(companySettings.G4S__Chatter_When_Starting_Glance_Session__c)}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Starting_Glance_Session__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection columns="1" rendered="{!mode == 'view'}">
+        	<apex:pageBlockSectionItem >
+        		<apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Glance_Address__c.label}"/>
+        		<apex:outputText value="{!userSettings.G4S__Glance_Address__c}" />
+        	</apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Glance Password"/>
+                <apex:outputText rendered="{!userSettings.G4S__Glance_Credentials__c != null}">&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;</apex:outputText>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Session_Key__c.inlineHelpText}" rendered="{!userSettings.G4S__Default_Session_Key_Type__c == 'random'}">
+        		<apex:outputLabel value="Session Key Behavior"/>
+ 				<apex:outputText rendered="{!userSettings.G4S__Default_Session_Key__c == null}" value="Use a random key for each session"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Session_Key__c.inlineHelpText}" rendered="{!userSettings.G4S__Default_Session_Key_Type__c == 'given'}">
+        		<apex:outputLabel value="Session Key Behavior"/>
+ 				<apex:outputText value="Always use this 4-digit key:  {!userSettings.G4S__Default_Session_Key__c}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Session_Key__c.inlineHelpText}" rendered="{!userSettings.G4S__Default_Session_Key_Type__c == 'none'}">
+        		<apex:outputLabel value="Session Key Behavior"/>
+ 				<apex:outputText value="No key"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Conference_Phone__c.inlineHelpText}" rendered="{!userSettings.G4S__Default_Conference_Phone__c == null}">
+        		<apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Default_Conference_Phone__c.label}" />
+ 				<apex:outputText value="None" />
+            </apex:pageBlockSectionItem>
+            <apex:outputField value="{!userSettings.G4S__Default_Conference_Phone__c}" rendered="{!userSettings.G4S__Default_Conference_Phone__c != null}"/>
+            <apex:outputField value="{!userSettings.G4S__Host_Code__c}"/>
+            <apex:outputField value="{!userSettings.G4S__Guest_Code__c}"/>
+            <apex:outputField value="{!userSettings.G4S__Create_Leads_From_Session_Guests__c}" rendered="{!companySettings.G4S__Create_Leads_From_Session_Guests__c != 'Never'}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.inlineHelpText}" rendered="{!companySettings.G4S__Create_Leads_From_Session_Guests__c == 'Never'}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            <apex:outputField value="{!userSettings.G4S__How_Do_You_Use_Salesforce__c}" rendered="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c != null}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.inlineHelpText}" rendered="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c == null}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__How_Do_You_Use_Salesforce__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            <apex:outputField value="{!userSettings.G4S__Trial_End_Date__c}" rendered="{!NOT(endDateIsNull)}"/>
+            
+            <apex:outputField value="{!userSettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c}" rendered="{!chatterEnabled && companySettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Scheduling_Glance_Meeting__c.inlineHelpText}" rendered="{!chatterEnabled && NOT(companySettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c)}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Scheduling_Glance_Meeting__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+            
+            <apex:outputField value="{!userSettings.G4S__Chatter_When_Starting_Glance_Session__c}" rendered="{!chatterEnabled && companySettings.G4S__Chatter_When_Starting_Glance_Session__c}"/>
+            <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Starting_Glance_Session__c.inlineHelpText}" rendered="{!chatterEnabled && NOT(companySettings.G4S__Chatter_When_Starting_Glance_Session__c)}">
+                <apex:outputLabel value="{!$ObjectType.G4S__User_Settings__c.fields.G4S__Chatter_When_Starting_Glance_Session__c.label}"/>
+                <i>Disabled via Company Settings</i>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+   
+    </apex:pageBlock>
+</apex:outputPanel>
+
+</apex:form>
+
+</apex:page>

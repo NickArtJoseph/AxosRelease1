@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Financial_Account_Link_SFDC2__c.Open_Date__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Financial_Account_SFDC2__c.Account_Number__c</field>
+    </columns>
+    <columns>
+        <field>Financial_Account_Link_SFDC2__c.Product_Type__c</field>
+    </columns>
+    <columns>
+        <field>Financial_Account_Link_SFDC2__c.Current_Balance__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Financial_Account_SFDC2__c.Relationship_Manager_SFDC2__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>DGRIFFITH,DCROSWELL,BBURGHARDT,PBEACH,ESTEFANAK,JGREEN,RCLOUGHLEY,DNGUYEN,JFLOYD,PSTURRUP,DSILVA,VPANG</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Financial_Account_SFDC2__c.Relationship_Manager_SFDC2__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sales Associate</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Financial_Account_Link_SFDC2__c@Financial_Account_Link_SFDC2__c.Financial_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

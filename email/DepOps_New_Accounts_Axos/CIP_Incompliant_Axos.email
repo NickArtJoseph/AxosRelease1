@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-size: 12pt;"><font face="arial">Thank you for choosing Axos Bank™.&nbsp;Your new account is currently under review. During the review process we discovered your client profile and/or existing account(s) are out of compliance. Please provide the following to update your client profile:&nbsp; </font></span></p><p><span style="font-size: 12pt;"><font face="arial"><br>1. Driver's License Information Form (see attached)<br>2. Occupation Form (see attached)<br><br>If we require additional information, we will contact you by email or telephone. <br>Please return all requested documentation by;<br>1) Email to: <a href="mailto:customerservice@axosbank.com">customerservice@axosbank.com</a><br>2) Fax to: 858-350-0443<br>3) Mail to: Axos Bank, Attn: New Accounts, P.O. Box 911039, San Diego, CA&nbsp; 92191-1039.<br><br><b>Questions?</b> If you have any questions, please call us at (888) 502-2967 or email us at <a href="mailto:customerservice@Axos%20Bank.com">customerservice@axosbank.com</a>.<br><br>We appreciate your business and commit to delivering value that will make&nbsp;Axos Bank&nbsp;your first choice for all your banking needs.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

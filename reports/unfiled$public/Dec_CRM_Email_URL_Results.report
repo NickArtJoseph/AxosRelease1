@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$et4ae5__IndividualEmailResult__c.et4ae5__Email__c</field>
+    </columns>
+    <columns>
+        <field>FK_$et4ae5__IndividualEmailResult__c.et4ae5__Opened__c</field>
+    </columns>
+    <columns>
+        <field>FK_$et4ae5__IndividualEmailResult__c.et4ae5__Clicked__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualLink__c.et4ae5__LinkURL__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Dec CRM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Dec CRM Email URL Results</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__IndividualLink__c@et4ae5__IndividualLink__c.et4ae5__Individual_Email_Result__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_$et4ae5__IndividualEmailResult__c.et4ae5__DateSent__c</dateColumn>
+        <endDate>2016-12-19</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-12-12</startDate>
+    </timeFrameFilter>
+</Report>

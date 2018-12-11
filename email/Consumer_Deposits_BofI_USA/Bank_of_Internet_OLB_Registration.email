@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><font style=""><font face="arial"><span style="font-size: 12pt;">Hello </span></font>{!Case.Contact}<font face="arial"><span style="font-size: 12pt;">,</span></font><br></font><br><font face="arial"><span style="font-size: 12pt;">The easiest way to access account information is through
+Online Banking.&nbsp; You can easily register
+as a new user by clicking </span></font><a href="https://www.mybankofinternet.com/tob/live/usp-core/app/register?_ga=2.212686932.197819162.1501709991-598029159.1500306408" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><b>here</b></a><font face="arial"><span style="font-size: 12pt;">.</span></font><br><br><font face="arial"><span style="font-size: 12pt;">The registration process involves creating a Username and
+Password as well as completing your personal information. Once you have
+completed this page you can click on the Complete Sign up button at the bottom.</span></font><br><br><font face="arial"><span style="font-size: 12pt;">The next step in the process will instruct you to set up
+your enhanced security features. These features will be used in the event you
+forget your password, or login using a new computer.</span></font><br><br><font face="arial"><span style="font-size: 12pt;">We appreciate your business and commit to providing superior
+Banking products, support and services.</span></font><br><br><font face="arial"><span style="font-size: 12pt;">Best Regards,</span></font><br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}</span><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br>Bank of Internet USA Customer Service</font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+<p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><o:p>&nbsp;</o:p></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

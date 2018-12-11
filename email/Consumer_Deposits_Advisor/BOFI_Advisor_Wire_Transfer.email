@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},<br></span><span style="background-color: rgb(255, 255, 255);"></span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><font face="Arial, sans-serif"><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><br></span>A wire transfer may be initiated by filling
+out our Wire Transfer form. You can find our Wire Transfer form on our website;
+go to the BofI Advisor Home Page, hover over&nbsp;Resources, click on
+Account Management&nbsp;Forms, and then select the&nbsp;Wire Transfer Form.</font></div><p><br></p><p><a href="https://www.bofiadvisor.com/Portals/bofiadvisor2/documents/Forms/wire-instructions-and-transfer-request-form.pdf?t=1504762394051">Wire Transfer Request Form</a><font face="Arial, sans-serif"><br></font></p><font face="Arial, sans-serif"><div><br><span style="background-color: rgb(255, 255, 255);"><br>Please note that there is&nbsp;</span><b style="background-color: rgb(255, 255, 255);">$35 fee to send a Domestic Wire</b><span style="background-color: rgb(255, 255, 255);">&nbsp;and a&nbsp;</span><b style="background-color: rgb(255, 255, 255);">$45 fee</b><span style="background-color: rgb(255, 255, 255);">&nbsp;</span><b style="background-color: rgb(255, 255, 255);">for International Wires.</b><span style="background-color: rgb(255, 255, 255);">&nbsp;Wire Transfers cannot be future dated and must be received by&nbsp;</span><b style="background-color: rgb(255, 255, 255);">12:00pm (PT)</b><span style="background-color: rgb(255, 255, 255);">&nbsp;for Domestic wires and&nbsp;</span><b style="background-color: rgb(255, 255, 255);">12:00pm (PT)</b><span style="background-color: rgb(255, 255, 255);">&nbsp;for International wires to be processed the same day. Wires received on Saturday, Sunday, or a holiday will be processed on the next business day.</span></div><div><span style="background-color: rgb(255, 255, 255);"><br></span></div><div><span style="background-color: rgb(255, 255, 255);"><br></span></div><div><br></div><div>We appreciate your business and commit to providing superior Banking products, support and services.</div><div><br></div><div>Best Regards,</div><div><br></div><div>{!User.FirstName}<br>BOFI Advisor Customer Service</div></font><div><br></div><div><font face="Arial, sans-serif"><span style="background-color: rgb(255, 255, 255);"><br></span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

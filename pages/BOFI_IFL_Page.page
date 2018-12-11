@@ -1,0 +1,127 @@
+<apex:page controller="BOFI_IFL_Controller" showHeader="false" sidebar="false">
+	
+	<script src="../../soap/ajax/41.0/connection.js" type="text/javascript"></script>
+	<script src="../../soap/ajax/41.0/apex.js"></script>
+	<body onload="changeOwnership()">
+	<apex:pageBlock title="IFL Refund Application">
+   	<br />
+  	<apex:outputPanel id="all">
+  		<apex:pageMessages />
+		<br />
+		<apex:outputLabel value="Agent: " for="Owner" />	 				
+	 	<h1><apex:outputText id="Owner" value="{!$User.FirstName} {!$User.LastName}" /></h1>
+	 	<br />
+		<apex:form >
+	 		<apex:pageBlock title="Applicant Tax Information">
+	 			<apex:repeat value="{!Records}" var="r" rendered="true">
+	 				<apex:outputLabel value="Record Id: " for="recId" />
+	 				<apex:outputText id="recId" value="{!r.HRB_Refund_Advance__c}" />
+	 				<script>
+	 					function inactivityTime(){
+							var t;
+							var queueUser = sforce.connection.query("select Id from User where Name = 'HRB-API1'");
+							var changeOwner, hrb = new sforce.SObject("HRB_Refund_Advance__c");
+							var theId = document.getElementById('{!$Component.recId}').innerHTML;
+							var returnRecord = sforce.connection.query("Select Id, OwnerId from HRB_Refund_Advance__c where Id ='" + theId +"'");
+							
+							window.onload = resetTimer;
+							document.onmousemove = resetTimer;
+							document.onkeypress = resetTimer;
+							console.log('Say hi to T:' + t);
+
+							function returnToQueue(){
+								hrb["Id"] = returnRecord.records.Id;
+								hrb["OwnerId"] = queueUser.records.Id;
+								changeOwner = sforce.connection.update([hrb]);
+								console.log('Now the owner is: ' + hrb["OwnerId"]);
+								alert("The Application was returned to the Queue");
+								location.href='#';
+							}
+
+							function resetTimer() {
+								clearTimeout(t);
+								t = setTimeout(returnToQueue, 600000);
+							}
+						}
+						function changeOwnership() {
+							var sessionId = sforce.connection.sessionId = "{!$Api.Session_ID}";
+							var user = sforce.connection.getUserInfo().userId;
+						
+							var theId = document.getElementById('{!$Component.recId}').innerHTML;
+							console.log(theId);
+
+							var query = sforce.connection.query("select Id from User where Name = 'HRB-API1'");
+							var getCurrentRecord = sforce.connection.query("Select Id, ManualDecision__c,SSN_TIN__c, OwnerId FROM HRB_Refund_Advance__c Where HRBDecision__c=Null AND DecisionBy__c='manual' AND ManualDecision__c = Null and Owner.Name = 'HRB-API1' and Id ='" + theId + "'order by CreatedDate desc");
+							
+							var queryResult = query.records.Id;
+							var currRecord = getCurrentRecord.records.Id;
+							console.log(currRecord);
+							
+							var getHRBRefundStatus = sforce.connection.query("Select HRB_Refund_Advance__c from HRBRefundStatus__c where HRB_Refund_Advance__c ='" + currRecord +"'");
+							var hrbRefundStatus = getHRBRefundStatus.records.HRB_refund_Advance__c;
+							var changeOwner, currentOwner, hrb = new sforce.SObject("HRB_Refund_Advance__c");
+						
+							if(sessionId != null || sessionId == undefined){
+								if(currRecord !== null || currRecord !== undefined && currRecord == hrbRefundStatus) {
+									console.log('Record to be assigned: ' + currRecord);
+									currentOwner = getCurrentRecord.records.OwnerId;
+									if(user != null && user != queryResult && user != currentOwner) {
+										console.log('The current owner is: ' + currentOwner);
+										hrb["Id"] = getCurrentRecord.records.Id;
+										hrb["OwnerId"] = user;
+										try {
+											changeOwner = sforce.connection.update([hrb]);
+											console.log('Now the owner is: ' + hrb["OwnerId"]);
+											inactivityTime();
+										}
+										catch(err){
+											console.log('El error es: ' + err);
+										}
+									}
+									else {
+										console.log("Dont do nothing");
+									}
+								}
+							}
+						}
+					</script>
+	 				<br />
+	 				<br />
+	 				<apex:outputLabel value="SSN: " for="SSN" />
+	 				<apex:outputText id="SSN" value="{!r.HRB_Refund_Advance__r.SSN_TIN__c}"/>
+	 				<br />
+	 				<apex:outputLabel value="Pending Since: " for="createdAt" />
+	 				<apex:outputText value="{!r.CreatedAt__c}" />
+	 				<br />
+	 				<br />
+	 				<apex:outputLabel value="Minutes in Queue: " for="slaminutes" />
+	 				<apex:outputText id="slaminutes" value="{!r.SLAMinutes__c}" />
+	 				<br />
+	 				<br />
+	 				<apex:outputLabel value="Phone: " for="phone" />
+	 				<apex:outputText id="phone" value="{!r.HRB_Refund_Advance__r.IRS_Phone_Number__c}" />
+	 				<br />
+	 				<br />
+	 				<br />
+	 				<apex:commandButton value="Approve" action="{!UpdStatusToAccept}" rerender="all">
+	 					<apex:param name="contIdParam" value="{!r.Id}" assignTo="{!RecId}" />
+	 				</apex:commandButton>
+	 				<br />
+	 				<br />
+	 				<apex:commandButton value="Decline" action="{!UpdStatusToReject}" rerender="all">
+	 					<apex:param name="contIdParam" value="{!r.Id}" assignTo="{!RecId}" />
+	 				</apex:commandButton>
+	 				<br />
+	 				<br />
+	 				<apex:pageBlock title="Done">
+						<apex:commandButton value="Quit" action="{!quit}" rerender="all">
+							<apex:param name="contIdParam" value="{!r.Id}" assignTo="{!RecId}" />
+						</apex:commandButton>
+					</apex:pageBlock>
+	 			</apex:repeat>
+			</apex:pageBlock>
+		</apex:form>
+	</apex:outputPanel>
+	</apex:pageBlock>
+	</body>
+</apex:page>

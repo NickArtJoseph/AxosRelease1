@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To assign the record types so that a user can create it. Used with Enterprise User profiles to control which users can create BU specific record types.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Lead Auto Lending 2.0 Record Type</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Lead.Dealer_Services_Dealer_SFDC2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

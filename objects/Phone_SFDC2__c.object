@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>PhoneSFDC2Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>PhoneSFDC2New</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>PhoneSFDC2View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>SFDC2 Phone objects are used to allow storing an unlimited number of current and historical phone numbers for Leads, Business Accounts and Personal Accounts.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Phones</relationshipLabel>
+        <relationshipName>Phones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Belongs_To__c</fullName>
+        <description>Who the number belongs to according to the phone bill</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who the number belongs to according to the phone bill</inlineHelpText>
+        <label>Belongs To</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Phones</relationshipLabel>
+        <relationshipName>Phones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unverified</fullName>
+                    <default>false</default>
+                    <label>Unverified</label>
+                </value>
+                <value>
+                    <fullName>Verified</fullName>
+                    <default>false</default>
+                    <label>Verified</label>
+                </value>
+                <value>
+                    <fullName>Bad</fullName>
+                    <default>false</default>
+                    <label>Bad</label>
+                </value>
+                <value>
+                    <fullName>Unresponsive</fullName>
+                    <default>false</default>
+                    <label>Unresponsive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Primary Home</fullName>
+                    <default>false</default>
+                    <label>Primary Home</label>
+                </value>
+                <value>
+                    <fullName>Primary Business</fullName>
+                    <default>false</default>
+                    <label>Primary Business</label>
+                </value>
+                <value>
+                    <fullName>Primary Mobile</fullName>
+                    <default>false</default>
+                    <label>Primary Mobile</label>
+                </value>
+                <value>
+                    <fullName>Primary Fax</fullName>
+                    <default>false</default>
+                    <label>Primary Fax</label>
+                </value>
+                <value>
+                    <fullName>Other Home</fullName>
+                    <default>true</default>
+                    <label>Other Home</label>
+                </value>
+                <value>
+                    <fullName>Other Business</fullName>
+                    <default>false</default>
+                    <label>Other Business</label>
+                </value>
+                <value>
+                    <fullName>Other Mobile</fullName>
+                    <default>false</default>
+                    <label>Other Mobile</label>
+                </value>
+                <value>
+                    <fullName>Other Fax</fullName>
+                    <default>false</default>
+                    <label>Other Fax</label>
+                </value>
+                <value>
+                    <fullName>Former</fullName>
+                    <default>false</default>
+                    <label>Former</label>
+                </value>
+                <value>
+                    <fullName>JH Cell</fullName>
+                    <default>false</default>
+                    <label>JH Cell</label>
+                </value>
+                <value>
+                    <fullName>JH Fax</fullName>
+                    <default>false</default>
+                    <label>JH Fax</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SQL_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SQL ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Phone</label>
+    <nameField>
+        <displayFormat>PHN-{0000}</displayFormat>
+        <label>Phone Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Phones</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Account_Phone</fullName>
+        <active>true</active>
+        <label>Account Phone</label>
+        <picklistValues>
+            <picklist>Phone_Status__c</picklist>
+            <values>
+                <fullName>Bad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Phone_Type__c</picklist>
+            <values>
+                <fullName>Former</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Cell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Business</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Phone</fullName>
+        <active>true</active>
+        <label>Lead Phone</label>
+        <picklistValues>
+            <picklist>Phone_Status__c</picklist>
+            <values>
+                <fullName>Bad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unverified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Phone_Type__c</picklist>
+            <values>
+                <fullName>Former</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Cell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JH Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Business</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Business_Phones</fullName>
+        <active>true</active>
+        <description>Prevent Phone objects on business accounts from having primary home or mobile numbers</description>
+        <errorConditionFormula>IF( !ISNULL( Account__c)
+    &amp;&amp; !Account__r.IsPersonAccount 
+    &amp;&amp; LEFT( Account__r.Account_Type_SFDC2__c ,2) != &apos;JH&apos;
+    &amp;&amp; (TEXT(Phone_Type__c) == &apos;Primary Mobile&apos;
+        || TEXT(Phone_Type__c) == &apos;Primary Home&apos;), 
+  true
+,
+  false
+)</errorConditionFormula>
+        <errorDisplayField>Phone_Type__c</errorDisplayField>
+        <errorMessage>Business accounts can not have primary mobile or home numbers</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>JH_Customer</fullName>
+        <active>true</active>
+        <description>Prevent primary phone numbers from being updated on JH accounts</description>
+        <errorConditionFormula>IF( !ISNULL( Account__c )
+    &amp;&amp; LEFT( Account__r.Account_Type_SFDC2__c, 2 ) == &apos;JH&apos;
+    &amp;&amp; LEFT(  RecordType.DeveloperName , 7 ) == &apos;Primary&apos;,
+  true
+,
+  false
+)</errorConditionFormula>
+        <errorMessage>Primary phone numbers on accounts with JH customer records must be updated in JH.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

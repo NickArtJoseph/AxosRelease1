@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+        <field>Subject</field>
+        <field>Subtype__c</field>
+        <field>Type</field>
+        <field>Reason</field>
+        <field>Description</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Commercial_Deposit_Operations_Approvals</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Approvers = Approval Queue</label>
+        <name>Approvers_Approval_Queue</name>
+    </approvalStep>
+    <description>Approval Process for the Commercial Deposit Operations case record type.</description>
+    <emailTemplate>unfiled$public/Approval_Request_Commercial_Deposits</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 AND 2) OR (1 AND 3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>Commercial Deposit Operations</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Commercial Account Opening,Other</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Account maintenance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subtype__c</field>
+            <operation>equals</operation>
+            <value>Signer/Name Change,Add/Update Alerts,Account Re-Open,OTHER</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Case_Assign_to_Commercial_Deposit_Queue</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Case_Update_Status_to_New</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Case_Email_Rejection</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Case_Update_Status_to_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Mark_Rejected_Field</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Assign_to_Approval_Queue</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Case_Update_status_to_Pending_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Commercial Deposit Operations</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

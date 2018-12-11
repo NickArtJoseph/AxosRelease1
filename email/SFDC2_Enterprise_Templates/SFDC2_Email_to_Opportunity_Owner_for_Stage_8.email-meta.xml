@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Opportunity owners are notified by email when the stage for their opportunity equals stage 8.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2: Email to Opportunity Owner for Stage 8</name>
+    <style>none</style>
+    <subject>Stage changed to Boarded/Funded/Won</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

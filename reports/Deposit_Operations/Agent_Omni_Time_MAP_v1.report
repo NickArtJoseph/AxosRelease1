@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>UserServicePresence$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$ServicePresenceStatus</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusStartDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusEndDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusDuration</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Naghmeh Jafari</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>6/25/2018 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Agent Omni Time MAP v1</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Omni_Channel_User_Presence__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>UserServicePresence$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

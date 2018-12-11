@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Reports</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript(&quot;/soap/ajax/11.1/connection.js&quot;)}
+var result= sforce.connection.query(&quot;select id from Folder where name =&apos;Glance for Salesforce&apos; and type=&apos;Report&apos; &quot;);
+var records = result.getArray(&quot;records&quot;);
+var id = &quot;&quot; + records[0].Id;
+var url = &quot;/00O?fcf=&quot; + id.substr(0,15);
+top.location.href=url;</url>
+</CustomPageWebLink>

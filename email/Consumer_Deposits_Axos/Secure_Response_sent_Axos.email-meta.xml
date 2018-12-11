@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Response that we replied by secure email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - Secure Response sent</name>
+    <style>freeForm</style>
+    <subject>Secure Response has been sent</subject>
+    <textOnly>{!Contact.Name}
+
+Your inquiry has been assigned Case ID {!Case.CaseNumber}.
+
+
+A new response has arrived from Axos Bank.
+
+To view your response:
+
+1.  Sign into Online Banking.
+
+2.  Click Contact Us.
+
+3.  Go to your message inbox to view the response.
+
+
+Thank you,
+
+
+Axos Bank</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

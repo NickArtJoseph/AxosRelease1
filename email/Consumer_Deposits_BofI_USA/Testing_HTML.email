@@ -1,0 +1,592 @@
+<!doctype html><html><head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+<title>Bank of Internet USA</title> 
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!-- Marketo variables --> 
+<!-- Additional Disclosures Section variables -->   
+<!-- /Marketo variables --> 
+<!--[if !mso]><!--> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<!--<![endif]--> 
+<!--[if !mso]><!--> 
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css"> 
+<!--<![endif]--> 
+<!--[if !mso]><!--> 
+<link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:400italic" rel="stylesheet" type="text/css"> 
+<!--<![endif]--> 
+<style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      /* RESET STYLES */
+      img {
+        border: 0;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      /* KEEP LINK COLOR IN MSO */
+      span.MsoHyperlink {
+        mso-style-priority: 99;
+        color: inherit;
+      }
+      span.MsoHyperlinkFollowed {
+        mso-style-priority: 99;
+        color: inherit;
+      }
+      /* BUTTONS */
+      .emailbuttonred {
+        background-color: #AB2328;
+        border-collapse: separate;
+        border-radius: 3px;
+      }
+      .emailbuttonblue {
+        background-color: #002a4e;
+        border-collapse: separate;
+        border-radius: 3px;
+      }
+      .emailbuttonlightblue {
+        background-color: #528AB8;
+        border-collapse: separate;
+        border-radius: 3px;
+      }
+      .buttoncontentred {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+      }
+      .buttoncontentblue {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+      }
+      .buttoncontentlightblue {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+      }
+      .buttonlcontentred {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 100%;
+        padding: 15px;
+        text-align: center;
+      }
+      .buttonlcontentblue {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 100%;
+        padding: 15px;
+        text-align: center;
+      }
+      .buttonlcontentlightblue {
+        color: #FFFFFF;
+        font-family: 'Raleway', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 100%;
+        padding: 15px;
+        text-align: center;
+      }
+      .buttoncontentred a {
+        color: #FFFFFF;
+        display: block;
+        text-decoration: none;
+      }
+      .buttoncontentblue a {
+        color: #FFFFFF;
+        display: block;
+        text-decoration: none;
+      }
+      .buttoncontentlightblue a {
+        color: #FFFFFF;
+        display: block;
+        text-decoration: none;
+      }
+      .buttonlcontentred a {
+        color: #FFFFFF;
+        display: block;
+        text-decoration: none;
+      }
+      .buttonlcontentblue a {
+        color: #FFFFFF;
+        display: block;
+        text-decoration: none;
+      }
+      .disable-link {
+        pointer-events: none;
+        cursor: default;
+      }
+      /* MOBILE STYLES */
+      @media screen and (max-width: 480px) {
+        body {
+          width: auto!important;
+        }
+        a[class="disable-link"] {
+          pointer-events: auto !important;
+          cursor: auto !important;
+        }
+        table[class=mobilescale] {
+          width: 100%!important;
+          padding-left: 0px!important;
+          padding-right: 0px!important;
+        }
+        td[class=mobilescale] {
+          width: 100%!important;
+          padding-left: 0px!important;
+          padding-right: 0px!important;
+        }
+        td[class=mobilescaleh15] {
+          width: 100%!important;
+          padding-left: 0px!important;
+          padding-right: 0px!important;
+          padding-top: 15px!important;
+        }
+        td[class=mobilescaleh8] {
+          width: 100%!important;
+          padding-left: 0px!important;
+          padding-right: 0px!important;
+          padding-top: 8px!important;
+        }
+        td[class=innermobilescale] {
+          width: 100%!important;
+          padding-left: 20px!important;
+          padding-right: 20px!important;
+        }
+        td[class=innermobilescalep10] {
+          width: 100%!important;
+          padding-left: 10px!important;
+          padding-right: 10px!important;
+        }
+        /* HIDE CONTENT */
+        span[class=hidden] {
+          width: 0px;
+          display: none !important;
+        }
+        img[class=hidden] {
+          width: 0px;
+          display: none !important;
+        }
+        td[class=hidden] {
+          width: 0px;
+          display: none !important;
+        }
+        table[class=hidden] {
+          width: 0px;
+          display: none !important;
+        }
+        /* SHOW CONTENT */
+        .show {
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: visible !important;
+          width: auto !important;
+          max-height: inherit !important;
+        }
+        /* FLUID IMAGE */
+        img[class=imageresize] {
+          width: 100% !important;
+          height: auto !important;
+        }
+        /* HEADER */
+        table[class=headermodule] {
+          width: 100% !important;
+          text-align: center !important;
+        }
+        td[class=headermodule] {
+          width: 100% !important;
+          text-align: center !important;
+        }
+        img[class=headermodule] {
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE BUTTONS */
+        table[class="emailbuttonred"] {
+          width: 100% !important;
+        }
+        table[class="emailbuttonblue"] {
+          width: 100% !important;
+        }
+        table[class="emailbuttonlightblue"] {
+          width: 100% !important;
+        }
+        td[class="buttoncontentred"] {
+          padding: 0px !important;
+        }
+        td[class="buttoncontentblue"] {
+          padding: 0px !important;
+        }
+        td[class="buttoncontentlightblue"] {
+          padding: 0px !important;
+        }
+        td[class="buttoncontentred"] a {
+          padding: 12px !important;
+          line-height: 16px !important;
+          font-size: 16px !important;
+        }
+        td[class="buttoncontentblue"] a {
+          padding: 12px !important;
+          line-height: 16px !important;
+          font-size: 16px !important;
+        }
+        td[class="buttoncontentlightblue"] a {
+          padding: 12px !important;
+          line-height: 16px !important;
+          font-size: 16px !important;
+        }
+        td[class="buttonlcontentred"] {
+          padding: 0px !important;
+        }
+        td[class="buttonlcontentblue"] {
+          padding: 0px !important;
+        }
+        td[class="buttonlcontentlightblue"] {
+          padding: 0px !important;
+        }
+        td[class="buttonlcontentred"] a {
+          padding: 18px !important;
+          line-height: 120% !important;
+        }
+        td[class="buttonlcontentblue"] a {
+          padding: 18px !important;
+          line-height: 120% !important;
+        }
+        td[class="buttonlcontentlightblue"] a {
+          padding: 18px !important;
+          line-height: 120% !important;
+        }
+        td[class="noleftpadding"] {
+          padding-left: 0px!important;
+        }
+      }
+      /* ANDROID CENTER FIX */
+      div[style*="margin: 16px 0;"] {
+        margin: 0 !important;
+      }
+    </style> 
+</head> 
+<body style="margin: 0; padding: 0;"><style type="text/css">div#emailPreHeader{ display: none !important; }</style><div id="emailPreHeader" style="mso-hide:all; visibility:hidden; opacity:0; color:transparent; mso-line-height-rule:exactly; line-height:0; font-size:0px; overflow:hidden; border-width:0; display:none !important;">We appreciate your time.</div> 
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+<tbody> 
+<tr> 
+<td width="100%" valign="top" align="center" class="mktoContainer" id="MainWrapper">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mobilescale mktoModule" id="header"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#002a4e" class="mobilescale"> 
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#002a4e" class="innermobilescale"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" style="padding-top:8px; padding-bottom:8px"> 
+<table width="228" border="0" align="center" cellpadding="0" cellspacing="0" class="headermodule"> 
+<tbody> 
+<tr> 
+<td height="40" align="center"><a href="http://www.bankofinternet.com"><img src="https://hello.bofifederalbank.com/rs/526-JYA-191/images/BofiUSAwhite.png" border="0" width="228" height="40" alt="Bank of Internet USA" style="font-family:Arial, sans-serif; font-size:20px; color:#FFFFFF; 
+display:block"></a></td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mktoModule" id="EmailBody8d6b0592-111c-4c19-be0e-5b78a8861604"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#1c416f" class="mobilescale" style="padding-top:8px; padding-bottom:8px"> 
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#FFFFFF" class="innermobilescale"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" bgcolor="#FFFFFF" style="padding-top:20px; padding-bottom:30px; font-family:'Raleway', Arial, sans-serif; font-size:14px; color:#666666; mso-line-height-rule:exactly; line-height:22px;"> 
+<div class="mktoText" id="bodyText8d6b0592-111c-4c19-be0e-5b78a8861604">
+<p>Hi&nbsp;{!Contact.Name},</p>
+<p>It was a pleasure speaking with you today. As requested, here is more information regarding the&nbsp;<strong>CD Rate Booster&nbsp;</strong>product.</p>
+<p><strong>12 Month CD Booster:</strong></p>
+<ul>
+<li>Term: 12-month</li>
+<li>Maturity Option: Auto-renewable</li>
+<li>Initial Term Rate: 1.15% APY</li>
+<li>Potential Maturity Term Rate: 2.30% APY</li>
+<li>Interest Frequency: Interest paid at maturity only.</li>
+<li>Minimum Deposit to Open CD: $ 1,000.00</li>
+<li>Maximum Deposit to Open CD: $100,000.</li>
+<li>Limited to one CD per customer, must be a new deposit relationship</li>
+<li>Potential CD Rate Booster rate applies only to the first 12-month term.</li>
+<li>*Requirements:
+<ul>
+<li>Must also open a new Rewards Checking account</li>
+<li>Meet all three (3) qualifying conditions to earn the 1.25% APY on the Rewards Checking account for the term of the CD</li>
+<li>Maintain a $5,000 Average Daily Balance in the Rewards Checking account for the term of the CD</li>
+</ul>
+</li>
+</ul>
+<p><strong>Rewards Checking Account Features</strong>:</p>
+<ul>
+<li>Monthly Maintenance Fee<strong>:</strong>&nbsp;Free</li>
+<li>Non-sufficient Fund or Overdraft Fee:&nbsp;Free</li>
+<p>
+To learn more about the Rewards Checking account click    <a href="https://www.bankofinternet.com/checking/rewards-checking">here</a>
+</p>
+</ul>
+<p>If you have any further questions, please reply to this message or give us a call at&nbsp;<strong>855-263-4333</strong>.</p>
+<p>Best Regards,</p>
+<p>{!User.FirstName}</p>
+<p>BofI Account Services</p>
+</div>
+</div> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mktoModule" id="BofIUSALinks"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#002a4e" style="border-top:solid #528ab8 1px; border-bottom:solid #a9c5dc 1px"> 
+<table width="620" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 620px;"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#002a4e" class="mobile-padding"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 560px;"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-top: 24px; padding-bottom: 24px;"> 
+<table role="presentation" width="173" border="0" align="left" cellpadding="0" cellspacing="0" class="full-width" style="width: 173px;"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-bottom: 10px;"> <h4 class="secondary" style="font-family:'Raleway', Arial, sans-serif; font-size:18px; line-height:18px; mso-line-height-rule:exactly; font-weight:lighter; text-align:left; color:#FFFFFF; margin:0;">Banking Products</h4> </td> 
+</tr> 
+<tr> 
+<td align="left" valign="top"> <p style="font-family:'Raleway', Arial, sans-serif; font-size:16px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:24px; margin:0;"><a href="http://post.bofifederalbank.com/kJ08X0S00nn02Ycy950Pt0A" style="color:#028BFF; text-decoration:none">Checking</a><br> <a href="http://post.bofifederalbank.com/I050QJ90Xtn9Sc2y0n0YA00" style="color:#028BFF; text-decoration:none">Savings</a><br> <a href="http://post.bofifederalbank.com/hXn5RtY00J000ycnS020Aa9" style="color:#028BFF; text-decoration:none">IRA’s</a><br> <a href="http://post.bofifederalbank.com/uSS0009YtX0c0b02nnyJA50" style="color:#028BFF; text-decoration:none">CD’s</a><br> <a href="http://post.bofifederalbank.com/TcSJn0n050009YT20XtycA0" style="color:#028BFF; text-decoration:none">Mortgages</a><br> <a href="http://post.bofifederalbank.com/JY2XJy0U5A0Sdn90cn000t0" style="color:#028BFF; text-decoration:none">Refinance</a><br> <a href="http://post.bofifederalbank.com/f00nc0X09V005Y2yJSAen0t" style="color:#028BFF; text-decoration:none">Home Equity Products</a><br> <a href="http://post.bofifederalbank.com/E0c0J0nfYW90S0yA2n0tX05" style="color:#028BFF; text-decoration:none">Personal Loans</a><br> <a href="http://post.bofifederalbank.com/SY0A2c09X0t0SJn0500nygX" style="color:#028BFF; text-decoration:none">Business Banking</a></p> </td> 
+</tr> 
+</tbody> 
+</table> 
+<!--[if mso]>
+</td>
+<td align="left" valign="top">
+<![endif]--> 
+<table width="194" border="0" align="left" cellpadding="0" cellspacing="0" class="full-width" style="width: 194px;"> 
+<tbody> 
+<tr> 
+<td width="24" align="left" valign="top" class="hidden" style="width: 24px;">&nbsp;</td> 
+<td width="170" align="left" valign="top" class="full-width top20" style="width: 170px;"> 
+<table role="presentation" width="170" border="0" cellspacing="0" cellpadding="0" class="full-width" style="width: 170px;"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-bottom: 10px;"> <h4 class="secondary" style="font-family:'Raleway', Arial, sans-serif; font-size:18px; line-height:18px; mso-line-height-rule:exactly; font-weight:lighter; text-align:left; color:#FFFFFF; margin:0;">Tools</h4> </td> 
+</tr> 
+<tr> 
+<td align="left" valign="top"> <p style="font-family:'Raleway', Arial, sans-serif; font-size:16px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:24px; margin:0;"><a href="http://post.bofifederalbank.com/Lyt2AY0050Yn0Jh9n0X0c0S" style="color:#028BFF; text-decoration:none">Bill Pay</a><br> <a href="http://post.bofifederalbank.com/kJ0iX0S00nn02Ycy950Zt0A" style="color:#028BFF; text-decoration:none">Digital Payment Apps</a><br> <a href="http://post.bofifederalbank.com/TkSJo0n050009Y020XtycA0" style="color:#028BFF; text-decoration:none">My Deposit</a><br> </p> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> 
+<!--[if mso]>
+</td>
+<td align="left" valign="top">
+<![endif]--> 
+<table width="193" border="0" align="left" cellpadding="0" cellspacing="0" style="width: 193px;"> 
+<tbody> 
+<tr> 
+<td width="20" align="left" valign="top" class="hidden" style="width: 20px;">&nbsp;</td> 
+<td width="173" align="left" valign="top" class="full-width top20" style="width: 173px;"> 
+<table role="presentation" width="173" border="0" align="left" cellpadding="0" cellspacing="0" class="full-width" style="width: 173px;"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-bottom: 10px;"> <h4 class="secondary" style="font-family:'Raleway', Arial, sans-serif; font-size:18px; line-height:18px; mso-line-height-rule:exactly; font-weight:lighter; text-align:left; color:#FFFFFF; margin:0;">Mobile Banking</h4> </td> 
+</tr> 
+<tr> 
+<td align="left" valign="top"> <p style="font-family:'Raleway', Arial, sans-serif; font-size:16px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:24px; margin:0;"><a href="http://post.bofifederalbank.com/Q0oA09Y0J12Xy0S5c00ltn0" style="color:#028BFF; text-decoration:none">Mobile Deposit</a><br> <a href="http://post.bofifederalbank.com/I0502J90XtnmSc2y0o0YA00" style="color:#028BFF; text-decoration:none">Mobile Banking Apps</a></p> </td> 
+</tr> 
+<tr> 
+<td align="left" valign="top" style="padding-bottom: 10px; padding-top: 18px;"> <h4 class="secondary" style="font-family:'Raleway', Arial, sans-serif; font-size:18px; line-height:18px; mso-line-height-rule:exactly; font-weight:lighter; text-align:left; color:#FFFFFF; margin:0;">We're Social</h4> </td> 
+</tr> 
+<tr> 
+<td align="left" valign="top"> 
+<table width="105" border="0" align="left" cellpadding="0" cellspacing="0" style="width: 105px;"> 
+<tbody> 
+<tr> 
+<td width="35" align="left" valign="top" style="width: 35px;"><a href="http://post.bofifederalbank.com/P000S0cJXY0n3t0o09nA5y2"><img src="http://na-sj06.marketo.com/rs/848-REG-807/images/bofiusa_icon_twitter.png" width="35" height="30" border="0" alt="Twitter" style="font-family:Arial, sans-serif; font-size:12px; 
+color:#FFFFFF; display:block"></a></td> 
+<td width="35" align="left" valign="top" style="width: 35px;"><a href="http://post.bofifederalbank.com/q5AJ0c09Xo0Sto02Y0n400y"><img src="http://na-sj06.marketo.com/rs/848-REG-807/images/bofiusa_icon_facebook.png" width="35" height="30" border="0" alt="Facebook" style="font-family:Arial, sans-serif; 
+font-size:12px; color:#FFFFFF; display:block"></a></td> 
+<td width="35" align="left" valign="top" style="width: 35px;"><a href="http://post.bofifederalbank.com/x0J0000o2550XSY0pctn9Ay"><img src="http://na-sj06.marketo.com/rs/848-REG-807/images/bofiusa_icon_linkedin.png" width="35" height="30" border="0" alt="LinkedIn" style="font-family:Arial, sans-serif; 
+font-size:12px; color:#FFFFFF; display:block"></a></td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mktoModule" id="Disclosuresb8b1f393-3ca9-4a11-8f3d-d1e93cf6445c"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8"> 
+<table width="620" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 620px;"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8" class="mobile-padding"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 560px;" role="presentation"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-top: 20px; padding-bottom: 20px; border-bottom:solid #a9c5dc 1px;"> <p class="footersnippet" id="Disclosure1" mktoname="Disclosure 1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0;">Bank products and services are offered by BofI Federal Bank. All deposit accounts through BofI Federal Bank brands are FDIC insured through BofI Federal Bank. All deposit accounts of the same ownership and / or vesting held at BofI Federal Bank are combined and insured under the same <a href="http://post.bofifederalbank.com/O0o0ntyA0200SJX60q0c59Y" style="color:#FFFFFF; text-decoration:underline">FDIC Certificate 35546</a>. All deposit accounts through BofI Federal Bank brands are not separately insured by the FDIC from other deposit accounts held with the same ownership and / or vesting at BofI Federal Bank. For more information <a href="http://post.bofifederalbank.com/c0t02ynJ0XSY05cAr097o00" style="color:#FFFFFF; text-decoration:underline">click here</a>.<br> <br> <span class="footersnippet" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0;">BofI Federal Bank <a href="http://post.bofifederalbank.com/v0t90So80cXAJns5Y02y000" style="color:#FFFFFF; 
+text-decoration:underline">NMLS# 524995</a></span></p> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mktoModule" id="MarketingFooter532acb90-c2d8-4d1e-9547-f1ba780931ca"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8"> 
+<table width="620" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 620px;"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8" class="mobile-padding"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 560px;" role="presentation"> 
+<tbody> 
+<tr> 
+
+</tr> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8" style="font-family:Arial, sans-serif; font-size:12px; color:#ffffff; line-height:17px; mso-line-height-rule:exactly; padding-bottom:20px; padding-top:8px; border-bottom:solid #a9c5dc 1px;"> <p class="footersnippet" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0; text-align: center;"> <a href="http://post.bofifederalbank.com/V9Yu000co50A200JXtynaS0" style="color:#FFFFFF; 
+text-decoration:none"> Update&nbsp;Profile</a>&nbsp;&nbsp;&nbsp; <a href="http://post.bofifederalbank.com/o02bS00vo005nJ0t9AYcyX0" style="color:#FFFFFF; text-decoration:none">Privacy&nbsp;Policy</a>&nbsp;&nbsp;&nbsp; <a href="http://post.bofifederalbank.com/hXn5ctY00J000ycoS020Aw9" style="color:#FFFFFF; text-decoration:none">Contact&nbsp;Us</a></p> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mktoModule" id="CopyrightFooterc5f7a2c7-ed1b-49c8-831b-720ebd154100"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8"> 
+<table width="620" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 620px;"> 
+<tbody> 
+<tr> 
+<td align="center" valign="top" bgcolor="#528ab8" class="mobile-padding"> 
+<table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="full-width" style="width: 560px;" role="presentation"> 
+<tbody> 
+<tr> 
+<td align="left" valign="top" style="padding-top: 20px; padding-bottom: 20px;"> <p class="footersnippet" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0;">Bank of Internet USA<br> 4350 La Jolla Village Drive, Suite 140, San Diego, CA 92122 </p> </td> 
+<td width="41" align="left" valign="middle" style="width: 41px;"><img src="https://hello.bofifederalbank.com/rs/526-JYA-191/images/fdic-member-white-09.15.2017.png" width="41" height="22" alt="Member FDIC" style="font-family:Arial, sans-serif; font-size:12px; color:#FFFFFF; display:block"></td> 
+<td width="15" align="left" valign="top" style="width: 15px;">&nbsp;</td> 
+<td width="100" align="left" valign="middle" style="width: 100px;"><img src="https://hello.bofifederalbank.com/rs/526-JYA-191/images/ehl-white.png" width="100" height="22" alt="Equal Housing Lender" style="font-family:Arial, sans-serif; font-size:12px; color:#FFFFFF; display:block"> </td> 
+</tr> 
+<tr> 
+<td> <p class="footersnippet" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0;"><span class="footersnippet" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: lighter; font-size:13px; color:#FFFFFF; mso-line-height-rule:exactly; line-height:18px; margin:0;">©  Bank of Internet USA. All Rights Reserved.</span></p> 
+<div style="display:block; height:14px; font-size:14px; line-height:14px;">
+ &nbsp; 
+</div> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table> </td> 
+</tr> 
+</tbody> 
+</table></td> 
+</tr> 
+</tbody> 
+</table> 
+<!-- Section : BEGIN --> 
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+<tbody> 
+<tr> 
+<td class="hidden" style="min-width:500px;" bgcolor="#528ab8">b 
+<div class="gmail" style="white-space:nowrap; font:15px courier; line-height:0;">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+</div> </td> 
+</tr> 
+</tbody> 
+</table>   
+
+<img src="http://post.bofifederalbank.com/trk?t=1&amp;mid=NTI2LUpZQS0xOTE6MTgzNTowOjA6MDozODA0OjA6NzA0Mjc4OTptZWZpdHpnZXJhbGRAYm9maS5jb20%3D" width="1" height="1" style="display:none !important;" alt="">
+</body>
+</html>

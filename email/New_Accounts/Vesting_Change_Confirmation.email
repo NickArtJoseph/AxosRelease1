@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br>Thank you for contacting [INSERT BRAND]. Your vesting change request has been processed. <br><br>For your account disclosures please click on the following link:<br><br>ACCOUNT DISCLOSURES<br><br>We have a wide range of banking and mortgage products available to meet you’re banking needs.&nbsp; Please visit us at <a href="http://www.bankofinternet.com">www.bankofinternet.com</a> to take advantage of our competitive rates with the flexibility you need to manage your accounts anytime, anywhere.<br><br>We appreciate your business and commit to delivering value that will make [INSERT BRAND] your first choice for all your banking needs.<br><br></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

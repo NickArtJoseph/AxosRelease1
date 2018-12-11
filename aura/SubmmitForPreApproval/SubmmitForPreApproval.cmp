@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader,lightning:actionOverride,force:hasSObjectName">
+    
+    
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="ListFields"  type="String[]"/> 
+    
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="BF_Status__c,BorrowerReadyForSubmmit_SFDC2_del__c,GuarantorReadyForSubmmit_SFDC2_del__c,Loan_Account_Information_Ready__c,Payment_Ready__c,Rate_Ready__c"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.simpleRecord}"
+                      targetError="{!v.recordError}"
+                      mode="EDIT"
+                      recordUpdated="{!c.handleRecordUpdated}"
+                      />
+    
+    	<div class="notification-spinner" style="height: 6rem;">
+        <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_large">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+
+</aura:component>

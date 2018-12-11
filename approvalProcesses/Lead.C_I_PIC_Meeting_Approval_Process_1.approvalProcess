@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Loan_Amount__c</field>
+        <field>Business_Line__c</field>
+        <field>PIC_Submitted_TimeStamp__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>bkravitz@bofifederalbank.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>bswanson@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>jbutensky@bofifederalbank.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>tconstantine@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>wdavis@bofifederalbank.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Step 1</label>
+        <name>Step_1</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.RecordType</field>
+            <operation>equals</operation>
+            <value>C&amp;I Non-Real Estate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordType</field>
+            <operation>equals</operation>
+            <value>C&amp;I Real Estate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.RecordType</field>
+            <operation>equals</operation>
+            <value>C&amp;I</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>C&amp;I PIC Meeting Approval Process (1)</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

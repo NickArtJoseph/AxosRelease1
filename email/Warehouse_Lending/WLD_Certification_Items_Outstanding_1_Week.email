@@ -1,0 +1,21 @@
+Dear BofI Customer,
+
+{!WLD_Certification__c.Account__c} has certification item(s) outstanding with only 1 week left until due date: {!WLD_Certification__c.Due_Date__c}.
+
+Please refer to the items marked 'Requested' below and take action as necessary.
+
+MRA Exhibit B and all Schedules: {!WLD_Certification__c.MRA_Exhibit_B_and_All_Schedules__c}
+
+MRA Schedule 1 - Financial Covenants: {!WLD_Certification__c.MRA_Schedule_1_Financial_Covenants__c}
+
+Unaudited P&L for the Quarter: {!WLD_Certification__c.Unaudited_P_L_for_the_Quarter__c}
+
+Unaudited P&L YTD: {!WLD_Certification__c.Unaudited_P_L_YTD__c}
+
+Unaudited Balance Sheet YTD: {!WLD_Certification__c.Unaudited_Balance_Sheet_YTD__c}
+
+Investor Scorecards: {!WLD_Certification__c.Investor_Scorecards__c}
+
+Hedging Reports: {!WLD_Certification__c.Hedging_Reports__c}
+
+Quality Control Reports: {!WLD_Certification__c.Quality_Control_Reports__c}

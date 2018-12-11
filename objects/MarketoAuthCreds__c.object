@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Creds to get the Marketo&apos;s access token</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ClientId__c</fullName>
+        <description>Indicates the client ID</description>
+        <externalId>false</externalId>
+        <label>Client Id</label>
+        <length>200</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClientSecret__c</fullName>
+        <description>Indicates the client secret</description>
+        <externalId>false</externalId>
+        <label>Client Secret</label>
+        <length>200</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GrantType__c</fullName>
+        <defaultValue>&apos;client_credentials&apos;</defaultValue>
+        <description>Indicates the grant type</description>
+        <externalId>false</externalId>
+        <label>Grant Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Marketo Login</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,15 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello {!Case.Contact},</font></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;">We apologize for the inconvenience but External transfer accounts and scheduled transfers did not transition over to the new system. Please add your External Accounts once more.</span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-size: 12pt;"><br></span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-size: 12pt;">We appreciate your business and commit to providing superior
+Banking products, support and services.</span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-size: 12pt;"><br></span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-size: 12pt;">Best Regards,</span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="font-family: arial; color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}</span></p><div style="font-family: arial;"><font face="Arial, sans-serif" style=""><font style="background-color: rgb(255, 255, 255);">Axos Bank&nbsp;</font><font style="color: rgb(0, 0, 0);">Customer Service</font></font><p style="color: rgb(0, 0, 0);"></p><p style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><o:p></o:p></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used when an Advance has reached final approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - Advance Approved</name>
+    <style>none</style>
+    <subject>Advance Request for {!Opportunity.Account} has been approved</subject>
+    <textOnly>The Advance for {!Opportunity.Account} for {!Advance__c.Amount__c} has been approved and Processing will begin drafting the advance docs shortly.
+
+Click here to view the Opportunity:  {!Opportunity.Link}
+Click here to view the Advance:  {!Advance__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

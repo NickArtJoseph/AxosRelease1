@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>IFG 2017</name>
+    <style>none</style>
+    <subject>Visit us at the IFG 2017 Conference</subject>
+    <textOnly>ADVISOR LOGIN
+
+Come Visit Us!
+IFG 2017 Conference
+August 13th-15th
+San Diego, CA
+
+BofI Advisor, the number one thrift in the country, serves the financial advisor community with compelling products and services to complement and enhance an advisor&apos;s business/mission. We are a full service bank, offering consumer and business banking products as well as residential and multifamily lending.
+
+Our comprehensive enrollment system and advisor dashboard provide advisors with a solution to managing client liquid assets - all in a competitive free environment. All accounts are FDIC insured with BofI Federal Bank, a wholly-owned subsidiary of BofI Holding, Inc. (NASDAQ: BOFI)
+
+
+Money Market Account 1.00% APY*
+
+•No monthly maintenance fees
+
+•$1,000 minimum initial deposit
+
+•Free mobile deposits
+
+•Free initial checks and Visa® card
+
+IRA/Roth Savings 0.70% APY*
+
+•Highly competitive rates
+
+•Remote Deposit anywhere
+
+•$250 initial deposit
+
+•Experienced Relationship Managers
+
+
+Come Visit Us
+
+Colin Gurley
+Phone: (858) 649-2549
+Email: cgurley@bofiadvisor.com
+
+We&apos;re Social
+
+Bank products and services are offered by BofI Federal Bank. All deposit accounts through BofI Federal Bank brands are FDIC insured through BofI Federal Bank. All deposit accounts of the same ownership and / or vesting held at BofI Federal Bank are combined and insured under the same FDIC Certificate 35546 . All deposit accounts through BofI Federal Bank brands are not separately insured by the FDIC from other deposit accounts held with the same ownership and / or vesting at BofI Federal Bank. For more information click here.
+
+*The above Interest Rates (Rates) and Annual Percentage Yield (APY) is accurate as of 08/15/2017. The interest rate and corresponding APY for savings and money market accounts are variable and are set at our discretion. Interest rates may change as often as daily without prior notice. Fees may reduce earnings. The APY is available only to clients that do not already have an existing relationship with BofI Federal Bank.
+
+1. Federal regulations limit certain types of transfers from a money market or saving account to a combined maximum of six per month. Please refer to the Deposit Account Agreement and Disclosure for further information.
+
+
+Unsubscribe Update Profile Manage Subscriptions Privacy Policy Contact Us
+
+© 2016 BofI Advisor, All Rights Reserved.
+4350 La Jolla Village Dr, Ste 140 San Diego CA 92122
+
+BofI Federal Bank NMLS# 524995</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

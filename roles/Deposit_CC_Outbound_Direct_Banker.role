@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Deposit CC: Outbound Direct Banker</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Deposit CC: Outbound Direct Banker</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Deposit_Contact_Center_Supervisor</parentRole>
+</Role>

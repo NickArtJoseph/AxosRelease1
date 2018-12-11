@@ -1,0 +1,1366 @@
+<!--
+    NOTE:
+    This form lives on salesforce sandbox and it's included on this repository for tracking purposes.
+    In case to require modifications, update the file and notify salesforce team to upload the new version.
+-->
+<apex:page showHeader="false">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+    <liveAgent:clientChat >
+        <div id="overlay" class="chat__wrapper" style="display:none">
+
+            <i>
+                <svg class="close-icon" width="25px" height="25px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>ic_close</title>
+                    <defs>
+                        <polygon id="path-close-1" points="0.0002 0.7913 15.2092 0.7913 15.2092 16 0.0002 16"></polygon>
+                        <polygon id="path-close-2" points="0.0002 0.701 15.2092 0.701 15.2092 15.9098 0.0002 15.9098"></polygon>
+                    </defs>
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(39.000000, 39.000000)">
+                            <g transform="translate(0.000000, 146.299000)">
+                                <mask id="mask-close-1" fill="white">
+                                    <use xlink:href="#path-close-1"></use>
+                                </mask>
+                                <path d="M1.2422,6.2773 L6.7282,0.7913 L15.2092,9.2713 L9.7222,14.7583 C8.0662,16.4143 5.3812,16.4143 3.7242,14.7573 L1.2422,12.2753 C-0.4138,10.6183 -0.4138,7.9333 1.2422,6.2773" id="Fill-3" fill="#1E3869" mask="url(#mask-close-1)"></path>
+                            </g>
+                            <path d="M151.5732,2.2458 L146.0862,7.7318 L154.5672,16.2128 L160.0532,10.7258 C161.7102,9.0698 161.7092,6.3848 160.0522,4.7278 L157.5702,2.2458 C155.9142,0.5898 153.2292,0.5898 151.5732,2.2458" id="Fill-6" fill="#1E3869"></path>
+                            <g transform="translate(6.000000, 7.000000)">
+                                <path d="M0.7246,148.571 L148.5686,0.728" stroke="#1E3869" stroke-width="12" stroke-linejoin="round"></path>
+                                <path d="M148.5684,148.571 L0.7244,0.728" stroke="#1E3869" stroke-width="12" stroke-linejoin="round"></path>
+                                <path d="M145.5732,154.0534 L140.0862,148.5674 L148.5672,140.0864 L154.0532,145.5734 C155.7102,147.2294 155.7092,149.9144 154.0522,151.5704 L151.5702,154.0534 C149.9142,155.7094 147.2292,155.7094 145.5732,154.0534" id="Fill-10" fill="#1E3869"></path>
+                            </g>
+                            <g transform="translate(0.000000, 0.299000)">
+                                <mask id="mask-close-2" fill="white">
+                                    <use xlink:href="#path-close-2"></use>
+                                </mask>
+                                <path d="M1.2422,10.4238 L6.7282,15.9098 L15.2092,7.4298 L9.7222,1.9428 C8.0662,0.2868 5.3812,0.2868 3.7242,1.9438 L1.2422,4.4258 C-0.4138,6.0828 -0.4138,8.7678 1.2422,10.4238" id="Fill-12" fill="#1E3869" mask="url(#mask-close-2)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </i>
+
+            <div class="chat__layer" id="loading_wrapper">
+                <div class="chat__header">
+                    <label class="chat__title">LIVE CHAT</label>
+                </div> <!-- END: <div class="chat__header" id="header_wrapper"> -->
+                <div class="chat__container chat__body">
+                    <h1>{!$Label.LiveAgent_Greeting}</h1>
+                    <label>{!$Label.LiveAgent_Waiting}</label>
+                </div> <!-- END: <div class="chat__container chat__body"> -->
+                <div class="chat__container chat__body chat__loading">
+                    <div>
+                        <svg class="ic-loading" width="114px" height="70px" viewBox="0 -7 114 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path id="loading-left-box" d="M38.6979624,65.610991 L23.8332233,79.8593401 L23.8332233,65.5075369 C11.8660604,64.3877224 2.5,54.3153893 2.5,42.0554955 C2.5,29.0461546 13.0461546,18.5 26.0554955,18.5 L49.9445045,18.5 C62.9538454,18.5 73.5,29.0461546 73.5,42.0554955 C73.5,55.0648364 62.9538454,65.610991 49.9445045,65.610991 L38.6979624,65.610991 Z" stroke="#1E3869" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <g transform="translate(33.000000, -22.000000)">
+                                    <mask id="mask-loading-1" fill="white">
+                                        <path d="M0.792362478,34 L17.6352621,34.3683962 C33.6476901,34.718628 46.3444088,47.9831846 45.994177,63.9956125 C45.976823,64.7890293 45.9269077,65.5813993 45.844557,66.3707216 L44.1479925,82.6321178 C61.3540684,89.9703403 71.6480018,91.0691504 75.0297927,85.9285481 C80.1024792,78.2176446 91.9708388,21.6953614 75.0297927,12.9599647 C66.8138992,8.72356223 47.6505507,-4.61507495 23.3946824,1.72389366 C12.9920842,4.44248293 5.45797754,15.201185 0.792362478,34 Z"></path>
+                                    </mask>
+                                    <path id="loading-right-box" d="M53.5,78.8340815 L53.5,69.5 L56,69.5 C68.4264069,69.5 78.5,59.4264069 78.5,47 C78.5,34.5735931 68.4264069,24.5 56,24.5 L35,24.5 C22.5735931,24.5 12.5,34.5735931 12.5,47 L12.5,64 C12.5,67.0375661 14.9624339,69.5 18,69.5 L41.9154847,69.5 L53.5,78.8340815 Z" stroke="#FAA74A" stroke-width="5" mask="url(#mask-loading-1)"></path>
+                                </g>
+                                <path d="M20.5,32.5 L42.5,32.5" id="line1" stroke="#FAA74A" stroke-width="5" stroke-linecap="round"></path>
+                                <path d="M20.5,41.5 L55.5,41.5" id="line2" stroke="#FAA74A" stroke-width="5" stroke-linecap="round"></path>
+                                <path d="M20.5,50.5 L55.5,50.5" id="line3" stroke="#FAA74A" stroke-width="5" stroke-linecap="round"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <label id="lbl_waiting_message" style="display:none"></label>
+                    <div style="display:none">
+                        <liveAgent:clientChatQueuePosition />
+                    </div>
+                </div> <!-- END: <div class="chat__container chat__body"> -->
+                <div class="chat__footer">
+                    <button id="btn_cancel" class="chat-button primary">
+                        Cancel
+                    </button>
+                </div> <!-- END: <div class="chat__footer"> -->
+            </div><!-- END: <div class="chat__layer" id="loading_wrapper"> -->
+
+            
+            <div class="chat__layer" id="cancel_confirmation_wrapper">
+                <div class="chat__header">
+                    <label class="chat__title">LIVE CHAT</label>
+                </div> <!-- END: <div class="chat__header"> -->
+                <div class="chat__container chat__body">
+                    <h1>Leave?</h1>
+                    <label>{!$Label.LiveAgent_Confirmation_CancelChat}</label>
+                    <br />
+                </div> <!-- END: <div class="chat__header" id="header_wrapper"> -->
+                <div class="chat__footer">
+                    <button class="chat-button primary" id="btn_cancel_accept">
+                        Cancel
+                    </button>
+                    <button class="chat-button button--info" id="btn_cancel_back">
+                        Do Not Cancel Chat
+                    </button>
+                </div> <!-- END: <div class="chat__footer"> -->
+            </div> <!-- END: <div class="chat__layer" id="cancel_confirmation_wrapper"> -->
+
+
+            <div class="chat__layer" id="cobrowse_confirmation_wrapper">
+                <div class="chat__header">
+                    <label class="chat__title">LIVE CHAT</label>
+                </div> <!-- END: <div class="chat__header"> -->
+                <div class="chat__container chat__body">
+                    <h1>Screen Sharing</h1>
+                    <label>{!$Label.LiveAgent_Confirmation_StartCobrowse}</label>
+                    <br />
+                </div> <!-- END: <div class="chat__header" id="header_wrapper"> -->
+                <div class="chat__footer">
+                    <button class="chat-button primary" id="btn_cobrowse_accept">
+                        Accept
+                    </button>
+                    <button class="chat-button button--info" id="btn_cobrowse_decline">
+                        Decline
+                    </button>
+                </div> <!-- END: <div class="chat__footer"> -->
+            </div> <!-- END: <div class="chat__layer" id="cobrowse_confirmation_wrapper"> -->
+
+
+            <div class="chat__layer" id="exit_confirmation_wrapper">
+                <div class="chat__header">
+                    <label class="chat__title">LIVE CHAT</label>
+                </div> <!-- END: <div class="chat__header"> -->
+                <div class="chat__container chat__body">
+                    <h1>End chat?</h1>
+                    <label>{!$Label.LiveAgent_Confirmation_EndChat}</label>
+                    <br />
+                </div> <!-- END: <div class="chat__container chat__body"> -->
+                <div class="chat__footer">
+                    <button class="chat-button primary" id="btn_exit_chat">
+                        End Chat
+                    </button>
+                    <button class="chat-button button--info" id="btn_exit_back">
+                        Go Back
+                    </button>
+                </div> <!-- END: <div class="chat__footer"> -->
+            </div><!-- END: <div class="chat__layer" id="exit_confirmation_wrapper"> -->
+
+
+            <div class="chat__layer" id="end_chat_wrapper">
+                <div class="chat__header">
+                    <label class="chat__title">LIVE CHAT</label>
+                </div> <!-- END: <div class="chat__header" id="header_wrapper"> -->
+                <div class="chat__container chat__body">
+                    <h1>Leave?</h1>
+                    <label>{!$Label.LiveAgent_Canceled}</label>
+                    <br />
+                </div> <!-- END: <div class="chat__container chat__body"> -->
+            </div> <!-- <div class="chat__layer" id="end_chat_wrapper"> -->
+
+
+            <div class="chat__layer" id="chat_wrapper">
+
+                <div class="chat__header">
+                    <div id="chat_title" class="chat__title">
+                        <label class="chat__title">
+                            OPTIONS
+
+                            <i id="icon_up" class="chat-icon" style="display:none">
+                                <svg width="22px" height="22px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>ic_arrow_up</title>
+                                    <defs>
+                                        <polygon id="path-up-1" points="0.0002 0.603 15.2102 0.603 15.2102 15.8114 0.0002 15.8114"></polygon>
+                                    </defs>
+                                    <g id="ic_arrow_up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(120.500000, 120.500000) rotate(-90.000000) translate(-120.500000, -120.500000) translate(71.000000, 21.000000)">
+                                            <polyline stroke="#1E3869" stroke-width="12" stroke-linejoin="round" points="6.7246 191.6687 98.6956 99.6977 6.7246 7.7277"></polyline>
+                                            <path d="M1.2422,188.6746 L6.7292,183.1886 L15.2102,191.6686 L9.7232,197.1546 C8.0672,198.8116 5.3822,198.8106 3.7252,197.1536 L1.2422,194.6716 C-0.4138,193.0156 -0.4138,190.3306 1.2422,188.6746" fill="#1E3869"></path>
+                                            <g transform="translate(0.000000, 0.397000)">
+                                                <mask id="mask-up-1" fill="white">
+                                                    <use xlink:href="#path-up-1"></use>
+                                                </mask>
+                                                <path d="M1.2422,10.3254 L6.7292,15.8114 L15.2102,7.3314 L9.7232,1.8454 C8.0672,0.1884 5.3822,0.1884 3.7252,1.8454 L1.2422,4.3274 C-0.4138,5.9834 -0.4138,8.6694 1.2422,10.3254" fill="#1E3869" mask="url(#mask-up-1)"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+
+                            <i id="icon_down" class="chat-icon">
+                                <svg width="22px" height="22px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>ic_arrow_down</title>
+                                    <defs>
+                                        <polygon id="path-down-1" points="0.0002 0.603 15.2102 0.603 15.2102 15.8114 0.0002 15.8114"></polygon>
+                                    </defs>
+                                    <g id="ic_arrow_down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(120.500000, 120.500000) rotate(-270.000000) translate(-120.500000, -120.500000) translate(71.000000, 21.000000)">
+                                            <polyline stroke="#1E3869" stroke-width="12" stroke-linejoin="round" points="6.7246 191.6687 98.6956 99.6977 6.7246 7.7277"></polyline>
+                                            <path d="M1.2422,188.6746 L6.7292,183.1886 L15.2102,191.6686 L9.7232,197.1546 C8.0672,198.8116 5.3822,198.8106 3.7252,197.1536 L1.2422,194.6716 C-0.4138,193.0156 -0.4138,190.3306 1.2422,188.6746" fill="#1E3869"></path>
+                                            <g transform="translate(0.000000, 0.397000)">
+                                                <mask id="mask-down-1" fill="white">
+                                                    <use xlink:href="#path-down-1"></use>
+                                                </mask>
+                                                <path d="M1.2422,10.3254 L6.7292,15.8114 L15.2102,7.3314 L9.7232,1.8454 C8.0672,0.1884 5.3822,0.1884 3.7252,1.8454 L1.2422,4.3274 C-0.4138,5.9834 -0.4138,8.6694 1.2422,10.3254" fill="#1E3869" mask="url(#mask-down-1)"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                        </label>
+                    </div> <!-- END: <div id="chat_title" class="chat__title"> -->
+
+                    <div class="chat__options" id="title_options">
+                        <div class="option" id="btn_save">
+                            <span class="chat-icon">
+                                <svg width="22px" height="22px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>ic_download</title>
+                                    <defs></defs>
+                                    <g id="ic_download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M120.2753,138.1828 L120.2753,30.0588" stroke="#2374D7" stroke-width="12" stroke-linejoin="round"></path>
+                                        <g transform="translate(12.000000, 24.000000)">
+                                            <path d="M102.2811,116.4091 L102.2811,108.6501 L114.2751,108.6501 L114.2751,116.4091 C114.2751,118.7511 112.3761,120.6501 110.0331,120.6501 L106.5221,120.6501 C104.1791,120.6501 102.2811,118.7511 102.2811,116.4091" fill="#2374D7"></path>
+                                            <path d="M102.2811,4.7675 L102.2811,12.5265 L114.2751,12.5265 L114.2751,4.7675 C114.2751,2.4255 112.3761,0.5265 110.0331,0.5265 L106.5221,0.5265 C104.1791,0.5265 102.2811,2.4255 102.2811,4.7675" fill="#2374D7"></path>
+                                            <polyline stroke="#2374D7" stroke-width="12" stroke-linejoin="round" points="88.455 100.8344 108.271 120.6494 128.082 100.8384"></polyline>
+                                            <path d="M91.4501,95.3519 L96.9361,100.8379 L88.4561,109.3189 L82.9701,103.8319 C81.3131,102.1759 81.3141,99.4909 82.9711,97.8349 L85.4531,95.3519 C87.1091,93.6959 89.7941,93.6959 91.4501,95.3519" fill="#2374D7"></path>
+                                            <path d="M125.0868,95.3563 L119.6008,100.8433 L128.0808,109.3233 L133.5678,103.8373 C135.2248,102.1813 135.2238,99.4953 133.5668,97.8393 L131.0838,95.3563 C129.4278,93.7003 126.7428,93.7003 125.0868,95.3563" fill="#2374D7"></path>
+                                            <path d="M216.4921,102.7396 L216.4921,100.9806 C216.4921,98.6376 214.5931,96.7396 212.2511,96.7396 L208.7391,96.7396 C206.3971,96.7396 204.4991,98.6376 204.4991,100.9806 L204.4991,102.7396 L204.4931,102.7396 L204.4931,108.7666 L204.4931,126.8196 L204.4931,179.2896 C204.4931,180.1996 203.7531,180.9396 202.8431,180.9396 L13.6891,180.9396 C12.7801,180.9396 12.0401,180.1996 12.0401,179.2896 L12.0401,126.8196 L12.0401,108.7666 L12.0401,102.7396 L12.0391,102.7396 L12.0391,100.9806 C12.0391,98.6376 10.1391,96.7396 7.7981,96.7396 L4.2861,96.7396 C1.9441,96.7396 0.0461,98.6376 0.0461,100.9806 L0.0461,102.7396 L0.0401,102.7396 L0.0401,108.7666 L0.0401,126.8196 L0.0401,179.2896 C0.0401,186.8166 6.1631,192.9396 13.6891,192.9396 L202.8431,192.9396 C210.3701,192.9396 216.4931,186.8166 216.4931,179.2896 L216.4931,126.8196 L216.4931,108.7666 L216.4931,102.7396 L216.4921,102.7396 Z" fill="#1E3869"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <label> SAVE CHAT </label>
+                        </div>
+                        <div class="option" id="btn_end">
+                            <span class="chat-icon">
+                                <svg width="22px" height="22px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>ic_exit</title>
+                                    <g id="ic_exit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(27.000000, 18.000000)">
+                                            <path d="M42.0933,78.1726 L42.0933,7.6506 C42.0933,3.4246 45.5183,-0.0004 49.7433,-0.0004 L178.7633,-0.0004 C182.9883,-0.0004 186.4133,3.4246 186.4133,7.6506 L186.4133,196.8036 C186.4133,201.0276 182.9883,204.4526 178.7633,204.4526 L49.7433,204.4526 C45.5183,204.4526 42.0933,201.0276 42.0933,196.8036 L42.0933,126.2796" stroke="#1E3869" stroke-width="12" stroke-linejoin="round"></path>
+                                            <path d="M6.0005,102.2175 L102.2465,102.2175" id="Stroke-3" stroke="#2374D7" stroke-width="12" stroke-linejoin="round"></path>
+                                            <polyline stroke="#2374D7" stroke-width="12" stroke-linejoin="round" points="88.4321 122.0368 108.2461 102.2218 88.4361 82.4108"></polyline>
+                                            <path d="M4.2407,96.2234 L12.0007,96.2234 L12.0007,108.2164 L4.2407,108.2164 C1.8987,108.2164 0.0007,106.3174 0.0007,103.9754 L0.0007,100.4634 C0.0007,98.1214 1.8987,96.2234 4.2407,96.2234" fill="#2374D7"></path>
+                                            <path d="M104.0063,96.2234 L96.2463,96.2234 L96.2463,108.2164 L104.0063,108.2164 C106.3483,108.2164 108.2463,106.3174 108.2463,103.9754 L108.2463,100.4634 C108.2463,98.1214 106.3483,96.2234 104.0063,96.2234" fill="#2374D7"></path>
+                                            <path d="M82.9497,119.0427 L88.4357,113.5557 L96.9167,122.0367 L91.4297,127.5227 C89.7737,129.1797 87.0887,129.1787 85.4317,127.5217 L82.9497,125.0397 C81.2937,123.3837 81.2937,120.6987 82.9497,119.0427" fill="#2374D7"></path>
+                                            <path d="M82.9536,85.405 L88.4396,90.892 L96.9206,82.412 L91.4336,76.925 C89.7776,75.268 87.0926,75.269 85.4356,76.926 L82.9536,79.408 C81.2976,81.064 81.2976,83.749 82.9536,85.405" fill="#2374D7"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <label> END CHAT </label>
+                        </div>
+                    </div> <!-- END: <div id="title_options" class="header__options"> -->
+                </div> <!-- <div class="chat__header"> -->
+
+                <div class="chat__body">
+                    <div class="label--light">
+                        <br/>
+                        Chat started at <label id="lbl_startTime" class="label--light"></label>
+                    </div>
+                    <div id="chat_log_wrapper" class="chat-wrapper">
+                        <liveAgent:clientChatLog agentTypingLabel="Agent is typing" showTimeStamp="true" />
+                        <liveAgent:clientChatFileTransfer />
+                        <liveAgent:clientChatAlertMessage />
+                        <liveAgent:clientChatStatusMessage />
+                    </div>
+                </div> <!-- <div class="chat__body"> -->
+
+                <div id="chat_input_wrapper">
+                    <liveagent:clientChatInput useMultiline="true" />
+                </div> <!-- END: <div class="chat__footer--custom"> -->
+
+            </div> <!-- <div class="chat__layer" id="chat_wrapper"> -->
+        </div>
+
+    </liveAgent:clientChat>
+
+    <script type="text/javascript">
+        (function () {
+            function handlePageLoad() {
+
+                CustomChat = {
+                    overlay:            document.getElementById('overlay'),
+
+                    element_loading: {
+                        wrapper:        document.getElementById('loading_wrapper'),
+                        lbl_message:    document.getElementById('lbl_waiting_message'),
+                        btn_cancel:     document.getElementById('btn_cancel')
+                    },
+
+                    element_cancel_confirmation: {
+                        wrapper:        document.getElementById('cancel_confirmation_wrapper'),
+                        btn_accept:     document.getElementById('btn_cancel_accept'),
+                        btn_decline:    document.getElementById('btn_cancel_back')
+                    },
+
+                    element_cobrowse_confirmation: {
+                        wrapper:        document.getElementById('cobrowse_confirmation_wrapper'),
+                        btn_accept:     document.getElementById('btn_cobrowse_accept'),
+                        btn_decline:    document.getElementById('btn_cobrowse_decline')
+                    },
+
+                    element_exit_confirmation: {
+                        wrapper:        document.getElementById('exit_confirmation_wrapper'),
+                        btn_accept:     document.getElementById('btn_exit_chat'),
+                        btn_decline:    document.getElementById('btn_exit_back')
+                    },
+
+                    element_end_chat: {
+                        wrapper:        document.getElementById('end_chat_wrapper')
+                    },
+
+                    element_chat: {
+                        wrapper:        document.getElementById('chat_wrapper'),
+                        title: {
+                            section:        document.getElementById('chat_title'),
+                            toggle_up:      document.getElementById('icon_up'),
+                            toggle_down:    document.getElementById('icon_down')
+                        },
+                        options: {
+                            section:        document.getElementById('title_options'),
+                            btn_cancel:     document.getElementById('btn_end'),
+                            btn_save:       document.getElementById('btn_save')
+                        },
+
+                        log_wrapper:    document.getElementById('chat_log_wrapper'),
+                        input_wrapper:  document.getElementById('chat_input_wrapper'),
+                        lbl_startTime:  document.getElementById('lbl_startTime'),
+
+                        sf_log:         document.getElementById('liveAgentChatLogText'),
+                        sf_log_typing:  document.getElementById('liveAgentChatLogTyping'),
+                        sf_chat_input:  document.getElementById('liveAgentChatTextArea'),
+                        sf_fileTransfer:document.getElementById('liveAgentChatFileTransfer'),
+
+                        sf_close:       document.getElementById('liveAgentMessageContainer')
+                    },
+
+                    isTitleOpen: false,
+
+                    init: function () {
+                        CustomChat.buildUI();
+                        CustomChat.bindUIActions();
+
+                        CustomChat.overlay.style.display = "";
+                    },
+
+                    buildUI: function () {
+                        // LOADING //
+                        CustomChat.validateQueuePosition();
+
+                        // CHAT //
+                        // Workaround for IE.
+                        var newspan = document.createElement("span");
+                        newspan.innerHTML = CustomChat.formatTime(new Date());
+                        CustomChat.element_chat.lbl_startTime.appendChild(newspan);
+
+                        CustomChat.element_chat.sf_chat_input.placeholder = 'Type your message';
+                        CustomChat.validateEndChat();
+                    },
+
+                    bindUIActions: function () {
+                        CustomChat.element_loading.btn_cancel.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_cancel_confirmation.wrapper, true);
+                            });
+
+
+                        CustomChat.element_cancel_confirmation.btn_accept.addEventListener(
+                           'click', function () {
+                               liveagent.chasitor.cancelChat();
+                               CustomChat.layerToggle(CustomChat.element_cancel_confirmation.wrapper, false);
+                               CustomChat.layerToggle(CustomChat.element_end_chat.wrapper, true);
+                           });
+                        CustomChat.element_cancel_confirmation.btn_decline.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_cancel_confirmation.wrapper, false);
+                            });
+                        CustomChat.element_chat.sf_close.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_end_chat.wrapper, true);
+                        })
+
+
+                        CustomChat.element_cobrowse_confirmation.btn_accept.addEventListener(
+                            'click', function () {
+                                CustomChat.startCobrowse();
+                            });
+                        CustomChat.element_cobrowse_confirmation.btn_decline.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_cobrowse_confirmation.wrapper, false);
+                            });
+
+
+                        CustomChat.element_exit_confirmation.btn_accept.addEventListener(
+                            'click', function () {
+                                liveagent.chasitor.endChat();
+                                CustomChat.layerToggle(CustomChat.element_exit_confirmation.wrapper, false);
+                            });
+                        CustomChat.element_exit_confirmation.btn_decline.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_exit_confirmation.wrapper, false);
+                            });
+
+
+                        CustomChat.element_chat.title.section.addEventListener(
+                            'click', function () {
+                                CustomChat.titleToggle();
+                            });
+                        CustomChat.element_chat.options.btn_save.addEventListener(
+                            'click', function () {
+                                liveagent.chasitor.saveChat();
+                            });
+                        CustomChat.element_chat.options.btn_cancel.addEventListener(
+                            'click', function () {
+                                CustomChat.layerToggle(CustomChat.element_exit_confirmation.wrapper, true);
+                            });
+
+                        CustomChat.element_chat.sf_log_typing.addEventListener(
+                            'DOMNodeInserted', CustomChat.rewriteTypingMessage);
+                        CustomChat.element_chat.sf_log.addEventListener(
+                            'DOMNodeInserted', CustomChat.rewriteChatText);
+
+                        liveagent.chasitor.addEventListener(
+                           liveagent.chasitor.Events.FILE_TRANSFER_REQUESTED, function () {
+                               CustomChat.element_chat.sf_fileTransfer.style.display = "none";
+                               setTimeout(function () {
+                                   CustomChat.element_chat.sf_fileTransfer.style.display = "";
+                                   CustomChat.scroll();
+                               }, 1000);
+                           });
+                    },
+
+                    titleToggle: function () {
+                        CustomChat.isTitleOpen = !CustomChat.isTitleOpen;
+                        CustomChat.layerToggle(CustomChat.element_chat.options.section, CustomChat.isTitleOpen);
+
+                        if (CustomChat.isTitleOpen) {
+                            CustomChat.element_chat.title.toggle_up.style.display = "";
+                            CustomChat.element_chat.title.toggle_down.style.display = "none";
+                        }
+                        else {
+                            CustomChat.element_chat.title.toggle_up.style.display = "none";
+                            CustomChat.element_chat.title.toggle_down.style.display = "";
+                        }
+                    },
+
+                    layerToggle: function (element, isActive) {
+                        if (isActive) {
+                            element.style.cssText = 'display: flex';
+                        } else {
+                            element.style.cssText = 'display: none';
+                        }
+                    },
+
+                    validateQueuePosition: function () {
+                        setInterval(function () {
+                            var position = -1;
+                            if (liveagent.chasitor.getQueuePosition() != null) {
+                                position = liveagent.chasitor.getQueuePosition();
+                            }
+                            CustomChat.element_loading.lbl_message.style.display = position <= -1 ? "none" : "";
+                            CustomChat.element_loading.lbl_message.innerHTML = position < 2 
+                                ? "You are currently next in line" 
+                                : "You are currently #" + position + "  in line";
+                        }, 2000);
+                    },
+
+                    validateEndChat: function () {
+                        var timer = setInterval(function () {
+                            if (liveagent.chasitor.isChatRequestFailed() || liveagent.chasitor.isChatEnded()) {
+                                CustomChat.element_chat.title.section.style.display = "none";
+                                CustomChat.layerToggle(CustomChat.element_chat.options.section, true);
+                                CustomChat.element_chat.options.btn_cancel.style.display = "none";
+                                CustomChat.element_chat.options.section.style.marginTop = "0";
+                                clearInterval(timer);
+                            }
+                        }, 2000);
+                    },
+
+                    formatTime: function (date) {
+                        var hour = date.getHours();
+                        var minute = date.getMinutes();
+                        var amPM = (hour > 11) ? " PM" : " AM";
+                        if (hour > 12) {
+                            hour -= 12;
+                        } else if (hour == 0) {
+                            hour = "12";
+                        }
+                        if (minute < 10) {
+                            minute = "0" + minute;
+                        }
+                        return hour + ":" + minute + amPM;
+                    },
+
+                    startCobrowse: function () {
+                        CustomChat.layerToggle(CustomChat.element_cobrowse_confirmation.wrapper, false);
+
+                        var message = {
+                            glance_invoke: {
+                                func: 'startSession',
+                                args: {
+                                    sessionKey: sessionKey
+                                },
+                                groupid: groupId
+                            }
+                        };
+
+                        // Send message to the page that started the chat to start the cobrowse.
+                        window.opener.top.postMessage(message, '*');
+                        // Send event back to agent that cobrowse has been started.
+                        liveagent.chasitor.sendCustomEvent('cobrowseStarted', '');
+                    },
+
+                    scroll: function () {
+                        CustomChat.element_chat.log_wrapper.scrollTop = CustomChat.element_chat.log_wrapper.scrollHeight;
+                    },
+
+                    rewriteTypingMessage: function (e) {
+                        var el = "<div class='chat-message chat-message--typing'>" +
+                                "    <div class='chat-message__wrapper'>" +
+                                "        <div class='chat-message__content chat-message__content--typing'>" +
+                                "            <div class='ic-typing'>" +
+                                "                 <div>" +
+                                "                     <div class='dot'></div>" +
+                                "                     <div class='dot'></div>" +
+                                "                     <div class='dot'></div>" +
+                                "                 </div>" +
+                                "             </div>" +
+                                "         </div>" +
+                                "     </div>" +
+                                "</div>";
+                        CustomChat.element_chat.sf_log_typing.removeEventListener(
+                                    'DOMNodeInserted', CustomChat.rewriteTypingMessage);
+                        CustomChat.replaceHTML(e.target, el);
+
+                        CustomChat.element_chat.sf_log_typing.addEventListener(
+                                    'DOMNodeInserted', CustomChat.rewriteTypingMessage);
+                        setTimeout(function () { CustomChat.scroll(); }, 1000);
+                    },
+
+                    rewriteChatText: function (e) {
+                        var isUserMessage;
+                        var log;
+
+                        if (e.target.nodeName == 'SPAN') {
+                            if (e.target.className == 'operator') {
+                                isUserMessage = false;
+                            }
+                            if (e.target.className == 'client') {
+                                isUserMessage = true;
+                            }
+                            if (e.target.className == 'timestamp') {
+                                CustomChat.element_chat.sf_log.removeEventListener(
+                                    'DOMNodeInserted', CustomChat.rewriteChatText);
+                                CustomChat.replaceHTML(e.target, "");
+                                CustomChat.element_chat.sf_log.addEventListener(
+                                    'DOMNodeInserted', CustomChat.rewriteChatText);
+                                return;
+                            }
+                            if (e.target.className == 'system') {
+                                if (liveagent.chasitor.isChatEnded()) {
+                                    var end = document.createElement('p');
+                                    end.innerHTML = "<span>Chat Ended</span>";
+                                    end.classList.add('dashed');
+                                    e.target.appendChild(end);
+                                }
+                                CustomChat.scroll();
+                                return;
+                            }
+                        }
+
+                        if (e.target.querySelector(".name") == null ||
+                            e.target.querySelector(".messageText") == null)
+                            return;
+
+                        var user =
+                            e.target.querySelector(".name").innerHTML;
+                        var message =
+                            e.target.querySelector(".messageText").innerHTML;
+                        var timestamp = CustomChat.formatTime(new Date());
+                        // Agent classes;
+                        var class1 = 'chat-message--operator';
+                        var class2 = 'chat-message__details--operator';
+                        if (isUserMessage)
+                            class1 = class2 = '';
+
+                        log = "<div class='chat-message " + class1 + "'>" +
+                                "   <div class='chat-message__wrapper'>" +
+                                "       <div class='chat-message__details " + class2 + "'>" +
+                                "           <span class='chat-detail label--bold'>" + user + "</span>" +
+                                "           <span class='chat-detail'>" + timestamp + "</span>" +
+                                "       </div>" +
+                                "       <div class='chat-message__content'>" +
+                                "           <p class='chat-message__text'>" + message + "</p>" +
+                                "       </div>" +
+                                "   </div>" +
+                                "</div>";
+
+                        CustomChat.element_chat.sf_log.removeEventListener(
+                            'DOMNodeInserted', CustomChat.rewriteChatText);
+                        CustomChat.replaceHTML(e.target, log);
+                        CustomChat.element_chat.sf_log.addEventListener(
+                            'DOMNodeInserted', CustomChat.rewriteChatText);
+                        CustomChat.scroll();
+                    },
+
+                    replaceHTML: function (element, html) {
+                        if (element.parentNode != null) {
+                            if (element.outerHTML) {
+                                element.outerHTML = html;
+                            } else {
+                                var tmp = document.createElement("div");
+                                tmp.innerHTML = '<!--CONTENT-->';
+                                ObjParent = element.parentNode;
+                                ObjParent.replaceChild(tmp, element);
+                                ObjParent.innerHTML = ObjParent.innerHTML.replace('<div><!--CONTENT--></div>', html);
+                            }
+                        }
+                    }
+
+                };
+                CustomChat.init();
+                
+
+                /* -- COBROWSE -- */
+                liveagent.chasitor.addCustomEventListener('startCobrowse', function (result) {
+                    if (result.getType() == 'startCobrowse') {
+                        var data = result.getData().split('|');
+                        console.log('DATA: ', data);
+
+                        sessionKey = data[1];
+                        groupId = data[2];
+
+                        if (data[0] == 'true') {
+                            CustomChat.layerToggle(CustomChat.element_cobrowse_confirmation.wrapper, true);
+                        } else {
+                            startCobrowse();
+                        }
+                    } else if (result.getType() == 'stopCobrowse') {
+                        var message = {
+                            glance_invoke: {
+                                func: 'stopSession',
+                                args: {},
+                                groupid: result.getData()
+                            }
+                        };
+                        // Send message to the page that started the chat to end the cobrowse.
+                        window.opener.top.postMessage(message, '*');
+                    }
+                });
+            }
+            if (window.addEventListener) {
+                window.addEventListener('load', handlePageLoad, false);
+            } else {
+                window.attachEvent('onload', handlePageLoad, false);
+            }
+        })();
+    </script>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* LAYERS */
+        #end_chat_wrapper {
+            z-index: 5;
+            display: none;
+        }
+
+        #cancel_confirmation_wrapper {
+            z-index: 4;
+            display: none;
+        }
+
+        #loading_wrapper {
+            z-index: 3;
+            display: none;
+        }
+
+        #cobrowse_confirmation_wrapper {
+            z-index: 2;
+            display: none;
+        }
+
+        #exit_confirmation_wrapper {
+            z-index: 1;
+            display: none;
+        }
+
+        #liveAgentClientChat.liveAgentStateWaiting #loading_wrapper {
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        /* CONTROLS */
+        a {
+            color: #176ACF;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            display: block;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+        label {
+            cursor: inherit;
+            font-size: 16px;
+        }
+
+        .label--light {
+            color: #5F6871;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .label--bold {
+            font-weight: bold;
+        }
+
+
+        .chat-input {
+            display: block;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            border: 1px solid #CCCCCC;
+            color: #1E3869;
+            padding: 11px 8px;
+            line-height: 18px;
+            box-shadow: none;
+            width: 100%;
+            outline: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .chat-input:focus {
+                border-color: #FAA74A;
+            }
+
+            .chat-input.invalid {
+                border-color: #E74C3C;
+            }
+
+        .chat-button, .liveAgentChatFileTransfer button, #liveAgentMessageContainer button {
+            width: 100%;
+            font-weight: 500;
+            font-size: 16px;
+            vertical-align: middle;
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+            border: none;
+            border-radius: 6pc;
+            height: 44px;
+            background: #FAA74A;
+            color: #143E61;
+            font-family: "Roboto", sans-serif;
+            position: relative;
+
+            margin-top: 5px;
+            margin-bottom: 5px
+        }
+
+            .chat-button:hover, .liveAgentChatFileTransfer button:hover, #liveAgentMessageContainer button:hover {
+                cursor: pointer;
+            }
+
+            .chat-button.primary::after, #liveAgentMessageContainer button.primary::after {
+                content: "";
+                border-right: 0.1em solid #143E61;
+                border-top: 0.1em solid #143E61;
+                width: 0.5em;
+                height: 0.5em;
+                display: inline-block;
+                position: absolute;
+                margin-top: -0.25em;
+                top: 50%;
+                right: 25px;
+                transition: 0.5s;
+                -webkit-transition: 0.5s;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+
+                .chat-button.primary:hover:not(:disabled)::after, #liveAgentMessageContainer button.primary:hover:not(:disabled)::after {
+                    right: 30px;
+                }
+
+            .chat-button.button--info, #liveAgentMessageContainer button.button--info {
+                background: #ffffff;
+                background: radial-gradient(ellipse at center, #ffffff, #ffffff);
+                border: 1px solid #1E3869;
+                color: #1E3869;
+            }
+
+                .chat-button.button--info:hover, #liveAgentMessageContainer button.button--info:hover {
+                    -webkit-box-shadow: inset 1px -1px 0px #1E3860, inset -1px -1px #1E3860, inset 1px 1px #1E3860, inset -1px 1px 0px #1E3860;
+                    box-shadow: inset 1px -1px 0px #1E3860, inset -1px -1px #1E3860, inset 1px 1px #1E3860, inset -1px 1px 0px #1E3860;
+                    font-weight: bold;
+                    background: #1E3860;
+                    color: #FFF;
+                }
+
+                .chat-button.button--info::before, #liveAgentMessageContainer button.button--info::before {
+                    content: "";
+                    border-left: 0.1em solid #FAA74A;
+                    border-bottom: 0.1em solid #FAA74A;
+                    width: 0.5em;
+                    height: 0.5em;
+                    display: inline-block;
+                    position: absolute;
+                    margin-top: -0.25em;
+                    top: 50%;
+                    left: 25px;
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+
+                .chat-button.button--info:hover:not(:disabled)::before, #liveAgentMessageContainer button.button--info:hover:not(:disabled)::before {
+                    left: 30px;
+                }
+
+        /* HELPERS */
+        .chat-icon {
+            cursor: pointer;
+            margin-right: 3px;
+            margin-left: 3px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* LAYOUT */
+        .chat__wrapper {
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            color: #1E3869;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+        }
+
+        .close-icon {
+            position: absolute;
+            cursor: pointer;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        .chat__layer {
+            flex-direction: column;
+            display: -ms-flexbox;
+            display: flex;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+            .chat__layer .chat__header {
+                -webkit-box-shadow: 0 1px 4px #C9CCCF;
+                -moz-box-shadow: 0 1px 4px #C9CCCF;
+                box-shadow: 0 1px 4px #C9CCCF;
+                padding: 15px 0 15px 0;
+                text-align: center;
+            }
+
+                .chat__layer .chat__header .chat__title {
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: inline-block;
+                }
+
+                .chat__layer .chat__header .chat__options {
+                    display: none;
+                    flex-direction: row;
+                    margin-top: 20px;
+                }
+
+                    .chat__layer .chat__header .chat__options .option {
+                        -ms-flex: 1;
+                        flex: 1;
+                    }
+
+                        .chat__layer .chat__header .chat__options .option label {
+                            cursor: pointer;
+                            font-weight: normal;
+                            font-size: 15px;
+                            color: #176ACF;
+                        }
+
+            .chat__layer .chat__body {
+                -ms-flex: 1;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .chat__layer .chat__container {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .chat__layer .chat__container label {
+                width: 100%;
+            }
+
+            .chat__layer .chat__footer {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 15px;
+            }
+
+            /* LOADING */
+            .chat__layer .chat__loading {
+                -ms-flex: 2;
+                flex: 2;
+            }
+
+        #liveAgentQueuePosition {
+            display: inline-block;
+        }
+
+        span.liveAgentQueuePosition:empty::before {
+            display: inline-block;
+        }
+
+        /* CHAT */
+        .chat-wrapper {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            overflow: auto;
+            height: 300px;
+            flex-grow: 1;
+        }
+
+        .chat-message {
+            display: block;
+            width: 85%;
+            float: right;
+            clear: right;
+            margin-bottom: 25px;
+        }
+
+            .chat-message:last-of-type {
+                margin-bottom: 30px;
+            }
+
+            .chat-message.chat-message--operator {
+                float: left;
+                clear: left;
+            }
+
+            .chat-message.chat-message--typing {
+                width: auto;
+                float: left;
+                clear: left;
+                margin-bottom: 25px;
+            }
+
+            .chat-message .chat-message__wrapper {
+                margin-right: 25px;
+                margin-left: 25px;
+            }
+
+                .chat-message .chat-message__wrapper .chat-message__details {
+                    text-align: right;
+                    margin-bottom: 5px;
+                }
+
+                    .chat-message .chat-message__wrapper .chat-message__details.chat-message__details--operator {
+                        text-align: left;
+                    }
+
+                    .chat-message .chat-message__wrapper .chat-message__details .chat-detail {
+                        font-size: 11px;
+                    }
+
+                .chat-message .chat-message__wrapper .chat-message__content {
+                    background-color: #F4F5F5;
+                    border-radius: 4px;
+                    padding: 10px;
+                }
+
+                    .chat-message .chat-message__wrapper .chat-message__content.chat-message__content--typing {
+                        height: 30px;
+                        padding-top: 4px;
+                        padding-bottom: 4px;
+                    }
+
+                    .chat-message .chat-message__wrapper .chat-message__content .chat-message__text {
+                        margin: 0;
+                        text-align: left;
+                        overflow-wrap: break-word;
+                        word-wrap: break-word;
+                    }
+
+        #liveAgentChatLog {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        #liveAgentChatLogText span {
+            display: inline-block;
+        }
+
+        #liveAgentChatLogTyping {
+            width: auto;
+            float: left;
+            clear: left;
+        }
+
+        #liveAgentChatInput {
+            height: 60px;
+            max-height: 60px;
+            overflow: hidden;
+        }
+
+        #liveAgentClientChat textarea#liveAgentChatTextArea {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* ALERTS */
+
+        .system {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .system em {
+                font-style: normal;
+            }
+
+        #liveAgentMessageContainer {
+            float: left;
+            margin: 25px;
+            text-align: center;
+        }
+
+        .dashed {
+          line-height: 0.5;
+          text-align: center;
+          margin-top: 40px;
+        }
+        .dashed span {
+          font-size: 14px;
+          display: inline-block;
+          position: relative; 
+          font-weight: 600; 
+        }
+        .dashed span:before,
+        .dashed span:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          top: 0;
+          border-top: 2px dashed rgb(187, 187, 187);
+          width: 80px;
+        }
+        .dashed span:before {
+          right: 100%;
+          margin-right: 15px;
+        }
+        .dashed span:after {
+          left: 100%;
+          margin-left: 15px;
+        }
+
+        /* FILE TRANSFER */
+        .liveAgentChatFileTransfer {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            float: left;
+            clear: left;
+            margin-bottom: 25px;
+            padding-right: 25px;
+            padding-left: 25px;
+            text-align: center;
+        }
+
+            .liveAgentChatFileTransfer #fileDropLabel {
+                width: 100%;
+                border: 2px dashed rgb(187, 187, 187);
+                line-height: 100px;
+                display: block;
+            }
+
+            .liveAgentChatFileTransfer .liveAgentFileSendButton {
+                width: 45%;
+                display: inline-block;
+                margin-left: 2.5px;
+
+                text-align: left;
+                padding-left: 20px;
+            }
+
+                .liveAgentChatFileTransfer .liveAgentFileSendButton::after {
+                    content: "";
+                    border-right: 0.1em solid #143E61;
+                    border-top: 0.1em solid #143E61;
+                    width: 0.5em;
+                    height: 0.5em;
+                    display: inline-block;
+                    position: absolute;
+                    margin-top: -0.25em;
+                    top: 50%;
+                    right: 25px;
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+
+
+            .liveAgentChatFileTransfer .liveAgentFileCancelButton {
+                width: 45%;
+                background: #ffffff;
+                background: radial-gradient(ellipse at center, #ffffff, #ffffff);
+                border: 1px solid #1E3869;
+                color: #1E3869;
+
+                text-align: right;
+                padding-right: 20px;
+            }
+                .liveAgentChatFileTransfer .liveAgentFileCancelButton:hover {
+                    -webkit-box-shadow: inset 1px -1px 0px #1E3860, inset -1px -1px #1E3860, inset 1px 1px #1E3860, inset -1px 1px 0px #1E3860;
+                    box-shadow: inset 1px -1px 0px #1E3860, inset -1px -1px #1E3860, inset 1px 1px #1E3860, inset -1px 1px 0px #1E3860;
+                    font-weight: bold;
+                    background: #1E3860;
+                    color: #FFF;
+                }
+
+                .liveAgentChatFileTransfer .liveAgentFileCancelButton::before {
+                    content: "";
+                    border-left: 0.1em solid #FAA74A;
+                    border-bottom: 0.1em solid #FAA74A;
+                    width: 0.5em;
+                    height: 0.5em;
+                    display: inline-block;
+                    position: absolute;
+                    margin-top: -0.25em;
+                    top: 50%;
+                    left: 25px;
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+
+        /* TYPING ANIMATION */
+        .ic-typing .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 3px;
+            margin-left: 3px;
+            border-radius: 15px;
+            background-color: #D8D8D8;
+        }
+
+            .ic-typing .dot:nth-last-child(1) {
+                animation: loading 0.9s 0.1s linear infinite;
+            }
+
+            .ic-typing .dot:nth-last-child(2) {
+                animation: loading 0.9s 0.2s linear infinite;
+            }
+
+            .ic-typing .dot:nth-last-child(3) {
+                animation: loading 0.9s 0.3s linear infinite;
+            }
+
+        @-moz-keyframes loading {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @-webkit-keyframes loading {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes loading {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* WAITING ANIMATION */
+        .ic-loading #loading-left-box {
+            animation: pop .4s linear .1s forwards;
+            transform-origin: bottom;
+            opacity: 0;
+        }
+
+        .ic-loading #line1 {
+            fill: none;
+            stroke: #FAA74A;
+            stroke-width: 5;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            -webkit-animation: dash 2s linear infinite forwards;
+            animation: dash 2s linear infinite forwards;
+            animation-delay: .5s;
+        }
+
+        .ic-loading #line2 {
+            fill: none;
+            stroke: #FAA74A;
+            stroke-width: 5;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            -webkit-animation: dash  2s linear infinite forwards;
+            animation: dash 2s linear infinite forwards;
+            animation-delay: .7s;
+        }
+
+        .ic-loading #line3 {
+            fill: none;
+            stroke: #FAA74A;
+            stroke-width: 5;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            -webkit-animation: dash  2s linear infinite forwards;
+            animation: dash 2s linear infinite forwards;
+            animation-delay: .9s;
+        }
+
+        .ic-loading #loading-right-box {
+            opacity: 0;
+            top: -10px;
+            animation: pop .4s linear .25s forwards;
+            transform-origin: bottom;
+        }
+
+        @-moz-keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.4, 0.3);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.12, 1.12);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.4, 0.3);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.12, 1.12);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+        }
+
+        @-moz-keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(0.4, 0.3);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.12, 1.12);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+        }
+
+        @-webkit-keyframes dash {
+            50% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes dash {
+            50% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes dash {
+            50% {
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</apex:page>

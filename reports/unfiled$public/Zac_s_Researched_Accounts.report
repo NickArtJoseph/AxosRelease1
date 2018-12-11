@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Research_Status_Set_By__c</field>
+    </columns>
+    <columns>
+        <field>Account.Research_Status_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.Last_Researched_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.Total_Number_of_Phone_Number__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Research_Status_Set_By__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Zachary Boiskin</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Zac&apos;s Researched Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

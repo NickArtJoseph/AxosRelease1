@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><font style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},<br></font><br></font><span style="font-family: Arial, sans-serif;">We have received your wire form and it has been forwarded to our Deposit Operations team for processing. If we have any further questions we will reach out to you directly via the contact number on the wire form or email.&nbsp;</span><font face="Arial, sans-serif" style=""><br><br>We appreciate your business and commit to providing superior Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br>UFB Direct Customer Service</font><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

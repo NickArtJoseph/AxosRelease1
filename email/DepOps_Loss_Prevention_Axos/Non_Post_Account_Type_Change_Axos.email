@@ -1,0 +1,25 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><font face="arial"><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><span style="background: white; color: black; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><br>
+</span><span style="color: black; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">This
+email is to notify you of an item presenting for deposit to your </span><span style="color: red; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">CHECKING/SAVINGS</span><span style="color: black; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">
+account ending in ____. This item is coded&nbsp;for deposit to a&nbsp;</span><span style="color: red; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">SAVINGS/CHECKING</span><span style="color: black; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">
+account, causing a delay in posting.<br>
+<br>
+Please notify __________ of the updated account type to avoid processing delays
+and the possibility of the item being returned in the future.<br>
+<br>
+If you would like further assistance, please call us at (888) 502-2967.<br style="mso-special-character: line-break;">
+<br style="mso-special-character: line-break;">
+</span>Best Regards,</font></span></font></p><p><font face="arial"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></span><font face="Arial, sans-serif">Axos Bank™ Customer Service</font></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

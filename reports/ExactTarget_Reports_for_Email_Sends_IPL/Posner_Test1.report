@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 or 3 or 4 or 5 or 6)</booleanFilter>
+        <criteriaItems>
+            <column>Contact$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>michael posner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$LastName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>mercado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$LastName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>sabar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$LastName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>sherman</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$LastName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>posner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact$LastName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>O&apos;Connell</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Posner Test</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

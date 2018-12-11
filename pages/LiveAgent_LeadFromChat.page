@@ -1,0 +1,112 @@
+<apex:page showHeader="false" standardStylesheets="false" standardController="LiveChatTranscript" extensions="LiveAgent_LeadFromChatController">
+	<apex:slds />
+
+	<apex:includeScript value="/support/console/42.0/integration.js"/>
+
+	<apex:outputPanel styleClass="slds-text-align_center" rendered="{! OR( NOT(ISNULL(LiveChatTranscript.LeadId)), leadWasCreated ) }" layout="block">
+		<p class="slds-p-top_small">This Chat Transcript already has a Lead Record assigned:</p>
+		<a href="#" onclick="openLeadTab();">{! IF( leadWasCreated, newLead.FirstName & ' ' & newLead.LastName, LiveChatTranscript.Lead.Name ) }</a>
+
+		<script type="text/javascript">
+			function openLeadTab() {
+				sforce.console.getEnclosingPrimaryTabId(function(result) {
+			 		var tabId = result.id;
+					// Open Lead Edition page
+			        sforce.console.openSubtab(tabId, '{! URLFOR( $Action.Lead.View, IF( NOT( ISNULL(newLead.Id) ), newLead.Id, LiveChatTranscript.LeadId ) ) }', true);
+			    });
+			}
+		</script>
+	</apex:outputPanel>
+
+	<apex:form id="newLeadForm" styleClass="slds-form slds-form_stacked slds-p-around_x-small" rendered="{! AND( ISNULL(LiveChatTranscript.LeadId), NOT(leadWasCreated) ) }">
+		<apex:outputPanel layout="none" rendered="{! itHasErrors == true }">
+			<div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert" id="page-messages">
+			    <span class="slds-assistive-text">error</span>
+			    <h2>
+			        <apex:messages />
+			    </h2>
+			    <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close" type="button" onclick="hidePageMessages();">
+			        <svg class="slds-button__icon" aria-hidden="true">
+			            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{! URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close') }"></use>
+			        </svg>
+			        <span class="slds-assistive-text">Close</span>
+			    </button>
+			</div>
+		</apex:outputPanel>
+
+		<div id="spinner" style="display: none;">
+			<div role="status" class="slds-spinner slds-spinner_brand slds-spinner_medium" style="z-index: 1000;">
+				<span class="slds-assistive-text">Loading</span>
+				<div class="slds-spinner__dot-a"></div>
+				<div class="slds-spinner__dot-b"></div>
+			</div>
+		</div>
+
+		<div class="slds-form-element">
+			<label class="slds-form-element__label" for="lead-first-name">{! $ObjectType.Lead.Fields.FirstName.Label }</label>
+			<div class="slds-form-element__control">
+				<apex:inputField required="true" value="{! newLead.FirstName }" styleClass="slds-input" />
+			</div>
+		</div>
+
+		<div class="slds-form-element">
+			<label class="slds-form-element__label" for="lead-last-name">{! $ObjectType.Lead.Fields.LastName.Label }</label>
+			<div class="slds-form-element__control">
+				<apex:inputField required="true" value="{! newLead.LastName }" styleClass="slds-input" />
+			</div>
+		</div>
+
+		<div class="slds-form-element">
+			<label class="slds-form-element__label" for="lead-email">{! $ObjectType.Lead.Fields.Email.Label }</label>
+			<div class="slds-form-element__control">
+				<apex:inputField required="true" value="{! newLead.Email }" styleClass="slds-input" />
+			</div>
+		</div>
+
+		<div class="slds-form-element">
+			<label class="slds-form-element__label" for="lead-phone">{! $ObjectType.Lead.Fields.Phone.Label }</label>
+			<div class="slds-form-element__control">
+				<apex:inputField required="true" value="{! newLead.Phone }" styleClass="slds-input" />
+			</div>
+		</div>
+
+		<div class="slds-form-element slds-text-align_center">
+			<apex:commandButton value="Create Lead" action="{! saveLead }" styleClass="slds-button slds-button_brand" onclick="showSpinner();" />
+		</div>
+
+		<script type="text/javascript">
+			function showSpinner() {
+				document.getElementById('spinner').style.display = 'block';
+			}
+
+			function hidePageMessages() {
+				document.getElementById('page-messages').style.display = 'none';
+			}
+		</script>
+	</apex:form>
+
+	<style type="text/css">
+		.errorMsg {
+			color: red;
+		}
+	</style>
+
+	<apex:outputPanel rendered="{! leadWasCreated }" layout="none">
+		<script type="text/javascript">
+			sforce.console.getEnclosingPrimaryTabId(function(result) {
+			 	var tabId = result.id;
+                
+			 	// Open Lead Edition page
+		        sforce.console.openSubtab(tabId, '{! URLFOR( $Action.Lead.Edit, newLead.Id ) }', true);
+		 		
+                // Refresh primary tab
+			 	sforce.console.refreshPrimaryTabById(tabId, true, function(refreshResult) {
+			 		if (refreshResult.success == false) {
+		             	console.warn('Primary tab did not refresh. Please save pending changes and try to refresh it manually.');
+		            }
+			 	}, true);
+		        
+		 	});
+		</script>
+	</apex:outputPanel>
+</apex:page>

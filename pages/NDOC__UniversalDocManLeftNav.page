@@ -1,0 +1,113 @@
+<apex:page showHeader="false" sidebar="false" controller="NDOC.UniversalDocManController" extensions="NDOC.PlaceholderDataController">
+	<div class="col-md-2 col-sm-3 col-xs-12 leftNav no-gutter leftNavSize" style="position: relative;">
+		<div ng-controller='LeftNavController as leftNavController'>
+			<div
+				class="headers clickFocus allDocumentsPadding truncate"
+				title="{!$Label.All_Documents}"
+				ng-click="controller.placeholderFilter()"
+				ng-class="{'bold': !controller.placeholderFilterValue
+					&& !controller.isFilterByPortalEnabled
+					&& !controller.isFilterByReadyForEsignature}">
+				<div
+					class="countCircle"
+					ng-bind="controller.placeholderService.placeholders.length">
+				</div>
+				{!$Label.All_Documents}
+			</div>
+			<div
+				ng-if="controller.isLoanDocMan"
+				class="headers clickFocus truncate"
+				title="{!$Label.Owned_By_Me}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="controller.placeholderFilter('{!currentUser}')"
+				ng-class="{'bold': controller.placeholderFilterValue }">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {ownerId:
+					'{!currentUser}'}).length">
+				</div>
+				{!$Label.Owned_By_Me}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="{!$Label.Customer_Portal}"
+				ng-click="controller.filterByPortalEnabled()"
+				ng-class="{'bold': controller.isFilterByPortalEnabled && !controller.isFilterByReadyForEsignature}">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {portalEnabled: true})
+					.length">
+				</div>
+				{!$Label.Customer_Portal}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="E-Signature"
+				ng-click="controller.filterByReadyForEsignature()"
+				ng-class="{'bold': controller.isFilterByReadyForEsignature && !controller.isFilterByPortalEnabled}">
+				<div
+					class="countCircle"
+					ng-bind="(controller.placeholderService.placeholders | filter: {readyForEsignature: true})
+					.length">
+				</div>
+				{!$Label.E_Signature}
+			</div>
+			<hr class="leftNavSeparator"/>
+			<div
+				class="clickFocus headers noCircleHorizontalAlign truncate"
+				title="{!$Label.Relationships}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-class="{'bold': vm.rightNavDisplay === vm.relationship && vm.isLoaded }"
+				ng-if="controller.showRelationshipLink && controller.permissionService.hasRelationshipImport()"
+				ng-click="vm.toggleRightNav(vm.relationship)">
+					{!$Label.Relationships}
+			</div>
+			<div
+				class="clickFocus headers noCircleHorizontalAlign truncate"
+				title="{!$Label.Collateral}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-class="{'bold': vm.rightNavDisplay === vm.collateral && vm.isLoaded }"
+				ng-if="controller.showCollateralLink && controller.permissionService.hasCollateralImport()"
+				ng-click="vm.toggleRightNav(vm.collateral)">
+					{!$Label.Collateral}
+			</div>
+			<div
+				class="headers clickFocus truncate"
+				title="{!$Label.File_Staging}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="vm.toggleRightNav(vm.fileStaging)"
+				ng-class="{'bold': vm.rightNavDisplay === vm.fileStaging && vm.isLoaded }">
+				<div
+					class="countCircle"
+					ng-bind="vm.fileStagingService.stagedFiles.length">
+				</div>
+					{!$Label.File_Staging}
+			</div>
+			<div
+				ng-if="leftNavController.showArchiveLink"
+				class="headers clickFocus truncate"
+				title="{!$Label.Archive}"
+				uni-has-permission="UNI_EDIT_DETAILS"
+				ng-click="vm.toggleRightNav(vm.archive)"
+				ng-class="{'bold': vm.rightNavDisplay === vm.archive && vm.isLoaded }">
+				<div
+					class="countCircle"
+					ng-bind="archivedFiles.length">
+				</div>
+				{!$Label.Archive}
+			</div>
+
+			<div ng-if="leftNavController.customLinks.length > 0">
+				<hr class="leftNavSeparator"/>
+				<div
+					class="clickFocus headers  truncate"
+					title="{{::customLink.elementCaption}}"
+					ng-repeat="customLink in leftNavController.customLinks"
+					ng-if="customLink.showElement"
+					ng-click="customLink.onClick('{!JSENCODE($CurrentPage.parameters.id)}')">
+					{{::customLink.elementCaption}}
+				</div>
+			</div>
+		</div>
+	</div>
+</apex:page>

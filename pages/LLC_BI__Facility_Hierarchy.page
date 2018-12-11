@@ -1,0 +1,12 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.FacilityHierarchyController" showHeader="false"
+	sidebar="false">
+	<nFORCE:Includes enablebootstrap3="true" enablefontawesome="true" enablebs3namespace="true" />
+	<apex:stylesheet value="{!$Resource.LLC_BI__ncOrgChartCSS}"/>
+
+	<c:OrgChart zoomEnabled="false"
+		zoomButtonsEnabled="true"
+		panEnabled="true"
+		dataArray="{!facilityHierarchy}"
+		dataElement="facilities"
+		nodeContent="displayText"/>
+</apex:page>

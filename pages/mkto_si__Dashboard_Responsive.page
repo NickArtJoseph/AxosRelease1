@@ -1,0 +1,705 @@
+<apex:page controller="mkto_si.DashboardController" showHeader="true" sidebar="true" tabStyle="Marketo__tab">
+    <apex:pageBlock id="mktMobileBestBetsPageMobileBlock" rendered="{!isSalesforceOne}">
+        <c:CssAndJavascript2 />
+        <!-- CSS files from One Starter -->
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/icons.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/styles.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/OneStarter.css')}"/>
+        <link rel="Stylesheet" type="text/css" href="{!$Resource.css_mobile}" />
+            
+        <script src="{!$Resource.jqueryTools}" type="text/javascript"></script>
+        <script src="{!URLFOR($Resource.OneStarterZip,'onestarter-master/jquery.onestarter.js')}" type="text/javascript"></script>
+        <script src="{!$Resource.jScroll}" type="text/javascript"></script>
+        <script src="{!$Resource.iScroll}" type="text/javascript"></script>
+        <div title="Best Bets" class="db ht-44 mhm mts mkt-text-decoration mkt-mobile-hide-d" style="display:block" id="mktMobileDropdownListHead">
+            <span class="dib lh-44 f2 text-color-1" id="mktMobileBestBetsHeader" style="{!IF(showLeadFeed,'display:none','')}"><strong>My Best Bets</strong></span>
+            <span class="dib lh-44 f2 text-color-1" id="mktMobileLeadFeedHeader" style="{!IF(!showLeadFeed,'display:none','')}"><strong>Lead Feed</strong></span>
+            <span class="dib lh-44 mls f6 text-color-1 icon-utility-down" id="mktMobileDropdownListHeadArrow"></span>
+        </div>
+        <ul class="list-plain fw-normal man pan border-bottom border-top border--3" style="display:none" id="mktDropdownList">
+          <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">
+            <div title="{!$Label.Best_Bets}" href="" data-view="MBB" id="mktMobileGoToBestBetsButton" class="mkt-text-decoration">
+                <apex:form >
+                    <apex:outputpanel id="mktMobileGoToBestBets">
+                    <span class="dib prm mlsx text-color-1 icon-utility-list"></span>
+                    <span class="dib f4 text-color-1">My Best Bets</span>
+                    <apex:actionSupport event="onclick" 
+                        action="{!showMBB}" rendered="true"
+                        onsubmit="bestBetsClicked()"
+                        rerender="mktMobileBestBetsLeadFeed"/>
+                    </apex:outputpanel>
+                </apex:form>
+            </div>                                    
+          </li>
+          <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">
+            <div title="{!$Label.Best_Bets}" href="" data-view="MBB" id="mktMobileGoToLeadFeedButton" class="mkt-text-decoration">
+                <apex:form >
+                    <apex:outputpanel id="mktMobileGoToLeadFeed">
+                    <span class="dib prm mlsx text-color-1 icon-utility-list"></span>
+                    <span class="dib f4 text-color-1">Lead Feed</span>
+                    <apex:actionSupport event="onclick" 
+                        action="{!showLF}" rendered="true"
+                        onsubmit="leadFeedClicked()"
+                        rerender="mktMobileBestBetsLeadFeed"/>
+                    </apex:outputpanel>
+                </apex:form>
+            </div>                
+          </li>
+        </ul>
+
+        <div id="mkt-mobile-loading"></div>
+                                                                          
+        <apex:outputPanel id="mktMobileBestBetsLeadFeed" style="display:none">
+            <apex:outputPanel id="tab-components" styleClass="mkt-scroll-wrapper">
+                <c:BestBetsTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" currentView="{!currentView}" hideDays="{!defaultBestBetsHideDays}" isSalesforceOne="{!isSalesforceOne}" rendered="{!(currentTabView == 'MBB' && isSalesforceOne && !showLeadFeed)}" id="mktBestBets"/>
+                <script type="text/javascript"> (function() {
+                    if({!isSalesforceOne}){
+                        var d = $j(".mkt-mobile-hide-d");
+                        d.show();
+                        var $mktMobileBestBetsLeadFeed = $j("[id$=mktMobileBestBetsLeadFeed]");
+                        //$mktMobileBestBetsLeadFeed.hide();
+                        //Marketo.unsetLoading('#mkt-mobile-loading');
+                        $j('#mkt-mobile-loading').hide();
+                        $j('.data2Col table:first').addClass("mkt-mobile-table");
+                        $j('.data2Col').css({
+                            'padding': 'none'
+                        });
+                        $j('.mkt-mobile-table').css({
+                            'background-color': '#F0F1F2',
+                            'border': 'none',
+                            'border-collapse': 'collapse'
+                        });
+                        $j('.mkt-mobile-table-row').css({
+                            'display': 'block',
+                            'background-color': '#FFFFFF',
+                            'margin-bottom': '14px',
+                            'margin-left': '4px',
+                            'margin-right': '14px',
+                            'padding': '14px',
+                            'border': '1px',
+                            'border-style': 'solid',
+                            'border-color': '#DFE0E1',
+                            'border-radius': '5px'
+                        });
+                        $j('.mkt-mobile-table-row').click(function() {
+                            $nameLink = $j(this).find('a.mkt-mobile-table-row-click');
+                            window.document.location = $nameLink.attr("href");     
+                        });
+                        $j('.mkt-mobile-table-row').attr("onmouseover", "");
+                        $j('.mkt-mobile-table-row').attr("onmouseout", "");
+                        $j('.mkt-mobile-table-row .dataCell').css({
+                            'display': 'block',
+                            'border': 'none',
+                            'font-family': 'ProximaNova, Arial, sans-serif',
+                            'font-size': '15px',
+                            'padding-left':'0px',
+                            'text-align': 'left'
+                        });
+                        $j('.bPageBlock').css({
+                            'background-color': '#F0F1F2',
+                                'border': 'none' 
+                        });
+
+                        /*
+                        $mktMobileBestBetsLeadFeed.show();
+                        
+                        var id = $j('table tr:last').attr('id');
+                        $j('html, body').animate({
+                            scrollTop: $j('table tr:last').offset().top
+                        }, 2000);
+                        var iframe = $j('iframe');
+                        $pbSubsection = $mktMobileBestBetsLeadFeed.find('.pbSubsection');
+                        
+                        if({!setCon.hasNext}) {
+                            $j('html body.sfdcBody').scroll(function() {
+                                var $box = $j(".apexp");
+                                innerOuterHeight = $j(window).height(); //eg. 400
+                                boxHeight = $box.height();          //eg. 2400
+                                boxOffsetTop = $box.offset().top;   //eg. negative -2000
+                                if(boxHeight + boxOffsetTop < innerOuterHeight) {
+                                    $j('html body.sfdcBody').unbind('scroll');
+                                    //var $previous = $j("[id$=tab-components]");
+                                    //$previous.appendChild($previous);
+                                    //$previous.id = "previous-page";
+        
+                                    //var $div = $j("[id$=tab-components]").clone();   
+                                    //$j("[id$=tab-components]").after($div);
+                                    //$div.hide();
+                                    //$j("[id$=tab-components]").first().attr('id','previous-tab-components'); 
+                                    var $button = $j("[id$=counter]");
+                                    $mktMobileBestBetsLeadFeed.attr("style", "visibility:hidden");
+                                    //$pbSubsection.attr("style", "visibility:hidden");
+                                    ShowLoading();
+                                    $button.click();
+                                    //$div.show();
+                                }
+                            });
+                        }
+                            */
+                        $mktMobileBestBetsLeadFeed.show();
+                        //$pbSubsection.attr("style", "visibility:visible");
+                        $mktMobileBestBetsLeadFeed.attr("style", "visibility:visible");
+                    }
+            
+                    function ShowLoading() {
+                        Marketo.setLoading('#mkt-mobile-loading');
+                        $j('.mkt-loading-dim').css({
+                            'background-color': '#F0F1F2'
+                        });
+                    }
+                })();
+                </script>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="mktMobileLeadfeed">
+                <c:Stream currentSObjectId="{!currentSObjectId}" currentSObjectType="{!currentSObjectType}" escape="{!escape}" isSalesforceOne="{!isSalesforceOne}" rendered="{!(currentTabView == 'MBB' && isSalesforceOne && showLeadFeed )}"/>
+            </apex:outputPanel>
+        </apex:outputPanel>                                         
+        <apex:form style="display:none">
+            <apex:outputpanel id="counter">
+                <apex:outputText value="Click Me!: "/>
+                <apex:actionSupport event="onclick" 
+                                  action="{!loadMore}" rendered="{!setCon.hasNext}"
+                                  rerender="tab-components" status="counterStatus"/>
+            </apex:outputpanel>
+
+            <apex:actionStatus id="counterStatus" 
+                           startText=" (incrementing...)" 
+                           stopText=" (done)"/>
+
+        </apex:form>
+
+        <script type="text/javascript">                         
+            (function() {
+                if({!isSalesforceOne}){
+                    $j('#mktMobileDropdownListHead').click(function() {
+                        var $dropdown = $j('#mktDropdownList');
+                        if( $dropdown.is(':hidden')) {
+                            DropDownExpand();
+                        } else {
+                            DropDownCollapse();
+                        }
+                    });
+                    /*
+                    This part would not be needed for it's moved to onsubmit tag to ensure it's triggered before apex call
+                    $j('#mktMobileGoToBestBetsButton').click(function() {
+                        bestBetsClicked();
+                    });
+                    $j('#mktMobileGoToLeadFeedButton').click(function() {
+                        leadfeedClicked();
+                    });*/
+                }
+            })();
+
+            function bestBetsClicked() {
+                var $bestBets = $j("[id$=tab-components]");
+                var $leadFeed = $j("[id$=mktMobileLeadfeed]");
+                $j('#mkt-mobile-loading').show();
+                ShowLoading();
+                $bestBets.hide();
+                $leadFeed.hide();
+                $j('#mktMobileBestBetsHeader').show();
+                $j('#mktMobileLeadFeedHeader').hide();
+                DropDownCollapse();
+            }
+            
+            function leadFeedClicked() {
+                var $bestBets = $j("[id$=tab-components]");
+                var $leadFeed = $j("[id$=mktMobileLeadfeed]");
+                $j('#mkt-mobile-loading').show();
+                ShowLoading();
+                $bestBets.hide();
+                $leadFeed.hide();
+                $j('#mktMobileBestBetsHeader').hide();
+                $j('#mktMobileLeadFeedHeader').show();
+                DropDownCollapse();
+            }
+        
+            function ShowLoading() {
+                Marketo.setLoading('#mkt-mobile-loading');
+                $j('.mkt-loading-dim').css({
+                    'background-color': '#F0F1F2'
+                });
+            }
+    
+            function DropDownExpand() {
+                var $dropdown = $j('#mktDropdownList');
+                var $arrow = $j('#mktMobileDropdownListHeadArrow');
+                $dropdown.show();
+                $arrow.attr('class', 'dib lh-44 mls f6 text-color-1 icon-utility-up');
+            }
+                
+            function DropDownCollapse() {
+                var $dropdown = $j('#mktDropdownList');
+                var $arrow = $j('#mktMobileDropdownListHeadArrow');
+                $dropdown.hide();
+                $arrow.attr('class', 'dib lh-44 mls f6 text-color-1 icon-utility-down');
+            }
+        </script>
+    </apex:pageBlock> <!-- END mainblock -->
+            
+    <apex:pageBlock id="mktMobileBestBetsPageDesktopBlock"  rendered="{!(isSalesforceOne == false)}">
+        <c:CssAndJavascript2 />
+        <script src="{!$Resource.jqueryTools}" type="text/javascript"></script>
+
+        <apex:form id="theForm" styleClass="mkto Custom346Tab">
+
+            <div class = "bPageTitle">
+                <div class="ptBody secondaryPalette brandSecondaryBrd">
+                    <div class="content">
+                        <img src="{!$Resource.Marketo_Ball_32}" class="pageTitleIcon userDefinedImage" title="" alt=""></img>
+                        <h1 class="pageType noSecondHeader">{!$Label.Application_Title}</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="db-welcome">
+                <apex:pageBlock id="mktWelcomeBlock" rendered="{!showWelcome}" tabStyle="Contact">
+                    <div class="mktWelcome">
+                        <iframe src="{!welcomeURL}" border="0" frameborder="0" scrolling="no"></iframe> 
+            
+                        <div class="mktClearWelcomeButton">
+                            <apex:commandLink action="{!clearWelcomeCounter}" onclick="Marketo.hideWelcomeMessage()" rerender="mktWelcomeBlock">
+                                <span>{!$Label.mkto_si__skip_welcome_message}</span>
+                                <span class="mkt-show-{!debug}">({!welcomeCounter})</span>
+                            </apex:commandLink>
+
+                            <apex:actionFunction name="decrementWelcomeCounter" action="{!decrementWelcomeCounter}" rerender="welcomeCounterPanel"/>
+                            <apex:outputPanel id="welcomeCounterPanel"/>
+                        </div>
+                    </div>
+                
+                    <script type="text/javascript">
+                        Marketo.hideWelcomeMessage = function()
+                        {
+                            $j('#db-welcome').slideUp(1000);
+                        };
+                    </script>
+                </apex:pageBlock>
+            </div>
+
+            <apex:outputPanel rendered="{!showWhatIsNew}">
+                <div id="db-what-is-new">
+                    <h2>{!$Label.What_Is_New}</h2>
+                    <ul>
+                        <li>
+                            <a href="http://marketo.force.com/articles/MarketoPKBArticle?id=kA050000000L4zM" target="_blank">{!$Label.Email_Template_Folders}</a>
+                            <br />
+                            <span>{!$Label.Your_Email_Templates_are_now_organized_into_folders}</span>
+                        </li>               
+                        <li>
+                            <a href="http://marketo.force.com/articles/MarketoPKBArticle?id=kA050000000L4Hd" target="_blank">{!$Label.Opportunity_Influence_Analyzer}</a>
+                            <br />
+                            <span>{!$Label.Access_the_Marketo_Opportunity_Influence_Analyzer}<br/><i>({!$Label.Requires_Marketo_RCA_subscription})</i></span>
+                        </li>
+                    </ul>
+        
+                    <a href="#" id="db-what-is-new-close" title="{!$Label.Close}"></a>
+                    <a href="#" id="db-what-is-new-disable">{!$Label.Dont_show_again}</a>
+                </div>
+            </apex:outputPanel>
+    
+            <!-- Main Table: Dashboard on left, lead feed on right -->
+            <table id="db-content" border="0" class="dashboard" cellspacing="0" cellpadding="0" style="width: 100%;position:relative;display:none">
+            <tr>
+
+            <!-- Dashboard Section -->
+            <td id="mktBestbetsTd" style="width:75%;position:relative;vertical-align:top;">
+
+            <apex:outputPanel id="mainblock"> <!-- START mainblock -->
+                <!-- Tabs -->
+                        <table id="db-tabs" cellspacing="0" cellpadding="0" border="0" class="tabsNewBar">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                    <div>
+                                        <div class="tabNavigation">
+                                            <div class="tabBarLeft"></div>
+                                            <table cellspacing="0" cellpadding="0" border="0" class="tab">
+                                                <tbody>
+                                                    <tr>
+                                                        <td nowrap="nowrap" class="{!IF(currentTabView == 'MBB', 'currentTab primaryPalette', '')}">
+                                                            <div id="MBB_Tab">
+                                                                {!$Label.Best_Bets}
+                                                            </div>
+                                                        </td>
+                                                        <td nowrap="nowrap" class="{!IF(currentTabView == 'MWL', 'currentTab primaryPalette', '')}">
+                                                            <div id="MWL_Tab">
+                                                                {!$Label.My_Watch_List}
+                                                            </div>
+                                                        </td>
+                                                        <td nowrap="nowrap" class="{!IF(currentTabView == 'WA', 'currentTab primaryPalette', '')}">
+                                                            <div id="WA_Tab">
+                                                                {!$Label.Web_Activity}
+                                                            </div>
+                                                        </td>
+                                                        <td nowrap="nowrap" class="{!IF(currentTabView == 'AWA', 'currentTab primaryPalette', '')}">
+                                                            <div id="AWA_Tab">
+                                                                {!$Label.Anonymous_Web_Activity}
+                                                            </div>
+                                                        </td>
+                                                        <td nowrap="nowrap" class="{!IF(currentTabView == 'ME', 'currentTab primaryPalette', '')}">
+                                                            <div id="ME_Tab">
+                                                                {!$Label.My_Email}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="tabBarRight"></div>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+            
+                        <div id="db-body" class="mkt-tabs-body">
+                            <div class="mkt-tabs-body-shadow-l"></div>
+                            <div class="mkt-tabs-body-shadow-r"></div>
+                            <div class="mkt-tabs-body-shadow-b">
+                                <div class="mkt-tabs-body-shadow-bl"></div>
+                                <div class="mkt-tabs-body-shadow-br"></div>
+                            </div>
+
+                            <apex:pageBlock >
+                        <!-- Loading -->        
+                        <apex:actionStatus id="db-status" onStart="Marketo.setLoading(this.parentNode.parentNode)" onStop="Marketo.unsetLoading(this.parentNode.parentNode)" />
+
+                        <!-- ********** HEADER SECTION ********** -->
+                        <apex:pageBlockSection showHeader="false" collapsible="false" columns="1">
+                            <apex:pageBlockSectionItem >
+                                <apex:outputPanel >
+                                    <!-- View Select Box -->
+                                    <apex:outputText value="{!$Label.mkto_si__view}: " style="font-weight:normal;" styleClass="mkt-view-label"/>&nbsp;&nbsp;
+                                    <select id="db-views-list">
+                                        <optgroup label="Standard Views">
+                                            <option value="MBB">{!$Label.My_Best_Bets}</option>
+                                            <option value="MHBB">{!$Label.My_Best_Bets_Hidden}</option>
+                                            <option value="MTBB">{!$Label.My_Team_Best_Bets}</option>
+                                            <option value="MWL">{!$Label.My_Watch_List}</option>
+                                            <option value="WA">{!$Label.Web_Activity}</option>
+                                            <option value="AWA">{!$Label.Anonymous_Web_Activity}</option>
+                                            <option value="ME">{!$Label.My_Email}</option>
+                                        </optgroup>
+                                        <optgroup label="{!$Label.Custom_Views}">
+                                            <apex:repeat value="{!viewList}" var="item">
+                                                <option value="{!item.value}">{!item.label}</option>
+                                            </apex:repeat>
+                                        </optgroup>
+                                    </select>
+
+                                                            <!-- Hidden field that represents current view value and used for refresh -->
+                                                            <apex:inputText id="dbCurrentViewValue" value="{!currentView}" styleClass="mkt-show-false">
+                                                                <apex:actionSupport event="onchange" action="{!loadView}" status="db-status" rerender="mainblock"/>
+                                                            </apex:inputText>
+                                                
+                                    <script type="text/javascript">
+                                        var $viewsList = $j('#db-views-list');
+                            
+                                        // setup view selection list
+                                        $viewsList.val('{!currentView}');
+                            
+                                                                            // remove hidden best bets view from view select box in debug mode
+                                                                            if({!bestBetsDebugMode}) {
+                                                                                var options = $viewsList[0].options;
+                                                                                for(var i = 0, l = options.length; i < l; i++) {
+                                                                                    if(options[i].value == 'MHBB') {
+                                                                                        options[i] = null;
+                                                                                        break;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                
+                                                                            // update current view value element on each refresh
+                                                                            Marketo.$currentViewValue = $j(document.getElementById('{!$Component.dbCurrentViewValue}'));
+                                    </script>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                                    <!-- Edit Link -->
+                                    <apex:outputPanel >
+                                        <a href="{!IF(isStandardView, $Page.BestBetsStandardViewEdit, $Page.BestBetsViewEdit)}?view={!currentView}" onclick="Marketo.actionStart();" style="font-size:1.1em; text-decoration:none; font-style:normal; color:#015BA7;">{!$Label.Edit}</a>
+                                        &nbsp;
+                                        <apex:outputText value="|" style="color:#707070; font-weight:bold;"/>
+                                        &nbsp;
+                                    </apex:outputPanel>
+
+                                    <!-- Create New View Link -->
+                                    <a href="{!$Page.mkto_si__BestBetsViewEdit}" onclick="Marketo.actionStart();" style="font-size:1.1em; color:#015BA7; text-decoration:none; font-style:normal;">{!$Label.mkto_si__create_new_view}</a>
+                            
+                                    <!-- Time Select Box -->
+                                        <apex:outputPanel rendered="{!(currentTabView == 'WA' || currentTabView == 'AWA') && NOT(setCon.errorsOnPage && setCon.errorMessage == 'API_SET_TERRITORY')}">
+                                            <div style="float: right">
+                                            <apex:outputText value="{!$Label.mkto_si__time_frame}: " style="font-weight:normal;"/>&nbsp;&nbsp;
+                                            <apex:selectList value="{!selectedTime}" size="1" id="theList">
+                                                <apex:actionSupport event="onchange" action="{!refreshView}" status="db-status" rerender="mainblock"/>
+                                                <apex:selectOptions value="{!timeList}"/>
+                                            </apex:selectList>
+                                
+                                            <!--<div class="mktLinksRight">
+                                                <a href="{!$Page.ConfigureTerritory}" style="text-decoration: none;" target="_top">
+                                                    <img src="{!$Resource.web}/mkto/images/earth_location.png"/>
+                                                    <span style="text-decoration: underline;">Choose Territory</span>
+                                                </a>
+                                            </div>-->
+                                            </div>
+                                        </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:pageBlockSectionItem>
+                        </apex:pageBlockSection>
+    
+                        <!-- ********** BODY SECTION ********** -->
+                        <!-- TODO: Place each component within its own tab (extjs, etc.) -->
+                                            <apex:actionFunction name="sortByCount" action="{!sortByCount}" rerender="tab-components" status="db-status" immediate="true" />
+                                            <apex:actionFunction name="sortByDate" action="{!sortByDate}" rerender="tab-components" status="db-status" immediate="true" />
+                                
+                        <apex:outputPanel id="tab-components">
+                        
+                                <script type="text/javascript">
+                                    $j(function() { 
+                                        //$j('#db-content').hide();
+                                        if( isLightningExperienceOrSalesforce1() ) {
+                                            //$j('#db-content').hide();
+                                            $j('.tabNavigation').removeClass("tabNavigation");
+                                            $j('.tab').removeClass("tab");
+                                            
+                                            $j('#mktBestbetsTd tr.dataRow').hover(
+                                              function() {
+                                                $j(this).find('td').css({
+                                                    "background-color": "rgb(224,229,238)"
+                                                });
+                                              }, 
+                                              function() {
+                                                $j(this).find('td').css({
+                                                    "background-color": "#fff"
+                                                });
+                                              }
+                                            );
+                                            $j('#mktBestbetsTd').css({
+                                                "border-right": "1px solid rgb(216, 221, 230)",
+                                                "padding-right": "20px"
+                                            });
+                                            $j('.apexDefaultPageBlock').css("border", "none"); 
+                                            $j('.pbHeader>table').css("border", "none"); 
+                                            $j('.mkt-tabs-body-shadow-l, .mkt-tabs-body-shadow-r, .mkt-tabs-body-shadow-b, .mkt-tabs-body-shadow-bl, .mkt-tabs-body-shadow-br').css('background','none');
+                                            $j('.tabsNewBar').css({
+                                                'padding':'5px 0px',
+                                                'margin-bottom':'20px'
+                                            });
+                                            $j('.tabsNewBar td').css('padding-right','20px');
+                                            $j('.tabsNewBar td a').css('text-decoration','none');
+                                            $j('.currentTab').css('background-color','transparent');
+                                            //$j('.currentTab a').css('color','black');
+                                            //$j('.tabsNewBar .currentTab a').css('text-decoration','underline');
+                                            $j('table.mkt-mobile-table').css('border','none');
+                                            $j('table.mkt-mobile-table, table.mkt-mobile-table th').css('border','none');
+                                            $j('.pbBody').css('padding','0px');
+                                            $j('.mkt-mobile-table tbody tr td').css({
+                                                'font-family': 'SalesforceSans-Regular,Arial,sans-serif',
+                                                'font-size': '12px',
+                                                'color': 'rgb(22, 50, 92)',
+                                                'border-bottom': '1px solid rgb(216, 221, 230)',
+                                                'padding-top':'8px',
+                                                'padding-bottom':'8px'
+                                            });
+                                            $j('.mkt-mobile-table tbody tr td a').css({
+                                                'font-family': 'SalesforceSans-Regular,Arial,sans-serif',
+                                                'color': 'rgb(0, 109, 205)',
+                                                'cursor': 'pointer',
+                                                'text-decoration': 'none'
+                                            });
+                                            $j('.mkt-mobile-table tbody tr td a').hover(
+                                              function() {
+                                                $j(this).css({
+                                                  'text-decoration': 'underline'
+                                                });
+                                              }, 
+                                              function() {
+                                                $j(this).css({
+                                                  'text-decoration': 'none'
+                                                });
+                                              }
+                                            );
+                                            $j('.mkt-mobile-table thead tr th, .mkt-mobile-table thead tr th a').css({
+                                                'font-family': 'SalesforceSans-Regular,Arial,sans-serif',
+                                                'font-size': '.75rem',
+                                                'color': 'rgb(84, 105, 141)'
+                                            });
+                                            $j('#MBB_Tab, #MWL_Tab, #WA_Tab, #AWA_Tab, #ME_Tab').css({
+                                               'border-bottom': '2px solid transparent',
+                                               'padding': '1.5rem 1rem .5rem',
+                                               'font-size': '12px',
+                                               'color': 'rgb(84, 105, 141)',
+                                               'text-transform': 'uppercase',
+                                               'letter-spacing': '.0625em'
+                                            });
+                                            $j('#MBB_Tab, #MWL_Tab, #WA_Tab, #AWA_Tab, #ME_Tab').hover(
+                                              function() {
+                                                $j(this).css({
+                                                 'border-color': 'rgb(0, 112, 210)',
+                                                 'color': 'rgb(22, 50, 92)'
+                                                });
+                                              }, 
+                                              function() {
+                                                $j(this).css({
+                                                  'border-bottom': '2px solid transparent',
+                                                  'color': 'rgb(84, 105, 141)'
+                                                });
+                                              }
+                                            );
+                                            $j('.tabsNewBar .currentTab div').css({
+                                               'border-color': 'rgb(0, 112, 210)',
+                                               'color': 'rgb(22, 50, 92)'
+                                            });
+                                            $j('.tabsNewBar').css({
+                                                'border-bottom': '1px solid rgb(216, 221, 230)'
+                                            });
+                                            $j('#db-tabs').css('padding','0px');
+                                            $j('#db-body table td.data2Col').css({
+                                                'padding-left':'0px',
+                                                'background-color':'white'
+                                            });
+                                            $j('.mkt-view-label').css('padding-left','5px');
+                                            
+                                            //$j('#db-content').show();
+                                        } 
+                                    });
+                                    $j('#db-content').show();
+                                </script>
+                            <c:BestBetsTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" currentView="{!currentView}" hideDays="{!defaultBestBetsHideDays}" isSalesforceOne="{!isSalesforceOne}" rendered="{!(currentTabView == 'MBB')}"/>
+                            <c:WatchListTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" helpLink="{!helpWatchListLink}" rendered="{!(currentTabView == 'MWL')}"/>
+                          <c:WebActivityTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" isGrouped="{!isGroupedWebActivity}" isSalesforceOne="{!isSalesforceOne}" rendered="{!(currentTabView == 'WA')}"/>
+                            <c:AnonWebActivityTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" rendered="{!(currentTabView == 'AWA')}"/>
+                            <c:EmailActivityTab setCon="{!setCon}" escape="{!escape}" currentSObjectName="{!currentSObjectName}" showName="true" showAccount="true" isSalesforceOne="{!isSalesforceOne}" rendered="{!(currentTabView == 'ME')}"/>
+                                            </apex:outputPanel>
+
+                                            <apex:outputPanel id="navigation-panel">
+                                                <!-- Limited rows message -->
+                                                <div class="mkt-tabs-message mktDisplay-{!setCon.isRowsLimited}">
+                                                    <span>{!$Label.Maximum_pages_reached}</span>
+                                                    <br />
+                                                    <a href="{!IF(isStandardView, $Page.BestBetsStandardViewEdit, $Page.BestBetsViewEdit)}?view={!currentView}" onclick="Marketo.actionStart();">{!$Label.Edit_the_view}</a>
+                              <span> {!$Label.to_increase_pages_or} </span>
+                                                    <apex:commandLink value="{!$Label.mkto_si__go_back}" action="{!previous}" status="db-status" rerender="mainblock"/>
+                                                </div>
+
+                            <!-- ********** FOOTER SECTION ********** -->
+                                <apex:pageBlockSection columns="1" rendered="{!setCon.isValidList && setCon.resultSize > 0 && (setCon.hasPrevious || setCon.hasNext)}">
+                                    <apex:pageBlockSectionItem dataStyle="text-align:right;">
+                                        <apex:outputPanel rendered="{!setCon.hasPrevious || setCon.hasNext}">
+                                            <apex:commandLink action="{!previous}" status="db-status" style="color:#015BA7; text-decoration:none;" rendered="{!setCon.hasPrevious}" rerender="tab-components, navigation-panel">&laquo; {!$Label.Previous_Page}</apex:commandLink>&nbsp;&nbsp;&nbsp;
+                                            <!--<apex:outputText value="Showing {!setCon.pageRowStart}-{!setCon.pageRowEnd} of {!setCon.resultSize}" Id="pageinfo2"/>&nbsp;&nbsp;&nbsp;-->
+                                            <apex:commandLink action="{!next}" status="db-status" style="color:#015BA7; text-decoration:none;" rendered="{!setCon.hasNext}" rerender="tab-components, navigation-panel">{!$Label.Next_Page} &raquo;</apex:commandLink>
+                                        </apex:outputPanel>
+                                    </apex:pageBlockSectionItem>
+                                </apex:pageBlockSection>
+                              </apex:outputPanel>
+        
+                    <!-- mbb, mwl, wa, awa, me -->
+                    </apex:pageBlock> <!-- END mainblock -->
+                </div>
+                    </apex:outputPanel>
+            </td>
+
+            <!-- Lead Feed section -->
+            <td id="db-feed" align="right" style="min-width:250px;vertical-align:top">
+                <apex:pageBlock id="leadfeed">
+                    <c:Stream currentSObjectId="{!currentSObjectId}" currentSObjectType="{!currentSObjectType}" isSalesforceOne="{!isSalesforceOne}" escape="{!escape}"/>
+                </apex:pageBlock>
+            </td>
+            </tr>
+            </table>
+
+                <script type="text/javascript">
+                    (function() {
+                        function loadView(view)
+                        {
+                            Marketo.$currentViewValue.val(view);
+                            Marketo.$currentViewValue.trigger('change');
+                        }
+            
+                        $j(function() {
+                            var $mktMobileBestBetsPageDesktopBlock = $j("[id$=mktMobileBestBetsPageDesktopBlock]");
+                            $mktMobileBestBetsPageDesktopBlock.css({
+                                'border': 'none'
+                            });
+                            /*
+                            if({!showWhatIsNew}) {
+                                $tooltipParent = $j('.bodyDiv').eq(0);
+                    
+                                $j('#db-what-is-new').appendTo($tooltipParent);
+                    
+                                $j('#db-what-is-new-close').click(function() {
+                                    $j('.mkto').data('tooltip').hide();
+
+                                    return false;
+                                });
+                    
+                                $j('#db-what-is-new-disable').click(function() {
+                                    Marketo.ajax('disableWhatIsNew');
+                                    $j('.mkto').data('tooltip').hide();
+
+                                    return false;
+                                });
+                    
+                                $j('.mkto').tooltip({
+                                    tip: '#db-what-is-new',
+                                    effect: 'slide',
+                                    position: 'top right',
+                                    relative: true,
+                                    offset: [290, -351],
+                                    events: {
+                                        def: 'load, unload',
+                                        tooltip: 'mouseenter'
+                                    },
+                                    onShow: function() {
+                                        var $tip = this.getTip();
+                            
+                                        this.getTip().css({
+                                            left: 'auto',
+                                            right: $tooltipParent.width() - $tip.outerWidth() - $tip.position().left
+                                        });
+                                    }
+                                });
+                    
+                                $j('.mkto').data('tooltip').show();
+                            }
+                            */
+                            $j('#db-content')
+                                // views list listener
+                                .delegate('#db-views-list', 'change', function() {
+                                    loadView($j('#db-views-list').val());
+                                })
+                                .delegate('#MBB_Tab', 'click', function() {
+                                    loadView("MBB");
+                                })
+                                .delegate('#MWL_Tab', 'click', function() {
+                                    loadView("MWL");
+                                })
+                                .delegate('#WA_Tab', 'click', function() {
+                                    loadView("WA");
+                                })
+                                .delegate('#AWA_Tab', 'click', function() {
+                                    loadView("AWA");
+                                })
+                                .delegate('#ME_Tab', 'click', function() {
+                                    loadView("ME");
+                                })
+                                // tabs listener
+                                .delegate('#db-tabs a', 'click', function(e) {
+                                    loadView($j(this).data('view'));
+                        
+                                    e.preventDefault();
+                                });
+                        });
+                    })();
+                </script>
+        </apex:form>
+    </apex:pageBlock> <!-- END mainblock -->
+                    
+    <script type="text/javascript"> (function() {
+            $j('.apexp .bPageBlock.apexDefaultPageBlock .pbBody').css({
+                'margin': '0px'
+            });
+        })();
+    </script>
+</apex:page>

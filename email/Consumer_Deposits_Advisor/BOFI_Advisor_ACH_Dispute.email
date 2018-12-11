@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},</span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif"><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);"><br></span>We are sorry to hear of the unauthorized transaction. We
+will begin our investigation immediately to reclaim the money that was lost.
+Please complete and return the <a href="https://www.bofiadvisor.com/portals/bofiadvisor2/documents/forms/written-statement-of-unauthorized-ach-debit-form.pdf?t=1501709062974" target="_blank">Written Statement
+of Unauthorized ACH Debit</a><span style="color: rgb(102, 102, 102);"> </span>by:<br><ol><li>Sending a <b>Secure message</b> through Online Banking with the
+completed form attached</li><li>Fax to: <b>858-350-0443</b>; or</li><li>Mail to: <b>BOFI Federal Bank P.O. Box 509127, San Diego,
+CA&nbsp; 92150-9948</b></li></ol><p>We appreciate your business and commit to providing superior
+Banking products, support and services.</p><p><br></p></font><p>Best Regards,</p><p><br></p><p>{!User.FirstName}<br>BofI Advisor Customer Service</p><p><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<p><br></p>]]></td>
+</tr>
+</table>

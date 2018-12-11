@@ -1,0 +1,3 @@
+This is an automated reminder that the BI Support is due in 7 days for  {!Opportunity.Account}.
+
+Please click on the following link to view the Opportunity record:  {!Opportunity.Link}

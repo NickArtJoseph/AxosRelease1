@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>When did you issue my 1099-INT?</name>
+    <style>formalLetter</style>
+    <subject>When did you issue my 1099-INT?</subject>
+    <textOnly>The 1099-INT statement was mailed to your current address on file on [Date]. This statement is also available within Online Banking and can be accessed by following these steps
+
+
+1. Click Additional Services
+2. Click eStatements
+3. On the left hand side, click on “View Statement History” for the applicable account.
+4. Select the earlier dated statement for [date].
+
+
+
+We appreciate your business and commit to providing superior Banking products, support and services.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

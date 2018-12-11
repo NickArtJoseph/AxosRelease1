@@ -1,0 +1,6 @@
+The boarding form for {!Boarding_Form__c.Opportunity__c} has been approved. Please update the sub-stage to Pending Final Boarding when you are ready to board/fund.
+
+{!Boarding_Form__c.Link}
+
+Thank you,
+Salesforce

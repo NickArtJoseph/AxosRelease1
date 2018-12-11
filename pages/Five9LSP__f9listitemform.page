@@ -1,0 +1,96 @@
+<apex:page standardController="Five9LSP__Five9_List_Item__c" title="{!strPageTitle}" extensions="Five9LSP.Five9_List_Item_Controller_Extension">
+    <style>
+        .status{
+            width:200px;
+            height:100px;
+        }
+    </style>
+
+<apex:includeScript value="/support/console/30.0/integration.js"/>
+    <script type="text/javascript"> 
+        var pageLoad = window.onload;
+          window.onload = function() {
+                if (pageLoad) {
+                        pageLoad();
+                }
+                sforce.console.setTabTitle('{! strPageTitle}');
+          }
+        function openLookup(baseURL, width, modified, searchParam){
+            var originalbaseURL = baseURL;
+            var originalwidth = width;
+            var originalmodified = modified;
+            var originalsearchParam = searchParam;
+        
+            var lookupType = baseURL.substr(baseURL.length-3, 3);
+            if (modified == '1') baseURL = baseURL + searchParam;
+        
+            var isCustomLookup = false;
+        
+            if(lookupType == "{!JSENCODE(strListKeyPrefix)}"){
+        
+                var urlArr = baseURL.split("&");
+                var txtId = '';
+                if(urlArr.length > 2) {
+                    urlArr = urlArr[1].split('=');
+                    txtId = urlArr[1];
+                }
+        
+                baseURL = "/apex/CustomFive9ListLookup?txt=" + txtId;
+        
+                baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.myForm}") + "&srch=" + escapeUTF("{!strLookupKey}");
+                if (modified == '1') {
+                    baseURL = baseURL + "&lksearch=" + searchParam;
+                }
+        
+                if(txtId.indexOf('five9ListLookup') > -1 ){
+                    isCustomLookup = true;
+                }
+            }
+        
+            if(isCustomLookup == true){
+                openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }
+            else {
+                if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam;
+                openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            } 
+        }
+    </script>    
+    <apex:form id="myForm">
+        <!--{!strLookupKey} - {!strLookupValue} -->
+        <apex:sectionHeader title="Five9 List Item" subtitle="{!strSectionTitle}"/>
+        <apex:pageBlock mode="edit">
+            <apex:Pagemessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <!--<apex:commandButton action="{!saveAndNew}" value="Save & New"/>-->
+                <apex:commandButton action="{!cancel}" value="Cancel"/> 
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Five9 List Item" columns="2">
+                <apex:inputField id="five9ListLookup" value="{!f9ListItem.Five9LSP__Five9_List__c}" onchange="fetchFive9ListDetails();">
+                    <apex:actionStatus id="fetchStatus" >
+                        <apex:facet name="start" >
+                          <img src="/img/loading.gif" />                    
+                        </apex:facet>
+                    </apex:actionStatus>
+                </apex:inputField>
+                <apex:inputField value="{!f9ListItem[strControllingObject]}" />
+                <apex:repeat value="{!$ObjectType.Five9LSP__Five9_List_Item__c.FieldSets.Five9LSP__edit_view}" var="f">
+                    <apex:inputField value="{!f9ListItem[f.fieldPath]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>
+                <apex:outputField value="{!f9ListItem.CreatedBy.Name}" label="Created By"/>
+                <apex:outputField value="{!f9ListItem.CreatedDate}"/>
+                <apex:outputField value="{!f9ListItem.Name}"/>
+                <apex:outputField value="{!f9ListItem.LastModifiedBy.Name}" label="Last Modified By"/>
+                <apex:outputField value="{!f9ListItem.LastModifiedDate}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:actionFunction action="{!fetchFive9ListDetails}" name="fetchFive9ListDetails" id="fetchFive9ListDetails" reRender="myForm" status="fetchStatus"/>
+        
+        <script>
+            //set the height and width of text area
+            document.getElementsByTagName('textarea')[0].classList.add("status");
+        </script>
+    </apex:form>
+</apex:page>

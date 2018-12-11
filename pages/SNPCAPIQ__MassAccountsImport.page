@@ -1,0 +1,30 @@
+<apex:page controller="SNPCAPIQ.MassAccountsImportController" title="S&P Capital IQ - Import Companies">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="snp snp-mass-account-import">
+        <apex:form >
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right" />
+                <div class="snp-logo">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SnP_resources, 'img/snp-logo35.png')}"/>
+                </div>
+            </div>
+            <div class="snp-panel-title">Please upload CSV file containing S&amp;P Capital IQ Company ID's.</div>
+            <div class="snp-container15">
+                <p>Mass import supports a Comma Separated Values (CSV) file with the Capital IQ Company ID as the identifier. CSV files can be viewed and edited in spreadsheet applications like Microsoft Excel, or in any text editor.</p>
+                <br/>
+                <div class="snp-form-group">
+                    <apex:outputLabel value="Source File" styleClass="snp-form-label left"/>
+                    <apex:inputFile value="{!importFileBody}" required="true"/>
+                </div>
+                <apex:commandButton action="{!startMassImport}" value="Start Mass Import" styleClass="snp-btn snp-btn-large"/>
+
+                <apex:pageMessage strength="2" severity="{!operationStatus.severityName}" rendered="{!operationStatus != null}" summary="{!operationStatus.summary}" />
+            </div>
+        </div>
+        </apex:form>
+    </div>
+    
+</apex:page>

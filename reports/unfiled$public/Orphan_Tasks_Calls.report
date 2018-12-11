@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_67524110</developerName>
+        <masterLabel>Phone Result</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Bad Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wrong Number</sourceValue>
+            </sourceValues>
+            <value>Bad Number/Wrong Number</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Busy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Answer</sourceValue>
+            </sourceValues>
+            <value>Busy/No Answer</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Correct Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contact</sourceValue>
+            </sourceValues>
+            <value>Contact/Correct Contact</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Live Message</sourceValue>
+            </sourceValues>
+            <value>Message Left</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Activity.qbdialer__Call_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>ACCOWNER</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>BucketField_67524110</field>
+    </columns>
+    <columns>
+        <field>CALLDISPOSITION</field>
+    </columns>
+    <columns>
+        <field>Activity.isdc_dialed_phone_number__c</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>CALLDURATIONFORMATTED</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CALLDISPOSITION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLDISPOSITION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>set callback</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity.qbdialer__Call_Date_Time__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Orphan Tasks - Calls</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>t</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Activity.qbdialer__Call_Date_Time__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

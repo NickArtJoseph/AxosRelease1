@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Acquisition</fullName>
+        <default>false</default>
+        <label>Acquisition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advertisement</fullName>
+        <default>false</default>
+        <label>Advertisement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advisor</fullName>
+        <default>false</default>
+        <label>Advisor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AE referral</fullName>
+        <default>false</default>
+        <label>AE referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Affinity</fullName>
+        <default>false</default>
+        <label>Affinity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Article</fullName>
+        <default>false</default>
+        <label>Article</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Association</fullName>
+        <default>false</default>
+        <label>Association</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banner</fullName>
+        <default>false</default>
+        <label>Banner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bloomberg BNA</fullName>
+        <default>false</default>
+        <label>Bloomberg BNA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BofI</fullName>
+        <default>false</default>
+        <label>BofI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker Dealer</fullName>
+        <default>false</default>
+        <label>Broker Dealer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Banking</fullName>
+        <default>false</default>
+        <label>Business Banking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Partner</fullName>
+        <default>false</default>
+        <label>Business Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C&amp;I Lending</fullName>
+        <default>false</default>
+        <label>C&amp;I Lending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call In</fullName>
+        <default>false</default>
+        <label>Call In</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chamber Event</fullName>
+        <default>false</default>
+        <label>Chamber Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cold Call</fullName>
+        <default>false</default>
+        <label>Cold Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <label>Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Attendee List</fullName>
+        <default>false</default>
+        <label>Conference Attendee List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Business Card</fullName>
+        <default>false</default>
+        <label>Conference Business Card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Convention</fullName>
+        <default>false</default>
+        <label>Convention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Co-Op (Lenders One, CMC)</fullName>
+        <default>false</default>
+        <label>Co-Op (Lenders One, CMC)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Referral</fullName>
+        <default>false</default>
+        <label>Customer Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Direct</fullName>
+        <default>false</default>
+        <label>Direct</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Direct Mail</fullName>
+        <default>false</default>
+        <label>Direct Mail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Directory</fullName>
+        <default>false</default>
+        <label>Directory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Drive By</fullName>
+        <default>false</default>
+        <label>Drive By</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Announcement</fullName>
+        <default>false</default>
+        <label>Email Announcement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Campaign</fullName>
+        <default>false</default>
+        <label>Email Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Campaign Website</fullName>
+        <default>false</default>
+        <label>Email Campaign Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employer Service</fullName>
+        <default>false</default>
+        <label>Employer Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employer Services Landing Page</fullName>
+        <default>false</default>
+        <label>Employer Services Landing Page</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Customer (correspondent)</fullName>
+        <default>false</default>
+        <label>Existing Customer (correspondent)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Customer (Wholesale)</fullName>
+        <default>false</default>
+        <label>Existing Customer (Wholesale)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Relationship</fullName>
+        <default>false</default>
+        <label>Existing Relationship</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Experian</fullName>
+        <default>false</default>
+        <label>Experian</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Google/LinkedIn</fullName>
+        <default>false</default>
+        <label>Google/LinkedIn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Call</fullName>
+        <default>false</default>
+        <label>Inbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industry Contact</fullName>
+        <default>false</default>
+        <label>Industry Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industry Trade Magazines/Blogs</fullName>
+        <default>false</default>
+        <label>Industry Trade Magazines/Blogs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internet Lead</fullName>
+        <default>false</default>
+        <label>Internet Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>J. Shoop Contacts</fullName>
+        <default>false</default>
+        <label>J. Shoop Contacts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Landing Page</fullName>
+        <default>false</default>
+        <label>Landing Page</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead2Results</fullName>
+        <default>false</default>
+        <label>Lead2Results</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LiveChat</fullName>
+        <default>false</default>
+        <label>LiveChat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Local Conference/trade show</fullName>
+        <default>false</default>
+        <label>Local Conference/trade show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LOS</fullName>
+        <default>false</default>
+        <label>LOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Major Conference</fullName>
+        <default>false</default>
+        <label>Major Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <label>Marketing Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Money Service Business</fullName>
+        <default>false</default>
+        <label>Money Service Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multi-Family Referral</fullName>
+        <default>false</default>
+        <label>Multi-Family Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multi-Unit</fullName>
+        <default>false</default>
+        <label>Multi-Unit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nerdwallet</fullName>
+        <default>false</default>
+        <label>Nerdwallet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network - Discover</fullName>
+        <default>false</default>
+        <label>Network - Discover</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Networking Event</fullName>
+        <default>false</default>
+        <label>Networking Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network - MC</fullName>
+        <default>false</default>
+        <label>Network - MC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network - Other</fullName>
+        <default>false</default>
+        <label>Network - Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network - Visa</fullName>
+        <default>false</default>
+        <label>Network - Visa</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Franchise</fullName>
+        <default>false</default>
+        <label>New Franchise</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Banner</fullName>
+        <default>false</default>
+        <label>Online Banner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Rate Table</fullName>
+        <default>false</default>
+        <label>Online Rate Table</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Organic</fullName>
+        <default>false</default>
+        <label>Organic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Department</fullName>
+        <default>false</default>
+        <label>Other Department</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner Referral</fullName>
+        <default>false</default>
+        <label>Partner Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payroll Company</fullName>
+        <default>false</default>
+        <label>Payroll Company</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pay-to-Click</fullName>
+        <default>false</default>
+        <label>Pay-to-Click</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PEO</fullName>
+        <default>false</default>
+        <label>PEO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Personal Loan</fullName>
+        <default>false</default>
+        <label>Personal Loan</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Inquiry</fullName>
+        <default>false</default>
+        <label>Phone Inquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PPC</fullName>
+        <default>false</default>
+        <label>PPC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pre-Settlement</fullName>
+        <default>false</default>
+        <label>Pre-Settlement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Previous Contact</fullName>
+        <default>false</default>
+        <label>Previous Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Print Advertising</fullName>
+        <default>false</default>
+        <label>Print Advertising</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Processor</fullName>
+        <default>false</default>
+        <label>Processor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Purchased List</fullName>
+        <default>false</default>
+        <label>Purchased List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral Partner</fullName>
+        <default>false</default>
+        <label>Referral Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>REISA</fullName>
+        <default>false</default>
+        <label>REISA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Research Department</fullName>
+        <default>false</default>
+        <label>Research Department</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rev Lien Search</fullName>
+        <default>false</default>
+        <label>Rev Lien Search</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Road Trip</fullName>
+        <default>false</default>
+        <label>Road Trip</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scotsman Guide</fullName>
+        <default>false</default>
+        <label>Scotsman Guide</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Search Engine</fullName>
+        <default>false</default>
+        <label>Search Engine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Site Visit</fullName>
+        <default>false</default>
+        <label>Site Visit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategic Partners</fullName>
+        <default>false</default>
+        <label>Strategic Partners</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telemarketing</fullName>
+        <default>false</default>
+        <label>Telemarketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show</fullName>
+        <default>false</default>
+        <label>Trade Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UCC list</fullName>
+        <default>false</default>
+        <label>UCC list</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Website Lead Form</fullName>
+        <default>false</default>
+        <label>Website Lead Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wholesale</fullName>
+        <default>false</default>
+        <label>Wholesale</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Word of mouth</fullName>
+        <default>false</default>
+        <label>Word of mouth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PNIXX Provider</fullName>
+        <default>false</default>
+        <label>PNIXX Provider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Research</fullName>
+        <default>false</default>
+        <label>Research</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Chat Sale</fullName>
+        <default>false</default>
+        <label>Sales Chat Sale</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tax Transfer</fullName>
+        <default>false</default>
+        <label>Tax Transfer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web RMI</fullName>
+        <default>false</default>
+        <label>Web RMI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WeChat</fullName>
+        <default>false</default>
+        <label>WeChat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead Partner</fullName>
+        <default>false</default>
+        <label>Lead Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit Trigger</fullName>
+        <default>false</default>
+        <label>Credit Trigger</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LendingTree</fullName>
+        <default>false</default>
+        <label>LendingTree</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Chat</fullName>
+        <default>false</default>
+        <label>Web Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Service Call</fullName>
+        <default>false</default>
+        <label>Inbound Service Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Sales Call</fullName>
+        <default>false</default>
+        <label>Inbound Sales Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campaign</fullName>
+        <default>false</default>
+        <label>Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketrac</fullName>
+        <default>false</default>
+        <label>Marketrac</label>
+    </standardValue>
+</StandardValueSet>

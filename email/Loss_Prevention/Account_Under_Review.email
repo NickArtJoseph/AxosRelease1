@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br>Due to recent activity, your account has been placed under review.&nbsp; Please note that your account access will be blocked until our review is complete.&nbsp;As part of our review we need to validate your identity as well as your physical and mailing addresses.<br><br>For ID verification please, submit a clear, legible copy of your current, unexpired driver's license or State ID.<br><br>For address verification, please submit a current, not past due, utility bill with your name and service address printed on the document.<br><br>If your mailing address is different from your physical address, the utility bill you submit should have your name, service address, and mailing address all printed on the document.<br></font></span><span style="font-family: arial; font-size: 12pt;"><br>If you would like further assistance, simply reply to this email or call us at 1-877-247-8002.<br><br>Thank you for your business.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

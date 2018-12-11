@@ -1,0 +1,39 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false">
+	<apex:slds />
+
+	<style type="text/css">
+		body {
+			width: 100%; height: 100%;
+		}
+		.header-container {
+			position:absolute;
+			width: 100%;
+			background-color: #3c3131;
+			color: white;
+		}
+		.message-container {
+			position:absolute;
+			height:100%;
+			width:100%;
+    		display: table;
+		}
+		.page-message {
+			display: table-cell;
+		    vertical-align: middle;
+		    text-align:center;
+		}
+	</style>
+
+	<div class="slds-scope">
+		<div class="slds-text-align_center">
+			<div class="header-container slds-p-top_medium slds-p-bottom_medium">
+				Thank you
+			</div>
+			<div class="message-container slds-align_absolute-center">
+				<apex:outputText styleClass="page-message" value="{! $Label.LiveAgent_PostChat_Thanks }"   rendered="{! AND( ISBLANK($CurrentPage.parameters.error), $CurrentPage.parameters.disconnectedBy != 'agentsUnavailable' ) }" />
+				<apex:outputText styleClass="page-message" value="{! $CurrentPage.parameters.error }"      rendered="{! NOT( ISBLANK($CurrentPage.parameters.error) ) }" />
+				<apex:outputText styleClass="page-message" value="{! $Label.LiveAgent_PostChat_NoAgents }" rendered="{! $CurrentPage.parameters.disconnectedBy == 'agentsUnavailable' }" />
+			</div>
+		</div>
+	</div>
+</apex:page>

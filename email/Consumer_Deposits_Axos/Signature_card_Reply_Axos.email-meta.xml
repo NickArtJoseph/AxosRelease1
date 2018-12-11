@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - Signature card Reply</name>
+    <style>formalLetter</style>
+    <subject>Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Attached to this message is your Signature card, please print and send the signed Signature Card:
+
+
+1) Mail to: Axos Bank P.O. Box 509127, San Diego, CA  92150-9948
+
+2) Fax to: 858-350-0443; or
+
+3) Send a secure message via Online Banking with the completed Signature Card attached
+
+
+We appreciate your business and commit to providing superior Banking products, support and services.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

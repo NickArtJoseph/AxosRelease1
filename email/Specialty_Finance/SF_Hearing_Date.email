@@ -1,0 +1,3 @@
+The Hearing Date field has been updated in Salesforce for {!Opportunity.Account}. Please note BI Support is due two weeks prior to the hearing date.
+
+Please click on the following link to view the Opportunity record:  {!Opportunity.Link}

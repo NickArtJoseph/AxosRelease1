@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">As Axos Bank, you will be able to access any ATM in the nation. Depending on your type of account, transaction fees may be waived. Please refer to the appropriate Deposit Account Agreement and Fee Schedule below:</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial"><a href="https://www.axosbank.com/-/media/Axos/Documents/Legal/Personal-Deposit-Account-Agreement-and-Schedule-Fees--Eff-11-16-2018-Final.pdf?la=en&amp;hash=CD0D1DA37B4DA26DC80C8ED43106D817B8E3FB93">Personal Deposit Account Agreement and Schedule of Fees</a></font></div><div style=""><font face="arial"><a href="https://www.axosbank.com/-/media/Axos/Documents/Legal/Business-Deposit-Account-Agreement-and-Schedule-of-Fees--Effective-11-16-2018-Final.pdf?la=en&amp;hash=880C2AFB8802BA5715F28DEB8CE81D9E11A58C74">Business Deposit Account Agreement and Schedule of Fees</a></font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

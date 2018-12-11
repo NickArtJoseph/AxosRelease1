@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>LLC_BI__Account_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Populate this picklist field to indicate the deposit account type. This field is manually populated during the deposit account opening workflow.</description>
+        <externalId>false</externalId>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>MMA Savings</fullName>
+                    <default>false</default>
+                    <label>MMA Savings</label>
+                </value>
+                <value>
+                    <fullName>MMA Checking</fullName>
+                    <default>false</default>
+                    <label>MMA Checking</label>
+                </value>
+                <value>
+                    <fullName>Business Savings</fullName>
+                    <default>false</default>
+                    <label>Business Savings</label>
+                </value>
+                <value>
+                    <fullName>Business Checking</fullName>
+                    <default>false</default>
+                    <label>Business Checking</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Completion_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field autopopulates with an ID that is used to verify vendor details for funding transaction.</description>
+        <externalId>false</externalId>
+        <label>Funding Completion ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Failure_Detail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional long text field autopopulates with an error message from the vendor if the account funding request fails.</description>
+        <externalId>false</externalId>
+        <label>Funding Failure Detail</label>
+        <length>4000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Method_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set when the user selects a funding method during the New Deposit Workflow. It indicates which Funding Method Type is related to the Funding Method of a deposit account.</description>
+        <externalId>false</externalId>
+        <label>Funding Method Type</label>
+        <referenceTo>LLC_BI__Funding_Method_Type__c</referenceTo>
+        <relationshipLabel>Funding Methods</relationshipLabel>
+        <relationshipName>Funding_Methods</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Session_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field autopopulates with the Session ID during which a funding transaction occurs.</description>
+        <externalId>false</externalId>
+        <label>Funding Session ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This picklist field autopopulates with the current funding status, used to track the progress of deposit account funding.</description>
+        <externalId>false</externalId>
+        <label>Funding Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In-Progress</fullName>
+                    <default>false</default>
+                    <label>In-Progress</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Trial Deposits</fullName>
+                    <default>false</default>
+                    <label>Awaiting Trial Deposits</label>
+                </value>
+                <value>
+                    <fullName>Trial Deposit Failure</fullName>
+                    <default>false</default>
+                    <label>Trial Deposit Failure</label>
+                </value>
+                <value>
+                    <fullName>Trial Deposit Success</fullName>
+                    <default>false</default>
+                    <label>Trial Deposit Success</label>
+                </value>
+                <value>
+                    <fullName>Trial Deposit Reject</fullName>
+                    <default>false</default>
+                    <label>Trial Deposit Reject</label>
+                </value>
+                <value>
+                    <fullName>Funding Success</fullName>
+                    <default>false</default>
+                    <label>Funding Success</label>
+                </value>
+                <value>
+                    <fullName>Funding Failure</fullName>
+                    <default>false</default>
+                    <label>Funding Failure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Target_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field autopopulates with the ID of the institution using the funding integration.</description>
+        <externalId>false</externalId>
+        <label>Funding Target ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_User_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field autopopulates with the User ID of the user of the funding integration.</description>
+        <externalId>false</externalId>
+        <label>Funding User ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Funding Method</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Funding Method Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Funding Methods</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

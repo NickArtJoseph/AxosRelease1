@@ -1,0 +1,66 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Hello {!Case.Contact},<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">We will be happy to
+assist you with converting your personal account to a Trust account. This will
+be a two-step process:&nbsp;<br>
+<br>
+Step 1: Complete the&nbsp;<a href="https://www.bofiadvisor.com/portals/bofiadvisor2/documents/forms/change-request-trust-certification.pdf?t=1501709062974">Change
+Request: Trust Certification</a>&nbsp;form.<br>
+<br>
+Step 2: Return the completed Trust Certification form for processing by;<o:p></o:p></span></p>
+
+<ol start="1" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;line-height:normal;mso-list:l0 level1 lfo1;tab-stops:list .5in"><b><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Secure Message</span></b><span style="font-size:12.0pt;
+     font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;">:
+     Login to <a href="https://onlinebanking.axosbank.com/">Online Banking</a>,
+     click on Contact Us, and send a secure email with a scanned copy of the
+     signed documents<o:p></o:p></span></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;line-height:normal;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Fax to:&nbsp;<b>858-350-0443</b>; or<o:p></o:p></span></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;line-height:normal;mso-list:l0 level1 lfo1;tab-stops:list .5in"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Mail to:&nbsp;<b style="mso-bidi-font-weight:normal">Axos
+     Bank <span style="mso-bidi-font-weight:bold">Deposit Operations: New
+     Accounts PO BOX 509127 San Diego, CA 92150-9948.</span></b><o:p></o:p></span></li>
+</ol>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Your trust modification
+request will be reviewed within three business days of receipt of the Account
+Vesting Change form and requested documentation. Once we have processed the
+information we will mail you an updated Signature Card for completion and
+return; upon receipt the process will be completed. If your trust has not been
+amended to reflect any additional trustees, we recommend you consult legal
+counsel for further clarification and guidance.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><br>
+<span style="background:white"><br>
+Best Regards,</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">{!User.FirstName}<span style="background:white"><br>
+Axos Bank Customer Service</span><o:p></o:p></span></p>]]></td>
+</tr>
+</table>

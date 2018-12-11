@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Testing Work Item {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Testing Work Item</label>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Lookup_CaseID</name>
+        <label>Lookup CaseID</label>
+        <locationX>430</locationX>
+        <locationY>260</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Show_Results</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Enter_ID</elementReference>
+            </value>
+        </filters>
+        <object>Case</object>
+        <outputAssignments>
+            <assignToReference>CaseID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>CaseStatus</assignToReference>
+            <field>Status</field>
+        </outputAssignments>
+    </recordLookups>
+    <screens>
+        <name>Display_Form</name>
+        <label>Display Form</label>
+        <locationX>437</locationX>
+        <locationY>115</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Lookup_CaseID</targetReference>
+        </connector>
+        <fields>
+            <name>Enter_ID</name>
+            <dataType>String</dataType>
+            <fieldText>Enter ID</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+    </screens>
+    <screens>
+        <name>Show_Results</name>
+        <label>Show Results</label>
+        <locationX>450</locationX>
+        <locationY>383</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>ShowResults</name>
+            <fieldText>{!CaseStatus}
+{!CaseID}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+    </screens>
+    <startElementReference>Display_Form</startElementReference>
+    <variables>
+        <name>CaseID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>CaseStatus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

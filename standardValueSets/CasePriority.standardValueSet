@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Medium</fullName>
+        <default>true</default>
+        <label>Medium</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Standard</fullName>
+        <default>false</default>
+        <label>Standard</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VIP</fullName>
+        <default>false</default>
+        <label>VIP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P1 (Critical)</fullName>
+        <default>false</default>
+        <label>P1 (Critical)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P2 (Urgent)</fullName>
+        <default>false</default>
+        <label>P2 (Urgent)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P3 (High)</fullName>
+        <default>false</default>
+        <label>P3 (High)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P4 (Normal)</fullName>
+        <default>false</default>
+        <label>P4 (Normal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P5 (Low)</fullName>
+        <default>false</default>
+        <label>P5 (Low)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P6 (Ongoing)</fullName>
+        <default>false</default>
+        <label>P6 (Ongoing)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>P7 (Feature Enhancement)</fullName>
+        <default>false</default>
+        <label>P7 (Feature Enhancement)</label>
+    </standardValue>
+</StandardValueSet>

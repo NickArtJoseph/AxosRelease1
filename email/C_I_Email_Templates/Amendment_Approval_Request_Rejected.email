@@ -1,0 +1,7 @@
+Amendment Submitter: {!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName}
+Amendment Company Name: {!Opportunity.Account}
+
+Approver: {!ApprovalRequest.Process_Approver}
+Comments: {!ApprovalRequest.Comments}
+
+Link to Amendment: {!Amendment__c.Link}

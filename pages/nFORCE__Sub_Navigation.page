@@ -1,0 +1,76 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.SubNavigation" showHeader="false" standardStylesheets="false">
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+
+	<c:ncPubsubIncludes />
+	<c:ncDataProvidersIncludes />
+	<c:ncUIIncludes />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'services/Navigation.service.js')}" />
+
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'components/TertiaryNavigation.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'components/TertiaryNavigationItem.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'providers/TertiaryNavigationRemoting.provider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'services/TertiaryNavigation.service.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'application/App.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'services/Navigation.service.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'providers/SecondaryNavigationRemoting.provider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'services/SecondaryNavigation.service.js')}" />
+
+	<div id="ncTertiaryNavigation">
+		<nc-tertiary-navigation
+			context-id="{!contextObjectId}"
+			current-page="{!host}/apex/{!$Currentpage.Name}"
+			app-resolved="{!appResolved}"
+			session-id="{!$CurrentPage.parameters.sid}">
+		</nc-tertiary-navigation>
+
+		<c:ncTertiaryNavigationPartials />
+
+		<script>
+			(function(){
+				'use strict';
+				var resizeId;
+				jQuery(document).ready(function () {
+					jQuery(window).resize(function() {
+						clearTimeout(resizeId);
+						resizeId = setTimeout(doneResizing, 500);
+					});
+					function doneResizing(){
+						jQuery(window).resize(function() {
+							jQuery("#tertiary-navigation").itemOverflow(
+								'#tertiary-navigation', '#tertiary-navigation-dropdown');
+						});
+					}
+				});
+			})();
+		</script>
+
+		<script>
+			(function(){
+				'use strict';
+				angular.module('ncTertiaryNavigation')
+				.config(function(tertiaryNavigationRemotingProvider){
+					tertiaryNavigationRemotingProvider.setEndpoint({
+						getMenu: '{!$RemoteAction.SubNavigation.getMenu}'
+					});
+				});
+
+				angular.module('ncDataProviders')
+				.config(function(labelProvider){
+					labelProvider.setLabels({
+						More: "{!$Label.More}"
+					});
+				});
+			})();
+		</script>
+	</div>
+</apex:page>

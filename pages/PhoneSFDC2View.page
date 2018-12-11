@@ -1,0 +1,4 @@
+<apex:page standardController="Phone_SFDC2__c" extensions="PhoneSFDC2Controller">
+<apex:messages />
+<apex:detail subject="{!id}" relatedList="true" />
+</apex:page>

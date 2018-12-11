@@ -1,0 +1,95 @@
+<apex:page standardController="Case" 
+           extensions="CaseRecordTypeSerchController" 
+           sidebar="false" 
+           lightningStylesheets="true">
+
+<apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+        function testSetTabTitle() {
+            //Set the current tab's title
+            sforce.console.setTabTitle('Create New Case');
+        }
+        var pageLoad = window.onload;
+          window.onload = function() {
+                if (pageLoad) {
+                        pageLoad();
+                }
+                  testSetTabTitle();
+          }
+           </script>
+
+
+
+  <apex:form >
+  <apex:pageMessages id="errors" />
+
+  <apex:pageBlock title="What is this Case About?" mode="edit">
+
+  <table width="100%" border="0">
+  <tr>  
+    <td width="210" valign="top">
+
+      <apex:pageBlock title="Search" mode="edit" id="criteria">
+
+      <script type="text/javascript">
+      function doSearch() {
+        searchServer(
+          document.getElementById("Name").value
+          );
+      }
+      </script> 
+
+      <apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,debug,errors">
+          <apex:param name="Name" value="" />
+      </apex:actionFunction>
+
+      <table cellpadding="2" cellspacing="2">
+      <tr>
+        <td style="font-weight:bold;"> <br/>
+        <input type="text" id="Name" onkeyup="doSearch();" placeholder="(Type in Name or Description here)" size="26" />
+        </td>
+      </tr>
+      </table>
+
+      </apex:pageBlock>
+
+    </td>
+    <td valign="top">
+
+    <apex:pageBlock mode="edit" id="results">
+
+        <apex:pageBlockTable value="{!RTCases}" var="RTCase">
+
+            <apex:column >
+                <apex:facet name="header">
+                    <apex:commandLink value="Name" action="{!toggleSort}" rerender="results,debug">
+                        <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>
+                 <apex:outputLink value="/apex/CreateNewCase?RecordType={!RTCase.Id}&ent=Case&nooverride=1&def_account_id={!accId}&def_contact_id={!contId}&def_parent_id={!parent}&rtdevName={!RTCase.DeveloperName}" >{!RTCase.Name}</apex:outputLink> 					                   
+<!--                   
+                 <apex:outputLink value="/500/e?RecordType={!RTCase.Id}&ent=Case&nooverride=1&def_account_id={!accId}&def_parent_id={!parent}" rendered="{!RTCase.DeveloperName != 'LS_Geneal_Request_test'}">{!RTCase.Name}</apex:outputLink>                    
+-->
+            </apex:column>
+
+            <apex:column >
+                <apex:facet name="header">
+                    <apex:commandLink value="Description" action="{!toggleSort}" rerender="results,debug">
+                        <apex:param name="sortField" value="Description" assignTo="{!sortField}"/>
+                    </apex:commandLink>
+                </apex:facet>
+                <apex:outputField value="{!RTCase.Description}"/>
+            </apex:column>
+
+        </apex:pageBlockTable>
+
+    </apex:pageBlock>
+
+    </td>
+  </tr>
+  </table>
+  </apex:pageBlock>
+
+  </apex:form>
+
+</apex:page>

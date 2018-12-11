@@ -1,0 +1,18 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>The Fair Market Value statement was mailed to your current
+address on file on [Date]. This statement is also available within Online
+Banking and can be accessed by following these steps;<br></font></p><ol><li><font face="Arial, sans-serif" style="">Click <b style="">Additional Services</b></font></li><li><font face="Arial, sans-serif" style="">Click <b style="">eStatements</b></font></li><li><font face="Arial, sans-serif" style="">On the left hand side, click on “<b style="">View Statement History</b>” for
+the applicable account.</font></li><li><font face="Arial, sans-serif" style="">Select the earlier dated statement for [date].</font></li></ol><font face="Arial, sans-serif" style="">We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font><p></p><div style="font-size: 12pt; font-family: arial;"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

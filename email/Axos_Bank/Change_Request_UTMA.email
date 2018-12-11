@@ -1,0 +1,47 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hello {!Case.Contact},<div><br></div><div><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: Arial, sans-serif;">We have received your request to convert your account. Only Savings type
+accounts can be converted into an account for your minor. This will be a
+two-step process:&nbsp;<br>
+<br>
+Step 1: Complete the&nbsp;<a href="https://www.bofiadvisor.com/portals/bofiadvisor2/documents/forms/change-request-uniform-transfers-to-minors.pdf?t=1501709062974">Change
+Request: Uniform Transfers to Minors</a>&nbsp;form.<br>
+<br>
+Step 2: Return the completed Beneficiary request forms for processing by:<o:p></o:p></span></p>
+
+<ol start="1" type="1">
+ <li class="MsoNormal" style="line-height: normal;"><b><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Secure Message:</span></b><span style="font-size:12.0pt;
+     font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;Login
+     to <a href="https://onlinebanking.axosbank.com/">Online Banking</a>, click
+     on Contact Us, and send a secure email with a scanned copy of the signed
+     documents.<o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height: normal;"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Fax to:<b>&nbsp;858-350-0443</b>; or<o:p></o:p></span></li>
+ <li class="MsoNormal" style="line-height: normal;"><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+     &quot;Times New Roman&quot;">Mail to: <b>Axos Bank Deposit Operations: New Accounts PO
+     BOX 509127 San Diego, CA 92150-9948</b><o:p></o:p></span></li>
+</ol>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: Arial, sans-serif;">Your change will be
+reviewed within three business days of receipt of the Account Vesting Change
+form.<br>
+<br>
+We appreciate your business and commit to providing superior Banking products,
+support and services.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: Arial, sans-serif;"><br>
+<span style="background:white"><br>
+Best Regards,</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 12pt; font-family: Arial, sans-serif;">&nbsp;</span></p>
+
+<span style="font-size: 12pt; line-height: 107%; font-family: Arial, sans-serif;">{!User.FirstName}<span style="background:white"><br>
+Axos Bank Customer Service</span></span></div>]]></td>
+</tr>
+</table>

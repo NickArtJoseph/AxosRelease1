@@ -1,0 +1,143 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+<head>
+    <title>Connects for Cisco Contact Center</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"></meta>
+    <script type="text/javascript">
+        //initialize cnx namespace
+        window.cnx = window.cnx || {};
+    </script>
+
+    <!-- Salesforce Classic "Aloha" theme -->
+    <apex:variable var="uiTheme" value="classic2010Theme" rendered="{!$CurrentPage.parameters.mode == ''}">
+        <apex:includeScript value="/support/api/39.0/interaction.js"/>
+        <script type="text/javascript">
+            window.cnx.crminteraction.environment = {
+                product: 'CC',
+                sfdcEnvironment:  'Classic',
+                mode: 'Classic'
+            };
+        </script>
+        <apex:includeScript value="/support/console/39.0/integration.js"/>
+    </apex:variable>
+
+    <!-- Lightning Desktop theme -->
+    <apex:variable var="uiTheme" value="lightningDesktop"  rendered="{!$CurrentPage.parameters.mode == 'Lightning'}">
+        <apex:includeScript value="/support/api/39.0/lightning/opencti_min.js"/>
+        <script type="text/javascript">
+            window.cnx.crminteraction.environment = {
+                product: 'CC',
+                sfdcEnvironment:  'Lightning',
+                mode: 'Lightning'
+            };
+        </script>
+    </apex:variable>
+
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/log4javascript/log4javascript.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery/dist/jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-ui-dist/jquery-ui.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-base64/jquery.base64.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/js-cookie/src/js.cookie.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-editInPlace/jquery.editinplace.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-autosize/jquery.autosize.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/moment/min/moment-with-locales.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/bowser/bowser.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/js/connects.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/css/connects.min.css')}"/>
+</head>
+<body>
+<div id="page">
+
+    <div id="errorPopupOverlay"></div>
+
+    <div id="tabmanager"></div>
+
+    <header id="header">
+        <!-- Custom Toolbar 1 -->
+        <div id="customToolbarContainerTop" class="customToolbarContainerTop"></div>
+        <!-- END - Custom Toolbar 1 -->
+        <!-- Agent bar -->
+        <div class="titleBar" id="titleBar">
+            <div class="titleBarButtonContainerLeft" id="titleBarButtonContainerLeft">
+                <!-- button dynamically added -->
+            </div>
+            <div id="agentInfo" class="titleBarText nowrap">
+                <!-- agent info dynamically added -->
+            </div>
+        </div>
+        <!-- END - Agent bar -->
+    </header>
+
+    <div id="content" class="content">
+        <div class="contentValueBorder">
+
+            <!-- Make call bar -->
+            <div id="makeCallBar" class="makeCallBar"></div>
+            <!-- END - Make call bar -->
+
+            <!-- Task Board -->
+            <div class="taskBoardRow">
+                <div class="taskBoardCell">
+                    <div class="taskBoard">
+                        <div class="taskBoardContent" id="taskBoardFirst"></div>
+                        <div class="taskBoardContent" id="taskBoardSecond"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Task Board end -->
+
+        </div>
+    </div>
+
+    <footer id="footer">
+        <!-- Custom Toolbar 2 -->
+        <div id="customToolbarContainerBottom" class="customToolbarContainerBottom"></div>
+        <!-- END - Custom Toolbar 2 -->
+
+        <div id="bsLogoBar">
+            <p class="settings"></p>
+            <p class="bsLogo">powered by</p>
+        </div>
+    </footer>
+
+</div>
+<!-- This is a panel for displaying error messages -->
+<table class="BSWeb_MessagePanel" id="BSWeb_ErrorMessageTable">
+    <tr>
+        <td class="MessagePanelPreviousButton" id="MessagePanelPreviousButton"></td>
+        <td class="MessagePanelConentTableContainer">
+            <table class="MessagePanelConentTable">
+                <tr>
+                    <td class="BSWeb_MessagePanelContentTitleContainer">
+                        <div class="BSWeb_MessagePanelContentTitle">
+                            <span class="BSWeb_MessagePanelContentTitleText" id="MessageTitle"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="">
+                        <div class="BSWeb_MessagePanelContentMessage">
+                            <span class="BSWeb_MessagePanelContentMessageText" id="MessageTxt"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="">
+                        <div class="">
+                            <div id="MessagePannelOkButton" class="MessagePanelContentFooterButtonOK">
+                                <span class="simpleButton">OK</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td class="MessagePanelNextButton" id="MessagePanelNextButton"></td>
+    </tr>
+</table>
+<!-- Error Message Panel end -->
+</body>
+</apex:page>

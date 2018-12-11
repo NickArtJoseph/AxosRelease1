@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<table width="600" height="400" border="0" cellspacing="5" cellpadding="5"><tbody><tr height="50" valign="top"><td style="font-size: 12pt; background-color: rgb(255, 255, 255);" locked="0" aeditid="c1r1" teditid="c1r1"></td></tr><tr height="300" valign="top"><td style="background-color: rgb(255, 255, 255);" locked="0" aeditid="c1r2" teditid="c1r2"><p><span style="font-size: 12pt;">Hello {!Case.Contact},</span><br><br><br>This is an automatic acknowledgement&nbsp;of receipt of&nbsp;your documents<span style="font-size: 12pt;">.&nbsp;</span><br><br>Please allow up to 2 business days for the verification process.&nbsp; If additional information is needed, we will contact you via email or phone<span style="font-size: 12pt;">.&nbsp;&nbsp;</span><br><br>If you&nbsp;have questions,&nbsp;please reply directly to this email<span style="font-size: 12pt;">.&nbsp;</span><br><span style="font-size: 12pt;"><br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,</font></span></p><p><span style="font-size: 12pt;"><font face="arial"><br></font></span>Axos Bank™ Customer Service</p></td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,10 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><font face="Arial, sans-serif">Hello&nbsp;{!Case.Contact},<br><br>We would like the opportunity to discuss this message to
+ensure we address all your concerns.&nbsp;<br><br>Please, call <b>888-502-2967&nbsp;</b>anytime. We are now available to
+assist customers 24/7! A Direct Banker will be happy to speak with you
+personally.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,</font></p><p class="MsoNormal"><font face="Arial, sans-serif"><br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif"><br>Axos Bank Customer Service</font></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><br></p><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif; font-size: 9pt; background-color: white;"><br></span></div><font face="arial" style="font-size: 12pt;"><o:p></o:p></font>]]></td>
+</tr>
+</table>

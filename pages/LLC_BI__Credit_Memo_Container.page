@@ -1,0 +1,12 @@
+<apex:page controller="LLC_BI.CreditMemoController" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false">
+	<c:Credit_Memo contextObject="{!contextObject}"
+		screenId="{!screenId}"
+		disablePrint="{!disablePrint}"
+		customStylesheet="{!customStylesheet}"
+		webPackResource="{!nCredWebpack}"
+		saveBodyAsAttachment="{!creditMemoExportEnabled}"
+		creditMemoViewer="{!creditMemoViewer}"
+		creditMemoObject="{!creditMemoObject}"
+		showCreditMemo="{!showCreditMemo}"
+		showStartPage="{!showStartPage}"/>
+</apex:page>

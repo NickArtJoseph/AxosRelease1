@@ -1,0 +1,5 @@
+Joleen,
+
+TPO account, {!Account.Name} (TPO Account ID: {!Account.TPO_Account_ID__c}), is being moved to TPO House due to a 6 month lack of production. 
+
+Please update IHM accordingly.

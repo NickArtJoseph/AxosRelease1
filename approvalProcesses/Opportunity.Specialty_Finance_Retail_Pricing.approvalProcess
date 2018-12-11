@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>Structure_Settlment_Sales_Reps</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Structured_Settlement</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>RecordType</field>
+        <field>Account</field>
+        <field>Purchase_Price_to_Customer__c</field>
+        <field>Payment_Type__c</field>
+        <field>Quoted_WAL__c</field>
+        <field>Qouted_Spread__c</field>
+        <field>Annuity_Issuer__c</field>
+        <field>Issuer_A_M_Best_Rating__c</field>
+        <field>Issuer_Moody_s_Rating__c</field>
+        <field>Issuer_S_P_Rating__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>kharty@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>rgodkin@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Initial Approval</label>
+        <name>Initial_Approval</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>daniel@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If Opportunity meets certain extra criteria then secondary approval is needed</description>
+        <entryCriteria>
+            <booleanFilter>1 OR 2 OR 3 OR (4 AND 5 AND 6 AND 7 AND 8)</booleanFilter>
+            <criteriaItems>
+                <field>Opportunity.Qouted_Spread__c</field>
+                <operation>lessThan</operation>
+                <value>7000</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Quoted_WAL__c</field>
+                <operation>greaterThan</operation>
+                <value>18</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Purchase_Price_to_Customer__c</field>
+                <operation>greaterThan</operation>
+                <value>500000</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Issuer_A_M_Best_Rating__c</field>
+                <operation>notEqual</operation>
+                <value>A-</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Issuer_A_M_Best_Rating__c</field>
+                <operation>notEqual</operation>
+                <value>A++</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Issuer_A_M_Best_Rating__c</field>
+                <operation>notEqual</operation>
+                <value>A+</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.Issuer_A_M_Best_Rating__c</field>
+                <operation>notEqual</operation>
+                <value>A</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Opportunity.RecordType</field>
+                <operation>notEqual</operation>
+                <value>Specialty Finance - Retail Lottery</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Secondary Approval</label>
+        <name>Secondary_Approval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Approval process for Specialty Finance Retail opportunity record types that are in the Pricing stage</description>
+    <emailTemplate>Specialty_Finance/SF_Pricing_Approval_Needed</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+  ISPICKVAL(StageName, &quot;Pricing&quot;),
+  OR(
+     RecordType.DeveloperName = &quot;Specialty_Finance_Retail_IGT&quot;,
+     RecordType.DeveloperName = &quot;Specialty_Finance_Retail_Lottery&quot;,
+     RecordType.DeveloperName = &quot;Specialty_Finance_Retail&quot;
+  ),
+  NOT(ISBLANK(Purchase_Price_to_Customer__c)),
+  NOT(ISBLANK(Quoted_WAL__c)),
+  NOT(ISBLANK(Quoted_Money_Raised__c)),
+  NOT(ISPICKVAL(Call_type__c, &quot;&quot;)),
+  NOT(ISPICKVAL(Call_Source__c, &quot;&quot;)),
+  NOT(ISPICKVAL(Competitive_Sale__c, &quot;&quot;)),
+  IF(
+    RecordType.DeveloperName = &quot;Specialty_Finance_Retail&quot;,
+      AND(
+        NOT(ISBLANK(Policy_Number__c)),
+        NOT(ISBLANK(Use_of_Proceeds__c))
+      ),
+      TRUE
+  )
+)</formula>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>SF_Pricing_Requested</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Specialty Finance Retail - Pricing</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,3 @@
+The Order Received field has been updated in Salesforce for {!Opportunity.Account}.
+
+Please click on the following link to view the Opportunity record:  {!Opportunity.Link}

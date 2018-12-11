@@ -1,0 +1,32 @@
+<apex:component >
+	<apex:attribute name="inquiryType" description="Chat Inquiry Type" type="ChatInquiryType__mdt" required="true" />
+	<apex:attribute name="businessUnit" description="Business Unit" type="String" required="true" />
+	<apex:attribute name="brand" description="Brand" type="String" required="true" />
+	<apex:attribute name="authenticated" description="It is for Logged In Customers" type="Boolean" required="true" />
+	<apex:attribute name="chatButton" description="Button to Route Id" type="LiveChatButton" required="true" />
+	<apex:attribute name="type" description="Component Type: (radio, option)" type="String" required="true" />
+
+	<apex:outputPanel rendered="{! 
+        AND(inquiryType.BuisinessUnit__c     = businessUnit, 
+            inquiryType.BrandName__c         = brand, 
+            inquiryType.AuthenticatedUser__c = authenticated) }">
+        <!-- Radio Input -->
+        <apex:outputPanel layout="block" styleClass="chatInput" rendered="{! type = 'radio' }">
+        	<input id="{! inquiryType.DeveloperName }-radio" 
+	            name="liveagent.prechat:ChatInquiryType" 
+	            required="required" 
+	            type="radio" 
+	            value="{! inquiryType.InquiryTypeLabel__c }"
+	            data-button-id="{! LEFT(chatButton.Id, 15) }"
+	            data-queue="{! chatButton.Queue.Name }" />
+	        <label for="{! inquiryType.DeveloperName }-radio"> {! inquiryType.InquiryTypeLabel__c } </label>
+        </apex:outputPanel>
+        
+        <!-- Option input -->
+        <apex:outputPanel layout="none" rendered="{! type = 'option' }">
+	        <option value="{! inquiryType.InquiryTypeLabel__c }"
+	        	data-button-id="{! LEFT(chatButton.Id, 15) }"
+	            data-queue="{! chatButton.Queue.Name }"> {! inquiryType.InquiryTypeLabel__c } </option>
+        </apex:outputPanel>
+    </apex:outputPanel>
+</apex:component>

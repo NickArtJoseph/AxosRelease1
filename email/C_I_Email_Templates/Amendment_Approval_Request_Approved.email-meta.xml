@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to Amendment submitter letting them know their approval request was approved.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Amendment Approval Request Approved</name>
+    <style>none</style>
+    <subject>Amendment Approval Request for {!Opportunity.Account} has been Approved</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

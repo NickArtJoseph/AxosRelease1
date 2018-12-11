@@ -1,0 +1,453 @@
+<apex:page standardController="Lead" extensions="CreateLeadFormController" showHeader="false" sidebar="false" standardStylesheets="false" docType="HTML-5.0" applyHtmlTag="false" applyBodyTag="false">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<head>
+    <apex:stylesheet value="{! URLFOR($Resource.SLDS, '/assets/styles/salesforce-lightning-design-system-vf.min.css') }" />
+    <apex:includeScript value="{!URLFOR($Resource.svg4everybody, '/svg4everybody/dist/svg4everybody.min.js')}" />
+    <script>
+    	svg4everybody();
+    </script>
+</head>
+
+<body class="bofi-slds" >
+	<div class="slds-notify_container slds-is-absolute slds-hide" id="errorToast">
+        <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error') }" />
+                </svg>
+            </span>
+            <div class="slds-notify__content">
+                <h2 class="slds-text-heading_small ">{!$Label.Validate_inputs}</h2><!-- Custom Labels -->
+            </div>
+            <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close" id="closeToastButton">
+                <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                    <use xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close') }" />
+                </svg>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!---Start Error Message from apex controller -->
+    <apex:outputPanel styleClass="slds-notify_container slds-is-absolute" layout="block" rendered="{! hasError }" id="errorMessages">
+        <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error') }" />
+                </svg>
+            </span>
+            <div class="slds-notify__content">
+                <h2 class="slds-text-heading_small ">
+                	<apex:messages styleClass="slds-theme_error" />
+                </h2>
+            </div>
+            <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close" onclick="closeErrorMessage();">
+                <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                    <use xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close') }" />
+                </svg>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+        </div>
+        <script type="text/javascript">
+        	function closeErrorMessage() {
+        		var errorMessage = document.getElementById('{! $Component.errorMessages }');
+        		errorMessage.classList.remove('slds-show');
+            	errorMessage.classList.add('slds-hide');
+
+        	}
+        </script>
+    </apex:outputPanel>
+    <!---End Error Message from apex controller -->
+
+   	<div class="slds-page-header">
+   		<div class="slds-grid slds-wrap slds-grid_align-center">
+	   		<div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 "> 
+	            <div class="slds-media">
+	                <div class="slds-media__figure">
+	                    <span class="slds-icon_container " title="AXOS Bank">
+			                <apex:image url="{!$Resource.axosLogo}" width="214" height="84" />
+			            </span>
+	                </div>
+	                <div class="slds-media__body">
+	                    <h1 class="slds-page-header__title slds-text-heading_large slds-m-top_large" title="Cross-Sell Referral">{!$Label.title_LeadForm_SharePoint}</h1><!-- Custom Labels -->
+	                </div>
+	            </div>
+	        </div>
+	    </div>        
+    </div>
+
+    <!-- New custom alert START-->
+	<apex:outputPanel styleClass="" layout="block" rendered="{!myLead.Id != null}" >
+		<div class="slds-align_absolute-center" style="height: 30rem;">
+			<div class="slds-text-align_center">
+				<h1 class="slds-page-header__title">{!$Label.GoodbyeMessage_LeadForm_Sharepoint}</h1><!-- Custom Labels -->
+				<p>{!$Label.SuccesfulText_LeadForm}</p><!-- Custom Labels -->
+				<button type="button" class="slds-button slds-button_brand slds-m-top_medium" onclick="window.close();">{!$Label.CloseWindow_LeadForm_Sharepoint}</button><!-- Custom Labels -->
+			</div>
+		</div>
+	</apex:outputPanel>
+<!-- New custom alert END-->
+
+	<!-- Lead Form Start Here-->
+    <div class="slds-grid slds-wrap slds-grid_align-center">
+    	<div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 "> 
+            <apex:form id="myForm" styleClass="slds-form slds-form_compound slds-p-left_medium slds-p-right_medium" rendered="{! myLead.Id = null }">
+                
+                <apex:actionFunction action="{!saveLead}" name="submitLead" >
+<!--                 <apex:actionFunction action="{!assignId}" name="Select">
+                	<apex:param name="option" assignTo="{!recordTypeSelected}" value=""/>
+            	</apex:actionFunction> --> 
+                </apex:actionFunction>
+                <!-- <apex:pageBlockSection id="mySection" title="Customer Information"> -->
+                <div class="slds-section slds-is-open">
+                	<h3 class="slds-section__title slds-theme_shade">
+                		<span class="slds-trucate slds-p-horizontal_small" title="Customer Information">{!$Label.SectionOne_LeadForm}</span><!-- Custom Labels -->
+                	</h3>
+                	<div aria-hidden="false" class="slds_section__content">
+		                <div class="slds-form-element__group">
+		                    <div class="slds-form-element__row">
+		                        <div class="slds-form-element slds-size_1-of-2">
+		                            <div class="slds-form-element__label">
+		                                <abbr class="slds-required" title="required">*</abbr> {! $ObjectType.Lead.Fields.FirstName.Label }
+		                            </div>
+		                            <div class="slds-form-element__control">
+		                                <apex:inputField styleClass="slds-input" value="{!Lead.FirstName}" label="" id="firstName" required="true" />
+		                            </div>
+		                        </div>
+		                        <div class="slds-form-element slds-size_1-of-2">
+		                            <div class="slds-form-element__label">
+		                                <abbr class="slds-required" title="required">*</abbr> {! $ObjectType.Lead.Fields.LastName.Label }
+		                            </div>
+		                            <div class="slds-form-element__control">
+		                                <apex:inputField styleClass="slds-input " value="{!Lead.LastName}" label="" id="lastName" />
+		                            </div>
+		                        </div>
+		                    </div>
+
+		                    <div class="slds-form-element__row">
+		                        <div class="slds-form-element slds-size_1-of-2">
+		                            <div class="slds-form-element__label">
+		                                {! $ObjectType.Lead.Fields.Email.Label }
+		                            </div>
+		                            <div class="slds-form-element__control">
+		                                <apex:inputField styleClass="slds-input" value="{!Lead.Email}" label="" />
+		                            </div>
+		                        </div>
+		                        <div class="slds-form-element slds-size_1-of-2">
+		                            <div class="slds-form-element__label">
+		                                {! $ObjectType.Lead.Fields.Phone.Label }
+		                            </div>
+		                            <div class="slds-form-element__control">
+		                                <apex:inputField styleClass="slds-input" value="{!Lead.Phone}" label="" type="tel"/>
+		                            </div>
+		                        </div>
+		                    </div>
+
+		                    <div class="slds-form-element__row">
+		                        <div class="slds-form-element slds-size_1-of-2">
+		                            <div class="slds-form-element__label">
+		                                {! $ObjectType.Lead.Fields.Description.Label }
+		                            </div>
+		                            <div class="slds-form-element__control">
+		                                <apex:inputField styleClass="slds-input" value="{!Lead.Description}" label="" />
+		                            </div>
+		                        </div>
+
+		                        
+		                    </div>
+
+		                    <apex:actionRegion id="dynamicRegion">
+	                    		<div class="slds-form-element__row">
+			                      	<div class="slds-form-element slds-size_1-of-2">
+			                    		<div class="slds-form-element__label">
+			                    			{!$Label.SubBranchLabel_LeadForm} <abbr class="slds-required" title="required">*</abbr>  <!-- Custom Labels -->
+			                    		</div>
+	                                    <outputPanel class="slds-form-element__control" display="block" id="picklist">
+	                                    	<apex:selectList multiselect="false" styleClass="slds-select subBranchPick" value="{! recordTypeSelected }" required="true" size="1">
+	                                            <apex:selectOptions value="{! listRecordTypeOptions }" id="subBranchPick" />
+	                                            <apex:actionSupport event="onchange" action="{! renderDynamicFields }" reRender="dynamicFieldsBlock" />
+	                                        </apex:selectList>
+	                                    </outputPanel>
+			                    	</div>		 
+			                        
+			                        <apex:outputPanel layout="block" id="dynamicFieldsBlock" styleClass="slds-form-element slds-size_1-of-2">
+					                    <apex:repeat value="{! lstDynamicFields }" var="fieldMapping">
+					                      	<apex:outputPanel layout="none" rendered="{! fieldMapping.UIVisible__c }">
+					                            <div class="slds-form-element__label">
+					                                <apex:outputPanel styleClass="slds-required" rendered="{! fieldMapping.Required__c }">*</apex:outputPanel>{! fieldMapping.Field__r.Label }
+					                            </div>
+					                            <div class="slds-form-element__control">
+					                                <apex:inputField styleClass="slds-input" value="{! Lead[fieldMapping.Field__r.QualifiedApiName] }" label="" />
+					                            </div>
+					                        </apex:outputPanel>
+					                    </apex:repeat>
+			                    	</apex:outputPanel>
+			                    </div>
+		                    </apex:actionRegion>
+
+<!-- 		                    <div class="slds-form-element__row">
+		                    	<div class="slds-form-element slds-size_1-of-2">
+		                    		<div class="slds-form-element__label">
+		                    			<abbr class="slds-required" title="required">*</abbr> {!$Label.SubBranchLabel_LeadForm} 
+		                    		</div>
+		                    		<outputPanel class="slds-form-element__control" display="block" >
+		                    			<apex:selectList multiselect="false" styleClass="slds-select subBranchPick" value="{!recordTypeSelected}" size="1" >
+		                    				<apex:selectOptions value="{!listRecordTypeOptions}" id="subBranchPick"/>
+		                    				<apex:actionSupport event="onchange" action="{!assignId}"/>
+		                    			</apex:selectList>
+		                    		</outputPanel>
+		                    	</div>		                    	
+		                    </div> -->
+
+		                </div>    
+		            </div>        
+		        </div>
+
+		        <div class="slds-section slds-is-open slds-p-top_medium">
+						<h3 class="slds-section__title slds-theme_shade">
+						<span class="slds-truncate slds-p-horizontal_small" title="Created By">{!$Label.SectionTwo_LeadForm}</span><!-- Custom Labels -->
+						</h3>
+						<div aria-hidden="false" class="slds-section__content">
+							<div class="slds-form-element__group">
+		                    <div class="slds-form-element__row">
+				                <div class="slds-form-element slds-size_1-of-2">
+				                    <div class="slds-form-element__label">
+				                           {!$Label.OtherSourceLabel_LeadForm} <!-- Custom Label --><abbr class="slds-required" title="required">*</abbr> 
+				                    </div>
+				                        <div class="slds-form-element__control">
+				                        	<apex:inputField styleClass="slds-input" value="{!Lead.Lead_Source_Detail_SFDC2__c}" label="{!$Label.OtherSourceLabel_LeadForm}" />
+				                    	</div>
+				                </div>
+			                    <div class="slds-form-element slds-size_1-of-2">
+			                        <div class="slds-form-element__label">
+			                                {! $ObjectType.Lead.Fields.Referring_Business_Unit__c.Label }
+			                        </div>
+			                        <div class="slds-form-element__control">
+			                            <apex:inputField styleClass="slds-input" value="{!Lead.Referring_Business_Unit__c}" />
+			                        </div>
+			                    </div>
+		                    </div>
+		                </div>
+		            </div>        
+		        </div> 
+		        <!-- Lead Form Ends Here-->
+		        <!-- Attachments Section start here -->
+		        <div class="slds-section slds-is-open slds-p-top_medium">
+					<h3 class="slds-section__title slds-theme_shade">
+					    <span class="slds-truncate slds-p-horizontal_small" title="Attachments">{!$Label.Attachments_LeadForm}</span><!-- Custom Labels -->
+					</h3>
+					<div aria-hidden="false" class="slds-section__content">           
+						<apex:repeat value="{! mapAttachments }" var="index">
+			                <div class="slds-form-element slds-m-top_xxx-small">
+			                    <label class="slds-form-element__label" id="file-selector-primary-label">{!$Label.Attachment_LeadForm} {! index + 1 }</label><!-- Custom Labels -->
+			                    <div class="slds-form-element__control">
+			                        <div class="slds-file-selector slds-file-selector_files">
+			                            <apex:inputFile value="{! mapAttachments[index].body}" filename="{! mapAttachments[index].Name}" accept="image/*,application/pdf" styleClass="slds-file-selector__input slds-assistive-text attachmentInput" id="attachments" />
+														                            
+			                            <apex:outputLabel styleClass="slds-file-selector__body" for="attachments">
+			                                <span class="slds-file-selector__button slds-button slds-button_neutral">
+				        						<svg class="slds-button__icon slds-button__icon_left">
+				        							<use xmlns:xlink="http://w3.org/1999/xlink" xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#upload') }" />
+				        						</svg>
+				        						{!$Label.UploadFile_LeadForm}<!--custom label -->
+				        					</span>&nbsp;<span class="fileName" id="fileNameLabel-{! index }">{!$Label.NoFile_LeadForm}</span><!-- Custom Labels -->
+				<!-- Attachments Section ends here -->        					
+			        					  					        
+			                            </apex:outputLabel>
+
+			                            <!--Tooltip Start here -->
+		        					  	<!-- <div style="display: inline-block;"> -->
+											<div class="slds-form-element" style="padding-top: 10px;">
+											    <div class="slds-form-element__icon slds-align-middle">
+											      	<button class="slds-button slds-button_icon slds-button slds-button_icon tooltipButton" type="button" data-tooltip-id="help-{! index}" aria-describedby="help-{! index}" title="Help">
+											        	<svg class="slds-button__icon" aria-hidden="true">
+											          		<use xlink:href="{! URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#info') }" />
+											        	</svg>
+											        	<span class="slds-assistive-text">Help</span>
+											      	</button>
+											    </div>
+											</div>
+											<div class="slds-popover slds-popover_tooltip slds-nubbin_left slds-fall-into-ground" role="tooltip" id="help-{! index}" style="margin-left: 10px;">
+											    <div class="slds-popover__body">{!$Label.FileExtensions_LeadForm}</div><!-- Custom Labels -->
+											</div>
+										<!-- </div> -->
+		        						<!--Tooltip Ends here -->
+			                        </div>
+			                    </div>
+			                </div>
+		                </apex:repeat>
+
+				    </div>	
+				</div>   
+
+	            <div class="slds-docked-form slds-text-align_center">
+                    <button type="button" id="submitButton" class="slds-button slds-button_brand slds-m-top_medium">{!$Label.SubmitButton_LeadForm}</button><!-- Custom Labels -->
+                    <button type="button" class="slds-button slds-button_neutral slds-m-top_medium" onclick="window.close();">{!$Label.CancelButton_LeadForm}</button><!-- Custom Labels -->
+	            </div>
+
+
+	            <script type="text/javascript">
+	            	(function() {
+
+	            		function displayError() {
+	            			var errorToast = document.getElementById('errorToast');
+	            			errorToast.classList.add('slds-show');
+	            			errorToast.classList.remove('slds-hide');
+	            		}
+
+	            		function hideError() {
+	            			var errorToast = document.getElementById('errorToast');
+	            			errorToast.classList.remove('slds-show');
+	            			errorToast.classList.add('slds-hide');	
+	            		}
+
+	            		// Validate and submit form
+	            		function validateAndSubmit() {
+	            			var inputFiles = document.getElementsByClassName('attachmentInput');
+	            			console.log(inputFiles);
+	            			var allFilesValid = [].every.call(inputFiles, function(input){
+	            				return input.files.length > 0 ? validateFileSize(input) && validateFileTypes(input) : true;
+	            			});
+	            			console.log('allFilesValid: ' + allFilesValid);
+
+	                		if (allFilesValid === true) {
+	                			hideError();
+	                			submitLead();
+	                		} else {
+	                			displayError();
+	                		}
+	                    }
+
+	                    // Validate file types and size in one function
+	                    function Validate(input)
+	                    {
+	                		var file = fileInput.files[0];
+	                    	var fileExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
+	                    		return fileExtensions.exec(file.name) == null && file.size > 2000000 ? false : true;
+	                    }
+
+	                    // Validate file types
+	                    function validateFileTypes(fileInput) {
+	                    	var file = fileInput.files[0];
+	                    	var fileExtensions = /(\.jpg|\.jpeg|\.txt|\.png|\.pdf|\.docx|\.csv|\.xlsx)$/i;
+	                    		return fileExtensions.exec(file.name) == null ? false : true;
+	                    }
+
+	                    // Validate file size
+	            		function validateFileSize(fileInput) {
+	            			var isValid = true;
+	            			var file = fileInput.files[0];
+
+	            			if (file && file.size > 2000000) {
+	            				isValid = false;
+	            			}
+
+	        				return isValid;
+	            		}
+
+	            		// Handle File Changed
+	            		function fileChanged(event) {
+	            			var fileInput = event.target;
+	            			var file = fileInput.files[0];
+
+	            			var container = fileInput.parentElement;
+	            			var fileNameSpan = container.getElementsByClassName('fileName')[0];
+	            			if (validateFileTypes(fileInput) === true ) {
+		            			if ( validateFileSize(fileInput) === true) {
+		            				fileNameSpan.innerHTML = file.name;
+		        					fileNameSpan.classList.remove('errorMsg');
+		            			} else {
+		            				fileNameSpan.innerHTML = 'File size exceeds 2 MB';
+		            				fileNameSpan.classList.add('errorMsg');
+		            			}
+	            			} else {
+	            					fileNameSpan.innerHTML = 'File extension is not allowed';
+		            				fileNameSpan.classList.add('errorMsg');
+	            			}
+	            		}
+
+	            		// //Handle picklist option 
+	            		// function selectOption(event) {
+	            		// var optionSelected = event.target;
+	            		// console.log(optionSelected);
+	            		// }
+
+	             		// Handle page load
+	            		function handlePageLoad() {
+	            			// Files change
+	            			var inputFiles = document.getElementsByClassName('attachmentInput');
+	            			
+	            			for (var i = inputFiles.length - 1; i >= 0; i--) {
+	            				inputFiles[i].addEventListener('change', fileChanged);
+	            			}
+	            			// var picklist = document.getElementById('subBranchPick');
+	            			// console.log('picklist' + picklist);
+	            			// picklist.addEventListener('change', selectOption);
+
+	            			// Submit button clicked
+	            			var submitButton = document.getElementById('submitButton');
+	            			// var successButton = document.getElementById('closeSuccessButton');
+	            			submitButton.addEventListener('click', validateAndSubmit);
+	            			// successButton.addEventListener('click', closeSuccessMessage);
+
+	            			// Tooltips
+	            			var tooltipButtons = document.getElementsByClassName('tooltipButton');
+	            			for (var i = tooltipButtons.length - 1; i >= 0; i--) {		
+	            				tooltipButtons[i].addEventListener('mouseover', function (event) {
+	            					var button = event.target;
+	            					var tooltipId = button.dataset.tooltipId;
+	            					var tooltip = document.getElementById(tooltipId);
+	            					tooltip.classList.add("slds-rise-from-ground");
+	            					tooltip.classList.remove("slds-fall-into-ground");
+	            				});
+
+	            				tooltipButtons[i].addEventListener('mouseout', function (event) {
+	            					var button = event.target;
+	            					var tooltipId = button.dataset.tooltipId;
+	            					var tooltip = document.getElementById(tooltipId);
+				            		tooltip.classList.add("slds-fall-into-ground");
+				            		tooltip.classList.remove("slds-rise-from-ground");
+	            				});		
+	            			}
+
+	            			// Toast
+	            			var closeToastButton = document.getElementById('closeToastButton');
+	            			closeToastButton.addEventListener('click', hideError);
+	            		}
+
+	            		// Add Window Load Listener
+	            		if (window.addEventListener) {
+					        window.addEventListener('load', handlePageLoad, false);
+					    } else {
+					        window.attachEvent('onload', handlePageLoad, false);
+					    }
+	            	})(); // Closure
+
+	            </script>
+            </apex:form>
+        </div>
+    </div>
+
+    <style type="text/css">
+    	.errorMsg {
+    		color: #c23934;
+    	}
+    	.slds-input.error {
+    		background-color: white;
+		    border-color: #c23934;
+		    -webkit-box-shadow: #c23934 0 0 0 1px inset;
+		    box-shadow: #c23934 0 0 0 1px inset;
+		    background-clip: padding-box;
+    	}
+    	.slds-required {
+    		color: #c23934;
+    		font-weight: bold;
+    	}
+    </style>
+</body>
+
+</html>    
+</apex:page>

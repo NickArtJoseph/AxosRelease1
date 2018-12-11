@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used when LOQ submitted for approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>C&amp;I: LOQ Submitted for Approval</name>
+    <style>none</style>
+    <subject>{!Loan_Ops_Questionnaire__c.Opportunity__c} Boarding Questionnaire</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

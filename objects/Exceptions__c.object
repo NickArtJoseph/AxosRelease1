@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exception_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Exception Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advance</fullName>
+                    <default>false</default>
+                    <label>Advance</label>
+                </value>
+                <value>
+                    <fullName>Funding</fullName>
+                    <default>false</default>
+                    <label>Funding</label>
+                </value>
+                <value>
+                    <fullName>Legal Stage</fullName>
+                    <default>false</default>
+                    <label>Legal Stage</label>
+                </value>
+                <value>
+                    <fullName>Pricing</fullName>
+                    <default>false</default>
+                    <label>Pricing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Exception_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Exception Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Exception_Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Amount</fullName>
+                    <default>false</default>
+                    <label>Amount</label>
+                </value>
+                <value>
+                    <fullName>Competitor Petition Pending</fullName>
+                    <default>false</default>
+                    <label>Competitor Petition Pending</label>
+                </value>
+                <value>
+                    <fullName>Discount Rate</fullName>
+                    <default>false</default>
+                    <label>Discount Rate</label>
+                </value>
+                <value>
+                    <fullName>Fund Prior to Acknowledgment</fullName>
+                    <default>false</default>
+                    <label>Fund Prior to Acknowledgment</label>
+                </value>
+                <value>
+                    <fullName>Issuer Rating &lt; A-</fullName>
+                    <default>false</default>
+                    <label>Issuer Rating &lt; A-</label>
+                </value>
+                <value>
+                    <fullName>Liens/Judgments</fullName>
+                    <default>false</default>
+                    <label>Liens/Judgments</label>
+                </value>
+                <value>
+                    <fullName>Low Confidence FVR</fullName>
+                    <default>false</default>
+                    <label>Low Confidence FVR</label>
+                </value>
+                <value>
+                    <fullName>Missing Docs</fullName>
+                    <default>false</default>
+                    <label>Missing Docs</label>
+                </value>
+                <value>
+                    <fullName>NY Deal</fullName>
+                    <default>false</default>
+                    <label>NY Deal</label>
+                </value>
+                <value>
+                    <fullName>Prior Denials</fullName>
+                    <default>false</default>
+                    <label>Prior Denials</label>
+                </value>
+                <value>
+                    <fullName>Release Prior to Legal Stage</fullName>
+                    <default>false</default>
+                    <label>Release Prior to Legal Stage</label>
+                </value>
+                <value>
+                    <fullName>Searches</fullName>
+                    <default>false</default>
+                    <label>Searches</label>
+                </value>
+                <value>
+                    <fullName>Spread &lt; $7k</fullName>
+                    <default>false</default>
+                    <label>Spread &lt; $7k</label>
+                </value>
+                <value>
+                    <fullName>WAL &gt; 18</fullName>
+                    <default>false</default>
+                    <label>WAL &gt; 18</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Advance</controllingFieldValue>
+                <valueName>Amount</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Advance</controllingFieldValue>
+                <valueName>NY Deal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Advance</controllingFieldValue>
+                <valueName>Prior Denials</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Advance</controllingFieldValue>
+                <valueName>Release Prior to Legal Stage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Funding</controllingFieldValue>
+                <valueName>Fund Prior to Acknowledgment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Funding</controllingFieldValue>
+                <controllingFieldValue>Legal Stage</controllingFieldValue>
+                <valueName>Liens/Judgments</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Legal Stage</controllingFieldValue>
+                <valueName>Competitor Petition Pending</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Legal Stage</controllingFieldValue>
+                <valueName>Low Confidence FVR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Legal Stage</controllingFieldValue>
+                <valueName>Missing Docs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pricing</controllingFieldValue>
+                <valueName>Discount Rate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pricing</controllingFieldValue>
+                <valueName>Issuer Rating &lt; A-</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pricing</controllingFieldValue>
+                <valueName>Spread &lt; $7k</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pricing</controllingFieldValue>
+                <valueName>WAL &gt; 18</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Exceptions</relationshipLabel>
+        <relationshipName>Exceptions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Exceptions</label>
+    <nameField>
+        <displayFormat>AP-{0000}</displayFormat>
+        <label>Exceptions Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Exceptions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

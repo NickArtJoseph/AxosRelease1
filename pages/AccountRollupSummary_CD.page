@@ -1,0 +1,32 @@
+<apex:page standardController="Account" tabStyle="Account" extensions="AccountRollupSummaryExtension">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        	<apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total Number of Accounts" />
+                <apex:outputText value="{!finAcctCount}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total Deposit Balances" />
+                <apex:outputText value="{0, number, currency}" >
+                	<apex:param value="{!finAcctBalance}" />
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Opportunity Count (QTD)" />
+                <apex:outputText value="{!opportunityQTD}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Opportunity Count (LTD)" />
+                <apex:outputText value="{!opportunityLTD}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Call Attempts (QTD)" />
+                <apex:outputText value="{!callsQTD}" />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%" >
+                <apex:outputLabel value="Call Attempts (LTD)" />
+                <apex:outputText value="{!callsLTD}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

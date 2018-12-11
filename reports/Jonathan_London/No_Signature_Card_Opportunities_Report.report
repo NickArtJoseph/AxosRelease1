@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Id</field>
+    </columns>
+    <columns>
+        <field>Account$CIF_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Open_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Signature_Card__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Signature_Card__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>No Signature Card - Opportunities Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Customers_with_Financial_Accounts__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.Person_Financial_Account_Junctions__r$Financial_Account__c.Open_Date__c</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

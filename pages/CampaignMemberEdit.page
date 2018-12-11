@@ -1,0 +1,3 @@
+<apex:page standardController="CampaignMember" tabStyle="CampaignMember" standardStylesheets="true" showHeader="false" action="{!redirect}" extensions="CampaignMemberEditExt">
+    
+</apex:page>

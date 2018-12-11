@@ -1,0 +1,14 @@
+Attention:
+
+This account has been transferred from a previous owner. 
+
+Account: {!Account.Name}
+Current Status: {!Account.SFR_TPO_IPL_Client_Status__c}
+Account ID: {!Account.TPO_Account_ID__c} 
+Submitter: {!Account.TPO_House_Account_Approval_Submitter__c}
+
+Address: 
+{!Account.BillingAddress}
+
+
+Please make the appropriate updates in IHM.

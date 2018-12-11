@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>To make a withdrawal or close your IRA account please complete
+our <a href="https://www.bankofinternet.com/Portals/BofiUSA/Documents/Forms/505-IRA-Withdrawal-Authorization.pdf">IRA Withdrawal Authorization Form</a>.</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><o:p></o:p></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br><br>Please print, complete, sign, notarize and send the form by:<br></font></p><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><ol><li><b style="font-size: 12pt; text-indent: -0.25in;">Secure Message</b><span style="font-size: 12pt; text-indent: -0.25in;">: Log into Online Banking and
+click Contact us to send a scanned attachment to the Bank.</span></li><li>Fax: <b style="text-indent: -0.25in;">858-649-2969</b></li><li>Or Mail to: <b style="text-indent: -0.25in;">Bank of Internet USA PO BOX 509127
+San Diego, CA 92150</b></li></ol><span style="color: rgb(0, 0, 0);">We appreciate your business and commit to providing superior
+Banking products, support and services.<br></span><span style="line-height: 107%;"><span style="color: rgb(0, 0, 0);"><br>Best Regards,</span></span></font><div style=""><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><span style="line-height: 107%;"><span style="color: rgb(0, 0, 0);"><br></span></span></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><span style="color: rgb(0, 0, 0); line-height: 107%;"><br>
+</span><font style="">Bank of Internet USA</font>&nbsp;<span style="color: rgb(0, 0, 0);">Customer Service</span></font><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><o:p>&nbsp;</o:p></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

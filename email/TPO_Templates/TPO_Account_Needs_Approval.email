@@ -1,0 +1,5 @@
+{!Account.OwnerFirstName}, 
+
+Your TPO account {!Account.Name} ({!Account.NMLSID__c}) has {!Account.Branch_Expiration__c} days to get seller approval. 
+
+Please take action as necessary.

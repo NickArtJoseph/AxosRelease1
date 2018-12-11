@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>o</joinTable>
+        </blockInfo>
+        <columns>
+            <field>OPPORTUNITY_NAME</field>
+        </columns>
+        <columns>
+            <aggregateTypes>Sum</aggregateTypes>
+            <field>Opportunity.Potential_Funding__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>FULL_NAME</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>contains</operator>
+                <value>Bruce Onbirbak,Sam Elbarouki,Robert Hasler,Rio Brittani Bleiman,Robert Boman,Jan Marino,John Parada,MaryAnn McIntyre</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>CLOSE_DATE</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>greaterThan</operator>
+                <value>5/17/2018</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Opportunities with Products block 1</name>
+        <params>
+            <name>open</name>
+            <value>open</value>
+        </params>
+        <params>
+            <name>probability</name>
+            <value>&gt;0</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OpportunityProduct</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>CLOSE_DATE</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>o</joinTable>
+    </blockInfo>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STAGE_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Commercial Banking Pipeline - 5.18.18</name>
+    <reportType>OpportunityProduct</reportType>
+    <showDetails>true</showDetails>
+</Report>

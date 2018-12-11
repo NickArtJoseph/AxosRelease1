@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Document_Tracking_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Document_Tracking_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Document_Tracking_Compact_Layout</fullName>
+        <fields>Document__c</fields>
+        <fields>Status__c</fields>
+        <fields>Date__c</fields>
+        <label>Document Tracking Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Checklist for for tracking the deal flow and the delivery of documents necessary for boarding and funding loans.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Links Document Tracking record to Case</description>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Documents Tracking</relationshipLabel>
+        <relationshipName>Documents_Tracking</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Document_Category__c</fullName>
+        <description>Commercial Real Estate Comprehensive Checklist</description>
+        <externalId>false</externalId>
+        <label>Document Category</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved CAM, LOI</fullName>
+                    <default>false</default>
+                    <label>Approved CAM, LOI</label>
+                </value>
+                <value>
+                    <fullName>Loan and Entity Documents</fullName>
+                    <default>false</default>
+                    <label>Loan and Entity Documents</label>
+                </value>
+                <value>
+                    <fullName>Appraisal, Environmental Reports</fullName>
+                    <default>false</default>
+                    <label>Appraisal, Environmental Reports</label>
+                </value>
+                <value>
+                    <fullName>Borrower-Guarantor Financial Statements, Background</fullName>
+                    <default>false</default>
+                    <label>Borrower-Guarantor Financial Statements, Background</label>
+                </value>
+                <value>
+                    <fullName>Property Information</fullName>
+                    <default>false</default>
+                    <label>Property Information</label>
+                </value>
+                <value>
+                    <fullName>Other Final Origination Document Forms</fullName>
+                    <default>false</default>
+                    <label>Other Final Origination Document Forms</label>
+                </value>
+                <value>
+                    <fullName>Conversation Logs</fullName>
+                    <default>false</default>
+                    <label>Conversation Logs</label>
+                </value>
+                <value>
+                    <fullName>Construction Loan Documents</fullName>
+                    <default>false</default>
+                    <label>Construction Loan Documents</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Document_Other_SFDC2__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Other</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document__c</fullName>
+        <description>Approved CAM, LOI</description>
+        <externalId>false</externalId>
+        <label>Document</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Document_Category__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved LOI (Signed)</fullName>
+                    <default>false</default>
+                    <label>Approved LOI (Signed)</label>
+                </value>
+                <value>
+                    <fullName>Approved CAM (Signed)</fullName>
+                    <default>false</default>
+                    <label>Approved CAM (Signed)</label>
+                </value>
+                <value>
+                    <fullName>Approved Closing Memo, if applicable (Signed)</fullName>
+                    <default>false</default>
+                    <label>Approved Closing Memo, if applicable (Signed)</label>
+                </value>
+                <value>
+                    <fullName>LLC-1/Articles of Organization</fullName>
+                    <default>false</default>
+                    <label>LLC-1/Articles of Organization</label>
+                </value>
+                <value>
+                    <fullName>By-laws</fullName>
+                    <default>false</default>
+                    <label>By-laws</label>
+                </value>
+                <value>
+                    <fullName>Articles of Amendment</fullName>
+                    <default>false</default>
+                    <label>Articles of Amendment</label>
+                </value>
+                <value>
+                    <fullName>Operating Agreement</fullName>
+                    <default>false</default>
+                    <label>Operating Agreement</label>
+                </value>
+                <value>
+                    <fullName>Tax ID/EIN Number/SS-4</fullName>
+                    <default>false</default>
+                    <label>Tax ID/EIN Number/SS-4</label>
+                </value>
+                <value>
+                    <fullName>Letter of Good Standing</fullName>
+                    <default>false</default>
+                    <label>Letter of Good Standing</label>
+                </value>
+                <value>
+                    <fullName>LLC Resolution</fullName>
+                    <default>false</default>
+                    <label>LLC Resolution</label>
+                </value>
+                <value>
+                    <fullName>Entity Borrowing Authorization</fullName>
+                    <default>false</default>
+                    <label>Entity Borrowing Authorization</label>
+                </value>
+                <value>
+                    <fullName>Printouts of Google search on Entity</fullName>
+                    <default>false</default>
+                    <label>Printouts of Google search on Entity</label>
+                </value>
+                <value>
+                    <fullName>Certificate of Incorporation</fullName>
+                    <default>false</default>
+                    <label>Certificate of Incorporation</label>
+                </value>
+                <value>
+                    <fullName>Articles of Incorporation and By-laws</fullName>
+                    <default>false</default>
+                    <label>Articles of Incorporation and By-laws</label>
+                </value>
+                <value>
+                    <fullName>Vesting Tree</fullName>
+                    <default>false</default>
+                    <label>Vesting Tree</label>
+                </value>
+                <value>
+                    <fullName>Limited Partnership Agreement</fullName>
+                    <default>false</default>
+                    <label>Limited Partnership Agreement</label>
+                </value>
+                <value>
+                    <fullName>LP-1</fullName>
+                    <default>false</default>
+                    <label>LP-1</label>
+                </value>
+                <value>
+                    <fullName>LP-5 Foreign Partnership (if necessary)</fullName>
+                    <default>false</default>
+                    <label>LP-5 Foreign Partnership (if necessary)</label>
+                </value>
+                <value>
+                    <fullName>Final Loan Documents (Signed)</fullName>
+                    <default>false</default>
+                    <label>Final Loan Documents (Signed)</label>
+                </value>
+                <value>
+                    <fullName>Recorded DOT</fullName>
+                    <default>false</default>
+                    <label>Recorded DOT</label>
+                </value>
+                <value>
+                    <fullName>Credit Report</fullName>
+                    <default>false</default>
+                    <label>Credit Report</label>
+                </value>
+                <value>
+                    <fullName>OFAC Report</fullName>
+                    <default>false</default>
+                    <label>OFAC Report</label>
+                </value>
+                <value>
+                    <fullName>BSA Report (if necessary)</fullName>
+                    <default>false</default>
+                    <label>BSA Report (if necessary)</label>
+                </value>
+                <value>
+                    <fullName>Memo on Current, Pending, and/or Anticipated Litigation</fullName>
+                    <default>false</default>
+                    <label>Memo on Current, Pending, and/or Anticipated Litigation</label>
+                </value>
+                <value>
+                    <fullName>Printouts of Google search on Guarantor</fullName>
+                    <default>false</default>
+                    <label>Printouts of Google search on Guarantor</label>
+                </value>
+                <value>
+                    <fullName>Operating Statements</fullName>
+                    <default>false</default>
+                    <label>Operating Statements</label>
+                </value>
+                <value>
+                    <fullName>Balance Sheet and P&amp;L</fullName>
+                    <default>false</default>
+                    <label>Balance Sheet and P&amp;L</label>
+                </value>
+                <value>
+                    <fullName>K-1 Distribution</fullName>
+                    <default>false</default>
+                    <label>K-1 Distribution</label>
+                </value>
+                <value>
+                    <fullName>W-9</fullName>
+                    <default>false</default>
+                    <label>W-9</label>
+                </value>
+                <value>
+                    <fullName>Personal Financial Statement and Credit Release Authorization</fullName>
+                    <default>false</default>
+                    <label>Personal Financial Statement and Credit Release Authorization</label>
+                </value>
+                <value>
+                    <fullName>Detailed List of all existing debt w/terms of repayment</fullName>
+                    <default>false</default>
+                    <label>Detailed List of all existing debt w/terms of repayment</label>
+                </value>
+                <value>
+                    <fullName>Project Feasibility Analysis</fullName>
+                    <default>false</default>
+                    <label>Project Feasibility Analysis</label>
+                </value>
+                <value>
+                    <fullName>Offer Memo or Project Summary</fullName>
+                    <default>false</default>
+                    <label>Offer Memo or Project Summary</label>
+                </value>
+                <value>
+                    <fullName>Construction Budget (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Construction Budget (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Bank Statements (3 months)</fullName>
+                    <default>false</default>
+                    <label>Bank Statements (3 months)</label>
+                </value>
+                <value>
+                    <fullName>Tax Returns</fullName>
+                    <default>false</default>
+                    <label>Tax Returns</label>
+                </value>
+                <value>
+                    <fullName>4506-T</fullName>
+                    <default>false</default>
+                    <label>4506-T</label>
+                </value>
+                <value>
+                    <fullName>Flood Certification</fullName>
+                    <default>false</default>
+                    <label>Flood Certification</label>
+                </value>
+                <value>
+                    <fullName>Hazard Insurance/Liability Insurance</fullName>
+                    <default>false</default>
+                    <label>Hazard Insurance/Liability Insurance</label>
+                </value>
+                <value>
+                    <fullName>Property Tax</fullName>
+                    <default>false</default>
+                    <label>Property Tax</label>
+                </value>
+                <value>
+                    <fullName>Flood Insurance (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Flood Insurance (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Property Contact Information</fullName>
+                    <default>false</default>
+                    <label>Property Contact Information</label>
+                </value>
+                <value>
+                    <fullName>Copy of Purchase &amp; Sale Agreement</fullName>
+                    <default>false</default>
+                    <label>Copy of Purchase &amp; Sale Agreement</label>
+                </value>
+                <value>
+                    <fullName>Existing Mortgage Verification (Payoff letter)</fullName>
+                    <default>false</default>
+                    <label>Existing Mortgage Verification (Payoff letter)</label>
+                </value>
+                <value>
+                    <fullName>Copies of Signed Leases for all tenants (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Copies of Signed Leases for all tenants (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Copy of Property Management Agreement</fullName>
+                    <default>false</default>
+                    <label>Copy of Property Management Agreement</label>
+                </value>
+                <value>
+                    <fullName>Economic Market Study of Area</fullName>
+                    <default>false</default>
+                    <label>Economic Market Study of Area</label>
+                </value>
+                <value>
+                    <fullName>Zoning and Entitlements (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Zoning and Entitlements (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Signed Estoppel Certificates (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Signed Estoppel Certificates (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Architect&apos;s Certificate</fullName>
+                    <default>false</default>
+                    <label>Architect&apos;s Certificate</label>
+                </value>
+                <value>
+                    <fullName>As-Built Drawings</fullName>
+                    <default>false</default>
+                    <label>As-Built Drawings</label>
+                </value>
+                <value>
+                    <fullName>As-Built Survey (if applicable)</fullName>
+                    <default>false</default>
+                    <label>As-Built Survey (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Construction Timeline/Milestones</fullName>
+                    <default>false</default>
+                    <label>Construction Timeline/Milestones</label>
+                </value>
+                <value>
+                    <fullName>Project Budget</fullName>
+                    <default>false</default>
+                    <label>Project Budget</label>
+                </value>
+                <value>
+                    <fullName>Building Permits</fullName>
+                    <default>false</default>
+                    <label>Building Permits</label>
+                </value>
+                <value>
+                    <fullName>Approved Plans</fullName>
+                    <default>false</default>
+                    <label>Approved Plans</label>
+                </value>
+                <value>
+                    <fullName>Approved Finish Standards</fullName>
+                    <default>false</default>
+                    <label>Approved Finish Standards</label>
+                </value>
+                <value>
+                    <fullName>Development Agreement (if applicable)</fullName>
+                    <default>false</default>
+                    <label>Development Agreement (if applicable)</label>
+                </value>
+                <value>
+                    <fullName>Construction Contract</fullName>
+                    <default>false</default>
+                    <label>Construction Contract</label>
+                </value>
+                <value>
+                    <fullName>Architect&apos;s Contract</fullName>
+                    <default>false</default>
+                    <label>Architect&apos;s Contract</label>
+                </value>
+                <value>
+                    <fullName>Engineering Contract</fullName>
+                    <default>false</default>
+                    <label>Engineering Contract</label>
+                </value>
+                <value>
+                    <fullName>Other Construction Contracts</fullName>
+                    <default>false</default>
+                    <label>Other Construction Contracts</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Approved CAM, LOI</controllingFieldValue>
+                <valueName>Approved LOI (Signed)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Approved CAM, LOI</controllingFieldValue>
+                <valueName>Approved CAM (Signed)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Approved CAM, LOI</controllingFieldValue>
+                <valueName>Approved Closing Memo, if applicable (Signed)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>LLC-1/Articles of Organization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>By-laws</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Articles of Amendment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Operating Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Tax ID/EIN Number/SS-4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Letter of Good Standing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>LLC Resolution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Entity Borrowing Authorization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Printouts of Google search on Entity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Certificate of Incorporation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Articles of Incorporation and By-laws</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Vesting Tree</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Limited Partnership Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>LP-1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>LP-5 Foreign Partnership (if necessary)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Final Loan Documents (Signed)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loan and Entity Documents</controllingFieldValue>
+                <valueName>Recorded DOT</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Credit Report</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>OFAC Report</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>BSA Report (if necessary)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Memo on Current, Pending, and/or Anticipated Litigation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Printouts of Google search on Guarantor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Operating Statements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Balance Sheet and P&amp;L</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>K-1 Distribution</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>W-9</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Personal Financial Statement and Credit Release Authorization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Detailed List of all existing debt w/terms of repayment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Project Feasibility Analysis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Offer Memo or Project Summary</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Construction Budget (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Bank Statements (3 months)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>Tax Returns</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Borrower-Guarantor Financial Statements, Background</controllingFieldValue>
+                <valueName>4506-T</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Flood Certification</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Hazard Insurance/Liability Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Property Tax</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Flood Insurance (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Property Contact Information</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Copy of Purchase &amp; Sale Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Existing Mortgage Verification (Payoff letter)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Copies of Signed Leases for all tenants (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Copy of Property Management Agreement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Economic Market Study of Area</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Zoning and Entitlements (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Property Information</controllingFieldValue>
+                <valueName>Signed Estoppel Certificates (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Architect&apos;s Certificate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>As-Built Drawings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>As-Built Survey (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Construction Timeline/Milestones</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Project Budget</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Building Permits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Approved Plans</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Approved Finish Standards</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Development Agreement (if applicable)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Construction Contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Architect&apos;s Contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Engineering Contract</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Construction Loan Documents</controllingFieldValue>
+                <valueName>Other Construction Contracts</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Links Document Tracking record to Opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Documents Tracking</relationshipLabel>
+        <relationshipName>Documents_Tracking</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0 - Received</fullName>
+                    <default>false</default>
+                    <label>0 - Received</label>
+                </value>
+                <value>
+                    <fullName>1 - Under Review</fullName>
+                    <default>false</default>
+                    <label>1 - Under Review</label>
+                </value>
+                <value>
+                    <fullName>2 - Reviewed</fullName>
+                    <default>false</default>
+                    <label>2 - Reviewed</label>
+                </value>
+                <value>
+                    <fullName>3 - Approved</fullName>
+                    <default>false</default>
+                    <label>3 - Approved</label>
+                </value>
+                <value>
+                    <fullName>4 - N/A</fullName>
+                    <default>false</default>
+                    <label>4 - N/A</label>
+                </value>
+                <value>
+                    <fullName>0 - None</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>0 - None</label>
+                </value>
+                <value>
+                    <fullName>1 - Received</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>1 - Received</label>
+                </value>
+                <value>
+                    <fullName>2 - Under Review</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>2 - Under Review</label>
+                </value>
+                <value>
+                    <fullName>3 - Reviewed</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>3 - Reviewed</label>
+                </value>
+                <value>
+                    <fullName>4 - Approved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>4 - Approved</label>
+                </value>
+                <value>
+                    <fullName>5 - N/A</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>5 - N/A</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Received</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Received</label>
+                </value>
+                <value>
+                    <fullName>Reviewed</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Reviewed</label>
+                </value>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Under Review</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Documents_Tracking</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Document Tracking</label>
+    <nameField>
+        <label>Document Checklist</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Documents Tracking</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Document_Other_SFDC2</fullName>
+        <active>true</active>
+        <description>When the Document is set to &quot;None,&quot; the Document Other field must be populated.</description>
+        <errorConditionFormula>AND(ISPICKVAL( Document__c , &quot;Other&quot;),
+ISBLANK( Document_Other_SFDC2__c ))</errorConditionFormula>
+        <errorDisplayField>Document_Other_SFDC2__c</errorDisplayField>
+        <errorMessage>Please enter a value in the Document Other field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rollback_Stages</fullName>
+        <active>true</active>
+        <description>Non-Managers (C&amp;I - LF &amp; CRESL Role) cannot move Document Statuses backwards</description>
+        <errorConditionFormula>OR(
+    AND(  
+         $UserRole.DeveloperName = &quot;C_I_LF_CRESL&quot;,
+         ISCHANGED(Status__c), 
+          
+         VALUE(LEFT(TEXT(PRIORVALUE(Status__c)),1)) &gt; 
+         VALUE(LEFT(TEXT(Status__c),1)) 
+       ),
+    AND(
+             PRIORVALUE(Status__c) &lt;&gt; null,
+             ISBLANK(TEXT(Status__c))   
+     )
+
+)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Non-Managers cannot move Document Statuses backwards</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

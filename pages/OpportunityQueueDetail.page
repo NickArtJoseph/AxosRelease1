@@ -1,0 +1,8 @@
+<apex:page standardController="Opportunity_Queue__c" showHeader="false" sidebar="false">
+<style>
+.btn{display:none;}
+</style>
+<div style="overflow-y: auto; height: 590px;">
+    <apex:detail subject="{!Opportunity_Queue__c.Opportunity__c}" inlineEdit="false" relatedList="false" relatedListHover="false" showChatter="false" />
+</div>
+</apex:page>

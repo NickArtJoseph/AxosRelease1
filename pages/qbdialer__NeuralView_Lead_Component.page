@@ -1,0 +1,5 @@
+<apex:page standardController="Lead">
+  <iframe src="https://{!$User.is_subdomain__c}.insidesales.com/resources/plugins/analytics/presentation/component.html?id={!urlEncode(Id)}&org_id={!$Organization.Id}&token={!$User.is_token__c}"
+          width='100%' height="280px" frameborder="no" marginwidth="0" marginheight="0" border="0">
+  </iframe>
+</apex:page>

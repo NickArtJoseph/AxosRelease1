@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Lead_Owner_Name__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Deposit_Relationship__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Activities$CallDisposition</field>
+    </columns>
+    <columns>
+        <field>Lead$Association__c</field>
+    </columns>
+    <columns>
+        <field>Lead$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Lead$Status</field>
+    </columns>
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead$Lead_Owner_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Robert Hyman,ryan singh</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Consumer Deposits Campaign Result</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Consumer_Deposits_Campaign_Tracking_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead$Status</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <endDate>2014-09-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-07-01</startDate>
+    </timeFrameFilter>
+</Report>

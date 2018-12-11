@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>CRMfusionDBR101__DB_Help</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRMfusionDBR101__AlphaClean__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Strip all non-alphanumeric characters.</inlineHelpText>
+        <label>AlphaClean</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__English_Fuzzy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Convert the field to the English phonetic equivalent for matching.</inlineHelpText>
+        <label>English Fuzzy</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Field_Display_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The primary field used in this scenario rule.</inlineHelpText>
+        <label>Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of the selected field.</description>
+        <externalId>false</externalId>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__First_XX_Letters__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Mapping Type is set to &quot;First XX Letters&quot;, this field specifies the number of letters to match.</inlineHelpText>
+        <label>Number of Letters</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__First_XX_Words__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Mapping Type is set to &quot;First XX Words&quot;, this field specifies the number of letters to match.</inlineHelpText>
+        <label>Number of Words</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Mapping_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mapping Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Acronym</fullName>
+                    <default>false</default>
+                    <label>Acronym</label>
+                </value>
+                <value>
+                    <fullName>Acronym (Cleaned Name)</fullName>
+                    <default>false</default>
+                    <label>Acronym (Cleaned Name)</label>
+                </value>
+                <value>
+                    <fullName>Clean Account Name</fullName>
+                    <default>false</default>
+                    <label>Clean Account Name</label>
+                </value>
+                <value>
+                    <fullName>Country Match</fullName>
+                    <default>false</default>
+                    <label>Country Match</label>
+                </value>
+                <value>
+                    <fullName>Domain</fullName>
+                    <default>false</default>
+                    <label>Domain</label>
+                </value>
+                <value>
+                    <fullName>Exact</fullName>
+                    <default>true</default>
+                    <label>Exact</label>
+                </value>
+                <value>
+                    <fullName>First Name</fullName>
+                    <default>false</default>
+                    <label>First Name</label>
+                </value>
+                <value>
+                    <fullName>First XX Letters</fullName>
+                    <default>false</default>
+                    <label>First XX Letters</label>
+                </value>
+                <value>
+                    <fullName>First XX Words</fullName>
+                    <default>false</default>
+                    <label>First XX Words</label>
+                </value>
+                <value>
+                    <fullName>Numeric</fullName>
+                    <default>false</default>
+                    <label>Numeric</label>
+                </value>
+                <value>
+                    <fullName>Regular Expression</fullName>
+                    <default>false</default>
+                    <label>Regular Expression</label>
+                </value>
+                <value>
+                    <fullName>Regular Expression Y/N</fullName>
+                    <default>false</default>
+                    <label>Regular Expression Y/N</label>
+                </value>
+                <value>
+                    <fullName>Relaxed Domain</fullName>
+                    <default>false</default>
+                    <label>Relaxed Domain</label>
+                </value>
+                <value>
+                    <fullName>Relaxed NA Phone Match</fullName>
+                    <default>false</default>
+                    <label>Relaxed NA Phone Match</label>
+                </value>
+                <value>
+                    <fullName>Relaxed Street Address Match</fullName>
+                    <default>false</default>
+                    <label>Relaxed Street Address Match</label>
+                </value>
+                <value>
+                    <fullName>Salesforce.com ID Match</fullName>
+                    <default>false</default>
+                    <label>Salesforce.com ID Match</label>
+                </value>
+                <value>
+                    <fullName>State Match</fullName>
+                    <default>false</default>
+                    <label>State Match</label>
+                </value>
+                <value>
+                    <fullName>Street Address Match</fullName>
+                    <default>false</default>
+                    <label>Street Address Match</label>
+                </value>
+                <value>
+                    <fullName>Zip 5 and 9</fullName>
+                    <default>false</default>
+                    <label>Zip 5 and 9</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Match_Blank__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>By default, blank fields are not matched against each other.  If this option is checked, then two blank fields are considered to be matching.</inlineHelpText>
+        <label>Match Blank</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Match_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated</inlineHelpText>
+        <label>Match Field</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>First Name</fullName>
+                    <default>false</default>
+                    <label>First Name</label>
+                </value>
+                <value>
+                    <fullName>Last Name</fullName>
+                    <default>false</default>
+                    <label>Last Name</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Company</fullName>
+                    <default>false</default>
+                    <label>Company</label>
+                </value>
+                <value>
+                    <fullName>Account Name</fullName>
+                    <default>false</default>
+                    <label>Account Name</label>
+                </value>
+                <value>
+                    <fullName>Account ID</fullName>
+                    <default>false</default>
+                    <label>Account ID</label>
+                </value>
+                <value>
+                    <fullName>Account Number</fullName>
+                    <default>false</default>
+                    <label>Account Number</label>
+                </value>
+                <value>
+                    <fullName>Site</fullName>
+                    <default>false</default>
+                    <label>Site</label>
+                </value>
+                <value>
+                    <fullName>Billing Street</fullName>
+                    <default>false</default>
+                    <label>Billing Street</label>
+                </value>
+                <value>
+                    <fullName>Billing City</fullName>
+                    <default>false</default>
+                    <label>Billing City</label>
+                </value>
+                <value>
+                    <fullName>Billing State</fullName>
+                    <default>false</default>
+                    <label>Billing State</label>
+                </value>
+                <value>
+                    <fullName>Billing Postal Code</fullName>
+                    <default>false</default>
+                    <label>Billing Postal Code</label>
+                </value>
+                <value>
+                    <fullName>Billing Country</fullName>
+                    <default>false</default>
+                    <label>Billing Country</label>
+                </value>
+                <value>
+                    <fullName>Shipping Street</fullName>
+                    <default>false</default>
+                    <label>Shipping Street</label>
+                </value>
+                <value>
+                    <fullName>Shipping City</fullName>
+                    <default>false</default>
+                    <label>Shipping City</label>
+                </value>
+                <value>
+                    <fullName>Shipping State</fullName>
+                    <default>false</default>
+                    <label>Shipping State</label>
+                </value>
+                <value>
+                    <fullName>Shipping Postal Code</fullName>
+                    <default>false</default>
+                    <label>Shipping Postal Code</label>
+                </value>
+                <value>
+                    <fullName>Shipping Country</fullName>
+                    <default>false</default>
+                    <label>Shipping Country</label>
+                </value>
+                <value>
+                    <fullName>Street</fullName>
+                    <default>false</default>
+                    <label>Street</label>
+                </value>
+                <value>
+                    <fullName>City</fullName>
+                    <default>false</default>
+                    <label>City</label>
+                </value>
+                <value>
+                    <fullName>State</fullName>
+                    <default>false</default>
+                    <label>State</label>
+                </value>
+                <value>
+                    <fullName>Postal Code</fullName>
+                    <default>false</default>
+                    <label>Postal Code</label>
+                </value>
+                <value>
+                    <fullName>Country</fullName>
+                    <default>false</default>
+                    <label>Country</label>
+                </value>
+                <value>
+                    <fullName>Mailing Street</fullName>
+                    <default>false</default>
+                    <label>Mailing Street</label>
+                </value>
+                <value>
+                    <fullName>Mailing City</fullName>
+                    <default>false</default>
+                    <label>Mailing City</label>
+                </value>
+                <value>
+                    <fullName>Mailing State</fullName>
+                    <default>false</default>
+                    <label>Mailing State</label>
+                </value>
+                <value>
+                    <fullName>Mailing Postal Code</fullName>
+                    <default>false</default>
+                    <label>Mailing Postal Code</label>
+                </value>
+                <value>
+                    <fullName>Mailing Country</fullName>
+                    <default>false</default>
+                    <label>Mailing Country</label>
+                </value>
+                <value>
+                    <fullName>Other Street</fullName>
+                    <default>false</default>
+                    <label>Other Street</label>
+                </value>
+                <value>
+                    <fullName>Other City</fullName>
+                    <default>false</default>
+                    <label>Other City</label>
+                </value>
+                <value>
+                    <fullName>Other State</fullName>
+                    <default>false</default>
+                    <label>Other State</label>
+                </value>
+                <value>
+                    <fullName>Other Postal Code</fullName>
+                    <default>false</default>
+                    <label>Other Postal Code</label>
+                </value>
+                <value>
+                    <fullName>Other Country</fullName>
+                    <default>false</default>
+                    <label>Other Country</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+                <value>
+                    <fullName>Mobile Phone</fullName>
+                    <default>false</default>
+                    <label>Mobile Phone</label>
+                </value>
+                <value>
+                    <fullName>Home Phone</fullName>
+                    <default>false</default>
+                    <label>Home Phone</label>
+                </value>
+                <value>
+                    <fullName>Other Phone</fullName>
+                    <default>false</default>
+                    <label>Other Phone</label>
+                </value>
+                <value>
+                    <fullName>Fax</fullName>
+                    <default>false</default>
+                    <label>Fax</label>
+                </value>
+                <value>
+                    <fullName>Ticker Symbol</fullName>
+                    <default>false</default>
+                    <label>Ticker Symbol</label>
+                </value>
+                <value>
+                    <fullName>Website</fullName>
+                    <default>false</default>
+                    <label>Website</label>
+                </value>
+                <value>
+                    <fullName>Owner ID</fullName>
+                    <default>false</default>
+                    <label>Owner ID</label>
+                </value>
+                <value>
+                    <fullName>Record Type</fullName>
+                    <default>false</default>
+                    <label>Record Type</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Regex__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a valid regular expression.</inlineHelpText>
+        <label>Regular Expression</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Related_Field_Display_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field we&apos;re matching against on the Account/Contact objects for Lead to X scenarios.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Account or Contact field that is matched against the Lead field in this rule for Lead to Account or Lead to Contact scenarios.</inlineHelpText>
+        <label>Related Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Related_Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of the Account/Contact field for Lead to X scenarios.</description>
+        <externalId>false</externalId>
+        <label>Related Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Scenario_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This must be the same as the parent scenario&apos;s type.</inlineHelpText>
+        <label>Scenario Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                    <label>Account</label>
+                </value>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+                <value>
+                    <fullName>Lead to Contact</fullName>
+                    <default>false</default>
+                    <label>Lead to Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead to Account</fullName>
+                    <default>false</default>
+                    <label>Lead to Account</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Scenario__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Pre-populates with the scenario the rule is being created for, do not change this value.</inlineHelpText>
+        <label>Scenario</label>
+        <referenceTo>CRMfusionDBR101__Scenario__c</referenceTo>
+        <relationshipLabel>DupeBlocker Scenario Rules</relationshipLabel>
+        <relationshipName>Scenario_Rules</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRMfusionDBR101__Transpose__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Match all words in the selected field, disregarding the order of the words.</inlineHelpText>
+        <label>Transpose</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>DupeBlocker Scenario Rule</label>
+    <nameField>
+        <displayFormat>Rule: {0}</displayFormat>
+        <label>Rule Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DupeBlocker Scenario Rules</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__Scenario__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__Match_Field__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__Mapping_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__English_Fuzzy__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__AlphaClean__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__Transpose__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CRMfusionDBR101__Match_Blank__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__Scenario__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__Match_Field__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__Mapping_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__English_Fuzzy__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__AlphaClean__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__Transpose__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CRMfusionDBR101__Match_Blank__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__Scenario__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__Match_Field__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__Mapping_Type__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__English_Fuzzy__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__AlphaClean__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__Transpose__c</searchFilterFields>
+        <searchFilterFields>CRMfusionDBR101__Match_Blank__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CRMfusionDBR101__First_XX_Letters</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL( CRMfusionDBR101__Mapping_Type__c, &quot;First XX Letters&quot; ) , OR( ISNULL( CRMfusionDBR101__First_XX_Letters__c ), CRMfusionDBR101__First_XX_Letters__c &lt; 1, CRMfusionDBR101__First_XX_Letters__c &gt; 254 ) )</errorConditionFormula>
+        <errorDisplayField>CRMfusionDBR101__First_XX_Letters__c</errorDisplayField>
+        <errorMessage>If the mapping type is set to &quot;First XX Letters&quot;, you must specify a value less than 255 for this field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRMfusionDBR101__First_XX_Words</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL( CRMfusionDBR101__Mapping_Type__c, &quot;First XX Words&quot; ) , OR( ISNULL( CRMfusionDBR101__First_XX_Words__c ), CRMfusionDBR101__First_XX_Words__c &lt; 1, CRMfusionDBR101__First_XX_Words__c &gt; 99 ) )</errorConditionFormula>
+        <errorDisplayField>CRMfusionDBR101__First_XX_Words__c</errorDisplayField>
+        <errorMessage>If the mapping type is set to &quot;First XX Words&quot;, you must specify a value less than 100 for this field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRMfusionDBR101__Regex_Not_Empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( OR( ISPICKVAL( CRMfusionDBR101__Mapping_Type__c, &quot;Regular Expression&quot; ), ISPICKVAL( CRMfusionDBR101__Mapping_Type__c, &quot;Regular Expression Y/N&quot; ) ) , ISBLANK( CRMfusionDBR101__Regex__c ) )</errorConditionFormula>
+        <errorDisplayField>CRMfusionDBR101__Regex__c</errorDisplayField>
+        <errorMessage>If the mapping type is set to &quot;Regular Expression&quot; or &quot;Regular Expression Y/N&quot;, you must specify a valid regular expression.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRMfusionDBR101__Validate_Scenario_Type</fullName>
+        <active>true</active>
+        <description>Make sure the scenario type matches the parent scenario type.</description>
+        <errorConditionFormula>TEXT( CRMfusionDBR101__Scenario_Type__c ) &lt;&gt; TEXT( CRMfusionDBR101__Scenario__r.CRMfusionDBR101__Scenario_Type__c )</errorConditionFormula>
+        <errorDisplayField>CRMfusionDBR101__Scenario_Type__c</errorDisplayField>
+        <errorMessage>The Scenario Type must be the same as the parent Scenario.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

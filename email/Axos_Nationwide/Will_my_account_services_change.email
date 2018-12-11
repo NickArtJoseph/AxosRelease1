@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Your accounts will remain in place, safe and accessible, and fully insured under the FDIC with Axos Bank. There will be little or no change for the majority of Nationwide Bank members. However, a small number of Nationwide products will be migrated to comparable products after the transition. Please refer to the appropriate Product Change Notice link below for any changes that impact you. Our goal is to make this transition as seamless as possible for our valued Nationwide customers. Account numbers and routing numbers will remain the same. No need to order new checks. Continue to use your existing supply of Nationwide Bank checks until they are depleted and reorder whenever you need more. Our intention is for your existing debit card to work until the expiration date shown on your card.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Product Change Notice - <a href="https://www.axosbank.com/-/media/Axos/Nationwide/Product-Change-Notice--PERSONAL-Final.pdf?la=en&amp;hash=C7B61FC425E2291D3D92E5DCE019E301ECA7B249">Consumers</a></font></div><div style=""><font face="arial">Product Change Notice - <a href="https://www.axosbank.com/-/media/Axos/Nationwide/Product-Change-Notice--BUSINESS--Final.pdf?la=en&amp;hash=307B3492D0BED52081004506EF202EBB823E7A9C">Business</a></font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,68 @@
+<apex:page standardController="Five9LSP__Five9_List__c" extensions="Five9LSP.Five9_List_Controller_Extension" action="{!doInitialVCCCacheUpdate}">
+<apex:pageMessages id="pageMessages" ></apex:pageMessages>
+    <apex:form id="f9listform">
+        <apex:pageBlock title="Five9 List Sync Plus">
+    <apex:pageBlockButtons ><apex:commandButton action="{!quicksave}"  value="{!IF(ISNULL(Five9LSP__Five9_List__c.Id),'Save & Continue','Quick Save')}"/>
+    <apex:commandButton action="{!cancel}"  value="Cancel"/>
+    <apex:commandButton action="{!save}"  value="Save" rendered="{!NOT(ISNULL(Five9LSP__Five9_List__c.Name))}"/>
+    <!--<apex:commandButton action="{!recalcAllowTrue}"  value="Re-Calculate Allow Sync" rendered="{!NOT(ISNULL(Five9LSP__Five9_List__c.Name))}" />-->
+    </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                 <apex:inputField required="True" label="Five9 List Name" value="{!Five9LSP__Five9_List__c.Name}"/>
+                 <apex:inputField label="Five9 Domain" value="{!Five9LSP__Five9_List__c.Five9LSP__Five9_Domain__c}"/>
+                 <apex:inputField label="Five9 User Name" value="{!Five9LSP__Five9_List__c.Five9LSP__Five9_User_Name__c}"/>
+                 <apex:inputField label="Five9 Password" value="{!Five9LSP__Five9_List__c.Five9LSP__Five9_User_Password__c}"/>
+                 <apex:inputField required="true" label="Five9 API URL" value="{!Five9LSP__Five9_List__c.Five9LSP__API_URL__c}"/>
+                 <!-- Hiding the list-level field, as W2C F9CallASAP flag overrides redial with timer and DND with timer. JS 2016-4-11
+                 <apex:inputField label="Call ASAP" value="{!Five9_List__c.Five9_Call_ASAP__c}" /> -->
+                 <apex:selectList required="true" id="controllingObj" value="{!Five9LSP__Five9_List__c.Five9LSP__Controlling_Object__c}" multiselect="false" size="1" disabled="{!IF(numMappings > 0, True, False)}" >
+                    <apex:selectOptions value="{!sfObjectTypes}"/>
+                    <apex:actionSupport event="onchange" action="{!changeObject}" rerender="newSFDCField"/>
+                 </apex:selectList>
+                 </apex:pageBlockSection>
+                 <apex:pageBlockSection columns="1" title="Field Mappings" rendered="{!Five9LSP__Five9_List__c.Id != NULL}">
+    <apex:pageBlockTable width="70%" value="{!fieldMappings}" var="fieldMap" id="fieldMappings" columns="4" >
+    <apex:facet name="footer">{!IF(numRowsToDelete>0, TEXT(numRowsToDelete)&" row(s) will be deleted", "")}</apex:facet>
+        <apex:column width="10%">
+            <apex:image value="/img/msg_icons/{!IF(fieldMap.persisted, "confirm", "warning")}16.png" title="{!IF(fieldMap.persisted, "Mapping Saved", "Mapping not saved to database")}"/>
+        </apex:column>
+        <apex:column width="40%">
+            <apex:facet name="header">Salesforce Field</apex:facet>
+            <apex:outputText value="{!fieldMap.sfdcField}"/>
+            <apex:facet name="footer">
+                <apex:selectList id="newSFDCField" value="{!newSFDCField}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!sfFieldOptions}"/>
+                </apex:selectList>
+            </apex:facet>
+        </apex:column>
+        <apex:column width="40%">
+            <apex:facet name="header">Five9 Field</apex:facet>
+            <apex:outputText value="{!fieldMap.five9Field}"/>
+            <apex:facet name="footer">
+                <apex:outputPanel >
+                    <apex:selectList id="newFive9Field" value="{!newFive9Field}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!f9FieldOptions}"/>
+                    </apex:selectList>
+                    <br />
+                    <apex:outputText id="VCCCacheLastUpdate" value="Last Updated: {0, date, d-M-YY HH:mm:ss z}">
+                        <apex:param value="{!VCCCacheLastUpdate}" />
+                    </apex:outputText>&nbsp;
+                    <apex:commandLink value="[Update Now]" action="{!doVCCFieldUpdate}" reRender="checkvccpoller" styleClass="fetchVCCFields" />
+                    <apex:actionPoller id="checkvccpoller" enabled="{!enablePoller}" action="{!checkVCCCacheUpdate}" reRender="VCCCacheLastUpdate,newFive9Field,checkvccpoller,checkVcccStatus,pageMessages" interval="5" status="checkVcccStatus"/>
+                     <br /><apex:actionStatus startText=" (Refreshing VCC fields)" stopText="{!actionPollerError}" id="checkVcccStatus" stopStyle="color:red" />
+                </apex:outputPanel>
+           </apex:facet>
+        </apex:column>
+        <apex:column width="10%">
+            <apex:facet name="header">Delete</apex:facet>
+            <apex:commandLink action="{!deleteMapping}" id="del_link" reRender="fieldMappings,controllingObj" >
+            <apex:image value="/img/func_icons/remove12.gif"/>
+            <apex:param name="idx" value="{!fieldMap.five9Field}" assignTo="{!keyToDelete}"/>
+            </apex:commandLink>
+            <apex:facet name="footer"><apex:commandButton action="{!addMapping}" reRender="fieldMappings,controllingObj" value="Add New Mapping" status="ajaxStatus"/></apex:facet>
+        </apex:column>
+    </apex:pageBlockTable>
+    </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,210 @@
+<apex:page controller="SNPCAPIQ.AccountsSearchController" title="S&P Capital IQ - Search Companies">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="snp">
+
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right"/>
+                <div class="snp-logo-big">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SNPCAPIQ__SnP_resources, 'img/snp-logo46.png')}"/>
+                </div>
+            </div>
+
+            <div class="snp-panel-title">Choose type of Search and Filter Criteria</div>
+
+            <div class="snp-search-tabs">
+                <ul class="ui-tabs-nav clearfix">
+                    <li class="ui-tabs-active">
+                        <a href="/apex/SearchAccounts">Companies</a>
+                    </li>
+                    <li>
+                        <a href="/apex/SearchContacts">People</a>
+                    </li>
+                    <li>
+                        <a href="/apex/SearchKeyDevelopments">Key Developments</a>
+                    </li>
+                </ul>
+            </div>
+
+            <apex:form id="searchFilterForm">
+            <div class="snp-container15">
+                <div class="snp-colpane snp-form-group">
+
+                    <div class="snp-col12">
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Company Name" styleClass="snp-form-label snp-col25"/>
+                            <div class="snp-form-stretch">
+                                <apex:inputText value="{!Name}"/>
+                            </div>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Keywords" styleClass="snp-form-label snp-col25"/>
+                            <div class="snp-form-stretch">
+                                <apex:inputText value="{!keywords}"/>
+                            </div>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Country" styleClass="snp-form-label snp-col25"/>
+                            <div class="snp-form-stretchmax">
+                                <apex:selectList value="{!Country}" size="1">
+                                    <apex:selectOptions value="{!CountriesOptions}" />
+                                                                        
+                                    <apex:actionSupport event="onchange" reRender="States" action="{!updateStates}" status="pageLoader" >
+                                        <apex:param name="countryId" value="{!Country}"/>
+                                    </apex:actionSupport>
+                                </apex:selectList>
+                            </div>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="State" styleClass="snp-form-label snp-col25"/>
+                            <div class="snp-form-stretchmax">
+                                <apex:selectList id="States"  value="{!State}" size="1">
+                                    <apex:selectOptions value="{!statesOptions}" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="City" styleClass="snp-form-label snp-col25"/>
+                            <div class="snp-form-stretch">
+                                <apex:inputtext value="{!City}"></apex:inputtext>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="snp-col12">
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Public" styleClass="snp-form-label snp-col25"/>
+                            <apex:inputCheckbox value="{!IsPublic}" selected="true"/>
+                            <apex:outputLabel value="Private" styleClass="snp-form-label" style="width:60px;"/>
+                            <apex:inputCheckbox value="{!IsPrivate}" selected="true"/>
+                            <span title="Search results will be enhanced by eliminating revenue criteria as some private companies do not report revenue" class="snp-help-icon helpIcon"></span>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Total Revenue" styleClass="snp-form-label snp-col25"/>
+                            <apex:selectList id="totalRevenueMin" value="{!Min}" size="1">
+                                <apex:selectOptions value="{!TotalRevenueMinOptions}" />
+                            </apex:selectList>
+                            <apex:outputLabel value="—" styleClass="snp-form-label" style="margin:0 3px;"/>
+                            <apex:selectList id="totalRevenueMax" value="{!Max}" size="1">
+                                <apex:selectOptions value="{!TotalRevenueMaxOptions}" />
+                            </apex:selectList>
+
+                            <script>
+                                $$(function(){
+                                    var revMinSelect = $$(getId('{!$Component.totalRevenueMin}'));
+                                    var revMaxSelect = $$(getId('{!$Component.totalRevenueMax}'));
+                                    
+                                    revMinSelect.change(function(){
+                                        revMaxSelect.find('option').prop('disabled', false);
+
+                                        var minValue = $$(this).val();
+                                        if(minValue != '1-' && minValue != '') {
+                                            revMaxSelect.find('option').each(function(){
+                                                var maxValue = $$(this).val();
+                                                if (maxValue != '25000+' && maxValue != '') {
+                                                    if (parseInt(maxValue) < parseInt(minValue)) {
+                                                        $$(this).prop('disabled', true);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                    revMaxSelect.change(function(){
+                                        revMinSelect.find('option').prop('disabled', false);
+
+                                        var maxValue = $$(this).val();
+                                        if(maxValue != '25000+' && maxValue != '') {
+                                            revMinSelect.find('option').each(function(){
+                                                var minValue = $$(this).val();
+                                                if (minValue != '1-' && minValue != '') {
+                                                    if (parseInt(minValue) > parseInt(maxValue)) {
+                                                        $$(this).prop('disabled', true);
+                                                    }
+                                                }
+                                            });
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+
+                        <div class="snp-form-group">
+                            <apex:outputLabel value="Number of Employees" styleClass="snp-form-label snp-col25"/>
+                            <apex:selectList value="{!Numb}" size="1">
+                                <apex:selectOptions value="{!NumberOfEmployersOptions}" />
+                            </apex:selectList>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="snp-form-group">
+                    <apex:outputLabel value="Industry" styleClass="snp-form-label snp-col15"/>
+                    <div class="snp-form-stretchmax">
+                        <apex:selectList value="{!Industry}" size="5" multiselect="true">
+                            <apex:selectOptions value="{!IndustriesOptions}" />
+                        </apex:selectList>
+                    </div>
+                </div>
+            </div>
+
+            <div class="snp-panel-divider"></div>
+
+            <div class="snp-container20 center">
+                <apex:commandLink action="{!submitSearch}" id="submitButton" value="SEARCH" status="pageLoader" styleClass="snp-btn snp-btn-large" rerender="searchResultsForm, pageMessages"/>
+                <a href="#resetForm" class="a-gray">Reset form</a>
+
+                <script>
+                    $$(function(){
+                        $$('a[href=#resetForm]').click(function(){
+                        
+                            getId('{!$Component.searchFilterForm}').reset();
+                            $$(getId('{!$Component.searchFilterForm}')).find('input,select').val('');
+                            
+                            $$(getId('{!$Component.totalRevenueMin}')).find('option').prop('disabled', false);
+                            $$(getId('{!$Component.totalRevenueMax}')).find('option').prop('disabled', false);
+                            
+                            return false;
+                        });
+                    });
+                    $$('input').keydown(function(e) {
+                        var searchForm = $$(getId('{!$Component.searchFilterForm}'));
+                        var submitButton = $$(getId('{!$Component.submitButton}'));
+                        if (e.keyCode == 13) {
+                            $$(submitButton ).click();
+                        }
+                    });
+                </script>
+            </div>
+            </apex:form>
+        </div>
+
+        <div class="snp-search-message">
+            <apex:pageMessages id="pageMessages"/>
+        </div>
+
+        <apex:form id="searchResultsForm">
+        <apex:outputPanel layout="block" styleClass="snp-panel" rendered="{!if(firstLoad, false, true)}">
+            <div class="snp-container15 clearfix">
+                <c:AlphabeticalFilter id="abcFilter"  controllerInstance="{!baseControllerInstanse}" rerenderItems="resultTableComponent, paginationTop, paginationBottom, pageSelector, abcFilter, debuginfo, pageMessages" />
+                <c:AccountResultTable id="resultTableComponent" rerenderItems="resultTableComponent, paginationTop, paginationBottom, pageSelector, abcFilter, debuginfo, pageMessages" baseControllerInstanse="{!baseControllerInstanse}" accountModels="{!accountModels}" addToSalesForce="{!addToSalesForce}" addToSalesforce2="{!addLeadsToSalesForce}" firstLoad="{!firstLoad}" clearAddedResults="{!clearAddedResults}" addedAccountsCount="{!addedAccountsCount}" notAddedAccountsCount="{!notAddedAccountsCount}" addedLeadsCount="{!addedLeadsCount}" notAddedLeadsCount="{!notAddedLeadsCount}" using="search"/>
+                <c:PageSelector id="pageSelector"  controllerInstance="{!baseControllerInstanse}" rerenderItems="resultTableComponent, paginationTop, paginationBottom, pageSelector, abcFilter, debuginfo, pageMessages" rendered="{!if(accountModels.size > 0, true, false)}"/>
+
+                <script>
+                    $$(function(){
+                        $$.scrollTo($$(getId('{!$Component.searchResultsForm}')), 400);
+                    });
+                </script>
+
+                <c:DebugInfo id="debuginfo" controllerInstance="{!baseControllerInstanse}" />
+            </div>
+        </apex:outputPanel>
+        </apex:form>
+    </div>
+</apex:page>

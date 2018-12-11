@@ -1,0 +1,9 @@
+<apex:page sidebar="false" controller="G4S.LaunchSessionController" action="{!initPage}" title="Glance for Salesforce - Launch Session">
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Launch Session"/>
+
+<apex:pageMessages />
+
+This page starts Glance sessions and saves an Event entry for the session.
+
+</apex:page>

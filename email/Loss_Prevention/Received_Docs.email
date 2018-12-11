@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="50"><td teditid="c1r1" aeditid="c1r1" locked="0" style="background-color: rgb(255, 255, 255); font-size: 12pt;"></td></tr><tr valign="top" height="300"><td teditid="c1r2" aeditid="c1r2" locked="0" style="background-color: rgb(255, 255, 255);"><span style="font-size: 12pt;">Hello {!Case.Contact},</span><br><br><br>This is an automatic acknowledgement to let you know that your documents have been received<span style="font-size: 12pt;">.&nbsp;</span><br><br>Please allow up to 2 business days for the verification process. If additional information is needed, we will contact you via email or phone<span style="font-size: 12pt;">.&nbsp;&nbsp;</span><br><br>If you would like further assistance, please call us at 1-877-247-8002<span style="font-size: 12pt;">.&nbsp;</span><br><br><span style="font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span>BOFI Customer Service</td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

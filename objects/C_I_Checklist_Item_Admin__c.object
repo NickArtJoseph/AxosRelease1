@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used by C&amp;I to define checklist items required for certifications</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Certification_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Certification Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annual Certification</fullName>
+                    <default>false</default>
+                    <label>Annual Certification</label>
+                </value>
+                <value>
+                    <fullName>Quarterly Certification</fullName>
+                    <default>false</default>
+                    <label>Quarterly Certification</label>
+                </value>
+                <value>
+                    <fullName>Monthly Certification</fullName>
+                    <default>false</default>
+                    <label>Monthly Certification</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Checklist_Item_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Checklist Item Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Certification_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Audited Financial Statements</fullName>
+                    <default>false</default>
+                    <label>Audited Financial Statements</label>
+                </value>
+                <value>
+                    <fullName>Background Check</fullName>
+                    <default>false</default>
+                    <label>Background Check</label>
+                </value>
+                <value>
+                    <fullName>Borrowing Base</fullName>
+                    <default>false</default>
+                    <label>Borrowing Base</label>
+                </value>
+                <value>
+                    <fullName>Cash Audit</fullName>
+                    <default>false</default>
+                    <label>Cash Audit</label>
+                </value>
+                <value>
+                    <fullName>Co. Prep. Financial Statements</fullName>
+                    <default>false</default>
+                    <label>Co. Prep. Financial Statements</label>
+                </value>
+                <value>
+                    <fullName>Collateral Audit</fullName>
+                    <default>false</default>
+                    <label>Collateral Audit</label>
+                </value>
+                <value>
+                    <fullName>Collateral Validation</fullName>
+                    <default>false</default>
+                    <label>Collateral Validation</label>
+                </value>
+                <value>
+                    <fullName>Compliance Audit</fullName>
+                    <default>false</default>
+                    <label>Compliance Audit</label>
+                </value>
+                <value>
+                    <fullName>Corporate Federal &amp; State Tax Returns</fullName>
+                    <default>false</default>
+                    <label>Corporate Federal &amp; State Tax Returns</label>
+                </value>
+                <value>
+                    <fullName>Covenant Check</fullName>
+                    <default>false</default>
+                    <label>Covenant Check</label>
+                </value>
+                <value>
+                    <fullName>Credit Bureau Report (CBR)</fullName>
+                    <default>false</default>
+                    <label>Credit Bureau Report (CBR)</label>
+                </value>
+                <value>
+                    <fullName>Custodial Report</fullName>
+                    <default>false</default>
+                    <label>Custodial Report</label>
+                </value>
+                <value>
+                    <fullName>Development Budget</fullName>
+                    <default>false</default>
+                    <label>Development Budget</label>
+                </value>
+                <value>
+                    <fullName>Financial Projections</fullName>
+                    <default>false</default>
+                    <label>Financial Projections</label>
+                </value>
+                <value>
+                    <fullName>Loan Review</fullName>
+                    <default>false</default>
+                    <label>Loan Review</label>
+                </value>
+                <value>
+                    <fullName>Personal Federal &amp; State Tax Returns</fullName>
+                    <default>false</default>
+                    <label>Personal Federal &amp; State Tax Returns</label>
+                </value>
+                <value>
+                    <fullName>Personal Financial Statement (PFS)</fullName>
+                    <default>false</default>
+                    <label>Personal Financial Statement (PFS)</label>
+                </value>
+                <value>
+                    <fullName>Procedural Audit</fullName>
+                    <default>false</default>
+                    <label>Procedural Audit</label>
+                </value>
+                <value>
+                    <fullName>Proof of Insurance</fullName>
+                    <default>false</default>
+                    <label>Proof of Insurance</label>
+                </value>
+                <value>
+                    <fullName>Rent Roll/Lease Receivable Aging</fullName>
+                    <default>false</default>
+                    <label>Rent Roll/Lease Receivable Aging</label>
+                </value>
+                <value>
+                    <fullName>Reporting Package</fullName>
+                    <default>false</default>
+                    <label>Reporting Package</label>
+                </value>
+                <value>
+                    <fullName>Risk Rating</fullName>
+                    <default>false</default>
+                    <label>Risk Rating</label>
+                </value>
+                <value>
+                    <fullName>Schedule of Security Deposits</fullName>
+                    <default>false</default>
+                    <label>Schedule of Security Deposits</label>
+                </value>
+                <value>
+                    <fullName>Servicing Report</fullName>
+                    <default>false</default>
+                    <label>Servicing Report</label>
+                </value>
+                <value>
+                    <fullName>Site Inspections/Draw Request Packages</fullName>
+                    <default>false</default>
+                    <label>Site Inspections/Draw Request Packages</label>
+                </value>
+                <value>
+                    <fullName>Site Visit</fullName>
+                    <default>false</default>
+                    <label>Site Visit</label>
+                </value>
+                <value>
+                    <fullName>Status Updates</fullName>
+                    <default>false</default>
+                    <label>Status Updates</label>
+                </value>
+                <value>
+                    <fullName>Technology Audit</fullName>
+                    <default>false</default>
+                    <label>Technology Audit</label>
+                </value>
+                <value>
+                    <fullName>Title Bring Down</fullName>
+                    <default>false</default>
+                    <label>Title Bring Down</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Audited Financial Statements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Background Check</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Borrowing Base</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Cash Audit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Co. Prep. Financial Statements</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Collateral Audit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Compliance Audit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Corporate Federal &amp; State Tax Returns</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Covenant Check</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Credit Bureau Report (CBR)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Development Budget</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Financial Projections</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Loan Review</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Personal Federal &amp; State Tax Returns</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Personal Financial Statement (PFS)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Procedural Audit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <valueName>Proof of Insurance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Rent Roll/Lease Receivable Aging</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Reporting Package</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Risk Rating</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Site Visit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Status Updates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annual Certification</controllingFieldValue>
+                <valueName>Technology Audit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <valueName>Collateral Validation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Schedule of Security Deposits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Quarterly Certification</controllingFieldValue>
+                <valueName>Title Bring Down</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Custodial Report</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Servicing Report</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Monthly Certification</controllingFieldValue>
+                <valueName>Site Inspections/Draw Request Packages</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Grace_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Checklist Item Admin records can only be associated with C&amp;I Opportunities</errorMessage>
+            <filterItems>
+                <field>Opportunity.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>C&amp;I - AB Participation, C&amp;I - Bridge, C&amp;I - General, C&amp;I - Lender Finance</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>C&amp;I Checklist Item Admins</relationshipLabel>
+        <relationshipName>C_I_Checklist_Item_Admins</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>C&amp;I Checklist Item Admin</label>
+    <nameField>
+        <label>Checklist Item Admin Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>C&amp;I Checklist Item Admins</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

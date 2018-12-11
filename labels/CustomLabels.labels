@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountResearchSFDC2Controller_CancelRequestError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFDC2 AccountResearchSFDC2Controller_CancelRequestError</shortDescription>
+        <value>You don&apos;t have permission to Cancel Research on this record.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_RequestResearchEmailsError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_RequestResearchEmailsError</shortDescription>
+        <value>One or more email addresses associated with this Account are not marked as &quot;Bad&quot;. Please attempt contact using all available email addresses before requesting further research.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_RequestResearchJHError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_RequestResearchJHError</shortDescription>
+        <value>Research cannot be performed for an Account with a Jack Henry customer record.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_RequestResearchManagerError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_RequestResearchManagerError</shortDescription>
+        <value>No user can be found with the role of Research Manager. Please contact support.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_RequestResearchOwnerError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_RequestResearchOwnerError</shortDescription>
+        <value>Only the Account Owner can perform this operation. Please contact support.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_RequestResearchPhonesError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_RequestResearchPhonesError</shortDescription>
+        <value>One or more phone numbers associated with this Account are not marked as &quot;Bad&quot;. Please attempt contact using all available phone numbers before requesting further research.</value>
+    </labels>
+    <labels>
+        <fullName>AccountResearchSFDC2_ReturnResearchTeamError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccountResearchSFDC2_ReturnResearchTeamError</shortDescription>
+        <value>Only members of the Research Team are allowed to perform this action.</value>
+    </labels>
+    <labels>
+        <fullName>Attachment_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachment_LeadForm</shortDescription>
+        <value>Attachment</value>
+    </labels>
+    <labels>
+        <fullName>Attachments_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Attachments_LeadForm</shortDescription>
+        <value>Attachments</value>
+    </labels>
+    <labels>
+        <fullName>BUnitLabel_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BUnitLabel_LeadForm</shortDescription>
+        <value>Referring Business Unit</value>
+    </labels>
+    <labels>
+        <fullName>CancelButton_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CancelButton_LeadForm</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>CloseWindow_LeadForm_Sharepoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CloseWindow_LeadForm_Sharepoint</shortDescription>
+        <value>Close Window</value>
+    </labels>
+    <labels>
+        <fullName>DaysBack</fullName>
+        <categories>Apex label for Kevin Report</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DaysBack</shortDescription>
+        <value>7</value>
+    </labels>
+    <labels>
+        <fullName>FileExtensions_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FileExtensions_LeadForm</shortDescription>
+        <value>The file extensions allowed are:.jpg, .png, .docx, .pdf, .txt, .xlsx, .csv</value>
+    </labels>
+    <labels>
+        <fullName>GoodbyeMessage_LeadForm_Sharepoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GoodbyeMessage_LeadForm_Sharepoint</shortDescription>
+        <value>Thank you!</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Canceled</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Canceled_BofI_USA</shortDescription>
+        <value>Sorry we missed you. If you still need help you can call us at 1-888-502-2967.</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Canceled_Enrollment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Canceled_Enrollment</shortDescription>
+        <value>Sorry we missed you. If you still need help you can call us at 1-888-502-2967.</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Canceled_Nationwide</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Canceled_Nationwide</shortDescription>
+        <value>Sorry we missed you. If you still need help you can call us at 1-855-232-AXOS.</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Confirmation_CancelChat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent Confirmation CancelChat</shortDescription>
+        <value>Are you sure you want to cancel your request to chat?</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Confirmation_EndChat</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Confirmation_EndChat</shortDescription>
+        <value>Are you sure you want to end your chat?</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Confirmation_StartCobrowse</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Confirmation_StartCobrowse</shortDescription>
+        <value>May we browse the website together?</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Greeting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Greeting</shortDescription>
+        <value>Hello!</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_PostChat_NoAgents</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_PostChat_NoAgents</shortDescription>
+        <value>There are no agents available for chat.</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_PostChat_Thanks</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_PostChat_Thanks</shortDescription>
+        <value>Thanks for the chat! We&apos;ve created a transcript of this chat for your records. You should see it in your downloads.</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Prechat_Begin</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Prechat_Begin</shortDescription>
+        <value>Let&apos;s Chat</value>
+    </labels>
+    <labels>
+        <fullName>LiveAgent_Waiting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LiveAgent_Waiting</shortDescription>
+        <value>Hold on while we connect you</value>
+    </labels>
+    <labels>
+        <fullName>NoFile_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoFile_LeadForm</shortDescription>
+        <value>No file choosen</value>
+    </labels>
+    <labels>
+        <fullName>OtherSourceLabel_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OtherSourceLabel_LeadForm</shortDescription>
+        <value>Your Name</value>
+    </labels>
+    <labels>
+        <fullName>SectionOne_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SectionOne_LeadForm</shortDescription>
+        <value>Customer Information</value>
+    </labels>
+    <labels>
+        <fullName>SectionTwo_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SectionTwo_LeadForm</shortDescription>
+        <value>Created By</value>
+    </labels>
+    <labels>
+        <fullName>SubBranchLabel_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubBranchLabel_LeadForm</shortDescription>
+        <value>Refer To</value>
+    </labels>
+    <labels>
+        <fullName>SubmitButton_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SubmitButton_LeadForm</shortDescription>
+        <value>Submit Referral</value>
+    </labels>
+    <labels>
+        <fullName>SuccesfulText_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SuccesfulText_LeadForm</shortDescription>
+        <value>The lead is successfully submitted and routed.</value>
+    </labels>
+    <labels>
+        <fullName>TCIENR_ConsumerDepositosLeadQueueDevName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TCIENR_ConsumerDepositosLeadQueueDevName_cl</shortDescription>
+        <value>Consumer_Deposits_Lead_Queue</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoAlertWSDevName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoAlertWSDevName_cl</shortDescription>
+        <value>UDBSecureMessageMarketoAlert</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoLeadUpdWSDevName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoLeadUpdWSDevName_cl</shortDescription>
+        <value>MarketoLeadsUpdate</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoWSCampaignQueryDevName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoWSCampaignQueryDevName_cl</shortDescription>
+        <value>MarketoCampaignsQuery</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoWSLeadQueryDevName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoWSLeadQueryDevName_cl</shortDescription>
+        <value>MarketoLeadsQuery</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoWSUDBBrandAPIFieldProd_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoWSUDBBrandAPIFieldProd_cl</shortDescription>
+        <value>UDBBrand</value>
+    </labels>
+    <labels>
+        <fullName>UDB_MarketoWSUDBBrandAPIFieldSndbx_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_MarketoWSUDBBrandAPIFieldSndbx_cl</shortDescription>
+        <value>UDBBrand</value>
+    </labels>
+    <labels>
+        <fullName>UDB_OriginWhenCreatingCaseWSUDB_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_OriginWhenCreatingCaseWSUDB_cl</shortDescription>
+        <value>UDB</value>
+    </labels>
+    <labels>
+        <fullName>UDB_SecureMessageAlertMktoCampaignName_cl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UDB_SecureMessageAlertMktoCampaignName_cl</shortDescription>
+        <value>Email New Secure Message Alert</value>
+    </labels>
+    <labels>
+        <fullName>UploadFile_LeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UploadFile_LeadForm</shortDescription>
+        <value>Upload File</value>
+    </labels>
+    <labels>
+        <fullName>Validate_inputs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validate_inputs</shortDescription>
+        <value>Please validate all inputs.</value>
+    </labels>
+    <labels>
+        <fullName>errorMsgApex_createLeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>errorMsgApex_createLeadForm</shortDescription>
+        <value>Review all error messages below to correct your data.</value>
+    </labels>
+    <labels>
+        <fullName>errorMsgDupe_createLeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>errorMsgDupe_createLeadForm</shortDescription>
+        <value>The Lead already exist on Salesforce</value>
+    </labels>
+    <labels>
+        <fullName>numOfAttachments_createLeadForm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>numOfAttachments_createLeadForm</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>title_LeadForm_SharePoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>title_LeadForm_SharePoint</shortDescription>
+        <value>Cross-Sell Referral</value>
+    </labels>
+</CustomLabels>

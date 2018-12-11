@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skill xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <users>
+            <user>jmarino@bofifederalbank.com</user>
+            <user>jparada@bofi.com</user>
+            <user>jcastillo@bofi.com</user>
+            <user>moulhaci@bofi.com</user>
+            <user>nmartinez@bofi.com</user>
+            <user>rboman@bofi.com</user>
+        </users>
+    </assignments>
+    <description>Business Banking</description>
+    <label>Business Banking</label>
+</Skill>

@@ -1,0 +1,12 @@
+<apex:page standardController="Lead" extensions="RequestLeadResearchSFDC2Controller" action="{!returnLead}">
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+<apex:form >
+  <apex:inputHidden value="{!lead.OwnerId}" />
+  <apex:inputHidden value="{!lead.RecordTypeId}" />
+  <apex:inputHidden value="{!lead.Return_Owner_SFDC2__c}" />
+  <apex:inputHidden value="{!lead.Return_Record_Type_SFDC2__c}" />
+  <apex:inputHidden value="{!lead.Research_Request_Type_SFDC2__c}" />
+  <apex:inputHidden value="{!lead.Research_Request_Notes_SFDC2__c}" />
+  <apex:commandButton action="{!cancel}" value="Return"/>
+</apex:form>
+</apex:page>

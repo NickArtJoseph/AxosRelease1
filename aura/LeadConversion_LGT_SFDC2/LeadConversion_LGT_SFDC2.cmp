@@ -1,0 +1,92 @@
+<aura:component controller="LeadConversionSFDC2Controller" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="lead" type="Lead" access="private" />
+    <aura:attribute name="recordId" type="Id" /> <!--UPDATED BY JESUS-->
+    <aura:attribute name="conversionTimeStart" type="Integer" default="0" access="private" />
+
+    <aura:handler name="init" value="{! this }" action="{! c.cInit }" />
+
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{! empty(v.lead) }">
+        <div class="notification-spinner" style="height: 6rem;">
+            <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_large">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    <aura:set attribute="else">
+        <div class="slds-text-title_caps slds-m-bottom_small">Converted Records</div>
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="Account">
+                            <lightning:icon iconName="standard:account" size="medium" />
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <nav>
+                            <ol class="slds-breadcrumb slds-line-height_reset">
+                                <li class="slds-breadcrumb__item">
+                                    <span>Account</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h3 class="slds-text-title_caps slds-m-right_small slds-align-middle slds-truncate" title="{! v.lead.ConvertedAccount.Name }">
+                            <ui:outputURL value="{! '/' + v.lead.ConvertedAccountId }" label="{! v.lead.ConvertedAccount.Name }" target="_blank" />
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-m-top_x-small">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-contact" title="Contact">
+                            <lightning:icon iconName="standard:contact" size="medium" />
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <nav>
+                            <ol class="slds-breadcrumb slds-line-height_reset">
+                                <li class="slds-breadcrumb__item">
+                                    <span>Contact</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h3 class="slds-text-title_caps slds-m-right_small slds-align-middle slds-truncate" title="{! v.lead.ConvertedContact.Name }">
+                            <ui:outputURL value="{! '/' + v.lead.ConvertedContactId }" label="{! v.lead.ConvertedContact.Name }" target="_blank" />
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-m-top_x-small">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-opportunity" title="Opportunity">
+                            <lightning:icon iconName="standard:opportunity" size="medium" />
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <nav>
+                            <ol class="slds-breadcrumb slds-line-height_reset">
+                                <li class="slds-breadcrumb__item">
+                                    <span>Opportunity</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h3 class="slds-text-title_caps slds-m-right_small slds-align-middle slds-truncate" title="{! v.lead.ConvertedOpportunity.Name }">
+                            <ui:outputURL value="{! '/' + v.lead.ConvertedOpportunityId }" label="{! v.lead.ConvertedOpportunity.Name }" target="_blank" />
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aura:set>
+    </aura:if>
+</aura:component>

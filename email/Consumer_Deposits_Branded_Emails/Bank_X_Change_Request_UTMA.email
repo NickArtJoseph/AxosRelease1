@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>Only Savings type accounts can be converted
+into an account for your minor. This will be a two-step process:&nbsp;<br><br>Step 1: Complete the <a href="https://www.bankx.com/Portals/BankX/Documents/Bank%20Forms/DEP-%20150%20Change%20Request-%20Uniform%20Transfers%20to%20Minors.pdf?t=1485552002387" style="">Change Request: Uniform Transfers to Minors</a> form.<br><br>Step 2: Return the completed Beneficiary request forms for processing by;&nbsp;<br></font></p><ol><li><font face="Arial, sans-serif" style=""><b style="">Secure Message</b>: Login to Online Banking, click on Contact Us, and send a
+secure email with a scanned copy of the signed documents.</font></li><li><font face="Arial, sans-serif" style="">Fax to: <b style="">858-350-0443</b>; or</font></li><li><font face="Arial, sans-serif" style="">Mail to: <b style="">Deposit Operations: New Accounts PO BOX 509127 San Diego, CA
+92150-9948</b></font></li></ol><font face="Arial, sans-serif" style="">Your change will be reviewed within three business days on receipt of the
+Account Vesting Change form.<br><br>We appreciate your business and commit to
+providing superior Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br>Bank X&nbsp;Customer Service</font><p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

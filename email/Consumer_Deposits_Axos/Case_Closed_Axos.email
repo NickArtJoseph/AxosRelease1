@@ -1,0 +1,9 @@
+Hello {!Case.Account},
+
+We've resolved your case.
+
+If you feel we haven't resolved your case, simply reply to this email and we will re-activate your case.
+
+Best,
+{!User.FirstName}
+{!Case.Email_Brand__c}

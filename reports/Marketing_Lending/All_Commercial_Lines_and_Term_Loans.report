@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.Web_Source__c</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <description>Web RMI Report</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Lead.Web_Source__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>commercial-lines-of-credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Web_Source__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>commercial-term-loans</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>All Commercial Lines and Term Loans</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-09-01</startDate>
+    </timeFrameFilter>
+</Report>

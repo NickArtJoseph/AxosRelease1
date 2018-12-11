@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Payoff Demand Acknowledgement template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - Payoff Demand Acknowledgement template</name>
+    <style>formalLetter</style>
+    <subject>Payoff Demand Acknowledgement</subject>
+    <textOnly>Hello {!Case.Contact},
+
+This email is in reference to your Axos Bank inquiry {!Case.CaseNumber}.
+
+Thank you for contacting us, we acknowledge receipt of the payoff demand you submitted and it has been forwarded to our Payoff Demand Department. They respond to requests in the order received and their normal turnaround time is 3-4 business days. Please advise if this transaction is due to the sale of the property or if this transaction is a refinance.
+
+If you would like further assistance, please reply to this email or we can also be reached by telephone at 1-866-923-7112.
+
+We appreciate your business and commit to delivering value that will make Axos Bank your first choice for all your banking needs.
+
+Best Regards,
+{!User.FirstName}
+Axos Bank
+Loan Servicing Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

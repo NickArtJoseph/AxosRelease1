@@ -1,0 +1,76 @@
+<apex:page tabStyle="Proxy_Account_Campaigns__tab" showHeader="true" controller="ProxyAccountCampaignCreationController" title="Consumer Deposits: Proxy Account Campaign Creation Page">
+	<style type="text/css">
+		#resultTable {
+			width: 100%;
+		}
+		.headerClass {
+			padding-left: 5px;
+		}
+		.colName {
+			padding-left: 5px;
+			width: 20%;
+		}
+		.colMessage {
+			padding-left: 5px;
+			width: 35%
+		}
+		.colLink {
+			padding-left: 5px;
+			width: 25%;
+		}
+		.colCount {
+			padding-left: 5px;
+			width: 20%;
+		}
+		.rowEven {
+			background-color: white;
+		}
+		.rowOdd {
+			background-color: #e0e0e0;
+		}
+		.validRpt {
+			color: #055C2A;
+		}
+		.invalidRpt {
+			color: #80030B;
+		}
+	</style>
+    <apex:sectionHeader title="Consumer Deposits" subtitle="Proxy Account Campaign Creation Page"/>
+	<apex:form >
+
+    <apex:pageBlock title="{!IF(isSubmitted, 'Email Campaign Creation Results', 'Create Email Campaigns')}" id="theBlock">
+		<apex:pageMessages />
+		<apex:outputPanel rendered="{!ISBLANK(config)}">
+		This functionality has not been properly configured in Salesforce. Please contact the support team by sending
+		an email to the following address: <a href="mailto:salesforcesupport@bofi.com?subject=Issue%20with%20Proxy%20Account%20Campaign%20Creation%20Configuration%20[Custom%20Setting]&body=Error%20reported%20on%20page%20{!$CurrentPage.url}">salesforcesupport@bofi.com</a>
+		</apex:outputPanel>
+		<apex:outputPanel rendered="{!AND(NOT(isSubmitted),NOT(ISBLANK(config)))}">
+        This page is intended to be used to generate email Campaigns that will be sent through 
+        ExactTarget. The following reports will be used for the Campaign creation.
+        <ul>
+        	<apex:repeat value="{!reportStateList}" var="rs">
+        	<li>{!rs.CampaignReport.Name}</li>
+        	</apex:repeat>
+        </ul>
+        <br/>
+        <apex:commandButton value="Create Campaigns" action="{!createCampaigns}" rendered="{!NOT(isSubmitted)}"/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!AND(isSubmitted,NOT(ISBLANK(config)))}">
+        <apex:dataTable value="{!reportStateList}" var="rs" headerClass="headerClass" rowClasses="rowOdd,rowEven" columnClasses="colName,colMessage,colLink,colCount">
+        	<apex:column headerValue="Name">
+        		<apex:outputText value="{!rs.CampaignReport.Name}" />
+        	</apex:column>
+        	<apex:column headerValue="Message">
+        		<span class="{!IF(rs.IsValidReport,'validRpt','invalidRpt')}">{!rs.Message}</span>
+        	</apex:column>
+        	<apex:column headerValue="Campaign Link">
+        		<apex:outputLink value="/{!rs.CampaignId}" target="_blank">{!rs.CampaignName}</apex:outputLink>
+        	</apex:column>
+        	<apex:column headerValue="Campaign Members">
+        		<apex:outputText value="{!rs.MemberCount}" />
+        	</apex:column>
+        </apex:dataTable>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

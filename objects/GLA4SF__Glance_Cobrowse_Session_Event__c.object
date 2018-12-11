@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The logged events associated to a cobrowse session.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>GLA4SF__Glance_Cobrowse_Session__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The CoBrowse session related to this event</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The CoBrowse session related to this event</inlineHelpText>
+        <label>Glance Cobrowse Session</label>
+        <referenceTo>GLA4SF__Glance_Cobrowse_Session__c</referenceTo>
+        <relationshipLabel>Glance Cobrowse Session Events</relationshipLabel>
+        <relationshipName>Glance_Cobrowse_Session_Events</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GLA4SF__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Event type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Event type</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Session initiated</fullName>
+                    <default>false</default>
+                    <label>Session initiated</label>
+                </value>
+                <value>
+                    <fullName>Session started</fullName>
+                    <default>false</default>
+                    <label>Session started</label>
+                </value>
+                <value>
+                    <fullName>Session ended</fullName>
+                    <default>false</default>
+                    <label>Session ended</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Glance Cobrowse Session Event</label>
+    <nameField>
+        <displayFormat>GCSE-{0000}</displayFormat>
+        <label>Glance Cobrowse Session Event</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Glance Cobrowse Session Events</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

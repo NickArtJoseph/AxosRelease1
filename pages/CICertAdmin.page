@@ -1,0 +1,46 @@
+<apex:page standardController="Opportunity" extensions="CICertAdmin_Extension" showHeader="false" sidebar="false" standardStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Certification Management" id="CertMgmtSection" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!editCertMgmt}" id="editButton" value="Edit" rerender="CertMgmtSection" rendered="{!AND(ModeName = 'READ', isEditor)}"/>
+                <apex:commandButton action="{!saveCertMgmt}" id="saveButton" value="Save" rerender="CertMgmtSection" rendered="{!AND(ModeName = 'EDIT', isEditor)}"/>
+                <apex:commandButton action="{!cancelCertMgmt}" id="cancelButton" value="Cancel" rerender="CertMgmtSection" rendered="{!AND(ModeName = 'EDIT', isEditor)}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" columns="1" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CI_Annual_Certification_Required__c.label}" />
+                    <apex:outputPanel >
+                        <apex:outputPanel style="display: inline-block; width: 10%; vertical-align: top;">
+                            <apex:outputField value="{!opp.CI_Annual_Certification_Required__c}" rendered="{!ModeName = 'READ'}"/>
+                            <apex:inputField value="{!editOpp.CI_Annual_Certification_Required__c}" rendered="{!ModeName = 'EDIT'}"/>
+                            <apex:outputLink target="_top" value="/apex/CICertChecklistAdmin?id={!opp.id}&ctype=Annual+Certification" rendered="{!AND(opp.CI_Annual_Certification_Required__c, ModeName = 'READ', isEditor)}" styleClass="btn" style="text-decoration: none;">Manage</apex:outputLink>
+                        </apex:outputPanel>
+                        <apex:outputPanel style="display: inline-block; width: 90%;">{!AnnualChecklistItems}</apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CI_Quarterly_Certification_Required__c.label}" />
+                    <apex:outputPanel >
+                        <apex:outputPanel style="display: inline-block; width: 10%; vertical-align: top;">
+                            <apex:outputField value="{!opp.CI_Quarterly_Certification_Required__c}" rendered="{!ModeName = 'READ'}"/>
+                            <apex:inputField value="{!editOpp.CI_Quarterly_Certification_Required__c}" rendered="{!ModeName = 'EDIT'}"/>
+                            <apex:outputLink target="_top" value="/apex/CICertChecklistAdmin?id={!opp.id}&ctype=Quarterly+Certification" rendered="{!AND(opp.CI_Quarterly_Certification_Required__c, ModeName = 'READ', isEditor)}"  styleClass="btn" style="text-decoration: none;">Manage</apex:outputLink>
+                        </apex:outputPanel>
+                        <apex:outputPanel style="display: inline-block; width: 90%;">{!QuarterlyChecklistItems}</apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.fields.CI_Monthly_Certification_Required__c.label}" />
+                    <apex:outputPanel >
+                        <apex:outputPanel style="display: inline-block; width: 10%; vertical-align: top;">
+                            <apex:outputField value="{!opp.CI_Monthly_Certification_Required__c}" rendered="{!ModeName = 'READ'}"/>
+                            <apex:inputField value="{!editOpp.CI_Monthly_Certification_Required__c}" rendered="{!ModeName = 'EDIT'}"/>
+                            <apex:outputLink target="_top" value="/apex/CICertChecklistAdmin?id={!opp.id}&ctype=Monthly+Certification" rendered="{!AND(opp.CI_Monthly_Certification_Required__c, ModeName = 'READ', isEditor)}" styleClass="btn" style="text-decoration: none;">Manage</apex:outputLink>
+                        </apex:outputPanel>
+                        <apex:outputPanel style="display: inline-block; width: 90%">{!MonthlyChecklistItems}</apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

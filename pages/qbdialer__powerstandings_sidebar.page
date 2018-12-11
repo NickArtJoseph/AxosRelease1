@@ -1,0 +1,26 @@
+<apex:page id="PowerStandingsSidebar" controller="qbdialer.InsideSalesSetup" showHeader="false">
+    <body style="margin:0">
+        <!--<h1>It Worked!</h1>
+        <p>User: {!$User.FirstName} {!$User.LastName}</p>
+        <p>SubDomain: {!$User.is_subdomain__c}</p>
+        <p>Token: {!$User.is_token__c}</p>
+        <p>Permissions: {!$User.permissions__c}</p>-->
+        <apex:iframe scrolling="true" id="profile" width="100%"/>
+        <form id="iframe_form" target="profile" method="POST" action="{!InsideSalesHostSmart}do=load_frame">
+            <input type="hidden" id="iframe_redirect_uri" name="redirect_uri" />
+            <input type="hidden" name="Authorization" value="{!auth_token}" />
+        </form>
+<script type="text/javascript">
+    var target_page     = 'admin/standings/sidebar?token={!JSENCODE($User.is_token__c)}';
+    var target_location = '{!JSENCODE(InsideSalesHostSmart)}' + target_page
+    var auth_mode_jwt   = '{!JSENCODE(auth_mode_jwt)}';
+
+    if (auth_mode_jwt == '1') {
+        document.getElementById('iframe_redirect_uri').value = target_page;
+        document.getElementById('iframe_form').submit();
+    } else {
+        document.getElementById('profile').src = target_location;
+    }
+</script>
+    </body>
+</apex:page>

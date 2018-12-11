@@ -1,0 +1,706 @@
+<!--
+    NOTE:
+    This form lives on salesforce sandbox and it's included on this repository for tracking purposes.
+    In case to require modifications, update the file and notify salesforce team to upload the new version.
+-->
+<apex:page showHeader="false" docType="HTML-5.0" standardStylesheets="false" controller="LiveAgent_PreChatDefaultController">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+
+    <div id="overlay" class="chat__wrapper" style="display:none">
+        <div class="chat__header">
+            <label>LIVE CHAT</label>
+            <i>
+                <svg class="close-icon" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>ic_close</title>
+                    <defs>
+                        <polygon id="path-1" points="0.0002 0.7913 15.2092 0.7913 15.2092 16 0.0002 16"></polygon>
+                        <polygon id="path-3" points="0.0002 0.701 15.2092 0.701 15.2092 15.9098 0.0002 15.9098"></polygon>
+                    </defs>
+                    <g id="ic_close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Group-2" transform="translate(39.000000, 39.000000)">
+                            <g id="Group-5" transform="translate(0.000000, 146.299000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-4"></g>
+                                <path d="M1.2422,6.2773 L6.7282,0.7913 L15.2092,9.2713 L9.7222,14.7583 C8.0662,16.4143 5.3812,16.4143 3.7242,14.7573 L1.2422,12.2753 C-0.4138,10.6183 -0.4138,7.9333 1.2422,6.2773" id="Fill-3" fill="#1E3869" mask="url(#mask-2)"></path>
+                            </g>
+                            <path d="M151.5732,2.2458 L146.0862,7.7318 L154.5672,16.2128 L160.0532,10.7258 C161.7102,9.0698 161.7092,6.3848 160.0522,4.7278 L157.5702,2.2458 C155.9142,0.5898 153.2292,0.5898 151.5732,2.2458" id="Fill-6" fill="#1E3869"></path>
+                            <g id="Group" transform="translate(6.000000, 7.000000)">
+                                <path d="M0.7246,148.571 L148.5686,0.728" id="Stroke-1" stroke="#1E3869" stroke-width="12" stroke-linejoin="round"></path>
+                                <path d="M148.5684,148.571 L0.7244,0.728" id="Stroke-8" stroke="#1E3869" stroke-width="12" stroke-linejoin="round"></path>
+                                <path d="M145.5732,154.0534 L140.0862,148.5674 L148.5672,140.0864 L154.0532,145.5734 C155.7102,147.2294 155.7092,149.9144 154.0522,151.5704 L151.5702,154.0534 C149.9142,155.7094 147.2292,155.7094 145.5732,154.0534" id="Fill-10" fill="#1E3869"></path>
+                            </g>
+                            <g id="Group-14" transform="translate(0.000000, 0.299000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="Clip-13"></g>
+                                <path d="M1.2422,10.4238 L6.7282,15.9098 L15.2092,7.4298 L9.7222,1.9428 C8.0662,0.2868 5.3812,0.2868 3.7242,1.9438 L1.2422,4.4258 C-0.4138,6.0828 -0.4138,8.7678 1.2422,10.4238" id="Fill-12" fill="#1E3869" mask="url(#mask-4)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </i>
+        </div> <!-- END: <div class="chat__header"> -->
+        <div class="chat__body">
+            <form id="chat.form" method="post">
+                <div class="chat-row">
+                    <div class="chat-column">
+                        <p>Before we start, tell us about yourself.</p>
+                    </div>
+                </div>
+
+                <div class="chat-row">
+                    <!-- FIRST NAME -->
+                    <div class="chat-column left">
+                        <label for="chat.first-name" class="chat-label">
+                            First Name
+                        </label>
+                        <input id="chat.first-name" class="chat-input" type="text"
+                               name="liveagent.prechat:ContactFirstName" aria-label="FirstName" maxlength="50" required="required" />
+                        <div for="chat.first-name" class="feedback--invalid">
+                            First Name is required
+                        </div>
+                    </div>
+                    <!-- LAST NAME -->
+                    <div class="chat-column right">
+                        <label for="chat.last-name" class="chat-label">
+                            Last Name
+                        </label>
+                        <input id="chat.last-name" class="chat-input" type="text"
+                               name="liveagent.prechat:ContactLastName" aria-label="LastName" maxlength="50" required="required" />
+                        <div for="chat.last-name" class="feedback--invalid">
+                            Last Name is required
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="chat-row">
+                    <div class="chat-column">
+                        <label for="chat.email" class="chat-label">
+                            Email
+                        </label>
+                        <input id="chat.email" class="chat-input" type="email"
+                               maxlength="100" name="liveagent.prechat:ContactEmail" aria-label="Email" required="required" />
+                        <div for="chat.email" class="feedback--invalid">
+                            Please enter a valid email address
+                        </div>
+                    </div>
+                </div>
+                <!-- PHONE -->
+                <div class="chat-row">
+                    <div class="chat-column">
+                        <label for="chat.phone" class="chat-label">
+                            Phone
+                        </label>
+                        <input id="chat.phone" class="chat-input" type="text" placeholder="(   ) ___-____" pattern="^[\.\-)( ]*([0-9]{3})[\.\-)( ]*([0-9]{3})[\.\-)( ]*([0-9]{4})$"
+                               name="liveagent.prechat:ContactPhone" aria-label="Phone" required="required" />
+                        <div for="chat.phone" class="feedback--invalid">
+                            Please enter a valid phone number
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INQUIRY TYPE -->
+                <div class="chat-row">
+                    <div class="chat-column">
+                        <label for="chat.inquiry-type" class="chat-label">
+                            How may I assist you today?
+                        </label>
+                        <label class="icon icon-select">
+                            <select id="chat.inquiry-type" name="liveagent.prechat:ChatInquiryType" class="chat-input"
+                                    aria-label="How may I assist you today?" aria-invalid="false" required="required">
+                                <!-- Load Inquiry Types depending on the brand and business unit -->
+                                <apex:repeat value="{! chatInquiryTypes }" var="inquiryType">
+                                    <c:LiveAgent_PrechatInputInquiry inquiryType="{! inquiryType }"
+                                                                     businessUnit="UDB"
+                                                                     brand="Axos"
+                                                                     authenticated="false"
+                                                                     chatButton="{! mapChatButtons[inquiryType.ButtonToRoute__c] }"
+                                                                     type="option" />
+                                </apex:repeat>
+                            </select>
+                        </label>
+                        <div for="chat.inquiry-type" class="feedback--invalid">
+                            This field is required
+                        </div>
+                    </div>
+                </div>
+                <div class="chat__footer">
+                    <button class="chat-button" id="chat.begin" type="submit">
+                        {!$Label.LiveAgent_Prechat_Begin}
+                    </button> 
+                </div>
+
+                <input type="hidden" name="liveagent.prechat.Name" id="chat.name" />
+                <!-- Save Inquiry type to Chat Transcript -->
+                <input type="hidden" name="liveagent.prechat.save:ChatInquiryType" value="Chat_Inquiry_Type__c" />
+                <input type="hidden" name="liveagent.prechat.save:ContactFirstName" value="ChatFirstName__c" />
+                <input type="hidden" name="liveagent.prechat.save:ContactLastName" value="ChatLastName__c" />
+                <input type="hidden" name="liveagent.prechat.save:ContactEmail" value="ChatEmail__c" />
+                <input type="hidden" name="liveagent.prechat.save:ContactPhone" value="ChatPhone__c" />
+                <!-- Map: Use the data from prechat form to map it to the Salesforce record's fields -->
+                <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+                <input type="hidden" name="liveagent.prechat.findorcreate.map:Lead" value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+                <!-- Contact Search -->
+                <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="LastName,true;Email,true;Phone,true" />
+                <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="LastName,true;Email,true;Phone,true" />
+                <!-- Lead Search -->
+                <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Lead" value="LastName,true;Email,true;Phone,true" />
+                <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Lead" value="LastName,true;Email,true;Phone,true" />
+                <!-- Save Contact and/or Lead to Transcript -->
+                <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+                <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Lead" value="LeadId" />
+            </form> <!-- END: <form id="chat.Form" method="post"> -->
+        </div> <!-- END: <div class="chat__body"> -->
+    </div>
+    <script type="text/javascript">
+        (function () {
+            function handlePageLoad() {
+                var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+                document.getElementById('chat.form').setAttribute('action',
+                    decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+                    
+                function ValidationHelper(input) {
+
+                    this.element_input = input;
+                    this.element_feedback = document.querySelector('div[for="' + this.element_input.id + '"]');
+
+                    this.initialize = function () {
+                        this.bindUIActions();
+                    };
+
+                    this.bindUIActions = function () {
+                        var _this = this;
+                        var isSelect = (this.element_input.tagName == 'SELECT');
+
+                        this.element_input.addEventListener('invalid', function (e) {
+                            e.preventDefault();
+                            _this.onInvalid(e.target, isSelect);
+                        });
+
+                        if (isSelect) {
+                            this.element_input.addEventListener('change', function (e) {
+                                _this.validate(e.target, isSelect);
+                            });
+                        } else {
+                            this.element_input.addEventListener('input', function (e) {
+                                _this.validate(e.target, isSelect);
+                            });
+                        }
+                    };
+
+                    this.onInvalid = function (input, isSelect) {
+                        if ((!isSelect && !input.validity.valid) || (isSelect && input.value == ''))
+                            this.setInvalidState();
+                    };
+
+                    this.validate = function (input, isSelect) {
+                        if ((!isSelect && !input.validity.valid) || (isSelect && input.value == ''))
+                            this.setInvalidState();
+                        else
+                            this.setValidState();
+                    };
+
+                    this.setInvalidState = function () {
+                        this.element_feedback.style.display = 'block';
+                        this.element_input.className = 'chat-input invalid';
+                    };
+
+                    this.setValidState = function () {
+                        this.element_feedback.style.display = 'none';
+                        this.element_input.className = 'chat-input';
+                    };
+                };
+
+                LiveChat = {
+
+                    overlay:            document.getElementById('overlay'),
+
+                    inputList:          document.getElementsByClassName('chat-input'),
+                    form:               document.getElementById('chat.form'),
+                    input_firstName:    document.getElementById('chat.first-name'),
+                    input_lastName:     document.getElementById('chat.last-name'),
+                    input_name:         document.getElementById('chat.name'),
+                    input_phone:        document.getElementById('chat.phone'),
+                    select_inquiryType: document.getElementById('chat.inquiry-type'), // liveagent.prechat:ChatInquiryType
+
+                    init: function () {
+                        this.initializeUI();
+                    },
+
+                    initializeUI: function () {
+                        this.buildUIInquiryType();
+                        this.buildUIValidations();
+                        this.bindUIActions();
+
+                        LiveChat.overlay.style.display = "";
+                    },
+
+                    buildUIInquiryType: function () {
+                        var option = new Option('Select an option', '');
+                        this.select_inquiryType.insertBefore(option, this.select_inquiryType.firstChild);
+                        this.select_inquiryType[0].selected = true;
+                    },
+
+                    buildUIValidations: function () {
+                        for (var i = 0; i < this.inputList.length; i++) {
+                            var input = new ValidationHelper(this.inputList.item(i));
+                            input.initialize();
+                        }
+                    },
+
+                    bindUIActions: function () {
+                        this.form.addEventListener('submit', function () {
+                            LiveChat.setFullName();
+                        });
+
+                        this.select_inquiryType.addEventListener('change', function () {
+                            var selectedOption = LiveChat.select_inquiryType.options[LiveChat.select_inquiryType.options.selectedIndex];
+                            console.log('Q:', selectedOption.dataset.queue);
+
+                            LiveChat.setFormRouting(selectedOption.dataset.buttonId);
+                        });
+                    },
+
+                    setFullName: function () {
+                        this.input_name.value = this.input_firstName.value + ' ' + this.input_lastName.value;
+                    },
+
+                    // Change form routing based on user selection
+                    setFormRouting: function (buttonToRouteId) {
+                        // Change prechat form action URL based on selected Inquiry Type
+                        var formAction = LiveChat.form.action;
+                        formAction = this.updateURLParameter(formAction, 'button_id', buttonToRouteId);
+                        LiveChat.form.setAttribute('action', formAction);
+                    },
+
+                    updateURLParameter: function (url, param, paramVal) {
+                        var newAdditionalURL = "";
+                        var tempArray = url.split("?");
+                        var baseURL = tempArray[0];
+                        var additionalURL = tempArray[1];
+                        var temp = "";
+                        if (additionalURL) {
+                            tempArray = additionalURL.split("&");
+                            for (var i = 0; i < tempArray.length; i++) {
+                                if (tempArray[i].split('=')[0] != param) {
+                                    newAdditionalURL += temp + tempArray[i];
+                                    temp = "&";
+                                }
+                            }
+                        }
+
+                        var rows_txt = temp + "" + param + "=" + paramVal;
+                        return baseURL + "?" + newAdditionalURL + rows_txt;
+                    }
+                };
+                LiveChat.init();
+            }
+            if (window.addEventListener) {
+                window.addEventListener('load', handlePageLoad, false);
+            } else {
+                window.attachEvent('onload', handlePageLoad, false);
+            }
+
+            // IE polyfill
+            if (typeof window.CustomEvent === "function") return false; //If not IE
+
+            function CustomEvent(event, params) {
+                params = params || { bubbles: false, cancelable: false, detail: undefined };
+                var evt = document.createEvent('CustomEvent');
+                evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+                return evt;
+            }
+            CustomEvent.prototype = window.Event.prototype;
+            window.CustomEvent = CustomEvent;
+        })();
+
+        /// MASK ///
+
+        var ArgumentError = function (argument) {
+            this.name = 'Argument Error';
+            this.message = argument + ' is not defined.';
+        }
+        ArgumentError.prototype = new Error();
+        ArgumentError.prototype.constructor = ArgumentError;
+
+        String.prototype.insertAt = function (index, value) {
+            return (this.slice(0, index) + value + this.slice(index));
+        };
+
+        String.prototype.replaceAt = function (index, value) {
+            return this.substr(0, index) + value + this.substr(index + value.length);
+        }
+
+        KeyboardEvent.prototype.isMetaChangerValue = function () {
+            var key = this.which || this.keyCode || 0;
+            if (this.metaKey || this.ctrlKey) {
+                if (['X', 'V', 'Z', 'Y'].indexOf(String.fromCharCode(key)) > -1)
+                    return true;
+            }
+            return false;
+        }
+
+        KeyboardEvent.prototype.dataType = function () {
+            var key = this.which || this.keyCode || 0;
+            if (key >= 96 && key <= 105)
+                key -= 48;
+            var value = String.fromCharCode(key);
+            // Checks
+            if (this.isMetaChangerValue())
+                return 'value';
+            else if (this.metaKey || this.altKey || this.ctrlKey)
+                return 'meta';
+            else if (/[0-9]/.test(value) && !this.shiftKey)
+                return 'number';
+            else if (/[a-z]/i.test(value))
+                return 'character';
+            else if (/[\t]/.test(value))
+                return 'tabkey';
+            else if (/\s/.test(value))
+                return 'space';
+            else if (/[\b]/.test(value))
+                return 'backspace';
+            else
+                return undefined;
+        }
+
+        Element.prototype.cursorPosition = function () {
+            if (document.selection && document.selection.createRange) {
+                var r = document.selection.createRange().duplicate();
+                r.moveEnd('character', this.value.length);
+                if (r.text == '')
+                    return this.value.length;
+                return this.value.lastIndexOf(r.text);
+            } else {
+                if (window.getSelection) {
+                    sel = window.getSelection();
+                    if (sel.rangeCount) {
+                        range = sel.getRangeAt(0);
+                        caretPos = range.endOffset;
+                    }
+                }
+            }
+            return this.selectionStart;
+        }
+
+        Element.prototype.setCursorPosition = function (position) {
+            if (this.createTextRange) {
+                var range = this.createTextRange();
+                range.move('character', position);
+                range.select();
+            } else {
+                if (this.selectionStart)
+                    this.setSelectionRange(position, position);
+                this.focus();
+            }
+        }
+
+        Element.prototype._updateValue = function (value, index) {
+            // Add current and check next
+            if (index < this.value.length)
+                this.value = this.value.replaceAt(index, value);
+            else
+                this.value = this.value.insertAt(index, value);
+
+            if (index < this.value.length)
+                if (!(this._mask.format == undefined || this._mask.format == ''))
+                    this.value = this.value.substring(0, index + 1) + this._mask.format.substring(index + 1);
+        }
+
+        Element.prototype._maskEvent = function () {
+            if (this._mask == undefined)
+                throw new Error('mask not defined');
+            if (this._maskEventDelegated == undefined)
+                this._maskEventDelegated = false;
+            if (this._maskEventDelegated)
+                return;
+
+            this.addEventListener('keydown', function (e) {
+                var key = e.which || e.keyCode || 0;
+                if (key >= 96 && key <= 105)
+                    key -= 48;
+
+                var el = e.target;
+                var nextIndex = el.cursorPosition();
+                var typedValue = String.fromCharCode(key);
+                var patternValue = el._mask.pattern[nextIndex];
+                var eventDataType = e.dataType();
+                if (eventDataType != undefined && ['number', 'character'].indexOf(eventDataType) > -1 && patternValue != undefined) {
+                    // While has a delimiter
+                    while (true) {
+                        // Update pattern
+                        patternValue = el._mask.pattern[nextIndex];
+
+                        // Pattern Value
+                        if (['N', 'C'].indexOf(patternValue.toUpperCase()) == -1) {
+                            el._updateValue(patternValue, nextIndex);
+                            el.setCursorPosition(nextIndex + 1);
+                            nextIndex++;
+                        } else if (patternValue.toUpperCase() == eventDataType[0].toUpperCase()) {
+                            el._updateValue(typedValue, nextIndex);
+                            el.setCursorPosition(nextIndex + 1);
+                            break;
+                        } else {
+                            break;
+                        }
+                    }
+                }
+
+                if (eventDataType == 'backspace') {
+                    if (nextIndex - 1 >= 0) {
+                        if (!(this._mask.format == undefined || this._mask.format == ''))
+                            this.value = this.value.substring(0, nextIndex - 1) + this._mask.format.substring(nextIndex - 1);
+                        else
+                            this.value = this.value.substring(0, nextIndex - 1);
+                        el.setCursorPosition(nextIndex - 1);
+                    }
+                }
+
+                // Prevent Default
+                if (eventDataType != 'meta' && eventDataType != 'tabkey') {
+                    e.preventDefault();
+                    var event = new CustomEvent('input', {
+                        'bubbles': true,
+                        'cancelable': true
+                    });
+                    el.dispatchEvent(event);
+                }
+            });
+
+            // Set delegated
+            this._maskEventDelegated = true;
+        }
+
+        Element.prototype.masked = function () {
+            // Non mask element
+            if (this._mask == undefined)
+                throw new Error('mask not defined');
+
+            // Checks
+            return this.value.length == this._mask.pattern.length;
+        };
+
+        Element.prototype.maskItWith = function (pattern, options) {
+            if (pattern == undefined || pattern == '')
+                throw new ArgumentError('pattern');
+            if (options == undefined || typeof options != 'object')
+                options = {}
+
+            options.pattern = pattern;
+            this._mask = options;
+            this._maskEvent();
+        }
+
+        window.onload = function () {
+            LiveChat.input_phone.maskItWith('(NNN) NNN-NNNN', { format: '(   ) ___-____' });
+        };
+    </script>
+
+    <style type="text/css">
+        body {
+        margin: 0;
+        padding: 0;
+        color: #1E3869;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        }
+
+        .chat__wrapper {
+        height: 100%;
+        background-color: white;
+        }
+
+        .chat__header {
+        -webkit-box-shadow: 0 1px 4px #C9CCCF;
+        -moz-box-shadow: 0 1px 4px #C9CCCF;
+        box-shadow: 0 1px 4px #C9CCCF;
+        padding: 15px;
+        text-align: center;
+        }
+        .chat__header .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        }
+        .chat__header label {
+        font-size: 14px;
+        font-weight: 600;
+        }
+
+        .chat__body {
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        }
+        .chat__body .chat-row {
+        width: 100%;
+        margin-bottom: 15px;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+        }
+        .chat__body .chat-row p {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+        }
+        .chat__body .chat-column {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -ms-flex: 1;
+        flex: 1;
+        }
+        .chat__body .chat-column.left {
+        padding-right: 5px;
+        }
+        .chat__body .chat-column.right {
+        padding-left: 5px;
+        }
+        .chat__body .feedback--invalid {
+        display: none;
+        text-decoration: none;
+        color: #CB2D0E;
+        margin-top: 0.25rem;
+        font-size: 12px;
+        }
+
+        .chat__footer {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        padding: 15px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        }
+
+        .chat-label {
+        display: inline-block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+        }
+
+        .chat-input {
+        display: block;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #CCCCCC;
+        color: #1E3869;
+        padding: 11px 8px;
+        line-height: 18px;
+        box-shadow: none;
+        width: 100%;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+        .chat-input:focus {
+        border-color: #FAA74A;
+        }
+        .chat-input.invalid {
+        border-color: #E74C3C;
+        }
+
+        .chat-button {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        vertical-align: middle;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: 0.2px;
+        border: none;
+        border-radius: 6pc;
+        height: 44px;
+        background: #FAA74A;
+        color: #143E61;
+        font-family: "Roboto", sans-serif;
+        }
+        .chat-button:after {
+        content: "";
+        border-right: 0.1em solid #143E61;
+        border-top: 0.1em solid #143E61;
+        width: 0.5em;
+        height: 0.5em;
+        display: inline-block;
+        position: absolute;
+        margin-top: -0.25em;
+        top: 50%;
+        right: 45px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        }
+        .chat-button:hover {
+        cursor: pointer;
+        }
+        .chat-button:hover:not(:disabled):after {
+        right: 40px;
+        }
+
+        .icon {
+        position: relative;
+        display: block;
+        }
+
+        .icon:before {
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+        font-weight: 600;
+        color: #1E3869;
+        width: 10%;
+        padding: 15px 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        text-align: center;
+        pointer-events: none;
+        }
+
+        .icon-select:before {
+        content: "";
+        }
+
+        .icon-button:before {
+        content: "";
+        }
+
+        select::-ms-expand {
+        display: none;
+        }
+
+        select {
+        padding: 11px 30px 11px 8px !important;
+        color: #1E3869;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        box-shadow: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        }
+
+        option {
+        display: block;
+        font-weight: normal;
+        min-height: 1.2em;
+        }
+    </style>
+</apex:page>

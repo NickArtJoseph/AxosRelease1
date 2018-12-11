@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>See Account Details directions</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>See Account Details</name>
+    <style>freeForm</style>
+    <subject>See your Account Details</subject>
+    <textOnly>{!Contact.Name},
+
+
+
+Thank you for contacting Bank of Internet USA.
+
+
+
+You can view your full account details, including the routing number from within Online banking by following these steps;
+
+1) Click on My Accounts
+2) Click on the name of your Account to go into the transaction history page
+3) On the right hand side click on &quot;See account Details&quot;
+
+We appreciate your business and commit to delivering value that will make Bank of Internet USA your first choice for all your banking needs.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

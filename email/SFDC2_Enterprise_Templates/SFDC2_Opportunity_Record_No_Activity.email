@@ -1,0 +1,8 @@
+The following Opportunity is assigned to you but has not had any activity or modifications since {!DATEVALUE(Opportunity.LastModifiedDate)}. If no activity occurs within 30 days of that date, this Opportunity will be moved to your business opportunity queue for reassignment.
+
+Opportunity Name: {!Opportunity.Name}
+Account Name: {!Opportunity.Account}
+Stage: {!Opportunity.StageName}
+Last Activity: {!Opportunity.LastModifiedDate}
+
+Link to Opportunity record: {!Opportunity.Link}

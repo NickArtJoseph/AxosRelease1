@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Strategic_Partnerships_Specialty_Finance_Analyst</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Strategic Partnerships &amp; Specialty Finance Analyst</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Strategic_Partnerships_Specialty_Finance_Execs</parentRole>
+</Role>

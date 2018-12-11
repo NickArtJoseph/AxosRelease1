@@ -1,0 +1,7 @@
+<apex:page sidebar="false" controller="G4S.ScheduleSessionController" action="{!initPage}" title="Glance for Salesforce - Schedule Session">
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Schedule Session"/>
+
+<apex:pageMessages />
+
+</apex:page>

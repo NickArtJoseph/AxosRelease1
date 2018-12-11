@@ -1,0 +1,34 @@
+<!-- Research performed by Matt Dawson; code based on https://kksfblog.wordpress.com/2015/11/16/how-to-log-emails-through-salesforce1/ //-->
+<apex:page standardController="Contact" showHeader="false" sidebar="false" docType="html-5.0">
+   
+     <script src='/canvas/sdk/js/publisher.js'></script>
+ 
+    <apex:remoteObjects >
+         <apex:remoteObjectModel name="EmailServicesFunction" jsShorthand="efunc" fields="Id,FunctionName"/>
+         <apex:remoteObjectModel name="EmailServicesAddress" jsShorthand="eadd" fields="Id,FunctionId,LocalPart,EmailDomainName,RunAsUserId"/>
+    </apex:remoteObjects>
+    
+     <script>
+        function sendemail(emailid){
+            var ef = new SObjectModel.efunc();
+            ef.retrieve({limit:1,where:{FunctionName:{eq:'EmailToSalesforce'}}},function(err,records,event){
+                if(err){
+                alert('Error: ' + err.message);
+                }else{
+                    var ea = new SObjectModel.eadd();
+                    ea.retrieve({where:{RunAsUserId:{eq:'{!$User.Id}'}}},function(err1,records1,event1){
+                        if(err1){
+                        alert('Error: ' + err1.message);
+                        }else{
+                            sforce.one.navigateToURL("mailto:"+emailid+"?bcc="+records1[0].get('LocalPart')+"@"+records1[0].get('EmailDomainName'));
+                            Sfdc.canvas.publisher.publish({ name: "publisher.close", payload: {refresh:"true"}});
+                        }
+                    });
+                }
+            });
+        }
+        
+    </script>
+    <body onload='sendemail("{!contact.email}");'>
+    </body>
+</apex:page>

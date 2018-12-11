@@ -1,0 +1,23 @@
+<apex:page id="TreasuryMaintenanceConfiguration" showHeader="false" standardStylesheets="false"
+    sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head></head>
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.5.7/angular.min.js')}" />
+        <nFORCE:ncUIIncludes />
+        <nFORCE:Includes enablebootstrap3="true" enablefontawesome="true" enablebs3namespace="true" />
+        <nFORCE:Include_Design_System flavor="vf" />
+        <nFORCE:Include_Design_System flavor="bs3" />
+
+        <apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+        <nFORCE:ncDataProvidersIncludes />
+
+        <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'application/App.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'services/ProductCatalogRemoting.service.js')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'css/Style.css')}" />
+        <apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncProductCatalog, 'controllers/productCatalogController.js')}" />
+        <body>
+            <c:MaintenanceConfigPartial />
+            <c:ProductCatalogDataService />
+        </body>
+    </html>
+</apex:page>

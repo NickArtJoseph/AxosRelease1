@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>How to send a wire transfer</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - Wire Transfer</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.Name},
+
+
+
+Thank you for contacting BankX.
+
+
+
+A wire transfer may be initiated by filling out our Wire Transfer form. You can find our Wire Transfer form on our website; go to Axos Bank Home Page, hover over Customer Support, click on Online Banking Forms, and then Wire Transfer Form.
+
+Axos Bank Wire Transfer Request Form
+
+Please note that there is $35 fee to send a Domestic Wire and a $45 fee for International Wires. Wire Transfers cannot be future dated and must be received by 12:00pm (PT) for Domestic wires and 12:00pm (PT) for International wires to be processed the same day. Wires received on Saturday, Sunday, or a holiday will be processed on the next business day.
+
+
+We appreciate your business and commit to delivering value that will make Axos Bank your first choice for all your banking needs.
+
+
+
+Best Regards,
+
+BankX Customer Support Team
+
+
+
+www.BankX.com | testcustomerservice@axosbank.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Hello {!Account.Name},</p><p><br></p><p>Unfortunately, our records do not show that you have an account with our Bank. You may have us confused for Commonwealth Bank which also has a NetBank division.</p><p><br></p><p>We recommend that you contact them with your inquiry for assistance.</p><p><br></p><p>Thank you for visiting the Axos Bank website.</p><p><br></p><p>Best Regards,</p><p><br></p><p>{!User.FirstName}<br>Axos Bank Customer Service</p>]]></td>
+</tr>
+</table>

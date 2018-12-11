@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+<!--[if !mso]><!-->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<!--<![endif]-->
+<!--[if !mso]><!-->
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+<!--<![endif]-->
+<style type="text/css">
+/* CLIENT-SPECIFIC STYLES */
+body, table, td, a {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+table, td {
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+}
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* RESET STYLES */
+img {
+	border: 0;
+	line-height: 100%;
+	outline: none;
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse !important;
+}
+body {
+	height: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+/* KEEP LINK COLOR IN MSO */
+span.MsoHyperlink {
+	mso-style-priority: 99;
+	color: inherit;
+}
+span.MsoHyperlinkFollowed {
+	mso-style-priority: 99;
+	color: inherit;
+}
+
+/* BUTTONS */
+.emailbuttonred {
+	background-color: #AB2328;
+	border-collapse: separate;
+	border-radius: 3px;
+}
+.emailbuttonblue {
+	background-color: #002a4e;
+	border-collapse: separate;
+	border-radius: 3px;
+}
+.emailbuttonlightblue {
+	background-color: #528AB8;
+	border-collapse: separate;
+	border-radius: 3px;
+}
+.buttoncontentred {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+}
+.buttoncontentblue {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+}
+.buttoncontentlightblue {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+}
+.buttonlcontentred {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 100%;
+	padding: 15px;
+	text-align: center;
+}
+.buttonlcontentblue {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 100%;
+	padding: 15px;
+	text-align: center;
+}
+.buttonlcontentlightblue {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 16px;
+	line-height: 100%;
+	padding: 15px;
+	text-align: center;
+}
+.buttoncontentred a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.buttoncontentblue a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.buttoncontentlightblue a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.buttonlcontentred a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.buttonlcontentblue a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+.disable-link {
+	pointer-events: none;
+	cursor: default;
+}
+
+/* MOBILE STYLES */
+@media screen and (max-width: 480px) {
+body {
+	width: auto!important;
+}
+a[class="disable-link"] {
+	pointer-events: auto !important;
+	cursor: auto !important;
+}
+table[class=mobilescale] {
+	width: 100%!important;
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+td[class=mobilescale] {
+	width: 100%!important;
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+td[class=mobilescaleh15] {
+	width: 100%!important;
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+	padding-top: 15px!important;
+}
+td[class=mobilescaleh8] {
+	width: 100%!important;
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+	padding-top: 8px!important;
+}
+td[class=innermobilescale] {
+	width: 100%!important;
+	padding-left: 20px!important;
+	padding-right: 20px!important;
+}
+td[class=innermobilescalep10] {
+	width: 100%!important;
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+/* HIDE CONTENT */ 
+span[class=hidden] {
+	width: 0px;
+	display: none !important;
+}
+img[class=hidden] {
+	width: 0px;
+	display: none !important;
+}
+td[class=hidden] {
+	width: 0px;
+	display: none !important;
+}
+table[class=hidden] {
+	width: 0px;
+	display: none !important;
+}
+/* SHOW CONTENT */ 
+.show {
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow : visible !important;
+	width: auto !important;
+	max-height: inherit !important;
+}
+
+/* FLUID IMAGE */ 
+img[class=imageresize] {
+	width: 100% !important;
+	height: auto !important;
+}
+/* HEADER */
+table[class=headermodule] {
+	width: 100% !important;
+	text-align: center !important;
+}
+td[class=headermodule] {
+	width: 100% !important;
+	text-align: center !important;
+}
+img[class=headermodule] {
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+/* MOBILE BUTTONS */
+table[class="emailbuttonred"] {
+	width: 100% !important;
+}
+table[class="emailbuttonblue"] {
+	width: 100% !important;
+}
+table[class="emailbuttonlightblue"] {
+	width: 100% !important;
+}
+td[class="buttoncontentred"] {
+	padding: 0px !important;
+}
+td[class="buttoncontentblue"] {
+	padding: 0px !important;
+}
+td[class="buttoncontentlightblue"] {
+	padding: 0px !important;
+}
+td[class="buttoncontentred"] a {
+	padding: 12px !important;
+	line-height: 16px !important;
+	font-size: 16px !important;
+}
+td[class="buttoncontentblue"] a {
+	padding: 12px !important;
+	line-height: 16px !important;
+	font-size: 16px !important;
+}
+td[class="buttoncontentlightblue"] a {
+	padding: 12px !important;
+	line-height: 16px !important;
+	font-size: 16px !important;
+}
+td[class="buttonlcontentred"] {
+	padding: 0px !important;
+}
+td[class="buttonlcontentblue"] {
+	padding: 0px !important;
+}
+td[class="buttonlcontentlightblue"] {
+	padding: 0px !important;
+}
+td[class="buttonlcontentred"] a {
+	padding: 18px !important;
+	line-height: 120% !important;
+}
+td[class="buttonlcontentblue"] a {
+	padding: 18px !important;
+	line-height: 120% !important;
+}
+td[class="buttonlcontentlightblue"] a {
+	padding: 18px !important;
+	line-height: 120% !important;
+}
+td[class="noleftpadding"] {
+    padding-left:0px!important;
+}
+}
+/* ANDROID CENTER FIX */
+div[style*="margin: 16px 0;"] {
+	margin: 0 !important;
+}
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="100%" valign="top" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-bottom:solid #a9c5dc 1px" class="hidden">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#528ab8" class="mobilescale" style="padding-left:10px; padding-right:10px;"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#528ab8" class="innermobilescalep10"><table width="560" border="0" cellspacing="0" cellpadding="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top" bgcolor="#528ab8" style="font-family: 'Raleway', Arial, sans-serif; font-size:13px; color:#D3E1ED; mso-line-height-rule:exactly; line-height:16px; padding-bottom:8px; padding-top:8px;"></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mobilescale">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#002a4e" class="mobilescale"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#002a4e" class="innermobilescale"><table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top:8px; padding-bottom:8px"><table width="228" border="0" align="center" cellpadding="0" cellspacing="0" class="headermodule">
+                                  <tbody>
+                                    <tr>
+                                      <td height="40" align="center"><a href="https://www.bankofinternet.com/"><img src="http://image.email.bofi.com/lib/fe9512727365027e77/m/1/bofi_usa_logo_e.png" border="0" width="228" height="40" alt="Bank of Internet USA" style="font-family:Arial, sans-serif; font-size:20px; color:#FFFFFF; display:block"/></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#1c416f" class="mobilescale" style="padding-top:8px"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#FFFFFF" class="innermobilescale"><table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#FFFFFF" style="padding-top:20px; padding-bottom:4px; font-family:'Raleway', Arial, sans-serif; font-size:14px; color:#666666; mso-line-height-rule:exactly; line-height:22px;">Dear {!Contact.FirstName},<br>
+                                <br>
+Thank you for taking my call today and once again, welcome to Bank of Internet USA. As promised, I’m sending you a recap of our conversation regarding how to access your new BofI USA checking account and cash-out proceeds once your home loan closes.  and money.<br>
+<br>
+<strong>Funding of your Account</strong>
+							    <p>Our Lending Operations Team will transfer the cash-out proceeds of your loan into your Platinum Checking account following the close of escrow. This will occur within 24 hours of closing.</p>
+								  <p><strong>Register for Online Banking</strong></p>
+							    <p>Your first step is to <a href="http://post.bofifederalbank.com/E0c0J0cwYfL0S0uA2i0dX01" style="color:#50A0FC; text-decoration:none">register for Online Banking</a> to gain convenient and secure access to your Platinum Checking account anytime, anywhere. Once you register for Online Banking, you will also have immediate access to your account using our <a href="http://post.bofifederalbank.com/tcAc2u0iJL0Xx00SYd0001g" style="color:#50A0FC; text-decoration:none">Mobile Banking App.</a></p>
+								  <p><strong>Debit Card and Checks are on Their Way</strong></p>
+								<p>To ensure you have your new debit card and checks prior to loan closing, we’ve expedited shipment so you receive them within the next 2-3 days. <br><em>If these items do not arrive within this time period, please contact me directly at <a href="tel:+18586492678" style="color:#50A0FC; text-decoration:none">858-649-2678</a> or <a href="mailto:dovadia@bofifederalbank.com" style="color:#50A0FC; text-decoration:none">dovadia@bofifederalbank.com</a>.</em></p>
+								<p><strong>We're Available 24/7</strong></p>
+								  <p>At Bank of Internet USA, we have a dedicated Premier Banking Customer Service Team at your service. You can reach them 24 hours a day, 7 days a week by calling (858) 649-2224, excluding Thanksgiving and Christmas.</p>
+								  <p>{!Contact.FirstName}, we look forward to serving your banking needs and building a strong banking relationship. Thank you for your business.</p>
+								</td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#1c416f" class="mobilescale" style="padding-top:0px"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#FFFFFF" class="innermobilescale"><table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#FFFFFF" style="padding-top:20px; padding-bottom:30px; font-family:'Raleway', Arial, sans-serif; font-size:14px; color:#666666; mso-line-height-rule:exactly; line-height:22px;">Best regards,<br />
+<br>
+<strong>David Ovadia</strong><br>
+Business Development Officer<br>
+								  <a href="mailto:dovadia@bofifederalbank.com" style="color:#50A0FC; text-decoration:none">dovadia@bofifederalbank.com</a><br>
+<a href="tel:+18586492678" style="color:#50A0FC; text-decoration:none">858-649-2678</a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#1c416f" class="mobilescale"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" class="innermobilescale"><table width="560" border="0" cellspacing="0" cellpadding="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top" bgcolor="#1c416f" style="padding-top:25px; padding-bottom:16px; font-family:'Raleway', Arial, sans-serif; font-size:22px; color:#FFFFFF; line-height:24px; mso-line-height-rule:exactly;">America's <span style="font-family: 'Playfair Display', serif; font-style:italic; mso-line-height-rule:exactly;">oldest</span> and <span style="font-family: 'Playfair Display', serif; font-style:italic; mso-line-height-rule:exactly;">most trusted</span> internet bank</td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="1" align="center" valign="top" class="innermobilescale" style="font-size: 1px; line-height: 1px; mso-line-height-rule: exactly;" bgcolor="#1c416f"><img src="http://image.email.bofi.com/lib/fe9712727165027974/m/1/spacer.gif" height="1px" width="600px" alt="" class="hidden" style="max-height:1px; min-height:1px; display:block; width:600px; min-width:600px;"></td>
+                    </tr>
+                    <tr>
+                      <td height="7" align="center" valign="top" bgcolor="#1c416f" class="innermobilescale" style="font-size: 7px; line-height: 7px; mso-line-height-rule: exactly;">&nbsp;
+                        <custom name="opencounter" type="tracking"></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td align="center" valign="top" bgcolor="#528ab8" class="mobilescale" style="border-top:solid #a9c5dc 1px"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" bgcolor="#528ab8" class="innermobilescale" style="padding-top:20px; padding-bottom:0px;"><table width="560" border="0" align="center" cellpadding="0" cellspacing="0" class="mobilescale">
+                          <tbody>
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#528ab8" style="font-family:'Raleway', Arial, sans-serif; font-size:13px; mso-line-height-rule:exactly; color:#D3E1ED; line-height:18px; padding-bottom:20px; border-bottom:solid #a9c5dc 1px;">Bank products and services are offered by BofI Federal Bank. All deposit accounts through BofI Federal Bank brands are FDIC insured through BofI Federal Bank. All deposit accounts of the same ownership and / or vesting held at BofI Federal Bank are combined and insured under the same <a href="https://www.fdic.gov/edie/index.html" style="color:#D3E1ED; text-decoration:underline">FDIC Certificate 35546</a>.<span> </span>All deposit accounts through BofI Federal Bank brands are not separately insured by the FDIC from other deposit accounts held with the same ownership and / or vesting at BofI Federal Bank. For more information <a href="https://www.bofifederalbank.com/about-us/fdic-notice" style="color:#D3E1ED; text-decoration:underline">click here</a>.</td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+      </table></td>
+    </tr>
+  </tbody>
+</table>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</body>

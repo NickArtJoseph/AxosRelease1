@@ -1,0 +1,13 @@
+<apex:page standardController="Account"
+	extensions="LLC_BI.TreasuryMaintenanceController"
+	sidebar="false">
+
+	<c:ncTreasuryServiceMaintenance addAnalyzedAccountSectionId="{!addAnalyzedAccountSectionId}"
+		addAuthorizedUserSectionId="{!addAuthorizedUserSectionId}"
+		authorizedUserSearchSectionId="{!authorizedUserSearchSectionId}"
+		analyzedAccountsSearchSectionId="{!analyzedAccountSearchSectionId}"
+		orderModalSectionId="{!orderModalSectionId}"
+		relationshipId="{!relationshipId}"
+		guid="{!guid}"
+		ns="{!namespace}"/>
+</apex:page>

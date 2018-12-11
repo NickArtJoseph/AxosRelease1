@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>BOFI Federal Bank Loan Servicing Autoreply</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank Federal Bank Loan Servicing Autoreply</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Loan Servicing Customer Service has received your submission!</subject>
+    <textOnly>Thank you for contacting Axos Bank Loan Servicing.
+
+This is an automatic acknowledgement to let you know that we have received your inquiry. We are reviewing your request and will communicate the appropriate turnaround time for your case type. If your request is more urgent, you may also receive immediate assistance by contacting us at 1-877-247-8002. Do not reply directly to this message, there will be no response.
+
+Your inquiry has been assigned Case ID {!Case.CaseNumber}. Additionally, you may see a unique identifier automatically included in all subsequent emails. Please do not remove this code from future communications.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

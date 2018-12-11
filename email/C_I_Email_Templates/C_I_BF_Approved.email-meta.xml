@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used when boarding form is approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>C&amp;I: BF Approved</name>
+    <style>none</style>
+    <subject>{!Boarding_Form__c.Opportunity__c} Boarding Form Approved</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_46331326</developerName>
+        <masterLabel>% Bad</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Bad Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wrong Number</sourceValue>
+            </sourceValues>
+            <value>Bad</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Busy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Correct Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Live Message</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Answer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set Callback</sourceValue>
+            </sourceValues>
+            <value>Not Bad</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStackedTo100</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Activity.qbdialer__Call_Date_Time__c</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_46331326</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <description>% calls where Call Result is Bad or Wrong</description>
+    <filter>
+        <criteriaItems>
+            <column>CALLDISPOSITION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Activity.qbdialer__Call_Date_Time__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_46331326</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Bad Numbers per day</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

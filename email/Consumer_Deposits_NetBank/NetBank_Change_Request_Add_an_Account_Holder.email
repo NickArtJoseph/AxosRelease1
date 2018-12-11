@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},<br></span><font style=""><span style="background-color: rgb(255, 255, 255);"><br></span>W</font>e will be happy to assist you with
+adding an additional account owner. This will be a two-step process:<br><font style=""><br>Step 1:&nbsp;</font><span style="line-height: 107%;">Complete
+the <a href="https://www.netbank.com/Portals/NetBank/Documents/Bank%20Forms/DEP-%20130%20Change%20Request-%20Add%20an%20Account%20Owner%2020150319NetBank.pdf?t=1501709604633">Change
+Request: Add an Account Owner</a> form.<br></span><br>Step 2: Return the completed Addition of Account owner Change request for
+processing by;<br><ol><li><b>Secure Message</b>: Login to Online Banking, click on Contact Us, and send a
+secure email with a scanned copy of the signed documents</li><li>Fax to: <b style="">858-350-0443</b>; or</li><li>Mail to: <b style="">Deposit Operations: New Accounts PO BOX 509127 San Diego, CA
+92150-9948</b></li></ol></font><div style=""><p class="MsoNormal" style="line-height: normal;"><font face="Arial, sans-serif" style="">Your change request will be reviewed within three business days on receipt of
+the Addition of account owner Change form.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><span style="background-color: rgb(255, 255, 255);"><br>Best Regards,<br></span></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);">NetBank Customer Service</span></font></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

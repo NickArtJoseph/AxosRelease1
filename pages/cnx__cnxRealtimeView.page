@@ -1,0 +1,68 @@
+<apex:page sidebar="false" showheader="false" doctype="html-5.0" controller="cnx.RealtimeViewController">
+    <apex:includescript value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
+    <apex:includescript value="/support/console/33.0/integration.js" />
+    <apex:includescript value="/support/api/33.0/interaction.js" />
+    <apex:includescript value="/soap/ajax/33.0/connection.js" />
+    <apex:stylesheet value="{!URLFOR($Resource.cnx__CnxSfdcResources, 'gadget/css/connects.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/RealtimeView/css/RealtimeView.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'js/ConnectsIntegrationAPI.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/RealtimeView/js/RealtimeView.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/RealtimeView/lib/jquery.floatThead.min.js')}"/>
+
+
+    <div id="container">
+        <div id="content">
+            <div id="agentsView" class="view">
+                <div id="agentsViewTitle" class="titleBar">
+                    <span class="indicator ui-icon ui-icon-triangle-1-s"></span>
+                    <span class="content">Loading...</span>
+                </div>
+                <div id="agentsViewContent" class="viewContent">
+                    <table id="agentsTable" class="viewTable">
+                        <thead>
+                            <tr>
+                                <th id="agentStateHeader"></th>
+                                <th id="agentNameHeader"></th>
+                                <th id="agentTimeHeader"></th>
+                                <th id="agentActionsHeader"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="queuesView" class="view">
+                <div id="queuesViewTitle" class="titleBar">
+                    <span class="indicator ui-icon ui-icon-triangle-1-s"></span>
+                    <span class="content">Loading...</span>
+                </div>
+                <div id="queuesViewContent" class="viewContent">
+                    <table id="queuesTable" class="viewTable">
+                        <thead>
+                            <tr>
+                                <th id="queueNameHeader" rowspan="2"></th>
+                                <th id="queueNumberOfCallsHeader" rowspan="2"></th>
+                                <th id="queueMaxTimeHeader" rowspan="2"></th>
+                                <th id="queueReadyHeader"></th>
+                                <th id="queueActiveHeader"></th>
+                                <th id="queueClick2DialHeader" rowspan="2"></th>
+                            </tr>
+                            <tr>
+                                <th id="queueNotReadyHeader"></th>
+                                <th id="queueWrapUpHeader"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="errorView">
+            <div id="errorViewContent">
+                <div id="errorTitle"></div>
+                <div id="errorMessage"></div>
+                <div id="errorButton">OK</div>
+            </div>
+        </div>
+    </div>
+</apex:page>

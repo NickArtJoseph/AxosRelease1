@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows access to the &quot;Valid Feedback&quot; checkbox on the Customer Feedback case page layout. Once checked it will send an email alert to management/compliance of a valid customer complaint case.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Valid_Feedback__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Customer Feedback: Valid Feedback Check Box Access</label>
+</PermissionSet>

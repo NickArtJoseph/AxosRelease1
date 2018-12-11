@@ -1,0 +1,11 @@
+Hi,
+
+You have a work item that has been assigned to you.
+
+Assigned to: {!SL_RAID_Items__c.Assigned_To__c}
+Title: {!SL_RAID_Items__c.SL_Title__c}
+Due Date: {!SL_RAID_Items__c.Due_Date__c}
+Description: {!SL_RAID_Items__c.SL_Notes__c}
+Link: {!SL_RAID_Items__c.Link}
+
+Thank you!

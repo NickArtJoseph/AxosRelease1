@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div>Hello {!Case.Contact},</div><div><br></div><div>This message is to confirm that your request has been completed.&nbsp;</div><div><br></div><div><span style="background-color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 12pt;">We appreciate your business and commit to providing superior Banking products, support and services</span></div><div><span style="background-color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 12pt;"><br></span></div><div><p style="font-size: 12pt;">Best Regards,</p><p style="font-size: 12pt;"><br><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span><span style="font-family: Arial, sans-serif; font-size: 12pt;">Axos Bank Customer Service</span></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="1" >
+<![CDATA[<p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif"><b>Direct Line:&nbsp;</b>{!User.Phone}</font></p><p style=""><font face="Arial, sans-serif" style=""><b>Email:&nbsp;</b>{!User.Email}</font></p><p style=""><b>Fax: </b>858-649-2872</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p>]]></td>
+</tr>
+</table>

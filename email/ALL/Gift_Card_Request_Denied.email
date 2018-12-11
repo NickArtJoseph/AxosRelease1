@@ -1,0 +1,9 @@
+Your gift card request has been denied for this customer:
+
+{!Gift_Card__c.Account__c}
+
+Amount: 
+
+{!Gift_Card__c.Gift_Card_Amount__c}
+
+Please see your manager with any questions.

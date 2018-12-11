@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to PIC approver letting them know they have a new record to approve.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PIC Approval Assignment Email</name>
+    <style>none</style>
+    <subject>PIC Approval Request for {!Opportunity.Account} from {!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

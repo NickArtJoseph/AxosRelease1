@@ -1,0 +1,4 @@
+<apex:page standardController="Email_SFDC2__c" extensions="EmailSFDC2Controller" action="{!onEdit}">
+<apex:messages />
+<apex:detail subject="{!id}" relatedList="true" />
+</apex:page>

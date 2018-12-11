@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Lottery_Lookup__c</field>
+    </columns>
+    <columns>
+        <field>Account.Game_Won_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.Win_Amount_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.Win_Date_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.Face_Value_Remaining__c</field>
+    </columns>
+    <columns>
+        <field>Account.Annuity_Confirmed__c</field>
+    </columns>
+    <columns>
+        <field>Account.Payment_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Remaining_Payment_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Research_Status_Person__c</field>
+    </columns>
+    <columns>
+        <field>Account.qbdialer__LastCallTime__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2 AND (3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12 or 13 or 14 or 15 or 16 or 17 or 18 or 19)) AND 20</booleanFilter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Specialty_Finance_Lottery</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Outbound Account Pool</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Good Life</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>20 Years of Cash</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Wild Millions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Casino Action</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>800 Million Spectacular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cool Millions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>$5,000,000 jackpot</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Billion Dollar Bonanza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>hold &apos;em poker</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pinball wizard</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Billion Dollar Blockbuster</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Max a Million</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cash Money</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Boston Red Sox</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jumbo Bucks</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Ruby Red 7&apos;s</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Game_Won_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>$1,000,000 Spin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Lottery_Lookup__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Illinois Lottery,Massachusetts State Lottery Commission</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Lottery Games with No Cash Option</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.qbdialer__LastCallTime__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

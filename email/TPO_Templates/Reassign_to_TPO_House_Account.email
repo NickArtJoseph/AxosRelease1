@@ -1,0 +1,3 @@
+{!Account.Name} (TPO Account ID: {!Account.TPO_Account_ID__c}) has expired and needs to be reassigned to TPO House Account.
+
+Current Account Owner: {!Account.OwnerFullName}

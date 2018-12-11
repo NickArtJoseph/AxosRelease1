@@ -1,0 +1,25 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><br></p><span style="background-color: rgb(255, 255, 255);"><p><font face="arial"><span style="font-size: 12pt;">Hello {!Case.Contact},</span></font><br><br></p><p><br></p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><p><br></p><font face="arial"><p><font face="Times New Roman"><span style="background: white; color: black; font-family: &quot;Arial&quot;,sans-serif;">We are attempting&nbsp;to verify an item presenting for payment from
+your account.&nbsp; We are unable to verify the signature on check number ____
+made payable to _____________ for $____.__. <br>
+<br>
+Please respond before 10:00AM PST on the next business day to confirm this
+check, or the item will be returned. <br>
+<br>
+If you did not authorize this item, please contact our customer service agents at (888) 502-2967 for further assistance.&nbsp;</span></font></p><p><font face="Times New Roman">
+
+<br></font></p><p style="margin: 0in 0in 8pt;"><font face="Calibri">&nbsp;</font></p><p><font face="Times New Roman">
+
+<br></font></p></font><p><br></p></span><p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Best Regards,</font></span></p></span><p><br></p><p><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></span><font face="Arial, sans-serif">Axos Bank™ Customer Service</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,29 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="NDOC.ExternalFileStorageSettingsController"
+	showHeader="false" sidebar="false">
+
+	<script type="text/javascript">
+		var __sfdcSessionId = '{!GETSESSIONID()}';
+	</script>
+
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.10.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sjcl/1.0.0/sjcl.min.js"></script>
+	<apex:includeScript value="{!URLFOR($Resource.NDOC__amazon_s3_filestore)}"/>
+
+	<c:DocManager3 />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			MyDocuments.init({
+				page: 'Opportunity',
+				sessionId: __sfdcSessionId,
+				fileStore: new DocMan.AmazonS3FileStore({
+					associatedObjectId: '{!LLC_BI__Loan__c.Id}',
+					bucketName: '{!S3BucketName}',
+					endpointName: '{!S3Endpoint}'
+				})
+			});
+		});
+	</script>
+
+
+</apex:page>

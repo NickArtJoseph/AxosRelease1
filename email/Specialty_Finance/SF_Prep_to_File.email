@@ -1,0 +1,7 @@
+Hello,
+
+{!Opportunity.Account} is prep to file. 
+
+Please click the link below to access and update the opportunity:
+
+{!Opportunity.Link}

@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><font style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},<br></font><br>A wire transfer may be initiated by
+filling our Wire Transfer form. You can find our Wire Transfer form on our
+website; go to UFB Direct Home Page, hover over Customer Support, click on
+Online Banking Forms, and then Wire Transfer Form.<br><br><a href="https://www.ufbdirect.com/Portals/UFBDirect/Documents/Online%20Banking%20Forms/wire-transfer-request-form.pdf?t=1485898753060" style="color: rgb(0, 0, 0);">Wire Transfer Request Form</a><br><br>Please note that there is&nbsp;<b style="">$35 fee to send a Domestic Wire</b>&nbsp;and a&nbsp;<b style="">$45 fee</b>&nbsp;<b style="">for International Wires.</b>&nbsp;Wire Transfers cannot be future dated and must be received by&nbsp;<b style="">12:00pm (PT)</b>&nbsp;for Domestic wires and&nbsp;<b style="">12:00pm (PT)</b>&nbsp;for International wires to be processed the same day. Wires received on Saturday, Sunday, or a holiday will be processed on the next business day.<br><br>We appreciate your business and commit to providing superior Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br>UFB Direct Customer Service</font><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

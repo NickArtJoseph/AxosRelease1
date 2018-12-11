@@ -1,0 +1,44 @@
+<aura:component controller="AccountResearchSFDC2Controller" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader">
+	<aura:attribute name="accountRecord" type="Account" default="{ 'sobjectType' : 'Account' }" />
+	<aura:attribute name="isWaiting" type="Boolean" default="false" />
+
+	<aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+	<aura:handler event="aura:waiting" action="{! c.showSpinner }" />
+	<aura:handler event="aura:doneWaiting" action="{! c.hideSpinner }" />
+
+	<div>
+		<div class="slds-text-title_caps slds-m-bottom_small slds-text-align_center">Request Research</div>
+		<div class="slds-form_stacked">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Research Request Type</label>
+				<div class="slds-form-element__control">
+					<force:inputField aura:id="inputField" value="{! v.accountRecord.Research_Request_Type_SFDC2__c }" required="true" />
+				</div>
+			</div>
+
+			<div class="slds-form-element">
+				<div class="slds-form-element__control">
+					<!-- <force:inputField aura:id="inputField" value="{! v.accountRecord.Research_Request_Notes_SFDC2__c }" required="true" /> -->
+					<ui:inputTextArea aura:id="inputNotes" label="Research Request Notes" value="{! v.accountRecord.Research_Request_Notes_SFDC2__c }" rows="3"
+						labelClass="slds-form-element__label" class="slds-textarea" required="true" requiredIndicatorClass="slds-required"
+						keydown="{! c.clearErrors }" />
+				</div>
+			</div>
+			
+			<div class="slds-text-align_center">
+				<lightning:button class="slds-m-top_small" variant="brand" type="button" name="request" label="Send for Research" onclick="{! c.doRequestResearch }" />
+				<lightning:button class="slds-m-top_small" variant="neutral" type="button" name="cancel" label="Cancel" onclick="{! c.closeAction }" />
+			</div>
+		</div>
+	</div>
+
+	<aura:if isTrue="{! v.isWaiting }">
+		<div class="notification-spinner" style="height: 6rem;">
+	        <div role="status" class="slds-spinner slds-spinner_brand slds-spinner_large">
+	            <span class="slds-assistive-text">Loading</span>
+	            <div class="slds-spinner__dot-a"></div>
+	            <div class="slds-spinner__dot-b"></div>
+	        </div>
+	    </div>
+	</aura:if>
+</aura:component>

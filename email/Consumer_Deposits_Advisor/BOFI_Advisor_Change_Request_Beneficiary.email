@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},</span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif"><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);"><br></span>We will be happy to assist you with adding,
+removing or updating your beneficiaries on your account. This will be a
+two-step process:&nbsp;<br><br>Step 1: Complete the <a href="https://www.bofiadvisor.com/portals/bofiadvisor2/documents/forms/change-request-beneficiary.pdf?t=1501709062974">Change Request: Beneficiary</a> forms.<br><br>Step 2: Return the completed Beneficiary request forms for processing by;<br><ol><li><b>Secure Message</b>: Login to Online Banking, click on Contact Us, and send a
+secure email with a scanned copy of the signed documents.</li><li>Fax to:<b> 858-350-0443</b>; or</li><li>Mail to: <b>Deposit Operations: New Accounts PO BOX 509127 San Diego, CA
+92150-9948</b></li></ol></font><div><p><font face="Arial, sans-serif">Your Beneficiary change will be reviewed within three business days on receipt
+of the Account Vesting Change form.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.</font></p><p><font face="Arial, sans-serif"><br><span style="background-color: rgb(255, 255, 255);"><br>Best Regards,<br></span></font><span style="font-family: Arial, sans-serif;"></span></p><p><span style="font-family: Arial, sans-serif;"><br></span></p><p><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif"><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);">BOFI Advisor Customer Service</span></font></p></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

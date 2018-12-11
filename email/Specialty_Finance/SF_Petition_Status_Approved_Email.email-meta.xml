@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Specialty Finance - Used in Process for sending email notification when Petition Status is Approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - Petition Status Approved Email</name>
+    <style>none</style>
+    <subject>!URGENT Lien and Judgement Searches {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

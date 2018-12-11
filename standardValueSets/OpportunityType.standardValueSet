@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Existing Business</fullName>
+        <default>false</default>
+        <label>Existing Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business Account</fullName>
+        <default>false</default>
+        <label>New Business Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Previous Buyer</fullName>
+        <default>false</default>
+        <label>Previous Buyer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Buyer</fullName>
+        <default>false</default>
+        <label>New Buyer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conventional</fullName>
+        <default>false</default>
+        <label>Conventional</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker, Lenders One Co-op</fullName>
+        <default>false</default>
+        <label>Broker, Lenders One Co-op</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker, Correspondent</fullName>
+        <default>false</default>
+        <label>Broker, Correspondent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker, Correspondent, Lenders One Co-op</fullName>
+        <default>false</default>
+        <label>Broker, Correspondent, Lenders One Co-op</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker, Correspondent, Warehouse</fullName>
+        <default>false</default>
+        <label>Broker, Correspondent, Warehouse</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Construction</fullName>
+        <default>false</default>
+        <label>Construction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker, CMC Co-op, Correspondent</fullName>
+        <default>false</default>
+        <label>Broker, CMC Co-op, Correspondent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing</fullName>
+        <default>false</default>
+        <label>Existing</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Calls by Hour</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>(CALLDURATION:SUM-Activity.qbdialer__Call_Ring_Time__c:SUM)/60</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Talk Time (Minutes)</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_40261849</developerName>
+        <masterLabel>Call Result</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Abandoned Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Inbound Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Correct Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Live Message</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set Callback</sourceValue>
+            </sourceValues>
+            <value>Contact</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Bad Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Busy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Answer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Transfer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wrong Number</sourceValue>
+            </sourceValues>
+            <value>Other</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_35227263</developerName>
+        <masterLabel>Call Rwsult</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Abandoned Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Correct Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Inbound Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Live Message</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Left Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Set Callback</sourceValue>
+            </sourceValues>
+            <value>Contact</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_27411149</developerName>
+        <masterLabel>Contact Result</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CALLDISPOSITION</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <value>Contact</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>TASK</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CONTACT</field>
+    </columns>
+    <columns>
+        <field>LEAD</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY</field>
+    </columns>
+    <columns>
+        <field>BucketField_27411149</field>
+    </columns>
+    <columns>
+        <field>BucketField_35227263</field>
+    </columns>
+    <columns>
+        <field>BucketField_40261849</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Activity.qbdialer__ImpressionId__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Consumer Deposits Manager,Consumer Deposits</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CALLDISPOSITION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>contact</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>DUE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ASSIGNED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CALLTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Outbound/Inbound Call Metrics with Date</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>t</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

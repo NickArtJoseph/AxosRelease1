@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style="font-family: arial;"><span style="background-color: rgb(255, 255, 255);">Dear {!Case.Contact},<br></span><br>This email is in reference to
+your Bank of Internet inquiry&nbsp;<span style="background-color: rgb(255, 255, 255);">{!Case.CaseNumber}.&nbsp;<br></span></font><span style="font-size: 12pt;"><br><font face="Arial, sans-serif">Thank you for contacting us, we acknowledge receiving your check request.&nbsp;</font><font face="arial"><br></font></span><span style="font-family: Arial, sans-serif; font-size: 12pt;">Processing will be completed within _____ day/s and the check
+will be mailed by ____ (date) ______.</span><p class="MsoNormal" style="font-family: arial;"><font face="Arial, sans-serif" style=""><br>If you would like further assistance, simply reply to this
+email. We can also be reached by telephone at <b style="">1-866-923-7112</b>.<br><br>We appreciate your business and commit to providing superior Banking products, support and services.<br><br>Best Regards,<br>{!User.FirstName}<br><b>BOFI Federal Bank</b><br><span style="background-color: rgb(255, 255, 255);">Loan Servicing Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

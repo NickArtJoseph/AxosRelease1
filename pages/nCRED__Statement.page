@@ -1,0 +1,640 @@
+<apex:page controller="nCRED.StatementController"
+	extensions="nFORCE.RemoteActionController"
+	docType="html-5.0"
+	showHeader="false"
+	sidebar="false"
+	standardStylesheets="false"
+	applyHtmlTag="false"
+	applyBodyTag="false"
+>
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+	<head data-slds-path="{!URLFOR($Asset.SLDS, '')}">
+		<title>{!contextName} - {!statementTypeLabel}</title>
+		<apex:outputPanel rendered="{!isAngularSpreads}">
+			<apex:stylesheet value="{!URLFOR($Resource.nCRED__spreads, 'spreads.css')}" />
+		</apex:outputPanel>
+	</head>
+	<body id="{!statement.Id}" class="force commentableObject">
+	<!-- Classic Spreads -->
+	<c:Spreads_Labels />
+	<apex:outputPanel rendered="{!isJQuerySpreads && canView}">
+
+		<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'polyfills.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'vendor.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'statement-page.js')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.nCRED__vf_includes, 'statement-page.css')}" />
+
+		<style>
+			ul li, ol li {
+				margin-left: 1.5em;
+				padding-left: 0;
+			}
+		</style>
+
+		<c:Spread_Footnotes_Labels />
+		<c:Spread_Global_Analysis_Labels />
+		<c:Spread_Debt_Schedule_Labels />
+		<nFORCE:Internationalize />
+		<script type="text/javascript">
+			(function() {
+				jQuery("head").prepend('<meta id="responsive_viewport" name="viewport">');
+				jQuery("#responsive_viewport").attr('content', 'width=device-width, initial-scale=1.0');
+			})();
+			var __sfdcSessionId = '{!GETSESSIONID()}';
+
+			var printEntityURL = function(){
+				var url = '{!URLFOR($Page.Spread_Base)}?contextId={!contextId}&mode=print&autoclose=true';
+				window.open(url,'_blank');
+			};
+
+			var exportExcelEntityURL = function(){
+				var url = '{!URLFOR($Page.Spread_Base)}?contextId={!contextId}&mode=excel&autoclose=true';
+				window.open(url,'_blank');
+			};
+		</script>
+
+		<apex:outputPanel rendered="{!globalView}">
+			<script>
+				var relatedBundleIds = [];
+				<apex:repeat value="{!spreadController.relatedBundleIds}" var="bundleId">
+				relatedBundleIds.push('{!bundleId}');
+				</apex:repeat>
+				relatedBundleIds = JSON.stringify(relatedBundleIds);
+				var relatedEntityIds = [];
+				<apex:repeat value="{!spreadController.relatedEntityIds}" var="entityId">
+				relatedEntityIds.push("{!entityId}");
+				</apex:repeat>
+				relatedEntityIds = JSON.stringify(relatedEntityIds);
+
+				var printGlobalAnalysisURL = function(){
+					var url = '{!URLFOR($Page.Spread_Base)}?contextId={!spreadController.loanId}' + '&globalOnly=true&mode=print&autoclose=true';
+					window.open(url,'_blank');
+				};
+				var exportExcelGlobalAnalysisURL = function(){
+					var url = '{!URLFOR($Page.Spread_Base)}?contextId={!spreadController.loanId}' + '&globalOnly=true&mode=excel&autoclose=true';
+					window.open(url,'_blank');
+				};
+				var printLoanURL = function(){
+					var url = '{!URLFOR($Page.Spread_Base)}?contextId={!spreadController.loanId}' + '&mode=print&autoclose=true';
+					window.open(url,'_blank');
+				};
+				var exportExcelLoanURL = function(){
+					var url = '{!URLFOR($Page.Spread_Base)}?contextId={!spreadController.loanId}' + '&mode=excel&autoclose=true';
+					window.open(url,'_blank');
+				};
+			</script>
+		</apex:outputPanel>
+
+
+
+		<nFORCE:Loading_Modal enableBootstrap3="false" />
+		<nFORCE:LifeCycle_Functions />
+
+		<c:Spread_Data />
+		<script>
+			//Preload period source and statementType picklist values
+			var picklistCache = new nData.PicklistFieldCache();
+			picklistCache.getPicklistField({
+				type: 'picklist-field',
+				sObjectType: 'LLC_BI__Spread_Statement_Period__c',
+				picklistFieldName: 'LLC_BI__Source__c'
+			}).catch();
+			picklistCache.getPicklistField({
+				type: 'picklist-field',
+				sObjectType: 'LLC_BI__Spread_Statement_Type__c',
+				picklistFieldName: 'LLC_BI__Type__c'
+			}).catch();
+		</script>
+
+		<apex:outputPanel rendered="{!globalView}">
+			<script>
+				var spreadId = '{!JSENCODE(spreadController.spread.Id)}';
+				LifeCycle.SpreadData.getEntireSpread(spreadId);
+			</script>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!NOT(globalView)}">
+			<script>
+				var statementId = '{!statement.Id}';
+				LifeCycle.SpreadData.getEntireStatement(statementId);
+			</script>
+		</apex:outputPanel>
+
+		<c:Spread_Functions />
+		<c:Spreads_Service_Functions />
+		<script type="text/javascript">
+			// must alias LifeCycle for Borrower_Tree_Functions
+			var Utils = LifeCycle;
+			LifeCycle.BorrowerTree.buffer = true;
+			__sfdcSessionId = '{!GETSESSIONID()}';
+		</script>
+
+		<apex:variable var="SPREAD_DATE_APPLICATION_NAME" value="Spread_Date_Picker{!guid}" />
+		<apex:variable var="SPREAD_CONFIG_APPLICATION_NAME" value="Spread_Config{!guid}" />
+		<apex:variable var="SPREAD_NAVIGATION_APPLICATION_NAME" value="Spread_Navigation{!guid}" />
+		<apex:variable var="GLOBAL_ANALYSIS_APPLICATION_NAME" value="Global_Analysis{!guid}" />
+		<apex:variable var="RENT_ROLL_APPLICATION_NAME" value="Rent_Roll{!guid}" />
+		<apex:variable var="KO_RECORD_TOTAL_APPLICATION_NAME" value="KO_Record_Total{!guid}" />
+		<apex:variable var="TRAILING_TWELVE_MONTH_APPLICATION_NAME" value="Trailing_Twelve_Month{!guid}" />
+
+
+		<apex:outputPanel rendered="{!(spreadController.spread.LLC_BI__Collateral__c == null) || spreadController = null}">
+			<c:Comments canAddComments="{!canAddComments}" autoLoad="false" />
+		</apex:outputPanel>
+
+		<div class="force">
+
+			<div class="navbar navbar-fixed-top no-print config-toolbar">
+
+				<c:Bootstrap2_Navigation currentAppName="Bankr_Base_Installation"/>
+				<div class="navbar-inner" id="spread-config-nav-container" data-bind="with: {!SPREAD_CONFIG_APPLICATION_NAME}">
+
+					<div class="container-fluid" id="spread-config-nav">
+
+						<ul class="nav nav-dropdown entity-control-group">
+							<div class="item">
+								<apex:outputPanel rendered="{!globalView}" layout="none">
+
+									<div class="btn-group">
+										<button class="btn disabled">
+											<strong>
+												<abbr title="{!spreadController.spreadEntity.accountTypeLabel} : {!spreadController.spreadEntity.borrowerTypeLabel}">
+													{!spreadController.spreadEntity.entityName}
+												</abbr>
+											</strong>
+										</button>
+										<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu">
+											<apex:outputText rendered="{!spreadController.spreadEntityList.size > 0}">
+
+												<li role="presentation" class="nav-header no-margin">{!$Label.Entity_Involvements}</li>
+												<li role="presentation" class="divider"/>
+
+												<apex:repeat value="{!spreadController.spreadEntityList}" var="otherEntity">
+
+													<li class="no-margin" role="presentation">
+														<apex:outputLink value="{!URLFOR($Page.nCRED__Statement)}?id={!otherEntity.defaultSpreadId}" target="_parent" rendered="{!IF((otherEntity.defaultSpreadId != ''), true, false)}">
+															<apex:outputText >
+																<strong>
+																	{!otherEntity.entityName}
+																</strong>
+																<br />
+																{!otherEntity.accountType}
+																{!$Label.Separator_Hyphen}
+																{!otherEntity.borrowerType}
+															</apex:outputText>
+														</apex:outputLink>
+														<apex:outputLink value="{!otherEntity.startUnderwritingUrl}"
+																						 target="_parent"
+																						 rendered="{!IF((otherEntity.defaultSpreadId == ''), true, false)}"
+																						 onClick="return confirm('{!$Label.ncred__begin_spreading_confirmation}');">
+															<apex:outputText >
+																<strong>
+																	{!otherEntity.entityName}
+																</strong>
+																<br />
+																{!otherEntity.accountType}
+																{!$Label.Separator_Hyphen}
+																{!otherEntity.borrowerType}
+															</apex:outputText>
+														</apex:outputLink>
+													</li>
+
+												</apex:repeat>
+
+											</apex:outputText>
+											<li role="presentation" class="nav-header no-margin"> {!$Label.Navigation} </li>
+											<li role="presentation" class="divider" />
+											<li class="no-margin">
+												<a href="/{!spreadController.spread.LLC_BI__Loan__c}" target="_top" title="{!$ObjectType.LLC_BI__Loan__c.Label}">{!$Label.Statistics_Loan_Lookup_Column_Label}</a>
+											</li>
+											<li class="no-margin">
+												<a href="/{!spreadController.spread.LLC_BI__Underwriting_Summary__c}" target="_top" title="{!$Label.Underwriting_Summary}">{!$Label.Underwriting_Summary}</a>
+											</li>
+										</ul>
+
+									</div>
+								</apex:outputPanel>
+
+								<apex:outputPanel rendered="{!NOT(globalView)}" layout="none">
+									<ul class="nav nav-dropdown entity-control-group">
+										<div class="item">
+											<li role="presentation">
+												<ul class="nav">
+													<li>
+														<a href="/{!contextId}" target="_top">
+															<strong> {!contextName} </strong>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</div>
+									</ul>
+								</apex:outputPanel>
+
+							</div>
+						</ul>
+						<div data-toggle="false">
+
+							<ul class="nav">
+
+								<apex:outputPanel rendered="{!globalView}" layout="none">
+											<span class="no-margin item" style='float: left'>
+												<c:KoVirtualBinding code="stopBinding: true" />
+													<li id="global_analysis_button" data-bind="css: {active: isOpen}" class="no-margin">
+														<button type="button" class="btn btn-sm" data-bind="enable: loadingComplete, click: toggle" data-toggle="button" target="_top" title="{!$Label.Global_Analysis}">
+															{!$Label.Global_Analysis}
+														</button>
+													</li>
+												<c:KoVirtualBinding close="true" />
+											</span>
+
+									<li class="divider-vertical item"></li>
+
+									<span class="no-margin item nav" style='float: left'>
+												<c:KoVirtualBinding code="stopBinding: true" />
+													<li id="debt_schedule_button" data-bind="css: {active: open}" class="no-margin">
+														<a data-bind="click: toggle" href="javascript:void(0)" target="_top" title="{!$Label.Debt_Schedule_Toolbar}">
+															{!$Label.Debt_Schedule_Toolbar}
+														</a>
+													</li>
+													<li class="divider-vertical item"></li>
+												<c:KoVirtualBinding close="true" />
+											</span>
+								</apex:outputPanel>
+
+								<apex:outputPanel rendered="{!globalView}" layout="none">
+									<apex:repeat value="{!spreadController.spreadsList}" var="spreadIndex">
+
+										<apex:variable var="highlightedSpread" value="{!IF((spreadController.spread.Id == spreadIndex.Id), 'active no-margin current-spread item', 'no-margin item')}"/>
+
+										<li class="{!highlightedSpread}">
+											<a href="{!URLFOR($Page.Statement)}?id={!spreadIndex.Id}" target="_top">
+												{!spreadIndex.LLC_BI__Spread_Statement_Template__r.LLC_BI__Type__c}
+											</a>
+										</li>
+										<li class="divider-vertical item"></li>
+									</apex:repeat>
+								</apex:outputPanel>
+
+								<apex:outputPanel rendered="{!NOT(globalView)}" layout="none">
+									<apex:repeat value="{!statements}" var="statementIndex">
+
+										<apex:variable var="highlightedSpread" value="{!IF((statement.Id == statementIndex.Id), 'active no-margin current-spread item', 'no-margin item')}"/>
+
+										<li class="{!highlightedSpread}">
+											<a href="{!URLFOR($Page.Statement)}?id={!statementIndex.Id}" target="_top">
+												{!statementIndex.LLC_BI__Type__c}
+											</a>
+										</li>
+										<li class="divider-vertical item"></li>
+									</apex:repeat>
+								</apex:outputPanel>
+							</ul>
+
+							<apex:outputPanel rendered="{!isOCRInstalled}" layout="none">
+								<span class="pull-right">
+									<a class="btn btn-sm disabled"
+										 title="{!$Label.Import_Documents_Button}"
+										 style="display: none;"
+										 data-bind="visible: !hideFiscalYearEndAlert()">
+										{!$Label.Import_Documents_Button}
+									</a>
+									<a class="btn btn-sm"
+										 title="{!$Label.Import_Documents_Button}"
+										 style="display: none;"
+										 data-bind="visible: hideFiscalYearEndAlert()"
+										 href="/apex/ncinoocr__ocr#/document-selection/{!contextId}?statementId={!statement.Id}&spreadId={!$CurrentPage.parameters.id}"
+										 target="_top">
+										{!$Label.Import_Documents_Button}
+									</a>
+								</span>
+							</apex:outputPanel>
+						</div>
+
+
+						<div id="spread-config-nav-overflow" class="pull-right nav">
+							<li class="dropdown pull-right" style='border-left: 1px solid #f2f2f2; border-right: 1px solid #f2f2f2;'>
+								<a class="overflow-icon" data-toggle="dropdown"
+									 aria-haspopup="true" aria-expanded="true" href="javascript:void(0)">
+									<div class="circle circle-border">
+										<div class="circle-inner">
+											<div class="circle-text" style='padding-left: 1em; padding-right: 1em'>
+														<span class="active-text-replace">
+															More Statements
+														</span>
+												<i class="fa fa-caret-down" style='font-size: 1.25em;'></i>
+											</div>
+										</div>
+									</div>
+								</a>
+								<ul aria-labelledby="spread-config-nav-overflow" class="dropdown-menu overflow-menu" role="menu">
+								</ul>
+							</li>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="navbar-inner">
+
+					<div class="container-fluid">
+
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-config-toolbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+
+
+						<!-- Spread Statement Toolbar -->
+						<ul class="nav save-export-button-group">
+							<c:KoVirtualBinding code="stopBinding: true" />
+							<c:KoVirtualBinding code="with: {!SPREAD_NAVIGATION_APPLICATION_NAME} " />
+							<div id="spread_nav_button" class="pull-left">
+								<div class="btn-group" id="button-save-group" data-bind="bTooltip: !savePending(), container: 'ul.save-export-button-group', title: exportDisabled, placement: 'bottom'">
+									<button data-bind="click: saveChanges, enable: savePending, css: { 'btn-primary': savePending() }" class="btn" id="button-save">
+										{!$Label.Save}
+									</button>
+
+									<button data-bind="enable: !savePending()" class="btn dropdown-toggle" data-toggle="dropdown" id="button-export">
+										<span class="icon-print" />
+									</button>
+
+									<ul class="dropdown-menu" role="menu">
+										<li class="nav-header no-margin"> {!$Label.Print} / {!$Label.Export} </li>
+										<li class="divider" />
+
+										<!-- Non-Global Analysis Only -->
+										<li class="no-margin" data-bind="if: !isGlobalAnalysisActive(), css: {disabled: savePending()}">
+											<a tabindex="-1" href="javascript:void(0);" onclick="printEntityURL(); return false; ">
+												<apex:outputPanel layout="none" rendered="{!collateralMgmtId == null}">
+													{!$Label.ncred__print_entity}
+												</apex:outputPanel>
+												<apex:outputPanel layout="none" rendered="{!collateralMgmtId != null}">
+													{!$Label.ncred__print_collateral}
+												</apex:outputPanel>
+											</a>
+										</li>
+
+										<apex:outputPanel rendered="{!globalView}" layout="none">
+											<!-- Global Analysis Only -->
+											<li class="no-margin" data-bind="if: isGlobalAnalysisActive(), css: {disabled: savePending()}">
+												<a tabindex="-1" href="javascript:void(0);" onclick="printGlobalAnalysisURL(); return false; ">
+													{!$Label.Print_Global_Analysis}
+												</a>
+											</li>
+											<li class="no-margin" data-bind="css: {disabled: savePending()}">
+												<a tabindex="-1" href="javascript:void(0);" onclick="printLoanURL(); return false;">
+													{!$Label.Print_Loan}
+												</a>
+											</li>
+											<li class="divider"></li>
+										</apex:outputPanel>
+
+										<!-- Non-Global Analysis Only -->
+										<li class="no-margin" data-bind="if: !isGlobalAnalysisActive(), css: {disabled: savePending()}">
+											<a tabindex="-1" href="javascript:void(0);" onclick="exportExcelEntityURL(); return false; ">
+												<apex:outputPanel rendered="{!collateralMgmtId == null}">
+													{!$Label.ncred__export_entity}
+												</apex:outputPanel>
+												<apex:outputPanel rendered="{!collateralMgmtId != null}">
+													{!$Label.ncred__export_collateral}
+												</apex:outputPanel>
+											</a>
+										</li>
+
+										<apex:outputPanel rendered="{!globalView}" layout="none">
+											<!-- Global Analysis Only -->
+											<li class="no-margin" data-bind="if: isGlobalAnalysisActive(), css: {disabled: savePending()}">
+												<a tabindex="-1" href="javascript:void(0);" onclick="exportExcelGlobalAnalysisURL(); return false; ">
+													{!$Label.Export_Global_Analysis}
+												</a>
+											</li>
+											<li class="no-margin" data-bind="css: {disabled: savePending()}">
+												<a tabindex="-1" href="javascript:void(0);" onclick="exportExcelLoanURL(); return false;">
+													{!$Label.Export_Loan}
+												</a>
+											</li>
+										</apex:outputPanel>
+									</ul>
+								</div>
+							</div>
+							<c:KoVirtualBinding close="true" />
+							<c:KoVirtualBinding close="true" />
+						</ul>
+						<apex:outputPanel rendered="{!globalView}" layout="none">
+							<!-- Global Analysis Toolbar -->
+							<c:KoVirtualBinding code="with: {!GLOBAL_ANALYSIS_APPLICATION_NAME} " />
+							<div data-bind="visible: isOpen">
+								<ul class="nav">
+									<div class="btn-group">
+										<button class="btn navbar-btn dropdown-toggle" data-toggle="dropdown">
+											<span>{!$Label.Global_Analysis_Manage_Financials}</span>
+										</button>
+
+										<button class="btn navbar-btn dropdown-toggle" data-toggle="dropdown">
+											<span class="caret" />
+										</button>
+
+										<ul class="dropdown-menu" role="menu" data-bind="template: { name: 'yearSelectionTemplate', foreach: globalYears }">
+										</ul>
+									</div>
+
+									<div class="btn-group">
+										<button class="btn navbar-btn dropdown-toggle" data-toggle="dropdown">
+											<span>{!$Label.Global_Analysis_Manage_Entities}</span>
+										</button>
+
+										<button class="btn navbar-btn dropdown-toggle" data-toggle="dropdown">
+											<span class="caret" />
+										</button>
+
+										<ul class="dropdown-menu" role="menu" data-bind="template: { name: 'entitySelectionTemplate', foreach: globalEntities }">
+										</ul>
+									</div>
+								</ul>
+
+								<span class="no-margin item nav" style='float: left'>
+											<ul class="nav">
+												<li class="divider-vertical item"></li>
+												<li data-bind="css: {active: !isGlobalLeverage()}" class="no-margin">
+													<a data-bind="click: showCashFlow" href="javascript:void(0)" target="_top" title="{!$Label.Global_Cash_Flow}">
+														{!$Label.Global_Cash_Flow}
+													</a>
+												</li>
+												<li class="divider-vertical item"></li>
+												<li data-bind="css: {active: isGlobalLeverage}" class="no-margin">
+													<a data-bind="click: showGlobalLeverage" href="javascript:void(0)" target="_top" title="{!$Label.Global_Leverage}">
+														{!$Label.Global_Leverage}
+													</a>
+												</li>
+												<li class="divider-vertical item"></li>
+											</ul>
+										</span>
+								<ul class="nav">
+									<li>
+										<form class="navbar-form">
+											<label class="checkbox">
+												<input type="checkbox" data-bind="checked: showOperations" />
+												{!$Label.Show_Operators}
+											</label>
+										</form>
+									</li>
+								</ul>
+							</div>
+							<c:KoVirtualBinding close="true" />
+						</apex:outputPanel>
+						<apex:outputPanel layout="none" rendered="{!globalView}">
+							<c:KoVirtualBinding code="with: {!GLOBAL_ANALYSIS_APPLICATION_NAME}" rendered="{!globalView}" />
+							<div data-bind="visible: !isOpen()">
+								<c:KoVirtualBinding code="stopBinding: true" />
+								<c:Spread_Config statementObject="{!statement}"
+																 spreadDateAppName="{!SPREAD_DATE_APPLICATION_NAME}"
+																 spreadConfigAppName="{!SPREAD_CONFIG_APPLICATION_NAME}"/>
+								<c:KoVirtualBinding close="true"/>
+							</div>
+							<c:KoVirtualBinding close="true" rendered="{!globalView}"/>
+						</apex:outputPanel>
+						<apex:outputPanel layout="none" rendered="{!NOT(globalView)}">
+							<c:KoVirtualBinding code="stopBinding: true" />
+							<c:Spread_Config statementObject="{!statement}"
+															 spreadDateAppName="{!SPREAD_DATE_APPLICATION_NAME}"
+															 spreadConfigAppName="{!SPREAD_CONFIG_APPLICATION_NAME}"/>
+							<c:KoVirtualBinding close="true"/>
+						</apex:outputPanel>
+					</div>
+				</div>
+			</div>
+
+			<div id="spreadStatement">
+				<apex:outputPanel rendered="{!globalView}" layout="none">
+					<c:SpreadStatement statementObject="{!statement}"
+														 spreadId="{!spreadController.spread.Id}"
+														 loanId="{!spreadController.loanId}"
+														 spreadDateAppName="{!SPREAD_DATE_APPLICATION_NAME}"
+														 spreadConfigAppName="{!SPREAD_CONFIG_APPLICATION_NAME}"
+														 relationshipId="{!statement.LLC_BI__Bundle__r.LLC_BI__Relationship__c}"
+														 globalAnalysisAppName="{!GLOBAL_ANALYSIS_APPLICATION_NAME}"
+														 rentRollAppName="{!RENT_ROLL_APPLICATION_NAME}"
+														 koRecordTotalAppName="{!KO_RECORD_TOTAL_APPLICATION_NAME}"
+														 currentBundleId="{!spreadController.spread.LLC_BI__Spread_Statement_Template__r.LLC_BI__Bundle__c}"
+														 bundleIds="{!spreadController.relatedBundleIds}"
+														 relatedEntities="{!spreadController.spreadEntityList}"
+														 relatedCollateral="{!spreadController.relatedCollateralList}"
+														 spreadEntityId="{!spreadController.spreadEntity.involvementId}"
+														 trailingTwelveMonthAppName="{!TRAILING_TWELVE_MONTH_APPLICATION_NAME}"
+														 globalView="true"/>
+					<c:Spread_Footnotes spread="{!spreadController.spread}" statement="{!statement}"/>
+				</apex:outputPanel>
+
+				<apex:outputPanel rendered="{!NOT(globalView)}" layout="none">
+					<c:SpreadStatement statementObject="{!statement}"
+														 currentBundleId="{!statement.LLC_BI__Bundle__c}"
+														 relationshipId="{!statement.LLC_BI__Bundle__r.LLC_BI__Relationship__c}"
+														 spreadDateAppName="{!SPREAD_DATE_APPLICATION_NAME}"
+														 spreadConfigAppName="{!SPREAD_CONFIG_APPLICATION_NAME}"
+														 rentRollAppName="{!RENT_ROLL_APPLICATION_NAME}"
+														 koRecordTotalAppName="{!KO_RECORD_TOTAL_APPLICATION_NAME}"
+														 trailingTwelveMonthAppName="{!TRAILING_TWELVE_MONTH_APPLICATION_NAME}"
+														 globalView="false"
+					/>
+					<c:Spread_Footnotes statement="{!statement}"/>
+				</apex:outputPanel>
+			</div>
+		</div>
+
+		<div data-bind="with: {!SPREAD_CONFIG_APPLICATION_NAME}">
+
+			<div id="spread_modal_container" class="no-print">
+
+				<div data-bind="if: (isEditable && isColumnSourceEditable) && !bStaticPeriods">
+
+					<c:Spread_Config_Add_Period />
+
+				</div>
+
+				<div data-bind="if: isEditable">
+
+					<c:Spread_Config_Set_Fiscal_Year />
+
+				</div>
+
+				<c:Trailing_Twelve_Month_Selector />
+			</div>
+
+		</div>
+
+		<script>
+			(function () {
+				jQuery(document).on('ready', function () {
+					jQuery(window).resize(function() {
+						jQuery("#spread-config-nav-container").itemOverflow(
+							'#spread-config-nav', '#spread-config-nav-overflow', true, '{!$Label.More_Statements}');
+					}).resize();
+				});
+			})();
+		</script>
+	</apex:outputPanel>
+
+	<!-- Angular Spreads -->
+	<apex:outputPanel rendered="{!isAngularSpreads && canView}">
+		<apex:slds />
+
+		<nFORCE:LifeCycle_Functions />
+		<nFORCE:LiteForce_Functions />
+		<c:Spread_Functions />
+
+		<nFORCE:Internationalize />
+		<nFORCE:Include_Navigator />
+
+		<c:Spread_Footnotes_Labels />
+		<c:Spread_Global_Analysis_Labels />
+		<c:Spread_Debt_Schedule_Labels />
+		<apex:outputPanel rendered="{!isCRE}">
+			<c:Rent_Roll_Labels />
+			<c:Sensitivity_Analysis_Labels />
+		</apex:outputPanel>
+
+		<style>
+			html {
+				background-color: #fdfdfd;
+			}
+		</style>
+
+		<div style="display:none">
+			<c:Bootstrap2_Navigation currentAppName="Bankr_Base_Installation" />
+		</div>
+
+		<div class="slds-scope">
+			<c:StatementPreloadStencil />
+			<spreads-app
+				statementId="{!statement.Id}"
+				bundleId="{!bundleId}"
+				spreadId="{!spreadId}"
+			></spreads-app>
+		</div>
+
+		<script src="{!URLFOR($Resource.spreads, 'polyfills.js')}"></script>
+		<script src="{!URLFOR($Resource.spreads, 'vendor.js')}"></script>
+		<script src="{!URLFOR($Resource.spreads, 'spreads.js')}"></script>
+		<link rel="stylesheet" href="{!URLFOR($Resource.nds, 'nds.bundle.css')}" />
+		<script src="{!URLFOR($Resource.nds, 'nds.js')}" data-resources-url="{!URLFOR($Resource.nds, 'nds/')}" />
+		<script id="spreads-init">
+			LifeCycle.isSPAMode = {!isNOI2018r1} || {!isSpreads2018r2};
+			LifeCycle.msgs.msg_spread_base_vf_page_url = '{!$Page.Spread_Base}';
+			LifeCycle.isOcrInstalled = {!isOCRInstalled};
+			LifeCycle.msgs.msg_vf_includes_url = '{!URLFOR($Resource.vf_includes)}';
+			LifeCycle.SpreadData.RMAServices.rmaKey = '{!JSENCODE(rmaAwsToken)}';
+			LifeCycle.SpreadData.RMAServices.rmaURL = '{!JSENCODE(rmaAwsURL)}';
+			LifeCycle.SpreadData.RMAServices.rmaEnabled = {!rmaEnabled};
+		</script>
+	</apex:outputPanel>
+
+	<!-- Can't Hang -->
+	<apex:outputPanel rendered="{!!canView}" >
+		<h1 style="font-size:1.5em;">{!$Label.ncred__missing_permissions}</h1>
+	</apex:outputPanel>
+	</body>
+	</html>
+</apex:page>

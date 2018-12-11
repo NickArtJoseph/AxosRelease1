@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><br><font face="arial">We have received an alert from our vendor of a login outside of your frequently used locations<span style="font-size: 12pt;">.&nbsp;</span></font><br><br><font face="arial">Please confirm the login to your online banking on __/__/20__ from _______, __.<span style="font-size: 12pt;">&nbsp;&nbsp;</span></font><br><br><font face="arial">(Please note your online banking access has been restricted until this activity is verified.)<span style="font-size: 12pt;">&nbsp;</span></font><br><br><font face="arial">(If you do not recognize this location and login, please access your online banking and change your username and password.)</font><br><br><font face="arial">To confirm this activity and restore access to your online banking, simply reply to this email.&nbsp; If you need assistance with any of these steps, please call us at 1-877-247-8002.</font><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br>Thank you.<br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><div><span style="font-family: Arial, sans-serif;">BOFI Customer Service</span></div><div><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

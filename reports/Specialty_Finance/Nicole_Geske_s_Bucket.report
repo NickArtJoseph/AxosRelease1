@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>PC_ADDRESS2_STATE</field>
+    </columns>
+    <columns>
+        <field>Account.No_Payments_Remaining__c</field>
+    </columns>
+    <columns>
+        <field>Account.Face_Value_Remaining__c</field>
+    </columns>
+    <columns>
+        <field>Account.Remaining_Payment_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Next_Available_Payment_Date__c</field>
+    </columns>
+    <description>Payments too far out accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nicole Geske</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Nicole Geske&apos;s Bucket</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

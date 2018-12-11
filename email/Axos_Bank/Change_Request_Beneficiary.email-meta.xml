@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Change Request - Beneficiary</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Change Request - Beneficiary</subject>
+    <textOnly>Hello {!Case.Contact},
+
+We will be happy to assist you with adding, removing or updating your beneficiaries on your account. This will be a two-step process:
+
+Step 1: Complete the Change Request: Beneficiary form.
+
+Step 2: Return the completed Beneficiary request forms for processing by;
+
+Secure Message: Login to Online Banking, click on Contact Us, and send a secure email with a scanned copy of the signed documents.
+Fax to: 858-350-0443; or
+Mail to: Deposit Operations: New Accounts PO BOX 509127 San Diego, CA 92150-9948
+
+Your Beneficiary change will be reviewed within three business days upon receipt of the Account Vesting Change form.
+
+We appreciate your business and commit to providing superior banking products, support and services.
+
+
+Best Regards,
+
+
+{!User.FirstName}
+Axos Bank Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

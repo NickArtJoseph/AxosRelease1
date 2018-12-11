@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial Account Opening</fullName>
+        <default>false</default>
+        <label>Commercial Account Opening</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Sub Account Opening</fullName>
+        <default>false</default>
+        <label>New Sub Account Opening</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account maintenance</fullName>
+        <default>false</default>
+        <label>Account maintenance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Check Orders</fullName>
+        <default>false</default>
+        <label>Check Orders</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Debit card Orders</fullName>
+        <default>false</default>
+        <label>Debit card Orders</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial REVIEW/ CALL BACK</fullName>
+        <default>false</default>
+        <label>Commercial REVIEW/ CALL BACK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Processing - M&amp;I</fullName>
+        <default>false</default>
+        <label>Bank Processing - M&amp;I</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banko Monitoring</fullName>
+        <default>false</default>
+        <label>Banko Monitoring</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Off Panel</fullName>
+        <default>false</default>
+        <label>Client Off Panel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Termination</fullName>
+        <default>false</default>
+        <label>Client Termination</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Statement Services</fullName>
+        <default>false</default>
+        <label>Statement Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Statement Services - Password Reset</fullName>
+        <default>false</default>
+        <label>Statement Services - Password Reset</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COLB</fullName>
+        <default>false</default>
+        <label>COLB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conversion</fullName>
+        <default>false</default>
+        <label>Conversion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>341 Meeting Tracking</fullName>
+        <default>false</default>
+        <label>341 Meeting Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ECF Setup</fullName>
+        <default>false</default>
+        <label>ECF Setup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDI Setup</fullName>
+        <default>false</default>
+        <label>EDI Setup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hardware</fullName>
+        <default>false</default>
+        <label>Hardware</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Report Development</fullName>
+        <default>false</default>
+        <label>Report Development</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Additional</fullName>
+        <default>false</default>
+        <label>Additional</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BreakFix</fullName>
+        <default>false</default>
+        <label>BreakFix</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inventory of Equip</fullName>
+        <default>false</default>
+        <label>Inventory of Equip</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Trustee</fullName>
+        <default>false</default>
+        <label>New Trustee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Software</fullName>
+        <default>false</default>
+        <label>Other Software</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Performance Complaint</fullName>
+        <default>false</default>
+        <label>Performance Complaint</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pickup/Routine</fullName>
+        <default>false</default>
+        <label>Pickup/Routine</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Proactive</fullName>
+        <default>false</default>
+        <label>Proactive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pickup/Terminations</fullName>
+        <default>false</default>
+        <label>Pickup/Terminations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Site Visits</fullName>
+        <default>false</default>
+        <label>Site Visits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Off Panel Status Report</fullName>
+        <default>false</default>
+        <label>Off Panel Status Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Address Change for Accounts</fullName>
+        <default>false</default>
+        <label>Address Change for Accounts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Misc Project/Client/Contacts Updates</fullName>
+        <default>false</default>
+        <label>Misc Project/Client/Contacts Updates</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Office Move</fullName>
+        <default>false</default>
+        <label>Office Move</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDI Monitoring</fullName>
+        <default>false</default>
+        <label>EDI Monitoring</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interim Reports</fullName>
+        <default>false</default>
+        <label>Interim Reports</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Production Update Requests - Client</fullName>
+        <default>false</default>
+        <label>Production Update Requests - Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Enhancements</fullName>
+        <default>false</default>
+        <label>Product Enhancements</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Production Update Requests - Internal</fullName>
+        <default>false</default>
+        <label>Production Update Requests - Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Red Account Status</fullName>
+        <default>false</default>
+        <label>Red Account Status</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Red or Yellow Status Change</fullName>
+        <default>false</default>
+        <label>Red or Yellow Status Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Schedule Data Request</fullName>
+        <default>false</default>
+        <label>Schedule Data Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Special Projects</fullName>
+        <default>false</default>
+        <label>Special Projects</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TSRESOLVE Escalations</fullName>
+        <default>false</default>
+        <label>TSRESOLVE Escalations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Access to Production</fullName>
+        <default>false</default>
+        <label>Access to Production</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Document Delivery</fullName>
+        <default>false</default>
+        <label>Document Delivery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </standardValue>
+</StandardValueSet>

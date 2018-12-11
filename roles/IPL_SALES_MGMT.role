@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>IPL Sales Management</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>IPL Sales Management</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>IPL_OPS_Management</parentRole>
+</Role>

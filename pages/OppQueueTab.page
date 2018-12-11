@@ -1,0 +1,3 @@
+<apex:page showHeader="true" tabStyle="Opportunity_Queue__c">
+    <apex:enhancedList type="Opportunity_Queue__c" height="450" rowsPerPage="25"/>
+</apex:page>

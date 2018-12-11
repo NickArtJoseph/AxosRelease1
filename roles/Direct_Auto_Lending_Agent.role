@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>DirectAuto Lending Agent</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Direct Auto Lending Agent</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Direct_Auto_Lending_Manager</parentRole>
+</Role>

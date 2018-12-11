@@ -1,0 +1,9 @@
+<apex:page controller="mkto_si.LandingPageController" tabStyle="Marketo__tab">
+  <c:CssAndJavascript2 />
+  
+	<div class="mkto">
+  	<apex:sectionHeader title="{!$Label.mkto_si__application_title}" rendered="true" help="{!helpLink}"/>
+  </div>
+
+	<iframe src="{!pageUrl}" width="100%" scrolling="no" border="no" frameborder="no" style="height:{!pageHeight}"></iframe>
+</apex:page>

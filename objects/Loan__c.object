@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Loan_C_I_SFDC2</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Loan_C_I_SFDC2</fullName>
+        <fields>Boarding_Form__c</fields>
+        <fields>Loan_Amount__c</fields>
+        <label>Loan C&amp;I SFDC2</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>As a C&amp;I business unit user, I need to be able to add Loans to a Boarding Form as needed.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Boarding_Form__c</fullName>
+        <externalId>false</externalId>
+        <label>Boarding Form</label>
+        <referenceTo>Boarding_Form__c</referenceTo>
+        <relationshipLabel>Loans</relationshipLabel>
+        <relationshipName>Loans</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Branch_Number_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Branch_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>01-Bank of Internet</fullName>
+                    <default>false</default>
+                    <label>01-Bank of Internet</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRE_Sub_Property_Type_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRE_Sub_Property_Type__c</fullName>
+        <description>Subject property sub-property type codes. If applicable, only applies to multifamily and commercial properties. Source doc: CRE Sub-Property Type Codes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subject property sub-property type codes. If applicable, only applies to multifamily and commercial properties. Source doc: CRE Sub-Property Type Codes.</inlineHelpText>
+        <label>CRE Sub-Property Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C_I_Loan_Type_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C_I_Loan_Type__c</fullName>
+        <description>&quot;Assigned at LOQ level by Operations authorized designee.. Source doc: C+I Loan Type Matrix&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned at LOQ level by Operations authorized designee.. Source doc: C+I Loan Type Matrix</inlineHelpText>
+        <label>C&amp;I Loan Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1A</fullName>
+                    <default>false</default>
+                    <label>1A</label>
+                </value>
+                <value>
+                    <fullName>1B</fullName>
+                    <default>false</default>
+                    <label>1B</label>
+                </value>
+                <value>
+                    <fullName>1C</fullName>
+                    <default>false</default>
+                    <label>1C</label>
+                </value>
+                <value>
+                    <fullName>1D</fullName>
+                    <default>false</default>
+                    <label>1D</label>
+                </value>
+                <value>
+                    <fullName>1E</fullName>
+                    <default>false</default>
+                    <label>1E</label>
+                </value>
+                <value>
+                    <fullName>1F</fullName>
+                    <default>false</default>
+                    <label>1F</label>
+                </value>
+                <value>
+                    <fullName>5A</fullName>
+                    <default>false</default>
+                    <label>5A</label>
+                </value>
+                <value>
+                    <fullName>5B</fullName>
+                    <default>false</default>
+                    <label>5B</label>
+                </value>
+                <value>
+                    <fullName>5C</fullName>
+                    <default>false</default>
+                    <label>5C</label>
+                </value>
+                <value>
+                    <fullName>5D</fullName>
+                    <default>false</default>
+                    <label>5D</label>
+                </value>
+                <value>
+                    <fullName>5E</fullName>
+                    <default>false</default>
+                    <label>5E</label>
+                </value>
+                <value>
+                    <fullName>5F</fullName>
+                    <default>false</default>
+                    <label>5F</label>
+                </value>
+                <value>
+                    <fullName>5G</fullName>
+                    <default>false</default>
+                    <label>5G</label>
+                </value>
+                <value>
+                    <fullName>5J</fullName>
+                    <default>false</default>
+                    <label>5J</label>
+                </value>
+                <value>
+                    <fullName>5L</fullName>
+                    <default>false</default>
+                    <label>5L</label>
+                </value>
+                <value>
+                    <fullName>5M</fullName>
+                    <default>false</default>
+                    <label>5M</label>
+                </value>
+                <value>
+                    <fullName>5N</fullName>
+                    <default>false</default>
+                    <label>5N</label>
+                </value>
+                <value>
+                    <fullName>5P</fullName>
+                    <default>false</default>
+                    <label>5P</label>
+                </value>
+                <value>
+                    <fullName>5R</fullName>
+                    <default>false</default>
+                    <label>5R</label>
+                </value>
+                <value>
+                    <fullName>5S</fullName>
+                    <default>false</default>
+                    <label>5S</label>
+                </value>
+                <value>
+                    <fullName>5T</fullName>
+                    <default>false</default>
+                    <label>5T</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Call_Report_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Call_Report_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Call Report Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1C2A</fullName>
+                    <default>false</default>
+                    <label>1C2A</label>
+                </value>
+                <value>
+                    <fullName>1A1</fullName>
+                    <default>false</default>
+                    <label>1A1</label>
+                </value>
+                <value>
+                    <fullName>1D</fullName>
+                    <default>false</default>
+                    <label>1D</label>
+                </value>
+                <value>
+                    <fullName>1A2</fullName>
+                    <default>false</default>
+                    <label>1A2</label>
+                </value>
+                <value>
+                    <fullName>1E2</fullName>
+                    <default>false</default>
+                    <label>1E2</label>
+                </value>
+                <value>
+                    <fullName>6D</fullName>
+                    <default>false</default>
+                    <label>6D</label>
+                </value>
+                <value>
+                    <fullName>4A</fullName>
+                    <default>false</default>
+                    <label>4A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Collateral_Code_Description_Source_Pag__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collateral_Code_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Code/Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>110 - SFR Construction</fullName>
+                    <default>false</default>
+                    <label>110 - SFR Construction</label>
+                </value>
+                <value>
+                    <fullName>120 - MF Construction</fullName>
+                    <default>false</default>
+                    <label>120 - MF Construction</label>
+                </value>
+                <value>
+                    <fullName>130 - CRE Construction</fullName>
+                    <default>false</default>
+                    <label>130 - CRE Construction</label>
+                </value>
+                <value>
+                    <fullName>160 - Real Estate - Raw Lots and Land</fullName>
+                    <default>false</default>
+                    <label>160 - Real Estate - Raw Lots and Land</label>
+                </value>
+                <value>
+                    <fullName>400 - Business-Unsecured</fullName>
+                    <default>false</default>
+                    <label>400 - Business-Unsecured</label>
+                </value>
+                <value>
+                    <fullName>441 - Business Secured by Non-Real Estate Collateral</fullName>
+                    <default>false</default>
+                    <label>441 - Business Secured by Non-Real Estate Collateral</label>
+                </value>
+                <value>
+                    <fullName>501 - SFR Notes</fullName>
+                    <default>false</default>
+                    <label>501 - SFR Notes</label>
+                </value>
+                <value>
+                    <fullName>502 - SFR NPL</fullName>
+                    <default>false</default>
+                    <label>502 - SFR NPL</label>
+                </value>
+                <value>
+                    <fullName>503 - SFR Tax Liens</fullName>
+                    <default>false</default>
+                    <label>503 - SFR Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>504 - MF Notes</fullName>
+                    <default>false</default>
+                    <label>504 - MF Notes</label>
+                </value>
+                <value>
+                    <fullName>505 - MF NPL</fullName>
+                    <default>false</default>
+                    <label>505 - MF NPL</label>
+                </value>
+                <value>
+                    <fullName>506 - MF Tax Liens</fullName>
+                    <default>false</default>
+                    <label>506 - MF Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>507 - CRE Notes</fullName>
+                    <default>false</default>
+                    <label>507 - CRE Notes</label>
+                </value>
+                <value>
+                    <fullName>508 - CRE NPL</fullName>
+                    <default>false</default>
+                    <label>508 - CRE NPL</label>
+                </value>
+                <value>
+                    <fullName>509 - CRE Tax Liens</fullName>
+                    <default>false</default>
+                    <label>509 - CRE Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>510 - Health Care</fullName>
+                    <default>false</default>
+                    <label>510 - Health Care</label>
+                </value>
+                <value>
+                    <fullName>511 - SFR Direct</fullName>
+                    <default>false</default>
+                    <label>511 - SFR Direct</label>
+                </value>
+                <value>
+                    <fullName>512 - MF Direct</fullName>
+                    <default>false</default>
+                    <label>512 - MF Direct</label>
+                </value>
+                <value>
+                    <fullName>513 - CRE Direct</fullName>
+                    <default>false</default>
+                    <label>513 - CRE Direct</label>
+                </value>
+                <value>
+                    <fullName>620 - Consumer Note, Unsecured</fullName>
+                    <default>false</default>
+                    <label>620 - Consumer Note, Unsecured</label>
+                </value>
+                <value>
+                    <fullName>621 - Consumer, New Cars</fullName>
+                    <default>false</default>
+                    <label>621 - Consumer, New Cars</label>
+                </value>
+                <value>
+                    <fullName>622 - Consumer, Used Cars</fullName>
+                    <default>false</default>
+                    <label>622 - Consumer, Used Cars</label>
+                </value>
+                <value>
+                    <fullName>640 - Consumer, Secured by Other Collateral</fullName>
+                    <default>false</default>
+                    <label>640 - Consumer, Secured by Other Collateral</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_1_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_1__c</fullName>
+        <description>Interest reserve account number. Source doc: JHA screenshot of accounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest reserve account number. Source doc: JHA screenshot of accounts.</inlineHelpText>
+        <label>DDA Accout Number 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_2_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_2__c</fullName>
+        <externalId>false</externalId>
+        <label>DDA Accout Number 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_3_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DDA_Accout_Number_3__c</fullName>
+        <description>Operating account number. Source doc: JHA screenshot of accounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Operating account number. Source doc: JHA screenshot of accounts.</inlineHelpText>
+        <label>DDA Accout Number 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Entered_Final_Boarding_Source_P__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Entered_Final_Boarding__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Entered (Final Boarding)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date_Lockout_Date__c</fullName>
+        <description>If applicable, this is the date the borrower will no longer be allowed to draw on funds. Source doc: Loan Agreement, other legal agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If applicable, this is the date the borrower will no longer be allowed to draw on funds. Source doc: Loan Agreement, other legal agreement</inlineHelpText>
+        <label>Expiration Date (Lockout Date)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Date_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Line_Amount_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Line_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount__c</fullName>
+        <description>Max credit facility being offered to the Borrower. Support doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Max credit facility being offered to the Borrower. Support doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower.</inlineHelpText>
+        <label>Loan Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Class_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Class_Code__c</fullName>
+        <description>The loan should fall under the same class code as Borrower 1. No additional support required.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The loan should fall under the same class code as Borrower 1. No additional support required.</inlineHelpText>
+        <label>Loan Class Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A – Personal</fullName>
+                    <default>false</default>
+                    <label>A – Personal</label>
+                </value>
+                <value>
+                    <fullName>B – Business Profit</fullName>
+                    <default>false</default>
+                    <label>B – Business Profit</label>
+                </value>
+                <value>
+                    <fullName>C – Business Non-Profit</fullName>
+                    <default>false</default>
+                    <label>C – Business Non-Profit</label>
+                </value>
+                <value>
+                    <fullName>D – Employee/Direct Loan</fullName>
+                    <default>false</default>
+                    <label>D – Employee/Direct Loan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Loan_Number_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Term_months_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Term_months__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Term (months)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Managment_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Managment_Code__c</fullName>
+        <description>&quot;The group that originated and will monitor the loan.For Bridge Lending select PWBD1. For Lender Finance select SSLF2.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;The group that originated and will monitor the loan.For Bridge Lending select PWBD1. For Lender Finance select SSLF2&quot;.</inlineHelpText>
+        <label>Managment Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PWBD1</fullName>
+                    <default>false</default>
+                    <label>PWBD1</label>
+                </value>
+                <value>
+                    <fullName>SSLF2</fullName>
+                    <default>false</default>
+                    <label>SSLF2</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date__c</fullName>
+        <description>&quot;Date the loan will become due and payable, prior to any extension agreements taking place. Source doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower.
+&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Date the loan will become due and payable, prior to any extension agreements taking place. Source doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower&quot;.</inlineHelpText>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NAICS_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAICS_Code__c</fullName>
+        <description>&quot;Industry/Line of Business classification code. Support doc: Final CAM
+&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Industry/Line of Business classification code. Support doc: Final CAM&quot;</inlineHelpText>
+        <label>NAICS Code</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Line_Amount_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Original_Loan_Amount__c</fullName>
+        <description>This will be the same as the Line Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This will be the same as the Line Amount</inlineHelpText>
+        <label>Original Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Original_Term_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Original_Term_Code__c</fullName>
+        <description>The origination date - the Expiration (lock-out) date/term type. If no expiration date, origination date - maturity date/term type. Example: 24/M = 24 months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The origination date - the Expiration (lock-out) date/term type. If no expiration date, origination date - maturity date/term type. Example: 24/M = 24 months</inlineHelpText>
+        <label>Original Term/Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Origination_Date_note_date_Source_P__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origination_Date_note_date__c</fullName>
+        <description>&quot;Date the agreements were executed by both parties. Source doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower.
+&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Date the agreements were executed by both parties. Source doc (1 of the following): Note, Loan Agreement, other legal agreement executed by both BofI and Borrower&quot;.</inlineHelpText>
+        <label>Origination Date (note date)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Origination_Fee_Discount_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Origination_Fee_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Origination Fee/Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Analyst_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Loans</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Projected_Initial_Funding_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Projected_Initial_Funding__c</fullName>
+        <externalId>false</externalId>
+        <label>Projected Initial Funding</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Propose_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Propose_Code__c</fullName>
+        <description>Assigned at LOQ level by Operations authorized designee.. Source doc: C+I Loan Type Matrix</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned at LOQ level by Operations authorized designee.. Source doc: C&amp;I Loan Type Matrix</inlineHelpText>
+        <label>Propose Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30 - Lender Finance 30 - Lender Finance</fullName>
+                    <default>false</default>
+                    <label>30 - Lender Finance 30 - Lender Finance</label>
+                </value>
+                <value>
+                    <fullName>31 - Bridge/A and D 31 - Bridge/A and D</fullName>
+                    <default>false</default>
+                    <label>31 - Bridge/A and D 31 - Bridge/A and D</label>
+                </value>
+                <value>
+                    <fullName>34 - Farmland 34 - Farmland</fullName>
+                    <default>false</default>
+                    <label>34 - Farmland 34 - Farmland</label>
+                </value>
+                <value>
+                    <fullName>35 - Participation 35 - Participation</fullName>
+                    <default>false</default>
+                    <label>35 - Participation 35 - Participation</label>
+                </value>
+                <value>
+                    <fullName>36 - Lender Finance Participation</fullName>
+                    <default>false</default>
+                    <label>36 - Lender Finance Participation</label>
+                </value>
+                <value>
+                    <fullName>37 - Direct 37 - Direct</fullName>
+                    <default>false</default>
+                    <label>37 - Direct 37 - Direct</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RelationShio_Manager_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RelationShio_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Relationship Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Loans1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Rating_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Rating__c</fullName>
+        <description>Source doc: Final CAM, reference risk rating model page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source doc: Final CAM, reference risk rating model page</inlineHelpText>
+        <label>Risk Rating</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                    <label>9</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Term_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term_Code__c</fullName>
+        <description>This is how the term is measured. Typically M for months.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is how the term is measured. Typically M for months.</inlineHelpText>
+        <label>Term Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Line_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Line__c</fullName>
+        <description>Not applicable to loans fully funded at origination. Revolving: the total credit line may be advanced as frequently as availability allows (principal paydowns gain back availability). Straight: advances to the line cannot exceed the total credit line but</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not applicable to loans fully funded at origination. Revolving: the total credit line may be advanced as frequently as availability allows (principal paydowns gain back availability). Straight: advances to the line cannot exceed the total credit line but</inlineHelpText>
+        <label>Type of Line</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Revolving</fullName>
+                    <default>false</default>
+                    <label>Revolving</label>
+                </value>
+                <value>
+                    <fullName>Straight</fullName>
+                    <default>false</default>
+                    <label>Straight</label>
+                </value>
+                <value>
+                    <fullName>Letter of Credit</fullName>
+                    <default>false</default>
+                    <label>Letter of Credit</label>
+                </value>
+                <value>
+                    <fullName>Performance Letter of Credit</fullName>
+                    <default>false</default>
+                    <label>Performance Letter of Credit</label>
+                </value>
+                <value>
+                    <fullName>Financial Letter of Credit</fullName>
+                    <default>false</default>
+                    <label>Financial Letter of Credit</label>
+                </value>
+                <value>
+                    <fullName>Commercial Letter of Credit</fullName>
+                    <default>false</default>
+                    <label>Commercial Letter of Credit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Loan</label>
+    <nameField>
+        <label>Loan Number</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Loans</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

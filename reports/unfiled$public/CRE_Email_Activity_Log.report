@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LEAD_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LEAD_COMPANY</field>
+    </columns>
+    <columns>
+        <field>FK_LEAD_DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>FK_$Lead.Leads_Number_of_Calls__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Lead.qbdialer__LastCallTime__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__DateSent__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__DateOpened__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__Opened__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__NumberOfTotalClicks__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__IndividualEmailResult__c.et4ae5__NumberOfUniqueClicks__c</field>
+    </columns>
+    <description>All Emails All Reps for CRE Manual Email Activity</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Lead.Account_Purpose_Other__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Construction Escrow (CA)</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>CRE - Email Activity Log</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__IndividualEmailResult__c@et4ae5__IndividualEmailResult__c.et4ae5__Lead__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>et4ae5__IndividualEmailResult__c.et4ae5__DateBounced__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

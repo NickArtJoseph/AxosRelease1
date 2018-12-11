@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To assign the record types so that a user can create it. Used with Enterprise User profiles to control which users can create BU specific record types. Business Banking should only be able to create Business Account Record Types.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.of_payments_Person__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.of_years_paid_out_Person__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Account SFDC2 Business Record Types</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Account.Business_Account_SFDC2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

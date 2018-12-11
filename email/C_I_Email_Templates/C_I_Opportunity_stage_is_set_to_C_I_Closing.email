@@ -1,0 +1,8 @@
+{!Opportunity.Name} has reached " {!Opportunity.StageName}" & "{!Opportunity.SubStage__c}". Please initiate the boarding process within Salesforce by clicking the link below: 
+
+{!Opportunity.Link}
+
+
+Thank you, 
+
+Salesforce

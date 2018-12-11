@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent when the Account Status for a WLD account changes from Active</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Account Status Changed from Active</name>
+    <style>none</style>
+    <subject>Account Status for {!Account.Name} has changed</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

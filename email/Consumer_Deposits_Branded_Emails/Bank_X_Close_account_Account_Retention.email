@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-family: arial; font-size: 12pt; color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br></font></p><p class="MsoNormal" style=""><font face="Arial, sans-serif">We regret to hear that you are considering closing your account. Before I officially submit the closeout request and in an effort to retain your business, I am hoping you can provide me any of your feedback or concerns regarding our pricing, processes and/or services so I can personally address them. We would love the opportunity to keep your business with our bank!</font></p><p class="MsoNormal" style=""><br></p><p class="MsoNormal" style=""><font face="Arial, sans-serif">At your earliest convenience if you could reply to this message with some additional information we would be more than happy to further assist you. Thank you for your time and consideration.</font></p><div style="font-family: arial; font-size: 12pt;"><br></div><p class="MsoNormal" style="font-family: arial; font-size: 12pt; color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">We appreciate your business and look forward to your reply.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font style="">Bank X</font><font color="#ff0000" style="color: rgb(0, 0, 0);">&nbsp;</font>Customer Service</font></p><div style="font-family: arial; font-size: 12pt; color: rgb(0, 0, 0);"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

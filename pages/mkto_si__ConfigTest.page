@@ -1,0 +1,40 @@
+<apex:page controller="mkto_si.ConfigTestController"
+	tabStyle="Marketo__tab">
+	<c:CssAndJavascript2 />
+
+	<div class="mkto">
+		<apex:sectionHeader title="!{$Label.Application_Title} - {$Label.Configuration_Test}"
+			help="{!helpLink}" />
+	</div>
+
+	<apex:pageMessage severity="confirm" strength="1"
+		rendered="{!packageMessage != null}" summary="{!packageMessage}" />
+	<apex:pageMessage severity="confirm" strength="1"
+		rendered="{!successMessage != null}" summary="{!successMessage}" />
+
+	<apex:pageMessage severity="warning" strength="1"
+		rendered="{!errorMessage != null}" summary="{!errorMessage}" />
+	<apex:pageMessage severity="error" strength="1"
+		rendered="{!errorException != null}" summary="{!errorException}" />
+
+	<apex:outputPanel rendered="{!successMessage == null}">
+		<div style="margin: 20px">
+			<h2>{!$Label.mkto_si__troubleshooting}</h2>
+			<ul style="list-style-type: circle">
+				<li>{!$Label.mkto_si__did_you_click_the_enable_marketo_api_checkbox}</li>
+				<li>{!$Label.mkto_si__did_you_deploy_the_package}</li>
+				<li>{!$Label.mkto_si__did_you_add_a_remote_site_for_the_marketo_api}</li>
+				<li>{!$Label.mkto_si__do_your_configuration_settings_match_those_in_marketo}</li>
+				<li>{!$Label.mkto_si__always_use_https_for_the_api_url_and_your_remote_site_settings}</li>
+				<li>{!$Label.mkto_si__please_include_screenshots_of_this_page} {!$Label.mkto_si__config_page_when_contacting_support}</li>
+			</ul>
+		</div>
+	</apex:outputPanel>
+
+	<div style="margin: 20px">
+		<apex:form >
+			<apex:commandLink action="{!editConfig}"
+				value="{!$Label.mkto_si__marketo_sales_insight_config}" />
+		</apex:form>
+	</div>
+</apex:page>

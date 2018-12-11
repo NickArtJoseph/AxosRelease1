@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Product Object contains information about the specific products in the product catalog and details of the association between products and product types.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>LLC_BI__Product_Line</fullName>
+        <description>Used in opportunity trigger to create product line services</description>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Automated_Clearing_House_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Cash_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Depository_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Disbursement_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Lockbox_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Miscellaneous_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Online_Banking_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Reconciliation_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Remote_Deposit_Capture_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Reporting_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Sweep_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Wire_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Zero_Balance_Account_Service__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Feature__r.LLC_BI__Is_Bundle__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Type_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Product_Line</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Related_List</fullName>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Product_Feature__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__RealEstate_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__RealEstate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used to drive field displayed in ProductWidget.</description>
+        <displayedFields>
+            <field>LLC_BI__Product_Line_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Type_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Related_List</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Default_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to determine the default landing page for this loan within the nCino User Interface.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field determines the default page within the nCino User Interface for this record.</inlineHelpText>
+        <label>Default Application</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deposit_Rate_Structure__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This optional lookup field references the deposit rate structure for this product.</description>
+        <externalId>false</externalId>
+        <label>Deposit Rate Structure</label>
+        <referenceTo>LLC_BI__Deposit_Rate_Structure__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Institution__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Manually populate this lookup field to define the Institution to which a product belongs.</description>
+        <externalId>false</externalId>
+        <label>Institution</label>
+        <referenceTo>LLC_BI__Institution__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maintenance_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field automatically populates via the treasury maintenance configuration. It associates converted treasury services to product-specific maintenance actions. This field corresponds to the unique app name on the route object to control what is displayed to users. Default is null.</description>
+        <externalId>false</externalId>
+        <label>Maintenance App</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maximum_Funding_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manually populate this currency field with the maximum amount allowed to fund this product.</description>
+        <externalId>false</externalId>
+        <label>Maximum Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Funding_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Manually populate this currency field with the minimum amount required to fund this product.</description>
+        <externalId>false</externalId>
+        <label>Minimum Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Feature__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is manually populated. This field is a lookup used to associate a product feature to the product. A product feature is used to attach attributes to the product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>After changing this field, go to the nCino Administration tab then run Install Updates and Install Batch Updates if this product is related to existing loans.</inlineHelpText>
+        <label>Product Feature</label>
+        <referenceTo>LLC_BI__Product_Feature__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Line_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. The user manually populates this field. It represents the name of the product line.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Product_Type__r.LLC_BI__Product_Line__r.Name</formula>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Type_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. The user manually populates this field. It represents the name of the product type.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Product_Type__r.Name</formula>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is manually populated. This field is a master detail field that is used to associate the product with a product type.</description>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <referenceTo>LLC_BI__Product_Type__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__RealEstate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is no longer in use. Previously, it was used to specify what type of real estate is involved with this product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this product has real estate involved, what type of real estate. Note: If anything besides &quot;None&quot; is checked, then a hidden &quot;Real Estate&quot; checkbox field will be set to true.</inlineHelpText>
+        <label>Real Estate Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Single Family Home</fullName>
+                    <default>false</default>
+                    <label>Single Family Home</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__RealEstate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set by LLC_BI__RealEstate_Type__c via a formula. This field is a text (true or false) field that is used to specify whether the product is considered a Real Estate type.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(LLC_BI__RealEstate_Type__c, &apos;None&apos;), &quot;false&quot;,
+IF(ISPICKVAL(LLC_BI__RealEstate_Type__c, &apos;&apos;), &quot;false&quot;, &quot;true&quot;   )
+)</formula>
+        <inlineHelpText>T/F -If the real estate picklist value is none, then set this field to &quot;false&quot;, if there is a RE type selected, then set this field to &quot;true&quot;</inlineHelpText>
+        <label>Real Estate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Screen_Section__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field contains the Screen Section that relates to this Product.</description>
+        <externalId>false</externalId>
+        <label>Screen Section</label>
+        <referenceTo>nFORCE__Screen_Section__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product</label>
+    <nameField>
+        <label>Product Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Products</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__Product_Line_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Product_Type__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

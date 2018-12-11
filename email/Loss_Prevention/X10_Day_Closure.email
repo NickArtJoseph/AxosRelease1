@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br>In accordance with your Deposit Account Agreement with BOFI, please be advised that we have elected to close your accounts.<br><br></font></span></p><p><span style="font-size: 12pt;"><font face="arial">All related services will be terminated in 3 days and the effective date of the closing will be 10 days from the date of this email.<br><br></font></span></p><p><span style="font-size: 12pt;"><font face="arial">We suggest that you stop making deposits to and stop writing checks against your account at this time. If there remains a balance in the Account after all outstanding transactions have cleared, we will send you a check for the balance (less any outstanding fees, service or other charges) to the address listed above.<br><br></font></span></p><p><span style="font-size: 12pt;"><font face="arial">Please ensure to make other arrangements for any automated transactions such as direct deposits and prearranged Ach credits and debits.<br><br></font></span></p><p><span style="font-size: 12pt;"><font face="arial">Please do not hesitate to contact us if you should have any questions concerning this letter.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

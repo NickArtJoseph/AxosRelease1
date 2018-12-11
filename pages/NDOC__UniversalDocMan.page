@@ -1,0 +1,11 @@
+<apex:page docType="html-5.0" showHeader="false" applyHtmlTag="false" sidebar="false">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+		<script async="async" type="text/javascript">
+			window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>');
+		</script>
+		<c:UniversalDocManDataService />
+		<c:UniversalDocManIncludes />
+		<c:UniversalDocManRoutes />
+		<c:UniversalDocMan />
+	</html>
+</apex:page>

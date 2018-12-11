@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><font face="Arial, sans-serif" style="">Hello {!Case.Contact},<br><font style=""><br>We are sorry to hear of the unauthorized transaction. &nbsp;</font>We
+will begin our investigation immediately to reclaim the money that was lost.
+Please complete and return the <a href="https://www.ufbdirect.com/Portals/UFB/Documents/atm-debit-card-dispute-affidavit.pdf?t=1501708930170" style="">ATM/Debit
+Card Dispute Affidavit</a> by:<br><ol><li>Sending a <b>Secure message</b> through Online Banking with the
+completed form attached</li><li>Fax to:<b> 858-350-0443</b>; or</li><li>Mail to: <b>BOFI Federal Bank P.O. Box 509127, San Diego,
+CA&nbsp; 92150-9948</b></li></ol>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><span style="background-color: rgb(255, 255, 255);"><br>Best Regards,<br></span></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);">UFB Direct Customer Service</span></font></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

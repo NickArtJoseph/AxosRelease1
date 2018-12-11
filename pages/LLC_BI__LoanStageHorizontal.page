@@ -1,0 +1,96 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="LLC_BI.LoanStageDurationController">
+	<apex:outputPanel layout="none" rendered="{!ISNULL($CurrentPage.parameters.app)}">
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'bundles/jquery-bundle.js')}" />
+	</apex:outputPanel>
+
+	<apex:outputPanel layout="none" rendered="{!hide && !ISNULL($CurrentPage.parameters.app)}">
+		{!$Label.llc_bi__no_data_available}
+	</apex:outputPanel>
+
+	<apex:outputPanel layout="none" rendered="{!hide && ISNULL($CurrentPage.parameters.app)}">
+		<apex:pageblock >
+			<apex:pageMessages ></apex:pageMessages>
+		</apex:pageblock>
+	</apex:outputPanel>
+
+	<apex:outputPanel layout="none" rendered="{!!hide}">
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/highCharts.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/chartExporting.js')}" />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__llc_web_ui, 'highcharts/DataJS.js')}" />
+
+		<script type="text/javascript">
+			var j$ = jQuery.noConflict();
+
+			j$(function() {
+				j$('#container').highcharts(
+						{
+							data : {
+								table : document.getElementById('datatable')
+							},
+							chart : {
+								type : 'bar'
+							},
+							title : {
+								text : ''
+							},
+							xAxis : {
+								labels : {
+									enabled : false
+								}
+							},
+							yAxis : {
+								allowDecimals : false,
+								title : {
+									text : '{!$Label.Number_Of_Days}'
+								},
+							},
+							legend : {
+								verticalAlign : 'top',
+								backgroundColor : '#FFFFFF',
+								reversed : true,
+								x : 0,
+								y : 0
+							},
+							tooltip : {
+								formatter : function() {
+									return '<b>' + this.point.name + '</b>:'
+											+ this.point.y + '<br/><b>' + 'Stage:'
+											+ '</b>' + this.series.name;
+								}
+							},
+							plotOptions : {
+								series : {
+									stacking : 'normal'
+								}
+							},
+							credits: {
+								enabled: false
+							}
+						});
+			});
+		</script>
+
+		<div id="container" style="height: 175px; margin: 0 auto"></div>
+		<div style="">
+			<table id="datatable" style="display:none;">
+				<thead>
+					<tr>
+						<th></th>
+						<apex:repeat var="r" value="{!stagesList}">
+							<th>{!r['name']}</th>
+						</apex:repeat>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>{!$Label.llc_bi__number_of_days}</th>
+						<apex:repeat var="r" value="{!stagesList}">
+							<td>{!r['duration']}</td>
+						</apex:repeat>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</apex:outputPanel>
+</apex:page>

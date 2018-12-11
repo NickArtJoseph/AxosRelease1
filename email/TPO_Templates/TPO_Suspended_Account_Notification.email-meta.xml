@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used by time-based workflows to send notification for Suspended accounts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TPO Suspended Account Notification</name>
+    <style>none</style>
+    <subject>{!Account.Name} is in suspended status and nearing expiration</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

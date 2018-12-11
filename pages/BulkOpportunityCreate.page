@@ -1,0 +1,66 @@
+<apex:page controller="BulkOpportunityCreateController" tabStyle="Bulk_Opp_Create__tab">
+<apex:sectionHeader title="Consumer Deposits Opportunities" subtitle="Bulk Opportunity Creation" />
+<p>This form is intended to be used by the Consumer Deposits management team to auto-create mass opportunities
+based on reports.</p>
+<p>Instructions:<ol>
+<li>Complete each field of the form</li>
+<li>Click on the "Create Opportunities" button at the bottom of the page. The system will create a new 
+opportunity for each row contained in the selected report using a combination
+of the following form data and the selected report data.</li>
+<li>Upon successful completion, a message will appear along with a link to view the newly created opportunities.</li>
+</ol></p>
+<apex:form >
+    <apex:pageBlock id="ReportSelect">
+        <apex:pageMessages />
+        <apex:pageBlockSection columns="2">
+            <apex:inputField value="{!oppModel.Name}" />
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Owners" />
+                <apex:outputPanel id="OwnersPanel" layout="block" styleClass="requiredInput">
+                    <div class="requiredBlock"></div>
+                    <c:MultiselectPicklist leftLabel="Available Owners"
+                        leftOptions="{!ownerOptions}"
+                        rightLabel="Selected Owners"
+                        rightOptions="{!selectedOwners}"
+                        size="6"
+                        width="320px"/>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <apex:inputField value="{!oppModel.LeadSource}" required="true"/>
+            <apex:inputField value="{!oppModel.StageName}" />
+            <apex:inputField value="{!oppModel.Priority__c}" />
+            <apex:inputField value="{!oppModel.CloseDate}" />
+            <apex:inputField value="{!oppModel.Deposit_Relationship__c}" required="true"/>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Report" />
+                <apex:outputPanel >
+                <apex:selectList value="{!selectedReport}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!reportOptions}" />
+                    <apex:actionSupport event="onchange" rerender="ReportSelect" action="{!rerender}" />
+                </apex:selectList>
+                &nbsp;<apex:outputLink value="/{!selectedReport}" rendered="{!NOT(ISBLANK(selectedReport))}" target="_blank">Review</apex:outputLink>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <apex:inputField value="{!oppModel.Sales_Call_Attempts__c}" />
+            <apex:outputLabel />
+            <apex:inputField value="{!oppModel.Service_Call_Attempts__c}" />
+            <apex:pageBlockSectionItem helpText="When a Report is selected, the Available Fields will be populated with columns that may be used to auto-populate the Description field of the new Opportunities">
+                <apex:outputLabel >Add to Description</apex:outputLabel>
+                <c:MultiselectPicklist leftLabel="Available Fields"
+                    leftOptions="{!allReportFields}"
+                    rightLabel="Selected Fields"
+                    rightOptions="{!selectedReportFields}"
+                    size="6"
+                    width="320px"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:outputPanel rendered="{!newOpportunityCount > -1}" style="text-align: center;" layout="block">
+            Success! {!newOpportunityCount} opportunities were successfully created.  Click on the following link to see the results.
+            <br/><apex:outputLink value="/{!bulkReportId}?pv0={!DATETIMEVALUE(bulkCreationDateTime)}" target="_blank">Bulk Creation Report</apex:outputLink><br/>
+        </apex:outputPanel>
+        <apex:outputPanel style="text-align: center; padding-top: 20px;" layout="block">
+            <apex:commandButton value="Create Opportunities" id="CreateOpp" action="{!createOpportunities}"/>
+        </apex:outputPanel>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

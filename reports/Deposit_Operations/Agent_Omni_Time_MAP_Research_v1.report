@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>UserServicePresence$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$User</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$Name</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$ServicePresenceStatus</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusStartDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusEndDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusDuration</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5</booleanFilter>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>myrna</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>robin shannon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>marla</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>sarah easley</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Victor Angulo</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Agent Omni Time MAP Research v1</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Omni_Channel_User_Presence__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>UserServicePresence$CreatedDate</dateColumn>
+        <endDate>2018-09-28</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-07-01</startDate>
+    </timeFrameFilter>
+</Report>

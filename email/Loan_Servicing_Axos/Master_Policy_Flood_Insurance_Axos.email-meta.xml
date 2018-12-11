@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Master Policy Flood Insurance</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - Master Policy Flood Insurance</name>
+    <style>formalLetter</style>
+    <subject>Master Policy Flood Insurance</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

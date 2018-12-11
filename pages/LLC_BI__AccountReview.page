@@ -1,0 +1,46 @@
+<apex:page showHeader="false" sideBar="false" standardController="Account" extensions="LLC_BI.AccountReviewController">
+
+	<c:Includes rendered="{!$CurrentPage.parameters.app == null}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.5.7/angular.min.js')}"/>
+	<nFORCE:ncDataProvidersIncludes />
+	<nFORCE:ncUIIncludes />
+	<nFORCE:ncTreeGridIncludes />
+	<c:ncRelationshipCreditActionsConfiguration accountId="{!accountId}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncPubsub, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncPubsub, 'services/PubsubService.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncRelationshipCreditActions, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncRelationshipCreditActions, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__ncRelationshipCreditActions, 'controllers/RelationshipCreditActionsAppController.js')}" />
+
+	<apex:sectionHeader title="{!$Label.llc_bi__package_renewal_action}" subtitle="{!account.Name}"/>
+
+	<div class="slds">
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div id="ncRelationshipCreditActions"
+							ng-controller="RelationshipCreditActionsAppController">
+							<tree-grid
+								template-url="{!$Page.ncTreeGridHtml}"
+								perform-actions-button-label="{!JSENCODE($Label.Package_Credit_Perform_Actions)}"
+								no-records-found-label="{!JSENCODE($Label.Package_Credit_No_Records_Found)}"
+								icon-collapsed="{!URLFOR($Resource.nForce__SLDS0102, 'assets/icons/utility/chevronright_60.png')}"
+								icon-expanded="{!URLFOR($Resource.nForce__SLDS0102, 'assets/icons/utility/chevrondown_60.png')}"
+								get-tree-data-ra="{!$RemoteAction.AccountReviewController.getTreeGridData}"
+								perform-tree-action-ra="{!$RemoteAction.AccountReviewController.performTreeGridAction}"
+								context-id="{{config.accountId}}"
+								max-depth="4"
+								perform-actions-button-has-alert=""
+								alert-labels=""
+								secondary-button="cancelButton" />
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

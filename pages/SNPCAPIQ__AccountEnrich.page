@@ -1,0 +1,304 @@
+<apex:page standardController="Account" extensions="SNPCAPIQ.AccountEnrichController" action="{!pageRedirect}" title="S&P Capital IQ - Enrich Account">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="snp">
+        <apex:pageMessages />
+
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right"/>
+                <div class="snp-logo">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SNPCAPIQ__SnP_resources, 'img/snp-logo35.png')}"/>
+                </div>
+                <h2><apex:outputText value="{!existAccount.Name}"/></h2>
+            </div>
+            <div class="snp-panel-title">Select Salesforce fields to enrich from S&amp;P Capital IQ</div>
+
+			<apex:outputPanel layout="none" rendered="{!if(accountModel!=null, true, false)}">
+	            <apex:form >
+	            <div class="snp-container15 clearfix">
+	                <table cellpadding="0" cellspacing="0" class="snp-table">
+	                    <colgroup span="6">
+	                        <col width="25%"></col>
+	                        <col width="30px"></col>
+	                        <col width="30%"></col>
+	                        <col width="30px"></col>
+	                        <col width="30%"></col>
+	                    </colgroup>
+	
+	                    <thead>
+	                        <tr class="snp-table-header">
+	                            <th class="snp-table-header">&nbsp;</th>
+	                            <th class="snp-table-header">
+	                                <input type="radio" class="id-radioSF" name="selectAll" value="SF" checked="checked" />
+	                            </th>
+	                            <th class="snp-table-header">Salesforce</th>
+	                            <th class="snp-table-header">
+	                                <input type="radio" class="id-radioSnP" name="selectAll" value="S&P" />
+	                            </th>
+	                            <th class="snp-table-header">S&amp;P Capital IQ</th>
+	                            <th class="snp-table-header">&nbsp;</th>
+	                        </tr>
+	                    </thead>
+	
+	                    <tbody>
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Company Name</div>
+	                                <apex:inputHidden value="{!existAccount.Name}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Name == accountModel.companyName,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="Name" value="{!existAccount.Name}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!existAccount.Name}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Name == accountModel.companyName,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="Name" value="{!accountModel.companyName}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!accountModel.companyName}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Billing Address</div>
+	                                <apex:inputHidden value="{!sf_ws_BillingAddress}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TRIM(sfBillingAddress) == TRIM(wsBillingAddress),false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="address" value="0" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!TRIM(sfBillingAddress)}" escape="false"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TRIM(sfBillingAddress) == TRIM(wsBillingAddress),false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="address" value="1" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!TRIM(wsBillingAddress)}" escape="false"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	                        
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Primary Industry</div>
+	                                <apex:inputHidden value="{!existAccount.SNPCAPIQ__Industry__c}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.SNPCAPIQ__Industry__c == accountModel.industry,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="industry" value="{!existAccount.SNPCAPIQ__Industry__c}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!existAccount.SNPCAPIQ__Industry__c}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.SNPCAPIQ__Industry__c == accountModel.industry,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="industry" value="{!accountModel.industry}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!accountModel.industry}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Website</div>
+	                                <apex:inputHidden value="{!existAccount.Website}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Website == accountModel.webpage,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="website" value="{!existAccount.Website}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <div class="clip" title="{!existAccount.Website}"><apex:outputText value="{!existAccount.Website}"/></div>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Website == accountModel.webpage,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="website" value="{!accountModel.webpage}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <div class="clip" title="{!accountModel.webpage}"><apex:outputText value="{!accountModel.webpage}"/></div>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Number Of Employees</div>
+	                                <apex:inputHidden value="{!sf_ws_NumberOfEmployees}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TEXT(existAccount.numberOfEmployees) == accountModel.numberOfEmployees,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="numeployees" value="0" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!sfNumberOfEmployees}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TEXT(existAccount.numberOfEmployees) == accountModel.numberOfEmployees,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="numeployees" value="1" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!wsNumberOfEmployees}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Description</div>
+	                                <apex:inputHidden value="{!existAccount.Description}" />
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TRIM(existAccount.Description) == TRIM(accountModel.businessDescription),false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="description" value="{!TRIM(existAccount.Description)}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!TRIM(existAccount.Description)}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(TRIM(existAccount.Description) == TRIM(accountModel.businessDescription),false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="description" value="{!TRIM(accountModel.businessDescription)}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!TRIM(accountModel.businessDescription)}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Fax</div>
+	                                <apex:inputHidden value="{!existAccount.Fax}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Fax == accountModel.mainFaxNumber,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="fax" value="{!existAccount.Fax}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!existAccount.Fax}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Fax == accountModel.mainFaxNumber,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="fax" value="{!accountModel.mainFaxNumber}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!accountModel.mainFaxNumber}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Phone</div>
+	                                <apex:inputHidden value="{!existAccount.Phone}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Phone == accountModel.mainPhoneNumber,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="phone" value="{!existAccount.Phone}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!existAccount.Phone}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.Phone == accountModel.mainPhoneNumber,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="phone" value="{!accountModel.mainPhoneNumber}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!accountModel.mainPhoneNumber}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	
+	                        <tr class="snp-table-row">
+	                            <td class="snp-table-column">
+	                                <div class="snp-enrich-rowtitle">Ticker Symbol</div>
+	                                <apex:inputHidden value="{!existAccount.TickerSymbol}" /> 
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.TickerSymbol == accountModel.tickerSymbol,false,true)}" >
+	                                    <input type="radio" class="id-radioSF" name="tickerSymbol" value="{!existAccount.TickerSymbol}" checked="checked" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!existAccount.TickerSymbol}"/>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputpanel layout="none" rendered="{!if(existAccount.TickerSymbol == accountModel.tickerSymbol,false,true)}" >
+	                                    <input type="radio" class="id-radioSnP" name="tickerSymbol" value="{!accountModel.tickerSymbol}" />
+	                                </apex:outputPanel>
+	                            </td>
+	                            <td class="snp-table-column">
+	                                <apex:outputText value="{!accountModel.tickerSymbol}"/>
+	                            </td>
+	                            <td class="snp-table-column">&nbsp;</td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	
+	                <div class="snp-container15 center">
+	                    <apex:commandLink action="{!enrich}" value="Enrich from S&P Capital IQ" styleClass="snp-btn snp-btn-large"/>
+	                    <a href="/{!Id}" class="a-gray">Cancel</a>
+	                </div>
+	
+	                <script>
+	                    $$(function(){
+	                        var radioHead = $$('.snp-table thead input:radio');
+	                        var radioBody = $$('.snp-table tbody input:radio');
+	
+	                        if (radioBody.size() > 0) {
+	                            radioHead.click(function(){
+	                                var typeClass = $$(this).attr('class');
+	                                radioBody.filter('.'+ typeClass).prop('checked', true).change();
+	                            });
+	
+	                            radioBody.change(function(){
+	                                var typeClass = $$(this).attr('class');
+	                                if( radioBody.filter('.'+ typeClass +':checked').size() == radioBody.filter('.'+ typeClass).size() ) radioHead.filter('.'+ typeClass).prop('checked', true);
+	
+	                                // radio hack
+	                                $$(this).closest('tr').find('input:hidden').val( $$(this).val() );
+	                            });
+	                        } else {
+	                            radioHead.hide();
+	                        }
+	                    });
+	                </script>
+	
+	
+	                <c:DebugInfo controllerInstance="{!baseControllerInstanse}" />
+	            </div>
+	            </apex:form>
+            </apex:outputPanel>
+            
+            <apex:outputPanel layout="block"  rendered="{!if(accountModel== null, true, false)}" styleClass="snp-no-data">Account not found in S&amp;P  Capital IQ</apex:outputPanel>
+            
+        </div>
+        
+    </div>
+</apex:page>

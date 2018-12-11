@@ -1,0 +1,114 @@
+<apex:page controller="CustomFinancialAccountLookupController"
+           title="Search" 
+           showHeader="false" 
+           sideBar="false" 
+           tabStyle="Case" 
+           id="pg"
+           lightningStylesheets="true"> 
+            <script>
+                function myJavascriptFunc()   { 
+                    CallApexMethod() ;
+                }
+            </script>
+    <apex:form id="formId">
+ 
+        <apex:actionFunction name="CallApexMethod" action="{!dateSelected}"  reRender="topPanel"/>
+
+        <apex:actionRegion >  
+            <apex:outputPanel id="topPanel" layout="inline" >
+              
+
+
+                <!-- style="font-weight:Bold;padding-right:10px;" rendered="{!dateSelect}" -->
+                <apex:outputLabel value="Search"  for="txtSearch"/>
+                <apex:inputText id="txtSearch" value="{!searchString}" />
+                <apex:selectList size="1" id="pickerFilterDate"   value="{!sign}" rendered="{!dateSelect}" >
+                    <apex:selectOptions value="{!Filters}"/>
+                </apex:selectList>  
+                
+                <apex:selectList size="1" id="filterList"  value="{!selectedColumn}" onchange="myJavascriptFunc();">
+                    <apex:selectOptions value="{!items}" />
+                    
+                </apex:selectList>
+                
+ 				 
+                
+                <span style="padding-left:5px"><apex:commandButton id="btnGo" value="Go" action="{!Search}" rerender="searchResults"></apex:commandButton></span>
+                <br/>
+                <apex:outputLabel value="Date format : YYYY-MM-DD"  rendered="{!dateSelect}" />
+            </apex:outputPanel>
+            <!-- style="margin:10px;height:350px;overflow-Y:auto;" -->
+            <apex:outputPanel id="pnlSearchResults" layout="block">
+                <apex:pageBlock id="searchResults"> 
+                    <apex:pageBlockTable value="{!results}" var="a" id="tblResults">
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Name</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Name}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Account Number</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Account_Number__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Product Type</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Product_Type__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Current Balance</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">${!a.Current_Balance__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Status</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Status__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >CIF</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.CIF__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Ownership</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Ownership__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Open Date</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Open_Date__c}</apex:outputLink>                       
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">
+                                <apex:outputPanel >Maturity Date</apex:outputPanel>
+                            </apex:facet>
+                            <apex:outputLink value="javascript:top.window.opener.lookupPick2('{!FormTag}','{!Lknm}_lkid','{!Lknm}','{!a.Id}','{!a.Name}', false)" rendered="{!NOT(ISNULL(a.Id))}">{!a.Maturity_Date__c}</apex:outputLink>                       
+                        </apex:column>
+
+                    </apex:pageBlockTable>
+                     
+                    <apex:outputLabel >Total no of recs:{!tot}</apex:outputLabel>
+                   
+                    <div align="center">
+                        <apex:commandButton value="First Page" action="{!Firstbtn}" disabled="{!prv}" reRender="formId"/>
+                        <apex:commandButton value="PreviousPage" action="{!prvbtn}" disabled="{!prv}" reRender="formId"/>
+                        <apex:commandButton value="NextPage" action="{!Nxtbtn}" disabled="{!nxt}"  reRender="formId"/>
+                        <apex:commandButton value="LastPage" action="{!lstbtn}" disabled="{!nxt}" reRender="formId"/>
+                    </div>
+                </apex:pageBlock>                        
+                
+            </apex:outputPanel>
+        </apex:actionRegion>
+    </apex:form>
+</apex:page>

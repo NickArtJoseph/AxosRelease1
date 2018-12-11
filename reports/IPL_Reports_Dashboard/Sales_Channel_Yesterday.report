@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>UserServicePresence$ServicePresenceStatus</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusStartDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusEndDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>UserServicePresence$StatusDuration</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>UserServicePresence$User</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Aaron Shapiro,Andrew Williams,Brennan Weinstein,Connor Galvin,Liza Krylova,Michael Cheung</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$StatusDuration</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$ServicePresenceStatus</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Available_for_Leads</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>UserServicePresence$User</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sales Channel-Yesterday</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Omni_Channel_User_Presence__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>UserServicePresence$StatusStartDate</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

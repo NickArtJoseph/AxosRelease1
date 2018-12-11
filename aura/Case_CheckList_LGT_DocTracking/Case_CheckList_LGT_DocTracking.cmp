@@ -1,0 +1,14 @@
+<aura:component controller="CaseCheckListController" implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="record" type="Case"/>
+    <aura:attribute name="simpleRecord" type="Case" default="{ 'sobjectType': 'Case' }" />
+    <aura:attribute name="recordError" type="String"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+    
+    
+    <force:inputField value="{!v.simpleRecord.Document_Tracking__c}"/>
+    <div class="slds-m-top_medium slds-text-align_center">
+        <lightning:button variant="neutral" iconName="utility:save" label="Submit" onclick="{!c.handleSaveRecord }" />
+    </div>
+</aura:component>

@@ -1,0 +1,8 @@
+The following opportunity has been terminated: 
+
+Account Name: {!Opportunity.Account}
+Opportunity Name: {!Opportunity.Name}
+Reason Lost: {!Opportunity.Reason_Lost__c}
+Total Advances: {!Opportunity.Total_Advances__c}
+
+{!Opportunity.Link}

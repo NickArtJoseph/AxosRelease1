@@ -1,0 +1,11 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br></span><font face="Arial, sans-serif" style=""><br>We apologize for any inconvenience. Although the card is
+issued by our Bank, we do not house any customer accounts so there is no way we
+can access any account information. Please use the following contact
+information to direct your inquiry;<br><b><br>Skylight<br></b>Phone:<b style=""> 1-800-686-3363<br></b>Email:<b style=""> contact@skylight.net<br></b><br>Alternatively, if you are unable to make contact with a live
+representative, please call<b style=""> 1-877-541-2634.</b> A Direct Banker will be happy to
+transfer you to an actual representative.</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><font style="font-size: 12pt;">We appreciate your business and commit to providing superior Banking products, support and services.<br></font></p><p class="MsoNormal" style=""><font face="Arial, sans-serif" style=""><br><font face="arial" style="color: rgb(0, 0, 0);"><span style="font-size: 12pt;">Best Regards,</span></font><br>{!User.FirstName}<br><font style="font-family: arial; font-size: 12pt;">Axos Bank</font><font style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" color="#ff0000">&nbsp;</font><font face="arial" style="color: rgb(0, 0, 0);"><span style="font-size: 12pt;">Customer Service</span></font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><span style="font-family: Arial, sans-serif; font-size: 9pt; background-color: white;"><br></span></p><font face="arial" style="color: rgb(0, 0, 0); font-size: 12pt;"><o:p></o:p></font>]]></td>
+</tr>
+</table>

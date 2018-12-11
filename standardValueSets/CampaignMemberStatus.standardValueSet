@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Attempting Contact</fullName>
+        <default>false</default>
+        <label>Attempting Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bad Contact Information</fullName>
+        <default>false</default>
+        <label>Bad Contact Information</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bad Phone Number</fullName>
+        <default>false</default>
+        <label>Bad Phone Number</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bounced</fullName>
+        <default>false</default>
+        <label>Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call 1 - NA</fullName>
+        <default>false</default>
+        <label>Call 1 - NA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call 2 - NA Left Vm</fullName>
+        <default>false</default>
+        <label>Call 2 - NA Left Vm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call 3 - Connect With Customer</fullName>
+        <default>false</default>
+        <label>Call 3 - Connect With Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call Back</fullName>
+        <default>false</default>
+        <label>Call Back</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelling App</fullName>
+        <default>false</default>
+        <label>Cancelling App</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Closing Account</fullName>
+        <default>false</default>
+        <label>Closing Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commit to Fund</fullName>
+        <default>false</default>
+        <label>Commit to Fund</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commit to Send Signature Card</fullName>
+        <default>false</default>
+        <label>Commit to Send Signature Card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commit to Submit</fullName>
+        <default>false</default>
+        <label>Commit to Submit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Delivered</fullName>
+        <default>false</default>
+        <label>Delivered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Did Not Opened</fullName>
+        <default>false</default>
+        <label>Did Not Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Clicked</fullName>
+        <default>false</default>
+        <label>Email Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Opened</fullName>
+        <default>false</default>
+        <label>Email Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Sent</fullName>
+        <default>false</default>
+        <label>Email Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expired</fullName>
+        <default>false</default>
+        <label>Expired</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard Bounce</fullName>
+        <default>false</default>
+        <label>Hard Bounce</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hibernate</fullName>
+        <default>false</default>
+        <label>Hibernate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hibernating</fullName>
+        <default>false</default>
+        <label>Hibernating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Campaign</fullName>
+        <default>false</default>
+        <label>In Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Initiating</fullName>
+        <default>false</default>
+        <label>Initiating</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PeterTest</fullName>
+        <default>false</default>
+        <label>PeterTest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Planned</fullName>
+        <default>false</default>
+        <label>Planned</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded-Call</fullName>
+        <default>false</default>
+        <label>Responded-Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded-Email</fullName>
+        <default>false</default>
+        <label>Responded-Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded-Not Interested</fullName>
+        <default>false</default>
+        <label>Responded-Not Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention Accepted</fullName>
+        <default>false</default>
+        <label>Retention Accepted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention Declined</fullName>
+        <default>false</default>
+        <label>Retention Declined</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed</fullName>
+        <default>false</default>
+        <label>Unsubscribed</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Edit rights for Account Certification, Certification Contact, and Quarterly Certification objects</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>WHL - Account Certification - Edit</label>
+</PermissionSet>

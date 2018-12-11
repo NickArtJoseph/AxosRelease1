@@ -1,0 +1,154 @@
+<apex:page showHeader="false" applyHtmlTag="false" applyBodyTag="false" docType="HTML-5.0" standardStylesheets="false">
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Consumer Deposits (NO PORTAL AVAILABLE - QA) Pre-Chat Form</title>
+    </head>
+
+    <body>
+        <!-- BRANDS: UFB, BofiUSA -->
+
+        <p>To help us serve you better, please provide some information before we begin your chat.</p>
+
+        <!-- ********** ADD SUBJECT OPTIONS DINAMICALLY ********** -->
+        <script type="text/javascript">
+            (function() {
+                // Set available options based on if it is an existing customer or not
+                function setSubjectOptions() {
+                    var isExistingCustomer = document.getElementById('radio-is-customer-yes').checked;
+                    var isNotExistingCustomer = document.getElementById('radio-is-customer-no').checked;
+                    var chatSubject = document.getElementById('chat-subject');
+                    var optionsList = [];
+
+                    // Clear current options
+                    while (chatSubject.firstChild) {
+                        chatSubject.removeChild(chatSubject.firstChild);
+                    }
+
+                    if (isExistingCustomer === true) {
+                        optionsList = [
+                            { label: '--- Select One ---' , value: '' },
+                            { label: 'Bill Pay', value: 'Bill Pay' },
+                            { label: 'Debit card', value: 'Debit card' },
+                            { label: 'Deposit inquiry', value: 'Deposit inquiry' },
+                            { label: 'Dispute a transaction', value: 'Dispute a transaction' },
+                            { label: 'IRA', value: 'IRA' },
+                            { label: 'Wire', value: 'Wire' },
+                            { label: 'Other', value: 'Other' }
+                        ];
+                    } else if (isNotExistingCustomer === true) {
+                        optionsList = [
+                            { label: '--- Select One ---', value: '' },
+                            { label: 'Deposit Account', value: 'Deposit Account' },
+                            { label: 'Business Account', value: 'Business Account' },
+                            { label: 'Mortgage Loan', value: 'Mortgage Loan' },
+                            { label: 'Personal Loan', value: 'Personal Loan' },
+                            { label: 'Other', value: 'Other' }
+                        ];
+                    }
+
+                    // Append options to the chatSubject element
+                    for (var i = 0; i < optionsList.length; i++) {
+                        var option = document.createElement('option');
+                        option.setAttribute('value', optionsList[i].value);
+                        option.appendChild(document.createTextNode(optionsList[i].label));
+                        chatSubject.appendChild(option);
+                    }
+                }
+
+                // Handle page load
+                function handlePageLoad() {
+                    var customerOptions = document.getElementsByName('is-existing-customer');
+                    for (var i = customerOptions.length - 1; i >= 0; i--) {
+                        customerOptions[i].addEventListener('change', setSubjectOptions, false);
+                    }
+                }
+                window.addEventListener('load', handlePageLoad, false);
+            })();
+        </script>
+
+        <div id="existing-customer-options">
+            <fieldset>
+                <legend>Are you an existing customer?</legend>
+                <label>
+                    <input id="radio-is-customer-yes" type="radio" name="is-existing-customer" /> Yes
+                </label><br />
+                <label>
+                    <input id="radio-is-customer-no" type="radio" name="is-existing-customer" /> No
+                </label>
+            </fieldset>
+        </div>
+        <!-- ********** ADD SUBJECT OPTIONS DINAMICALLY ********** -->
+
+        <!-- ********** THIS CODE IS REQUIRED ********** -->
+        <!-- TODO: 2. Validate inputs on form submit -->
+        <form method="post" id="prechat-form">
+            <div class="form-input">
+                <label>How may I assist you today?*</label>
+                <select id="chat-subject" name="liveagent.prechat:ChatInquiryType">
+                    <option value="">--- Select One ---</option>
+                    <!-- TODO: 1. Set available options based on if it is an existing customer or not (sample provided) -->
+                </select>
+            </div>
+
+            <div class="form-input">
+                <label for="firstName">First Name*</label>
+                <input type="text" name="liveagent.prechat:ContactFirstName" id="firstName" />
+            </div>
+
+            <div class="form-input">
+                <label for="lastName">Last Name*</label>
+                <input type="text" name="liveagent.prechat:ContactLastName" id="lastName" />
+            </div>
+
+            <div class="form-input">
+                <label for="email">Email*</label>
+                <input type="text" name="liveagent.prechat:ContactEmail" id="email" />
+            </div>
+
+            <div class="form-input">
+                <label for="phone">Phone*</label>
+                <input type="text" name="liveagent.prechat:ContactPhone" id="phone" />
+            </div>
+
+            <!-- Used to set the visitor's name for the agent in the Console -->
+            <!-- TODO: 3. Set as firstName + lastName before submitting form -->
+            <input type="hidden" name="liveagent.prechat.name" id="prechat_field_name" />
+            
+            <!-- Save Inquiry type to Chat Transcript -->
+            <input type="hidden" name="liveagent.prechat.save:ChatInquiryType" value="Chat_Inquiry_Type__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactFirstName" value="ChatFirstName__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactLastName" value="ChatLastName__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactEmail" value="ChatEmail__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactPhone" value="ChatPhone__c" />
+
+            <!-- map: Use the data from prechat form to map it to the Salesforce record's fields -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map:Lead"    value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+
+            <!-- Contact Search -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact"       value="LastName,true;Email,true;Phone,true" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="LastName,true;Email,true;Phone,true" />
+
+            <!-- Lead Search -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Lead"       value="LastName,true;Email,true;Phone,true" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Lead" value="LastName,true;Email,true;Phone,true" />
+
+            <!-- Save Contact and/or Lead to Transcript -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Lead" value="LeadId" />
+
+            <div class="form-input">
+                <input type='submit' value='Begin Chat' id='prechat_submit' />
+            </div>
+        </form>
+
+        <script type="text/javascript" src="https://d.la2-c1cs-iad.salesforceliveagent.com/content/g/js/42.0/prechat.js"></script>
+        <script type="text/javascript">
+            // Callback for pre-chat initialization
+            liveagent.details.preChatInit('https://d.la2-c1cs-iad.salesforceliveagent.com/chat', '', 'prechat-form');
+        </script>
+        <!-- ********** THIS CODE IS REQUIRED ********** -->
+    </body>
+</html>
+</apex:page>

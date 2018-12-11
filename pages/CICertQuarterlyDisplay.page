@@ -1,0 +1,3 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false" standardStylesheets="true">
+    <c:CICertificationDisplay OpportunityId="{!Opportunity.Id}" CertificationRecordTypeId="012i0000000yKM4" />
+</apex:page>

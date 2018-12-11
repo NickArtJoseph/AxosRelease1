@@ -1,0 +1,9 @@
+You have a task that is due:
+
+Due By: {!Task.ActivityDate} 
+Subject: {!Task.Subject}
+Status: {!Task.Status}
+Created By: {!Task.CreatedBy}
+
+For more details, click the following link:
+{!Task.Link}

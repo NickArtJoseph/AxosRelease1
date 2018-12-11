@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__DateSent__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__EmailName__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Subject__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Number_Delivered__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberofUniqueOpens__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberofUniqueClicks__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Eren Maral</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Eren Maral Email Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__SendDefinition__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_NAME</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>et4ae5__SendDefinition__c.et4ae5__DateSent__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

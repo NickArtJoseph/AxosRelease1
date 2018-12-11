@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>WLD certification items outstanding - 2 weeks</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>WLD Certification Items Outstanding - 2 Weeks</name>
+    <style>none</style>
+    <subject>WLD Quarterly Certification Items Outstanding</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

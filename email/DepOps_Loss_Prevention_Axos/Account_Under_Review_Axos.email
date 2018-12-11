@@ -1,0 +1,32 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-family: arial; font-size: 12pt;"><span style="color: black; line-height: 107%; font-family: &quot;Arial&quot;,sans-serif; font-size: 11pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">As part of our review, we need to validate your
+identity as well as your physical and mailing addresses. Please note your
+account access is blocked for the duration of our review.<br>
+<br>
+For ID verification, please attach a clear, legible&nbsp;photo of your current,
+unexpired driver's license or state ID and reply directly to this email.<br>
+<br>
+For address verification, please&nbsp;attach a photo of a current, not past
+due, utility bill you have received via USPS and reply directly to this email.
+Online statements will not be accepted. Please be sure the photo shows your
+name and service address printed on the document. <br>
+<br>
+If your mailing address is different from your physical address, the utility
+bill you submit should have your name, service address, and mailing address all
+printed on the document.<br>
+<br>
+If you would like further assistance, simply reply to this email or call us at (888) 502-2967.<br style="mso-special-character: line-break;">
+<br style="mso-special-character: line-break;">
+</span>Thank you for your business.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank™&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

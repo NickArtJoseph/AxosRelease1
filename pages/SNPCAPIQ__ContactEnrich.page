@@ -1,0 +1,330 @@
+<apex:page standardController="Contact" extensions="SNPCAPIQ.ContactEnrichController" title="S&P Capital IQ - Enrich Contact">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="snp">
+        <apex:pageMessages />
+
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right"/>
+                <div class="snp-logo">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SNPCAPIQ__SnP_resources, 'img/snp-logo35.png')}"/>
+                </div>
+                <h2><apex:outputText value="{!existContact.Name}"/></h2>
+            </div>
+            <div class="snp-panel-title">Select Salesforce fields to enrich from S&amp;P Capital IQ</div>
+            
+            <apex:outputPanel layout="none" rendered="{!if(contactModel!=null, true, false)}">
+                <apex:form >
+                <div class="snp-container15 clearfix">
+                    <table cellpadding="0" cellspacing="0" class="snp-table">
+                        <colgroup span="6">
+                            <col width="25%"></col>
+                            <col width="30px"></col>
+                            <col width="30%"></col>
+                            <col width="30px"></col>
+                            <col width="30%"></col>
+                        </colgroup>
+    
+                        <thead>
+                            <tr class="snp-table-header">
+                                <th class="snp-table-header">&nbsp;</th>
+                                <th class="snp-table-header">
+                                    <input type="radio" class="id-radioSF" name="selectAll" value="SF" checked="checked" />
+                                </th>
+                                <th class="snp-table-header">Salesforce</th>
+                                <th class="snp-table-header">
+                                    <input type="radio" class="id-radioSnP" name="selectAll" value="S&P" />
+                                </th>
+                                <th class="snp-table-header">S&amp;P Capital IQ</th>
+                                <th class="snp-table-header">&nbsp;</th>
+                            </tr>
+                        </thead>
+    
+                        <tbody>
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">First Name</div>
+                                    <apex:inputHidden value="{!existContact.firstname}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.firstname== TRIM(contactModel.firstname + ' ' + contactModel.middlename), false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="firstname" value="{!existContact.firstname}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.firstname}"/>                        
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.firstname== TRIM(contactModel.firstname + ' ' + contactModel.middlename), false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="firstname" value="{!TRIM(contactModel.firstname + ' ' + contactModel.middlename)}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!TRIM(contactModel.firstname + ' ' + contactModel.middlename)}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Last Name</div>
+                                    <apex:inputHidden value="{!existContact.lastname}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.lastname== contactModel.lastname, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="lastname" value="{!existContact.lastname}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.lastname}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.lastname== contactModel.lastname, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="lastname" value="{!contactModel.lastname}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.lastname}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Title</div>
+                                    <apex:inputHidden value="{!existContact.title}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.title== contactModel.title, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="title" value="{!existContact.title}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.title}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.title== contactModel.title, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="title" value="{!contactModel.title}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.title}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Email</div>
+                                    <apex:inputHidden value="{!existContact.email}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.email == contactModel.email , false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="email" value="{!existContact.email}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.email}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.email == contactModel.email , false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="email" value="{!contactModel.email}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.email}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Country</div>
+                                    <apex:inputHidden value="{!existContact.Mailingcountry}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingcountry== contactModel.country, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="country" value="{!existContact.Mailingcountry}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.Mailingcountry}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingcountry== contactModel.country, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="country" value="{!contactModel.country}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.country}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">State</div>
+                                    <apex:inputHidden value="{!existContact.Mailingstate}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingstate== contactModel.state, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="state" value="{!existContact.Mailingstate}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.Mailingstate}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingstate== contactModel.state, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="state" value="{!contactModel.state}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.state}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">City</div>
+                                    <apex:inputHidden value="{!existContact.Mailingcity}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingcity== contactModel.city, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="city" value="{!existContact.Mailingcity}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.Mailingcity}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Mailingcity== contactModel.city, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="city" value="{!contactModel.city}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.city}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Office Address</div>
+                                    <apex:inputHidden value="{!existContact.MailingStreet}" />
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.MailingStreet== contactModel.officeAddress , false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="address" value="{!existContact.MailingStreet}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.MailingStreet}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.MailingStreet== contactModel.officeAddress , false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="address" value="{!contactModel.officeAddress }" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.officeAddress }"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Phone</div>
+                                    <apex:inputHidden value="{!existContact.Phone}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Phone== contactModel.mainPhoneNumber, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="Phone" value="{!existContact.Phone}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.Phone}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.Phone== contactModel.mainPhoneNumber, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="Phone" value="{!contactModel.mainPhoneNumber}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.mainPhoneNumber}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+    
+                            <tr class="snp-table-row">
+                                <td class="snp-table-column">
+                                    <div class="snp-enrich-rowtitle">Description</div>
+                                    <apex:inputHidden value="{!existContact.description}" /> 
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.description== contactModel.description, false,true)}" >
+                                        <input type="radio" class="id-radioSF" name="description" value="{!existContact.description}" checked="checked" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!existContact.description}"/>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputpanel layout="none" rendered="{!if(existContact.description== contactModel.description, false,true)}" >
+                                        <input type="radio" class="id-radioSnP" name="description" value="{!contactModel.description}" />
+                                    </apex:outputPanel>
+                                </td>
+                                <td class="snp-table-column">
+                                    <apex:outputText value="{!contactModel.description}"/>
+                                </td>
+                                <td class="snp-table-column">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <div class="snp-container15 center">
+                        <apex:commandLink action="{!enrich}" value="Enrich from S&P Capital IQ" styleClass="snp-btn snp-btn-large"/>
+                        <a href="/{!Id}" class="a-gray">Cancel</a>
+                    </div>
+    
+                    <script>
+                        $$(function(){
+                            var radioHead = $$('.snp-table thead input:radio');
+                            var radioBody = $$('.snp-table tbody input:radio');
+    
+                            if (radioBody.size() > 0) {
+                                radioHead.click(function(){
+                                    var typeClass = $$(this).attr('class');
+                                    radioBody.filter('.'+ typeClass).prop('checked', true).change();
+                                });
+    
+                                radioBody.change(function(){
+                                    var typeClass = $$(this).attr('class');
+                                    if( radioBody.filter('.'+ typeClass +':checked').size() == radioBody.filter('.'+ typeClass).size() ) radioHead.filter('.'+ typeClass).prop('checked', true);
+    
+                                    // radio hack
+                                    $$(this).closest('tr').find('input:hidden').val( $$(this).val() );
+                                });
+                            } else {
+                                radioHead.hide();
+                            }
+                        });
+                    </script>
+    
+    
+                    <c:DebugInfo controllerInstance="{!baseControllerInstanse}" />
+                </div>
+                </apex:form>
+            </apex:outputPanel>
+            
+            <apex:outputPanel layout="block"  rendered="{!if(contactModel== null, true, false)}" styleClass="snp-no-data">Contact not found in S&amp;P  Capital IQ</apex:outputPanel>
+
+
+            
+        </div>
+        
+    </div>
+</apex:page>

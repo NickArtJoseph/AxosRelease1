@@ -1,0 +1,66 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <!--use boolean attribute for Store true/false value,
+    make default to "false" so modal box are not display on the load of component. 
+    --> 
+    <aura:attribute name="isOpen" type="boolean" default="true"/>
+    
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.openModel}"/><!-- Open Modal box automatically -->
+    
+    <force:recordData aura:id="record"
+                      fields="Broker_Name_SFDC2__c"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields ="{!v.simpleRecord}"
+                      />
+    
+    <!--Use "slds-m-around_xx-large" class to add standard X-Large padding to the component--> 
+    <div class="slds-m-around_xx-large">
+        
+        <!--<lightning:button variant="brand"
+                          label="External Referral Opportunity"
+                          title="External Referral Opportunity"
+                          onclick="{! c.openModel }" />-->
+        
+        <aura:if isTrue="{!v.isOpen}">
+            <div style="height: 300px;">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <!-- ###### MODAL BOX HEADER Start ######-->
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeModel }"
+                                                  alternativeText="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"
+                                                  size="large"/>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">External Referral Opportunity</h2>
+                            <p class="slds-m-top_x-small">Your Broker Referral lead is processing. A new Account, Contact, and Opportunity is being created. All aforementioned records will be tied to the originating Broker Contact (and Account)</p>
+                        </header>
+                        <!--###### MODAL BOX BODY Part Start######-->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <c:LeadConversion_LGT_SFDC2 recordId="{!v.recordId}" />
+                            <p><lightning:formattedUrl label="Back to Broker Contact" onclick="{!c.createRecord}" /></p>
+                        </div>
+                        <!--###### MODAL BOX FOOTER Part Start ######-->
+                        <footer class="slds-modal__footer slds-modal__footer_directional">
+                            <lightning:button variant="Neutral" 
+                                              label="Back to Broker Contact"
+                                              title="Back to Broker Contact"
+                                              onclick="{! c.createRecord }"/>
+                            <lightning:button variant="brand" 
+                                              label="Close"
+                                              title="Close"
+                                              onclick="{! c.closeModel }"/>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+            <div class="slds-backdrop slds-backdrop_open"></div>            
+        </aura:if>
+    </div>
+</aura:component>

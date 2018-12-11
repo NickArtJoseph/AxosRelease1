@@ -1,0 +1,154 @@
+<apex:component controller="USPSAddressComp_Controller" >
+
+    <apex:attribute name="AddressObject" type="Address__c" assignTo="{!CurrentAddress}" description="The address object we are going to validate the address for" />   
+        
+    <apex:attribute name="CheckFullZip" assignTo="{!CompareFullZip}" type="Boolean" description="Set to true to confirm Zip+4, when false only 5 digit Zip is compared." />
+        
+    <apex:attribute required="True" name="USPS_USERID" assignTo="{!USPS_ID}" type="String" description="This is the USER ID for the API Call. Set this after all other attributes."/>       
+
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/jquery-ui-1.11.3/external/jquery/jquery.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUI, '/jquery-ui-1.11.3/jquery-ui.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jquery_blockui)}" />
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryUI, '/jquery-ui-1.11.3/jquery-ui.css')}" />
+	<style>
+		.USPS_ERRORS_Label {
+			color: red;
+		}
+		#dialog {
+			display: none;
+		}
+		.no-close .ui-dialog-titlebar-close {
+			display: none;
+		}
+		
+		.ui-dialog .ui-dialog-content {
+ 		   background: none repeat scroll 0 0 transparent;
+    		border: 0 none;
+    		overflow: auto;
+    		padding: 0.5em 1em;
+    		position: relative;
+    		font-size: 1.3em;
+		}
+	</style>
+    <apex:outputPanel ID="USPSADDRESSINFO" rendered="{!DisplayPopUp}">
+
+        <div id="dialog" title="Address Verification">
+            <apex:form >                                                            
+                <table width="98%">
+                    <tr>
+                        <td>
+                            <span class="InputAddress">
+                                <h2>Original Address:</h2><br/>  
+                                <span class="Address_Label">Address: </span><apex:outputText value="{!CurrentAddress.Address_Line__c}" styleClass="InputAddress_Value"/><br/>
+                                <span class="Address_Label">City: </span><apex:outputText value="{!CurrentAddress.City__c}" styleClass="InputAddress_Value"/><br/>
+                                <span class="Address_Label">State: </span><apex:outputText value="{!CurrentAddress.State__c}" styleClass="InputAddress_Value"/><br/>
+                                <span class="Address_Label">Zip: </span><apex:outputText value="{!CurrentAddress.Zip__c}" styleClass="InputAddress_Value"/> 
+                            </span>                     
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <apex:outputPanel rendered="{!NOT(AddressFromUSPS.USPS_Returned_Error)}">
+                                <span class="OutputAddress">
+                                    <h2>USPS Address:</h2><br/>
+                                    <span class="Address_Label">Address: </span><apex:outputText value="{!AddressFromUSPS.Address2}"/><br/>
+                                    <span class="Address_Label">City: </span><apex:outputText value="{!AddressFromUSPS.City}"/><br/>
+                                    <span class="Address_Label">State: </span><apex:outputText value="{!AddressFromUSPS.State}"/><br/>
+                                    <span class="Address_Label">Zip: </span><apex:outputText value="{!AddressFromUSPS.Zip5}"/>
+                                    <apex:outputText value="-{!AddressFromUSPS.Zip4}"/>
+                                </span>
+                            </apex:outputPanel>                         
+                        </td>                                           
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <apex:outputPanel id="USPS_ERRORS" rendered="{!AddressFromUSPS.USPS_Returned_Error}">
+                               	<hr/>
+                                <div style="width: 200px;">Your address could not be verified.</div>
+                                <span class="USPS_ERRORS_Label">Error Desc:&nbsp;<apex:outputText Value="{!AddressFromUSPS.USPS_ERROR_DESC}"/></span><br/>
+                                <apex:commandButton immediate="true" value="Ok" action="{!Dismiss}" onclick="blockme();" />                                   
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!NOT(AddressFromUSPS.USPS_Returned_Error)}">
+                                <hr/>
+                                According to the USPS, your address doesn't appear to be in the correct format.
+                                <table>
+                                	<tr>
+                                		<td>
+                                			<apex:commandButton immediate="true" value="Use original address" action="{!Dismiss}" onclick="blockme();" />
+                                		</td>
+                                		<td>&nbsp;</td>
+                                		<td>
+                                			<apex:commandButton value="Use corrected address" action="{!UseCorrectedAddress}" onclick="blockme();" rendered="{!AND(NOT(AddressFromUSPS.USPS_Returned_Error),NOT(AddressIsValidated))}"/>                     
+                                		</td>
+                                	</tr>
+                                	<tr>
+                                		<td colspan="3">
+                                			<apex:outputPanel >
+                            				<b>Please Note:</b> After choosing an option above, you will be able to continue. 
+                            				</apex:outputPanel>
+                            			</td>
+                                	</tr>
+                                </table>                     
+                            </apex:outputPanel>
+                                                
+                        </td>
+                    </tr>
+
+                    <!-- tr>
+                        <td>
+                            <apex:commandButton immediate="true" value="Use original address" action="{!Dismiss}" onclick="blockme();" rendered="{!AND(NOT(AddressFromUSPS.USPS_Returned_Error),NOT(AddressIsValidated))}"/>                                                             
+                        </td>
+                        <td></td>
+                        <td>
+                            <apex:commandButton value="Use corrected address" action="{!UseCorrectedAddress}" onclick="blockme();" rendered="{!AND(NOT(AddressFromUSPS.USPS_Returned_Error),NOT(AddressIsValidated))}"/>                     
+                            <apex:commandButton immediate="true" value="Ok" action="{!Dismiss}" onclick="blockme();" rendered="{!AddressFromUSPS.USPS_Returned_Error}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <apex:outputPanel rendered="{!AND(NOT(AddressFromUSPS.USPS_Returned_Error),NOT(AddressIsValidated))}">
+                            <b>Please Note:</b> After choosing an option above, you will be able to continue. 
+                            </apex:outputPanel>
+                        </td>
+                    </tr-->
+                
+                </table>    
+            </apex:form>                                                                                                    
+        </div>
+        
+        <script type="text/javascript"> 
+            $(document).ready(function() {
+              var $ = jQuery.noConflict(); 
+              $("#dialog").dialog({ 
+              		dialogClass: "no-close",
+              		resizable: false, 
+              		width: 'auto', 
+              		modal: true
+              });
+                          
+                function blockme() {
+                    
+                    closeDialog();
+                    $.blockUI();               
+                                
+                }
+                
+                function closeDialog() {
+                    $("#dialog").dialog("close");
+                    $.unblockUI();
+                }
+                
+
+                function PopWindowOut() {
+                    $("#dialog").dialog({ 
+                    	dialogClass: "no-close",
+                    	resizable: false, 
+                    	width: 'auto', 
+                    	modal: true
+                    });
+                }
+             });                                    
+        </script>           
+    </apex:outputPanel>     
+</apex:component>

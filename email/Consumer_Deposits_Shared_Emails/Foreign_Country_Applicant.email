@@ -1,0 +1,13 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>We are currently not able to provide services for applicants
+outside of the United States. We apologize if we are not able to accommodate
+your request at this time.<br><br>You must be at least 18 years of age, and you must be a U.S.
+citizen or U.S. resident alien to open your account with us online. To be able
+to apply for an account you must be able to provide a:<br></font></p><ul style=""><li><font face="Arial, sans-serif">U.S. Social Security number</font></li><li><font face="Arial, sans-serif">A valid form of identification: Driver's license or State
+ID</font></li><li><font face="Arial, sans-serif">Previous US home address (if you have lived at your
+current home address less than two years)</font></li><li><font face="Arial, sans-serif">Credit or debit card or U.S. checking or savings account
+to fund your new account(s)</font></li></ul><p class="MsoNormal" style=""><font face="Arial, sans-serif" style=""><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font color="#ff0000" style="">[INSERT BRAND]&nbsp;</font>Customer Service</font></p><font face="arial" style="font-size: 12pt;"><o:p></o:p></font>]]></td>
+</tr>
+</table>

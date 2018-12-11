@@ -1,0 +1,39 @@
+<apex:page showHeader="false" controller="GLA4SF.GlanceCustomChatController" action="{!initPage}">
+
+<link href="{!URLFOR($Resource.GLA4SF__GlanceCustomChat, 'GlanceCustomChat.css')}" rel="stylesheet"/>
+
+<div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;">
+	<liveAgent:clientchat >
+	    <liveAgent:clientChatSaveButton label="Save Chat" />
+	    <liveAgent:clientChatEndButton label="End Chat" />
+	    <div style="top: 25px; left: 5px; right: 5px; bottom: 5px; position: absolute; z-index: 0;">
+		    <liveAgent:clientChatAlertMessage />
+		    <liveAgent:clientChatStatusMessage />
+		    <table id="waitingMessage" cellpadding="0" cellspacing="0">
+		    	<tr>
+		    		<td>Please wait while you are connected to an available agent.</td>
+		    	</tr>
+		    </table>
+		    <div style="top: 0; right: 0; bottom: 41px; left: 0; padding: 0; position: absolute; word-wrap: break-word; z-index: 0;">
+		    	<liveAgent:clientChatLog />
+		    </div>
+		    <div style="position: absolute; height: auto; right: 0; bottom: 0; left: 0; margin-right: 67px;">
+		        <liveagent:clientChatInput /><liveAgent:clientChatSendButton label="Send"/>
+		    </div>
+	    </div>
+	</liveAgent:clientchat>
+</div>
+
+<script type="text/javascript">
+	var glanceCustomPromptText = '{!JSENCODE(clientChatConfig.promptText)}';
+    var glanceCustomPromptAccept = '{!JSENCODE(clientChatConfig.acceptText)}';
+    var glanceCustomPromptDecline = '{!JSENCODE(clientChatConfig.declineText)}';
+    var glanceCustomTermsText = '{!JSENCODE(clientChatConfig.termsText)}';
+    var glanceCustomTermsLink = '{!JSENCODE(clientChatConfig.termsLink)}';
+</script>
+    
+<script type="text/javascript" src="https://c.la2w2.salesforceliveagent.com/content/g/js/32.0/deployment.js"></script>
+
+<script type="text/javascript" src="{!URLFOR($Resource.GlanceCustomChat, 'GlanceCustomChat.js')}"></script>
+
+</apex:page>

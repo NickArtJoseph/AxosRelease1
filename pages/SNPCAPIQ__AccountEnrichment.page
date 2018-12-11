@@ -1,0 +1,176 @@
+<apex:page standardController="Account" extensions="SNPCAPIQ.AccountEnrichmentController" title="S&P Capital IQ - Enrichment Account">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="snp">
+        <apex:pageMessage severity="Fatal" rendered="!{!organizationIsRegistered}" summary="Attention! " detail="Your organization is not registered in Capital IQ. You cannot search companies and contacts." />
+        <apex:pageMessages />
+
+        <apex:form >
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right"/>
+                <div class="snp-logo">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SNPCAPIQ__SnP_resources, 'img/snp-logo35.png')}"/>
+                </div>
+                <h2><apex:outputText value="{!Name}"/></h2>
+            </div>
+            <div class="snp-panel-title">Select Salesforce account to link to S&amp;P Capital IQ</div>
+
+            <div class="snp-container15 clearfix">
+                <apex:outputPanel rendered="{!if(accountModels.size > 0, false, true)}" styleClass="snp-no-data">
+                    <apex:outputtext value="No matches found" />
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="none" rendered="{!if(accountModels.size > 0, true, false)}">
+
+                    <div class="snp-addtosf left">
+                        <a id="enrichLink" href="#addToSalesForce" class="snp-btn">Link Account</a>
+                        <a id="enrichCancel" href="/{!Id}" class="snp-btn">Cancel</a>
+
+                        <div id="enrichPopup" style="display:none;">
+                            <div class="snp-container30">
+                                <div class="snp-addtosf-message"></div>
+                            </div>
+                            <div class="snp-popup-buttons">
+                                <apex:commandLink action="{!updateToSalesForce}" value="OK" status="pageLoader" rerender="resultTable, paginationTop, paginationBottom" styleClass="snp-btn snp-btn-large"/>
+                                <a href="#cancel" class="a-gray">Cancel</a>
+                            </div>
+                        </div>
+    
+                        <script>
+                            $$(function(){
+                                $$('#enrichLink').popup({
+                                    'content': $$('#enrichPopup'),
+                                    'initCallback' : function(popupObj) {
+                                        popupObj.dialogObj.find('.a-gray, .snp-btn').click(function(){
+                                            popupObj.hidePopup();
+                                            return false;
+                                        });
+                                    },
+                                    'beforeShowCallback' : function(popupObj) {
+                                        if ( !$$('#enrichLink').hasClass('status-disable') ) return true;
+                                    },
+                                    'afterShowCallback' : function(popupObj) {                                        
+                                        var message = 'Enrich this Account?';                                      
+                                        popupObj.dialogObj.find('.snp-addtosf-message').text(message);
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                      
+
+                    <c:Pagination controllerInstance="{!baseControllerInstanse}" rerenderItems="rowCount, resultTable, paginationTop, paginationBottom," id="paginationTop" ></c:Pagination>
+
+                    <apex:variable id="rowCount" var="rowCounter" value="{!baseControllerInstanse.pagination.pagesize*(baseControllerInstanse.pagination.pagenumber-1)}" />
+                    <apex:dataTable id="resultTable" value="{!accountModels}" var="ac" cellpadding="0" cellspacing="0" columnsWidth="35px,30px,25%,30%,140px" styleClass="snp-table" headerClass="snp-table-header" rowClasses="snp-table-row" columnClasses="snp-table-column">
+                        <apex:column headerValue=" ">
+                            <apex:facet name="header"></apex:facet>
+                            <apex:variable var="rowCounter" value="{!rowCounter + 1}" />
+                            {!rowCounter }
+                        </apex:column>
+
+                        <apex:column styleClass="snp-table-center" headerClass="snp-table-center" width="25px">  
+                            <apex:facet name="header">
+                                <script>
+                                    $$(function(){
+                                        var radioList = $$(getId('{!$Component.resultTable}')).find('tbody input:radio');
+
+                                        function toggleAddButton() {
+                                            if (radioList.filter(':checked').size() == 0)
+                                                $$('#enrichLink').addClass('status-disable');
+                                            else
+                                                $$('#enrichLink').removeClass('status-disable');
+                                        }
+
+                                        radioList.click(function(){
+                                            toggleAddButton();
+
+                                            // hack
+                                            $$(getId('{!$Component.resultTable}')).find('tbody input:hidden').val(false);
+                                            $$(this).closest('td').find('input:hidden').val(true);
+                                        });
+
+                                        toggleAddButton();
+                                    });
+                                </script>
+                            </apex:facet>
+
+                            <input type="radio" name="selectedContact" />
+                            <apex:inputHidden value="{!ac.isSelected}" /> 
+                        </apex:column>
+    
+                        <apex:column >
+                            <apex:facet name="header">
+                                Сompany Name
+
+                                <script>
+                                    $$(function() {
+                                        $$(document).tooltip({
+                                            items: '.tooltip-item',
+                                            position: {
+                                                my: 'left+20 top-30',
+                                                at: 'right center',
+                                                using: function(position, feedback) {
+                                                    $$(this).css(position);
+                                                    $$('<div>')
+                                                        .addClass('arrow')
+                                                        .addClass( (feedback.target.top - feedback.element.top > 30 ? 'arrow-bottom' : '') )
+                                                        .appendTo(this);
+                                                    //$$(this).clone().appendTo('body');
+                                                }
+                                            },
+                                            content: function() {
+                                                return $$(this).closest('td').find('.id-tooltipContent').clone().show();
+                                            },
+                                            show: {
+                                                delay: 500
+                                            },
+                                            close: function( event, ui ) {
+                                                $$('.ui-helper-hidden-accessible').empty();
+                                            }
+                                        });
+                                    });
+                                </script>
+                            </apex:facet>
+
+                            <span class="tooltip-item">
+                                {!ac.AccModel.companyName}
+                            </span>
+                            <div class="id-tooltipContent" style="display:none;">
+                                <c:HoverPopupAccount accountModel="{!ac.AccModel}" />
+                            </div>
+                        </apex:column>
+                            
+                        <apex:column headerValue="Headquarters">
+                            <apex:outputText value="{!ac.AccModel.Headquarters}"/>
+                        </apex:column>
+
+                        <apex:column headerClass="snp-table-center">
+                            <apex:facet name="header">Total Revenue<br/>(USD Millions)</apex:facet>
+                            <div class="snp-table-currency">
+                                <apex:outputText value="${!ac.AccModel.totalRevenueStr}" rendered="{!IF(ac.AccModel.totalRevenue != null, true, false)}"/>
+                            </div>
+                        </apex:column>
+
+                        <apex:column headerValue="Website">
+                            <div class="clip" title="{!ac.AccModel.webpage}"><apex:outputText value="{!ac.AccModel.webpage}"/></div>
+                        </apex:column>
+    
+                    </apex:dataTable> 
+
+
+                    <c:Pagination controllerInstance="{!baseControllerInstanse}" rerenderItems="rowCount, resultTable, paginationTop, paginationBottom" id="paginationBottom" />
+
+                </apex:outputPanel>
+
+
+                <c:DebugInfo controllerInstance="{!baseControllerInstanse}" />
+            </div>
+        </div>
+        </apex:form>
+        
+     </div>
+ 
+</apex:page>

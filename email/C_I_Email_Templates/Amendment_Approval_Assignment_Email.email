@@ -1,0 +1,9 @@
+Amendment Submission Notice
+
+Amendment Submitter: {!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName}
+Opportunity Name: {!Opportunity.Name}
+Amendment Topic: {!Amendment__c.RE__c}
+
+Link to Approval: {!ApprovalRequest.Internal_URL}
+
+Link to Amendment: {!Amendment__c.Link}

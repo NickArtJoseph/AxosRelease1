@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Nationwide</letterhead>
+    <name>NW - Is my verification information transferring over?</name>
+    <style>freeForm</style>
+    <subject>Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Case.Contact},
+
+During the transition of your accounts to Axos Bank we will not be receiving your security questions that are currently setup for your account.
+
+We appreciate your business and commit to providing superior Banking products, support and services.
+
+Best Regards,
+
+{!User.FirstName}
+Axos Bank Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

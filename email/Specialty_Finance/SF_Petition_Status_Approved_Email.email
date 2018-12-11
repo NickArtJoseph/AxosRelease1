@@ -1,0 +1,9 @@
+Hello Information, 
+
+Please run lien and Judgement searches for {!Opportunity.Link}.
+
+The purchase price is {!Opportunity.Purchase_Price_to_Customer__c}.  If the purchase price is > 150K, please use CT Lien Solutions to run the search. 
+
+Please respond to SF Processing should you have any questions. 
+
+Thank you!

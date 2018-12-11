@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>Recertification Email</name>
+    <style>freeForm</style>
+    <subject>BOFI Wholesale &amp; Correspondent Recertification Letter</subject>
+    <textOnly>{!Today}
+
+{!Account.Name}
+
+{!Account.BillingAddress}
+
+
+Dear Valued Lending Partner:
+
+
+
+Our records indicate that it is time for BOFI Federal Bank to process your annual lending partner recertification.
+
+As part of the process it is imperative that you inform us of either of the following changes of events:
+
+
+
+Yes           No Has ownership structure change by more than 25% per individual owner?
+
+
+
+Yes           No Have there been any material changes to the financial condition of your organization?
+
+
+If you answered yes to either or both of the above questions, please provide supporting documentation.
+
+
+I attest that the above information is true and correct.
+
+
+
+Signature:      ___________________________
+
+
+
+Name:             ___________________________
+
+
+
+Title:                 ___________________________
+
+
+In addition, please submit the following items:
+Provide current year tax returns
+Annual Financial Statement or Unaudited Financial Statement
+Current E&amp;O Insurance and Fidelity Bond ( if applicable)
+Performance review/report cards from current investors
+Provide current information if company has any outstanding lawsuits and/or judgments
+
+
+When complete please print, sign and return the recertification information and additional items to:jsingh@bofifederalbank.com
+
+
+
+OR
+
+
+
+BOFI Federal Bank
+Joleen Singh
+Wholesale/Correspondent Account’s Manager
+4350 La Jolla Village Drive, Suite 140
+San Diego CA. 92122
+
+
+Thank you, we appreciate your immediate attention to our request.
+
+BOFI Federal Bank appreciates your business, and we look forward to a continued prosperous relationship.
+
+
+Respectfully,
+Darin Judis
+
+Senior Vice President
+Wholesale/ Correspondent/Warehouse &amp; Multifamily Lending</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

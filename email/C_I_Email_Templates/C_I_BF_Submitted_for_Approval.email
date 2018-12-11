@@ -1,0 +1,6 @@
+{!Boarding_Form__c.Opportunity__c} boarding forms have been completed. Please click the link below to begin the review:
+
+{!Boarding_Form__c.Link}
+
+Thank you,
+Salesforce

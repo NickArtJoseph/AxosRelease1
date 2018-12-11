@@ -1,0 +1,18 @@
+<apex:page standardController="Lead" extensions="mkto_si.ObjectProxyController" showHeader="true" sidebar="false">
+    <c:CssAndJavascript2 />
+    <script type="text/javascript">
+        $j(function() {         
+            if( (typeof sforce != 'undefined') && (sforce != null) &&
+             (typeof sforce.one != 'undefined') && (typeof sforce.one.navigateToURL != 'undefined')) {
+              // Salesforce1 navigation
+              
+              var myUrl =  "/apex/mkto_si__Add_to_Marketo_Campaign_Mobile?contactType=Lead&contactIds={!Lead.Id}"; 
+              sforce.one.navigateToURL(myUrl, true);
+            } else {
+              // Set the window's URL
+              var myUrl =  "/apex/Add_to_Marketo_Campaign?contactType=Lead&contactIds={!Lead.Id}"; 
+              window.location.href = myUrl;
+            }
+        });
+    </script>
+</apex:page>

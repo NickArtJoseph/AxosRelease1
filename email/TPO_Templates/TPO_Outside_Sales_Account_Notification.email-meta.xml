@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifies TPO Outside Sales when TPO House Account becomes new owner of an Account in CA, FL, NY, NJ</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TPO Outside Sales Account Notification</name>
+    <style>none</style>
+    <subject>Automated TPO Outside Sales Notice for account in {!Account.BillingState}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

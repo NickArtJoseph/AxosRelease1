@@ -1,0 +1,164 @@
+<apex:page controller="mkto_si.AddToMarketoCampaignController" tabStyle="Marketo__tab">
+    <c:CssAndJavascript2 />
+    <apex:pageBlock id="mktMobileAddToCampaign" rendered="{!isSalesforceOne}">
+
+        <!-- CSS files from One Starter -->
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/icons.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/styles.css')}"/>
+        <link rel="Stylesheet" type="text/css" href="{!$Resource.css_mobile}" />
+
+        <script src="{!$Resource.jqueryTools}" type="text/javascript"></script>
+        <div class="mkto fw-semibold mkt-amc-title">
+          {!$Label.mkto_si__add_to_marketo_campaign}
+        </div>
+   
+        <apex:pageMessage severity="error" strength="1" rendered="{!errorMessage != null}" summary="{!errorMessage}" />
+    
+        <div id="mktAddToMarketoCampaign" class="mlm">
+          <apex:form id="mktAddToCampaignForm">
+            <apex:pageBlock rendered="true" id="mktChooseCampBlock">
+              <apex:pageBlockButtons styleClass="mkt-mobile-hide-m">
+                <apex:commandButton action="{!save}" value="{!$Label.mkto_si__add_to_marketo_campaign}" rendered="{!(hasContacts && hasCampaigns)}" id="mktAMCSubmit"/>
+                <apex:commandButton action="{!cancel}" value="{!$Label.mkto_si__cancel}" id="mktAMCCancel"/>
+              </apex:pageBlockButtons>
+              <apex:actionRegion rendered="{!(hasContacts && hasCampaigns)}">
+                    <script type="text/javascript">
+                        $j(function() {      
+                            var $mktAMCSubmit = $j("[id$=mktAMCSubmit]").first();
+                            $j('#mktSubmitDelegate').click(function() {
+                              $mktAMCSubmit.click();
+                              $j('#mktSubmitDelegate').html("<span class=\"text-color-4 f3 mhx\">Processing ...</span>");
+                              $j('#mktSubmitDelegate').disabled = true;
+                            });
+                            $j('.mkt-select-campaign-mobile').css("background-image","url({!$Resource.mkto_si__down_arrow})");
+                            $j('.mkt-select-campaign-mobile option:first').html("Select Campaign");
+                        });
+                    </script>
+                <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+    
+                  <apex:outputLabel styleClass="pbs" style="display:block" value="{!contactType}"/>
+                  <apex:outputText styleClass="mbx fw-semibold" style="display:block" value="{!contactNames}"/>
+              
+                  <apex:outputLabel value="{!$Label.mkto_si__campaign_name}" style="display:block" styleClass="semibold pbsx" for="mktSelectCampaign"/>
+                  <div class="forceObjectHome">
+                      <apex:selectList value="{!campaignId}" size="1" id="mktSelectCampaign" styleClass="mkt-select-campaign-mobile">
+                          <apex:selectOptions value="{!campaignList}"/>
+                          <apex:actionSupport event="onchange" rerender="mktChooseCampBlock"/>
+                      </apex:selectList>
+                  </div>
+    
+                  <apex:outputLabel styleClass="pbs ptl" style="display:block" value="{!$Label.mkto_si__description}" rendered="{!hasDescription}"/>
+                  <apex:outputText styleClass="fw-semibold" style="display:block" value="{!description}" id="mktCampaignDesc" rendered="{!hasDescription}"/>
+    
+                </apex:pageBlockSection>
+              </apex:actionRegion>
+
+              <apex:actionRegion rendered="{!!hasContacts && hasCampaigns}">
+                <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+    
+                  <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                    <apex:outputText value="{!$Label.mkto_si__please_choose_at_least_one_contacttype}">
+                        <apex:param value="{!contactType}">
+                        </apex:param>
+                    </apex:outputText>
+                  </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+              </apex:actionRegion>
+
+              <apex:actionRegion rendered="{!!hasCampaigns}">
+                <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+    
+                  <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                    <apex:outputText value="{!$Label.mkto_si__there_are_no_marketo_campaigns_available}"/>
+                  </apex:pageBlockSectionItem>
+    
+                </apex:pageBlockSection>
+              </apex:actionRegion>
+              <apex:actionRegion rendered="{!(hasContacts && hasCampaigns)}">            
+                  <button class="btn bg-secondary-btn btn--secondary pvs brm border border--3 mtx" id="mktSubmitDelegate">
+                    <span class="text-color-4 f3 mhx">Add</span>
+                  </button>
+              </apex:actionRegion>
+
+            </apex:pageBlock>
+          </apex:form>
+        </div>
+    </apex:pageBlock> <!-- END mainblock -->
+
+    <apex:pageBlock id="mktDeskTopAddToCampaign" rendered="{! !isSalesforceOne}">
+        <div class="mkto">
+            <apex:sectionHeader title="{!$Label.mkto_si__add_to_marketo_campaign}" help="{!helpLink}"/>
+        </div>
+
+          <apex:pageMessage severity="error" strength="1" rendered="{!errorMessage != null}" summary="{!errorMessage}" />
+
+          <div id="mktAddToMarketoCampaign">
+            <apex:form >
+              <apex:pageBlock title="{!$Label.mkto_si__choose_campaign}" rendered="true" id="mktChooseCampBlock">
+                <apex:pageBlockButtons >
+                  <apex:commandButton action="{!save}" value="{!$Label.mkto_si__add_to_marketo_campaign}" rendered="{!(hasContacts && hasCampaigns)}"/>
+                  <apex:commandButton action="{!cancel}" value="{!$Label.mkto_si__cancel}"/>
+                </apex:pageBlockButtons>
+
+                <apex:actionRegion rendered="{!(hasContacts && hasCampaigns)}">
+                  <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+
+                    <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                      <apex:outputLabel value="{!contactType}(s)"/>
+                      <apex:outputText value="{!contactNames}"/>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                      <apex:outputLabel value="{!$Label.mkto_si__campaign_name}" for="mktSelectCampaign"/>
+                      <apex:selectList value="{!campaignId}" size="1" id="mktSelectCampaign" style="font-family: Arial; font-size: 96%">
+                        <apex:selectOptions value="{!campaignList}"/>
+                        <apex:actionSupport event="onchange" rerender="mktChooseCampBlock"/>
+                      </apex:selectList>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                      <apex:outputLabel value="{!$Label.mkto_si__description}"/>
+                      <apex:outputText value="{!description}" id="mktCampaignDesc"/>
+                    </apex:pageBlockSectionItem>
+
+                  </apex:pageBlockSection>
+                </apex:actionRegion>
+
+                <apex:actionRegion rendered="{!!hasContacts && hasCampaigns}">
+                  <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+
+                    <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                      <apex:outputText value="{!$Label.mkto_si__please_choose_at_least_one_contacttype}">
+                        <apex:param value="{!contactType}">
+                        </apex:param>
+                      </apex:outputText>
+                    </apex:pageBlockSectionItem>
+
+                  </apex:pageBlockSection>
+                </apex:actionRegion>
+
+                <apex:actionRegion rendered="{!!hasCampaigns}">
+                  <apex:pageBlockSection collapsible="false" showHeader="false" columns="1">
+
+                    <apex:pageBlockSectionItem dataStyleClass="mktPageBlockSection" labelStyleClass="mktPageBlockSection">
+                      <apex:outputText value="{!$Label.mkto_si__there_are_no_marketo_campaigns_available}"/>
+                    </apex:pageBlockSectionItem>
+
+                  </apex:pageBlockSection>
+                </apex:actionRegion>
+
+              </apex:pageBlock>
+            </apex:form>
+            <script type="text/javascript"> (function() {
+                    $j('.apexp .bPageBlock.apexDefaultPageBlock .pbBody').css({
+                        'margin': '0px'
+                    });
+                    $j("[id$=mktDeskTopAddToCampaign]").css({
+                        'border': 'none',
+                        'background-color': 'white'
+                    });
+                })();
+            </script>
+          </div>                                    
+    </apex:pageBlock> <!-- END mainblock -->
+</apex:page>

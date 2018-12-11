@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EscalationRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <escalationRule>
+        <fullName>Global Case Escalation Rules</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Case_Queue_History__c</field>
+                <operation>contains</operation>
+                <value>Deposit CC:</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_CC_Customer_Service</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 2 CM/Specialty Maintenance,CM 3 CM New Accounts,CM 4 ACH &amp; Builds,CM 6 Tasks,CM 7 New OBS Users,CM 8 Calls</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Cash_Management</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4 AND 5)</booleanFilter>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Account Closeout / Withdrawal,CD Renewal,&quot;Copies of Statement, Check, Notice&quot;,Correspondence / Inquiry,Deceased,Dormant Escheat,Legal,Maintenance Account,&quot;Maintenance CIF, Address, Contact&quot;,Research,Research Longer SLA,Stop Payment Non ACH Non</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Social Security Direct Deposit Form,ACH Interest Payment Authorization,Savings Withdrawal Request,Wire Request Form,Official Check Request Form,Declaration of Loss of Official Check</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4 AND 5)</booleanFilter>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 5 Netteller,Cash Edge PIN Reset,Debit ATM Access Problems,Debit ATM Requests,Debit ATM Rush Request,Disputes and Adjustments,Online Banking / Mobile Incident,Stop Payment Bill Pay or ACH</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Request for ATM Visa Check Card,Visa Business Check Card Application,ATM Debit Card Dispute Affidavit,Written Statement of Unauthorized ACH Debit</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Bank X Wires,Email: Bank of Internet Wires,Email: BofI Advisor Wires,Email: Business Banking Wires,Email: UFB Direct Wires,Email: DepOps Secure,Email: DepOps</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Emails_Faxes</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Exception Processing,NSF / Non Post</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Exception</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Closures - Pending Notice,Closures by Bank,Loss Prevention,Loss Prevention Research</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Loss_Prevention</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4 AND 5)</booleanFilter>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Advisor Account Maintenance,Advisor New Account Enrollment,Advisor Research &amp; Documentation,Check Orders,New Account (Specialty),CM 9 Specialty 1031 Sub Accounts,Customer Documents (Pending),New Account Enrollment,New Account Maintenance / Research</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Add an Account Owner,Change Request - Name,Change Request - Beneficary,Change Request - Trust Certification,Trust Certification,Change Request - Uniform Transfers to Minors,W-9 Certification</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>&quot;Adjustments (Miles, ATM, Check, Deposits)&quot;,Errors / Call back,New Account Funding</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Research_Adjustments</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2 AND 3) OR (1 AND 2 AND 4 AND 5)</booleanFilter>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Copy of 1099R / 5498 (IRA/ROTH only),IRA Levy / Garnishment,RS Contributions,RS Customer Requests (Pending),RS Decedent,RS New Account Application,RS Withdrawal / Closing,Retirement Questions</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: RS Enrollment</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Retirement</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Deposit Accounts</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Retirement</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Contribution Instructions,Withdrawal Authorization,Scheduled Payment Withdrawal Authorization,Mandatory Distribution Withdrawal Authorization - Traditional,Beneficiary Designation -Traditional &amp; Roth</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Retirement</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Transfer Request</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Transfer_Requests</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Wires</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>Deposit_Ops_Wires</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>equals</operation>
+                <value>Other Forms</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>equals</operation>
+                <value>600 ACH Authorization Form,630 Third Party Authorization</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Customer_Service</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>(1 AND 2 AND 3 AND 4) OR (1 AND 2 AND 5)</booleanFilter>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Loan Payment ACH Authorization,Loan Payment ACH Stop Payment,Loan Third Party Authorization Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Call Tracking,LS General Request</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Customer_Service</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Loans</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Customer_Service</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Customer_Service</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Complaints</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Escalated</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Escrows,LS Escrows - Open / Close</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Escrows</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Insurance</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Insurance</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Internal Work</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Internal_Work</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Notices</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Notices</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Payments / Billing</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Payments_Billing</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Payoff</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Payoff</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+        <ruleEntry>
+            <businessHoursSource>Case</businessHoursSource>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,In Process,Re-opened</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>notContain</operation>
+                <value>Feedback,Queue,Commercial,Deposit,FS:,LS ACH,LS Customer Service,LS Escalated,LS Fax,LS Impound,LS Insurance,LS Internal,LS Notices,LS Notifications,LS Payments,LS Payoff,LS Pending,LS Taxes,Operations,Special Assets,UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Taxes</value>
+            </criteriaItems>
+            <escalationAction>
+                <assignedTo>LS_Taxes</assignedTo>
+                <assignedToType>Queue</assignedToType>
+                <minutesToEscalation>3420</minutesToEscalation>
+                <notifyCaseOwner>false</notifyCaseOwner>
+            </escalationAction>
+            <escalationStartTime>CaseLastModified</escalationStartTime>
+        </ruleEntry>
+    </escalationRule>
+</EscalationRules>

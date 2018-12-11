@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Resolved Customer Feedback - Complaint(Nationwide)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Resolved Customer Feedback - Complaint(Nationwide)</name>
+    <style>none</style>
+    <subject>Resolved Customer Feedback - Nationwide Complaint</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

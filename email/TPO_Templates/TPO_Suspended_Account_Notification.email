@@ -1,0 +1,5 @@
+{!Account.OwnerFirstName},
+
+Your account, {!Account.Name} - NMLSID: {!Account.NMLSID__c}, will expire in {!Account.Days_Until_Suspended_Expiration__c} days.
+
+Please contact BofI management to initiate the re-certification process.

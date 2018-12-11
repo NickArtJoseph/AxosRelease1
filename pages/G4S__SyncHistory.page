@@ -1,0 +1,94 @@
+<apex:page sidebar="false" controller="G4S.SyncHistoryController" action="{!initPage}" tabstyle="Glance_Sync_History__tab" title="Glance for Salesforce - Sync History">
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Sync History"/>
+
+<apex:outputPanel layout="block" rendered="{!syncScheduledJobCancelled}" style="padding: 5px; border: 1px solid red; background-color: pink; border-radius: 4px; margin: 4px 20px;">
+<table>
+	<tr>
+		<td><img alt="WARNING" class="msgIcon" src="/img/msg_icons/error24.png" height="24" width="24" title="WARNING"/></td>
+		<td>The Glance Sync process is configured to run, however it has been has been manually cancelled. The Glance Sync process can be restarted by updating <a href="/apex/CompanySettings">Company Settings</a>.</td>
+	</tr>
+</table>
+</apex:outputPanel>
+
+<apex:pageMessages />
+
+<apex:form >
+<apex:pageBlock title="Schedule" helpTitle="Help for this page" helpUrl="http://www.glance.net/sf_help_synchistory">
+	<apex:pageBlockSection columns="2">
+		<apex:pageBlockSectionItem >
+            <apex:outputLabel value="Sync"/>
+            <apex:outputText value="{!companySettings.G4S__Sync_Type__c}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem />
+	
+		<apex:pageBlockSectionItem >
+            <apex:outputLabel value="Sync Frequency"/>
+            <apex:panelGroup >
+            	<apex:outputPanel rendered="{!companySettings.G4S__Sync_Frequency__c != 'Never'}">{!companySettings.G4S__Sync_Frequency__c}</apex:outputPanel>
+				<apex:outputPanel rendered="{!companySettings.G4S__Sync_Frequency__c == 'Never'}"><span style="color: red;">{!companySettings.G4S__Sync_Frequency__c}</span></apex:outputPanel>
+			</apex:panelGroup>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!companySettings.G4S__Sync_Frequency__c != 'Never'}">
+            <apex:outputLabel value="Next Sync"/>
+            {!nextSyncTime}
+        </apex:pageBlockSectionItem>
+	</apex:pageBlockSection>
+</apex:pageBlock>
+
+<apex:pageBlock title="History">
+
+    <apex:outputPanel layout="block" style="text-align: center; padding-bottom: 10px;">
+        <apex:commandButton value="Refresh" action="{!refresh}" />
+        &nbsp;&nbsp;
+        <apex:commandButton value="Sync Now" action="{!sync}"/>
+    </apex:outputPanel>
+
+
+    <apex:pageBlockTable value="{!syncs}" var="sync" width="100%">
+        <apex:column value="{!sync.G4S__Start__c}">
+            <apex:facet name="header">Start</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__End__c}">
+            <apex:facet name="header">End</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Status__c}">
+            <apex:facet name="header">Status</apex:facet>
+        </apex:column>
+		<apex:column value="{!sync.G4S__Users_In_Request__c}" style="text-align:center;">
+            <apex:facet name="header">Users<br/>In Request</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Users_In_Response__c}" style="text-align:center;">
+            <apex:facet name="header">Users<br/>In Response</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Sessions_In_Response__c}" style="text-align:center;">
+            <apex:facet name="header">Sessions<br/>In Response</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Guests_In_Response__c}" style="text-align:center;">
+            <apex:facet name="header">Guests<br/>In Response</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Events_Created__c}" style="text-align:center;">
+            <apex:facet name="header">Events<br/>Created</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Events_Updated__c}" style="text-align:center;">
+            <apex:facet name="header">Events<br/>Updated</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Leads_Created__c}" style="text-align:center;">
+            <apex:facet name="header">Leads<br/>Created</apex:facet>
+        </apex:column>
+        <apex:column value="{!sync.G4S__Comment__c}">
+            <apex:facet name="header">Comment</apex:facet>
+        </apex:column>
+    </apex:pageBlockTable>
+                
+    <apex:outputPanel layout="block" style="text-align: center;">
+        <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">&laquo; Previous</apex:commandlink>
+        <apex:outputPanel rendered="{!hasPrevious && hasNext}">&nbsp;&nbsp;</apex:outputPanel>
+        <apex:commandLink action="{!next}" rendered="{!hasNext}">Next &raquo;</apex:commandlink>
+	</apex:outputPanel>
+
+</apex:pageBlock>
+</apex:form> 
+
+
+</apex:page>

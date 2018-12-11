@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - UDB - Transfers - Setup External Transfer Account</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Inquiry {!Case.CaseNumber}</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

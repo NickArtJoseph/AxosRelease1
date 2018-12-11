@@ -1,0 +1,27 @@
+<apex:page tabStyle="Account" standardController="Account" extensions="AccountCertificationDisplayExtension" showHeader="false" sidebar="false">
+    <apex:form >
+    <apex:pageBlock title="Quarterly Certifications">
+        <apex:pageBlockSection collapsible="false" columns="1">
+            <apex:outputPanel rendered="{!QuarterlyCertifications.size == 0}" layout="block" id="NoRecords">
+                <apex:outputText value="No records to display" />
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!QuarterlyCertifications.size > 0}" layout="block" id="HasRecords" style="overflow-y: auto; height: 135px; width: 100%;">
+                <apex:pageBlockTable value="{!QuarterlyCertifications}" var="cert" columnsWidth="5%,55%,20%,20%">
+                    <apex:column styleClass="actionColumn" headerValue="Action">
+                        <apex:outputLink styleClass="actionLink" value="{!URLFOR($Action.WLD_Certification__c.Edit, cert.id, [retURL='/' + cert.Id], true)}" target="_top" rendered="{!$ObjectType.WLD_Certification__c.updateable}">Edit</apex:outputLink>
+                        <apex:outputPanel rendered="{!$ObjectType.WLD_Certification__c.deletable}">
+                            <apex:outputText value="&nbsp;|&nbsp;" escape="false" rendered="{!$ObjectType.WLD_Certification__c.updateable}"/>
+                            <apex:outputLink styleClass="actionLink" value="{!URLFOR($Action.WLD_Certification__c.Delete, cert.id, [retURL='/' + Account.Id], true)}" target="_top" rendered="{!$ObjectType.WLD_Certification__c.deletable}">Del</apex:outputLink>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="Name">
+                    <apex:outputLink value="/{!cert.Id}" target="_top">{!cert.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!cert.Due_Date__c}" />
+                    <apex:column value="{!cert.Status__c}" />
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

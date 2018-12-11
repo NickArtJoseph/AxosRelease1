@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br>Thank you for choosing [INSERT BRAND]&nbsp;. Your new account is currently under review. During the review process we discovered your client profile is out of compliance. Please provide the following to update your client profile:</span></p><p><span style="background-color: rgb(255, 255, 255);">•&nbsp;Employer &amp; Occupation Information Form (see attached)<br><br>To satisfy regulatory requirements and expectations, it is BofI Federal Bank’s policy to collect a consumer’s current or former (if unemployed or retired) occupation and employer information. Federal Law, including the USA PATRIOT Act, requires all financial institutions to obtain, verify and record information that identifies each person or business that opens an account. <br><br></span></p><p><span style="background-color: rgb(255, 255, 255);"><br>Please return all requested documentation by:<br>1) Email to: <a href="mailto:customerservice@bofi.com">customerservice@bofi.com</a><br>2) Fax to: 858-350-0443<br>3) Mail to: BOFI Federal Bank P.O. Box 509127, San Diego, CA&nbsp; 92150-9948<br><br>Questions? If you have any questions please call us toll free on 1-877-541-2634. Our Direct Bankers are available Monday - Friday 6:00am to 6:00pm (PT) to take your call. You may also email us at <a href="mailto:customerservice@bankofinternet.com">customerservice@bankofinternet.com</a><br><br>We appreciate your business and commit to delivering value that will make [INSERT BRAND]&nbsp; your first choice for all your banking needs.<br><br></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

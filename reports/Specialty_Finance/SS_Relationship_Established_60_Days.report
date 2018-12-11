@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.qbdialer__LastCallTime__c</field>
+    </columns>
+    <columns>
+        <field>Account.Neustar_MPIC_Phone_Score__c</field>
+    </columns>
+    <columns>
+        <field>RECORDTYPE</field>
+    </columns>
+    <description>Out of Policy Past Due Relationship Established Accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Sales_Status_Person__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Relationship Established,Pricing Soon,Deal In Process,Remarket</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Specialty_Finance_Structured_Settlement,PersonAccount.Specialty_Finance_Lottery,PersonAccount.Specialty_Finance_IGT_Winners</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.No_Payments_Remaining__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>USERS.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SS Relationship Established +60 Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.qbdialer__LastCallTime__c</dateColumn>
+        <endDate>2016-12-10</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-05-01</startDate>
+    </timeFrameFilter>
+</Report>

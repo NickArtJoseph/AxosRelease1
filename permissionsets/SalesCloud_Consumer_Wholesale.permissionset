@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.SharePoint_ID_SFDC2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.SharePoint_ID_SFDC2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SalesCloud: Consumer Wholesale</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Lead.Consumer_Wholesale</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Opportunity.Consumer_Wholesale</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

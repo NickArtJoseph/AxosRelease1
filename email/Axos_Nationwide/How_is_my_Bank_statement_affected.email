@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">If you are currently receiving online statements, you will continue to receive your statements electronically and previous statements and tax forms can be easily accessed online.&nbsp;&nbsp;</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Customers receiving paper statements will continue to receive statements monthly by mail.&nbsp; Within 30 days of your account transitioning to Axos Bank, your monthly statements will be delivered at the end of the month in conjunction with our existing statement cycle.&nbsp; Be sure to look for the Axos Bank logo in your mailbox starting December, 2018.&nbsp; &nbsp;But why pay a fee for your paper statement? Sign up for online statements and you can get them faster, without the fees.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">As a paperless organization, Axos Bank encourages our customers to sign up for free electronic statements (e-Statements). With an e-statement, you can view transaction history, statements and check images for up to 2 years at no cost.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div></div></div></div></div></div></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,5 @@
+Hello,
+
+{!Opportunity.Account} is ready for review. Please click the link below to access the opportunity:
+
+{!Opportunity.Link}

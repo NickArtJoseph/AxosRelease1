@@ -1,0 +1,19 @@
+Consumer Discretionary;Advertising;Apparel, Accessories and Luxury Goods;Apparel Retail;Automobile Manufacturers;Automotive Retail;Auto Parts and Equipment;Broadcasting;Cable and Satellite;Casinos and Gaming;Catalog Retail;Computer and Electronics Retail;Consumer Electronics;Department Stores;Distributors;Education Services;Footwear;General Merchandise Stores;Homebuilding;Home Furnishing Retail;Home Furnishings;Home Improvement Retail;Hotels, Resorts and Cruise Lines;Household Appliances;Housewares and Specialties;Internet Retail;Leisure Facilities;Leisure Products;Motorcycle Manufacturers;Movies and Entertainment;Publishing;Restaurants;Specialized Consumer Services;Specialty Stores;Textiles;Tires and Rubber
+
+Consumer Staples;Agricultural Products;Brewers;Distillers and Vintners;Drug Retail;Food Distributors;Food Retail;Household Products;Hypermarkets and Super Centers;Packaged Foods and Meats;Personal Products;Soft Drinks;Tobacco
+
+Energy;Coal and Consumable Fuels;Integrated Oil and Gas;Oil and Gas Drilling;Oil and Gas Equipment and Services;Oil and Gas Exploration and Production;Oil and Gas Refining and Marketing;Oil and Gas Storage and Transportation
+
+Financials;Asset Management and Custody Banks;Consumer Finance;Diversified Banks;Diversified Capital Markets;Diversified Real Estate Activities;Diversified REITs;Healthcare REITs;Hotel and Resort REITs;Industrial REITs;Insurance Brokers;Investment Banking and Brokerage;Life and Health Insurance;Mortgage REITs;Multi-line Insurance;Multi-Sector Holdings;Office REITs;Other Diversified Financial Services;Property and Casualty Insurance;Real Estate Development;Real Estate Operating Companies;Real Estate Services;Regional Banks;Reinsurance;Residential REITs;Retail REITs;Specialized Finance;Specialized REITs;Thrifts and Mortgage Finance
+
+Healthcare;Biotechnology;Healthcare Distributors;Healthcare Equipment;Healthcare Facilities;Healthcare Services;Healthcare Supplies;Health Care Technology;Life Sciences Tools and Services;Managed Healthcare;Pharmaceuticals
+
+Industrials;Aerospace and Defense;Agricultural and Farm Machinery;Air Freight and Logistics;Airlines;Airport Services;Building Products;Commercial Printing;Construction and Engineering;Construction Machinery and Heavy Trucks;Diversified Support Services;Electrical Components and Equipment;Environmental and Facilities Services;Heavy Electrical Equipment;Highways and Railtracks;Human Resource and Employment Services;Industrial Conglomerates;Industrial Machinery;Marine;Marine Ports and Services;Office Services and Supplies;Railroads;Research and Consulting Services;Security and Alarm Services;Trading Companies and Distributors;Trucking
+
+Information Technology;Application Software;Communications Equipment;Data Processing and Outsourced Services;Electronic Components;Electronic Equipment and Instruments;Electronic Manufacturing Services;Home Entertainment Software;Internet Software and Services;IT Consulting and Other Services;Semiconductor Equipment;Semiconductors;Systems Software;Technology Distributors;Technology Hardware, Storage and Peripherals
+
+Materials;Aluminum;Commodity Chemicals;Construction Materials;Diversified Chemicals;Diversified Metals and Mining;Fertilizers and Agricultural Chemicals;Forest Products;Gold;Industrial Gases;Metal and Glass Containers;Paper Packaging;Paper Products;Precious Metals and Minerals;Silver;Specialty Chemicals;Steel
+
+Telecommunication Services;Alternative Carriers;Integrated Telecommunication Services;Wireless Telecommunication Services
+
+Utilities;Electric Utilities;Gas Utilities;Independent Power Producers and Energy Traders;Multi-Utilities;Renewable Electricity;Water Utilities

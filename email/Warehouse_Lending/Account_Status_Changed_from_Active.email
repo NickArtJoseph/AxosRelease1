@@ -1,0 +1,4 @@
+The account status for {!Account.Name} has been changed from "Active" to 
+"{!Account.Account_Status__c}". Please review the account, immediate action may be required.
+
+Link to Account:  {!Account.Link}

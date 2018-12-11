@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>LLC_BI__Number_of_Borrower_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total number of borrower fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of borrower fees associated to this object.</inlineHelpText>
+        <label>Number of Borrower Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Cash_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total number of cash fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of cash fees associated to this object.</inlineHelpText>
+        <label>Number of Cash Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan  This field represents the total number of fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of fees associated to this object.</inlineHelpText>
+        <label>Number of Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Financed_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total number of financed fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of financed fees associated to this object.</inlineHelpText>
+        <label>Number of Financed Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Lender_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represent the total number of lender fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of lender fees associated to this object.</inlineHelpText>
+        <label>Number of Lender Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Nonstandard_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represent the total number of nonstandard fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of nonstandard fees associated to this object.</inlineHelpText>
+        <label>Number of Nonstandard Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Seller_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total number of seller fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of seller fees associated to this object.</inlineHelpText>
+        <label>Number of Seller Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Standard_Fees__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total number of standard fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total number of standard fees associated to this object.</inlineHelpText>
+        <label>Number of Standard Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Borrower_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of borrower fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of borrower fees associated to the object.</inlineHelpText>
+        <label>Total Borrower Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Cash_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of cash fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of cash fees associated to the object.</inlineHelpText>
+        <label>Total Cash Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Fee_Amount_Outstanding__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total fee amount minus the total fee amount paid.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Total_Fee_Amount__c - LLC_BI__Total_Fee_Amount_Paid__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The total fee amount minus the total fee amount paid.</inlineHelpText>
+        <label>Total Fee Amount Outstanding</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Fee_Amount_Paid__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount paid for fees related to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount paid for fees related to this object.</inlineHelpText>
+        <label>Total Fee Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Fee_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan.  This field represents the total Amount of all fees associated to this object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Amount of all fees associated to this object.</inlineHelpText>
+        <label>Total Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Financed_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of financed fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of financed fees associated to the object.</inlineHelpText>
+        <label>Total Financed Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Lender_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of lender fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of lender fees associated to the object.</inlineHelpText>
+        <label>Total Lender Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Nonstandard_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of nonstandard fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of nonstandard fees associated to the object.</inlineHelpText>
+        <label>Total Nonstandard Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Seller_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of seller fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of seller fees associated to the object.</inlineHelpText>
+        <label>Total Seller Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Total_Standard_Fee_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is automatically populated when fees are added to the loan. This field represents the total amount of standard fees associated to the object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of standard fees associated to the object.</inlineHelpText>
+        <label>Total Standard Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This is an optional field that is used to specify an external, unique key for this record.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>External Id</inlineHelpText>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Fee Loan Aggregate</label>
+    <nameField>
+        <label>Fee Loan Aggregate Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Fee Loan Aggregate</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

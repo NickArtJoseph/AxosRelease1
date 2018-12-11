@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used in Process Builder to send email when Order Received date is changed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - FVR Request - Order Received</name>
+    <style>none</style>
+    <subject>FVR Request - Order Received for {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,158 @@
+<apex:page standardController="Case" title="Search" 
+           showHeader="false" 
+           sideBar="false" 
+           tabStyle="Case" 
+           id="pg"
+           extensions="CreateNewCaseController"
+           lightningStylesheets="true">
+   
+    <script type="text/javascript"> 
+    
+    
+    function parse_query_string(query) {
+        var vars = query.split("&");
+        var query_string = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = decodeURIComponent(pair[0]);
+            var value = decodeURIComponent(pair[1]);
+            // If first entry with this name
+            if (typeof query_string[key] === "undefined") {
+                query_string[key] = decodeURIComponent(value);
+                // If second entry with this name
+            } else if (typeof query_string[key] === "string") {
+                var arr = [query_string[key], decodeURIComponent(value)];
+                query_string[key] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[key].push(decodeURIComponent(value));
+            }
+        }
+        return query_string;
+    }
+    
+    
+    
+    
+    
+    function openLookup(baseURL, width, modified, searchParam){
+        var originalbaseURL = baseURL;
+        var originalwidth = width;
+        var originalmodified = modified;
+        var originalsearchParam = searchParam;
+        
+        var baseURLpase = parse_query_string(baseURL);
+        
+        var lookupType =  baseURLpase.lktp;
+ 
+        
+        var LookUpId = baseURLpase.lkfield;
+        var lknm = baseURLpase.lknm;
+
+        var urlArr = baseURL.split("&");
+        var txtId = '';
+ 
+        if (modified == '1') baseURL = baseURL + searchParam;
+        
+        var isCustomLookup = false;
+        
+        // Following "a1k" is the lookup type for Financial Account Link object so change this as per your standard or custom object
+        if(lookupType == "a1k"){
+            
+            var urlArr = baseURLpase.dplp; 
+            var relatedACc = urlArr.substring(7, 22);;
+            console.log('relatedACc '+relatedACc );
+            
+            // Following is the url of Custom Lookup page. You need to change that accordingly
+            baseURL = "/apex/CustomFinancialAccountLookup?relatedACc=" + relatedACc+"&lkfield="+LookUpId+"&lknm="+lknm;
+            
+            // Following is the id of apex:form control "myForm". You need to change that accordingly
+            baseURL = baseURL + "&frm=" + escapeUTF("{!$Component.myForm}");
+            if (modified == '1') {
+                baseURL = baseURL + "&lksearch=" + searchParam;
+            }
+            
+            // Following is the ID of inputField that is the lookup to be customized as custom lookup
+            isCustomLookup = true;
+           
+        }
+ 
+        if(isCustomLookup == true){
+            
+            openPopup(baseURL, "lookup", 350, 480, "width="+width+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+        }
+        else { 
+            if (modified == '1') originalbaseURL = originalbaseURL + originalsearchParam; 
+            openPopup(originalbaseURL, "lookup", 350, 480, "width="+originalwidth+",height=480,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+        } 
+        
+    }
+    </script>   
+    <apex:form id="myForm">
+        
+        <apex:actionFunction id="asdasd" name="asff"/>
+        <apex:outputPanel id="page" layout="block" style="margin:5px;padding:10px;padding-top:2px;">
+            <apex:pageBlock id="newAccount" title="Create New Case" >
+                
+                <apex:pageMessages />
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="Cancel" action="{!doCancel}" rendered="{! $User.UITheme == 'Theme4d'  }" immediate="true"/>                   
+                    <apex:commandButton value="Cancel" action="{!Cancel}" rendered="{! $User.UITheme != 'Theme4d'  }" />                   
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection columns="2"  rendered="{!notTop}">
+                    <apex:outputField value="{!Case.RecordTypeId}"/> 
+                    <apex:repeat value="{!$ObjectType.Case.FieldSets[LEFT($CurrentPage.parameters.rtdevName, 33)+'_top']}" var="f">
+                        <apex:inputField value="{!Case[f]}"  required="{!OR(f.required, f.dbrequired)}"/>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" rendered="{!notBottom}">
+                    <apex:repeat value="{!$ObjectType.Case.FieldSets[LEFT($CurrentPage.parameters.rtdevName,33)+'_bottom']}" var="g">
+                        <apex:inputField value="{!Case[g]}" required="{!OR(g.required, g.dbrequired)}" />
+                    </apex:repeat>
+                </apex:pageBlockSection>   
+                
+                <apex:outputPanel layout="none" rendered="{! $User.UITheme == 'Theme4d' || notBottom }"> 
+                    <style type="text/css">
+                        @media only screen and (min-width: 768px) {
+                            .slds-vf-scope .detailList:first-child textarea, .slds-vf-scope .detailList:first-child input {
+                                width: 20rem;
+                            }
+                        }
+                    </style>
+                    
+                	<script type="text/javascript">
+                        window.addEventListener('load', function() {
+                            var detailLists = document.getElementsByClassName('detailList');
+                            
+                            for (var i = 0; i < detailLists.length; i++) {
+                                var detailList = detailLists[i];
+                                if (detailList.childNodes && detailList.childNodes[0] && detailList.childNodes[0].childNodes) {
+                                    var trList = detailList.childNodes[0].childNodes;
+                                    console.log(trList);
+                                    
+                                    for (var j = 0; j < trList.length; j++) {
+                                        var tr = trList[j];
+                                        
+                                        if (tr.childNodes && tr.childNodes.length == 2) {
+                                            var newTh = document.createElement('th');
+                                            newTh.appendChild(document.createTextNode(''));
+                                            var newTd = document.createElement('td');
+                                            newTd.appendChild(document.createTextNode(''));
+                                            
+                                            tr.appendChild(newTh);
+                                            tr.appendChild(newTd); 
+                                        }
+                                    }       
+                                }
+                                
+                            }
+                        });
+                    </script>
+                </apex:outputPanel>
+            </apex:pageBlock>
+            
+            
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

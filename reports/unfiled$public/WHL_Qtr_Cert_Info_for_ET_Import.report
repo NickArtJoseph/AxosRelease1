@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Email_Address__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account$SFR_TPO_IPL_Account_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Warehouse</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>WHL Qtr Cert Info for ET Import</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>WHL_Quarterly_Cert_Info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Effective_Date_InsuranceCo__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

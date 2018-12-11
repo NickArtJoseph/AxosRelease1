@@ -1,0 +1,9 @@
+The following Lead is assigned to you but has not had any activity or modifications since {!DATEVALUE(Lead.LastModifiedDate)}. If no activity occurs within 30 days of that date, this Lead will be moved to your business lead queue for reassignment.
+
+Lead Name: {!Lead.Name}
+Company: {!Lead.Company}
+Status: {!Lead.Status}
+Source: {!Lead.LeadSource}
+Last Activity: {!Lead.LastModifiedDate}
+
+Link to Lead record: {!Lead.Link}

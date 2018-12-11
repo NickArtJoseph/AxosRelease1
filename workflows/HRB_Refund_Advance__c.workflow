@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Assign_to_HRB_queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>HRB_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Assign to HRB queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HRB_Field_Update_Add_to_Five9_List</fullName>
+        <field>Add_to_f9list_id__c</field>
+        <formula>&quot;a2iL00000005HkwIAE&quot;</formula>
+        <name>HRB Field: Update &quot;Add to Five9 List&quot;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HRB_Field_Update_Delete_From_Five9_Lis</fullName>
+        <description>Update the Five9 List Id manually in each environment</description>
+        <field>Delete_from_f9list_id__c</field>
+        <formula>&quot;a2iL00000005HkwIAE&quot;</formula>
+        <name>HRB Field: Update &quot;Delete From Five9 Lis</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HRB_Refund_Advance_Set_Application_to_Ma</fullName>
+        <description>Set DecisionBy to Manual</description>
+        <field>DecisionBy__c</field>
+        <formula>&quot;MANUAL&quot;</formula>
+        <name>HRB Refund Advance Set Application to Ma</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>HRB_Status_to_APD</fullName>
+        <description>Auto-Update the HRB Status to APD</description>
+        <field>HRBDecision__c</field>
+        <formula>&quot;APD&quot;</formula>
+        <name>HRB Status to APD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MANUAL2APDx</fullName>
+        <field>ManualDecision__c</field>
+        <formula>&quot;APD&quot;</formula>
+        <name>MANUAL2APDx</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Outbound_ANI</fullName>
+        <field>Outbound_ANI__c</field>
+        <formula>CASE( LEFT( Client_Preferred_Phone__c , 3),
+&quot;201&quot;,&quot;201&quot;&amp;&quot;5555669&quot;,
+&quot;202&quot;,&quot;202&quot;&amp;&quot;5555669&quot;,
+&quot;203&quot;,&quot;203&quot;&amp;&quot;5555669&quot;,
+&quot;205&quot;,&quot;205&quot;&amp;&quot;5555669&quot;,
+&quot;206&quot;,&quot;206&quot;&amp;&quot;5555669&quot;,
+&quot;207&quot;,&quot;207&quot;&amp;&quot;5555669&quot;,
+&quot;208&quot;,&quot;208&quot;&amp;&quot;5555669&quot;,
+&quot;209&quot;,&quot;209&quot;&amp;&quot;5555669&quot;,
+&quot;210&quot;,&quot;210&quot;&amp;&quot;5555669&quot;,
+&quot;212&quot;,&quot;212&quot;&amp;&quot;5555669&quot;,
+&quot;213&quot;,&quot;213&quot;&amp;&quot;5555669&quot;,
+&quot;214&quot;,&quot;214&quot;&amp;&quot;5555669&quot;,
+&quot;215&quot;,&quot;215&quot;&amp;&quot;5555669&quot;,
+&quot;216&quot;,&quot;216&quot;&amp;&quot;5555669&quot;,
+&quot;217&quot;,&quot;217&quot;&amp;&quot;5555669&quot;,
+&quot;218&quot;,&quot;218&quot;&amp;&quot;5555669&quot;,
+&quot;219&quot;,&quot;219&quot;&amp;&quot;5555669&quot;,
+&quot;220&quot;,&quot;220&quot;&amp;&quot;5555669&quot;,
+&quot;224&quot;,&quot;224&quot;&amp;&quot;5555669&quot;,
+&quot;225&quot;,&quot;225&quot;&amp;&quot;5555669&quot;,
+&quot;228&quot;,&quot;228&quot;&amp;&quot;5555669&quot;,
+&quot;229&quot;,&quot;229&quot;&amp;&quot;5555669&quot;,
+&quot;231&quot;,&quot;231&quot;&amp;&quot;5555669&quot;,
+&quot;234&quot;,&quot;234&quot;&amp;&quot;5555669&quot;,
+&quot;239&quot;,&quot;239&quot;&amp;&quot;5555669&quot;,
+&quot;240&quot;,&quot;240&quot;&amp;&quot;5555669&quot;,
+&quot;248&quot;,&quot;248&quot;&amp;&quot;5555669&quot;,
+&quot;251&quot;,&quot;251&quot;&amp;&quot;5555669&quot;,
+&quot;252&quot;,&quot;252&quot;&amp;&quot;5555669&quot;,
+&quot;253&quot;,&quot;253&quot;&amp;&quot;5555669&quot;,
+&quot;254&quot;,&quot;254&quot;&amp;&quot;5555669&quot;,
+&quot;256&quot;,&quot;256&quot;&amp;&quot;5555669&quot;,
+&quot;260&quot;,&quot;260&quot;&amp;&quot;5555669&quot;,
+&quot;262&quot;,&quot;262&quot;&amp;&quot;5555669&quot;,
+&quot;267&quot;,&quot;267&quot;&amp;&quot;5555669&quot;,
+&quot;269&quot;,&quot;269&quot;&amp;&quot;5555669&quot;,
+&quot;270&quot;,&quot;270&quot;&amp;&quot;5555669&quot;,
+&quot;272&quot;,&quot;272&quot;&amp;&quot;5555669&quot;,
+&quot;276&quot;,&quot;276&quot;&amp;&quot;5555669&quot;,
+&quot;281&quot;,&quot;281&quot;&amp;&quot;5555669&quot;,
+&quot;301&quot;,&quot;301&quot;&amp;&quot;5555669&quot;,
+&quot;302&quot;,&quot;302&quot;&amp;&quot;5555669&quot;,
+&quot;303&quot;,&quot;303&quot;&amp;&quot;5555669&quot;,
+&quot;304&quot;,&quot;304&quot;&amp;&quot;5555669&quot;,
+&quot;305&quot;,&quot;305&quot;&amp;&quot;5555669&quot;,
+&quot;307&quot;,&quot;307&quot;&amp;&quot;5555669&quot;,
+&quot;308&quot;,&quot;308&quot;&amp;&quot;5555669&quot;,
+&quot;309&quot;,&quot;309&quot;&amp;&quot;5555669&quot;,
+&quot;310&quot;,&quot;310&quot;&amp;&quot;5555669&quot;,
+&quot;312&quot;,&quot;312&quot;&amp;&quot;5555669&quot;,
+&quot;313&quot;,&quot;313&quot;&amp;&quot;5555669&quot;,
+&quot;314&quot;,&quot;314&quot;&amp;&quot;5555669&quot;,
+&quot;315&quot;,&quot;315&quot;&amp;&quot;5555669&quot;,
+&quot;316&quot;,&quot;316&quot;&amp;&quot;5555669&quot;,
+&quot;317&quot;,&quot;317&quot;&amp;&quot;5555669&quot;,
+&quot;318&quot;,&quot;318&quot;&amp;&quot;5555669&quot;,
+&quot;319&quot;,&quot;319&quot;&amp;&quot;5555669&quot;,
+&quot;320&quot;,&quot;320&quot;&amp;&quot;5555669&quot;,
+&quot;321&quot;,&quot;321&quot;&amp;&quot;5555669&quot;,
+&quot;323&quot;,&quot;323&quot;&amp;&quot;5555669&quot;,
+&quot;325&quot;,&quot;325&quot;&amp;&quot;5555669&quot;,
+&quot;330&quot;,&quot;330&quot;&amp;&quot;5555669&quot;,
+&quot;331&quot;,&quot;331&quot;&amp;&quot;5555669&quot;,
+&quot;332&quot;,&quot;332&quot;&amp;&quot;5555669&quot;,
+&quot;334&quot;,&quot;334&quot;&amp;&quot;5555669&quot;,
+&quot;336&quot;,&quot;336&quot;&amp;&quot;5555669&quot;,
+&quot;337&quot;,&quot;337&quot;&amp;&quot;5555669&quot;,
+&quot;339&quot;,&quot;339&quot;&amp;&quot;5555669&quot;,
+&quot;346&quot;,&quot;346&quot;&amp;&quot;5555669&quot;,
+&quot;347&quot;,&quot;347&quot;&amp;&quot;5555669&quot;,
+&quot;351&quot;,&quot;351&quot;&amp;&quot;5555669&quot;,
+&quot;352&quot;,&quot;352&quot;&amp;&quot;5555669&quot;,
+&quot;360&quot;,&quot;360&quot;&amp;&quot;5555669&quot;,
+&quot;361&quot;,&quot;361&quot;&amp;&quot;5555669&quot;,
+&quot;364&quot;,&quot;364&quot;&amp;&quot;5555669&quot;,
+&quot;380&quot;,&quot;380&quot;&amp;&quot;5555669&quot;,
+&quot;385&quot;,&quot;385&quot;&amp;&quot;5555669&quot;,
+&quot;386&quot;,&quot;386&quot;&amp;&quot;5555669&quot;,
+&quot;401&quot;,&quot;401&quot;&amp;&quot;5555669&quot;,
+&quot;402&quot;,&quot;402&quot;&amp;&quot;5555669&quot;,
+&quot;404&quot;,&quot;404&quot;&amp;&quot;5555669&quot;,
+&quot;405&quot;,&quot;405&quot;&amp;&quot;5555669&quot;,
+&quot;406&quot;,&quot;406&quot;&amp;&quot;5555669&quot;,
+&quot;407&quot;,&quot;407&quot;&amp;&quot;5555669&quot;,
+&quot;408&quot;,&quot;408&quot;&amp;&quot;5555669&quot;,
+&quot;409&quot;,&quot;409&quot;&amp;&quot;5555669&quot;,
+&quot;410&quot;,&quot;410&quot;&amp;&quot;5555669&quot;,
+&quot;412&quot;,&quot;412&quot;&amp;&quot;5555669&quot;,
+&quot;413&quot;,&quot;413&quot;&amp;&quot;5555669&quot;,
+&quot;414&quot;,&quot;414&quot;&amp;&quot;5555669&quot;,
+&quot;415&quot;,&quot;415&quot;&amp;&quot;5555669&quot;,
+&quot;417&quot;,&quot;417&quot;&amp;&quot;5555669&quot;,
+&quot;419&quot;,&quot;419&quot;&amp;&quot;5555669&quot;,
+&quot;423&quot;,&quot;423&quot;&amp;&quot;5555669&quot;,
+&quot;424&quot;,&quot;424&quot;&amp;&quot;5555669&quot;,
+&quot;425&quot;,&quot;425&quot;&amp;&quot;5555669&quot;,
+&quot;430&quot;,&quot;430&quot;&amp;&quot;5555669&quot;,
+&quot;432&quot;,&quot;432&quot;&amp;&quot;5555669&quot;,
+&quot;434&quot;,&quot;434&quot;&amp;&quot;5555669&quot;,
+&quot;435&quot;,&quot;435&quot;&amp;&quot;5555669&quot;,
+&quot;440&quot;,&quot;440&quot;&amp;&quot;5555669&quot;,
+&quot;442&quot;,&quot;442&quot;&amp;&quot;5555669&quot;,
+&quot;443&quot;,&quot;443&quot;&amp;&quot;5555669&quot;,
+&quot;458&quot;,&quot;458&quot;&amp;&quot;5555669&quot;,
+&quot;463&quot;,&quot;463&quot;&amp;&quot;5555669&quot;,
+&quot;469&quot;,&quot;469&quot;&amp;&quot;5555669&quot;,
+&quot;470&quot;,&quot;470&quot;&amp;&quot;5555669&quot;,
+&quot;475&quot;,&quot;475&quot;&amp;&quot;5555669&quot;,
+&quot;478&quot;,&quot;478&quot;&amp;&quot;5555669&quot;,
+&quot;479&quot;,&quot;479&quot;&amp;&quot;5555669&quot;,
+&quot;480&quot;,&quot;480&quot;&amp;&quot;5555669&quot;,
+&quot;484&quot;,&quot;484&quot;&amp;&quot;5555669&quot;,
+&quot;501&quot;,&quot;501&quot;&amp;&quot;5555669&quot;,
+&quot;502&quot;,&quot;502&quot;&amp;&quot;5555669&quot;,
+&quot;503&quot;,&quot;503&quot;&amp;&quot;5555669&quot;,
+&quot;504&quot;,&quot;504&quot;&amp;&quot;5555669&quot;,
+&quot;505&quot;,&quot;505&quot;&amp;&quot;5555669&quot;,
+&quot;507&quot;,&quot;507&quot;&amp;&quot;5555669&quot;,
+&quot;508&quot;,&quot;508&quot;&amp;&quot;5555669&quot;,
+&quot;509&quot;,&quot;509&quot;&amp;&quot;5555669&quot;,
+&quot;510&quot;,&quot;510&quot;&amp;&quot;5555669&quot;,
+&quot;512&quot;,&quot;512&quot;&amp;&quot;5555669&quot;,
+&quot;513&quot;,&quot;513&quot;&amp;&quot;5555669&quot;,
+&quot;515&quot;,&quot;515&quot;&amp;&quot;5555669&quot;,
+&quot;516&quot;,&quot;516&quot;&amp;&quot;5555669&quot;,
+&quot;517&quot;,&quot;517&quot;&amp;&quot;5555669&quot;,
+&quot;518&quot;,&quot;518&quot;&amp;&quot;5555669&quot;,
+&quot;520&quot;,&quot;520&quot;&amp;&quot;5555669&quot;,
+&quot;530&quot;,&quot;530&quot;&amp;&quot;5555669&quot;,
+&quot;531&quot;,&quot;531&quot;&amp;&quot;5555669&quot;,
+&quot;534&quot;,&quot;534&quot;&amp;&quot;5555669&quot;,
+&quot;539&quot;,&quot;539&quot;&amp;&quot;5555669&quot;,
+&quot;540&quot;,&quot;540&quot;&amp;&quot;5555669&quot;,
+&quot;541&quot;,&quot;541&quot;&amp;&quot;5555669&quot;,
+&quot;551&quot;,&quot;551&quot;&amp;&quot;5555669&quot;,
+&quot;9515555669&quot;)</formula>
+        <name>Update Outbound ANI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Phone_Number</fullName>
+        <field>IRS_Phone_Number__c</field>
+        <formula>CASE(RIGHT(Id  , 1), 
+&quot;A&quot;,&quot;5995555570&quot;,
+&quot;B&quot;,&quot;5995555571&quot;,
+&quot;C&quot;,&quot;5995555572&quot;,
+&quot;D&quot;,&quot;5995555573&quot;,
+&quot;E&quot;,&quot;5995555574&quot;,
+&quot;F&quot;,&quot;5995555575&quot;,
+&quot;G&quot;,&quot;5995555576&quot;,
+&quot;H&quot;,&quot;5995555577&quot;,
+&quot;I&quot;,&quot;5995555578&quot;,
+&quot;J&quot;,&quot;5995555579&quot;,
+&quot;K&quot;,&quot;5995555580&quot;,
+&quot;L&quot;,&quot;5995555581&quot;,
+&quot;M&quot;,&quot;5995555582&quot;,
+&quot;N&quot;,&quot;5995555583&quot;,
+&quot;O&quot;,&quot;5995555584&quot;,
+&quot;P&quot;,&quot;5995555585&quot;,
+&quot;Q&quot;,&quot;5995555586&quot;,
+&quot;R&quot;,&quot;5995555587&quot;,
+&quot;S&quot;,&quot;5995555588&quot;,
+&quot;T&quot;,&quot;5995555589&quot;,
+&quot;U&quot;,&quot;5995555590&quot;,
+&quot;V&quot;,&quot;5995555591&quot;,
+&quot;W&quot;,&quot;5995555592&quot;,
+&quot;X&quot;,&quot;5995555593&quot;,
+&quot;Y&quot;,&quot;5995555594&quot;,
+&quot;Z&quot;,&quot;5995555595&quot;,
+&quot;a&quot;,&quot;5995555596&quot;,
+&quot;b&quot;,&quot;5995555597&quot;,
+&quot;c&quot;,&quot;5995555598&quot;,
+&quot;d&quot;,&quot;5995555599&quot;,
+&quot;e&quot;,&quot;5995555600&quot;,
+&quot;f&quot;,&quot;5995555601&quot;,
+&quot;g&quot;,&quot;5995555602&quot;,
+&quot;h&quot;,&quot;5995555603&quot;,
+&quot;i&quot;,&quot;5995555604&quot;,
+&quot;j&quot;,&quot;5995555605&quot;,
+&quot;k&quot;,&quot;5995555606&quot;,
+&quot;l&quot;,&quot;5995555607&quot;,
+&quot;m&quot;,&quot;5995555608&quot;,
+&quot;n&quot;,&quot;5995555609&quot;,
+&quot;o&quot;,&quot;5995555610&quot;,
+&quot;p&quot;,&quot;5995555611&quot;,
+&quot;q&quot;,&quot;5995555612&quot;,
+&quot;r&quot;,&quot;5995555613&quot;,
+&quot;s&quot;,&quot;5995555614&quot;,
+&quot;t&quot;,&quot;5995555615&quot;,
+&quot;u&quot;,&quot;5995555616&quot;,
+&quot;v&quot;,&quot;5995555617&quot;,
+&quot;w&quot;,&quot;5995555618&quot;,
+&quot;x&quot;,&quot;5995555619&quot;,
+&quot;y&quot;,&quot;5995555620&quot;,
+&quot;z&quot;,&quot;5995555621&quot;,
+&quot;1&quot;,&quot;5995555622&quot;,
+&quot;2&quot;,&quot;5995555623&quot;,
+&quot;3&quot;,&quot;5995555624&quot;,
+&quot;4&quot;,&quot;5995555625&quot;,
+&quot;5&quot;,&quot;5995555626&quot;,
+&quot;6&quot;,&quot;5995555627&quot;,
+&quot;7&quot;,&quot;5995555628&quot;,
+&quot;8&quot;,&quot;5995555629&quot;,
+&quot;9&quot;,&quot;5995555630&quot;,
+&quot;0&quot;,&quot;5995555631&quot;,
+&quot;5995555632&quot;)</formula>
+        <name>Update Phone Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>return_to_queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>HRB_Queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>return to queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>jdenton@bofi.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>update owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>xMiddleName</fullName>
+        <description>Put WORKFLOW in the MiddleName field</description>
+        <field>Middle_Name__c</field>
+        <formula>&quot;WORKFLOW &quot; + Middle_Name__c</formula>
+        <name>xMiddleName</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>HRB Creation Workflow</fullName>
+        <actions>
+            <name>Assign_to_HRB_queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Outbound_ANI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Phone_Number</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.Refund_Advance_Application_ID__c</field>
+            <operation>notEqual</operation>
+            <value>X</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.ManualDecision__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.DecisionBy__c</field>
+            <operation>equals</operation>
+            <value>MANUAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>HRB Refund Advance Auto Approve Application</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>APD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>DCL</value>
+        </criteriaItems>
+        <description>Set HRBDecision to APD after 20 hours if it hasn&apos;t been worked by an Agent.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>HRB_Status_to_APD</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>update_owner</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>xMiddleName</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>HRB_Refund_Advance__c.CreatedAt__c</offsetFromField>
+            <timeLength>20</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <offsetFromField>HRB_Refund_Advance__c.CreatedAt__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>HRB Refund Advance Auto Approve Application 2</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>APD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>DCL</value>
+        </criteriaItems>
+        <description>Set HRBDecision to APD after 20 hours if it hasn&apos;t been worked by an Agent. (built to replace the existing one)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>HRB_Status_to_APD</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>update_owner</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>xMiddleName</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>HRB_Refund_Advance__c.CreatedAt__c</offsetFromField>
+            <timeLength>20</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>HRB Refund Advance Set Application to Manual after 1 hour</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.DecisionBy__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>HRB_Refund_Advance_Set_Application_to_Ma</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>HRB_Refund_Advance__c.CreatedAt__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>HRB Refund Advance Set Application to Manual after 3 hours</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>APD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>notEqual</operation>
+            <value>DCL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.DecisionBy__c</field>
+            <operation>equals</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>HRB_Refund_Advance_Set_Application_to_Ma</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>HRB_Refund_Advance__c.CreatedAt__c</offsetFromField>
+            <timeLength>3</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>HRB%3A Add to Five9 List</fullName>
+        <actions>
+            <name>HRB_Field_Update_Add_to_Five9_List</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.ManualDecision__c</field>
+            <operation>notEqual</operation>
+            <value>ADP,DCL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.DecisionBy__c</field>
+            <operation>equals</operation>
+            <value>MANUAL</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>HRB%3A Remove from Five9 List</fullName>
+        <actions>
+            <name>HRB_Field_Update_Delete_From_Five9_Lis</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.ManualDecision__c</field>
+            <operation>equals</operation>
+            <value>ADP,DCL</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>HRBAgentTimeout</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.ManualDecision__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.DecisionBy__c</field>
+            <operation>equals</operation>
+            <value>MANUAL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HRB_Refund_Advance__c.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>HRB queue</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Assign_to_HRB_queue</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>HRB_Refund_Advance__c.LastModifiedDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

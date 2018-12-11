@@ -1,0 +1,30 @@
+<apex:page controller="ReferralTypeSFDC2Controller">
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+<apex:form >
+	<apex:pageBlock title="Select a Referral Type">
+		<div id="newOppDetail" style="display:{!if(checkUser&&checkAccess,'block','none')};">
+			<apex:pageBlockSection >
+				<apex:selectList id="ReferTo" size="1" value="{!ReferTo}" title="Refer To">
+					<apex:selectOptions value="{!ReferToList}" />
+				</apex:selectList>
+				<apex:inputTextArea id="Notes" value="{!Notes}" label="Notes" style="width:360px; height:100px"/>
+			</apex:pageBlockSection>
+		</div>
+		<div id="newOppDetail" style="display:{!if(checkAccess,'none','block')};">
+		<apex:outputText style="color:red" value="You have access to create all SFDC2 Opportunities directly."/>
+		</div>
+		<div id="newOppDetail" style="display:{!if(!checkAccess || checkUser,'none','block')};">
+		<apex:outputText style="color:red" value="In order to create a referral, you must be the owner of an open Opportunity"/>
+		</div>
+		<apex:pageBlockButtons >
+			<div id="newOppCreate" style="display:{!if(checkUser&&checkAccess,'block','none')};">
+				<apex:commandButton action="{!create}" value="Create Referral"/>
+				<apex:commandButton action="{!cancel}" value="Cancel"/>
+			</div>
+			<div id="newOppCreate" style="display:{!if(checkUser&&checkAccess,'none','block')};">
+				<apex:commandButton action="{!cancel}" value="Cancel"/>
+			</div>
+		</apex:pageblockButtons>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

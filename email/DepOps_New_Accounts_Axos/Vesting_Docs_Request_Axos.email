@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial">Thank you for contacting Axos Bank™. We have received your change request. Please provide the following items for review so that we may process your request:</font></span></p><p><ul><li>[ENTER ITEMS]</li></ul></p><p><span style="font-size: 12pt;"><font face="arial">Submit your pending items by using our secure message system through online banking.<br><br></font></span></p><p><span style="font-size: 12pt;"><font face="arial">Please Note: If the requested information is not returned by **/**/**** (30 days from the initial request), the request will be cancelled in its entirety. <br><br></font></span></p><p></p><span style="font-size: 12pt;"><p></p><font face="arial"><p><b>Questions? </b>If you have any questions, please call us at (888) 502-2967 or email us at <a href="mailto:customerservice@axosbank.com"><u><font color="#0000ff">customerservice@axosbank.com</font></u></a></p><p><br><br></p></font><p></p></span><p></p><p><span style="font-size: 12pt;"><font face="arial">We appreciate your business and commit to delivering value that will make Axos Bank your first choice for all your banking needs.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank </font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

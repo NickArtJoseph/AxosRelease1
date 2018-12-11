@@ -1,0 +1,46 @@
+<apex:page controller="nFORCE.TemplateController" extensions="nFORCE.Navigation" showHeader="false" standardStylesheets="false">
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+
+	<c:ncPubsubIncludes />
+	<c:ncDataProvidersIncludes />
+	<c:ncUIIncludes />
+
+	<apex:styleSheet value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'css/Style.css')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'application/Bootstrap.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'components/SecondaryNavigation.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'components/SecondaryNavigationItem.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'providers/SecondaryNavigationRemoting.provider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncSecondaryNavigation, 'services/SecondaryNavigation.service.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncNavigation, 'services/Navigation.service.js')}" />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'providers/TertiaryNavigationRemoting.provider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncTertiaryNavigation, 'services/TertiaryNavigation.service.js')}" />
+
+	<div id="ncSecondaryNavigation">
+		<nc-secondary-navigation
+			context-id="{!contextObjectId}"
+			current-page="{!host}/apex/{!$Currentpage.Name}"
+			app-resolved="{!appResolved}"
+			session-id="{!$CurrentPage.parameters.sid}">
+		</nc-secondary-navigation>
+
+		<c:ncSecondaryNavigationPartials />
+
+		<script>
+			(function(){
+				'use strict';
+				angular.module('ncSecondaryNavigation')
+				.config(function(secondaryNavigationRemotingProvider){
+					secondaryNavigationRemotingProvider.setEndpoint({
+						getMenu: '{!$RemoteAction.Navigation.getMenu}'
+					});
+				});
+			})();
+		</script>
+	</div>
+</apex:page>

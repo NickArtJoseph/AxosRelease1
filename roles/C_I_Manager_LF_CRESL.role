@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>C&amp;I Manager - LF &amp; CRESL</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>C&amp;I Manager - LF &amp; CRESL</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>C_I_Director</parentRole>
+</Role>

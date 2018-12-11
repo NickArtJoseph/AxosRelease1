@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Employee_Accounts</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Employee Accounts</label>
+        <sharedTo>
+            <group>Employee_Account_Access</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Loans - Employee,CD - Employee,Deposits - Employee</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketo</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Marketo</label>
+        <sharedTo>
+            <role>Marketo</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CD,Loans,Deposits</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Standard_Financial_Accounts</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Standard Financial Accounts</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CD,Loans,Deposits</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

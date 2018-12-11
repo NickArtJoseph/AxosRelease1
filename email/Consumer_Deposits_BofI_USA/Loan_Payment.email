@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Hello {!Case.Contact},</p><p><br></p><p>Loan payments can be completed by accessing the Manage my Loan webpage by clicking <a href="https://www.bankofinternet.com/customer-support/manage-my-loan">here</a>. You can complete a one time payment, or find information on how to setup automatic payments as well.</p><p><br></p><p>You can also access this site through your browser by:<br></p><ol><li>Visiting <a href="http://www.bankofinternet.com">www.bankofinternet.com</a></li><li>Click on the <i>Login</i>&nbsp;button at the top right.</li><li>Select <i>Pay my Loan</i>.</li></ol><p></p><p>On this page a one time payment can be initiated using your full Loan number and the last four of your Social security number.&nbsp;</p><p><br></p><p><br></p><p>We appreciate your business and commit to providing superior Banking products, support and services.</p><p><br></p><p>Best Regards,</p><p><br></p><p>{!User.FirstName}<br>Bank of Internet&nbsp;Customer Service</p>]]></td>
+</tr>
+</table>

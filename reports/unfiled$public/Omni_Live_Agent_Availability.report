@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>UserServicePresence$ServicePresenceStatus</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusStartDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusEndDate</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$StatusDuration</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>UserServicePresence$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>YESTERDAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$ServicePresenceStatus</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Available_for_Web_Chats</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>UserServicePresence$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Omni - Live Agent Availability</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Omni_Channel_User_Presence__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>UserServicePresence$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

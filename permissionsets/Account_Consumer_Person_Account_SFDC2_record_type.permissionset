@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To assign the record types so that a user can create it. Used with Enterprise User profiles to control which users can create BU specific record types. Business Banking should only be able to create Consumer Account Record Types.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.DealerTrack_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Dealer_Agreement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Dealer_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Dealer_Type_SFDC2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.RouteOne_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Account Consumer Person Account SFDC2 record type</label>
+    <recordTypeVisibilities>
+        <recordType>PersonAccount.Business_Consumer_Person_Account</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>PersonAccount.Consumer_Person_Account_SFDC2</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

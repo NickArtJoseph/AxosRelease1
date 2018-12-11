@@ -1,0 +1,37 @@
+<apex:page controller="nFORCE.RouteController" standardStylesheets="false" showHeader="false" sideBar="false">
+	<c:Include_Messenger />
+	<c:Includes enableBootstrap3="true" enableFontAwesome="true" enableBS3Namespace="true" enableLifeCycleApp="true" runLifeCycleApp="false" includeIEHacks="false"/>
+	<c:Include_Design_System flavor="bs3" />
+	<c:Include_Design_System flavor="vf" />
+	<c:Include_Navigator />
+	<c:Define_UI_Framework_Labels />
+
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ui_topics)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.5.7/angular.min.js')}" />
+
+	<c:Layout_Functions />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__layoutDesigner_bundle)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__messagehandler_app)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__messagehandler_viewModel)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__messagehandler_configurations)}" />
+
+	<div class="force slds">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="body-content">
+					<apex:include pageName="{!route.Body__c}" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<c:Run_LifeCycleApp />
+	<script>
+		var appIndex = window.location.search.indexOf('app=') + 4;
+		var newApp = window.location.search.substring(
+			appIndex,
+			window.location.search.indexOf('&', appIndex)
+		);
+		Messenger.publish(LifeCycle.Topics.REFRESH_SECONDARY_NAVIGATION, newApp);
+		Messenger.publish(LifeCycle.Topics.REFRESH_TERTIARY_NAVIGATION, newApp);
+	</script>
+</apex:page>

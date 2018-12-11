@@ -1,0 +1,30 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>We invite you to fund your account by using one of the
+following methods:<br></font></p><div style="text-indent: 0px;"><ol style="color: rgb(0, 0, 0);"><li><b style="font-family: Arial, sans-serif; font-size: 12pt; text-indent: -2.25pt;">Direct Deposit </b><span style="font-family: Arial, sans-serif; font-size: 12pt; text-indent: -2.25pt;">(you may have your payroll or
+government payments deposited directly into your account.</span></li><li>Have another financial institution initiate a
+transfer of funds to our Bank (BofI Federal Bank ABA/Routing Transit Number –
+<b style="font-size: 12pt; text-indent: -2.25pt; font-family: Arial, sans-serif;">122287251</b><span style="font-size: 12pt; text-indent: -2.25pt; font-family: Arial, sans-serif;">).</span></li><li>Scan a check via <b style="text-indent: -2.25pt;">MyDeposit</b><span style="text-indent: -2.25pt;"> in Online Banking</span></li><li><b style="text-indent: -2.25pt;">Mobile Deposit</b><span style="text-indent: -2.25pt;">; deposit your check using your
+iPhone or Android phone through our Mobile Banking App.</span></li><li>Mail a check to <b style="text-indent: -2.25pt;">BOFI Federal Bank, P.O. Box
+509127, San Diego, CA 92150-9948.</b><span style="text-indent: -2.25pt;">&nbsp; You
+can order postage-paid, self-addressed envelopes through our website; from the
+Home page; hover over Customer Support, click on Deposit Slips/Envelopes, and
+fill out the order form.</span></li><li>Cash deposits are accepted through the <b style="text-indent: -2.25pt;">Reload @
+the Register</b><span style="text-indent: -2.25pt;"> service at any participating store. Visit </span><a href="http://www.attheregister.com/cashreload" style="text-indent: -2.25pt;">www.attheregister.com/cashreload</a><span style="text-indent: -2.25pt;">
+and click on </span><i style="text-indent: -2.25pt;">Find a Store Location. </i><span style="text-indent: -2.25pt;">Visit
+any participating location with your Debit card and ask to load cash into your
+account at the register. In addition to your deposit there is a reload fee of
+up to $4.95. You can also make cash deposits if you are a local resident of San
+Diego, CA by visiting our physical location.</span></li></ol><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><span style="text-indent: -2.25pt;"></span><span style="text-indent: -2.25pt;">We appreciate your business and commit to providing superior
+Banking products, support and services.<br></span></font><span style="font-size: 12pt; text-indent: -3px; font-family: Arial, sans-serif;"><br>Best Regards,</span><span style="font-family: Arial, sans-serif; font-size: 12pt;"><div style="text-indent: -3px;"><span style="text-indent: 0px;">{!User.FirstName}</span><span style="font-size: 12pt;"><br><div style="color: rgb(0, 0, 0); text-indent: -3px;"><font color="#ff0000" style="font-size: 12pt; text-indent: 0px;">[INSERT BRAND]&nbsp;</font><span style="font-size: 12pt; text-indent: 0px;">Customer Service</span></div></span></div></span></div><p style="color: rgb(0, 0, 0);"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial">Thank you for choosing [INSERT BRAND]. During the account opening process, you selected to fund your account using an ACH transfer from another bank. As a reminder, before your new account can be opened, there are just a few more steps you need to complete: <br><br>•&nbsp;As part of the initial funding process, two small deposits have been made to the account you selected to fund your new account. Please review that account's recent transaction activity and note the amounts of these deposits. <br>•&nbsp;When you see the deposits and have noted their amounts, click on this link to verify your account. You will then be prompted to verify the account by indicating the amounts of the deposits. <br><br>When you have successfully completed this final step, your new account will be active and your initial deposit will be processed. <br><br>We appreciate your business and commit to delivering the value that will make [INSERT BRAND] your first choice for all your banking needs. <br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

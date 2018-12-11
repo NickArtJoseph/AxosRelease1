@@ -1,0 +1,142 @@
+<apex:page standardController="Account" extensions="LLC_BI.VF_DocManController">
+
+    <applet name="docManager"
+        code="com/jensyn/liveoak/ClosingChecklistApplet.class"
+        codebase="{!$Resource.closingChecklistApplet}/"
+        archive="{!$Resource.closingChecklistApplet}/liveoak-docmanager-applet.jar,{!$Resource.docManagerLibs}/jacob-1.15-M3.jar,{!$Resource.docManagerLibs}/jcalendar-1.3.2.jar,{!$Resource.sfapi}/liveoak-salesforce-api.jar,{!$Resource.docManagerLibs}/glazedlists_java15-1.8.0.jar,{!$Resource.docManagerLibs}/miglayout-3.7.3.1.jar,{!$Resource.docManagerLibs}/commons-logging-1.1.1.jar,{!$Resource.libAxis2}/axis2-kernel-1.5.1.jar,{!$Resource.libAxis2}/axiom-api-1.2.8.jar,{!$Resource.libAxis2}/axiom-impl-1.2.8.jar,{!$Resource.libAxis2}/commons-httpclient-3.1.jar,{!$Resource.libAxis2}/wsdl4j-1.6.2.jar,{!$Resource.libAxis2}/XmlSchema-1.4.3.jar,{!$Resource.libAxis2}/neethi-2.0.4.jar,{!$Resource.libAxis2}/woden-api-1.0M8.jar,{!$Resource.libAxis2}/woden-impl-dom-1.0M8.jar,{!$Resource.libAxis2}/axis2-adb-1.5.1.jar,{!$Resource.libAxis2}/activation-1.1.jar,{!$Resource.libAxis2}/axis2-transport-http-1.5.1.jar,{!$Resource.libAxis2}/axis2-transport-local-1.5.1.jar,{!$Resource.libAxis2}/axis2-transport-base-1.0.0.jar,{!$Resource.libAxis2}/mail-1.4.jar,{!$Resource.libAxis2}/httpcore-4.0.jar,{!$Resource.libAxis2}/commons-codec-1.2.jar"
+        mayscript="true" scriptable="true" width="100%" height="400">
+        <!--<PARAM NAME="java_arguments" VALUE="-Djnlp.packEnabled=true"/>-->
+        <param name="sid" value="{!$Api.Session_ID}" />
+        <param name="sUrl" value="{!$Api.Enterprise_Server_URL_210}" />
+        <param name="ownerObjectId" value="{!Account.Id}" />
+        <param name="docManager.name" value="Account" />
+        <param name="userRole.Name" value="{!$UserRole.Name}" />
+        <param name="user.username" value="{!$User.Username}" />
+        <param name="user.id" value="{!$User.Id}" />
+        <param name="reviewerRoles" value="{!dmReviewerRoles}" />
+        <param name="jacobX86Url" value="{!$Resource.jacob_x86_dll}" />
+    </applet>
+ 
+    <script type="text/javascript">
+    
+    
+var BrowserDetect = {
+    init: function () {
+        this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+        this.version = this.searchVersion(navigator.userAgent)
+            || this.searchVersion(navigator.appVersion)
+            || "an unknown version";
+        this.OS = this.searchString(this.dataOS) || "an unknown OS";
+        document.docManager.setBrowser(this.browser,this.version,this.OS);
+    },
+    searchString: function (data) {
+        for (var i=0;i<data.length;i++) {
+            var dataString = data[i].string;
+            var dataProp = data[i].prop;
+            this.versionSearchString = data[i].versionSearch || data[i].identity;
+            if (dataString) {
+                if (dataString.indexOf(data[i].subString) != -1)
+                    return data[i].identity;
+            }
+            else if (dataProp)
+                return data[i].identity;
+        }
+    },
+    searchVersion: function (dataString) {
+        var index = dataString.indexOf(this.versionSearchString);
+        if (index == -1) return;
+        return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+    },
+    dataBrowser: [
+        {
+            string: navigator.userAgent,
+            subString: "Chrome",
+            identity: "Chrome"
+        },
+        {   string: navigator.userAgent,
+            subString: "OmniWeb",
+            versionSearch: "OmniWeb/",
+            identity: "OmniWeb"
+        },
+        {
+            string: navigator.vendor,
+            subString: "Apple",
+            identity: "Safari",
+            versionSearch: "Version"
+        },
+        {
+            prop: window.opera,
+            identity: "Opera"
+        },
+        {
+            string: navigator.vendor,
+            subString: "iCab",
+            identity: "iCab"
+        },
+        {
+            string: navigator.vendor,
+            subString: "KDE",
+            identity: "Konqueror"
+        },
+        {
+            string: navigator.userAgent,
+            subString: "Firefox",
+            identity: "Firefox"
+        },
+        {
+            string: navigator.vendor,
+            subString: "Camino",
+            identity: "Camino"
+        },
+        {       // for newer Netscapes (6+)
+            string: navigator.userAgent,
+            subString: "Netscape",
+            identity: "Netscape"
+        },
+        {
+            string: navigator.userAgent,
+            subString: "MSIE",
+            identity: "Explorer",
+            versionSearch: "MSIE"
+        },
+        {
+            string: navigator.userAgent,
+            subString: "Gecko",
+            identity: "Mozilla",
+            versionSearch: "rv"
+        },
+        {       // for older Netscapes (4-)
+            string: navigator.userAgent,
+            subString: "Mozilla",
+            identity: "Netscape",
+            versionSearch: "Mozilla"
+        }
+    ],
+    dataOS : [
+        {
+            string: navigator.platform,
+            subString: "Win",
+            identity: "Windows"
+        },
+        {
+            string: navigator.platform,
+            subString: "Mac",
+            identity: "Mac"
+        },
+        {
+               string: navigator.userAgent,
+               subString: "iPhone",
+               identity: "iPhone/iPod"
+        },
+        {
+            string: navigator.platform,
+            subString: "Linux",
+            identity: "Linux"
+        }
+    ]
+
+};
+BrowserDetect.init();
+    </script>
+    
+</apex:page>

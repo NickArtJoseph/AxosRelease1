@@ -1,0 +1,18 @@
+<apex:page showHeader="true" sidebar="true" standardController="LiveChatTranscript">
+	<apex:includeScript value="/support/console/43.0/integration.js"/>
+
+	<apex:detail subject="{! LiveChatTranscript.Id }" inlineEdit="false" />
+
+	<script type="text/javascript">
+		// Disable Tab Close when the Chat Result is Empty
+		var chatName   = '{! LiveChatTranscript.Name }';
+		var chatStatus = '{! LiveChatTranscript.Status }';
+		var chatDisposition = '{! LiveChatTranscript.ChatDisposition__c }';
+
+		sforce.console.setTabTitle(chatName);
+
+		// Disable tab close based on conditions
+		var shouldDisableTabClose = ( chatStatus === 'InProgress' && !chatDisposition );
+        sforce.console.disableTabClose(shouldDisableTabClose, false);
+	</script>
+</apex:page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Please disable edit rights for the TPO Account fields &apos;Last App Received&apos; and &apos;Last Funded&apos; for all TPO users other than Eric Nelepovitz and myself.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Last_App_Received__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Last_Funded__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Edit rights to  &apos;Last App Received&apos; and &apos;Last Funded&apos; Ticket #58909</label>
+    <license>Salesforce</license>
+</PermissionSet>

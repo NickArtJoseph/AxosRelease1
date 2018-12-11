@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>As a C&amp;I User, I need a Button so that I can submit Boarding Forms for Pre-Approval.</description>
+    <height>80</height>
+    <label>Submit for Pre-Approval</label>
+    <lightningComponent>SubmmitForPreApproval</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>

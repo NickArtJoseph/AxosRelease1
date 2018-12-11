@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to specific users when Hearing Date field is updated and value is 7 days out</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF- Hearing Date - 7 Day Reminder</name>
+    <style>none</style>
+    <subject>{!Opportunity.Account}: Hearing Date Reminder</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

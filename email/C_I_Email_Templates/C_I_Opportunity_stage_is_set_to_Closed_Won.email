@@ -1,0 +1,7 @@
+The loan boarding for {!Opportunity.CI_Borrower_Legal_Name__c}, {!Opportunity.CI_Loan_NumberCopy__c} has been finalized. Audit forms and source documents will be provided by Operations within 24 hours. 
+
+{!Opportunity.Link}
+
+Thank you, 
+
+Salesforce

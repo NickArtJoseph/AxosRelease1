@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>nFORCE__UI_Config_Builder</fullName>
+        <availableFields>
+            <field>nFORCE__Has_Visibility_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Is_Default_Context_Child__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used for route group management by the UI Config Builder tool.</description>
+        <displayedFields>
+            <field>nFORCE__Route__r.nFORCE__Screen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Route__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Parent_Route__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Parent_Route__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Route__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Group__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Order__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Forward_Navigation_Disabled__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Hidden__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Visibility_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Conditional_Display_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Config Builder</label>
+    </fieldSets>
+    <fields>
+        <fullName>nFORCE__Conditional_Display_Criteria__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field uses a Forms Lite expression to specify criteria that must be met for this route to become visible to the user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A forms lite expression used to determine the visility of a route within the display.</inlineHelpText>
+        <label>Conditional Display Criteria</label>
+        <length>2048</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Group__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is required. This field specifies the group a route is being linked to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a group.</inlineHelpText>
+        <label>Group</label>
+        <referenceTo>nFORCE__Group__c</referenceTo>
+        <relationshipLabel>Route Groups</relationshipLabel>
+        <relationshipName>Route_Groups</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Has_Visibility_Criteria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is automatically populated via workflow. This field indicates whether or not the Visibility Criteria field has a value.</description>
+        <externalId>false</externalId>
+        <label>Has Visibility Criteria</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Default_Context_Child__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. If enabled, the route this is associated with will be displayed as the default subroute for its parent route—unless its parent route has a self-referencing subroute, in which case the self-referencing subroute is always used as the default. If disabled, the route is not set as the default.</description>
+        <externalId>false</externalId>
+        <label>Is Default Context</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Forward_Navigation_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. If enabled, this field prevents the user from selecting the associated route from left navigation or subnavigation if they are on a route of lower order. The user can still navigate backwards to any route with these navigation options. If disabled, the user is not prevented from using these navigation options.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls ability to use forward routing functionality.</inlineHelpText>
+        <label>Is Forward Navigation Disabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Hidden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field determines whether a route is displayed in the navigation or subnavigation bar. It does not support tools or actions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls route visibility.</inlineHelpText>
+        <label>Is Hidden</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is required. This field specifies the order a route appears on the left navigation or subnavigation bar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The route display order.</inlineHelpText>
+        <label>Order</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_Route__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field specifies the parent route a route is being linked to. If a route has a parent route, it will display in the subnavigation bar for that route. If a parent route is not defined, it will display in the left navigation bar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The parent route record for this junction.</inlineHelpText>
+        <label>Parent Route</label>
+        <referenceTo>nFORCE__Route__c</referenceTo>
+        <relationshipLabel>Child Route Groups</relationshipLabel>
+        <relationshipName>Parent_Route_Groups</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Question_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field specifies a group that is comprised only of questions.</description>
+        <externalId>false</externalId>
+        <label>Question Group</label>
+        <referenceTo>nFORCE__Group__c</referenceTo>
+        <relationshipLabel>Route Groups (Question Group)</relationshipLabel>
+        <relationshipName>Question_Group</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Route__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is required. This field specifies the route a group is being linked to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose a route.</inlineHelpText>
+        <label>Route</label>
+        <referenceTo>nFORCE__Route__c</referenceTo>
+        <relationshipLabel>Route Groups</relationshipLabel>
+        <relationshipName>Route_Groups</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Visibility_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is for a semicolon-separated list of values used to determine the visibility of this route group in the user interface.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A semicolon-separated list of values used to determine the visibility of this route group in the user interface.</inlineHelpText>
+        <label>Visibility Criteria</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Route Group</label>
+    <listViews>
+        <fullName>nFORCE__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>Route Group Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Route Groups</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

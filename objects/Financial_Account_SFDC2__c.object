@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Financial_Account_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to capture customer financial account information for SFDC 2.0 integration</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Count</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <description>Sales Associate on Account</description>
+        <externalId>false</externalId>
+        <label>Account Manager</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Number_Last_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Number (Last 4)</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active_Card__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Card?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Automobile__c</fullName>
+        <externalId>false</externalId>
+        <label>Automobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Branch_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch Id</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CIF__c</fullName>
+        <externalId>false</externalId>
+        <label>CIF</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignAutomationTriggerSFDC2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>SFDC2: Used in time-based workflows for campaign automations that rely on triggers based on dates associated with Financial Account</description>
+        <externalId>false</externalId>
+        <label>CampaignAutomationTriggerSFDC2</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closed_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed Reason</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advisor</fullName>
+                    <default>false</default>
+                    <label>Advisor</label>
+                </value>
+                <value>
+                    <fullName>Auto-Lending</fullName>
+                    <default>false</default>
+                    <label>Auto-Lending</label>
+                </value>
+                <value>
+                    <fullName>Business Banking</fullName>
+                    <default>false</default>
+                    <label>Business Banking</label>
+                </value>
+                <value>
+                    <fullName>Consumer Deposits</fullName>
+                    <default>false</default>
+                    <label>Consumer Deposits</label>
+                </value>
+                <value>
+                    <fullName>Mortgage Lending</fullName>
+                    <default>false</default>
+                    <label>Mortgage Lending</label>
+                </value>
+                <value>
+                    <fullName>Specialty Deposits</fullName>
+                    <default>false</default>
+                    <label>Specialty Deposits</label>
+                </value>
+                <value>
+                    <fullName>Virtus</fullName>
+                    <default>false</default>
+                    <label>Virtus</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Financial_Account_Total_SFDC2__c</fullName>
+        <description>Count of Financial Accounts</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Used to sum or count the number of Financial Accounts</inlineHelpText>
+        <label>Financial Account Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Funding_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>JHA_Record_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>JHA Record ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>JH_Master_Table__c</fullName>
+        <externalId>false</externalId>
+        <label>JH Master Table</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>JhaKeyAccountHash__c</fullName>
+        <externalId>false</externalId>
+        <label>JhaKeyAccountHash</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Statement_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Statement Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner_Email_SFDC2__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup to related Opportunity</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Financial Accounts</relationshipLabel>
+        <relationshipName>Financial_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ownership__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Account_Count__c &gt; 1, &apos;Joint&apos;, &apos;Single&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ownership</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_ACH_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month ACH Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_POS_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month POS Count</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_Rewards_POS_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month Rewards POS Count</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Class</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Sub_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Sub Class</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Promo_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Relationship_Manager_SFDC2__c</fullName>
+        <description>Sales Associate in Jack Henry to map to Relationship Manager on Financial Account</description>
+        <externalId>false</externalId>
+        <label>Relationship Manager</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Retirement_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Retirement Account</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Associate__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Associate</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signature_Card_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Signature Card Received?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Detail</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Id</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trust_Documents_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Trust Documents Received?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Zero_Balance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Zero Balance Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zero_Balance_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Zero Balance Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Financial Account</label>
+    <listViews>
+        <fullName>Advisor_Firm_Financial_Accounts_SFDC2</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Advisor</value>
+        </filters>
+        <label>Advisor Firm Financial Accounts  SFDC2</label>
+        <sharedTo>
+            <group>Advisor_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Product__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Business_Banking_Financial_Account_SFDC2</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Product__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Business Banking</value>
+        </filters>
+        <label>Business Banking Financial Account SFDC2</label>
+        <sharedTo>
+            <group>Business_Banking_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Consumer_Deposit_Financial_Account_SFDC2</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Consumer Deposits</value>
+        </filters>
+        <label>Consumer Deposit Financial Account SFDC2</label>
+        <sharedTo>
+            <group>Consumer_Deposits_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Created_Today</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Created Today</label>
+        <sharedTo>
+            <group>Advisor_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Dealer_Services_Financial_Accounts_SFDC2</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Auto-Lending</value>
+        </filters>
+        <label>Dealer Services Financial Accounts SFDC2</label>
+        <sharedTo>
+            <group>Auto_Lending_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Virtus_Financial_Accounts_SFDC2</fullName>
+        <columns>NAME</columns>
+        <columns>Balance__c</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Department__c</columns>
+        <columns>Status__c</columns>
+        <columns>Funding_Amount__c</columns>
+        <columns>Funding_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Department__c</field>
+            <operation>equals</operation>
+            <value>Virtus</value>
+        </filters>
+        <label>Virtus Financial Accounts SFDC2</label>
+        <sharedTo>
+            <group>Virtus_SFDC2</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Financial Account Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Financial Accounts</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CD</fullName>
+        <active>true</active>
+        <label>CD</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CD_Employee</fullName>
+        <active>true</active>
+        <description>Private Record Type for Employee Accounts</description>
+        <label>CD - Employee</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Deposits</fullName>
+        <active>true</active>
+        <label>Deposits</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Deposits_Employee</fullName>
+        <active>true</active>
+        <description>Private Record Type for Employee Accounts</description>
+        <label>Deposits - Employee</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Loans</fullName>
+        <active>true</active>
+        <label>Loans</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Loans_Employee</fullName>
+        <active>true</active>
+        <description>Private Record Type for Employee Accounts</description>
+        <label>Loans - Employee</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>Advisor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto-Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Specialty Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtus</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Balance__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Department__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Brand__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Open_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Funding_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Certification__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Certification_Id__c</fullName>
+        <description>Used in Incomplete button</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID( Certification__r.Id )</formula>
+        <label>Certification Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Certification_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Certification__r.RecordType.DeveloperName,
+  &quot;Account_Certification&quot;, &quot;Account Certification&quot;,
+  &quot;Account_Recertification&quot;, &quot;Account Recertification&quot;,
+  &quot;Quarterly_Certification&quot;, &quot;Quarterly Certification&quot;,
+  &quot;[No Certification Linked]&quot;
+)</formula>
+        <label>Certification Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Certification__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Certification</label>
+        <referenceTo>WLD_Certification__c</referenceTo>
+        <relationshipLabel>Credit Reviews</relationshipLabel>
+        <relationshipName>Credit_Reviews</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Covenant_Breach__c</fullName>
+        <externalId>false</externalId>
+        <label>Covenant Breach</label>
+        <length>130000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Covenant_Waiver_Issues__c</fullName>
+        <externalId>false</externalId>
+        <label>Covenant Waiver Issues</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Credit_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending Document Approval</fullName>
+                    <default>true</default>
+                    <label>Pending Document Approval</label>
+                </value>
+                <value>
+                    <fullName>Complete Package Received</fullName>
+                    <default>false</default>
+                    <label>Complete Package Received</label>
+                </value>
+                <value>
+                    <fullName>Moody&apos;s Spreading</fullName>
+                    <default>false</default>
+                    <label>Moody&apos;s Spreading</label>
+                </value>
+                <value>
+                    <fullName>QLR Prep</fullName>
+                    <default>false</default>
+                    <label>QLR Prep</label>
+                </value>
+                <value>
+                    <fullName>Management Review</fullName>
+                    <default>false</default>
+                    <label>Management Review</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Customer_Response_Review__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Response Review</label>
+        <length>130000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Marked_Incomplete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used with Incomplete Certification button and workflow</description>
+        <externalId>false</externalId>
+        <label>Marked Incomplete</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Obligor_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Obligor Score</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Required Action</label>
+        <length>130000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risk_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Rating</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TriggerApprovedProcess__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Set by the approval process upon approval and used in Credit Review trigger after update to set the associated Certification record Status to Completed</description>
+        <externalId>false</externalId>
+        <label>TriggerApprovedProcess</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TriggerDeniedProcess__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Set by the approval process upon rejection and used in Credit Review trigger after update to set the associated Certification record Status to Denied</description>
+        <externalId>false</externalId>
+        <label>TriggerDeniedProcess</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Credit Review</label>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Credit Reviews</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Incomplete_Certification</fullName>
+        <availability>online</availability>
+        <description>Marks the parent Certification as incomplete, sets the current record&apos;s status to the default value, and triggers email notification workflow</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Incomplete Certification</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+var outputMessage = { 
+  title: &apos;&apos;, 
+  message: &apos;&apos; 
+};
+var continueProcessing = true;
+var profileName = &apos;{!$Profile.Name}&apos;.replace(/\s+/g,&apos; &apos;).trim();
+
+if(!(profileName == &apos;Credit Office&apos; ||
+     profileName == &apos;System Administrator&apos;)) {
+  outputMessage.title = &apos;PERMISSION ISSUE&apos;;
+  outputMessage.message = &apos;Your profile does not have proper permissions mark the Certification as Incomplete. Please contact your manager or create an IT Support ticket for further assistance.&apos;;
+  continueProcessing = false;
+} else {
+  //update parent Certification
+  var recordsToUpdate = [];
+ 
+  var cert = new sforce.SObject(&apos;WLD_Certification__c&apos;); 
+  cert.Id = &apos;{!WLD_Credit_Review__c.Certification_Id__c}&apos;;
+  cert.Status__c = &apos;Incomplete&apos;;
+  recordsToUpdate.push(cert);
+
+  var credrev = new sforce.SObject(&apos;WLD_Credit_Review__c&apos;); 
+  credrev.Id = &apos;{!WLD_Credit_Review__c.Id}&apos;;
+  credrev.Credit_Status__c = &apos;Pending Document Approval&apos;;
+  credrev.Marked_Incomplete__c = true;
+  recordsToUpdate.push(credrev);
+ 
+  result = sforce.connection.update(recordsToUpdate);
+  var hasError;
+  var errorArray = [];
+  for(var i = 0; i &lt; result.length; i++) {
+    if(result[i].success != &apos;true&apos;) {
+      hasError = true;
+      errorArray.push(result[i].errors.message);
+    }
+  }
+  if(hasError) {
+    outputMessage.title = &apos;UPDATE ISSUE&apos;;
+    outputMessage.message = &apos;An error occurred while attempting to update the records : &lt;ul&gt;&apos;;
+    for(var i = 0; i &lt; errorArray.length; i++) {
+      outputMessage.message += &apos;&lt;li&gt;&apos; + result[0].errors.message + &apos;&lt;/li&gt;&apos;;
+    }
+    outputMessage.message += &apos;&lt;/ul&gt;&apos;;
+  } else {
+    outputMessage.title = &apos;UPDATE SUCCESS&apos;;
+    outputMessage.message = &apos;The Certification and Credit Review records have been updated to reflect an incomplete package.&apos;;
+  }
+}
+var box = new SimpleDialog(&quot;hersh&quot;+Math.random(), true); 
+parent.box = box; 
+box.setTitle(outputMessage.title); 
+box.createDialog(); 
+box.setWidth(350); 
+box.setContentInnerHTML(outputMessage.message + &apos;&lt;p&gt;&lt;div style=&quot;width: 100%; text-align: center;&quot;&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();window.parent.location.href=window.parent.location.href;return false;&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;&apos;); 
+box.setupDefaultButtons(); 
+box.show();</url>
+    </webLinks>
+</CustomObject>

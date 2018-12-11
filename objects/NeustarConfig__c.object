@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used for Neustar configuration</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Password__c</fullName>
+        <description>Password used to authenticate with Neustar service</description>
+        <externalId>false</externalId>
+        <label>Password</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_ID__c</fullName>
+        <description>Service ID used to authenticate with Neustar service</description>
+        <externalId>false</externalId>
+        <label>Service ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Username__c</fullName>
+        <description>Username to authenticate with Neustar service</description>
+        <externalId>false</externalId>
+        <label>Username</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Neustar Config</label>
+    <visibility>Protected</visibility>
+</CustomObject>

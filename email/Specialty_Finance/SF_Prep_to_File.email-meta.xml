@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Notification for SF Processing to Prep the File</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF Prep to File</name>
+    <style>none</style>
+    <subject>{!Opportunity.Account} is prep to file</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

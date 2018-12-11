@@ -1,0 +1,6 @@
+The Loan Boarding Form is now in progress for {!Boarding_Form__c.Opportunity__c}. Please complete by clicking the link below:
+
+{!Boarding_Form__c.Link}
+
+Thank you,
+Salesforce

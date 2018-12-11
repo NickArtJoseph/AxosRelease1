@@ -1,0 +1,26 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>Instructions for closing an account may be submitted using
+any of the following methods:<br></font></p><div style="color: rgb(0, 0, 0); text-indent: 0px;"><ol><li><font face="Arial, sans-serif" style="">By calling <b style="text-indent: -0.25in;">855-263-4333</b><span style="text-indent: -0.25in;">; my colleagues and I are
+available from </span><b style="text-indent: -0.25in;">6:00am to 6:00pm (PT)</b><span style="text-indent: -0.25in;"> to take your call;</span></font></li><li><font face="Arial, sans-serif" style="">Fax a signed request providing the account
+number and your instructions to; <b style="text-indent: -0.25in;">858-350-0443</b><span style="text-indent: -0.25in;">;</span></font></li><li><font face="Arial, sans-serif" style="">Send a <b style="text-indent: -0.25in;">secure message</b><span style="text-indent: -0.25in;"> through Online Banking,
+stating the account number and your instructions; or&nbsp;</span></font></li><li><font face="Arial, sans-serif" style="">Mail a signed request providing the account
+number and your instructions to <span style="text-indent: -0.25in;"><b>Axos Bank, P.O. Box 509127, San Diego,
+CA 92150-9948.&nbsp;</b></span></font></li></ol></div><p style="color: rgb(0, 0, 0);"></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"></font></p><div style="color: rgb(0, 0, 0); text-indent: 0px;"><span style="font-family: Arial, sans-serif; font-size: 12pt;">Additionally, to move any remaining funds, you can:</span></div><div style="color: rgb(0, 0, 0); text-indent: 0px;"><font face="Arial, sans-serif"><ol><li>Write yourself a check for the remaining balance
+and submit your closeout request once the check has cleared.</li><li>Withdraw the remaining balance through an ATM or
+by making a transaction. (limits apply)</li><li>Transfer the remaining funds to an external
+account that you have set up and submit the closeout request once the transfer
+has completed. (limits apply)</li><li>We can issue you an official check to be mailed
+to your address on file.</li></ol>We appreciate your business and commit to providing superior
+Banking products, support and services.</font></div><p style="color: rgb(0, 0, 0);"></p><span style="text-indent: -0.25in;"><div style="text-indent: -24px;"><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><br><span style="text-indent: 0px;">Best Regards,<br></span></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; text-indent: 0px;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style="text-indent: 0px;"><font style="text-indent: 0px;">Axos Bank&nbsp;</font><span style="color: rgb(0, 0, 0); text-indent: 0px;">Customer Service</span></font></div></span>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

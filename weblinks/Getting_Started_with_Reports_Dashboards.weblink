@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Getting Started with Reports &amp; Dashboards</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://bofi.my.salesforce.com/?startURL=https%3A%2F%2Flogin.salesforce.com%2Fservices%2Fauth%2Fsso%2F00D30000000XsfGEAS%2FHTAuthProvider%3FstartURL%3D%252FHTLaunchCourse%253Fcourseid%253Da1P3000000123xvEAA%2526trainingpathid%253Da1S30000000grYDEAY%26trainingpathid%3Da1S30000000grYDEAY%26site%3Dhttps%3A%2F%2Fhelp.salesforce.com</url>
+</CustomPageWebLink>

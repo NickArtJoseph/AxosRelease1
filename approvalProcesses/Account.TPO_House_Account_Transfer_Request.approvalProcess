@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>SFR_TPO_IPL</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>SFR_TPO_IPL_Client_Status__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>djudis@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>kdoyle@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>rmarquez@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>srouzbehani@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>TPO Account Change Approval</label>
+        <name>TPO_Account_Change_Approval</name>
+    </approvalStep>
+    <description>Approval process for requested TPO House accounts</description>
+    <emailTemplate>ALL/SFO_TPO_Approval_Process</emailTemplate>
+    <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+  Owner.FirstName = &quot;TPO&quot;, 
+  Owner.LastName = &quot;House Account&quot;, 
+  AND(
+    NOT(ISPICKVAL( SFR_TPO_IPL_Client_Status__c, &quot;Denied&quot;)),
+    NOT(ISPICKVAL(SFR_TPO_IPL_Client_Status__c, &quot;Inactive&quot;)),
+    NOT(ISPICKVAL(SFR_TPO_IPL_Client_Status__c, &quot;Available&quot;))
+  ),
+  NOT(CONTAINS(Name, &quot;Mortgage Master&quot;)),
+  NOT(
+    OR(
+      MOD(TODAY() - DATE( 1900, 1, 7 ), 7 ) = 0,
+      MOD(TODAY() - DATE( 1900, 1, 7 ), 7 ) = 6
+    )
+  )
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Approval_TPO_Account_Change</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Approved_TPO_Account_Change_Joleen</name>
+            <type>Alert</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>TPO_House_Account_Approval_Submitter</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>TPO House Account Transfer Request</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

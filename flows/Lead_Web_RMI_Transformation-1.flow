@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formulas>
+        <name>QueueName</name>
+        <dataType>String</dataType>
+        <expression>CASE({!SubBranch},
+&quot;Commercial&quot;,&quot;Commercial_Banking_Lead_Queue&quot;,
+&quot;Small Business&quot;,&quot;Business_Banking_Lead_Queue&quot;,
+&quot;Specialty Deposits&quot;,&quot;Specialty_Deposits_Lead_Queue&quot;,
+&quot;Advisor Consumer&quot;,&quot;Advisor_Firm_Lead_Queue&quot;,
+&quot;Advisor Business&quot;,&quot;Advisor_Firm_Lead_Queue&quot;,
+&quot;EQF&quot;,&quot;EQF_Leads_SFDC2&quot;,
+&quot;CRESL&quot;,&quot;C_I_SFDC2_Lead_Queue&quot;,
+&quot;Factoring&quot;,&quot;Factoring_Lead_Queue&quot;,
+&quot;RELF&quot;,&quot;C_I_SFDC2_Lead_Queue&quot;,
+&quot;NRELF&quot;,&quot;C_I_SFDC2_Lead_Queue&quot;,
+&quot;Consumer Wholesale&quot;,&quot;Consumer_Wholesale_Lead_Queue&quot;,
+&quot;IPL&quot;,&quot;IPL_Lead_Queue&quot;,
+&quot;ULP&quot;,&quot;ULP_Lead_Queue&quot;,
+&quot;Axos Premier (Virtus)&quot;,&quot;Virtus_Lead_Queue&quot;,
+&quot;Wholesale Mortgage&quot;,&quot;WME_Leads_SFDC2&quot;,
+&quot;Homebuilder&quot;,&quot;HBD_Leads_SFDC2&quot;,
+&quot;Fiduciary Services&quot;,&quot;Epiq_Lead_Queue&quot;,
+&quot;Auto Lending Direct&quot;,&quot;Direct_Auto_Lending_Lead_Queue&quot;,
+&quot;Consumer Deposits&quot;,&quot;Consumer_Deposits_Lead_Queue&quot;,
+&quot;Consumer Direct&quot;,&quot;Consumer_Direct_SFDC2&quot;,
+&quot;Consumer_Deposits_Lead_Queue&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>RecordTypeName</name>
+        <dataType>String</dataType>
+        <expression>CASE({!SubBranch},
+&quot;Commercial&quot;,&quot;Commercial_Banking_SFDC2&quot;,
+&quot;Small Business&quot;,&quot;Business_Banking_SFDC2&quot;,
+&quot;Specialty Deposits&quot;,&quot;Commercial_Banking_SFDC2&quot;,
+&quot;Advisor Consumer&quot;,&quot;Advisor_Firm_SFDC2&quot;,
+&quot;Advisor Business&quot;,&quot;Advisor_Firm_SFDC2&quot;,
+&quot;EQF&quot;,&quot;C_I_SFDC2&quot;,
+&quot;CRESL&quot;,&quot;C_I_SFDC2&quot;,
+&quot;Factoring&quot;,&quot;C_I_SFDC2&quot;,
+&quot;RELF&quot;,&quot;C_I_SFDC2&quot;,
+&quot;NRELF&quot;,&quot;C_I_SFDC2&quot;,
+&quot;Consumer Wholesale&quot;,&quot;Consumer_Wholesale_SFDC2&quot;,
+&quot;IPL&quot;,&quot;IPL_SFDC2&quot;,
+&quot;ULP&quot;,&quot;ULP_SFDC2&quot;,
+&quot;Axos Premier (Virtus)&quot;,&quot;Virtus_SFDC2&quot;,
+&quot;Wholesale Mortgage&quot;,&quot;WME_SFDC2&quot;,
+&quot;Homebuilder&quot;,&quot;HBD_SFDC2&quot;,
+&quot;Fiduciary Services&quot;,&quot;Epiq_SFDC2&quot;,
+&quot;Auto Lending Direct&quot;,&quot;Dealer_Services_Applicant_SFDC2&quot;,
+&quot;Consumer Deposits&quot;,&quot;Consumer_Deposits_SFDC2&quot;,
+&quot;Consumer Direct&quot;,&quot;Consumer_Direct_SFDC2&quot;,
+&quot;Consumer_Deposits_SFDC2&quot;)</expression>
+    </formulas>
+    <interviewLabel>Lead: Web RMI Transformation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead: Web RMI Transformation</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Find_Queue_ID</name>
+        <label>Find Queue ID</label>
+        <locationX>343</locationX>
+        <locationY>95</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Lead_Record</targetReference>
+        </connector>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>QueueName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputAssignments>
+            <assignToReference>QueueID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordLookups>
+        <name>Find_RecordTypeID</name>
+        <label>Find RecordTypeID</label>
+        <locationX>140</locationX>
+        <locationY>92</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Find_Queue_ID</targetReference>
+        </connector>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordTypeName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>RecordTypeID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Lead_Record</name>
+        <label>Update Lead Record</label>
+        <locationX>345</locationX>
+        <locationY>277</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>LeadID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>QueueID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>RecordTypeID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <startElementReference>Find_RecordTypeID</startElementReference>
+    <variables>
+        <name>Brand</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>From Process Builder</description>
+        <name>LeadID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>QueueID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RecordTypeID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SubBranch</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

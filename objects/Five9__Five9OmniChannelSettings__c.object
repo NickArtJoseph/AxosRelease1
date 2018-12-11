@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Omni-Channel synchronization settings</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Five9__Federated_Routing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Federated Routing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When enabled, if the agent is on a call, the Five9 adapter state is modified to prevent a text interaction. If the agent is in a text interaction, the Five9 adapter state is modified to prevent a voice interaction.</inlineHelpText>
+        <label>Enable Federated Routing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Omni_Channel_Sync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Omni-Channel Synchronization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable/disable state synchronization between Five9 and Salesforce Omni-Channel.</inlineHelpText>
+        <label>Enable Omni-Channel Synchronization</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Five9__On_Call_Presence_Status_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>State that is selected when an agent receives a call. Do not include any service channels that are associated with Live Chat or routed Salesforce objects (for example, a Case or Lead object) to prevent a text interaction.</inlineHelpText>
+        <label>On Call Presence Status Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__On_Presence_Work_Presence_Status_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>State that is selected when an agent accepts a Live Chat or a routed Salesforce object. Do not include any service channels that are mapped to Five9 channels to prevent a call.</inlineHelpText>
+        <label>On Presence Work Presence Status Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Show_Service_Channels__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls what should be displayed in Ready For... dialog. When it&apos;s disabled the selected Online Presence Statuses are shown. Otherwise Service Channels associated with the selected statuses are shown.</inlineHelpText>
+        <label>Show Service Channels</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Five9 Omni-Channel Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>INBOUND_LOGIN</links>
+    <links>Verbal_VOB_List</links>
+    <links>Deals_Originated_This_Month</links>
+    <links>SS_Pipeline</links>
+    <links>SS_Funded_Deals</links>
+    <links>Outstanding_Deal_Items</links>
+    <links>Total_Dials_Talk_Time_Today</links>
+    <links>Total_Dials_Talk_Time_Yesterday</links>
+    <links>Total_Dials_Talk_Time_This_Week</links>
+    <links>Total_Dials_Talk_Time_This_Month</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

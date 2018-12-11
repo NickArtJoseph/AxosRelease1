@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Requested in ticket: 42926 by Francisco Villasana for Francisco Villasana, Michael Freeley and Justin Levin</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Branch__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>View and Edit &quot;Branch Status&quot; field on Leads</label>
+    <license>Salesforce</license>
+</PermissionSet>

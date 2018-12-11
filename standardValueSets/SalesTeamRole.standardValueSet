@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Team Lead</fullName>
+        <color>#0B6FCE</color>
+        <default>false</default>
+        <label>Team Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Development Officer</fullName>
+        <color>#78C953</color>
+        <default>false</default>
+        <label>Business Development Officer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lending Relationship Manager</fullName>
+        <color>#E27001</color>
+        <default>false</default>
+        <label>Lending Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deposits Relationship Manager</fullName>
+        <color>#A845DC</color>
+        <default>false</default>
+        <label>Deposits Relationship Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lending Service Manager</fullName>
+        <color>#F3D904</color>
+        <default>false</default>
+        <label>Lending Service Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deposits Service Manager</fullName>
+        <color>#A53711</color>
+        <default>false</default>
+        <label>Deposits Service Manager</label>
+    </standardValue>
+</StandardValueSet>

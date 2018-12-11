@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos - DepOps - Vesting Request Cancellation</name>
+    <style>formalLetter</style>
+    <subject>Change Request Cancellation</subject>
+    <textOnly>Hello {!Case.Contact},
+
+The requested information was not received by the [INSERT DATE] deadline. Your change request has been canceled. 
+
+If you would like to submit a new consumer change request please remember to include the Change Request form and all other requested documents. 
+
+Send your new Change Request to:
+
+1)	Mail to: Axos Bank, Attn: New Accounts, P.O. Box 911039, San Diego, CA  92191-1039
+2)	Email to: customerservice@axosbank.com
+3)	Fax to: 858-350-0443
+
+Questions? If you have any questions, please call us at (888) 502-2967 or email us at customerservice@axosbank.com
+
+Thank you.
+
+
+Best Regards,
+{!User.FirstName}
+Axos Bank Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.Other_Lead_Source__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Status_Detail_SFDC2__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Status_Detail__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <description>Shows all abandoned and submitted apps for SBB</description>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Quinn Connolly,Alexandra Hondl,Natasha Loomis,Ryan Stamper,Justin Castillo,Business Banking Lead Queue,Nancy Martinez,Tania Akhavan,Mustapha Oulhaci</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Other_Lead_Source__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Abandoned App,submitted app</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Abandoned and Submitted Apps</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2018-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-08-01</startDate>
+    </timeFrameFilter>
+</Report>

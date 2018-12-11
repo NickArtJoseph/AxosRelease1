@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Warehouse Lending</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <group>Brandon_Hines</group>
+        <group>C_I</group>
+        <group>SFR_TPO_IPL</group>
+        <role>SVP_WLD</role>
+    </sharedTo>
+</EmailFolder>

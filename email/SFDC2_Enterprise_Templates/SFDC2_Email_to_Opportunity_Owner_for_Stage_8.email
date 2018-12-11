@@ -1,0 +1,3 @@
+The stage has been changed to Boarded/Funded/Won for {!Opportunity.CI_Opportunity_NameCopy__c}.
+
+Link to Opportunity: {!Opportunity.Link}

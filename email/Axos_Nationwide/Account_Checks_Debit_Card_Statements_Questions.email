@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Once your accounts transition to Axos:</font></div><div style=""><ul><li>Account numbers will remain the same.</li><li>You will be able to continue to use the same checkbook.</li><li>Your existing Debit Card will continue to work.</li><li>Your account will continue to earn the same annual percentage yield.</li><li>Your previous tax forms and statements will transfer over.</li><li>Withdrawing from an ATM internationally there is a 1% conversion fee for non US dollar purchases, and we do not reimburse ATMs overseas. Other than that no ATM fees.</li><li>Cash Advances will no longer be offered at the branch.</li></ul></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div></div></div></div></div></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

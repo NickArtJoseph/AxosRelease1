@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Any scheduled recurring and one-time payments that you have set up through Nationwide Bank will continue as your account transfers to Axos Bank. Your bill pay history will transfer over as well.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">If you have any bill payments scheduled between 11/13 and 11/22, you should review the timing of those payments.&nbsp; We will not be able to process any bill payments over the conversion weekend so please move them accordingly so that they are sent by 11/13 or after 11/20.&nbsp; We also highly recommend that you download your bill pay and payee information for your records. Your Bill Pay Payee information and recurring payments information will transfer over to Axos Bank. We will be reviewing the data post conversion, however, you should review it when you log into the new online banking system for the first time and verify that there are no issues.&nbsp;</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div></div></div></div></div></div></div></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

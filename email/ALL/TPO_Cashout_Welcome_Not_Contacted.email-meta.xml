@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TPO Cashout Welcome - Not Contacted</name>
+    <style>none</style>
+    <subject>Accessing Your New BofI Checking Account</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+My name is David. I want to welcome you to Bank of Internet USA. Unfortunately, I have been unsuccessful in reaching you by phone, so I’m sending you this email with important information on how to access your new BofI USA checking account and cash-out proceeds once your home loan closes.
+
+Funding of your Account
+
+Our Lending Operations Team will transfer the cash-out proceeds of your loan into your Platinum Checking account following the close of escrow. This will occur within 24 hours of closing.
+
+Register for Online Banking
+
+Your first step is to register for Online Banking to gain convenient and secure access to your Platinum Checking account anytime, anywhere. Once you register for Online Banking, you will also have immediate access to your account using our Mobile Banking App.
+
+Debit Card and Checks are on Their Way
+
+To ensure you have your new debit card and checks prior to loan closing, we’ve expedited shipment so you receive them within the next 2-3 days.
+If these items do not arrive within this time period, please contact me directly at 858-649-2678 or dovadia@bofifederalbank.com.
+
+We&apos;re Available 24/7
+
+At Bank of Internet USA, we have a dedicated Premier Banking Customer Service Team at your service. You can reach them 24 hours a day, 7 days a week by calling (858) 649-2224, excluding Thanksgiving and Christmas.
+
+{!Contact.FirstName}, we look forward to serving your banking needs and building a strong banking relationship. Thank you for your business.
+
+Best regards,
+
+David Ovadia
+Business Development Officer
+dovadia@bofifederalbank.com
+858-649-2678
+
+America&apos;s oldest and most trusted internet bank
+
+Bank products and services are offered by BofI Federal Bank. All deposit accounts through BofI Federal Bank brands are FDIC insured through BofI Federal Bank. All deposit accounts of the same ownership and / or vesting held at BofI Federal Bank are combined and insured under the same FDIC Certificate 35546. All deposit accounts through BofI Federal Bank brands are not separately insured by the FDIC from other deposit accounts held with the same ownership and / or vesting at BofI Federal Bank. For more information click here.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>3rd Party</fullName>
+        <default>false</default>
+        <label>3rd Party</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Analyst</fullName>
+        <default>false</default>
+        <label>Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attorney</fullName>
+        <default>false</default>
+        <label>Attorney</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank</fullName>
+        <default>false</default>
+        <label>Bank</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banker</fullName>
+        <default>false</default>
+        <label>Banker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Borrower</fullName>
+        <default>false</default>
+        <label>Borrower</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Both</fullName>
+        <default>false</default>
+        <label>Both</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client</fullName>
+        <default>false</default>
+        <label>Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CPA</fullName>
+        <default>false</default>
+        <label>CPA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Current Customer</fullName>
+        <default>false</default>
+        <label>Current Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deal Common Name</fullName>
+        <default>false</default>
+        <label>Deal Common Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deal Sponsor</fullName>
+        <default>false</default>
+        <label>Deal Sponsor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Former Customer</fullName>
+        <default>false</default>
+        <label>Former Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Friend</fullName>
+        <default>false</default>
+        <label>Friend</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Guarantor</fullName>
+        <default>false</default>
+        <label>Guarantor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Integrator</fullName>
+        <default>false</default>
+        <label>Integrator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Investor</fullName>
+        <default>false</default>
+        <label>Investor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Issuer</fullName>
+        <default>false</default>
+        <label>Issuer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Owner</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Parent Account</fullName>
+        <default>false</default>
+        <label>Parent Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payroll Provider</fullName>
+        <default>false</default>
+        <label>Payroll Provider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PEO</fullName>
+        <default>false</default>
+        <label>PEO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Press</fullName>
+        <default>false</default>
+        <label>Press</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral Partner</fullName>
+        <default>false</default>
+        <label>Referral Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral Source</fullName>
+        <default>false</default>
+        <label>Referral Source</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reseller</fullName>
+        <default>false</default>
+        <label>Reseller</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Provider</fullName>
+        <default>false</default>
+        <label>Service Provider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sponsor</fullName>
+        <default>false</default>
+        <label>Sponsor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>United States</fullName>
+        <default>false</default>
+        <label>United States</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vendor</fullName>
+        <default>false</default>
+        <label>Vendor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Workplace</fullName>
+        <default>false</default>
+        <label>Workplace</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skill xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <users>
+            <user>lhernandez@bofi.com</user>
+            <user>mlloyd@bofi.com</user>
+            <user>rbelandro@bofi.com</user>
+            <user>rwong@bofi.com</user>
+            <user>tsessions@bofi.com</user>
+        </users>
+    </assignments>
+    <label>Loan Servicing</label>
+</Skill>

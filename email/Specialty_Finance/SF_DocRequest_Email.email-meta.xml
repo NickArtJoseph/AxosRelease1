@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send Document Request Email Alert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF_DocRequest_Email</name>
+    <style>none</style>
+    <subject>New Document Request</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

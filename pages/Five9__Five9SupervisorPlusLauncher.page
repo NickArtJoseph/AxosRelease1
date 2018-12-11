@@ -1,0 +1,25 @@
+<apex:page showheader="false" sidebar="false">
+    <apex:form >
+        <apex:commandButton value="Launch Five9 Supervisor Plus" id="LaunchFive9SupervisorPlus" onclick="openURL('{!$CurrentPage.parameters.datacenter}', '{!$CurrentPage.parameters.customhostname}', '{!$CurrentPage.parameters.ssourl}')"/>
+        <script>
+          function openURL(dataCenter, customHostName, ssoUrl) {
+              var url;
+              if (ssoUrl && ssoUrl.length !== 0) {
+                  url = ssoUrl;
+              } else {
+                  url = 'https://';
+                  if (dataCenter === '' || dataCenter.toLowerCase() === 'com') {
+                      url += 'app.five9.com';
+                  } else if (dataCenter.toLowerCase()  === 'eu') {
+                      url += 'app.five9.eu';
+                  } else {
+                      url += customHostName;
+                  }
+                  url += '/?role=DomainSupervisor';
+              }
+              console.log('openURL', url);
+              window.open(url, 'f9DomainSupervisor');
+          }
+        </script>
+    </apex:form>
+</apex:page>

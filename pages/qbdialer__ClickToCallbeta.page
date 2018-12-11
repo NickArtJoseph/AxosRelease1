@@ -1,0 +1,44 @@
+<apex:page showHeader="false">
+<script>
+var c2ctimer = {
+    starttime: new Date
+};
+</script>
+    <apex:includeScript value="/support/api/33.0/interaction.js"/>
+    <apex:includeScript value="/support/console/33.0/integration.js"/>
+    <apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+    <apex:includeScript value="/jslibrary/1418325280000/sfdc/main.js"/>
+    <script type="text/javascript">
+        c2ctimer.loadedscripts = new Date;
+        var using_open_cti = true;
+
+        sforce.connection.sessionId="{!$Api.Session_ID}";
+        sforce.interaction.cti.enableClickToDial();
+        sforce.interaction.cti.setSoftphoneWidth(199);
+
+        // Callback for onClickToDial API method.
+        var onClickToDialListener = function (response) {
+            if (response.result) {
+                var result = JSON.parse(response.result);
+                var number = result.number;
+                var external_id = result.objectId;
+                if(sforce.console.isInConsole()) {
+                    sforce.interaction.setVisible(true);
+                }
+                pd.dial(number, external_id, window, null, null);
+            }
+        };
+//I thought this was working, but I am wrong.
+        // Registers a callback function that will execute when a user clicks on a phone link.
+        sforce.interaction.cti.onClickToDial(onClickToDialListener );
+
+        //LOADTIME - uncomment
+        //setInterval(function () {c2cpage.logLoadingStats();}, 100);
+    </script>
+    <c:c2c_beta_component />
+    <!-- LOADTIME - uncomment
+    <br />
+    <button onclick="c2cpage.reset()" >Reset</button><br />
+    <div id="timer_stats"></div>
+    -->
+</apex:page>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to automate scheduling</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Automatically_Created_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Automatically Created Record</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Weekly_User_Report_Start_Time__c</fullName>
+        <defaultValue>DATETIMEVALUE(TEXT(TODAY())&amp;&apos; 23:59:59&apos;)</defaultValue>
+        <externalId>false</externalId>
+        <label>Weekly User Report Start Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Weekly_User_Report_Weekly_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Weekly User Report Weekly Trigger</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Automated Report</label>
+    <nameField>
+        <displayFormat>AR-{000000}</displayFormat>
+        <label>Automated Report Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Automated Reports</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>Weekly_User_Report_Friday_after_5</fullName>
+        <active>false</active>
+        <description>Weekly User Report must be schedule for Friday after 4 PM</description>
+        <errorConditionFormula>OR(
+   AND(
+       NOT(
+           ISNULL(Weekly_User_Report_Start_Time__c)),
+       WEEKDAY(DATEVALUE(Weekly_User_Report_Start_Time__c))&lt;&gt;6),
+   AND(
+       NOT(
+           ISNULL(Weekly_User_Report_Start_Time__c)),
+       AND(
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;16&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;17&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;18&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;19&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;20&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;21&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;22&quot;,
+           MID(TEXT(Weekly_User_Report_Start_Time__c-7/24), 12,2)&lt;&gt;&quot;23&quot;))
+)</errorConditionFormula>
+        <errorMessage>Weekly User Report must be schedule for Friday after 4 PM</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

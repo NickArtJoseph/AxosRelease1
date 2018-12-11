@@ -1,0 +1,33 @@
+<apex:page standardController="Five9LSP__Five9_List_Item__c" title="{!strPageTitle}" extensions="Five9LSP.Five9_List_Item_Controller_Extension">
+<apex:includeScript value="/support/console/20.0/integration.js"/>
+    <script type="text/javascript">
+    var pageLoad = window.onload;
+    window.onload = function() {
+        if (pageLoad) {
+            pageLoad();
+        }
+        sforce.console.setTabTitle('{!strPageTitle}');
+    }
+    </script>
+    <apex:form id="myForm">
+        <apex:sectionHeader title="Five9 List Item" subtitle="{!strSectionTitle}"/>
+        <apex:pageBlock title="{!strSectionTitle}" mode="view">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton action="{!edit}" value="Edit"/>
+                <apex:commandButton action="{!deleteItem}" value="Delete"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Five9 List Item" columns="2" >
+                <apex:outputField value="{!f9ListItem.Five9LSP__Five9_List__c}" />  
+                <apex:outputField value="{!f9ListItem[strControllingObject]}"/>
+                <apex:repeat value="{!$ObjectType.Five9LSP__Five9_List_Item__c.FieldSets.Five9LSP__edit_view}" var="f">
+                    <apex:outputField value="{!f9ListItem[f.fieldPath]}"/>
+                </apex:repeat>
+                <apex:outputField value="{!f9ListItem.CreatedBy.Name}" label="Created By"/>
+                <apex:outputField value="{!f9ListItem.CreatedDate}"/>
+                <apex:outputField value="{!f9ListItem.Name}"/>
+                <apex:outputField value="{!f9ListItem.LastModifiedBy.Name}" label="Last Modified By"/>
+                <apex:outputField value="{!f9ListItem.LastModifiedDate}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>To receive an International wire, please provide the
+initiator of the wire with the following bank information:<br></font></p><div style="text-indent: 0px;"><ul><li><font face="Arial, sans-serif">Your name</font></li><li><font face="Arial, sans-serif">Your account number [provide account number]</font></li></ul><font face="Arial, sans-serif"><font style="">Intermediary Information:</font><br></font><div style=""><font face="Arial, sans-serif"><b>Pacific Coast Bankers’ Bank<br>San Francisco, CA 94104<br>SWIFT Code: PCBBUS66<br>ABA Number: 121042484</b></font></div><div style=""><font face="Arial, sans-serif"><br></font></div><div style=""><font face="Arial, sans-serif">Bank Information:<br><b>BofI Federal bank<br>La Jolla Village Drive Ste 140<br>San Diego, CA 92122<br>Routing Number: 122287251</b><br></font><div style="text-indent: 0px;"><span style="text-indent: -24px;"><font face="Arial, sans-serif"><br>Please note that all funds must be in US dollars.</font></span></div></div></div><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><div style="text-indent: -24px; display: inline !important;"><div style="text-indent: -24px;"><span style="color: rgb(0, 0, 0);"><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br></span><span style="color: rgb(0, 0, 0);"><br>Best Regards,<br></span><span style="text-indent: 0px;">{!User.FirstName}</span><br><font color="#ff0000" style="">[INSERT BRAND]</font><span style="color: rgb(0, 0, 0);">&nbsp;Customer Service</span></div></div></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

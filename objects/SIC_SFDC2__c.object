@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Look up to Standard Industrial Classification to classify industries. SFDC2</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>SIC2_Code__c</fullName>
+        <description>2 digit Standard Industrial Classfication Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>2 digit Standard Industrial Classfication Code</inlineHelpText>
+        <label>SIC2 Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC2_Description__c</fullName>
+        <description>Description text of 2 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description text of 2 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC2 Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC4_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>4 digit Standard Industrial Classification Code</description>
+        <externalId>true</externalId>
+        <inlineHelpText>4 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC4 Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SIC4_Description__c</fullName>
+        <description>Description text of 4 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description text of 4 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC4 Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC6_Code__c</fullName>
+        <description>6 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>6 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC6 Code</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC6_Description__c</fullName>
+        <description>Description text of 6 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description text of 6 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC6 Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC8_Code__c</fullName>
+        <description>8 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>8 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC8 Code</label>
+        <length>8</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIC8_Description__c</fullName>
+        <description>Description text of 8 digit Standard Industrial Classification Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description text of 8 digit Standard Industrial Classification Code</inlineHelpText>
+        <label>SIC8 Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>SIC</label>
+    <nameField>
+        <label>SIC Code</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>SIC</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

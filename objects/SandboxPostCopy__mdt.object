@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Configurations for Sandbox post copy automation</description>
+    <fields>
+        <fullName>Delete_Scheduled_Jobs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If checked then all scheduled jobs will be deleted</inlineHelpText>
+        <label>Delete Scheduled Jobs</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unmask_Admin_Email_Address__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If checked then all active User records with System Administrator profile assignment will have the Email address value updated to remove the masking</inlineHelpText>
+        <label>Unmask Admin Email Address</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Sandbox Post Copy</label>
+    <pluralLabel>Sandbox Post Copy</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

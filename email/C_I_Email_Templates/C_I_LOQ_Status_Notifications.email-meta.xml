@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>As a C&amp;I user, I need rules for approval routing put in place so that pending approvals are routed to the appropriate approvers.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>C&amp;I: LOQ  Status Notifications</name>
+    <style>none</style>
+    <subject>{!Loan_Ops_Questionnaire__c.Opportunity__c}  LOQ Status = {!Loan_Ops_Questionnaire__c.LOQ_Status__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

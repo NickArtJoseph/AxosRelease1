@@ -1,0 +1,18 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},<br><br>At this time, the Bank has made the decision to end our
+Banking relationship.&nbsp;<br><br>As indicated in your Deposit Account Agreement that was
+accepted during the Account Application, "The Bank reserves the right to
+close your account for any reason, without cause, or notice."<br><br>This decision is final and we appreciate your interest in Axos Bank.
+All access to your account(s) has been disabled.&nbsp;<br><br>Any remaining funds will be mailed to your address on file.<br><br>Best Regards,<br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font style="">Axos Bank&nbsp;</font>Customer Service</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

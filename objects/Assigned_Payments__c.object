@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount Text</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Applied_Payment__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+AND(Number_of_Payments__c &gt;=2,Percent_Increase__c = 0), 
+TEXT(Number_of_Payments__c) + &quot; &quot; + LOWER(TEXT(Payment_Type__c)) + &quot; &quot; + LOWER(TEXT(Payment_Frequency__c)) + &quot; payments in the amount of $&quot; + Text(floor(Amount__c)) + &quot;.&quot; + lpad(Text((Amount__c-floor(Amount__c))*100),2,&quot;0&quot;) + &quot; each, commencing with the payment due and payable on or about &quot; + TEXT( MONTH( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( DAY( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( YEAR( First_Payment_Date__c ) ) + &quot; and continuing through and including the payment due and payable on or about &quot; + TEXT( MONTH(Last_Payment_Date__c) ) + &quot;/&quot; + TEXT( DAY(Last_Payment_Date__c) ) + &quot;/&quot; + TEXT( YEAR(Last_Payment_Date__c) ) + &quot;.&quot;, 
+IF( 
+Number_of_Payments__c = 1, 
+&quot;One lump sum payment in the amount of $&quot; + Text(floor(Amount__c)) + &quot;.&quot; + lpad(Text((Amount__c-floor(Amount__c))*100),2,&quot;0&quot;) + &quot; due and payable on or about &quot; + TEXT( MONTH( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( DAY( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( YEAR( First_Payment_Date__c ) ) + &quot;.&quot;, 
+IF(AND( 
+Number_of_Payments__c &gt;=2, Percent_Increase__c &lt;&gt; 0), 
+TEXT(Number_of_Payments__c) + &quot; &quot; + &quot; consecutive &quot; + LOWER(TEXT(Payment_Type__c)) + &quot; &quot; + LOWER(TEXT(Payment_Frequency__c)) + &quot; payments, commencing with the payment due and payable on or about &quot; + TEXT( MONTH( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( DAY( First_Payment_Date__c ) ) + &quot;/&quot; + TEXT( YEAR( First_Payment_Date__c ) ) + &quot; and continuing through and including the payment due and payable on or about &quot; + TEXT( MONTH(Last_Payment_Date__c) ) + &quot;/&quot; + TEXT( DAY(Last_Payment_Date__c) ) + &quot;/&quot; + TEXT( YEAR(Last_Payment_Date__c) ) + &quot;, with the initial payments being in an amount of $&quot; + Text(floor(Amount__c)) + &quot;.&quot; + lpad(Text((Amount__c-floor(Amount__c))*100),2,&quot;0&quot;) + &quot;, subject to an annual adjustment of &quot; + TEXT(ROUND(Percent_Increase__c*100,0)) + &quot;% each &quot; + TEXT( Month_Of_Increase__c) + &quot; so that the amount of the payment made on each adjustment date shall equal &quot; + TEXT(ROUND(Percent_Increase_100__c*100,0)) + &quot;% of the immediately preceding payment, and which amount shall apply until the next adjustment date.&quot;, 
+NULL 
+) 
+) 
+)</formula>
+        <label>Applied Payment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned Payment Logic</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>First_Payment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>First Payment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Payment_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Payment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Month_Of_Increase__c</fullName>
+        <externalId>false</externalId>
+        <label>Month Of Increase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>January</fullName>
+                    <default>false</default>
+                    <label>January</label>
+                </value>
+                <value>
+                    <fullName>February</fullName>
+                    <default>false</default>
+                    <label>February</label>
+                </value>
+                <value>
+                    <fullName>March</fullName>
+                    <default>false</default>
+                    <label>March</label>
+                </value>
+                <value>
+                    <fullName>April</fullName>
+                    <default>false</default>
+                    <label>April</label>
+                </value>
+                <value>
+                    <fullName>May</fullName>
+                    <default>false</default>
+                    <label>May</label>
+                </value>
+                <value>
+                    <fullName>June</fullName>
+                    <default>false</default>
+                    <label>June</label>
+                </value>
+                <value>
+                    <fullName>July</fullName>
+                    <default>false</default>
+                    <label>July</label>
+                </value>
+                <value>
+                    <fullName>August</fullName>
+                    <default>false</default>
+                    <label>August</label>
+                </value>
+                <value>
+                    <fullName>September</fullName>
+                    <default>false</default>
+                    <label>September</label>
+                </value>
+                <value>
+                    <fullName>October</fullName>
+                    <default>false</default>
+                    <label>October</label>
+                </value>
+                <value>
+                    <fullName>November</fullName>
+                    <default>false</default>
+                    <label>November</label>
+                </value>
+                <value>
+                    <fullName>December</fullName>
+                    <default>false</default>
+                    <label>December</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Number_of_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Payments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Cash_Flows</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Payment_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>monthly</fullName>
+                    <default>false</default>
+                    <label>monthly</label>
+                </value>
+                <value>
+                    <fullName>quarterly</fullName>
+                    <default>false</default>
+                    <label>quarterly</label>
+                </value>
+                <value>
+                    <fullName>semiannual</fullName>
+                    <default>false</default>
+                    <label>semiannual</label>
+                </value>
+                <value>
+                    <fullName>annual</fullName>
+                    <default>false</default>
+                    <label>annual</label>
+                </value>
+                <value>
+                    <fullName>weekly</fullName>
+                    <default>false</default>
+                    <label>weekly</label>
+                </value>
+                <value>
+                    <fullName>lump sum</fullName>
+                    <default>false</default>
+                    <label>lump sum</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>guaranteed</fullName>
+                    <default>false</default>
+                    <label>guaranteed</label>
+                </value>
+                <value>
+                    <fullName>life-contingent</fullName>
+                    <default>false</default>
+                    <label>life-contingent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Percent_Increase_100__c</fullName>
+        <externalId>false</externalId>
+        <formula>Percent_Increase__c + 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Percent Increase + 100%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Increase__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If there is no Percent Increase, please enter 0</inlineHelpText>
+        <label>Percent Increase</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <label>Assigned Payment</label>
+    <nameField>
+        <displayFormat>AP-{000000}</displayFormat>
+        <label>Assigned Payment #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Assigned Payments</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>First_Payment_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Number_of_Payments__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Payment_Frequency__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Payment_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Percent_Increase__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>First_Payment_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Number_of_Payments__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Opportunity__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Payment_Frequency__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Payment_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Percent_Increase__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>First_Payment_Date__c</searchFilterFields>
+        <searchFilterFields>Number_of_Payments__c</searchFilterFields>
+        <searchFilterFields>Opportunity__c</searchFilterFields>
+        <searchFilterFields>Payment_Frequency__c</searchFilterFields>
+        <searchFilterFields>Payment_Type__c</searchFilterFields>
+        <searchFilterFields>Percent_Increase__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Month_of_increase_required_with_Pct_Incr</fullName>
+        <active>true</active>
+        <description>If Percent Increase is &gt; 0 then Month of increase must be populated</description>
+        <errorConditionFormula>AND(
+  Percent_Increase__c &gt; 0,
+  ISBLANK(TEXT(Month_Of_Increase__c))
+)</errorConditionFormula>
+        <errorDisplayField>Month_Of_Increase__c</errorDisplayField>
+        <errorMessage>A Month of Increase must be selected if the Percent Increase value is greater than 0</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_increase_for_lumpsum_or_weekly_pmts</fullName>
+        <active>true</active>
+        <description>Lump sum and weekly payments should not have percent increase/month of increase values populated</description>
+        <errorConditionFormula>AND(
+  OR(
+    TEXT(Payment_Frequency__c) = &quot;lump sum&quot;,
+    TEXT(Payment_Frequency__c) = &quot;weekly&quot;
+  ),
+  OR(
+    Percent_Increase__c != 0,
+    NOT(TEXT(Month_Of_Increase__c) = &quot;&quot;)
+  )
+)</errorConditionFormula>
+        <errorDisplayField>Payment_Frequency__c</errorDisplayField>
+        <errorMessage>For lump sum and weekly payments, ensure that Percent Increase is 0 and Month of Increase remains blank.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Calculate_Cash_Flows</fullName>
+        <availability>online</availability>
+        <description>Deletes existing related cash flow records and recreates</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Calculate Cash Flows</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+var outputMessage = { 
+  title: &apos;&apos;, 
+  message: &apos;&apos; 
+};
+var continueProcessing = true;
+var profileName = &apos;{!$Profile.Name}&apos;.replace(/\s+/g,&apos; &apos;).trim();
+
+if(!(profileName == &apos;Specialty Finance - Processors&apos; ||
+     profileName == &apos;Specialty Finance - Admin&apos; ||
+     profileName == &apos;System Administrator&apos;)) {
+  outputMessage.title = &apos;PERMISSION ISSUE&apos;;
+  outputMessage.message = &apos;Your profile does not have proper permissions to calculate Cash Flow records. Please contact your manager or create an IT Support ticket for further assistance.&apos;;
+  continueProcessing = false;
+} else {
+  //retrieve Cash Flow records associated with Assigned Payment
+  var recordsToDelete = sforce.connection.query(&quot;SELECT Id FROM Cash_Flow_Opp__c WHERE Assigned_Payment__c = &apos;{!Assigned_Payments__c.Id}&apos;&quot;); 
+  var records = recordsToDelete.getArray(&quot;records&quot;);
+
+  if(records.length &gt; 0) {
+    continueProcessing = confirm(&apos;This process will delete the existing Cash Flow records associated with this Assigned Payment and recreate them.  Please confirm that you wish to continue with this process.&apos;);
+
+    if(!continueProcessing) {
+      outputMessage.title = &apos;CANCELLED&apos;;
+      outputMessage.message = &apos;No Cash Flow records were recreated.&apos;;
+    } else {
+      var idsToDelete = new Array();
+      for (var i = 0; i &lt; records.length; i++) {
+        idsToDelete[i] = records[i].Id;
+      }
+      while(idsToDelete.length &gt; 0) {
+         var deleteArray = [];
+         if(idsToDelete.length &gt; 200) {
+            for(var i = 0; i &lt; 200; i++) {
+               deleteArray[i] = idsToDelete[i];
+            }
+            idsToDelete.splice(0,200);
+         } else {
+            deleteArray = deleteArray.concat(idsToDelete);
+            idsToDelete.splice(0, idsToDelete.length);
+         }
+
+         var delResult = sforce.connection.deleteIds(deleteArray);
+         for(var i = 0; i &lt; delResult.length; i++) {
+           if(delResult[i].success != &apos;true&apos;) {
+             outputMessage.title = &apos;DELETION PROBLEM&apos;;
+             outputMessage.message = &apos;A problem occurred with the deletion of the existing Cash Flow records.&lt;ul&gt;&lt;li&gt;Error: &apos; + delResult[i].errors.message + &apos;&lt;/li&gt;&lt;/ul&gt;Processing can not continue.&apos;;
+             continueProcessing = false;
+             break;
+           }
+         }
+         if(!continueProcessing) {
+            break;
+         }
+      }
+      
+    }
+  } else {
+    continueProcessing = confirm(&apos;This process will create new Cash Flow records based on the information provided in this Assigned Payment. Please confirm that you wish to continue with this process.&apos;);
+    if(!continueProcessing) {
+      outputMessage.title = &apos;CANCELLED&apos;;
+      outputMessage.message = &apos;No Cash Flow records were created.&apos;;
+    }
+  }
+}
+
+if(continueProcessing) {
+  var oppId = &quot;{!Assigned_Payments__c.OpportunityId__c}&quot;; 
+  var apId = &quot;{!Assigned_Payments__c.Id}&quot;; 
+  var numPayments = {!IF(ISBLANK(Assigned_Payments__c.Number_of_Payments__c), &apos;0&apos;, TEXT(Assigned_Payments__c.Number_of_Payments__c))}; 
+  var firstPaymentDate = new Date(&quot;{!Assigned_Payments__c.First_Payment_Date__c}&quot;); 
+  var amount = {!IF(ISBLANK(Assigned_Payments__c.Amount__c), &apos;0&apos;, TEXT(Assigned_Payments__c.Amount__c))}; 
+  var frequency = &quot;{!TEXT(Assigned_Payments__c.Payment_Frequency__c)}&quot;.toLowerCase(); 
+  var pctIncrease = {!Assigned_Payments__c.Percent_Increase_100__c}/100; 
+  var numOfMonthsIncrease = 12;
+  var months = [&quot;january&quot;,&quot;february&quot;,&quot;march&quot;,&quot;april&quot;,&quot;may&quot;,&quot;june&quot;,&quot;july&quot;,&quot;august&quot;,&quot;september&quot;,&quot;october&quot;,&quot;november&quot;,&quot;december&quot;];
+  var monthOfIncreaseText = &quot;{!IF(ISBLANK(TEXT(Assigned_Payments__c.Month_Of_Increase__c)), &apos;&apos;, TEXT(Assigned_Payments__c.Month_Of_Increase__c))}&quot;.toLowerCase();
+  var monthOfIncrease = months.indexOf(monthOfIncreaseText);
+
+  //verify required fields are entered
+  if(
+    numPayments == 0 ||
+    frequency == &apos;&apos; ||
+    amount == 0 ||
+    firstPaymentDate == new Date(&apos;&apos;)) {
+     outputMessage.title = &apos;Required Fields&apos;;
+     outputMessage.message = &apos;The following fields are required to generate Cash Flow records:&apos; +
+        &apos;&lt;ul&gt;&lt;li&gt;Number of Payments&lt;/li&gt;&apos; +
+        &apos;&lt;li&gt;Payment Frequency&lt;/li&gt;&apos; +
+        &apos;&lt;li&gt;Amount&lt;/li&gt;&apos; +
+        &apos;&lt;li&gt;First Payment Date&lt;/li&gt;&lt;/ul&gt;&apos; +
+        &apos;Please ensure each of these fields is populated and try again.&apos;;
+     continueProcessing = false;
+  } 
+
+  if(continueProcessing) {
+    //month of increase must fall on a payment date
+    var monthCheck = [&quot;quarterly&quot;,&quot;semiannual&quot;,&quot;annual&quot;];
+
+    if(monthOfIncrease &gt; -1 &amp;&amp; monthCheck.indexOf(frequency) &gt; -1) {
+      var validMonths = new Array();
+      switch(frequency) {
+        case &quot;quarterly&quot;:
+          var startMonth = firstPaymentDate.getMonth();
+          var pay2 = startMonth + 3 - ((startMonth + 3 &gt; 11) ? 12 : 0);
+          var pay3 = startMonth + 6 - ((startMonth + 6 &gt; 11) ? 12 : 0);
+          var pay4 = startMonth + 9 - ((startMonth + 9 &gt; 11) ? 12 : 0);
+          validMonths = [startMonth, pay2, pay3, pay4];
+          break;
+        case &quot;semiannual&quot;:
+          var startMonth = firstPaymentDate.getMonth();
+          var pay2 = startMonth + 6 - ((startMonth + 6 &gt; 11) ? 12 : 0);
+          validMonths = [startMonth, pay2];
+          break;
+        case &quot;annual&quot;:
+          var startMonth = firstPaymentDate.getMonth();
+          validMonths = [startMonth];
+          break;
+      }
+
+      if(validMonths.indexOf(monthOfIncrease) == -1) {
+        continueProcessing = false;
+        outputMessage.title = &apos;Invalid Month&apos;;
+        outputMessage.message = &apos;The Month of Increase does not fall on a valid payment date:&lt;ul&gt;&apos;;
+        for(var i = 0; i &lt; validMonths.length; i++) {
+          outputMessage.message = outputMessage.message + &apos;&lt;li&gt;&apos; + months[validMonths[i]].charAt(0).toUpperCase() + months[validMonths[i]].slice(1); + &apos;&lt;/li&gt;&apos;;
+        }
+        outputMessage.message = outputMessage.message + &apos;&lt;/ul&gt;&apos;;
+      }
+    }
+  }
+
+  if(continueProcessing){
+    var newCashFlows = [];
+    var payDate = new Date(firstPaymentDate);
+    var dayOfMonth = payDate.getDate();
+
+    for(var i=0; i &lt; numPayments; i++) {
+      var cashflow = new sforce.SObject(&quot;Cash_Flow_Opp__c&quot;);
+      cashflow.Opportunity__c = oppId;
+      cashflow.Assigned_Payment__c = apId;
+      cashflow.Amount__c = amount;
+      var pdate = new Date(payDate);
+      cashflow.Date__c = pdate;
+      newCashFlows[i] = cashflow;
+
+      //no need to calculate next payment if we are on the last one
+      if(i+1 == numPayments) {
+         break;
+      }
+
+      switch(frequency) {
+         case &quot;weekly&quot;:
+            payDate = new Date(payDate.setDate(payDate.getDate() + 7));
+            break;
+         case &quot;monthly&quot;:
+            var nextPayDate = new Date(payDate.getFullYear(), payDate.getMonth() + 1, dayOfMonth);
+            if(dayOfMonth &lt;= 28 || ((payDate.getMonth() &lt; 11 &amp;&amp; nextPayDate.getMonth() == payDate.getMonth() + 1) || (payDate.getMonth() == 11 &amp;&amp; nextPayDate.getMonth() == 0))) {
+               payDate = new Date(nextPayDate);
+            } else {
+               //encountered a month with fewer days
+               payDate = new Date(nextPayDate.getFullYear(), nextPayDate.getMonth(), 0);
+            }
+            break;
+         case &quot;quarterly&quot;:
+            var nextPayDate = new Date(payDate.getFullYear(), payDate.getMonth() + 3, dayOfMonth);
+            if(dayOfMonth &lt;= 28 || ((payDate.getMonth() &lt; 9 &amp;&amp; nextPayDate.getMonth() == payDate.getMonth() + 3) || (payDate.getMonth() &gt;= 9 &amp;&amp; 9 - nextPayDate.getMonth() == payDate.getMonth()))) {
+               payDate = new Date(nextPayDate);
+            } else {
+               //encountered a month with fewer days
+               payDate = new Date(nextPayDate.getFullYear(), nextPayDate.getMonth(), 0);
+            }
+            break;
+         case &quot;semiannual&quot;:
+            var nextPayDate = new Date(payDate.getFullYear(), payDate.getMonth() + 6, dayOfMonth);
+            if(dayOfMonth &lt;= 28 || ((payDate.getMonth() &lt; 6 &amp;&amp; nextPayDate.getMonth() == payDate.getMonth() + 6) || (payDate.getMonth() &gt;= 6 &amp;&amp; 6 - nextPayDate.getMonth() == payDate.getMonth()))) {
+               payDate = new Date(nextPayDate);
+            } else {
+               //encountered a month with fewer days
+               payDate = new Date(nextPayDate.getFullYear(), nextPayDate.getMonth(), 0);
+            }
+            break;
+         case &quot;annual&quot;:
+            var nextPayDate = new Date(payDate.getFullYear() + 1, payDate.getMonth(), dayOfMonth);
+            if(dayOfMonth &lt;= 28 || payDate.getMonth() == nextPayDate.getMonth()) {
+               payDate = new Date(nextPayDate);
+            } else {
+               //encountered a leap year situation
+               payDate = new Date(nextPayDate.getFullYear(), nextPayDate.getMonth(), 0);
+            }
+            break;
+         default:
+            payDate = new Date(payDate);
+      }
+
+      if(pctIncrease &gt; 0 &amp;&amp; payDate.getMonth() == monthOfIncrease) {
+         amount = amount * pctIncrease;
+      }
+   }
+
+   if(newCashFlows.length &gt; 0) {
+      var successCount = 0;
+      var errorCount = 0;
+      var sampleError;
+
+      //we need to bulkify the code since record creation is limited to 200 records at a time
+      while(newCashFlows.length &gt; 0) {
+         var cashFlowArray = [];
+         if(newCashFlows.length &gt; 200) {
+             for( var i = 0; i &lt; 200; i++) {
+                 cashFlowArray[i] = newCashFlows[i];
+             }
+             newCashFlows.splice(0,200);
+         }
+         else {
+             cashFlowArray = cashFlowArray.concat(newCashFlows);
+             newCashFlows.splice(0,newCashFlows.length);
+         }
+
+         var result = sforce.connection.create(cashFlowArray);
+         for(var i = 0; i &lt; result.length; i++) {
+            if(result[i].success == &apos;true&apos;) {
+               successCount++;
+            } else {
+               sampleError = result[i].errors.message;
+               errorCount++;
+            }
+         }
+
+      }
+
+      
+      if(successCount &gt; 0 &amp;&amp; errorCount == 0) {
+         outputMessage.title = &apos;SUCCESS&apos;;
+         outputMessage.message = &apos;You successfully created &apos; + successCount +
+               &apos; Cash Flow record&apos; + (successCount &gt; 1 ? &apos;s&apos; : &apos;&apos;) + &apos;.&apos;;
+      } else if (successCount &gt; 0 &amp;&amp; errorCount &gt; 0) {
+         outputMessage.title = &apos;PARTIAL SUCCESS&apos;;
+         outputMessage.message = &apos;You successfully created &apos; + successCount + 
+               &apos; Cash Flow record&apos; + (successCount &gt; 1 ? &apos;s&apos; : &apos;&apos;) + &apos; but &apos; +
+               errorCount + &apos; error&apos; + (errorCount &gt; 1 ? &apos;s&apos; : &apos;&apos;) + &apos; were &apos; +
+               &apos;reported. Please review the Cash Flow records that were generated.&apos;;
+      } else if (successCount == 0 &amp;&amp; errorCount &gt; 0) {
+         outputMessage.title = &apos;FAILURE&apos;;
+         outputMessage.message = &apos;No Cash Flow records were able to be generated.&lt;br/&gt;&apos; +
+               &apos;&lt;ul&gt;&lt;li&gt;Error: &apos; + sampleError + &apos;&lt;/li&gt;&lt;/ul&gt;&apos;;
+      }
+   }
+  } 
+}
+
+var box = new SimpleDialog(&quot;hersh&quot;+Math.random(), true); 
+parent.box = box; 
+box.setTitle(outputMessage.title); 
+box.createDialog(); 
+box.setWidth(350); 
+box.setContentInnerHTML(outputMessage.message + &apos;&lt;p&gt;&lt;div style=&quot;width: 100%; text-align: center;&quot;&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();window.parent.location.href=window.parent.location.href;return false;&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;&apos;); 
+box.setupDefaultButtons(); 
+box.show();</url>
+    </webLinks>
+</CustomObject>

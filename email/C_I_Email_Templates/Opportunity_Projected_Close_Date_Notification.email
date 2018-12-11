@@ -1,0 +1,8 @@
+The following Opportunity is set to close within 15 days. Please update the Projected Close Date accordingly if it will not close on the Projected Close Date as anticipated.
+
+Opportunity Name: {!Opportunity.Name}
+Current Stage: {!Opportunity.StageName}
+Current Sub-Stage: {!Opportunity.SubStage__c}
+Link to Opportunity Record: {!Opportunity.Link}
+
+Thank you.

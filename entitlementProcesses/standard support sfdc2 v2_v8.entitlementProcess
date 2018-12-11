@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>BOFI Servicing</businessHours>
+    <description>The default support process for customers</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>false</isVersionDefault>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Wires</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>30</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.ReplyRequired__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Email Response</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>(1 OR (2 AND 3) OR (4 AND 5)) AND 6</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Wires</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supervisor Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Escalation</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supervisor Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Employee Account</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>((1 OR 2 OR 3 OR 4 OR 5 OR 6) OR (7 AND 8) OR (9 AND (10 OR 11)) OR (13 AND 14)) OR (15 AND 16) AND 12</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CM 2 Specialty Tasks / Maintenance, CM 3 Specialty / Treasury Tasks, CM 4 ACH &amp; Builds, CM 5 OBS / Netteller / RDC Maintenance, CM 6 Tasks</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Closeout / Withdrawal, CD Renewal, CM 7 New OBS Users, CM 8 Calls, Correspondence / Inquiry, Debit ATM Rush Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cash Edge PIN Reset, Deceased, Dormant Escheat, Maintenance CIF, Address, Contact, Stop Payment Non ACH Non Bill Pay, Transfer Request, VOD&apos;s</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Debit ATM Access Problems, Debit ATM Requests, Disputes and Adjustments, Exception Processing, Loss Prevention, Online Banking / Mobile Incident, Stop Payment Bill Pay or ACH</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advisor Account Maintenance, Errors / Call back, New Account Maintenance / Research, Signature Card</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Call Back Request, UDB Inquiry, QA Feedback Contact Center</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supervisor Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Request_Type__c</field>
+            <operation>contains</operation>
+            <value>Temp Card Limit Increase, Rate Exception</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LS Complaints, LS ARM Request, LS Credit, LS Escrows, LS General Request, LS Notices, LS Payments / Billing, LS Payoff</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>General Complaint, Complaint - Other, General Credit Inquiry, Credit - Other, Escrow analysis - question, Escrow - Other, Request for Year end Statement, Notices - Other, Request for Waive of late charges, Other, Payment amount inquiry</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Request for bill, Returned items, Set up ACH, Set up eStatements, Set up Online banking, Payments/ Billing - Other, Payoff inquiry, Payoff - Other, ARM Change</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email Case</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Fax</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email Case</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email: Loan Servicing</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>((1 OR 2) AND 5) OR ((3 AND 4) AND 5)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Closures by Bank, Copies of Statement, Check, Notice, IRA Levy / Garnishment, Maintenance Account, New Account Enrollment, New Account Funding, RS Customer Requests (Pending), Research</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Adjustments (Miles, ATM, Check, Deposits), Advisor New Account Enrollment, NSF / Non Post, RS New Account Application, Tax: 1099 INT</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LS Insurance, LS Payments / Billing, LS Taxes, LS Internal Work</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Force place insurance, Payment application research, Property taxes, Supplemental taxes, Delinquent taxes, Payment taxes, Taxes - Other, Payments/ Billing --- WIP, Request for Approval, Internal LS Events - Other</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>960</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>(1 AND 5) OR (2 AND (3 OR 4) AND 5) OR (6 AND 5)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Legal, Vesting Changes</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LS Complaints, LS ARM Request, LS Credit, LS Escrows, LS Insurance, LS General Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Managerial Complaint, Regulatory Complaint, QWR, Credit dispute, Escrow analysis - request, Escrow overage - request for check, Escrow shortage, Change of insurance, Request to delete MI, Insurance - Other, Transfer of Servicing</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Name change - death, Name change - request, Request change of address, ARM Dispute, Force place - Flood, Force place - Hazard, EOI</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LS Escrows - Open / Close</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>(1 AND 4) OR ((2 AND 3) AND 4)</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Research Longer SLA</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LS Payoff</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.LS_Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Request for Payoff, Request for release of mortgage after payoff</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RS Withdrawal / Closing</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>3360</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>(1 OR 2) AND 3</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advisor Research &amp; Documentation, Check Orders, Cloning Request, Closures - Pending Notice, Copy of 1099R / 5498 (IRA/ROTH only), Customer Documents (Pending), Loss Prevention Research, RS Contributions, RS Decedent, Retirement Questions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Vesting Pending</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>10560</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BOFI Servicing</businessHours>
+        <criteriaBooleanFilter>((1 AND 2) OR 3) AND 4</criteriaBooleanFilter>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Supervisor Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Request_Type__c</field>
+            <operation>equals</operation>
+            <value>Bill Pay Change, Unrestrict account - Missing Sig Card, Funds Transfer, CashEdge PIN Reset</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CM 1 Specialty New Accounts, CM 9 Specialty 1031 Sub Accounts, Specialty Transfers</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>false</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Resolved</milestoneName>
+        <minutesToComplete>120</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <name>Standard Support SFDC2 v2</name>
+    <versionMaster>5520H000000blLU</versionMaster>
+    <versionNumber>8</versionNumber>
+</EntitlementProcess>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>SVP_BB_AD_AFF</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Virtus</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <name>Virtus Dashboard Folder</name>
+</DashboardFolder>

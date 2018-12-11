@@ -1,0 +1,15 @@
+{!Account.OwnerFirstName},
+
+Your account, {!Account.Name} (NMLSID: {!Account.NMLSID__c}), will reach 6 months of inactivity in {!Account.Days_Until_Expiration__c} days.
+
+Please take action as necessary in order to maintain this account.
+
+Address: 
+{!Account.BillingStreet}
+{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}
+
+Phone: {!Account.Phone}
+Email: {!Account.SFR_TPO_Email__c}
+Email 2: {!Account.PersonEmail}
+
+Thank you!

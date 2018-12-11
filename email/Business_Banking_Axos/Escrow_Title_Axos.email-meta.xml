@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Title, Escrow, &amp; 1031 Accommodator</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Axos Bank - Escrow &amp; Title</name>
+    <style>none</style>
+    <subject>Lowest Cost &amp; Greatest Returns</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

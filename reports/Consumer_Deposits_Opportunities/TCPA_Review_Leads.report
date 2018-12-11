@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.CIF__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>MOBILE_PHONE</field>
+    </columns>
+    <columns>
+        <field>Lead.qbdialer__LastCallTime__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <description>Checking Cross-Sell from Auto Loans,Mortgage 250,Request More Information (RMI) Records,CRM Factory Savings Cross-Sell from Mortgage Loans</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Deposit_Relationship__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Auto Lending Cross-Sell,CRM Factory Mortgage Cross-Sell,Mortgage 250,Request More Information</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contacted,Contacted-Application Pending,Contacted- Call Back,Contacted-Not Interested,Sale Lost,Sale Won</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Deposit_Relationship__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TCPA Review - Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead.qbdialer__LastCallTime__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Lead.qbdialer__LastCallTime__c</dateColumn>
+        <endDate>2016-11-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

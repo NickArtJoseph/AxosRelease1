@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style=""><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},<br><br>We appreciate the information and have added your travel
+notes to your account. We hope you have a wonderful trip!<br><br><b>Please note: </b>There
+is a 2% transaction fee for all International Point of Sale (POS) transactions
+and ATM withdrawals. However, there could be additional fees charged by the
+merchant or ATM.<br><br>We appreciate your business and commit to
+providing superior Banking products, support and services.<br><br>Best Regards,<br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font style="">Axos Bank</font><font color="#ff0000" style="color: rgb(0, 0, 0);">&nbsp;</font>Customer Service</font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

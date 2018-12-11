@@ -1,0 +1,19 @@
+{!Today} 
+
+**Please reply to all parties included in this email to ensure prompt processing of recertification.** 
+
+{!Account.Name} 
+{!Account.BillingStreet} 
+{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode} 
+
+
+Dear Valued Lending Partner: 
+
+Our records indicate that your annual lending partner recertification with BOFI Federal Bank is due {!Account.Re_certification_Date__c}. 
+
+Please review the attached document and let us know if you have any questions. Thank you. 
+
+Respectfully, 
+
+BofI Federal Bank 
+Third Party Client Relations

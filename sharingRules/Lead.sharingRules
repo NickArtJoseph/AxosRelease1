@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Advisor_Leads_for_Sherry</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Advisor Leads for Sherry</label>
+        <sharedTo>
+            <group>Sherry_McCarty</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advisor Firm SFDC2,Advisor Firm</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Business_Banking_Leads_for_Specialty_Finance_Reserachers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Grants access to a public group &quot;Specialty Finance - Researchers&quot;  as requested by Bradley Greer.</description>
+        <label>Business Banking Leads for Specialty Finance Reserachers</label>
+        <sharedTo>
+            <group>Specialty_Finance_Researchers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Business Banking</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CI_Lead_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>C&amp;I - Lead Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>C_I_Lending_Group</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>C&amp;I - AB Participation,C&amp;I - General,C&amp;I - Bridge,C&amp;I - Lender Finance</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CI_Lead_Sharing_Nicole_Thomsen</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>C&amp;I - Lead Sharing - Nicole Thomsen</label>
+        <sharedTo>
+            <group>Nicole_Thomsen</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>C&amp;I - AB Participation,C&amp;I - General,C&amp;I - Lender Finance,C&amp;I - Bridge</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLO_Specialty_Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLO - Specialty Finance</label>
+        <sharedTo>
+            <group>Consumer_Lending_Operations</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance,Business Banking SFDC2,Consumer Deposits SFDC2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Capital_Markets_Lead_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares leads with read/write by Capital Market Recrod type to owner with users of Capital Markets group.</description>
+        <label>Capital Markets Lead Sharing</label>
+        <sharedTo>
+            <group>Capital_Markets</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Capital Markets</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Commercial_Banking_SFDC2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Commercial Banking SFDC2</label>
+        <sharedTo>
+            <group>Commercial_Banking_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Commercial Banking SFDC2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Compliance_Email_Opt_Outs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compliance: Email Opt Outs</label>
+        <sharedTo>
+            <group>Compliance_Email_Opt_Out</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Lead_RT_SFDC2__c</field>
+            <operation>notEqual</operation>
+            <value>X</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Data_Analytics_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Data Analytics Team</label>
+        <sharedTo>
+            <group>Data_Analytics_Team</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income Property Lending,Business Banking,C&amp;I - AB Participation,C&amp;I - Bridge,C&amp;I - Lender Finance,C&amp;I - General,Virtus Business Lead,Advisor Firm,Consumer Deposits,Strategic Partnerships,&quot;SFR, TPO, IPL&quot;,HRB Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dealer Services - Applicant,Dealer Services - Dealer,WLD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Enterprise_2_0_Lead_Sharing_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Shares Leads that are in the &quot;Big Silo&quot; as it is rolled out to BUs. For 2.0 launch this is Consumer Deposits, Virtus, Dealer Services, Business Banking, Advisor.
+
+Enterprise Profile should also see Consumer Wholesale Leads</description>
+        <label>Enterprise 2.0 Lead Sharing Read Only</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>SFDC2__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Enterprise_SFDC2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Enterprise SFDC2</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dealer Services - Dealer SFDC2,Virtus SFDC2,Prospecting Consumer,Prospecting Business,Advisor Firm SFDC2,Business Banking SFDC2,Consumer Deposits SFDC2,Commercial Banking SFDC2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dealer Services - Applicant SFDC2,Epiq SFDC2,HBD SFDC2,Consumer Wholesale SFDC2,ULP SFDC2,C&amp;I SFDC2,IPL SFDC2,Wholesale Mortgage Express - Applicant SFDC2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Factoring</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Factoring</label>
+        <sharedTo>
+            <group>C_I</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Factoring</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Factoring_Lead_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Leads of Record Type &quot;Factoring&quot; should be shared (read/write) for Factoring Management and Factoring roles</description>
+        <label>Factoring Lead Sharing</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Factoring_Management</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Factoring</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>HRB_Lead_Visibility</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Read-only access to HRB Leads</description>
+        <label>HRB Lead Visibility</label>
+        <sharedTo>
+            <group>HRB_Lead_Visibility</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HRB Lead</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Leads_for_SF_Researchers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares many BU Lead record types with read/write with research team. Ticket # 52541</description>
+        <label>Leads for SF Researchers</label>
+        <sharedTo>
+            <group>Specialty_Finance_Researchers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Income Property Lending,Capital Markets,Consumer Wholesale,Business Banking,C&amp;I - Bridge,C&amp;I - Lender Finance,C&amp;I - General,Virtus Business Lead,Consumer Deposits,Advisor Firm,Specialty Finance,WLD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketo_Read_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketo Read Access</label>
+        <sharedTo>
+            <role>Marketo</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 3 OR 4) AND 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Prospecting Business,Advisor Firm SFDC2,Business Banking SFDC2,Consumer Deposits SFDC2,Dealer Services - Dealer SFDC2,Prospecting Consumer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Email</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Commercial Banking SFDC2,ULP SFDC2,Dealer Services - Applicant SFDC2,Virtus SFDC2,Epiq SFDC2,Wholesale Mortgage Express - Applicant SFDC2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>HBD SFDC2,Consumer Wholesale SFDC2,C&amp;I SFDC2,IPL SFDC2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Research_Team_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Research Team: Leads</label>
+        <sharedTo>
+            <group>Researchers_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Virtus Business Lead,Dealer Services - Applicant,Business Banking,Advisor Firm,Consumer Deposits,Dealer Services - Dealer</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SFR_TPO_IPL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SFR, TPO, IPL</label>
+        <sharedTo>
+            <role>Lending</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>&quot;SFR, TPO, IPL&quot;</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Specialty_Finance_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Specialty Finance Leads</label>
+        <sharedTo>
+            <group>Group_Specialty_Finance</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Specialty Finance</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>WLD_Record_Type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>WLD Record Type</label>
+        <sharedTo>
+            <group>WLD</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>WLD</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Bradley_Virtus</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Bradley Virtus</label>
+        <sharedTo>
+            <group>Virtus</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Bradley_Greer</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Business_Banking_Manager_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Business Banking Manager Leads</label>
+        <sharedTo>
+            <role>Business_Banking_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Business_Banking_Manager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>C_I_Record_Access_for_Brandon</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>C&amp;I Record Access for Brandon</label>
+        <sharedTo>
+            <group>Brandon_Hines</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>C_I_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Capital_Markets_Lead_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares leads read/write with a Capital Market Group owner with users of Capital Markets group.</description>
+        <label>Capital Markets Lead Sharing</label>
+        <sharedTo>
+            <group>Capital_Markets</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Capital_Markets</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Dealer_Services_Lead_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows all users in Dealer Services roles to view and modify leads that are Dealer Services lead record type.</description>
+        <label>Dealer Services Lead Sharing</label>
+        <sharedTo>
+            <group>Dealer_Services_Lead_Sharing</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Dealer_Services_Lead_Sharing</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Factoring_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows factoring users to update eachothers leads</description>
+        <label>Factoring Leads</label>
+        <sharedTo>
+            <group>Factoring_SFDC2</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Factoring_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>IPL_Leads_for_Crystal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Approved by Brandon Hines</description>
+        <label>IPL Leads for Crystal</label>
+        <sharedTo>
+            <group>Crystal_Simpson</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>C_I_IPL</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Leads_C_I_SFDC2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Read &amp; Write Permissions among C&amp;I users</description>
+        <label>Leads: C&amp;I SFDC2</label>
+        <sharedTo>
+            <group>C_I_SFDC2</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>C_I_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Virtus_Lead_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Virtus Lead Sharing</label>
+        <sharedTo>
+            <group>Business_Banking</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Virtus</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Virtus_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Virtus Leads</label>
+        <sharedTo>
+            <role>Virtus_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Virtus_Manager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Virtus_SFDC2_Group_Edit_Rights</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Virtus SFDC2 Group Edit Rights</label>
+        <sharedTo>
+            <group>Virtus_SFDC2</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Virtus_SFDC2</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>WLD</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>WLD</label>
+        <sharedTo>
+            <group>WLD</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>WLD</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

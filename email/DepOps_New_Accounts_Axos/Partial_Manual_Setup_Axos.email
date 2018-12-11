@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><br></p><span style="background-color: rgb(255, 255, 255);"><p>Hello {!Case.Contact},<br><br>Thank you for choosing&nbsp;Axos Bank™.&nbsp;We are pleased to confirm your new account application was approved. Please allow one (1) business day before registering for Online Banking and accessing your account. At that time, use the link below to Register for Online Banking:<br><br><a href="https://www.mybankofinternet.com/tob/live/usp-core/app/register?_ga=2.213684052.1506161890.1499123555-1386044843.1489003214">https://www.mybankofinternet.com/tob/live/usp-core/app/register?_ga=2.213684052.1506161890.1499123555-1386044843.1489003214</a><br><br>If you have any questions, please call us at (888) 502-2967 or email us at </p><p><u><font color="#0000ff"><a href="mailto:customerservice@Axos%20Bank.com">customerservice@axosbank.com</a></font></u><span style="font-size: 12pt;">.</span></p><p><span style="font-size: 12pt;"><br></span></p><p>We appreciate your business and commit to delivering the value that will make&nbsp;Axos Bank&nbsp;your first choice for all your banking needs.<br><br></p></span><p><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank </font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

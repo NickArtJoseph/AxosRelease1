@@ -1,0 +1,24 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>To acti<font style="">vate a dormant account please choose from one of the
+following options:<br></font></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style=""><font style=""><br></font></font></p><div style="color: rgb(0, 0, 0); text-indent: 0px;"><font face="Arial, sans-serif">Mail a physically signed request with
+instructions to activate the account to; <br style=""></font><ol><li><font face="Arial, sans-serif"><b style="">BOFI Federal Bank, P.O. Box 509127,
+San Diego, CA</b><span style="text-indent: -0.25in;"><b>&nbsp; </b></span><span style="text-indent: -0.25in;"><b>92150-9948</b> or;</span></font></li><li><font face="Arial, sans-serif" style=""><font style="">Fax a physically signed request with
+instructions to activate the account to; <b style="">858-350-0443</b></font></font></li><li><font face="Arial, sans-serif" style=""><font style="">Scan and email a <b style="">physically signed request</b> with
+instructions to activate the account in response to this message.</font></font></li></ol></div><div style="color: rgb(0, 0, 0); text-indent: 0px;"><font face="Arial, sans-serif" style=""><font style=""><font style="">Once we have received a valid activation request we will be
+able to remove the dormant status on your account. In the future to keep the
+account active you can either complete a mini</font>mum of one monetary transaction
+every 23 months, log into Online Banking once a year, or contact the Bank by
+phone at least once a year.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,</font></font></div><div style="text-indent: 0px;"><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><font style=""><br></font></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><font style=""><br><font style="background-color: rgb(255, 255, 255);">Bank of Internet&nbsp;</font>Customer Service</font></font></div><p style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity_Queue__c.Opportunity_Name__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity_Queue__c.Opportunity_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity Michael Paolini-mikepaolini724@gmail.com Enrollment - 77832</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Find an Opportunity Queue</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Opportunity_Queue__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity_Queue__c.Owner_Change_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

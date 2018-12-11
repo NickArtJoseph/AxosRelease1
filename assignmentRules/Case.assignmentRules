@@ -1,0 +1,2200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Global Case Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>On Hold,Future Dated,In Process,Pending Internal Action,Closed,Cancelled (Closed),Pending Customer Response</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>notContain</operation>
+                <value>Supervisor Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Cash_Management_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>VIP,Escalated</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 1 Specialty New Accounts,CM 5 OBS / Netteller / RDC Maintenance,CM 6 Tasks,CM 7 New OBS Users</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 8 Calls,CM 4 ACH &amp; Builds</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Business_Operations_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 2 CM/Specialty Maintenance,CM 3 CM New Accounts</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Escalated</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND 3) or ((4 or 5) and 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Complaints,LS Escrows,LS Insurance,LS General Request,LS Notices,LS Payments / Billing,LS Payoff,LS Taxes,LS Internal Work,LS Call Tracking,LS Escrows - Open / Close</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed,Cancelled (Closed),Closed (Junk)</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>equals</operation>
+                <value>urgent</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>equals</operation>
+                <value>urgent</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>&quot;Copies of Statement, Check, Notice&quot;,Deceased,Maintenance Account,Stop Payment Non ACH Non Bill Pay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Dormant Escheat,Research Longer SLA,&quot;	 Maintenance CIF, Address, Contact&quot;,CD Renewal,VOD&apos;s,Research</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Tax: 1099 INT,Account Closeout / Withdrawal,Legal,Check Orders</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>New Account Maintenance / Research,Vesting changes,Advisor Account Maintenance,Signature Card,New Account Enrollment,Cloning Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Advisor New Account Enrollment,Advisor Research &amp; Documentation,Vesting Pending,Customer Documents (Pending) 30days AO2</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Stop Payment Bill Pay or ACH,Debit ATM Access Problems,Debit ATM Requests,Online Banking / Mobile Incident,Debit ATM Rush Request,Cash Edge PIN</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Loss_Prevention_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Loss Prevention,Loss Prevention Research,Closures - Pending Notice,Closures by Bank,Disputes and Adjustments</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Retirement Questions,Copy of 1099R / 5498 (IRA/ROTH only),RS Contributions,RS Customer Requests (Pending),RS New Account Application,RS Withdrawal / Closing,RS Decedent</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>IRA Levy / Garnishment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Research_Adjustments_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Escalated,VIP</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>&quot;Adjustments (Miles, ATM, Check, Deposits)&quot;,Errors / Call back,New Account Funding,Correspondence / Inquiry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Wires</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Wires</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts_VIP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>New Account (Specialty),CM 9 Specialty 1031 Sub Accounts</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Emails_Faxes</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Bank X Wires,Email: Bank of Internet Wires,Email: BofI Advisor Wires,Email: Business Banking Wires,Email: UFB Direct Wires,Email: DepOps Secure,Email: DepOps</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Transfer_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Transfer Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Cash_Management</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 4 ACH &amp; Builds,CM 6 Tasks,CM 7 New OBS Users,CM 8 Calls</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Business_Operations</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 2 CM/Specialty Maintenance,CM 3 CM New Accounts</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>&quot;Copies of Statement, Check, Notice&quot;,Deceased,Maintenance Account,Stop Payment Non ACH Non Bill Pay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Dormant Escheat,Research Longer SLA,&quot;	 Maintenance CIF, Address, Contact&quot;,CD Renewal,VOD&apos;s,Research</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Tax: 1099 INT,Account Closeout / Withdrawal,Legal,Check Orders</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>New Account Maintenance / Research,Vesting changes,Advisor Account Maintenance,Signature Card,New Account Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Advisor New Account Enrollment,Advisor Research &amp; Documentation,Vesting Pending,Customer Documents (Pending)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Stop Payment Bill Pay or ACH,Debit ATM Access Problems,Debit ATM Requests,Online Banking / Mobile Incident,Debit ATM Rush Request,Cash Edge PIN</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CM 5 Netteller</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Nationwide</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Wires</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Advisor Wires,Email: Axos Wires</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Cash_Management</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Treasury Management</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Loss_Prevention</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Loss Prevention,Loss Prevention Research,Closures - Pending Notice,Closures by Bank,Same Day NSF &amp; Special Request,Disputes and Adjustments</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Retirement Questions,Copy of 1099R / 5498 (IRA/ROTH only),RS Contributions,RS Customer Requests (Pending),RS New Account Application,RS Withdrawal / Closing,RS Decedent</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>IRA Levy / Garnishment</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Virtus_Customer_Feedback</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Feedback</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Feedback_Business_Unit__c</field>
+                <operation>equals</operation>
+                <value>Virtus</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Advisor_Customer_Feedback</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Feedback</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Feedback_Business_Unit__c</field>
+                <operation>equals</operation>
+                <value>Advisor Firm</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>UDBInquiry</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Bank of Internet,Email: Axos Customer Service</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>online banking,logging in,mobile app</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Description</field>
+                <operation>contains</operation>
+                <value>online banking,logging in,mobile app</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Customer_Feedback</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Customer Feedback</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Feedback_Business_Unit__c</field>
+                <operation>equals</operation>
+                <value>Consumer Deposits,Nationwide,Nationwide Premier</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Research_Adjustments</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>&quot;Adjustments (Miles, ATM, Check, Deposits)&quot;,Errors / Call back,New Account Funding,Correspondence / Inquiry</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Supervisor</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Supervisor Request – Bill Pay Change,Supervisor Request – CashEdge Pin,Supervisor Request – Employee Account,Supervisor Request – Escalation,Supervisor Request – Funds Transfer,Supervisor Request – Temp Card Limit Increase</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Supervisor Request – Unrestrict Account</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Future Dated,Pending Customer Response,Pending Internal Action,Pending Approval</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Management_Approval_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>contains</operation>
+                <value>Supervisor Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Pending Approval</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Pending</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>contains</operation>
+                <value>Supervisor Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Future Dated,Pending Customer Response,Pending Internal Action</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Call_Back</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Call Back Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Deposit Accounts</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Bill Pay,Debit Card,Deposit Inquiry,Dispute a Transaction,DEBIT / ATM Card Forms</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>equals</operation>
+                <value>Debit</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>equals</operation>
+                <value>Travel Notification,Debit Card Replacement</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Deposit Accounts</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Wires</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Deposit Accounts</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Wire</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Deposit Accounts</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Other</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Personal Loans</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_LDV</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LDV</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>contains</operation>
+                <value>Other</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Business Banking,H&amp;R Block Tax Return,Online Banking,Prepaid card inquiries,Other</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Special_Assets_Portfolio_Management</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>equals</operation>
+                <value>Other Forms</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>equals</operation>
+                <value>610 Statement of Real Estate Owned,620 Financial Statement and Rent Roll Template</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Dropdown_1__c</field>
+                <operation>equals</operation>
+                <value>Other Forms</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>equals</operation>
+                <value>600 ACH Authorization Form,630 Third Party Authorization</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3 or 4 or 5 or 6 or 7)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Social Security Direct Deposit Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>ACH Interest Payment Authorization</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Savings Withdrawal Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Wire Request Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Official Check Request Form</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Declaration of Loss of Official Check</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3 or 4 or 5 or 6 or 7 or 8)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Add an Account Owner</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Name</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Beneficary</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Trust Certification</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Trust Certification</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Change Request - Uniform Transfers to Minors</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>W-9 Certification</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Request for ATM Visa Check Card</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Visa Business Check Card Application</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Loss_Prevention</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Written Statement of Unauthorized ACH Debit,ATM Debit Card Dispute Affidavit</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3 or 4 or 5 or 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Contribution Instructions</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Withdrawal Authorization</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Scheduled Payment Withdrawal Authorization</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Mandatory Distribution Withdrawal Authorization - Traditional</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Beneficiary Designation -Traditional &amp; Roth</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 or 3 or 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>UDB Inquiry</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Loan Payment ACH Authorization</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Loan Payment ACH Stop Payment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.UDB_Subject__c</field>
+                <operation>contains</operation>
+                <value>Loan Third Party Authorization Form</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Exception</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Exception Processing,NSF / Non Post</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>notEqual</operation>
+                <value>Closed,Cancelled (Closed)</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Signature card,Sig card,Incoming signature card</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Cash_Management</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2)</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>contains</operation>
+                <value>indoperations@promnetwork.com,alerts@gladtech.net,fdshareops2_fds@ml.com,DTCCACHDebits@DTCC.COM</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Gladiator</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Wires</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 3) AND 2 AND 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Wire</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Wire</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>notEqual</operation>
+                <value>Commercial Deposit Operations</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 and 2</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Stop Payment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 AND 2) or (3 and 4) or (5 and 6)) and 7</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>moved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Verification of Deposit,VOD</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Verification of Deposit,VOD</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>dead,death,died,deceased</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>dead,death,died,deceased,passed away,executor,estate</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Daily_Processing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 3) and 2 and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>dormant,escheat,pre-dormant,activate,active</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>dormant,escheat,pre-dormant,activate</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 AND 4) or (2 and 3 and 4)) and 5</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>distribution</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>transfer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Emails_Faxes</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2)</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>contains</operation>
+                <value>deposit.fax</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>contains</operation>
+                <value>depops</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or (2 AND 3)) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Distribution</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Close</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Transfer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or (1 AND 2)) and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Contribution</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 AND 2) or (1 AND 2 AND 3)) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>withdrawal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 AND 2) or (1 AND 3) or (1 AND 4) or 5) and 6</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Dormant,IRA,activate</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Dormant</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Activate</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>IRA,ROTH,Retirement</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Year-end,Statement,Yearend</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>IRA,1099r,1099-R,Tax form,IRS IRA,IRA Tax,Tax reporting,5498</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA,Tax,Tax reporting,IRS,1099-R,1099r,5498,form,report</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 and 3) or (1 AND 2 and 3)) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Death,IRA,Beneficiary IRA,Death IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>((1 AND 3) or (1 and 2) or (1 and 2 AND 3)) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Name change,IRA,Update name,New Name,Name change IRA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>IRA,name change</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_ACH_Forms</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and (3 or 4 or 5)</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>contains</operation>
+                <value>web@diginsite.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>contains</operation>
+                <value>web@diginsite.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>ACH</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>ACH</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>ACH</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2)</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>RMD,Mandatory distribution,minimum distribution</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>contains</operation>
+                <value>retirementservicessv</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Loss_Prevention</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3)</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>contains</operation>
+                <value>fdo_notification@cashedge.com,Risk.Management-EPP.Fraud@fisglobal.com,FraudMAP-no-reply@guardiananalytics.com,notification@encryptedmail-frbservices.org</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>@fisglobal.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>EARNS,FedMail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Research_Adjustments</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Funding,Call Back,Adjustments,Miles</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Funding,Call Back,Adjustments,Miles,Deposit Slip Mailer Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>travel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>travel,Bill Pay stop payment,ACH Stop Payment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Electronic_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 and 2) or (1 or 2 ) and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Unauthorized,Compromised,Affidavit</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Unauthorized,Compromised,affidavit</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Advisor Utility bill,Advisor Driver&apos;s License</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 3) and 2 and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Update name,modify Name,Name change,Beneficiary change,Bene change,Beneficiary update</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>UTMA,COT,Trust,POA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service,Email: Nationwide</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Drivers license,Utility bill,ID docs,ID documents</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.HasAttachment</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 and 3</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Collateral Hold</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Collateral Hold,Wholesale</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email,Fax,Email: UFB,Email: Bank of Internet,Email: Bank X,Email: Net Bank,Email: Advisor,Email: Business Banking,Email: Axos Customer Service</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Advisor_queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Advisor</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>QA_Feedback_Contact_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>QA Feedback Contact Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Escalated</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Complaints</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Escrows</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Escrows,LS Escrows - Open / Close</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Insurance</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Insurance</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS General Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Call Tracking</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Notices</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Notices</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payments_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Payments / Billing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payoff</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Payoff</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Taxes</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Taxes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Internal_Work</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>LS Internal Work</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>equals</operation>
+                <value>False</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Escalated</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Complaint</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>complaint</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Complaint</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Axos Customer Service</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>SFR Wholesale and Correspondent Rates,Income Property Lending Rates</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Notifications</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 or 2 or 3 or 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>equals</operation>
+                <value>tech@printmailsystems.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>tech@printmailsystems.com</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>tech.pmsys</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>contains</operation>
+                <value>tech@printmailsystems.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and 3 and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>address,death,transfer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>address,death,transfer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Name change,change address,death,waive late charge,transfer of servicing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Escrows</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3) and 4 and 5 and 6</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Escrow</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Escrow</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Escrow</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>notContain</operation>
+                <value>Payoff</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>notContain</operation>
+                <value>Payoff</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payoff</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Payoff</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Payoff</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Payoff,Payoff inquiry,Request for Payoff,Request for release of mortgage after payoff,Payoff - Other</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payments_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and 3 and 4 and 5</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>payment,RDI,Daily cash,Billing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>payment,RDI,Daily cash,Billing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>notContain</operation>
+                <value>tech@printmailsystems.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Insurance</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>insurance,hazard</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>insurance,hazard,force place insurance,loss draft</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>insurance,hazard</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Taxes</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2 or 3) and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>taxes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>taxes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.TextBody</field>
+                <operation>contains</operation>
+                <value>Property taxes,Supplemental taxes,Delinquent taxes,Payment taxes,Taxes - Other</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_New_Accounts</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Business Banking</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>contains</operation>
+                <value>no_reply@qwickrate.com,profilechange@qwickrate.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_BB_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Business Banking General Request,Business Banking Customer Contact</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Business Banking</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and 3 and 4</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Auto,loan,heloc,financing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Auto,loan,heloc,financing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Incoming</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payments_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 or 2) and 3 and 4 and 5</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>Waive,Waiver,Late,Fees,Billing,Reverse,Charges,Reversal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>Waive,Waiver,Late,Fees,Billing,Reverse,Charges,Reversal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>notContain</operation>
+                <value>tech@printmailsystems.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Fax</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.OwnerId</field>
+                <operation>equals</operation>
+                <value>LS Fax</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_Ops_Retirement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: RS Enrollment</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Payments_Billing</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 and (2 or 3) and 4 and 5</booleanFilter>
+            <criteriaItems>
+                <field>EmailMessage.FromAddress</field>
+                <operation>contains</operation>
+                <value>SScudder,RDONES,RBelandro,BSicherman,MLloyd,AHeinrich</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.Subject</field>
+                <operation>contains</operation>
+                <value>BILLING,PAYMENT,LATE,FEES,WAIVE</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Subject</field>
+                <operation>contains</operation>
+                <value>BILLING,PAYMENT,LATE,FEES,WAIVE</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.IsClosed</field>
+                <operation>notEqual</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Commercial_Deposit_Operations_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Commercial Deposit Operations</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New,Re-opened</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>LS_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>equals</operation>
+                <value>testcsuat@bofi.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Deposit_CC_Customer_Service</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>equals</operation>
+                <value>testcsdev@bofi.com</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Banking</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Banking</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Client_Management</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Client Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Client_Status_Update</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Client Status Update</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Other</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Other</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Conversion</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Conversion</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Hardware</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Hardware</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FS_Production_Product_Update_Request</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>FS: Production Product Update Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Failed_Synapsys_Cases</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Email Case</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>JHA Call Center</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

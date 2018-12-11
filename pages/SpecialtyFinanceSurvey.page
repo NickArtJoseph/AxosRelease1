@@ -1,0 +1,41 @@
+<apex:page standardController="Survey__c" extensions="SpecialtyFinanceSurveyExtension" tabStyle="Account" showHeader="false" sidebar="false" standardStylesheets="true" title="Survey for {!AccountName}">
+<script>
+	function closeWin(){    
+      window.close();   
+    }
+</script>
+<apex:form >
+	<apex:pageMessages />
+	<apex:pageBlock title="Survey for {!AccountName}" id="SurveyBlock">
+		<apex:pageBlockButtons location="bottom">
+			<apex:commandButton action="{!save}" value="Submit Survey" rendered="{!NOT(isSuccess)}" rerender="SurveyBlock"/>
+			<input type="button" value="Close" onclick="closeWin();" class="btn"/>
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection columns="1" rendered="{!NOT(isSuccess)}">
+			<apex:pageBlockSectionItem labelStyle="width: 50%;">
+				<apex:outputLabel value="Who did you complete your last transaction with?"/>
+				<apex:inputField value="{!Survey__c.Transaction_Completed_With__c}" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="On a scale of 1-5, with 5 being the best, how would you rate your previous transaction?"/>
+				<apex:inputField value="{!Survey__c.Transaction_Rating__c}" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="What was the reason for your transaction?"/>
+				<apex:inputField value="{!Survey__c.Transaction_Reason__c}" style="width: 300px;" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Did you receive enough money to accomplish everything?"/>
+				<apex:inputField value="{!Survey__c.Sufficient_Money_Received__c}" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Do you still have a need for more money today?"/>
+				<apex:inputField value="{!Survey__c.Funds_Still_Needed__c}" />
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection columns="1" rendered="{!isSuccess}">
+			The survey has been successfully recorded.  You may now close this window.
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

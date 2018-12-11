@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Case submitted</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Bank of Internet,Email,Email: Axos Customer Service,Email: Treasury Management</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Nationwide</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses/Nationwide_Case_Creation_Autoreply</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: UFB</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@ufbdirect.com</replyToEmail>
+            <senderEmail>noreply@ufbdirect.com</senderEmail>
+            <senderName>UFB Direct Customer Service</senderName>
+            <template>Case_Auto_Responses/UFB_Case_Creation_Autoreply</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Bank X</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Net Bank</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Advisor</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>EmailMessage.ToAddress</field>
+                <operation>equals</operation>
+                <value>customerservice@bofiadvisor.com</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Advisor Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/BofI_Advisor_Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Business Banking</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Bank_of_Internet_BB_Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: Loan Servicing</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Loan Servicing</senderName>
+            <template>Case_Auto_Responses_Axos/BOFI_Federal_Bank_Loan_Servicing_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email: RS Enrollment</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Bank_of_Internet_Retirement_Services_Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>New</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Fax: Retirement Services</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.SuppliedEmail</field>
+                <operation>notContain</operation>
+                <value>faxagent@bankofinternet.com</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@axosbank.com</replyToEmail>
+            <senderEmail>noreply@axosbank.com</senderEmail>
+            <senderName>Axos Bank Customer Service</senderName>
+            <template>Case_Auto_Responses_Axos/Bank_of_Internet_Retirement_Services_Case_Creation_Autoreply_Axos</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

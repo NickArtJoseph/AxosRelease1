@@ -1,0 +1,14 @@
+<apex:page docType="html-5.0" showHeader="false" sideBar="false">
+	<apex:slds />
+	<c:CreateRelationshipIncludes />
+
+	<div class="nds-section">
+		<div id="createRelationship">
+			<c:CreateRelationshipConfiguration />
+			<c:CreateRelationshipPartial />
+			<create-relationship></create-relationship>
+		</div>
+		<c:CustomerCreationSearch />
+	</div>
+
+</apex:page>

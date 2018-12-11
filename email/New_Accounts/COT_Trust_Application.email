@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br>Thank you for choosing [INSERT BRAND]. During our new account application review we noticed you intended to open your account in the name of a trust. In order to proceed with the review, please complete the attached forms and return them to us so we may present to our Trust Department for review.<br><br></span></p><p><span style="background-color: rgb(255, 255, 255);">Please return the requested document by;</span></p><p><span style="background-color: rgb(255, 255, 255);">1) Upload a copy of the requested document(s) to your application<br>2) Email to: <a href="mailto:customerservice@bofi.com">customerservice@bofi.com</a><br>3) Fax to: 858-350-0443<br>4) Mail to: BOFI Federal Bank P.O. Box 509127, San Diego, CA 92150-9948<br><br></span></p><p><span style="background-color: rgb(255, 255, 255);">BOFI Federal Bank Trust Certification form needs to be completed in order to open your account in the name of a trust. If you would like further assistance, simply reply to this email. We can also be reached by telephone at 1-877-247-8002.<br>&nbsp;<br>We appreciate your business and commit to delivering the value that will make our Bank your first choice for all your banking needs.<br><br></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

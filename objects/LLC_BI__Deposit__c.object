@@ -1,0 +1,2732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Deposit Object is used to track details of a deposit within nCino</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>LLC_BI__Deposit_Product_Package</fullName>
+        <description>Deposits: Standard Product Package Deposit Screen Section: Deposits Object: Deposits</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Ownership_Structure_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Deposits</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Standard_Product_Package_Credit_Memo</fullName>
+        <description>Credit Memo: Standard Product Package Credit Memo Screen Section: Related Exposure Object: Deposits</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Product_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Lookup_Fields</fullName>
+        <availableFields>
+            <field>LLC_BI__Mailing_Address__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Mailing_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Mailing_State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Mailing_Zip_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Product_Line__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Product__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>nCino User Interface</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Account_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Lookup Fields</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__APY__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the Annual Percentage Yield.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Annual Percentage Yield</inlineHelpText>
+        <label>APY</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is populated manually by the user or automatically depending on the financial institution&apos;s integration. It represents the account number of a deposit account.</description>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set when creating a deposit in the New Deposit Workflow. This field is a lookup to the relationship associated with the deposit.</description>
+        <externalId>false</externalId>
+        <label>Relationship</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Additional_Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies additional terms to be added to the safe deposit box lease.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional terms to be added to the safe deposit box lease.</inlineHelpText>
+        <label>Additional Terms</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Alternate_Signature_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is a description of the alternate text to print under a signature line for the responsible party on a CESA. This is used if something other than the responsible party&apos;s name should be printed under their signature line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of the alternate text to print under a signature line for the responsible party on a CESA. This would be used if something other than the responsible party&apos;s name should print under their signature line.</inlineHelpText>
+        <label>Alternate Signature Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This currency field is used to specify the amount of the deposit.</description>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Annual_Rent_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the amount of the initial annual rent for the safe deposit box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of the initial annual rent for the safe deposit box.</inlineHelpText>
+        <label>Annual Rent Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Application__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This field is used to specify (via lookup) the application record associated to the deposit and relationship the deposit is linked to.</description>
+        <externalId>false</externalId>
+        <label>Application</label>
+        <referenceTo>LLC_BI__Application__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Billing_Frequency_Other__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It describes the frequency with which the safe deposit box rent amount is debited from the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the frequency with which the safe deposit box rent amount will be debited from the account.</inlineHelpText>
+        <label>Billing Frequency Other</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Billing_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies how often billing for the safe deposit box will occur.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies how often billing for the safe deposit box will occur.</inlineHelpText>
+        <label>Billing Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semiannually</fullName>
+                    <default>false</default>
+                    <label>Semiannually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>Biannually</fullName>
+                    <default>false</default>
+                    <label>Biannually</label>
+                </value>
+                <value>
+                    <fullName>Monthly on the lease date anniversary</fullName>
+                    <default>false</default>
+                    <label>Monthly on the lease date anniversary</label>
+                </value>
+                <value>
+                    <fullName>Yearly on the lease date anniversary</fullName>
+                    <default>false</default>
+                    <label>Yearly on the lease date anniversary</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Billing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It describes how the billing for the safe deposit box is communicated to the lessee.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes how the billing for the safe deposit box will be communicated to the lessee.</inlineHelpText>
+        <label>Billing Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Give Notice</fullName>
+                    <default>false</default>
+                    <label>Give Notice</label>
+                </value>
+                <value>
+                    <fullName>Debit Account</fullName>
+                    <default>false</default>
+                    <label>Debit Account</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__CD_Term__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It represents the length of time from the opening date of the time deposit to the maturity date (for example, 91 days and 18 months).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The length of time from the opening date of the time deposit to the maturity date (e.g. 91 days 18 months).</inlineHelpText>
+        <label>CD Term</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__CESA_Responsible_Individual_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, the designated beneficiary of a CESA becomes the responsible individual at age of maturity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the Designated Beneficiary of a CESA will become the Responsible Individual at age of majority.</inlineHelpText>
+        <label>CESA Responsible Individual Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Certificate_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It represents the number of the certificate of deposit (CD). This is used when a CD has an account number and a certificate number.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of the Certificate of Deposit. This is used when a certificate of deposit has an account number and a certificate number.</inlineHelpText>
+        <label>Certificate Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Change_Designated_Beneficiary_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, the responsible party on the CESA may change the designated beneficiary.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the Responsible Party on the CESA may change the Designated Beneficiary.</inlineHelpText>
+        <label>Change Designated Beneficiary Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Compounding_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies an institution&apos;s general policy regarding how often accrued earnings are added to the principal balance of an account for the purpose of computing additional earnings.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies an institution&apos;s general policy regarding how often accrued earnings are added to the principal balance of an account for the purpose of computing additional earnings.</inlineHelpText>
+        <label>Compounding Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Weekly</fullName>
+                    <default>false</default>
+                    <label>Weekly</label>
+                </value>
+                <value>
+                    <fullName>Every Other Week</fullName>
+                    <default>false</default>
+                    <label>Every Other Week</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semiannually</fullName>
+                    <default>false</default>
+                    <label>Semiannually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>Continuous</fullName>
+                    <default>false</default>
+                    <label>Continuous</label>
+                </value>
+                <value>
+                    <fullName>No compounding/Simple</fullName>
+                    <default>false</default>
+                    <label>No compounding/Simple</label>
+                </value>
+                <value>
+                    <fullName>Semimonthly</fullName>
+                    <default>false</default>
+                    <label>Semimonthly</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set when creating a deposit in the New Deposit Workflow. This field is a lookup to the contact associated with the deposit.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Death_Before_Required_Beginning__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>TThis field is optional and can be collected as part of a workflow. If true the deceased IRA owner&apos;s death occurred before his/her required beginning date (RBD).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the deceased IRA owner&apos;s death occurred before his/her required beginning date (RBD).</inlineHelpText>
+        <label>Death Before Required Beginning</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deposit_Account_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Populate this picklist field to indicate the deposit account type. If creating new accounts via a core integration, this field is automatically populated. Otherwise, the field is manually populated during the deposit account opening workflow.</description>
+        <externalId>false</externalId>
+        <label>Deposit Account Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Money Market Savings</fullName>
+                    <default>false</default>
+                    <label>Money Market Savings</label>
+                </value>
+                <value>
+                    <fullName>Money Market Checking</fullName>
+                    <default>false</default>
+                    <label>Money Market Checking</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Deposit_Rate_Structure__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This optional lookup field references the deposit rate structure for this deposit.</description>
+        <externalId>false</externalId>
+        <label>Deposit Rate Structure</label>
+        <referenceTo>LLC_BI__Deposit_Rate_Structure__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Description_of_Keys__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is a description of any safe deposit box keys that have been issued.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of any safe deposit box keys that have been issued.</inlineHelpText>
+        <label>Description of Keys</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Distribution_Payment_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the manner in which the distribution should be made. (The &apos;periodic RMD as calculated&apos; option should only be selected for plans and circumstances where the required minimum distribution calculation applies, subject to financial institution policy.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the manner in which the distribution should be made.</inlineHelpText>
+        <label>Distribution Payment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Immediate</fullName>
+                    <default>false</default>
+                    <label>Immediate</label>
+                </value>
+                <value>
+                    <fullName>Periodic</fullName>
+                    <default>false</default>
+                    <label>Periodic</label>
+                </value>
+                <value>
+                    <fullName>Total</fullName>
+                    <default>false</default>
+                    <label>Total</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Periodic RMD as calculated (Traditional or SIMPLE only)</fullName>
+                    <default>false</default>
+                    <label>Periodic RMD as calculated (Traditional or SIMPLE only)</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Distribution_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the starting date for the periodic distributions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The starting date for the periodic distributions.</inlineHelpText>
+        <label>Distribution Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Durable_Agency__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. A durable agency grants a continuing power of attorney after legal incapacitation of an individual which terminiates only upon the individual&apos;s death.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The authority granted to the deputy/agent on the safe deposit box lease is a durable power continuing after legal incapacity and terminating only at death of the appointing renter.</inlineHelpText>
+        <label>Durable Agency</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__E_Disclosures_And_Statement_Consent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate they give consent to receive electronic disclosures regarding periodic account statements. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to give consent to receive electronic disclosures regarding periodic account statements.</inlineHelpText>
+        <label>E Disclosures And Statement Consent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Electronic_Notice_Delivery_Consent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate the Electronic Procedure Disclosure should include disclosures for the electronic delivery of documents and notices. This content also automatically populates in the disclosure if the same content was previously included in the associated Terms and Conditions policy. By default, the field is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox if the Electronic Procedure Disclosure should include disclosures for electronic documents and notices. This content also automatically populates in the disclosure if previously included in the associated Terms and Conditions policy.</inlineHelpText>
+        <label>Electronic Notice Delivery Consent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Enable_Portal_Documents__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The system automatically populates this optional boolean field to indicate that the deposit translation needs portal-enabled documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The system automatically populates this checkbox when the deposit translation needs portal-enabled documents.</inlineHelpText>
+        <label>Enable Portal Documents</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Exclude_Transaction_Account_Disclosure__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field if the account type or account holder is excluded from coverage under the Minnesota Transaction Account Application Disclosure requirement. This is only applicable to users in Minnesota. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this field if the account type or account holder is excluded from coverage under the Minnesota Transaction Account Application Disclosure requirement. This is only applicable to users in Minnesota.</inlineHelpText>
+        <label>Exclude Transaction Account Disclosure</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Five_Year_Period_Ends_Year__c</fullName>
+        <deprecated>false</deprecated>
+        <description>TThis field is optional and can be collected as part of a workflow. It is the year in which the five year period ends.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The year in which the five year period will end.</inlineHelpText>
+        <label>Five Year Period Ends Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Frequency_of_Distributions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the frequency of the periodic distributions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the frequency of the periodic distributions.</inlineHelpText>
+        <label>Frequency of Distributions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Annual</fullName>
+                    <default>false</default>
+                    <label>Annual</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the funding amount for a deposit product.</description>
+        <externalId>false</externalId>
+        <label>Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Funding_Method__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the funding method for a deposit.</description>
+        <externalId>false</externalId>
+        <label>Funding Method</label>
+        <referenceTo>LLC_BI__Funding_Method__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IRA_Is_Self_Directed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, the IRA is self-directed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the IRA is self-directed.</inlineHelpText>
+        <label>IRA is Self-Directed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IRA_Plan_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the type of IRA plan being opened.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the type of IRA plan being opened. This information should always be passed.</inlineHelpText>
+        <label>IRA Plan Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Traditional IRA</fullName>
+                    <default>false</default>
+                    <label>Traditional IRA</label>
+                </value>
+                <value>
+                    <fullName>Roth IRA</fullName>
+                    <default>false</default>
+                    <label>Roth IRA</label>
+                </value>
+                <value>
+                    <fullName>Health Savings Account</fullName>
+                    <default>false</default>
+                    <label>Health Savings Account</label>
+                </value>
+                <value>
+                    <fullName>Coverdell Education Savings Account</fullName>
+                    <default>false</default>
+                    <label>Coverdell Education Savings Account</label>
+                </value>
+                <value>
+                    <fullName>SIMPLE IRA</fullName>
+                    <default>false</default>
+                    <label>SIMPLE IRA</label>
+                </value>
+                <value>
+                    <fullName>Traditional Beneficiary IRA</fullName>
+                    <default>false</default>
+                    <label>Traditional Beneficiary IRA</label>
+                </value>
+                <value>
+                    <fullName>Roth Beneficiary IRA</fullName>
+                    <default>false</default>
+                    <label>Roth Beneficiary IRA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IRA_Recharacterization_Initial_Cont_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the initial contribution amount of the assets being recharacterized.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The initial contribution amount of the assets being recharacterized.</inlineHelpText>
+        <label>IRA Recharacterization Initial Cont Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IRA_Recharacterization_Initial_Cont_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the initial contribution date of the assets being recharacterized.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The initial contribution date of the assets being recharacterized.</inlineHelpText>
+        <label>IRA Recharacterization Initial Cont Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__IRA_Recharacterization_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the type of recharacterization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the type of recharacterization.</inlineHelpText>
+        <label>IRA Recharacterization Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Traditional to Roth</fullName>
+                    <default>false</default>
+                    <label>Traditional to Roth</label>
+                </value>
+                <value>
+                    <fullName>Roth to Traditional</fullName>
+                    <default>false</default>
+                    <label>Roth to Traditional</label>
+                </value>
+                <value>
+                    <fullName>Roth conversion back to Traditional or SIMPLE</fullName>
+                    <default>false</default>
+                    <label>Roth conversion back to Traditional or SIMPLE</label>
+                </value>
+                <value>
+                    <fullName>Erroneous rollover or transfer from Traditional to SIMPLE and back to Traditional</fullName>
+                    <default>false</default>
+                    <label>Erroneous rollover or transfer from Traditional to SIMPLE and back to Traditional</label>
+                </value>
+                <value>
+                    <fullName>Roth rollover or direct rollover from an ERP to Traditional</fullName>
+                    <default>false</default>
+                    <label>Roth rollover or direct rollover from an ERP to Traditional</label>
+                </value>
+                <value>
+                    <fullName>Roth beneficiary direct rollover from an ERP to traditional beneficiary</fullName>
+                    <default>false</default>
+                    <label>Roth beneficiary direct rollover from an ERP to traditional beneficiary</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Index_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This item indicates the name of the index tied to the variable rate account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This item indicates the name of the index tied to the variable rate account.</inlineHelpText>
+        <label>Index Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Deposit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This currency field is used to specify the amount of the initial deposit.</description>
+        <externalId>false</externalId>
+        <label>Initial Deposit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Interest_Rate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies what kind of rate is used to determine the initial rate of interest on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies what kind of rate is used to determine the initial rate of interest on the account.</inlineHelpText>
+        <label>Initial Interest Rate Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>false</default>
+                    <label>Fixed</label>
+                </value>
+                <value>
+                    <fullName>Variable</fullName>
+                    <default>false</default>
+                    <label>Variable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the initial interest rate on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The initial interest rate on the account.</inlineHelpText>
+        <label>Initial Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Rate_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, an initial rate (for example, a teaser rate) was applied to the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true an initial rate (i.e. a teaser rate) was applied to the account.</inlineHelpText>
+        <label>Initial Rate Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Rate_Margin__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the percentage that is added to the index rate to determine the initial (teaser) rate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The percentage that is added to the index rate to determine the initial (teaser) rate.</inlineHelpText>
+        <label>Initial Rate Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Rate_Period_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the number of periods that the initial rate is in effect.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of periods that the initial rate will be in effect.</inlineHelpText>
+        <label>Initial Rate Period Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Initial_Rate_Period_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the period of time the initial rate applies.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the period of time the initial rate will apply.</inlineHelpText>
+        <label>Initial Rate Period Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Day(s)</fullName>
+                    <default>false</default>
+                    <label>Day(s)</label>
+                </value>
+                <value>
+                    <fullName>Month(s)</fullName>
+                    <default>false</default>
+                    <label>Month(s)</label>
+                </value>
+                <value>
+                    <fullName>Week(s)</fullName>
+                    <default>false</default>
+                    <label>Week(s)</label>
+                </value>
+                <value>
+                    <fullName>Year(s)</fullName>
+                    <default>false</default>
+                    <label>Year(s)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Payment_Method_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This picklist field is populated during the deposit account opening process. The picklist values are the methods of payment (to the account owner) of the earned interest or dividends on an interest bearing or dividend earning certificate account. The frequency of payment is separately indicated. When applicable, the account number to be credited and the ABA number of the receiving financial institution is required.</description>
+        <externalId>false</externalId>
+        <label>Interest Payment Method Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Add to Principal</fullName>
+                    <default>false</default>
+                    <label>Add to Principal</label>
+                </value>
+                <value>
+                    <fullName>Receive Periodic Check</fullName>
+                    <default>false</default>
+                    <label>Receive Periodic Check</label>
+                </value>
+                <value>
+                    <fullName>Credit Account</fullName>
+                    <default>false</default>
+                    <label>Credit Account</label>
+                </value>
+                <value>
+                    <fullName>Credit Account at other financial institution</fullName>
+                    <default>false</default>
+                    <label>Credit Account at other financial institution</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Rate_Margin_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, a margin is used in determining the interest rate for a variable rate account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true a margin is used in determining the interest rate for a variable rate account.</inlineHelpText>
+        <label>Interest Rate Margin Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Rate_Margin_Percent__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This percentage is added to the index to determine the applicable rate for the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This percentage that is added to the index to determine the applicable rate for the account.</inlineHelpText>
+        <label>Interest Rate Margin Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Rate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the type of interest rate on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the type of interest rate on the account.</inlineHelpText>
+        <label>Interest Rate Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>false</default>
+                    <label>Fixed</label>
+                </value>
+                <value>
+                    <fullName>Variable</fullName>
+                    <default>false</default>
+                    <label>Variable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the interest rate of the deposit account. If an initial rate (for example, a teaser) applies, then this is the rate that is in effect after the expiration of the teaser period.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The interest rate of the deposit account. If an initial rate (i.e. a teaser) applies this is the rate that is in effect after the expiration of the teaser period.</inlineHelpText>
+        <label>Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Interest_Withdrawal_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, accrued earnings are required to be distributed out of the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true accrued earnings are required to be distributed out of the account.</inlineHelpText>
+        <label>Interest Withdrawal Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Superseded_By__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This field identifies the CD that supersedes this CD.</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(LLC_BI__Status__c, &quot;Superseded&quot;),  LLC_BI__Related_Deposit__r.Name , NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Superseded By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Lease_Type_Other__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It describes the other type of safe deposit box lease.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the other type of safe deposit box lease.</inlineHelpText>
+        <label>Lease Type Other</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Life_Expectancy_Factor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional.  It can be collected as part of a workflow. It is the life expectancy factor as reflected in the appropriate IRS table.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The life expectancy factor as reflected in the appropriate IRS table.</inlineHelpText>
+        <label>Life Expectancy Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mailing_Address__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Street address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</inlineHelpText>
+        <label>Mailing Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mailing_City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>City for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</inlineHelpText>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mailing_State__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</inlineHelpText>
+        <label>State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                    <label>AL</label>
+                </value>
+                <value>
+                    <fullName>AK</fullName>
+                    <default>false</default>
+                    <label>AK</label>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                    <label>AZ</label>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                    <label>AR</label>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                    <label>CA</label>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                    <label>CO</label>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                    <label>CT</label>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                    <label>DE</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                    <label>FL</label>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                    <label>GA</label>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                    <label>HI</label>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                    <label>ID</label>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                    <label>IL</label>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                    <label>IN</label>
+                </value>
+                <value>
+                    <fullName>IA</fullName>
+                    <default>false</default>
+                    <label>IA</label>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                    <label>KS</label>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                    <label>KY</label>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                    <label>LA</label>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                    <label>ME</label>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                    <label>MA</label>
+                </value>
+                <value>
+                    <fullName>MI</fullName>
+                    <default>false</default>
+                    <label>MI</label>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                    <label>MN</label>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                    <label>MS</label>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                    <label>MO</label>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                    <label>MT</label>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                    <label>NE</label>
+                </value>
+                <value>
+                    <fullName>NV</fullName>
+                    <default>false</default>
+                    <label>NV</label>
+                </value>
+                <value>
+                    <fullName>NH</fullName>
+                    <default>false</default>
+                    <label>NH</label>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                    <label>NJ</label>
+                </value>
+                <value>
+                    <fullName>NM</fullName>
+                    <default>false</default>
+                    <label>NM</label>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                    <label>NY</label>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                    <label>NC</label>
+                </value>
+                <value>
+                    <fullName>ND</fullName>
+                    <default>false</default>
+                    <label>ND</label>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                    <label>OH</label>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                    <label>OK</label>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                    <label>OR</label>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                    <label>PA</label>
+                </value>
+                <value>
+                    <fullName>RI</fullName>
+                    <default>false</default>
+                    <label>RI</label>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                    <label>SC</label>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                    <label>SD</label>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                    <label>TN</label>
+                </value>
+                <value>
+                    <fullName>TX</fullName>
+                    <default>false</default>
+                    <label>TX</label>
+                </value>
+                <value>
+                    <fullName>UT</fullName>
+                    <default>false</default>
+                    <label>UT</label>
+                </value>
+                <value>
+                    <fullName>VT</fullName>
+                    <default>false</default>
+                    <label>VT</label>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                    <label>VA</label>
+                </value>
+                <value>
+                    <fullName>WA</fullName>
+                    <default>false</default>
+                    <label>WA</label>
+                </value>
+                <value>
+                    <fullName>WV</fullName>
+                    <default>false</default>
+                    <label>WV</label>
+                </value>
+                <value>
+                    <fullName>WI</fullName>
+                    <default>false</default>
+                    <label>WI</label>
+                </value>
+                <value>
+                    <fullName>WY</fullName>
+                    <default>false</default>
+                    <label>WY</label>
+                </value>
+                <value>
+                    <fullName>VI</fullName>
+                    <default>false</default>
+                    <label>VI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Mailing_Zip_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Zip Code for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Zip Code for address used for a deposit product. This field is optional and can be populated during the Deposit Origination workflow.</inlineHelpText>
+        <label>Zip Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maturity_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>TThis field is optional and can be collected as part of a workflow. This date field is used to specify the date at which the deposit matures.</description>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maximum_Balance_Tiered_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It represents the amount of the maximum tier balance that may be in the account in order to earn the disclosed rate for that tier. This is the high-end dollar amount for a given tier.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of the maximum tier balance that may be in the account in order to earn the disclosed rate for that tier. This is the high end dollar amount for a given tier.</inlineHelpText>
+        <label>Maximum Balance Tiered Account</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maximum_Rate_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, a rate ceiling applies on the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true a rate ceiling applies on the account.</inlineHelpText>
+        <label>Maximum Rate Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maximum_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the highest interest rate that can apply to the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The highest interest rate that can apply to the account.</inlineHelpText>
+        <label>Maximum Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Balance_Tiered_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. The amount of the minimum tier balance that must be in the account in order to earn the disclosed rate for that tier. This is the low-end dollar amount for a given tier.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of the minimum tier balance that must be in the account in order to earn the disclosed rate for that tier. This is the low end dollar amount for a given tier.</inlineHelpText>
+        <label>Minimum Balance Tiered Account</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Rate_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, a rate floor applies to the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true a rate floor applies to the account.</inlineHelpText>
+        <label>Minimum Rate Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Minimum_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the lowest interest rate that can apply to the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The lowest interest rate that can apply to the account.</inlineHelpText>
+        <label>Minimum Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Negotiated_Compounding_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies how often accrued earnings are added to the principal balance of an account for the purpose of computing additional earnings, interest, or dividends.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies how often accrued earnings are added to the principal balance of an account for the purpose of computing additional earnings/interest/dividends.  Should only be passed if negotiation has occurred at account opening.</inlineHelpText>
+        <label>Negotiated Compounding Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Weekly</fullName>
+                    <default>false</default>
+                    <label>Weekly</label>
+                </value>
+                <value>
+                    <fullName>Every Other Week</fullName>
+                    <default>false</default>
+                    <label>Every Other Week</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semiannually</fullName>
+                    <default>false</default>
+                    <label>Semiannually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>Continuous</fullName>
+                    <default>false</default>
+                    <label>Continuous</label>
+                </value>
+                <value>
+                    <fullName>No compounding/Simple</fullName>
+                    <default>false</default>
+                    <label>No compounding/Simple</label>
+                </value>
+                <value>
+                    <fullName>Semimonthly</fullName>
+                    <default>false</default>
+                    <label>Semimonthly</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is a free form text field used to add notes or details to the deposit record.</description>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Notice_Account_Maturity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the alternate maturity of an account, if any. This only applies to notice accounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the alternate maturity of an account if any. This only applies to notice accounts.</inlineHelpText>
+        <label>Notice Account Maturity Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Date</fullName>
+                    <default>false</default>
+                    <label>Date</label>
+                </value>
+                <value>
+                    <fullName>Period</fullName>
+                    <default>false</default>
+                    <label>Period</label>
+                </value>
+                <value>
+                    <fullName>No Alternate Maturity</fullName>
+                    <default>false</default>
+                    <label>No Alternate Maturity</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Agents_Required__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It indicates the number of agents required to be present before any action can be made regarding the safe deposit box account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of agents required to be present before any action can be made regarding the safe deposit box account.</inlineHelpText>
+        <label>Number of Agents Required</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Lessees_Required__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It indicates the number of lessees (holders) required to be present in order to gain access to the safe deposit box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of lessees (holders) required to be present in order to gain access to the safe deposit box.</inlineHelpText>
+        <label>Number of Lessees Required</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Number_of_Required_Signers__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field indicates the number of redeemers (signers) that are required to withdrawal, either partial or complete, from an account.</description>
+        <externalId>false</externalId>
+        <label>Number of Required Signers</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 - One signature line</fullName>
+                    <default>true</default>
+                    <label>1 - One signature line</label>
+                </value>
+                <value>
+                    <fullName>2 - Two signature lines</fullName>
+                    <default>false</default>
+                    <label>2 - Two signature lines</label>
+                </value>
+                <value>
+                    <fullName>3 - Three signature lines</fullName>
+                    <default>false</default>
+                    <label>3 - Three signature lines</label>
+                </value>
+                <value>
+                    <fullName>4 - Four signature lines</fullName>
+                    <default>false</default>
+                    <label>4 - Four signature lines</label>
+                </value>
+                <value>
+                    <fullName>5 - Five signature lines</fullName>
+                    <default>false</default>
+                    <label>5 - Five signature lines</label>
+                </value>
+                <value>
+                    <fullName>6 - Six signature lines</fullName>
+                    <default>false</default>
+                    <label>6 - Six signature lines</label>
+                </value>
+                <value>
+                    <fullName>7 - Seven signature lines</fullName>
+                    <default>false</default>
+                    <label>7 - Seven signature lines</label>
+                </value>
+                <value>
+                    <fullName>8 - Eight signature lines</fullName>
+                    <default>false</default>
+                    <label>8 - Eight signature lines</label>
+                </value>
+                <value>
+                    <fullName>9 - Nine signature lines</fullName>
+                    <default>false</default>
+                    <label>9 - Nine signature lines</label>
+                </value>
+                <value>
+                    <fullName>10 - Ten signature lines</fullName>
+                    <default>false</default>
+                    <label>10 - Ten signature lines</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Open_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This date field is used to specify the date the deposit account was opened.</description>
+        <externalId>false</externalId>
+        <label>Open Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Originating_Branch__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field associates a deposit account to the branch which it was originated in. This field is set during the deposit origination workflow.</description>
+        <externalId>false</externalId>
+        <label>Originating Branch</label>
+        <referenceTo>LLC_BI__Branch__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Other_Distribution_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It holds a description of the other payment election type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of the other payment election type.</inlineHelpText>
+        <label>Other Distribution Payment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Other_Frequency_of_Distributions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is a description of the other frequency of the periodic distributions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of the other frequency of the periodic distributions.</inlineHelpText>
+        <label>Other Frequency of Distributions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Overdraft_Consent_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, consent to pay overdrafts out of the account is given.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true consent to pay overdrafts out of the account is being given.</inlineHelpText>
+        <label>Overdraft Consent Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Overdraft_Services__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional picklist field is manually populated during deposit origination and indicates if the applicant would like overdraft services.</description>
+        <externalId>false</externalId>
+        <label>Overdraft Services</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opt-In</fullName>
+                    <default>false</default>
+                    <label>Opt-In</label>
+                </value>
+                <value>
+                    <fullName>Opt-Out</fullName>
+                    <default>false</default>
+                    <label>Opt-Out</label>
+                </value>
+                <value>
+                    <fullName>No Decision</fullName>
+                    <default>false</default>
+                    <label>No Decision</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Owner_Deceased_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, the party passed as the Owner of the IRA is deceased. It is typically used in situations where the IRA owner has died but a formal beneficiary IRA has not been created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the party passed as the Owner of the IRA is deceased. Typically used in connection with situations where the IRA Owner has died but a formal Beneficiary IRA has not been created.</inlineHelpText>
+        <label>Owner Deceased Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ownership_Structure_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required during the New Deposit Workflow. It is used to indicate the Ownership Structure Type of this deposit.</description>
+        <externalId>false</externalId>
+        <label>Ownership Structure Type</label>
+        <referenceTo>LLC_BI__Ownership_Structure_Type__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Payment_Account_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It indicates the account number to be debited for the rental fee of the safe deposit box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The account number to be debited for the rental fee of the safe deposit box.</inlineHelpText>
+        <label>Payment Account Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Periodic_Change_Limit_Indicator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, there is a limit to the amount that a variable rate can change over successive specified periods.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true there is a limit to the amount that a variable rate can change over successive specified periods.</inlineHelpText>
+        <label>Periodic Change Limit Indicator</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Periods_Between_Rate_Changes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It indicates the number of periods between periodic rate changes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of periods between periodic rate changes.</inlineHelpText>
+        <label>Periods Between Rate Changes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Permanent_Rate_Effective_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the day the regular interest rate takes effect on a variable rate account having a different/special initial or promotional rate (in other words, the date corresponding to the day after the expiration of the initial rate period for the specified account).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The day on which the regular interest rate takes effect on a variable rate account having a different/special initial or promotional rate (i.e. the date corresponding to the day after expiration of initial rate period for the specified account).</inlineHelpText>
+        <label>Permanent Rate Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Prevent_Automatic_Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. If true, the owner of the account that would otherwise automatically renew has determined at account opening to prevent renewals.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true the owner of the account that would otherwise automatically renew has determined at account opening to prevent renewals.</inlineHelpText>
+        <label>Prevent Automatic Renewal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Line__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is requied. It is either automatically set or manually collected as part of the New Deposit Workflow. This field is a picklist that allows the user to specify what product line the deposit is associated with.</description>
+        <externalId>false</externalId>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Personal Banking</fullName>
+                    <default>true</default>
+                    <label>Personal Banking</label>
+                </value>
+                <value>
+                    <fullName>Commercial Banking</fullName>
+                    <default>false</default>
+                    <label>Commercial Banking</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Package__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set during the New Deposit Workflow. It indicates the product package associated with a deposit.</description>
+        <externalId>false</externalId>
+        <label>Product Package</label>
+        <referenceTo>LLC_BI__Product_Package__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Reference__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is required and is collected during the New Deposit Workflow. This field is a lookup to the product, used to specify which product the deposit is associated with.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>LLC_BI__Product__c</referenceTo>
+        <relationshipLabel>Deposits</relationshipLabel>
+        <relationshipName>Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required and is collected during the New Deposit Workflow. This field is a picklist that allows the user to specify what product type the deposit is associated with.</description>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CD</fullName>
+                    <default>true</default>
+                    <label>CD</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Money Market</fullName>
+                    <default>false</default>
+                    <label>Money Market</label>
+                </value>
+                <value>
+                    <fullName>Safe Deposit Box</fullName>
+                    <default>false</default>
+                    <label>Safe Deposit Box</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Product__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This field is a picklist that allows the user to specify what product the deposit is associated with.</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Personal Savings</fullName>
+                    <default>true</default>
+                    <label>Personal Savings</label>
+                </value>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rate_Change_Percent__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the amount by which a variable rate may change within the specified term.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount by which a variable rate may change within the specified term.</inlineHelpText>
+        <label>Rate Change Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rate_Change_Period_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the period of time between periodic rate changes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the period of time between periodic rate changes.</inlineHelpText>
+        <label>Rate Change Period Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Day(s)</fullName>
+                    <default>false</default>
+                    <label>Day(s)</label>
+                </value>
+                <value>
+                    <fullName>Month(s)</fullName>
+                    <default>false</default>
+                    <label>Month(s)</label>
+                </value>
+                <value>
+                    <fullName>Week(s)</fullName>
+                    <default>false</default>
+                    <label>Week(s)</label>
+                </value>
+                <value>
+                    <fullName>Year(s)</fullName>
+                    <default>false</default>
+                    <label>Year(s)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rate_Change_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies how often the variable rate can change.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies how often the variable rate can change.</inlineHelpText>
+        <label>Rate Change Period</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Weekly</fullName>
+                    <default>false</default>
+                    <label>Weekly</label>
+                </value>
+                <value>
+                    <fullName>Every Other Week</fullName>
+                    <default>false</default>
+                    <label>Every Other Week</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semiannually</fullName>
+                    <default>false</default>
+                    <label>Semiannually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>At any time</fullName>
+                    <default>false</default>
+                    <label>At any time</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rate_Disclosure_As_Of_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the date the on-request account disclosure was created. The rate(s) are accurate as of this date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the on-request account disclosure was created. The rate(s) are accurate as of this date.</inlineHelpText>
+        <label>Rate Disclosure As Of Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Rate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the rate type that applies to the account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the rate type that will apply to the account.</inlineHelpText>
+        <label>Rate Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Single</fullName>
+                    <default>false</default>
+                    <label>Single</label>
+                </value>
+                <value>
+                    <fullName>Tier A</fullName>
+                    <default>false</default>
+                    <label>Tier A</label>
+                </value>
+                <value>
+                    <fullName>Tier B</fullName>
+                    <default>false</default>
+                    <label>Tier B</label>
+                </value>
+                <value>
+                    <fullName>Stepped</fullName>
+                    <default>false</default>
+                    <label>Stepped</label>
+                </value>
+                <value>
+                    <fullName>Exchange</fullName>
+                    <default>false</default>
+                    <label>Exchange</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Related_Deposit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional although it is automatically set during the CD Renewal Workflow. This field associates two deposit accounts.</description>
+        <externalId>false</externalId>
+        <label>Related Deposit</label>
+        <referenceTo>LLC_BI__Deposit__c</referenceTo>
+        <relationshipLabel>Related Deposits</relationshipLabel>
+        <relationshipName>Related_Deposits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Renewal_Interest_Rate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the interest rate at which the account will be renewed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the interest rate at which the account will be renewed.</inlineHelpText>
+        <label>Renewal Interest Rate Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Same Basis</fullName>
+                    <default>false</default>
+                    <label>Same Basis</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Renewal_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the new interest or dividend rate upon automatic renewal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The new interest or dividend rate upon automatic renewal.</inlineHelpText>
+        <label>Renewal Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Routing_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Populate this number (9-digit) field with the 9 Digit ABA Number for the deposit account. If creating new accounts via a core integration, this field is automatically populated. Otherwise, the field is manually populated during the deposit account opening workflow.</description>
+        <externalId>false</externalId>
+        <label>Routing Number</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Security_Deposit_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the amount of any security deposit for the safe deposit box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of any security deposit for the safe deposit box.</inlineHelpText>
+        <label>Security Deposit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Single_Life_Expectancy_Begins__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the year in which single life expectancy payments must begin.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The year in which single life expectancy payments must begin.</inlineHelpText>
+        <label>Single Life Expectancy Begins</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Size_of_Box__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the size of the safe deposit box that is being leased.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The size of the safe deposit box that is being leased.</inlineHelpText>
+        <label>Size of Box</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Stage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This field is a picklist used to specify the stage that the deposit is in.</description>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualification</fullName>
+                    <default>true</default>
+                    <label>Qualification</label>
+                </value>
+                <value>
+                    <fullName>Signature Signed</fullName>
+                    <default>false</default>
+                    <label>Signature Signed</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. This field is a picklist used to specify the status that the deposit is in.</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+                <value>
+                    <fullName>Hold</fullName>
+                    <default>false</default>
+                    <label>Hold</label>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                    <label>Withdrawn</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Superseded</fullName>
+                    <default>false</default>
+                    <label>Superseded</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Step_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the interest rate that applies to the corresponding step.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The interest rate that applies to the corresponding step.</inlineHelpText>
+        <label>Step Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Step_Rate_Period_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It specifies the period of time the corresponding step rate applies.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the period of time the corresponding step rate will apply.</inlineHelpText>
+        <label>Step Rate Period Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Day(s)</fullName>
+                    <default>false</default>
+                    <label>Day(s)</label>
+                </value>
+                <value>
+                    <fullName>Month(s)</fullName>
+                    <default>false</default>
+                    <label>Month(s)</label>
+                </value>
+                <value>
+                    <fullName>Week(s)</fullName>
+                    <default>false</default>
+                    <label>Week(s)</label>
+                </value>
+                <value>
+                    <fullName>Year(s)</fullName>
+                    <default>false</default>
+                    <label>Year(s)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Step_Rate_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the number of periods that the corresponding stepped rate applies.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of periods that the corresponding stepped rate will apply.</inlineHelpText>
+        <label>Step Rate Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Tax_Year_of_First_Roth_Contribution__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the tax year of first Roth IRA contribution or conversion.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The tax year of first Roth IRA contribution or conversion.</inlineHelpText>
+        <label>Tax Year of First Roth Contribution</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Term_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This picklist field is required for CD&apos;s and is manually populated. The picklist values are the time periods used to describe the length of a certificate term. It is used in conjunction with the number field that specifies the number of terms.</description>
+        <externalId>false</externalId>
+        <label>Term Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>day(s)</fullName>
+                    <default>false</default>
+                    <label>day(s)</label>
+                </value>
+                <value>
+                    <fullName>month(s)</fullName>
+                    <default>false</default>
+                    <label>month(s)</label>
+                </value>
+                <value>
+                    <fullName>quarter(s)</fullName>
+                    <default>false</default>
+                    <label>quarter(s)</label>
+                </value>
+                <value>
+                    <fullName>year(s)</fullName>
+                    <default>false</default>
+                    <label>year(s)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Tiered_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the interest rate that applies to the corresponding tier.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The interest rate that applies to the corresponding tier.</inlineHelpText>
+        <label>Tiered Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Tiered_Margin_Percent__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is the percentage that is added to (or subtracted from) the index to determine the applicable rate for a given account tier with variable rate tiers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The percentage that is added to (or subtracted from) the index to determine the applicable rate for a given account tier with variable rate tiers.</inlineHelpText>
+        <label>Tiered Margin Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Vault_Key_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It describes any vault keys that have been issued for the safe deposit box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A description of any vault keys that have been issued for the safe deposit box.</inlineHelpText>
+        <label>Vault Key Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__isConvert__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and can be collected as part of a workflow. It is a hidden field used for reporting purposes, such as number of deposits converted from a lead.</description>
+        <externalId>false</externalId>
+        <label>isConvert</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This manually populated field is an external, unique key. This field is used to link the deposit in nCino to the deposit in the financial institution’s Core.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Deposit</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Deposit Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Deposits</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>LLC_BI__New_Deposit</fullName>
+        <availability>online</availability>
+        <description>Custom new button</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/LLC_BI__New_Deposit_Creation?id={!Account.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LLC_BI__Perform_Maintenance</fullName>
+        <availability>online</availability>
+        <description>Perform maintenance on the deposit.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Perform Maintenance</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/LLC_BI__product_maintenance?app=dep-pm.pm-landing&amp;id={!LLC_BI__Deposit__c.Id}</url>
+    </webLinks>
+</CustomObject>

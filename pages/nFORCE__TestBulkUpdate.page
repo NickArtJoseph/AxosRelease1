@@ -1,0 +1,15 @@
+<apex:page id="TestBulkUpdate">
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+	<c:ncUIIncludes />
+	<c:ncDataProvidersIncludes />
+	<c:ncScreenSectionFormBuilderIncludes />
+	<c:BulkFieldUpdaterConfiguration />
+
+	<div id="ncBulkFieldUpdater" class="slds">
+		<c:DynamicTablePartials />
+		<c:ncScreenSectionFormBuilderPartials />
+		<c:BulkFieldUpdaterPartials />
+
+		<bulk-field-updater></bulk-field-updater>
+	</div>
+</apex:page>

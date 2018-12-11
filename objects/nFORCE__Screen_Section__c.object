@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>nFORCE__Conditional_Screen_Section</fullName>
+        <description>UI Config Builder field set plus fields needed for conditional screen sections</description>
+        <displayedFields>
+            <field>nFORCE__Parent_Screen_Section__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Screen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__sObject_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Section_Resource__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Display_Order__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Default_Rendered__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Editable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Default_Editable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Conditional_Display_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Config Builder with Conditional Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>nFORCE__UI_Config_Builder</fullName>
+        <availableFields>
+            <field>nFORCE__Conditional_Display_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Instructions_Text__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Widget__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used for screen section management by the UI Config Builder tool.</description>
+        <displayedFields>
+            <field>nFORCE__Parent_Screen_Section__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Screen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__sObject_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Section_Resource__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Display_Order__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Default_Rendered__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Is_Editable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Default_Editable__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Number_of_Columns__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Config Builder</label>
+    </fieldSets>
+    <fields>
+        <fullName>nFORCE__Break_Page_After__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When the value is set to true, the credit memo export PDF breaks after this section. This field is accessible to the user from credit memo view and the value is updated when user clicks on Insert Page Break or Remove Page Break.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Forces a page break after the section when printing.</inlineHelpText>
+        <label>Break Page After</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Break_Page_Before__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When the value is set to true, the credit memo export PDF breaks before the section. This field is not accessible to the user and can be set by an administrator to set required page breaks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Forces a page break before the section when printing.</inlineHelpText>
+        <label>Break Page Before</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Conditional_Display_Criteria__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and must be manually populated. It stores the Forms syntax that is used to determine whether a conditional screen section should be displayed.</description>
+        <externalId>false</externalId>
+        <label>Conditional Display Criteria</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Default_Editable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by UI framework. The default value is false. When this value is set to true, the section displays as editable by default.</description>
+        <externalId>false</externalId>
+        <label>Default Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Default_Rendered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When this value is set to true, the section is rendered by default. When this value is set to false, the section is show as minimized with header only and the user must click on View More link to render the entire section.</description>
+        <externalId>false</externalId>
+        <label>Default Rendered</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Disable_Print__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The admin manually populates this field. This field is not used if &quot;nFORCE__Disable_Print__c&quot; is enabled on nFORCE__Screen__c. Otherwise, when this field is enabled, screen sections are not printed. If disabled, the screen section prints if it is expanded at the time the admin prints. By default, this is disabled.</description>
+        <externalId>false</externalId>
+        <label>Disable Print</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Display_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional, but should be filled out. It is manually populated by the admin. This field determines the display order of screen sections inside of a screen using ascending order. It is recommended to use multiples of 10, so that screen sections can be inserted at a later date without having to reset all of the screen sections.</description>
+        <externalId>false</externalId>
+        <label>Display Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Display_Toggle_Effect__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The admin manually populates this field. It controls the type of animation when closing or opening a screen section in the credit memo. By default, it is slide.</description>
+        <externalId>false</externalId>
+        <label>Display Toggle Effect</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>fade</fullName>
+                    <default>false</default>
+                    <label>fade</label>
+                </value>
+                <value>
+                    <fullName>slide</fullName>
+                    <default>true</default>
+                    <label>slide</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Display_Toggle_Header__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is true and allows the Header to be clicked to render the minimized section.</description>
+        <externalId>false</externalId>
+        <label>Display Toggle Header</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Display_Toggle_Link__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When selected, it allows the show/hide link to appear to the right, and once clicked, it expands the section.</description>
+        <externalId>false</externalId>
+        <label>Display Toggle Link</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Headless__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When set to true, the section will render with no header and will render with the previous section.</description>
+        <externalId>false</externalId>
+        <label>Headless</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is false. When the value is set to true, the section is condired inactive. On a credit memo view or PDF, inactive sections will not be displayed. On credit memo templates, inactive sections will not be cloned when that template is selected from Credit Memo selection page.</description>
+        <externalId>false</externalId>
+        <label>Inactive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Instructions_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional and is used by Credit Memo framework. The default value is empty. The administrator may use this field to display instructions on credit memo view. These instructions will not be included in PDF export.</description>
+        <externalId>false</externalId>
+        <label>Instructions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Editable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The admin manually populates this field. It controls whether fields are able to be edited when the screen section is being used by a route.</description>
+        <externalId>false</externalId>
+        <label>Is Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Layout__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is currently not being used.</description>
+        <externalId>false</externalId>
+        <label>Layout</label>
+        <referenceTo>nFORCE__Layout__c</referenceTo>
+        <relationshipLabel>Screen Sections</relationshipLabel>
+        <relationshipName>Screen_Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Number_of_Columns__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually set. If the screen section is displaying a table, this field will specify the number of columns that will be displayed in the table.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the screen section is displaying a table, this is the number of columns that will be displayed in the table.</inlineHelpText>
+        <label>Number of Columns</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_Screen_Section__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used for conditional field rendering. It specifies the screen section a conditional screen section is associated to.</description>
+        <externalId>false</externalId>
+        <label>Parent Screen Section</label>
+        <referenceTo>nFORCE__Screen_Section__c</referenceTo>
+        <relationshipLabel>Screen Sections</relationshipLabel>
+        <relationshipName>Screen_Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Screen_View__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically populated by the Layout Builder tool on the screen section. This field specifies the screen view associated with the screen section. This field is typically used with the credit memo. It provides the credit memo with the code used to generate the fields and their layout.</description>
+        <externalId>false</externalId>
+        <label>Screen View</label>
+        <referenceTo>nFORCE__View__c</referenceTo>
+        <relationshipLabel>Screen Sections</relationshipLabel>
+        <relationshipName>Screen_Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Screen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is automatically populated whenever a screen section is created from the screen. This field specifies the screen associated with the screen section.</description>
+        <externalId>false</externalId>
+        <label>Screen</label>
+        <referenceTo>nFORCE__Screen__c</referenceTo>
+        <relationshipLabel>Screen Sections</relationshipLabel>
+        <relationshipName>Screen_Sections</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Section_Resource__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. It is manually populated. This field specifies how the screen section obtains the data to be displayed. The values SObjectScreenResource and ConfiguredSObjectScreenResource use coded screen resources to display data. The values MappedSObjectScreenResource, MappedSObjectHierarchyScreenResource, MappedSObjectListScreenResource, and ReferenceFilteredHierarchyScreenResource use the Layout Builder tool to determine what data to display.</description>
+        <externalId>false</externalId>
+        <label>Section Resource</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SObjectScreenResource</fullName>
+                    <default>false</default>
+                    <label>SObjectScreenResource</label>
+                </value>
+                <value>
+                    <fullName>ConfiguredSObjectScreenResource</fullName>
+                    <default>false</default>
+                    <label>ConfiguredSObjectScreenResource</label>
+                </value>
+                <value>
+                    <fullName>GrandchildScreenResource</fullName>
+                    <default>false</default>
+                    <label>GrandchildScreenResource</label>
+                </value>
+                <value>
+                    <fullName>MappedSObjectScreenResource</fullName>
+                    <default>false</default>
+                    <label>MappedSObjectScreenResource</label>
+                </value>
+                <value>
+                    <fullName>MappedSObjectHierarchyScreenResource</fullName>
+                    <default>false</default>
+                    <label>MappedSObjectHierarchyScreenResource</label>
+                </value>
+                <value>
+                    <fullName>MappedSObjectListScreenResource</fullName>
+                    <default>false</default>
+                    <label>MappedSObjectListScreenResource</label>
+                </value>
+                <value>
+                    <fullName>ReferenceFilteredHierarchyScreenResource</fullName>
+                    <default>false</default>
+                    <label>ReferenceFilteredHierarchyScreenResource</label>
+                </value>
+                <value>
+                    <fullName>ContextRecordScreenResource</fullName>
+                    <default>false</default>
+                    <label>ContextRecordScreenResource</label>
+                </value>
+                <value>
+                    <fullName>RelatedHierarchyScreenResource</fullName>
+                    <default>false</default>
+                    <label>RelatedHierarchyScreenResource</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Widget__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated.  This field specifies the widget associated with the screen section. It is used to store code for customizable components of the credit memo and UI, such as the ckEditor in Credit Memo.</description>
+        <externalId>false</externalId>
+        <label>Widget</label>
+        <referenceTo>nFORCE__Widget__c</referenceTo>
+        <relationshipLabel>Screen Sections</relationshipLabel>
+        <relationshipName>Screen_Sections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. This field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__sObject_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. The admin manually populates it. This field specifies the object the screen section displays information on. Additional child or parent objects of the object can also be used to display data by using the Layout Builder tool.</description>
+        <externalId>false</externalId>
+        <label>sObject Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                    <label>Account</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Screen Section</label>
+    <listViews>
+        <fullName>nFORCE__All</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Screen__c</columns>
+        <columns>nFORCE__Headless__c</columns>
+        <columns>nFORCE__Display_Order__c</columns>
+        <columns>nFORCE__Instructions_Text__c</columns>
+        <columns>nFORCE__Screen_View__c</columns>
+        <columns>nFORCE__Section_Resource__c</columns>
+        <columns>nFORCE__sObject_Type__c</columns>
+        <columns>nFORCE__Layout__c</columns>
+        <columns>nFORCE__Widget__c</columns>
+        <columns>nFORCE__Is_Editable__c</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>nFORCE__All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Screen Section Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Screen Sections</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>nFORCE__Mandatory</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(TEXT(nFORCE__Section_Resource__c) )</errorConditionFormula>
+        <errorDisplayField>nFORCE__Section_Resource__c</errorDisplayField>
+        <errorMessage>Please select a section resource.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>nFORCE__Build_Layout</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Build Section</masterLabel>
+        <openType>sidebar</openType>
+        <page>nFORCE__LayoutBuilder</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

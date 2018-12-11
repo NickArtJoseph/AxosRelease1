@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$CIF__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account_Brand__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Person_Account_Email__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account_Open_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account_Balance_Formula__c</field>
+    </columns>
+    <columns>
+        <field>Account.Person_Financial_Account_Junctions__r$Financial_Account_Status_Formula__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Person_Financial_Account_Junctions__r$Financial_Account_Brand__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bank x</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Bank X Customers</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Financial_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$Account_Expiration_Trigger__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

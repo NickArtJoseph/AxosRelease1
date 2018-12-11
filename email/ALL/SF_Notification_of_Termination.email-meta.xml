@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification of Account Termination</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notification of Termination</name>
+    <style>none</style>
+    <subject>Notification of Termination for {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

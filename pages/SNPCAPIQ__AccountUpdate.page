@@ -1,0 +1,35 @@
+<apex:page standardController="Account" extensions="SNPCAPIQ.AccountUpdateController">
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <div class="bPageBlock snp-update-frame">
+        <table class="detailList" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td class="labelCol">Update Data</td>
+                <td class="dataCol">
+                <apex:form >
+                    <apex:commandLink action="{!reSyncAccountData}" rerender="reSyncReloaderPanel" rendered="{!accountDataDeprecated}" title="Update the S&P Capital IQ data in my Salesforce" styleClass="snp-btn">
+                        <i class="snp-i"></i>
+                    </apex:commandLink>
+
+                    <apex:outputPanel id="reSyncReloaderPanel">
+                        <apex:outputPanel rendered="{!IF(reSyncErr!=null,true,false)}" styleClass="warningM4">
+                            <span class="msgIcon" title="{!reSyncErr}"></span>
+                        </apex:outputPanel>
+
+                        <apex:outputPanel rendered="{!reSync}">
+                            <script>
+                                if (window.top !== window.window) {
+                                    window.top.location = '/{!acct.Id}';
+                                } else {
+                                    window.location.reload();
+                                }
+                            </script>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</apex:page>

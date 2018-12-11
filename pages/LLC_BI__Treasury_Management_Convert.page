@@ -1,0 +1,19 @@
+<apex:page standardController="Opportunity" sideBar="false">
+	<apex:outputpanel layout="none">
+		<nFORCE:Includes enablebootstrap3="true" enablefontawesome="true" enablebs3namespace="true"/>
+		<nFORCE:Include_Design_System flavor="vf"/>
+		<nFORCE:Include_Design_System flavor="bs3"/>
+
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+
+		<nFORCE:ncUIIncludes />
+		<nFORCE:ncDataProvidersIncludes />
+		<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularCustomDirectives)}"/>
+
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__treasuryConversionApp)}"/>
+		<c:TreasuryConversionConfiguration />
+		<apex:includeScript value="{!URLFOR($Resource.LLC_BI__treasuryConversionController)}"/>
+
+		<c:TreasuryConversion contextObjectName="{!Opportunity.Name}" accountId="{!Opportunity.AccountId}"/>
+	</apex:outputpanel>
+</apex:page>

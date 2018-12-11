@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br></span><br>Attached to this message is your Signature card, please
+print and send the signed Signature Card:<br></font></p><ol style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif" style="">Mail to: <b style="">BOFI Federal Bank P.O. Box 509127, San Diego,
+CA&nbsp; 92150-9948</b></font></li><li><font face="Arial, sans-serif" style="">Fax to: <b style="">858-350-0443</b>; or</font></li><li><font face="Arial, sans-serif" style="">Send a <b style="">secure message via Online Banking</b> with the
+completed Signature Card attached</font></li></ol><font face="Arial, sans-serif" style="">We
+appreciate your business and commit to providing superior Banking products,
+support and services.<br><br><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Best Regards,</font><br style="background-color: rgb(255, 255, 255);"><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">{!User.FirstName}</span><br style="background-color: rgb(255, 255, 255);"><font style="background-color: rgb(255, 255, 255);"><font color="#ff0000">[INSERT BRAND]</font>&nbsp;</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Customer Service</font></font><p style="color: rgb(0, 0, 0);"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

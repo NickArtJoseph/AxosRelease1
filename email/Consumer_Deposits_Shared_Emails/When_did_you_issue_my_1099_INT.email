@@ -1,0 +1,18 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br></span><span style="background-color: rgb(255, 255, 255);"><br></span>The 1099-INT statement was mailed to your current address on
+file on [Date]. This statement is also available within Online Banking and can
+be accessed by following these steps:<br></font></p><ol style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif" style="">Click <b style="">Additional Services</b></font></li><li><font face="Arial, sans-serif" style="">Click<b style=""> eStatements</b></font></li><li><font face="Arial, sans-serif" style="">On the left hand side, click on “<b style="">View Statement History</b>” for
+the applicable account.</font></li><li><font face="Arial, sans-serif" style="">Select the earlier dated statement for [date].</font></li></ol><font face="Arial, sans-serif" style="">We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Best Regards,</font><br style="background-color: rgb(255, 255, 255);"><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">{!User.FirstName}</span><br style="background-color: rgb(255, 255, 255);"><font style="background-color: rgb(255, 255, 255);"><font color="#ff0000">[INSERT BRAND]</font>&nbsp;</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Customer Service</font></font><p style="color: rgb(0, 0, 0);"></p><p style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Advance</fullName>
+        <default>false</default>
+        <label>Advance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advance Review</fullName>
+        <default>false</default>
+        <label>Advance Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Annuity Schedule</fullName>
+        <default>false</default>
+        <label>Annuity Schedule</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bankruptcy/Lien</fullName>
+        <default>false</default>
+        <label>Bankruptcy/Lien</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Case Search</fullName>
+        <default>false</default>
+        <label>Case Search</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Certified Court Orders</fullName>
+        <default>false</default>
+        <label>Certified Court Orders</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Claim Findings Review</fullName>
+        <default>false</default>
+        <label>Claim Findings Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Confirm FVR</fullName>
+        <default>false</default>
+        <label>Confirm FVR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Info Request</fullName>
+        <default>false</default>
+        <label>Contact Info Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Create New Account</fullName>
+        <default>false</default>
+        <label>Create New Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit Report</fullName>
+        <default>false</default>
+        <label>Credit Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Divorce Decree</fullName>
+        <default>false</default>
+        <label>Divorce Decree</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Doc Request</fullName>
+        <default>false</default>
+        <label>Doc Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Doc Request Review</fullName>
+        <default>false</default>
+        <label>Doc Request Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Draft Order Review</fullName>
+        <default>false</default>
+        <label>Draft Order Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FOIA Request</fullName>
+        <default>false</default>
+        <label>FOIA Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FVR Request</fullName>
+        <default>false</default>
+        <label>FVR Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gift Card</fullName>
+        <default>false</default>
+        <label>Gift Card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Identity Report</fullName>
+        <default>false</default>
+        <label>Identity Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Loan Servicing Note</fullName>
+        <default>false</default>
+        <label>Loan Servicing Note</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mail Processing</fullName>
+        <default>false</default>
+        <label>Mail Processing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Misc. Doc Review</fullName>
+        <default>false</default>
+        <label>Misc. Doc Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pleadings Review</fullName>
+        <default>false</default>
+        <label>Pleadings Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pricing Request</fullName>
+        <default>false</default>
+        <label>Pricing Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Processing Notes</fullName>
+        <default>false</default>
+        <label>Processing Notes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Promotion</fullName>
+        <default>false</default>
+        <label>Promotion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retail Legal Closing Binder Review</fullName>
+        <default>false</default>
+        <label>Retail Legal Closing Binder Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Request</fullName>
+        <default>false</default>
+        <label>Sales Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Settlement Agreement</fullName>
+        <default>false</default>
+        <label>Settlement Agreement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shipping Label</fullName>
+        <default>false</default>
+        <label>Shipping Label</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SSN Verification</fullName>
+        <default>false</default>
+        <label>SSN Verification</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UCC Search</fullName>
+        <default>false</default>
+        <label>UCC Search</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Verification of Benefits</fullName>
+        <default>false</default>
+        <label>Verification of Benefits</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Wholesale Legal Closing Binder Review</fullName>
+        <default>false</default>
+        <label>Wholesale Legal Closing Binder Review</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Secure Support</fullName>
+        <default>false</default>
+        <label>Secure Support</label>
+    </standardValue>
+</StandardValueSet>

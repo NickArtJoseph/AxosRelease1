@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.E_O_Coverage__c</field>
+    </columns>
+    <columns>
+        <field>Account.WLD_Expires2__c</field>
+    </columns>
+    <columns>
+        <field>Account.Fidelity_Bond_Coverage__c</field>
+    </columns>
+    <columns>
+        <field>Account.WLD_Expires__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.WLD</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>WLD - Insurance Expiration Dates</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.WLD_Expires2__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

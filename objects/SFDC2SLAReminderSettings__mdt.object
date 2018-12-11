@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Custom metadata to set SLA Reminder times for diferrent Salesforce Objects</description>
+    <fields>
+        <fullName>BF_Approval_Reminder_Time__c</fullName>
+        <description>Boarding Form Reminder Time in Hours (After it is Submited for Approval)</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Boarding Form Reminder Time in Hours (After it is Submited for Approval)</inlineHelpText>
+        <label>BF Approval Reminder Time</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LOQ_Approval_Reminder_Time__c</fullName>
+        <description>LOQ Reminder Time in Hours (After it is Submited for Approval)</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>LOQ Reminder Time in Hours (After it is Submited for Approval)</inlineHelpText>
+        <label>LOQ Approval Reminder Time</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Proj_Close_Date_Reminder_Time__c</fullName>
+        <description>Opportunity Reminder Time in Hours (Before its Projected Close Date)</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Opportunity Reminder Time in Hours (Before its Projected Close Date)</inlineHelpText>
+        <label>Opp. Proj. Close Date Reminder Time</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>SFDC2 SLA Reminder Settings</label>
+    <pluralLabel>SFDC2 SLA Reminder Settings</pluralLabel>
+    <validationRules>
+        <fullName>Times_Greater_than_1H</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+  Opp_Proj_Close_Date_Reminder_Time__c &lt; 0,
+  LOQ_Approval_Reminder_Time__c &lt; 0,
+  BF_Approval_Reminder_Time__c &lt; 0
+)</errorConditionFormula>
+        <errorMessage>Reminder Times must be greater than 0</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

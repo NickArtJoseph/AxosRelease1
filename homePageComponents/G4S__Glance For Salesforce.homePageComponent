@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>G4S__Tour</links>
+    <links>G4S__Glance_Reports</links>
+    <links>G4S__Glance_Blog</links>
+    <links>G4S__My_Glance_Settings</links>
+    <links>G4S__Glance_Support</links>
+    <links>G4S__Feedback</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

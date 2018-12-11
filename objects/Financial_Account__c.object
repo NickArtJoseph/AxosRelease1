@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used by Consumer Deposits to capture account details for a person</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Number_Last4__c</fullName>
+        <description>Last 4 characters of the account number</description>
+        <externalId>false</externalId>
+        <label>Account Number (Last 4)</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Title</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Active_Debit_Card__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Debit Card</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bank of Internet</fullName>
+                    <default>false</default>
+                    <label>Bank of Internet</label>
+                </value>
+                <value>
+                    <fullName>BofI Federal Bank</fullName>
+                    <default>false</default>
+                    <label>BofI Federal Bank</label>
+                </value>
+                <value>
+                    <fullName>UFB Direct</fullName>
+                    <default>false</default>
+                    <label>UFB Direct</label>
+                </value>
+                <value>
+                    <fullName>BofI Advisor</fullName>
+                    <default>false</default>
+                    <label>BofI Advisor</label>
+                </value>
+                <value>
+                    <fullName>BofI Federal Bank BOA</fullName>
+                    <default>false</default>
+                    <label>BofI Federal Bank BOA</label>
+                </value>
+                <value>
+                    <fullName>NetBank</fullName>
+                    <default>false</default>
+                    <label>NetBank</label>
+                </value>
+                <value>
+                    <fullName>Bank X</fullName>
+                    <default>false</default>
+                    <label>Bank X</label>
+                </value>
+                <value>
+                    <fullName>Bank Social</fullName>
+                    <default>false</default>
+                    <label>Bank Social</label>
+                </value>
+                <value>
+                    <fullName>Specialty Deposits</fullName>
+                    <default>false</default>
+                    <label>Specialty Deposits</label>
+                </value>
+                <value>
+                    <fullName>Virtus Bank</fullName>
+                    <default>false</default>
+                    <label>Virtus Bank</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Close_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date_Funded__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Funded</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>JHA_RECORD_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Captures the Record ID from JHA</description>
+        <externalId>true</externalId>
+        <label>JHA RECORD ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Statement_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Statement Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OLD_JHA_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD_JHA_ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ownership__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Person_Account_Count__c &gt; 1, &apos;Joint&apos;, &apos;Single&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ownership</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Person_Account_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Person Account Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_ACH_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month ACH Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_POS_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month POS Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Month_Rewards_POS_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Previous Month Rewards POS Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Promo_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Promo Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Retirement_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Retirement Account</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Associate__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Associate</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Signature_Card__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Signature Card</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Escheat</fullName>
+                    <default>false</default>
+                    <label>Escheat</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Dormant</fullName>
+                    <default>false</default>
+                    <label>Dormant</label>
+                </value>
+                <value>
+                    <fullName>New Today</fullName>
+                    <default>false</default>
+                    <label>New Today</label>
+                </value>
+                <value>
+                    <fullName>Pending Close</fullName>
+                    <default>false</default>
+                    <label>Pending Close</label>
+                </value>
+                <value>
+                    <fullName>Restricted</fullName>
+                    <default>false</default>
+                    <label>Restricted</label>
+                </value>
+                <value>
+                    <fullName>No Post</fullName>
+                    <default>false</default>
+                    <label>No Post</label>
+                </value>
+                <value>
+                    <fullName>Charged Off</fullName>
+                    <default>false</default>
+                    <label>Charged Off</label>
+                </value>
+                <value>
+                    <fullName>No Credits</fullName>
+                    <default>false</default>
+                    <label>No Credits</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Funding_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Funding Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trust_Docs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Trust Docs</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Zero_Balance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Zero Balance Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zero_Balance_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Zero Balance Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Financial Account</label>
+    <nameField>
+        <label>Financial Account Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Financial Accounts</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Account_Title__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Open_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Close_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Retention_Referral</fullName>
+        <availability>online</availability>
+        <description>Sets up a new opportunity form with prepopulated values based on the current Financial Account record</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Retention Referral</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
+
+var outputMessage = { 
+title: &apos;&apos;, 
+message: &apos;&apos; 
+};
+var continueProcessing = true;
+
+//lookup associated Accounts
+var perFinJunc = sforce.connection.query(&quot;SELECT Person_Account__c, Person_Account__r.Name FROM Person_Financial_Account_Junction__c WHERE Financial_Account__c = &apos;{!Financial_Account__c.Id}&apos;&quot;);
+var records = perFinJunc.getArray(&quot;records&quot;);
+
+if(records.length == 0) {
+  outputMessage.title = &quot;NO ASSOCIATED ACCOUNTS&quot;;
+  outputMessage.message = &quot;This financial account record is not associated with any person accounts. You can not create a retention referral opportunity at this time.&quot;;
+  continueProcessing = false;
+}
+
+if(continueProcessing) {
+  var accountOptions = &quot;&quot;;
+  for (var i = 0; i &lt; records.length; i++) {
+    accountOptions += &quot;&lt;option value=&apos;&quot; + records[i].Person_Account__c + &quot;&apos;&gt;&quot; + records[i].Person_Account__r.Name + &quot;&lt;/option&gt;&quot;;
+  }
+  outputMessage.title = &quot;SELECT ACCOUNT&quot;;
+  outputMessage.message = &quot;Please select the appropriate person account:&amp;nbsp;&quot; +
+    &quot;&lt;select id=&apos;RetRef_AccountSelect&apos; size=&apos;1&apos;&gt;&quot; + accountOptions + 
+    &quot;&lt;/select&gt;&quot;;
+}
+
+var box = new SimpleDialog(&quot;hersh&quot;+Math.random(), true); 
+parent.box = box; 
+box.setTitle(outputMessage.title); 
+box.createDialog(); 
+box.setWidth(350); 
+box.setContentInnerHTML(outputMessage.message + &apos;&lt;p&gt;&lt;div style=&quot;width: 100%; text-align: center;&quot;&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();window.parent.location.href=\&apos;/006/e?opp3=Retention+Referral+{!Financial_Account__c.Brand__c}&amp;opp6=Existing+Relationship&amp;opp11=New+Assigned&amp;opp9={!TODAY()}&amp;opp7={!Financial_Account__c.Current_Balance__c}&amp;CF00Ni000000FixAU={!Financial_Account__c.Name}&amp;CF00Ni000000FixAU_lkid={!Financial_Account__c.Id}&amp;00Ni000000FixAT=Retention+Referral&amp;retURL=%2F{!Financial_Account__c.Id}&amp;RecordType=012i0000001AbiI&amp;ent=Opportunity&amp;accid=\&apos; + document.getElementById(\&apos;RetRef_AccountSelect\&apos;).options[document.getElementById(\&apos;RetRef_AccountSelect\&apos;).selectedIndex].value;return false&quot;&gt;Create&lt;/button&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();alert(1);return false;&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;&apos;); 
+box.setupDefaultButtons(); 
+box.show();</url>
+    </webLinks>
+</CustomObject>

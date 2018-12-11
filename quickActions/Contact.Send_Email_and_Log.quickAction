@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used by Dealer Services to send an email with the email-to-salesforce BCC value auto-populated</description>
+    <height>250</height>
+    <label>Send Email and Log</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>MobileAppEmailTracking</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

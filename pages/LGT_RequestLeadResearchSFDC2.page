@@ -1,0 +1,153 @@
+<apex:page standardController="Lead" extensions="RequestLeadResearchSFDC2Controller"
+           showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+      <apex:slds />
+<apex:stylesheet value="/resource/SLDS0102/assets/styles/salesforce-lightning-design-system-ltng.css"/>
+
+
+<style>
+.msgIcon {
+    display: none!important
+}
+.customMessage * {
+    color: #fff!important;
+    background: #cc0000;
+}
+.customMessage {
+    margin: 5px 0!important;
+    max-width: 1280px;    
+    width: 100%;
+    font-size: 12px;
+    border: 0px;
+    padding-left: 10px;
+}
+</style>
+
+
+<script>
+    $(document).ready(function(){
+       overridePageMessages();   
+    });
+      
+    function overridePageMessages(){   
+        var textureEffect = '';
+        //textureEffect = 'slds-theme--alert-texture';
+                    
+        $('.warningM3').addClass('slds-notify slds-notify--toast slds-theme--warning customMessage '+textureEffect);         
+        $('.confirmM3').addClass('slds-notify slds-notify--alert slds-theme--success  customMessage '+textureEffect);   
+        $('.errorM3').addClass('slds-notify slds-notify--alert slds-theme--error customMessage '+textureEffect);                 
+        $('.infoM3').addClass('slds-notify slds-notify--toast customMessage '+textureEffect);   
+      
+ $('.warningM3').removeClass('warningM3');
+ $('.confirmM3').removeClass('confirmM3');    
+        $('.errorM3').removeClass('errorM3');
+        $('.infoM3').removeClass('infoM3'); 
+      
+    }
+</script>
+  
+  
+    <div class="slds" >
+        <apex:pagemessages />
+    </div>
+
+<apex:form > 
+        <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+            <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="x-ua-compatible" content="ie=edge" />
+                
+                <!-- Import the Design System style sheet   -->
+                                        
+            </head>
+            
+            <body>
+                
+                <!-- REQUIRED SLDS WRAPPER -->
+                <div class="slds-scope">
+                    
+                    <!-- PAGE HEADER -->
+                    <div class="slds-page-header">
+                        
+                        <!-- LAYOUT GRID -->
+                        <div class="slds-grid">
+                            
+                            <!-- GRID COL -->
+                            <div class="slds-col slds-has-flexi-truncate" >
+                                <!-- HEADING AREA -->
+                                <!-- MEDIA OBJECT = FIGURE + BODY -->
+                                <div class="slds-media slds-no-space slds-grow" Style = "width: 50%">
+                                    <div class="slds-media__figure">
+                                        <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead">
+                                            <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#lead')}"></use>
+                                            
+                                        </svg>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <p class="slds-text-title--caps slds-line-height--reset">Select a Research Request Type</p> 
+                                    </div>
+                                </div>
+                                <!-- / MEDIA OBJECT -->
+                                <!-- /HEADING AREA -->
+                                
+                            </div>
+                            
+                            <!-- ACTION BUTTONS -->
+                            
+                            <apex:pageBlock >
+                                <apex:pageBlockButtons location="top" style="margin-left:10%">
+                                    <apex:commandButton action="{!sendLead}" value="Send for Research" styleClass="slds-button slds-button--brand"/>
+                                    <apex:commandButton action="{!cancel}" value="Cancel" styleClass="slds-button slds-button--destructive"/>                                
+                                </apex:pageBlockButtons>                        
+                            </apex:pageBlock>                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!-- / ACTION BUTTONS -->
+                            
+                            
+                        </div>
+                        <!-- / LAYOUT GRID -->
+                        
+                        <!-- PAGE HEADER DETAIL ROW -->
+                        <apex:pageBlock >
+                            <apex:pageBlockSection >
+                                <apex:selectList id="RequestType" size="1" value="{!RequestType}" title="Request Type" >
+                                    <apex:selectOptions value="{!RequestTypeList}" />
+                                </apex:selectList>
+                                <apex:inputTextArea id="Notes" value="{!Notes}" label="Notes" style="width:360px; height:100px" styleClass="slds-form-element__control"/>
+                            </apex:pageBlockSection>
+                        </apex:pageBlock>
+                        <!-- / PAGE HEADER DETAIL ROW -->
+                        
+                    </div>
+                    <!-- / PAGE HEADER -->
+                    
+                    
+                    <!-- PRIMARY CONTENT WRAPPER -->
+                    <div class="myapp slds-p-horizontal--medium">
+                        <ul id="contact-list" class="slds-has-dividers--bottom-space"></ul>
+                    </div>
+                    <!-- / PRIMARY CONTENT WRAPPER -->
+                    
+                    <!-- FOOTER -->
+                    <!-- / FOOTER -->
+                    
+                </div>
+                <!-- / REQUIRED SLDS WRAPPER -->    
+                
+                <!-- JAVASCRIPT -->
+                <!-- / JAVASCRIPT -->
+                
+            </body>
+        </html>
+        
+        <apex:inputHidden value="{!lead.OwnerId}" />
+        <apex:inputHidden value="{!lead.RecordTypeId}" />
+        <apex:inputHidden value="{!lead.Return_Owner_SFDC2__c}" />
+        <apex:inputHidden value="{!lead.Return_Record_Type_SFDC2__c}" />
+        
+    </apex:form> 
+</apex:page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Need to Speak with Customer</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Advisor_Letterhead</letterhead>
+    <name>BOFI Advisor Need to Speak with Customer</name>
+    <style>freeForm</style>
+    <subject>Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>We would like the opportunity to discuss this message to ensure we address all your concerns.
+
+Please, call [phone number] anytime. We are now available to assist customers 24/7! A Direct Banker will be happy to speak with you personally.
+
+We appreciate your business and commit to providing superior Banking products, support and services.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

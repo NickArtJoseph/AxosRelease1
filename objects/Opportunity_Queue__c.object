@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <comment>Defaults to list view for Opportunity Queue</comment>
+        <content>OppQueueTab</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>SFDC2: Used by enterprise in conjunction with opportunities to set up a queuing system for Opportunities</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Dealer_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Dealer_Address__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dealer Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Dealer_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dealer Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dealer_Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Dealer_Phone_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dealer Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Opportunity originally assigned to queue</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Queues</relationshipLabel>
+        <relationshipName>Opportunity_Queues</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Change_Date_Time__c</fullName>
+        <description>The date/time when ownership changed from the queue to a standard user</description>
+        <externalId>false</externalId>
+        <label>Owner Change Date Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Opportunity Queue</label>
+    <listViews>
+        <fullName>Advisor_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Advisor Opportunity Queue</label>
+        <queue>Advisor_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Opportunity_Name__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <sharedTo>
+            <group>Salesforce_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Auto_Lending_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Auto-Lending Opportunity Queue</label>
+        <queue>Auto_Lending_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Business_Banking_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Business Banking Opportunity Queue</label>
+        <queue>Business_Banking_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>C_I_CRESL_SFDC2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>C&amp;I CRESL SFDC2</label>
+        <queue>C_I_CRESL_SFDC2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>C_I_EQF_SFDC2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>C&amp;I EQF SFDC2</label>
+        <queue>C_I_EQF_SFDC2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>C_I_Factoring_SFDC2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>C&amp;I Factoring SFDC2</label>
+        <queue>C_I_Factoring_SFDC2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>C_I_NRELF_SFDC2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>C&amp;I NRELF SFDC2</label>
+        <queue>C_I_NRELF_SFDC2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>C_I_RELF_SFDC2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>C&amp;I RELF SFDC2</label>
+        <queue>C_I_RELF_SFDC2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Commercial_Banking_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Opportunity_Name__c</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Commercial Banking SFDC2</label>
+        <queue>Commercial_Banking_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Consumer_Deposits_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Consumer Deposits Opportunity Queue</label>
+        <queue>Consumer_Deposits_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Consumer_Wholesale_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Consumer Wholesale Opportunity Queue</label>
+        <queue>Consumer_Wholesale_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Direct_Auto_Lending_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Direct Auto Lending Opportunity Queue</label>
+        <queue>Direct_Auto_Lending_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Epiq_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Fiduciary Services Opportunity Queue</label>
+        <queue>Epiq_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Find_an_opportunity</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Opportunity_Name__c</field>
+            <operation>equals</operation>
+            <value>Opportunity Michael Paolini-mikepaolini724@gmail.com Enrollment - 77832</value>
+        </filters>
+        <label>Find an opportunity</label>
+    </listViews>
+    <listViews>
+        <fullName>HBD_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>HBD Opportunity Queue</label>
+        <queue>HBD_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HRB_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>HRB Opportunity Queue</label>
+        <queue>HRB_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>IPL_Opportunity_Queue_sfdc2_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>IPL Opportunity Queue</label>
+        <queue>IPL_Opportunity_Queue_sfdc2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Opportunity Queue</label>
+        <queue>Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Specialty_Deposits_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Specialty Deposits Opportunity Queue</label>
+        <queue>Specialty_Deposits_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TCI_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>TCI Opportunity Queue</label>
+        <queue>TCI_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ULP_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>ULP Opportunity Queue</label>
+        <queue>ULP_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Virtus_Opportunity_Queue_Opportunity_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Owner_Change_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Queue</filterScope>
+        <label>Virtus Opportunity Queue</label>
+        <queue>Virtus_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>WME_Opportunity_Queue_Opportunity_Queue</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Wholesale Mortgage Express Opp Queue</label>
+        <queue>WME_Opportunity_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>OQ-{000000000}</displayFormat>
+        <label>Opportunity Queue Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Opportunity Queues</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Take_Ownership</fullName>
+        <availability>online</availability>
+        <description>Assigns current user as owner</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Take Ownership</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var currentUser = sforce.connection.getUserInfo(); 
+var roId = currentUser.roleId; 
+var obj = new sforce.SObject(&quot;Opportunity_Queue__c&quot;); 
+obj.Id = &apos;{!Opportunity_Queue__c.Id}&apos;; 
+var result = sforce.apex.execute(&quot;RestricTakeOwnerShipHBD&quot;, &quot;returnFlag&quot;,{roleId : roId, queueId : obj.Id }); 
+if(result == &quot;true&quot; ){
+       alert (&quot;You have no permission to take the ownership for this Opportunity&quot;);
+}else{
+		var obj = new sforce.SObject(&quot;Opportunity_Queue__c&quot;); 
+		obj.Id = &apos;{!Opportunity_Queue__c.Id}&apos;; 
+		obj.OwnerId = &apos;{!$User.Id}&apos;; 
+		var result = sforce.connection.update([obj]); 
+		window.location.href=&apos;/{!Opportunity_Queue__c.OpportunityId__c}&apos;;
+
+}</url>
+    </webLinks>
+</CustomObject>

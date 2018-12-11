@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Change Request - Add an Account Owner</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Change Request - Add an Additional Account Owner</subject>
+    <textOnly>Hello {!Case.Contact},
+
+We will be happy to assist you with adding an additional account owner. This will be a two-step process:
+
+Step 1: Complete the Change Request: Add an Account Owner form.
+
+Step 2: Return the completed Addition of Account owner Change request for processing by:
+
+Secure Message: Login to Online Banking, click on Contact Us, and send a secure email with a scanned copy of the signed documents
+Fax to: 858-350-0443; or
+Mail to: Axos Bank Deposit Operations: New Accounts PO BOX 509127 San Diego, CA 92150-9948
+
+
+Your change request will be reviewed within three business days upon receipt of the Addition of Account Owner Change form.
+
+We appreciate your business and commit to providing superior banking products, support and services.
+
+Best Regards,
+{!User.FirstName}
+Axos Bank Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

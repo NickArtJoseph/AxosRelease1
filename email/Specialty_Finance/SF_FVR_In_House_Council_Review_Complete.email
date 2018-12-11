@@ -1,0 +1,5 @@
+The retail opportunity for {!Opportunity.Account} has been reviewed by In-House Counsel. Please create an FVR and update the account with any available information.
+
+Please click the link below to access the opportunity:
+
+({!Opportunity.Link})

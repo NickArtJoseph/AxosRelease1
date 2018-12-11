@@ -1,0 +1,371 @@
+.THIS {
+	position: relative;
+}
+
+
+.THIS td {
+	width: 40%;
+}
+
+.THIS table td:nth-child(2) {
+	width:5%;
+	max-width: 5% !important;
+}
+
+.THIS table td:nth-child(3) {
+	width:43%;
+}
+
+.THIS label {
+	font-size: 11px;
+}
+
+.THIS .BWR-Name {
+	left:23%;
+	position: absolute;
+	top: 1.2%;
+	display: inline;
+}
+
+.THIS .BWR-Street {
+	left:34%;
+	position: absolute;
+	top: 5.5%;
+	display: inline;
+}
+
+.THIS .BWR-Phone {
+	left: 27%;
+	display: inline;
+	position: absolute;
+	top: 26.3%;
+}
+
+.THIS .BWR-Email {
+	left: 25%;
+	display: inline;
+	position: absolute;
+	top: 30.5%;
+}
+
+.THIS .BWR-Tax-Number {
+	left: 27%;
+	display: inline;
+	position: absolute;
+	top: 34.6%;
+}
+
+.THIS .BWR-Tax-Type {
+	left: 32%;
+	display: inline;
+	position: absolute;
+	top: 39%;
+}
+
+.THIS .BWR-Class-Code {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 43.2%;
+}
+
+.THIS .GTR-Name {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top: 0%;
+}
+
+.THIS .GTR-Street {
+	left: 23%;
+	display: inline;
+	position: absolute;
+	top: 1.7%;
+}
+
+.THIS .GTR-Phone {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 10%;
+}
+
+.THIS .GTR-Email {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 11.7%
+}
+
+.THIS .GTR-Birthdate {
+	left: 18%;
+	display: inline;
+	position: absolute;
+	top: 13.4%;
+}
+
+.THIS .GTR-Tax-Number {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 15.1%;
+}
+
+.THIS .GTR-Tax-Type {
+	left: 27%;
+	display: inline;
+	position: absolute;
+	top: 16.82%;
+}
+
+.THIS .GTR-Class-Code {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 18.4%
+}
+
+.THIS .GTR-Contingent {
+	left: 25%;
+	display: inline;
+	position: absolute;
+	top: 20%;
+}
+
+.THIS .GTR-Gender {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 21.6%;
+}
+
+.THIS .Risk-Rating {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top: 10.8%;
+}
+
+.THIS .CI-Loan {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 29.7%;
+}
+
+.THIS .Purpose-Code {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top: 34.3%
+}
+
+.THIS .Call-Report {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 43.8%;
+}
+
+.THIS .Loan-Class {
+	left: 23%;
+	display: inline;
+	position: absolute;
+	top: 48.5%;
+}
+
+.THIS .NAICS {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top:52.6%;
+}
+
+.THIS .Loan-Term-M {
+	left: 25%;
+	display: inline;
+	position: absolute;
+	top: 57.3%;
+}
+
+.THIS .Origination-D {
+	left: 33%;
+	display: inline;
+	position: absolute;
+	top: 62%;
+}
+
+.THIS .Maturity-D {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top:66.5%;
+}
+
+.THIS .Date-E {
+	right: 16%;
+	display: inline;
+	position: absolute;
+	top: 71.5%;
+}
+
+.THIS .Term-C {
+	right: 32%;
+	display: inline;
+	position: absolute;
+	top: 76%;
+}
+
+.THIS .Management-C {
+	left: 25%;
+	display: inline;
+	position: absolute;
+	top: 85.6%;
+}
+
+.THIS .CRE {
+	left: 26%;
+	display: inline;
+	position: absolute;
+	top: 90%;
+}
+
+.THIS .Payment-Freq {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 1.2%;
+}
+
+.THIS .Payment-C {
+	left: 18%;
+	display: inline;
+	position: absolute;
+	top: 17.6%;
+}
+
+.THIS .First-P-D {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 33.3%;
+}
+
+.THIS .Next-D-D {
+	left: 18%;
+	display: inline;
+	position: absolute;
+	top: 50%
+}
+
+.THIS .Send-P-B {
+	left: 25%;
+	display: inline;
+	position: absolute;
+	top: 67.5%
+}
+
+.THIS .Days-B-P-B {
+	left: 28%;
+	display: inline;
+	position: absolute;
+	top: 83.5%;
+}
+
+.THIS .Rate {
+	left: 7%;
+	display: inline;
+	position: absolute;
+	top: 0%;
+}
+
+.THIS .Rate-I-N {
+	left: 22%;
+	display: inline;
+	position: absolute;
+	top: 13%
+}
+
+.THIS .Rate-F {
+	left:14%;
+	display: inline;
+	position: absolute;
+	top: 25%;
+}
+
+.THIS .Rate-M {
+	left:14%;
+	display: inline;
+	position: absolute;
+	top: 37.7%;
+}
+
+.THIS .Rate-R-D {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top:50%;
+}
+
+.THIS .Rate-R-T {
+	left: 20%;
+	display: inline;
+	position: absolute;
+	top: 63.5%;
+}
+
+.THIS .Rate-R-T-F {
+	left: 30%;
+	display: inline;
+	position: absolute;
+	top: 75%;
+}
+
+.THIS .Rate-R-D-M {
+	left: 28%;
+	display: inline;
+	position: absolute;
+	top: 87.5%;
+}
+
+.THIS .Property-Sth {
+	left: 18%;
+	display: inline;
+	position: absolute;
+	top: 9.2%;
+}
+
+.THIS .Appraised-V {
+	left: 18%;
+	display: inline;
+	position: absolute;
+	top: 54.7%;
+}
+
+.THIS .Appraisal-R-D {
+	left: 24%;
+	display: inline;
+	position: absolute;
+	top: 63.7%;
+}
+
+.THIS .Year-B {
+	left: 12%;
+	display: inline;
+	position: absolute;
+	top: 72.7%;
+}
+
+.THIS .Coll-I-E-D {
+	left: 32%;
+	display: inline;
+	position: absolute;
+	top: 81.8%;
+}
+
+.THIS .Flood-I-R {
+	left: 30%;
+	display: inline;
+	position: absolute;
+	top: 91.6%;
+}

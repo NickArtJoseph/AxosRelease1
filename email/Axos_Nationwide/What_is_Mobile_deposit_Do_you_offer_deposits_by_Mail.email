@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><div style=""><font face="arial">Hello {!Case.Contact},</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">With Mobile Deposit you can deposit a check anytime, anywhere using your smartphone. Just download our Mobile App by searching for the “Axos for Nationwide” app in the App Store or Google Play. It’s fast, secure and best of all it’s free. Note: You must have registered for Online Banking first to use the Mobile App on your phone.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Alternatively, if you currently mail in your deposits, you will need to mail your deposits to Axos Bank’s PO Box which is:</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Axos Bank</font></div><div style=""><font face="arial">Deposit Operations</font></div><div style=""><font face="arial">PO Box 911039</font></div><div style=""><font face="arial">San Diego, CA 92191-1039</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Be sure any deposits that would arrive after November 15, 2018&nbsp; are mailed to this new address. NOTE: any deposits mailed to Nationwide’s address will be forwarded to Axos Bank, but there could be a delay in posting of 1-2 business days while those deposits are in transit.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">We appreciate your business and commit to providing superior Banking products, support and services.</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Best Regards,</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">{!User.FirstName}</font></div><div style=""><font face="arial">Axos Bank Customer Service</font></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Basic Business Checking</fullName>
+        <default>false</default>
+        <label>Basic Business Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Interest Checking</fullName>
+        <default>false</default>
+        <label>Business Interest Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Analyzed Business Checking</fullName>
+        <default>false</default>
+        <label>Analyzed Business Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Money Market</fullName>
+        <default>false</default>
+        <label>Business Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Premium Savings</fullName>
+        <default>false</default>
+        <label>Business Premium Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Savings</fullName>
+        <default>false</default>
+        <label>Business Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Association &amp; Non-Profit Money Market</fullName>
+        <default>false</default>
+        <label>Association &amp; Non-Profit Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Business CDs</fullName>
+        <default>false</default>
+        <label>Business CDs</label>
+    </customValue>
+    <customValue>
+        <fullName>CDARS®</fullName>
+        <default>false</default>
+        <label>CDARS®</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Management</fullName>
+        <default>false</default>
+        <label>Cash Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Rewards Checking</fullName>
+        <default>false</default>
+        <label>Rewards Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Platinum Checking</fullName>
+        <default>false</default>
+        <label>Platinum Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>CashBack Checking</fullName>
+        <default>false</default>
+        <label>CashBack Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Essential Checking</fullName>
+        <default>false</default>
+        <label>Essential Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Golden Checking</fullName>
+        <default>false</default>
+        <label>Golden Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>First Checking</fullName>
+        <default>false</default>
+        <label>First Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Smart Savings</fullName>
+        <default>false</default>
+        <label>Smart Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Smart Money Market</fullName>
+        <default>false</default>
+        <label>Smart Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>CDs</fullName>
+        <default>false</default>
+        <label>CDs</label>
+    </customValue>
+    <customValue>
+        <fullName>IRAs</fullName>
+        <default>false</default>
+        <label>IRAs</label>
+    </customValue>
+    <customValue>
+        <fullName>X Checking</fullName>
+        <default>false</default>
+        <label>X Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>X Savings</fullName>
+        <default>false</default>
+        <label>X Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Select Checking</fullName>
+        <default>false</default>
+        <label>Select Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Select Savings</fullName>
+        <default>false</default>
+        <label>Select Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Select Money Market</fullName>
+        <default>false</default>
+        <label>Select Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Select CD</fullName>
+        <default>false</default>
+        <label>Select CD</label>
+    </customValue>
+    <customValue>
+        <fullName>Netbank Checking</fullName>
+        <default>false</default>
+        <label>Netbank Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>Netbank Savings</fullName>
+        <default>false</default>
+        <label>Netbank Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>UFB Savings</fullName>
+        <default>false</default>
+        <label>UFB Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>UFB Premium Savings</fullName>
+        <default>false</default>
+        <label>UFB Premium Savings</label>
+    </customValue>
+    <customValue>
+        <fullName>Airline Rewards Checking</fullName>
+        <default>false</default>
+        <label>Airline Rewards Checking</label>
+    </customValue>
+    <customValue>
+        <fullName>UFB Money Market</fullName>
+        <default>false</default>
+        <label>UFB Money Market</label>
+    </customValue>
+    <customValue>
+        <fullName>Interest Checking</fullName>
+        <default>false</default>
+        <label>Interest Checking</label>
+    </customValue>
+    <description>Product List provided on 12/4 by Ericka</description>
+    <masterLabel>Products</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Structured_Settlement</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ULP_Agent</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ULP_Executive_Banker</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>ULP_Manager</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>true</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>daniel@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>kharty@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Step 1</label>
+        <name>Step_1</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>daniel@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>sszpytek@bofi.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>If (Total Advance + Advance Amount) / Purchase Price to Customer &gt; 10% OR If Opportunity Record Type = &apos;Specialty Finance - Retail SS&apos; AND Advance Amount &gt; 2000</description>
+        <entryCriteria>
+            <formula>OR((Opportunity__r.Total_Advances__c + Amount__c) /  Opportunity__r.Purchase_Price_to_Customer__c &gt; 0.1,
+AND( Opportunity__r.RecordTypeId = &quot;012i0000001ALzw&quot;, Amount__c &gt;2000))</formula>
+        </entryCriteria>
+        <label>Step 2</label>
+        <name>Step_2</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Allows Specialty Finance users to submit an Advance for approval if the Amount field contains a value and the Opportunity Record Type Id = &quot;Specialty Finance - Retail SS&quot; or &quot;Specialty Finance - Retail Lottery&quot;</description>
+    <emailTemplate>Specialty_Finance/SF_Advance_Approval_Needed</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Advance__c.Amount__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordType</field>
+            <operation>equals</operation>
+            <value>Specialty Finance - Retail SS,Specialty Finance - Retail Lottery</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Purchase_Price_to_Customer__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Prepare_Advance_Docs</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Send_email_to_alert_that_Advance_has_final_approval</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Set_Approval_Status_to_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Set_Approval_Status_to_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Set_Approval_Status_to_Pending</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>SF - Retail Approval</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

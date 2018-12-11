@@ -1,0 +1,23 @@
+<apex:page showHeader="false" sidebar="false" >
+<apex:includeScript value="/support/api/34.0/interaction.js"/>
+<script>
+    window.sforce.interaction.cti.setSoftphoneHeight(150);
+</script>
+<apex:outputPanel >
+        <style>
+            html           { height: 90% }
+            body           { margin-top:10px; margin-left:10px; background-image: none; background-color: transparent; height: 100% }
+            #footer        { position: absolute;bottom: 2px; height:17px; width: 98%; margin-bottom:2px; }
+            #footer p,a    { color: #666666; font: 10px Arial; }
+            #footer p      { float: right;  margin: 0px; margin-right:5px; }
+            ul li, ul, li  { margin-left: -5px; }
+        </style>
+        <h1>Not Supported</h1>
+        <p>
+        The b+s Connects for Cisco Contact Center package is not allowed in in sidebar mode.
+        </p>
+        <div id="footer">
+        <p>powered by&nbsp;&nbsp;<img src="{!URLFOR($Resource.CnxSfdcResources, 'images/bs-logo_cmyk.png')}" /></p>
+        </div>
+    </apex:outputPanel>
+</apex:page>

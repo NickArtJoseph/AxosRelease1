@@ -1,0 +1,7 @@
+The Boarding Questionnaire for {!Loan_Ops_Questionnaire__c.Opportunity__c} is marked as rejected. Please complete all required fields and resubmit by selecting the link below.
+
+{!Loan_Ops_Questionnaire__c.Link}
+
+Thank you,
+
+Salesforce

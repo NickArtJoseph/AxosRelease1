@@ -1,0 +1,31 @@
+<apex:page standardController="CI_Certification__c" extensions="CICertChecklistDisplayExt" showHeader="false" sidebar="false" standardStylesheets="true">
+<apex:form >
+    <apex:pageBlock title=" Checklist Items" id="ChecklistBlock">
+        <apex:pageBlockButtons location="top" >
+            <apex:outputPanel layout="block" style="display: inline-block; vertical-align: bottom; height: 32px;">
+            <apex:outputText style="vertical-align: bottom; font-weight: bold; height: 32px;" value="{!$ObjectType.CI_Certification__c.fields.Ready_for_Approval__c.label}"/>
+            <apex:outputText escape="false" value="{!ReadyForApprovalImage}" id="ApprovalImage"/>
+            </apex:outputPanel>
+        </apex:pageBlockButtons>
+        <apex:outputPanel layout="block" style="overflow-y: auto; height: 135px; width: 100%;">
+        <apex:pageBlockTable value="{!ChecklistItems}" var="item" columnsWidth="10%,60%,15%,15%" id="ChecklistTable">
+            <apex:column headerValue="Action">
+                <apex:commandLink rendered="{!AND(isEditor,selectedItemId != item.Id)}" value="Edit" action="{!editItem}" rerender="ChecklistTable">
+                    <apex:param name="selectedItemId" value="{!item.Id}" assignTo="{!selectedItemId}" />
+                    <apex:param name="selectedItemStatus" value="{!item.Status__c}" assignTo="{!selectedItemStatus}" />
+                </apex:commandLink>
+                <apex:outputPanel rendered="{!AND(isEditor, selectedItemId = item.Id)}">
+                    <apex:commandLink value="Save" action="{!saveItem}" rerender="ApprovalImage,ChecklistTable"/>&nbsp;|&nbsp;<apex:commandLink value="Cancel" action="{!cancelItem}" rerender="ChecklistTable"/>
+                </apex:outputPanel>
+            </apex:column>
+            <apex:column headerValue="{!$ObjectType.C_I_Checklist_Item__c.fields.Name.label}" value="{!item.Name}" />
+            <apex:column headerValue="{!$ObjectType.C_I_Checklist_Item__c.fields.Grace_Period__c.label}" value="{!item.Grace_Period__c}" />
+            <apex:column headerValue="{!$ObjectType.C_I_Checklist_Item__c.fields.Status__c.label}">
+                <apex:outputField value="{!item.Status__c}" rendered="{!selectedItemId != item.Id}"/>
+                <apex:inputField value="{!modifyItem.Status__c}" rendered="{!selectedItemId = item.Id}" />
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:outputPanel>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When Application Status is changed, automatically send an email to the MeridianLink Loan Officer</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2:MeridianLink Loan Officer Application Status Approved</name>
+    <style>none</style>
+    <subject>Application Approved</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

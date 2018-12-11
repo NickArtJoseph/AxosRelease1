@@ -1,0 +1,32 @@
+<apex:page standardController="LLC_BI__Loan__c" sidebar="false" extensions="LLC_BI.LoanApprovalHistoryController">
+	<nFORCE:Includes />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, 'angularJS/angular-1.5.7/angular.min.js')}"/>
+	<apex:stylesheet value="{!URLFOR($Resource.nFORCE__SLDS0102, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+	<nFORCE:Include_Design_System flavor="bs3"/>
+	<nFORCE:ncTreeGridIncludes />
+	<div class="slds">
+		<apex:composition rendered="false" template="nFORCE__Template_Heading">
+			<apex:define name="left">
+				<span>{!$Label.llc_bi__loan_approval_history_page}</span>
+			</apex:define>
+		</apex:composition>
+		<apex:composition template="nFORCE__Template_View_1_Column">
+			<apex:define name="column-content">
+				<apex:composition template="nFORCE__Template_View_Container">
+					<apex:define name="content">
+						<div ng-app="ncTreeGrid">
+							<tree-grid
+								template-url="{!$Page.ncTreeGridHtml}"
+								no-records-found-label="{!$Label.No_Records_Approval_History}"
+								get-tree-data-ra="{!$RemoteAction.LoanApprovalHistoryController.getTreeGridData}"
+								perform-tree-action-ra="{!$RemoteAction.LoanApprovalHistoryController.performTreeAction}"
+								context-id="{!Loan__c.Id}"
+								max-depth="1"
+								hide-collapse-expand-icon="true" />
+						</div>
+					</apex:define>
+				</apex:composition>
+			</apex:define>
+		</apex:composition>
+	</div>
+</apex:page>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CONTACT_ID</field>
+    </columns>
+    <columns>
+        <field>CONTACT_OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>Contact.Last_Email_Verified_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Email_Status__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT_LAST_UPDATE_BY</field>
+    </columns>
+    <description>contact Emails last verified date 5/21/2018 or greater</description>
+    <filter>
+        <criteriaItems>
+            <column>CONTACT_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>SFDC1 Placeholder</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Email_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Last_Email_Verified_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>5/21/2018</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Contacts - StrikeIron emails</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

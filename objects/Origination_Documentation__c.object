@@ -1,0 +1,5401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Absorption_Trends__c</fullName>
+        <externalId>false</externalId>
+        <label>Absorption Trends</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Accordion_Option__c</fullName>
+        <externalId>false</externalId>
+        <label>Accordion Option</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advance_Rate_s_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Rate(s), Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Advance_Rate_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Advance Rate(s)</label>
+        <length>10000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advance_on_Appraised_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>% Advance on Appraised Value</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advance_on_Global_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>% Advance on Global Loan Amount</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Appraisal_Diligence_Requirements__c</fullName>
+        <description>Lender Finance only</description>
+        <externalId>false</externalId>
+        <label>Appraisal/Diligence Requirements</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Appraisal_Summary_Highlights__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraisal Summary/Highlights</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>As_Complete_Prospective_Valuation__c</fullName>
+        <externalId>false</externalId>
+        <label>As-Complete/Prospective Valuation</label>
+        <length>7500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>As_Complete_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>As-Complete Value</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>As_Is_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>As-Is Value</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Background_Check_Findings__c</fullName>
+        <externalId>false</externalId>
+        <label>Background Check Findings</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Background_Experience_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Background &amp; Experience - General/Other</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Background_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>Background &amp; Experience</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Background</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Balance_Sheet_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Balance Sheet Analysis</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Base_Case_Static_Wind_Down__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Case Static Wind-Down</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Basic_Collateral_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Basic Collateral Summary</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Accordion_Option__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Accordion Option</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Appraisal_Review__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Appraisal Review</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Appraisal__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Appraisal</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Borrower_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI/Borrower - General/Other</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Closing_Fee_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Closing Fee %</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BofI_Closing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Closing Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BofI_Collateral_Analysis_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Collateral Analysis - Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Conditions_Precedent_to_Closing__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Conditions Precedent to Closing</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Conditions_of_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Conditions of Extension</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Covenants__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Covenants</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Deal_Team__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Deal Team</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Exit_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Exit Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BofI_Extension_Option_s__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Extension Option(s)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Interest_Reserve__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Interest Reserve</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Key_Participation_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Key Participation Terms</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Loan Amount</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BofI_Other_Credit_Enhancements__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Other Credit Enhancements</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Other_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Other Fees</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Outside_Counsel__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Outside Counsel</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Payment_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Payment Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Payment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interest Only</fullName>
+                    <default>false</default>
+                    <label>Interest Only</label>
+                </value>
+                <value>
+                    <fullName>Interest Only with Release Prices</fullName>
+                    <default>false</default>
+                    <label>Interest Only with Release Prices</label>
+                </value>
+                <value>
+                    <fullName>Amortizing (P&amp;I)</fullName>
+                    <default>false</default>
+                    <label>Amortizing (P&amp;I)</label>
+                </value>
+                <value>
+                    <fullName>Fixed Principal plus Interest (P+I)</fullName>
+                    <default>false</default>
+                    <label>Fixed Principal plus Interest (P+I)</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BofI_Post_Funding_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Post-Funding Conditions</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Primary_Exits__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Primary Exits</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Rate_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Rate Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Rate</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BofI_Sources_Uses__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Sources &amp; Uses</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Term</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BofI_Use_of_Proceeds__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Use of Proceeds</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bofi_Exit_Fee_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>BofI Exit Fee %</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Business_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Business Strategy</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Counsel__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Counsel</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Legal_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.CI_Borrower_Legal_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Borrower Legal Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrower_Org_Chart_Vesting_Tree__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Org Chart / Vesting Tree</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Product_Descriptions_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Product Descriptions/Details</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Scorecard__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Scorecard</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Sponsor__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower/Sponsor</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrower_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower, Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Strategy_Feasibility_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrower Strategy Feasibility Analysis</label>
+        <length>7500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrowing_Entity_Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrowing Entity Background</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Borrowing_Entity_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>General/Other BE</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Business_Strategy_Portfolio_Overview__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Strategy &amp; Portfolio Overview</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CAM_1st_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM - 1st Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_2nd_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field was used as part of the 3-step approval process for CAM.  The third step was removed, so this field (and corresponding field updates) is a candidate for removal.</description>
+        <externalId>false</externalId>
+        <label>CAM - 2nd Approval [OLD]</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>CAM Approval</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CAM_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_1_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>CAM_C_I_Signer_1__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CAM C&amp;I Signer 1 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CAM C&amp;I Signer 1</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>contains</operation>
+                <value>C&amp;I</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Origination_Documentation1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_2_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>CAM_C_I_Signer_2__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CAM C&amp;I Signer 2 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CAM C&amp;I Signer 2</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>contains</operation>
+                <value>C&amp;I</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Origination_Documentation2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_3_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>CAM_C_I_Signer_3__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CAM C&amp;I Signer 3 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CAM_C_I_Signer_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CAM C&amp;I Signer 3</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>contains</operation>
+                <value>C&amp;I</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Origination_Documentation3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Fields_Populated_AB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Fields Populated - AB</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Fields_Populated_ALL__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Fields Populated - ALL</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Fields_Populated_BRI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Fields Populated - BRI</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Fields_Populated_GENeral__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Fields Populated - GEN</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAM_Fields_Populated_LF__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CAM Fields Populated - LF</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CI_Rate_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+  ISBLANK(Opportunity_Name__r.CI_Rate__c), 
+  IF(
+    OR(
+      ISPICKVAL(Opportunity_Name__r.CI_Rate_Type__c, &quot;&quot;),
+      ISBLANK(Opportunity_Name__r.CI_Rate_Floor__c)
+    ),
+    &quot;&quot;,
+    TEXT(Opportunity_Name__r.CI_Rate_Type__c) + &quot; or &quot; + TEXT(Opportunity_Name__r.CI_Rate_Floor__c*100) + &quot;%&quot;
+  ),
+  IF(
+    ISPICKVAL(Opportunity_Name__r.CI_Rate_Type__c, &quot;Fixed&quot;),
+    IF(
+      ISBLANK(Opportunity_Name__r.CI_Rate_Floor__c),
+      TEXT(Opportunity_Name__r.CI_Rate__c*100) + &quot;% Fixed&quot;,
+      TEXT(Opportunity_Name__r.CI_Rate__c*100) + &quot;% Fixed or &quot; + TEXT(Opportunity_Name__r.CI_Rate_Floor__c*100) + &quot;%&quot;
+    ),
+    IF(
+      ISPICKVAL(Opportunity_Name__r.CI_Rate_Type__c, &quot;&quot;),
+      TEXT(Opportunity_Name__r.CI_Rate__c*100) + &quot;%&quot;,
+      TEXT(Opportunity_Name__r.CI_Rate__c*100) + &quot;% + &quot; + TEXT(Opportunity_Name__r.CI_Rate_Type__c) +&quot; or &quot;+ TEXT (Opportunity_Name__r.CI_Rate_Floor__c*100)+&quot;%&quot;
+    )
+  )
+)</formula>
+        <label>Rate Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CI_Rate__c</fullName>
+        <description>Populates &apos;Rate&apos; on Origination Documentation.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity_Name__r.CI_Rate__c *100)+ &quot;%&quot;</formula>
+        <label>Rate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cash_Dominion__c</fullName>
+        <externalId>false</externalId>
+        <label>Cash Dominion</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cash_Flow_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Cash Flow Analysis</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cash_Flow_Diagram__c</fullName>
+        <externalId>false</externalId>
+        <label>Cash Flow Diagram</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cash_Flow_Waterfall__c</fullName>
+        <externalId>false</externalId>
+        <label>Cash Flow Waterfall</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Closing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Fee %</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Fee_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Fee(s)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Collateral_Address_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Address City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collateral_Address_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Address State</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collateral_Address_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Address Street</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collateral_Address_Zip_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Address Zip/Postal Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collateral_Analysis_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Analysis - General/Other</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Analysis</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral_Custodian__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Custodian</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Description</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral_Diversity__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Diversity</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral, Standard Language</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collateral__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Collection_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Collection Account</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Background__c</fullName>
+        <description>Lender Finance only</description>
+        <externalId>false</externalId>
+        <label>Company Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conditions_Precedent_to_Closing__c</fullName>
+        <externalId>false</externalId>
+        <label>Conditions Precedent to Closing</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Conditions_of_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Conditions of Extension</label>
+        <length>750</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Name__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Origination Documentation</relationshipLabel>
+        <relationshipName>Origination_Documentation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Corporate_Legal_Loan_Diagrams__c</fullName>
+        <externalId>false</externalId>
+        <label>Corporate/Legal/Loan Diagrams</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Corporate_Org_Chart__c</fullName>
+        <externalId>false</externalId>
+        <label>Corporate Org Chart</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Covenant_Monitoring_Reporting__c</fullName>
+        <externalId>false</externalId>
+        <label>Covenant Monitoring &amp; Reporting</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Covenants__c</fullName>
+        <externalId>false</externalId>
+        <label>Covenants</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Credit_Report_Findings__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Report Findings</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_Volumes_Performance_Metrics__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Volumes, Performance, &amp; Metrics</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Deal_Specific_Operations__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal-Specific Operations</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Deal_Sponsor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deal Sponsor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Origination Documentation (Deal Sponsor)</relationshipLabel>
+        <relationshipName>Origination_Documentation1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Strengths__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Strengths</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Deal_Thesis__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Thesis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Default_Rate_of_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Rate of Interest</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_of_Parties_Involved__c</fullName>
+        <externalId>false</externalId>
+        <label>Description of Parties Involved</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Detailed_Collateral_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Detailed Collateral Description</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Draw_Requests__c</fullName>
+        <externalId>false</externalId>
+        <label>Draw Requests</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Diligence_Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Diligence Deposit</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Due_Diligence__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Diligence</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Economic_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Economic Conditions</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria, Standard Language</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligibility Criteria</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Entity_Structure_and_Other_Assets_Held__c</fullName>
+        <externalId>false</externalId>
+        <label>Entity Structure and Other Assets Held</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Events_of_Default__c</fullName>
+        <externalId>false</externalId>
+        <label>Events of Default</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Executive_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Executive Summary</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Existing_Client__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity_Name__r.CI_Existing_Client__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Existing Client</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exit_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Fee %</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Exit_Fee_s__c</fullName>
+        <description>Bridge only</description>
+        <externalId>false</externalId>
+        <label>Exit Fee(s)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exit_Strategies__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Strategies</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exit_Strategy_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Strategy 1</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exit_Strategy_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Strategy 2</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exit_Strategy_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Strategy 3</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exit_Strategy_Feasibility_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Strategy Feasibility Analysis</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Extension_Option_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Extension Option(s)</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Feasibility_Analysis_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Feasibility Analysis 1</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Feasibility_Analysis_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Feasibility Analysis 2</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Feasibility_Analysis_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Feasibility Analysis 3</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Financial_Analysis_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Analysis - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Financial_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Analysis</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Financial_Portfolio_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial &amp; Portfolio Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Financial_Reporting_Requirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Reporting Requirements</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Foreign_Offshore_Entities_20_Found__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If Foreign Offshore Entities, were beneficial owners (20%+) identified?</inlineHelpText>
+        <label>Foreign Offshore Entities - 20%+ Found?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Global_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Loan Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Global_Sources_Uses__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Sources &amp; Uses</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guarantor_Type_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Guarantor Type(s)</label>
+        <length>1500</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guarantor_s_Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Guarantor(s) Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guarantor_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Guarantor(s)</label>
+        <length>1500</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guarantors_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Guarantors - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guideline_Exceptions__c</fullName>
+        <externalId>false</externalId>
+        <label>Guideline Exceptions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Historic_Volumes_Performance_Metrics__c</fullName>
+        <externalId>false</externalId>
+        <label>Historic Volumes, Performance, &amp; Metrics</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>If_Foreign_Nationals_NRA_approved_by_BS__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If Foreign Nationals/NRA, approved by BSA Compliance</inlineHelpText>
+        <label>Foreign Nationals/NRA, BSA Approval?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>If_Match_cleared_by_BSA_Compliance__c</fullName>
+        <externalId>false</externalId>
+        <label>If Match, cleared by BSA Compliance?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Income_Statement_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Income Statement Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Industry_Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry/Market</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate, Standard Language</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Interest_Reserve__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Reserve</label>
+        <length>300</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Junior_Participant_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Junior Participant - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Junior_Participant_Release_Event__c</fullName>
+        <externalId>false</externalId>
+        <label>Junior Participant Release Event</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Key_Principals__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Principals</label>
+        <length>7500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Key_Strengths_Risks_Weaknesses__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Strengths/Risks/Weaknesses</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LOI_C_I_Signer_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>LOI_C_I_Signer__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LOI C&amp;I Signer Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LOI_C_I_Signer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>LOI C&amp;I Signer</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>contains</operation>
+                <value>C&amp;I</value>
+            </filterItems>
+            <filterItems>
+                <field>User.LastName</field>
+                <operation>contains</operation>
+                <value>Constantine</value>
+            </filterItems>
+            <filterItems>
+                <field>User.LastName</field>
+                <operation>contains</operation>
+                <value>Garrabrants</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Origination_Documentation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LTC_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>LTC Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LTV_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>LTV Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LTV_LTC__c</fullName>
+        <externalId>false</externalId>
+        <label>LTV/LTC</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legal_Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Deposit</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Opinions__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Opinion</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legal_Org_Chart__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Org Chart</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Licenses_Held_States_of_Operation__c</fullName>
+        <externalId>false</externalId>
+        <label>Licenses Held &amp; States of Operation</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Amount, Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Fee_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Loan_Amount__c &gt; 0, Closing_Fee_s__c / Loan_Amount__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Loan Fee %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Legal_Structure_Org_Chart__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan/Legal Structure Org Chart</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Loan_Purpose_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Purpose, Standard Language</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Loan_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Purpose</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Structure__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Structure</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Multi Draw Term</fullName>
+                    <default>false</default>
+                    <label>Multi Draw Term</label>
+                </value>
+                <value>
+                    <fullName>Revolving</fullName>
+                    <default>false</default>
+                    <label>Revolving</label>
+                </value>
+                <value>
+                    <fullName>Term</fullName>
+                    <default>false</default>
+                    <label>Term</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Loan_Tape_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Tape Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Location_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(LEN(Opportunity_Name__r.Account.BillingStreet )&gt;0, Opportunity_Name__r.Account.BillingStreet&amp; &quot; &quot; , &quot;&quot; ) &amp; BR() &amp; 
+if(LEN(Opportunity_Name__r.Account.BillingCity)&gt;0, Opportunity_Name__r.Account.BillingCity&amp; &quot;, &quot; , &quot;&quot; )&amp; 
+if(LEN(Opportunity_Name__r.Account.BillingState)&gt;0, Opportunity_Name__r.Account.BillingState&amp; &quot; &quot; , &quot;&quot; )&amp; 
+if(LEN(Opportunity_Name__r.Account.BillingPostalCode)&gt;0, Opportunity_Name__r.Account.BillingPostalCode,&quot;&quot;) &amp; BR() &amp; 
+If(LEN(Opportunity_Name__r.Account.BillingCountry) &gt;0, Opportunity_Name__r.Account.BillingCountry,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location/Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(LEN(Contact_Name__r.MailingStreet )&gt;0, Contact_Name__r.MailingStreet&amp; &quot; &quot; , &quot;&quot; ) &amp; BR() &amp;
+if(LEN(Contact_Name__r.MailingCity)&gt;0, Contact_Name__r.MailingCity&amp; &quot;, &quot; , &quot;&quot; )&amp;
+if(LEN(Contact_Name__r.MailingState)&gt;0, Contact_Name__r.MailingState&amp; &quot; &quot; , &quot;&quot; )&amp;
+if(LEN(Contact_Name__r.MailingPostalCode)&gt;0, Contact_Name__r.MailingPostalCode,&quot;&quot;) &amp; BR() &amp;
+If(LEN(Contact_Name__r.MailingCountry) &gt;0, Contact_Name__r.MailingCountry,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mailing Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Management_Background_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>Management Background/Experience</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Mandatory_Prepayments__c</fullName>
+        <externalId>false</externalId>
+        <label>Mandatory Prepayments</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Max_LTC__c</fullName>
+        <externalId>false</externalId>
+        <label>Max LTC</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Max_LTV__c</fullName>
+        <externalId>false</externalId>
+        <label>Max LTV</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Misc_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Misc - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Monitoring_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Monitoring Plan</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Monitoring_Reporting_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Monitoring &amp; Reporting – Other</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NAICS_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.CI_NAICS_Index__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NAICS Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Business_Sources__c</fullName>
+        <externalId>false</externalId>
+        <label>New Business Sources</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OFAC_Results_for_All_Entities__c</fullName>
+        <externalId>false</externalId>
+        <label>OFAC Results for All Entities</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Match</fullName>
+                    <default>false</default>
+                    <label>No Match</label>
+                </value>
+                <value>
+                    <fullName>Match</fullName>
+                    <default>false</default>
+                    <label>Match</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Origination Documentation</relationshipLabel>
+        <relationshipName>Origination_Documentation</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Overview_Property_Backgrou__c</fullName>
+        <description>Bridge &amp; General only</description>
+        <externalId>false</externalId>
+        <label>Oppty Overview &amp; Property Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Overview__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Overview</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Org_URL__c</fullName>
+        <description>Captures the current instance&apos;s URL for use in email templates</description>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Enterprise_Server_URL_330,FIND(&apos;.com&apos;,$Api.Enterprise_Server_URL_330)+3)</formula>
+        <label>Org URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Charts_Vesting_Trees__c</fullName>
+        <externalId>false</externalId>
+        <label>Organization Charts (Vesting Trees)</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Organizational_Charts_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Organizational Charts - General/Other</label>
+        <length>15000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Origination_Assignment_Diagram__c</fullName>
+        <externalId>false</externalId>
+        <label>Origination/Assignment Diagram</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Origination_Process__c</fullName>
+        <externalId>false</externalId>
+        <label>Origination Process</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Advance_Rates__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Advance Rates</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_BCA__c</fullName>
+        <externalId>false</externalId>
+        <label>Other BCA</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Conditions</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Credit_Enhancements__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Credit Enhancements</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Fee_s_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Fee(s), Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Other_Fee_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Fee(s)</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_LOI_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Other LOI Conditions</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Market_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Market Conditions</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Marktet_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Conditions Other</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_PMR__c</fullName>
+        <externalId>false</externalId>
+        <label>Other PMR</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_P_G__c</fullName>
+        <externalId>false</externalId>
+        <label>Other P&amp;G</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Reporting_Requirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Reporting Requirements</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Terms_Conditions_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Terms/Conditions,Standard Language</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Terms_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Terms/Conditions</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Terms</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other_Third_Parties__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Third Parties</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Other</label>
+        <length>3500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PFS_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>PFS Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PIC_1st_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PIC - 1st Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PIC_2nd_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PIC - 2nd Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PIC_Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>PIC Approval</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PIC_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PIC Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PIC_Fields_Populated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PIC Fields Populated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Origination Documentation</relationshipLabel>
+        <relationshipName>Origination_Documentation</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Participant_s_Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Participant(s) Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Participant_s_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Participant(s) Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Participant_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Participant(s)</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Participating_Lender_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Lender, Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Participating_Lenders__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Lenders</label>
+        <length>300</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Participations_and_Assignments__c</fullName>
+        <externalId>false</externalId>
+        <label>Participations and Assignments</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Payment_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interest Only</fullName>
+                    <default>false</default>
+                    <label>Interest Only</label>
+                </value>
+                <value>
+                    <fullName>Interest Only with Release Prices</fullName>
+                    <default>false</default>
+                    <label>Interest Only with Release Prices</label>
+                </value>
+                <value>
+                    <fullName>Amortizing (P&amp;I)</fullName>
+                    <default>false</default>
+                    <label>Amortizing (P&amp;I)</label>
+                </value>
+                <value>
+                    <fullName>Fixed Principal plus Interest (P+I)</fullName>
+                    <default>false</default>
+                    <label>Fixed Principal plus Interest (P+I)</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Per_Capita_Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Per Capita Income</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pictures_Attachments__c</fullName>
+        <externalId>false</externalId>
+        <label>Pictures/Attachments</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Policy_Exceptions__c</fullName>
+        <externalId>false</externalId>
+        <label>Policy Exceptions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Population_Growth__c</fullName>
+        <externalId>false</externalId>
+        <label>Population Growth</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Monitoring__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio Monitoring</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Overview_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio Overview - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Post_Close_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Post-Close Conditions</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Post_Funding_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Post-Funding Conditions</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Post_Funding_Monitoring_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Post-Funding Monitoring Other</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pre_Close_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre-Close Conditions</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prepayment_Penalty_Exit_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Penalty/Exit Fee</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Prepayment_Penalty_Standard_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Penalty, Standard Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Prepayment_Penalty__c</fullName>
+        <description>Lender Finance only</description>
+        <externalId>false</externalId>
+        <label>Prepayment Penalty</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Trends__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Trends</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Business_Activity_ies__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Business Activity(ies)</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Exit_Strategies__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Exit Strategies</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Guarantor_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.CI_Primary_Guarantor_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Guarantor Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Principal_s_Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Principal(s) Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Principal_s_Bio_s_Resume_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Principal(s) Bio(s) / Resume(s)</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Principal_s_Guarantor_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Principal(s) &amp; Guarantor(s)</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Principals_Guarantors_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Principals/Guarantors - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity_Name__r.CI_Product_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Background__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Projected_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.CI_Projected_Close_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Projected Closing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Projection_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Projection Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_Description_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Description - General/Other</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_History__c</fullName>
+        <externalId>false</externalId>
+        <label>Property History</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Summary</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Purpose_of_Funds_Request_Rationale__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose of Funds/Request Rationale</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Purpose_of_Underlying_Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose of Underlying Loan</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rating_Matrix__c</fullName>
+        <externalId>false</externalId>
+        <label>Rating Matrix</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Financing__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Financing</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Recommendation__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommendation</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Record_Type_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordTypeId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Type ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Exposure__c</fullName>
+        <description>This field should only have a value if the Existing Client field = Yes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field should only have a value if the Existing Client field = Yes</inlineHelpText>
+        <label>Related Exposure</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Release_Price_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Release Price Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Relevant_Negative_Media_Found__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Internet, Google Results, Yahoo, etc.</inlineHelpText>
+        <label>Relevant Negative Media Found</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renewal_Modification_ReWrite_Policy__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal/Modification/ReWrite Policy</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Repayment_Exit_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Repayment/Exit Strategy</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reporting_Requirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Reporting Requirements</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Repurchase_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Repurchase Price</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Repurchase_Requirement__c</fullName>
+        <externalId>false</externalId>
+        <label>Repurchase Requirement</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Requirements_for_Project_Financing_Exit__c</fullName>
+        <externalId>false</externalId>
+        <label>Requirements for Project/Financing Exit</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reserves_Write_offs__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserves &amp; Write-offs</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resume__c</fullName>
+        <externalId>false</externalId>
+        <label>Resume</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risk_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Rating</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1 – High Pass</fullName>
+                    <default>false</default>
+                    <label>1 – High Pass</label>
+                </value>
+                <value>
+                    <fullName>2 – Pass</fullName>
+                    <default>false</default>
+                    <label>2 – Pass</label>
+                </value>
+                <value>
+                    <fullName>3 – Pass</fullName>
+                    <default>false</default>
+                    <label>3 – Pass</label>
+                </value>
+                <value>
+                    <fullName>4 – Low Pass</fullName>
+                    <default>false</default>
+                    <label>4 – Low Pass</label>
+                </value>
+                <value>
+                    <fullName>5 – Special Mention</fullName>
+                    <default>false</default>
+                    <label>5 – Special Mention</label>
+                </value>
+                <value>
+                    <fullName>6 – Sub Standard</fullName>
+                    <default>false</default>
+                    <label>6 – Sub Standard</label>
+                </value>
+                <value>
+                    <fullName>7 – Sub Standard, Non-Accrual</fullName>
+                    <default>false</default>
+                    <label>7 – Sub Standard, Non-Accrual</label>
+                </value>
+                <value>
+                    <fullName>8 – Doubtful</fullName>
+                    <default>false</default>
+                    <label>8 – Doubtful</label>
+                </value>
+                <value>
+                    <fullName>9 – Loss</fullName>
+                    <default>false</default>
+                    <label>9 – Loss</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Risks_Mitigants__c</fullName>
+        <externalId>false</externalId>
+        <label>Risks &amp; Mitigants</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Servicing_Servicer__c</fullName>
+        <externalId>false</externalId>
+        <label>Servicing/Servicer</label>
+        <length>750</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Servicing__c</fullName>
+        <externalId>false</externalId>
+        <label>Servicing</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sources_Uses_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Sources &amp; Uses - General/Other</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sources_Uses__c</fullName>
+        <externalId>false</externalId>
+        <label>Sources &amp; Uses</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sources_of_Repayment__c</fullName>
+        <externalId>false</externalId>
+        <label>Sources of Repayment</label>
+        <length>1000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sponsor_s_Background__c</fullName>
+        <description>Lender Finance only</description>
+        <externalId>false</externalId>
+        <label>Sponsor(s) Background</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strategy_Overview_and_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Strategy Overview and Summary</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths_Weaknesses_Mitigants__c</fullName>
+        <externalId>false</externalId>
+        <label>Strengths, Weaknesses &amp; Mitigants</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Stress_Case_Static_Wind_Down__c</fullName>
+        <externalId>false</externalId>
+        <label>Stress Case Static Wind-Down</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Summarize_Negative_Media_Findings__c</fullName>
+        <externalId>false</externalId>
+        <label>Summarize Negative Media Findings</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Summary_Financial_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Summary Financial Analysis</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Summary_of_Development_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>Summary of Development Experience</label>
+        <length>7500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Term</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Background_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Background - General/Other</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Transaction_Overview_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Overview - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Transaction_Overview_Loan_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Overview - Loan Purpose</label>
+        <length>10000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Transaction_Recap__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Recap</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Transaction_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Summary</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Trends_Ratios__c</fullName>
+        <externalId>false</externalId>
+        <label>Trends &amp; Ratios</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underlying_Borrower_General_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Underlying Borrower - General/Other</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underlying_Borrower_Profile__c</fullName>
+        <externalId>false</externalId>
+        <label>Underlying Borrower Profile</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underlying_Loan_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Underlying Loan Terms</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Standards_and_Process__c</fullName>
+        <externalId>false</externalId>
+        <label>Underwriting Standards and Process</label>
+        <length>7500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Use_of_Proceeds__c</fullName>
+        <externalId>false</externalId>
+        <label>Use of Proceeds</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Uses_of_Funds__c</fullName>
+        <externalId>false</externalId>
+        <label>Uses of Funds</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Wind_Down_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Wind Down Period</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <label>Origination Documentation</label>
+    <nameField>
+        <displayFormat>ORG-{0000000}</displayFormat>
+        <label>Origination Documentation ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Origination Documentation</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CAM_AB_Participation</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - AB Participation CAMs.</description>
+        <label>CAM - AB Participation</label>
+        <picklistValues>
+            <picklist>BofI_Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CAM_Bridge</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Bridge CAMs.</description>
+        <label>CAM - Bridge</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CAM_General</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - General CAMs.</description>
+        <label>CAM - General</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CAM_Lender_Finance</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Lender Finance CAMs.</description>
+        <label>CAM - Lender Finance</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LOI_AB_Participation</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - AB Participation LOIs.</description>
+        <label>LOI - AB Participation</label>
+        <picklistValues>
+            <picklist>BofI_Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LOI_Bridge</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Bridge LOIs.</description>
+        <label>LOI - Bridge</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LOI_General</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - General LOIs.</description>
+        <label>LOI - General</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LOI_Lender_Finance</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Lender Finance LOIs.</description>
+        <label>LOI - Lender Finance</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PIC_AB_Participation</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - AB Participation PICs.</description>
+        <label>PIC - AB Participation</label>
+        <picklistValues>
+            <picklist>BofI_Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PIC_Bridge</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Bridge PICs.</description>
+        <label>PIC - Bridge</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PIC_General</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - General PICs.</description>
+        <label>PIC - General</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PIC_Lender_Finance</fullName>
+        <active>true</active>
+        <description>Use this record type for C&amp;I - Lender Finance PICs.</description>
+        <label>PIC - Lender Finance</label>
+        <picklistValues>
+            <picklist>Foreign_Offshore_Entities_20_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Foreign_Nationals_NRA_approved_by_BS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>If_Match_cleared_by_BSA_Compliance__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OFAC_Results_for_All_Entities__c</picklist>
+            <values>
+                <fullName>Match</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Match</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment__c</picklist>
+            <values>
+                <fullName>Amortizing %28P%26I%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Principal plus Interest %28P%2BI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest Only with Release Prices</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relevant_Negative_Media_Found__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Rating__c</picklist>
+            <values>
+                <fullName>1 %E2%80%93 High Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 %E2%80%93 Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 %E2%80%93 Low Pass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 %E2%80%93 Special Mention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 %E2%80%93 Sub Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7 %E2%80%93 Sub Standard%2C Non-Accrual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8 %E2%80%93 Doubtful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 %E2%80%93 Loss</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LOI_Loan_Amount_Greater_PIC_Loan_Amount</fullName>
+        <active>true</active>
+        <description>Does not allow the user to save the LOI record if the LOI Loan Amount is greater than the PIC Loan Amount.</description>
+        <errorConditionFormula>Loan_Amount__c &gt;  Opportunity_Name__r.CI_PIC_Loan_Amount__c &amp;&amp;
+( RecordType.Name = &quot;LOI - AB Participation&quot; ||
+RecordType.Name = &quot;LOI - Bridge&quot; ||
+RecordType.Name = &quot;LOI - General&quot; ||
+RecordType.Name = &quot;LOI - Lender Finance&quot; )</errorConditionFormula>
+        <errorDisplayField>Loan_Amount__c</errorDisplayField>
+        <errorMessage>You cannot save this LOI record if the Loan Amount is greater than the PIC Loan Amount.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Generate_CAM_Document</fullName>
+        <availability>online</availability>
+        <description>Generates the CAM document.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Generate CAM Document</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Origination_Documentation__c.Id}
+&amp;QueryID=a0ui00000085hap
+&amp;DefaultPDF=1
+&amp;SC0=1
+&amp;SC1=Attachments
+&amp;OFN={!Origination_Documentation__c.Opportunity_Name__c}+-+&quot;CAM Document&quot;
+&amp;TemplateGroup={!&quot;C&amp;I - CAM&quot;}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_LOI_Document</fullName>
+        <availability>online</availability>
+        <description>Generates the LOI document.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Generate LOI Document</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Origination_Documentation__c.Id}
+&amp;QueryID=a0ui00000085hap
+&amp;DefaultPDF=1
+&amp;SC0=1
+&amp;SC1=Attachments
+&amp;OFN={!Origination_Documentation__c.Opportunity_Name__c}+-+&quot;LOI Document&quot;
+&amp;TemplateGroup={!&quot;C&amp;I - LOI&quot;}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_PIC_Document</fullName>
+        <availability>online</availability>
+        <description>Generates the PIC document.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Generate PIC Document</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_80}
+&amp;id={!Origination_Documentation__c.Id}
+&amp;QueryID=a0ui00000085hap
+&amp;DefaultPDF=1
+&amp;SC0=1
+&amp;SC1=Attachments
+&amp;OFN={!Origination_Documentation__c.Opportunity_Name__c}+-+&quot;PIC Document&quot;
+&amp;TemplateGroup={!&quot;C&amp;I - PIC&quot;}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_PIC</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New PIC</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a13/e?
+&amp;RecordType=
+{!CASE(
+	Opportunity.RecordTypeId,
+	&quot;012i0000001AcD9&quot;,
+	&quot;012i0000001AcDL&quot;,
+	&quot;012i0000001AcDA&quot;,
+	&quot;012i0000001AcDM&quot;,
+	&quot;012i0000001AcDB&quot;,
+	&quot;012i0000001AcDN&quot;,
+	&quot;012i0000001AcDC&quot;,
+	&quot;012i0000001AcDO&quot;,
+	&quot;&quot;
+)}
+&amp;CF00Ni000000G4isH_lkid={!Opportunity.Id}
+&amp;CF00Ni000000G4isH={!Opportunity.Name}
+&amp;retURL=%2F{!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Next_Stage</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Next Stage</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>// Initialize variables.
+var odId = &quot;{!Origination_Documentation__c.Id}&quot;;
+var rtId = &quot;{!Origination_Documentation__c.RecordTypeId}&quot;;
+var loanNumber = &quot;{!Opportunity.CI_Loan_Number__c}&quot;;
+var redirectURL = window.location;
+var picIds = &quot;012i0000001AcDL|012i0000001AcDM|012i0000001AcDN|012i0000001AcDO&quot;;
+var loiIds = &quot;012i0000001AcDH|012i0000001AcDI|012i0000001AcDJ|012i0000001AcDK&quot;;
+var isPICApproved = {!Origination_Documentation__c.PIC_Approved__c}; 
+var rtIdNew = &quot;{!CASE(
+					Origination_Documentation__c.RecordTypeId,
+					&quot;012i0000001AcDL&quot;,
+					&quot;012i0000001AcDH&quot;,
+					&quot;012i0000001AcDH&quot;,
+					&quot;012i0000001AcDD&quot;,
+					&quot;012i0000001AcDM&quot;,
+					&quot;012i0000001AcDI&quot;,
+					&quot;012i0000001AcDI&quot;,
+					&quot;012i0000001AcDE&quot;,
+					&quot;012i0000001AcDN&quot;,
+					&quot;012i0000001AcDJ&quot;,
+					&quot;012i0000001AcDJ&quot;,
+					&quot;012i0000001AcDF&quot;,
+					&quot;012i0000001AcDO&quot;,
+					&quot;012i0000001AcDK&quot;,
+					&quot;012i0000001AcDK&quot;,
+					&quot;012i0000001AcDG&quot;,
+					Origination_Documentation__c.RecordTypeId
+				)}&quot;;
+
+// If the record is LOI and if the Loan Number value is empty,
+// Display an error.
+if( loiIds.indexOf( rtId ) &gt;= 0 &amp;&amp; !loanNumber ) {
+	alert( &quot;You cannot create a CAM record if the Opportunity Loan Number is blank.&quot; );
+} else if( picIds.indexOf( rtId ) &gt;= 0 &amp;&amp; !isPICApproved ) {
+	alert( &quot;You cannot create a LOI record if the PIC is not approved.&quot; );
+} else {
+	redirectURL = &quot;/&quot; + odId + &quot;/e?clone=1&quot;;
+	redirectURL += &quot;&amp;RecordType=&quot; + rtIdNew;
+	redirectURL += &quot;&amp;retURL=%2F&quot; + odId;
+}
+
+// Redirect the page.
+window.location = redirectURL;
+
+/*
+012i0000001AcDL = PIC - AB Participation
+012i0000001AcDH = LOI - AB Participation
+012i0000001AcDD = CAM - AB Participation
+
+012i0000001AcDM = PIC - Bridge
+012i0000001AcDI = LOI - Bridge
+012i0000001AcDE = CAM - Bridge
+
+012i0000001AcDN = PIC - General
+012i0000001AcDJ = LOI - General
+012i0000001AcDF = CAM - General
+
+012i0000001AcDO = PIC - Lender Finance
+012i0000001AcDK = LOI - Lender Finance
+012i0000001AcDG = CAM - Lender Finance
+*/</url>
+    </webLinks>
+</CustomObject>

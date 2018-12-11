@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>A set of key-value pairs that can be used to set organization-wide parameters</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>nFORCE__Category_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates the category to which the system property belongs.</description>
+        <externalId>false</externalId>
+        <label>Category Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. It is manually populated. It describes the system property in more depth.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the custom setting implemented in order to describe the Category and System Property.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Institution_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field contains the Institution ID for custom settings that apply to a specific institution. If the custom setting does not relate to institution configuration, leave this field blank. Manually populate this field with the institution ID to associate the custom setting with that institution. The custom setting cloning script documented in Customer Engagement Solution configuration documentation autopopulates Institution ID when appropriate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Leave blank if custom setting does not apply to a specific institution. If custom setting applies to a specific institution, manually populate with Institution ID If not already autopopulated.</inlineHelpText>
+        <label>Institution ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates if the system property is active. If the system property is not active it will not be used.</description>
+        <externalId>false</externalId>
+        <label>Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Key__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. The combination of the category and the key is used to uniquely identify the system property.</description>
+        <externalId>false</externalId>
+        <label>Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is required. It indicates the value of the system property. The field controls the behaviour of the application.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Is_Encrypted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A required field that indicates if the system property value is encrypted; its default is false.</description>
+        <externalId>false</externalId>
+        <label>Is Encrypted</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFUSE__Value_Data_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A required field that indicates the system property value&apos;s data type; its default is String.</description>
+        <externalId>false</externalId>
+        <label>Value Data Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>System Properties</label>
+    <visibility>Public</visibility>
+</CustomObject>

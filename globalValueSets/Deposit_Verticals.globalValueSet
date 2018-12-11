@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1031</fullName>
+        <default>false</default>
+        <label>1031</label>
+    </customValue>
+    <customValue>
+        <fullName>Public Sector</fullName>
+        <default>false</default>
+        <label>Public Sector</label>
+    </customValue>
+    <customValue>
+        <fullName>TPPP</fullName>
+        <default>false</default>
+        <label>TPPP</label>
+    </customValue>
+    <customValue>
+        <fullName>HOA</fullName>
+        <default>false</default>
+        <label>HOA</label>
+    </customValue>
+    <customValue>
+        <fullName>Class Action</fullName>
+        <default>false</default>
+        <label>Class Action</label>
+    </customValue>
+    <customValue>
+        <fullName>Escrow/Title</fullName>
+        <default>false</default>
+        <label>Escrow/Title</label>
+    </customValue>
+    <customValue>
+        <fullName>IRA Pension/Trust</fullName>
+        <default>false</default>
+        <label>IRA Pension/Trust</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Profit/Religious</fullName>
+        <default>false</default>
+        <label>Non-Profit/Religious</label>
+    </customValue>
+    <customValue>
+        <fullName>EB-5</fullName>
+        <default>false</default>
+        <label>EB-5</label>
+    </customValue>
+    <customValue>
+        <fullName>Fintech</fullName>
+        <default>false</default>
+        <label>Fintech</label>
+    </customValue>
+    <customValue>
+        <fullName>Fiduciary</fullName>
+        <default>false</default>
+        <label>Fiduciary</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Referral</fullName>
+        <default>false</default>
+        <label>Commercial Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Captive Insurance</fullName>
+        <default>false</default>
+        <label>Captive Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Deposit Verticals</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

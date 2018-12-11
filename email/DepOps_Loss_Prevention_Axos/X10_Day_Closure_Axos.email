@@ -1,0 +1,40 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span></p><p><font face="Times New Roman">
+
+<br><span style="font-size: 12pt;"><font face="arial"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">In accordance with your Deposit Account Agreement with Axos Bank™,
+please be advised that we have elected to close your accounts.</span></font></span></font></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><font face="arial"><font face="Times New Roman">
+
+<br><font face="arial"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">All related services will be terminated in 3 business days, and
+the effective date of the closing will be 10 business days from the date of
+this email.</span></font></font></font></font></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><font face="arial"><font face="Times New Roman">
+
+<font face="Times New Roman"><font face="arial"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">We suggest you&nbsp;cease making deposits to, and writing checks
+against, your account at this time. After all outstanding items have cleared; a
+check payable to the current account&nbsp;holder(s)&nbsp;in the amount
+of&nbsp;any remaining balance (less any outstanding fees, service or other
+charges) will be sent to your mailing address on file.</span></font></font></font></font></font></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><font face="arial"><font face="Times New Roman">
+
+<font face="Times New Roman"><font face="arial"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">Please make other arrangements for any automated transactions such
+as direct deposits and prearranged ACH credits and debits.</span></font></font></font></font></font></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><font face="arial"><font face="Times New Roman">
+
+<font face="Times New Roman"><font face="arial"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">Do not
+hesitate to contact us if you have any questions concerning this letter.<br>
+<br>
+<br>
+Best Regards,<br>
+<br>
+Axos&nbsp;Bank Customer Service</span></font></font></font></font></font></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><font face="arial"><font face="Times New Roman">
+
+</font><br></font></font></p><p></p><p style="margin-bottom: 12pt;"><font face="Times New Roman"><br></font></p><p></p><p style="margin-bottom: 12pt;"><br></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

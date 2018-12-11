@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>What are my Debit/ATM card limits? (BofI, Advisor, UFB and Bank X):</name>
+    <style>formalLetter</style>
+    <subject>What are my Debit/ATM card limits? (BofI, Advisor, UFB and Bank X):</subject>
+    <textOnly>The daily limits for ATM/Debit cards are:
+
+
+- Cash withdrawal from an ATM using an ATM card - $1010.00
+- Cash withdrawal from an ATM using a Visa® Debit card - $1010.00
+- Point-of-sale transaction using your Visa® Debit card - $2,500.00
+
+
+We appreciate your business and commit to providing superior Banking products, support and services.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

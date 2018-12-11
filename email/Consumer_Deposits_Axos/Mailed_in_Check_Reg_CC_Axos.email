@@ -1,0 +1,23 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>A mailed in check deposit is available as follows:<br></font></p><ul style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif" style="">The first
+$200 from a deposit of checks will be available on the first business day after
+the day of your deposit.&nbsp;</font></li><li><font face="Arial, sans-serif" style="">The remaining funds from a deposit of checks will be
+available on the second business day after the day of your deposit.&nbsp;</font></li></ul><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);">For
+example, if you deposit a check of $700 on Monday, $200 of the deposit is
+available on Tuesday. The remaining $500 is available on Wednesday.<br><br>If we are going to take longer to make all of the funds from
+these types of deposits available as disclosed above, we will notify you by
+mail or e-mail within one business day after we receive your deposit. We will
+also tell you when the funds will be available.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font style="">Axos Bank</font><font color="#ff0000" style="color: rgb(0, 0, 0);">&nbsp;</font>Customer Service</font><p style="color: rgb(0, 0, 0);"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

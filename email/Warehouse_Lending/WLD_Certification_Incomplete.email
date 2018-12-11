@@ -1,0 +1,9 @@
+WLD,
+
+Credit has reviewed the submitted package for {!WLD_Credit_Review__c.Account_Name__c} and found it to be incomplete.  Please review the missing documents and resubmit when complete.
+
+If you believe this was sent in error, please contact WLD Operations: {!WLD_Credit_Review__c.OwnerFullName} ({!WLD_Credit_Review__c.OwnerEmail}). 
+
+Thank you,
+
+Credit

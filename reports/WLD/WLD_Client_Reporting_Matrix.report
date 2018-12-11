@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.MRA_Exhibit_B_and_All_Schedules__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.MRA_Schedule_1_Financial_Covenants__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.Unaudited_P_L_for_the_Quarter__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.Unaudited_Balance_Sheet_YTD__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.Investor_Scorecards__c</field>
+    </columns>
+    <columns>
+        <field>WLD_Certification__c.Quality_Control_Reports__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>WLD - Client Reporting Matrix</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$WLD_Certification__c@WLD_Certification__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

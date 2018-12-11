@@ -1,0 +1,10 @@
+A new Customer Feedback case has been created. You can access this case here: {!Case.Link}
+
+Feedback Business Unit: {!Case.Feedback_Business_Unit__c}
+
+Feedback Type: {!Case.Feedback_Type__c}
+
+Description: {!Case.Description}
+
+
+...

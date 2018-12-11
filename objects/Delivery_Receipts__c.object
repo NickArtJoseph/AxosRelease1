@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>InDevelopment</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Message_Id__c</fullName>
+        <description>mGage-assigned message ID that is given to a message when the MT send request
+is received from your external system. It maps the message status to the original</description>
+        <externalId>true</externalId>
+        <label>Message Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Message_Subid__c</fullName>
+        <description>If the message is split because it’s longer than 160 characters, it will result in more than one status notification. The status notification for the first part of the message (or if the message is 160 characters or less, it will be for the entire message) will have a message_subid of 0. The second part of the message will have a subid of 1, the third of 2, etc.</description>
+        <externalId>true</externalId>
+        <label>Message Subid</label>
+        <length>160</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>carrier_SFDC2__c</fullName>
+        <description>Carrier from which the subscriber MO originated.</description>
+        <externalId>false</externalId>
+        <label>carrier</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>channel_SFDC2__c</fullName>
+        <description>Channel used for message delivery, such as SMS, WAP Push, MMS, or voice.</description>
+        <externalId>false</externalId>
+        <label>channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>WAP Push</fullName>
+                    <default>false</default>
+                    <label>WAP Push</label>
+                </value>
+                <value>
+                    <fullName>MMS</fullName>
+                    <default>false</default>
+                    <label>MMS</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>client_message_id__c</fullName>
+        <description>(not used with Connect Messaging API)</description>
+        <externalId>false</externalId>
+        <label>Client MessageId</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>date_format__c</fullName>
+        <description>Indicates the format of the timestamp of the update_date parameter. For example,
+a date_format of MM/dd/yyyy HH:mm:ss,SSS would indicate that the timestamp
+is in the format 01/22/2010 14:54:18,541.</description>
+        <externalId>false</externalId>
+        <label>Date Format</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>inbound_address_SFDC2__c</fullName>
+        <description>A source address hosted by mGage systems and registered with the carrier to which a subscriber sends a subscriber MO.</description>
+        <externalId>false</externalId>
+        <label>Inbound Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>reporting_Key1__c</fullName>
+        <description>Populated if these values were included when sending the message through the Connect Messaging API.</description>
+        <externalId>false</externalId>
+        <label>Reporting Key1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>reporting_key2__c</fullName>
+        <description>Populated if these values were included when sending the message through the Connect Messaging API.</description>
+        <externalId>false</externalId>
+        <label>Reporting Key2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>router__c</fullName>
+        <description>The name of the mGage server that processed the message.</description>
+        <externalId>false</externalId>
+        <label>router</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>status__c</fullName>
+        <description>The current status of the message as it relates to the carrier network. See ”Codes and Definitions” below
+for status codes.</description>
+        <externalId>false</externalId>
+        <label>status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>status_code__c</fullName>
+        <description>Numeric value of carrier delivery status receipts</description>
+        <externalId>false</externalId>
+        <label>Status Code</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>status_info__c</fullName>
+        <description>Detailed information about the status code.</description>
+        <externalId>false</externalId>
+        <label>Status Info</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>uaprof__c</fullName>
+        <description>User agent profile contains information for content formatting purposes. This will
+be included in the DR. Default value is null.</description>
+        <externalId>false</externalId>
+        <label>uaprof</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>update_date__c</fullName>
+        <description>A date/time stamp reflecting the system time on the mGage hosted router when
+the carrier delivery status receipt was received.</description>
+        <externalId>false</externalId>
+        <label>Update Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Delivery Receipts</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Device Address</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Delivery Receipts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

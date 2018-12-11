@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p style=""><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);"><font face="arial"><span style="font-size: 12pt;">Hello </span></font>{!Account.Name}<font face="arial"><span style="font-size: 12pt;">,</span></font><br></span><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);"><br></span><font face="arial"><span style="font-size: 12pt;">Only Savings type accounts can be converted
+into an account for your minor. This will be a two-step process:&nbsp;</span></font><br><br><font face="arial"><span style="font-size: 12pt;">Step 1: Complete the </span></font><a href="https://www.netbank.com/Portals/NetBank/Documents/Bank%20Forms/change-request-uniform-transfers-to-minors.pdf?t=1501709604633" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Change Request: Uniform Transfers to Minors</a><font face="arial"><span style="font-size: 12pt;"> form.</span></font><br><br><font face="arial"><span style="font-size: 12pt;">Step 2: Return the completed Beneficiary request forms for processing by;</span></font><br></font></p><ol style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><li><font face="Arial, sans-serif" style=""><b>Secure Message</b>: Login to Online Banking, click on Contact Us, and send a
+secure email with a scanned copy of the signed documents.</font></li><li><font face="Arial, sans-serif" style="">Fax to: <b>858-350-0443</b>; or</font></li><li><font face="Arial, sans-serif" style="">Mail to: <b>Deposit Operations: New Accounts PO BOX 509127 San Diego, CA
+92150-9948</b></font></li></ol><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Your change will be reviewed within three business days on receipt of the
+Account Vesting Change form.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><span style="background-color: rgb(255, 255, 255);"><br>Best Regards,<br></span></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}</span><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);"><br></span><span style="background-color: rgb(255, 255, 255);">NetBank Customer Service</span></font><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

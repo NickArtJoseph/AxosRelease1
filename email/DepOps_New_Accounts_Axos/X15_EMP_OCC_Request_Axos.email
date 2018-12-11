@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br>Thank you for choosing&nbsp;Axos Bank™.&nbsp;Your new account is currently under review. During the review process, we discovered your profile is out of compliance. Please provide the following to update your client profile:</span></p><p></p><ul><li>Occupation Form (see attached)</li></ul><span style="background-color: rgb(255, 255, 255);">To satisfy regulatory requirements and expectations, it is Axos Bank’s policy to collect a consumer’s current or former (if unemployed or retired) occupation information. Federal Law, including the USA PATRIOT Act, requires all financial institutions to obtain, verify and record information that identifies each person or business that opens an account. <br><br></span><p></p><p><span style="background-color: rgb(255, 255, 255);"><br>Please return all requested documentation by:<br>1) Email to: <a href="mailto:customerservice@axosbank.com">customerservice@axosbank.com</a><br>2) Fax to: 858-350-0443<br>3) Mail to: Axos Bank, Attn: New Accounts, P.O. Box 911039, San Diego, CA&nbsp; 92191-1039<br><br><b>Questions? </b>If you have any questions, please call us at (888) 502-2967 or email us at <a href="mailto:customerservice@Axos%20Bank.com">customerservice@axosbank.com</a>.<br><br>We appreciate your business and commit to delivering value that will make&nbsp;Axos Bank&nbsp;your first choice for all your banking needs.<br><br></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank </font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

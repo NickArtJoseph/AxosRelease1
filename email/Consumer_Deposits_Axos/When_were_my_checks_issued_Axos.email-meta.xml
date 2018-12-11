@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Axos Bank - When were my checks issued?</name>
+    <style>formalLetter</style>
+    <subject>Axos Bank Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Your free initial 50-pack of checks were sent by Parcel USPS delivery on [date]. Please allow 2 weeks for your check order to be delivered.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

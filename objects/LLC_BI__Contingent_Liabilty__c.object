@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Authorized Signer Object is used to capture information about the contact that is assigned as an authorized signer for a relationship.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Authorized_Signer_Fieldset</fullName>
+        <description>Used in the new UI</description>
+        <displayedFields>
+            <field>LLC_BI__Contact__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Entity__r.LLC_BI__Account__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Role__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Authorized Signer Fieldset</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Account_Entity_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a formula field which specifies the entity involvement and account type of the contact associated to the entity involvement record on the loan, as an authorized signer.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(LLC_BI__Entity__r.LLC_BI__Account__r.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Entity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Attesting_Witness__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate the authorized signer is only acting as an attesting witness rather than the authorizing signer. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to indicate that the authorized signer is only acting as an attesting witness rather than the authorizing signer.</inlineHelpText>
+        <label>Attesting Witness</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Authority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This pick-list is used to specify whether the contact listed is &quot;Authorized&quot; or &quot;Not Authorized&quot; as a signer on the loan</description>
+        <externalId>false</externalId>
+        <label>Authority</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Authorized</fullName>
+                    <default>false</default>
+                    <label>Authorized</label>
+                </value>
+                <value>
+                    <fullName>Not Authorized</fullName>
+                    <default>false</default>
+                    <label>Not Authorized</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contact__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a look up (Master-Detail) to the Contact records within nCino. Used to specify the contact who will be the authorized signer.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Contingent_Liabilties</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingency_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field has been deprecated and replaced by Contingent Type on the Entity Involvement record</description>
+        <externalId>false</externalId>
+        <label>-D Contingency Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Joint &amp; Several</fullName>
+                    <default>true</default>
+                    <label>Joint &amp; Several</label>
+                </value>
+                <value>
+                    <fullName>Pro Rata</fullName>
+                    <default>false</default>
+                    <label>Pro Rata</label>
+                </value>
+                <value>
+                    <fullName>Assign Specific</fullName>
+                    <default>false</default>
+                    <label>Assign Specific</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Contingent_Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field specifies the percentage of the loan that is represented by this contingency. A percentage can only be specified if the contingency type is &apos;Assign Specific&apos; or &apos;Pro Rata&apos;</description>
+        <externalId>false</externalId>
+        <label>Ownership Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Entity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a look up ( Master- Detail) to the entity involvement record of the contact that is to be an authorized signer.</description>
+        <externalId>false</externalId>
+        <label>Entity</label>
+        <referenceTo>LLC_BI__Legal_Entities__c</referenceTo>
+        <relationshipName>Contingent_Liabilties</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__LookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The lookupKey is an external ID field, used for importing any authorized signer data the customer has into nCino.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Ownership_Structure_Role__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is automatically set during the Deposit Account Opening workflow to associate an Authorized Signer to a specific Ownership Structure Role.</description>
+        <externalId>false</externalId>
+        <label>Ownership Structure Role</label>
+        <referenceTo>LLC_BI__Ownership_Structure_Role__c</referenceTo>
+        <relationshipLabel>Authorized Signers</relationshipLabel>
+        <relationshipName>Signers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field, a dependent pick list, gives the ability to specify what capacity a contact can act in for a specific relationship.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Valid options depending on entity type
+
+Association: Officer/Agent
+Corporation: Officer/Agent
+Government: Official/Agent
+LLC: Member/Agent
+Partnership: Partner/Agent
+Sole Prietorship: Sole Proprietorship
+Trust: Trustee/Beneficiary/Agent</inlineHelpText>
+        <label>Capacity</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sole Proprietorship</fullName>
+                    <default>false</default>
+                    <label>Sole Proprietorship</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Officer</fullName>
+                    <default>false</default>
+                    <label>Officer</label>
+                </value>
+                <value>
+                    <fullName>Member</fullName>
+                    <default>false</default>
+                    <label>Member</label>
+                </value>
+                <value>
+                    <fullName>Official</fullName>
+                    <default>false</default>
+                    <label>Official</label>
+                </value>
+                <value>
+                    <fullName>Trustee</fullName>
+                    <default>false</default>
+                    <label>Trustee</label>
+                </value>
+                <value>
+                    <fullName>Beneficiary</fullName>
+                    <default>false</default>
+                    <label>Beneficiary</label>
+                </value>
+                <value>
+                    <fullName>Agent</fullName>
+                    <default>false</default>
+                    <label>Agent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__TIN_Certifier__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Users select this optional boolean field to indicate that the signer is qualified to sign TIN certifications or other tax-related documents for the business or entity account holder. By default, it is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Click this checkbox if the signer is qualified to sign TIN certifications or other tax-related documents for the business or entity account holder.</inlineHelpText>
+        <label>TIN Certifier</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Authorized Signer</label>
+    <nameField>
+        <displayFormat>{000000000}</displayFormat>
+        <label>Authorized Signer</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Authorized Signers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Association</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Association&apos;, text(LLC_BI__Role__c) != &apos;Officer&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Association&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Association) are &quot;Officer&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Corporation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;, text(LLC_BI__Role__c) != &apos;Officer&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Corporation&apos;,NOT(IsBlank(text(LLC_BI__Role__c)))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Corporation) are &quot;Officer&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Government</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Government&apos;, text(LLC_BI__Role__c) != &apos;Official&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Government&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Government) are &quot;Official&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Limited_Liability_Company</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Limited Liability Company&apos;, text(LLC_BI__Role__c) != &apos;Member&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Limited Liability Company&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Limited Liability Company) are &quot;Member&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Partnership</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Partnership&apos;, text(LLC_BI__Role__c) != &apos;Partner&apos;), AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Partnership&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Partnership) are &quot;Partner&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Soleprietorship</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Sole Proprietorship&apos;, text(LLC_BI__Role__c) != &apos;Sole Proprietorship&apos;), NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The only valid capacity option for this entity&apos;s account type (Sole Proprietorship) are &quot;Sole Proprietorship&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__Capacity_Trust</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Trustee&apos;),
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Beneficiary&apos;),
+AND(text(LLC_BI__Entity__r.LLC_BI__Account__r.Type) == &apos;Trust&apos;, text(LLC_BI__Role__c) != &apos;Agent&apos;),
+NOT(IsBlank(text(LLC_BI__Role__c))))</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Role__c</errorDisplayField>
+        <errorMessage>The valid capacity options for this entity&apos;s account type (Trust) are &quot;Trustee&quot;,&quot;Beneficiary&quot; and &quot;Agent&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LLC_BI__percentage_only_if_assign_specific</fullName>
+        <active>false</active>
+        <description>--DEPRECATED-- Only populate percentage is contingency type is &apos;Assign Specific&apos; or &apos;Pro Rata&apos;</description>
+        <errorConditionFormula>false</errorConditionFormula>
+        <errorDisplayField>LLC_BI__Contingent_Percentage__c</errorDisplayField>
+        <errorMessage>--DEPRECATED-- A percentage can only be specified if the contingency type is &apos;Assign Specific&apos; or  &apos;Pro Rata&apos;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

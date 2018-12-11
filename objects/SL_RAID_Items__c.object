@@ -1,0 +1,2088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>SL_UAT_Issue_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>HLP_UAT_Issues</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>HLP_UAT_Issues</fullName>
+        <fields>Name</fields>
+        <fields>SL_Status__c</fields>
+        <fields>SL_Workflow_Area__c</fields>
+        <fields>OwnerId</fields>
+        <fields>SL_Type__c</fields>
+        <label>HLP - UAT Issues</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>UAT_Issues</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>IsMe__c</fullName>
+        <externalId>false</externalId>
+        <formula>Assigned_To__c =  $User.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsMe</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LOE_for_Enhancements__c</fullName>
+        <description>Level of effort for Enhancements</description>
+        <externalId>false</externalId>
+        <label>LOE for Enhancements (hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mitigation_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Mitigation Plan</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Need_for_Pilot_Launch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Place specific comments/questions into Next Steps area</inlineHelpText>
+        <label>Open questions</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Question Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Listed as bug, but functionality works</fullName>
+                    <default>false</default>
+                    <label>Listed as bug, but functionality works</label>
+                </value>
+                <value>
+                    <fullName>Listed as bug, but this is an enhancement request</fullName>
+                    <default>false</default>
+                    <label>Listed as bug, but this is an enhancement request</label>
+                </value>
+                <value>
+                    <fullName>Listed as bug, but this is a discussion topic/question</fullName>
+                    <default>false</default>
+                    <label>Listed as bug, but this is a discussion topic/question</label>
+                </value>
+                <value>
+                    <fullName>Listed as Blocker, but not blocking key functionality (more minor issue)</fullName>
+                    <default>false</default>
+                    <label>Listed as Blocker, but not blocking key functionality (more minor issue)</label>
+                </value>
+                <value>
+                    <fullName>New Requirement</fullName>
+                    <default>false</default>
+                    <label>New Requirement</label>
+                </value>
+                <value>
+                    <fullName>Change in Requirement (rework)</fullName>
+                    <default>false</default>
+                    <label>Change in Requirement (rework)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Risk_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk/Issue?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Risk</fullName>
+                    <default>false</default>
+                    <label>Risk</label>
+                </value>
+                <value>
+                    <fullName>Issue</fullName>
+                    <default>false</default>
+                    <label>Issue</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Assignee__c</fullName>
+        <externalId>false</externalId>
+        <label>Team</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>InTrust Team</fullName>
+                    <default>false</default>
+                    <label>INTRUST Team</label>
+                </value>
+                <value>
+                    <fullName>Silverline</fullName>
+                    <default>false</default>
+                    <label>Silverline</label>
+                </value>
+                <value>
+                    <fullName>nCino</fullName>
+                    <default>false</default>
+                    <label>nCino</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>true</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SL_Next_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Steps</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SL_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional notes to describe the issue, links, or pics here.</inlineHelpText>
+        <label>Description/Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SL_Pre_UAT_Issue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pre-UAT Issue</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SL_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>true</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Blocker</fullName>
+                    <default>false</default>
+                    <label>Blocker</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assigned for fix</fullName>
+                    <default>false</default>
+                    <label>Assigned for fix</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>false</default>
+                    <label>Fixed</label>
+                </value>
+                <value>
+                    <fullName>Future enhancement</fullName>
+                    <default>false</default>
+                    <label>Future enhancement</label>
+                </value>
+                <value>
+                    <fullName>Not Applicable</fullName>
+                    <default>false</default>
+                    <label>Not Applicable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>false</default>
+                    <label>Assigned</label>
+                </value>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Delayed</fullName>
+                    <default>false</default>
+                    <label>Delayed</label>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                    <label>Blocked</label>
+                </value>
+                <value>
+                    <fullName>Inputs Pending</fullName>
+                    <default>false</default>
+                    <label>Inputs Pending</label>
+                </value>
+                <value>
+                    <fullName>Ready for re-test</fullName>
+                    <default>false</default>
+                    <label>Ready for re-test</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Closed - Duplicate</fullName>
+                    <default>false</default>
+                    <label>Closed - Duplicate</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>Deferred to Future Release</fullName>
+                    <default>false</default>
+                    <label>Deferred to Future Release</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Green</fullName>
+                    <default>false</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                    <label>Duplicate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Title__c</fullName>
+        <description>UAT user issue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type your issue here.</inlineHelpText>
+        <label>Title</label>
+        <length>125</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SL_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select what type of issue it is.</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bug</fullName>
+                    <default>false</default>
+                    <label>Bug</label>
+                </value>
+                <value>
+                    <fullName>Enhancement</fullName>
+                    <default>true</default>
+                    <label>Enhancement / Refinement</label>
+                </value>
+                <value>
+                    <fullName>Question/Discussion</fullName>
+                    <default>false</default>
+                    <label>Question/Discussion</label>
+                </value>
+                <value>
+                    <fullName>Data</fullName>
+                    <default>false</default>
+                    <label>Data</label>
+                </value>
+                <value>
+                    <fullName>Other Task</fullName>
+                    <default>false</default>
+                    <label>Other Task</label>
+                </value>
+                <value>
+                    <fullName>Budget</fullName>
+                    <default>false</default>
+                    <label>Budget</label>
+                </value>
+                <value>
+                    <fullName>Schedule</fullName>
+                    <default>false</default>
+                    <label>Schedule</label>
+                </value>
+                <value>
+                    <fullName>Quality</fullName>
+                    <default>false</default>
+                    <label>Quality</label>
+                </value>
+                <value>
+                    <fullName>Scope</fullName>
+                    <default>false</default>
+                    <label>Scope</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Workflow_Area__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Where are you seeing this error?</inlineHelpText>
+        <label>Workflow Area</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Adverse Actions Withdraw / Decline</fullName>
+                    <default>false</default>
+                    <label>Adverse Actions Withdraw / Decline</label>
+                </value>
+                <value>
+                    <fullName>Approval Process</fullName>
+                    <default>false</default>
+                    <label>Approval Process</label>
+                </value>
+                <value>
+                    <fullName>Borrowing Structure</fullName>
+                    <default>false</default>
+                    <label>Borrowing Structure</label>
+                </value>
+                <value>
+                    <fullName>Checklists and Loan Tasks</fullName>
+                    <default>false</default>
+                    <label>Checklists and Loan Tasks</label>
+                </value>
+                <value>
+                    <fullName>Collateral</fullName>
+                    <default>false</default>
+                    <label>Collateral</label>
+                </value>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                    <label>Compliance</label>
+                </value>
+                <value>
+                    <fullName>Conditions of Approval</fullName>
+                    <default>false</default>
+                    <label>Conditions of Approval</label>
+                </value>
+                <value>
+                    <fullName>Connections</fullName>
+                    <default>false</default>
+                    <label>Connections</label>
+                </value>
+                <value>
+                    <fullName>Construction Loan Administration (Budget)</fullName>
+                    <default>false</default>
+                    <label>Construction Loan Administration (Budget)</label>
+                </value>
+                <value>
+                    <fullName>Covenants</fullName>
+                    <default>false</default>
+                    <label>Covenants</label>
+                </value>
+                <value>
+                    <fullName>Credit Actions</fullName>
+                    <default>false</default>
+                    <label>Credit Actions</label>
+                </value>
+                <value>
+                    <fullName>Customer Portal</fullName>
+                    <default>false</default>
+                    <label>Customer Portal</label>
+                </value>
+                <value>
+                    <fullName>Deposits</fullName>
+                    <default>false</default>
+                    <label>Deposits</label>
+                </value>
+                <value>
+                    <fullName>Disbursements - Funding</fullName>
+                    <default>false</default>
+                    <label>Disbursements - Funding</label>
+                </value>
+                <value>
+                    <fullName>Document Manager</fullName>
+                    <default>false</default>
+                    <label>Document Manager</label>
+                </value>
+                <value>
+                    <fullName>Exposure</fullName>
+                    <default>false</default>
+                    <label>Exposure</label>
+                </value>
+                <value>
+                    <fullName>Fee</fullName>
+                    <default>false</default>
+                    <label>Fee</label>
+                </value>
+                <value>
+                    <fullName>Field History Tracking</fullName>
+                    <default>false</default>
+                    <label>Field History Tracking</label>
+                </value>
+                <value>
+                    <fullName>Form Generation</fullName>
+                    <default>false</default>
+                    <label>Form Generation</label>
+                </value>
+                <value>
+                    <fullName>Loan</fullName>
+                    <default>false</default>
+                    <label>Loan</label>
+                </value>
+                <value>
+                    <fullName>Memo</fullName>
+                    <default>false</default>
+                    <label>Memo</label>
+                </value>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                    <label>Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Policy Exceptions</fullName>
+                    <default>false</default>
+                    <label>Policy Exceptions</label>
+                </value>
+                <value>
+                    <fullName>Product Package</fullName>
+                    <default>false</default>
+                    <label>Product Package</label>
+                </value>
+                <value>
+                    <fullName>Rates and Payments</fullName>
+                    <default>false</default>
+                    <label>Rates and Payments</label>
+                </value>
+                <value>
+                    <fullName>Relationship</fullName>
+                    <default>false</default>
+                    <label>Relationship</label>
+                </value>
+                <value>
+                    <fullName>Relationships / Clients</fullName>
+                    <default>false</default>
+                    <label>Relationships / Clients</label>
+                </value>
+                <value>
+                    <fullName>Risk Rating</fullName>
+                    <default>false</default>
+                    <label>Risk Rating</label>
+                </value>
+                <value>
+                    <fullName>Spreading</fullName>
+                    <default>false</default>
+                    <label>Spreading</label>
+                </value>
+                <value>
+                    <fullName>Team</fullName>
+                    <default>false</default>
+                    <label>Team</label>
+                </value>
+                <value>
+                    <fullName>Third Party Reports</fullName>
+                    <default>false</default>
+                    <label>Third Party Reports</label>
+                </value>
+                <value>
+                    <fullName>Pre-UAT Demo</fullName>
+                    <default>false</default>
+                    <label>Pre-UAT Demo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SL_Worksheet_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Worksheet Number</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Updated_in_Production__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Updated in Production</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>RAID Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>SL_Type__c</columns>
+        <columns>SL_Priority__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Action_Items</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Details__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>SL_Next_Steps__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.Action_Item</value>
+        </filters>
+        <label>All Action Items</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>SL_Type__c</columns>
+        <columns>SL_Priority__c</columns>
+        <columns>SL_Assignee__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>SL_Notes__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SL_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete,Closed - Duplicate,NA,Deferred to Future Release</value>
+        </filters>
+        <label>All Open Issues</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Project_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Type__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.SL_Project_Risk_Issue</value>
+        </filters>
+        <filters>
+            <field>Risk_Level__c</field>
+            <operation>equals</operation>
+            <value>Issue</value>
+        </filters>
+        <label>All Project Issues</label>
+    </listViews>
+    <listViews>
+        <fullName>Copy_of_All_Assigned_to_Me</fullName>
+        <columns>NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>SL_Priority__c</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Next_Steps__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>SL_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete,NA</value>
+        </filters>
+        <label>UAT Issues - Open &amp; Assigned to Me</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Action_Items</fullName>
+        <columns>NAME</columns>
+        <columns>Due_Date__c</columns>
+        <columns>SL_Title__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>SL_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.Action_Item</value>
+        </filters>
+        <filters>
+            <field>SL_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete</value>
+        </filters>
+        <filters>
+            <field>IsMe__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Open Action Items</label>
+    </listViews>
+    <listViews>
+        <fullName>SL_All_Decisions</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Title__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.SL_Project_Decision</value>
+        </filters>
+        <label>All Decisions</label>
+    </listViews>
+    <listViews>
+        <fullName>SL_All_Open_Action_Items</fullName>
+        <columns>NAME</columns>
+        <columns>Due_Date__c</columns>
+        <columns>SL_Title__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>SL_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.Action_Item</value>
+        </filters>
+        <filters>
+            <field>SL_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete</value>
+        </filters>
+        <label>All Open Action Items</label>
+    </listViews>
+    <listViews>
+        <fullName>SL_All_Risk_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Type__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SL_RAID_Items__c.SL_Project_Risk_Issue</value>
+        </filters>
+        <filters>
+            <field>Risk_Level__c</field>
+            <operation>equals</operation>
+            <value>Risk</value>
+        </filters>
+        <label>All Project Risks</label>
+    </listViews>
+    <listViews>
+        <fullName>SL_Completed_Issues</fullName>
+        <columns>NAME</columns>
+        <columns>SL_Workflow_Area__c</columns>
+        <columns>SL_Title__c</columns>
+        <columns>SL_Next_Steps__c</columns>
+        <columns>SL_Status__c</columns>
+        <columns>SL_Worksheet_Number__c</columns>
+        <columns>SL_Priority__c</columns>
+        <columns>SL_Assignee__c</columns>
+        <columns>SL_Pre_UAT_Issue__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SL_Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </filters>
+        <label>Completed Issues</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{00000}</displayFormat>
+        <label>RAID Item Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>RAID Items</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Action_Item</fullName>
+        <active>true</active>
+        <description>Project Action Items</description>
+        <label>Action Item</label>
+        <picklistValues>
+            <picklist>Question_Detail__c</picklist>
+            <values>
+                <fullName>Change in Requirement %28rework%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as Blocker%2C but not blocking key functionality %28more minor issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but functionality works</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is a discussion topic%2Fquestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is an enhancement request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Requirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Level__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Assignee__c</picklist>
+            <values>
+                <fullName>InTrust Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silverline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>nCino</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Priority__c</picklist>
+            <values>
+                <fullName>Blocker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Resolution__c</picklist>
+            <values>
+                <fullName>Assigned for fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Status__c</picklist>
+            <values>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blocked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question%2FDiscussion</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Workflow_Area__c</picklist>
+            <values>
+                <fullName>Adverse Actions Withdraw %2F Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrowing Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checklists and Loan Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conditions of Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction Loan Administration %28Budget%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Covenants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disbursements - Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field History Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Form Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Exceptions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-UAT Demo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates and Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationships %2F Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spreading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Reports</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SL_Project_Decision</fullName>
+        <active>true</active>
+        <description>Project Decisions</description>
+        <label>Project Decision</label>
+        <picklistValues>
+            <picklist>Question_Detail__c</picklist>
+            <values>
+                <fullName>Change in Requirement %28rework%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as Blocker%2C but not blocking key functionality %28more minor issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but functionality works</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is a discussion topic%2Fquestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is an enhancement request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Requirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Level__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Assignee__c</picklist>
+            <values>
+                <fullName>InTrust Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silverline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>nCino</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Priority__c</picklist>
+            <values>
+                <fullName>Blocker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Resolution__c</picklist>
+            <values>
+                <fullName>Assigned for fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Status__c</picklist>
+            <values>
+                <fullName>Blocked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred to Future Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inputs Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Ready for re-test</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question%2FDiscussion</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Workflow_Area__c</picklist>
+            <values>
+                <fullName>Adverse Actions Withdraw %2F Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrowing Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checklists and Loan Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conditions of Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction Loan Administration %28Budget%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Covenants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disbursements - Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field History Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Form Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Exceptions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-UAT Demo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates and Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationships %2F Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spreading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Reports</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SL_Project_Risk_Issue</fullName>
+        <active>true</active>
+        <description>Project Risks and Issues</description>
+        <label>Project Risk/Issue</label>
+        <picklistValues>
+            <picklist>Question_Detail__c</picklist>
+            <values>
+                <fullName>Change in Requirement %28rework%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as Blocker%2C but not blocking key functionality %28more minor issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but functionality works</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is a discussion topic%2Fquestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is an enhancement request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Requirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Level__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Assignee__c</picklist>
+            <values>
+                <fullName>InTrust Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silverline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>nCino</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Priority__c</picklist>
+            <values>
+                <fullName>Blocker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Resolution__c</picklist>
+            <values>
+                <fullName>Assigned for fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Status__c</picklist>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Type__c</picklist>
+            <values>
+                <fullName>Budget</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Workflow_Area__c</picklist>
+            <values>
+                <fullName>Adverse Actions Withdraw %2F Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrowing Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checklists and Loan Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conditions of Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction Loan Administration %28Budget%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Covenants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disbursements - Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field History Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Form Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Exceptions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-UAT Demo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates and Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationships %2F Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spreading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Reports</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SL_Testing_System_Issue</fullName>
+        <active>true</active>
+        <description>System Issues or Data Issues</description>
+        <label>Testing/System Issue</label>
+        <picklistValues>
+            <picklist>Question_Detail__c</picklist>
+            <values>
+                <fullName>Change in Requirement %28rework%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as Blocker%2C but not blocking key functionality %28more minor issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but functionality works</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is a discussion topic%2Fquestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Listed as bug%2C but this is an enhancement request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Requirement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk_Level__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Assignee__c</picklist>
+            <values>
+                <fullName>InTrust Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Silverline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBD</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>nCino</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Priority__c</picklist>
+            <values>
+                <fullName>Blocker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Resolution__c</picklist>
+            <values>
+                <fullName>Assigned for fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Status__c</picklist>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Type__c</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question%2FDiscussion</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SL_Workflow_Area__c</picklist>
+            <values>
+                <fullName>Adverse Actions Withdraw %2F Decline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Borrowing Structure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checklists and Loan Tasks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conditions of Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Connections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction Loan Administration %28Budget%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Covenants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disbursements - Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field History Tracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Form Generation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Exceptions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-UAT Demo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates and Payments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Relationships %2F Clients</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Risk Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spreading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Party Reports</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <searchResultsAdditionalFields>SL_Priority__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SL_Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SL_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assigned_To__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SL_Next_Steps__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

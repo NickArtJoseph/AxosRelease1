@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tracks status changes for Certifications and Credit Reviews</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Certification__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Certification</label>
+        <referenceTo>WLD_Certification__c</referenceTo>
+        <relationshipLabel>Status History</relationshipLabel>
+        <relationshipName>Status_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Review__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Credit Review</label>
+        <referenceTo>WLD_Credit_Review__c</referenceTo>
+        <relationshipLabel>Status History</relationshipLabel>
+        <relationshipName>Status_History</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Next_Status__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Next Status</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Linked statuses must belong to the same Certification/Credit Review record</errorMessage>
+            <filterItems>
+                <field>$Source.Certification__c</field>
+                <operation>equals</operation>
+                <valueField>WLD_Status_History__c.Certification__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Credit_Review__c</field>
+                <operation>equals</operation>
+                <valueField>WLD_Status_History__c.Credit_Review__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>WLD_Status_History__c</referenceTo>
+        <relationshipLabel>Status History (Next Status)</relationshipLabel>
+        <relationshipName>Status_History1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status_Date_Time__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <description>Date/time status changed</description>
+        <externalId>false</externalId>
+        <label>Status Date/Time</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Time_in_Status_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+  ISBLANK(Next_Status__c),
+    /* Current Status */
+    /*days*/ 
+    FLOOR( NOW() - Status_Date_Time__c ) + 1,
+    /* Diff between this status and next status */
+    FLOOR( Next_Status__r.Status_Date_Time__c - Status_Date_Time__c) + 1
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time in Status (days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_in_Status_mins__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+  ISBLANK(Next_Status__c),
+    /*Current Status*/
+    /*days*/ 
+    (FLOOR( NOW() - Status_Date_Time__c) * 24 * 60) +
+    /*hours*/
+    (FLOOR( MOD( (NOW() - Status_Date_Time__c) * 24, 24 ) ) * 60) +
+    /*minutes*/
+    (ROUND( MOD( (NOW() - Status_Date_Time__c) * 24 * 60, 60 ), 0 )),
+    /* Diff between this status and next status */
+    /*days*/ 
+    (FLOOR( Next_Status__r.Status_Date_Time__c - Status_Date_Time__c) * 24 * 60) +
+    /*hours*/
+    (FLOOR( MOD( (Next_Status__r.Status_Date_Time__c - Status_Date_Time__c) * 24, 24 ) ) * 60) +
+    /*minutes*/
+    (ROUND( MOD( (Next_Status__r.Status_Date_Time__c - Status_Date_Time__c) * 24 * 60, 60 ), 0 ))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time in Status (mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Status History</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Status History</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

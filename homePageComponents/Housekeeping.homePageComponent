@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>Personal_Information</links>
+    <links>Language_Time_Zone</links>
+    <links>Add_Your_Profile_Picture</links>
+    <links>My_Email_to_Salesforce</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

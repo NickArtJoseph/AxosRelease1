@@ -1,0 +1,12 @@
+PIC Approval Form (Please keep for records)
+
+PIC Submitter: {!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName}
+PIC Company Name: {!Opportunity.Account}
+Loan Type: {!Origination_Documentation__c.RecordType}
+Loan Amount: {!Origination_Documentation__c.Loan_Amount__c}
+
+Link to Approval: {!ApprovalRequest.Internal_URL}
+
+Link to PIC: {!Origination_Documentation__c.Org_URL__c}/{!Origination_Documentation__c.Id}
+ 
+Link to Attachments: {!Origination_Documentation__c.Org_URL__c}/ui/content/ViewAllNotesPage?id={!Origination_Documentation__c.Id}

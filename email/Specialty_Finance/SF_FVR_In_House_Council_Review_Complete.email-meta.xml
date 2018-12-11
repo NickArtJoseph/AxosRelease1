@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used in Process Builder to send email when In House Council Review is changed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF - FVR In House Council Review Complete</name>
+    <style>none</style>
+    <subject>FVR Request - Retail Deal Funded for {!Opportunity.Account}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

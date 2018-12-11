@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p>Hello {!Case.Contact},</p><p><br></p><p>For security and verification purposes please send your request via secure message in Online Banking.&nbsp;<span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">To do so, follow these steps:</span></p><p style="font-family: &quot;Times New Roman&quot;; font-size: medium;"></p><ol><li><font face="arial">Log into Online Banking.</font></li><li><font face="arial">Click on Messages at the top right.</font></li><li><font face="arial">Click on Compose a message.</font></li></ol><p></p><p><br></p><p>Alternatively, please call&nbsp;888-502-2967 anytime. We are now available to assist customers 24/7! A Direct Banker will be happy to speak with your personally.</p><p><br></p><p>We appreciate your business and commit to providing superior Banking products, support and services.</p><p><br></p><p>Best Regards,</p><p><br></p><p>{!User.FirstName}<br>Axos Bank&nbsp;Customer Service</p>]]></td>
+</tr>
+</table>

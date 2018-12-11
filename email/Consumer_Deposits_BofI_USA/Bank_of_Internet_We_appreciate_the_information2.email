@@ -1,0 +1,15 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><font style="color: rgb(0, 0, 0);">Hello&nbsp;{!Case.Contact},<br></font><br></font><span style="font-family: Arial, sans-serif;">We appreciate the information and your response. If you have any additional questions please let us know.</span><font face="Arial, sans-serif" style=""><br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,</font><div><font face="Arial, sans-serif" style=""><br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br>Bank of Internet USA Customer Service</font><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

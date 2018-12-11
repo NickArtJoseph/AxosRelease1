@@ -1,0 +1,67 @@
+<apex:page sidebar="false" standardController="Contact" extensions="CRMfusionDBR101.DB_DuplicateContactsList">
+    <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <apex:outputPanel rendered="{!haveDupeContacts}">
+                <apex:outputText value="Duplicate Contacts:" />
+                <apex:pageBlockTable value="{!dupeContacts}" var="dupe" id="dupeContactsTable" rowClasses="odd,even" styleClass="tableClass">
+                    <apex:column >
+                        <apex:facet name="header">First Name</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Contact__c}" target="_blank">{!dupe.Contact__r.FirstName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Last Name</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Contact__c}" target="_blank">{!dupe.Contact__r.LastName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Account</apex:facet>
+                        <apex:outputLink value="/{!dupe.Contact__r.AccountId}" target="_blank">{!dupe.Contact__r.Account.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Owner</apex:facet>
+                        <apex:outputText value="{!dupe.Contact__r.Owner.Name}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Warning</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Duplicate_Warning__c}" target="_blank">{!dupe.Duplicate_Warning__r.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Scenario</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Scenario__c}" target="_blank">{!dupe.Scenario__r.Name}</apex:outputLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!haveDupeLeads}">
+                <apex:outputText value="Duplicate Leads:" />
+                <apex:pageBlockTable value="{!dupeLeads}" var="dupe" id="dupeLeadsTable" rowClasses="odd,even" styleClass="tableClass">
+                    <apex:column >
+                        <apex:facet name="header">First Name</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Lead__c}" target="_blank">{!dupe.Lead__r.FirstName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Last Name</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Lead__c}" target="_blank">{!dupe.Lead__r.LastName}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Company</apex:facet>
+                        <apex:outputText value="{!dupe.Lead__r.Company}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Owner</apex:facet>
+                        <apex:outputText value="{!dupe.Lead__r.Owner.Name}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Warning</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Duplicate_Warning__c}" target="_blank">{!dupe.Duplicate_Warning__r.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Scenario</apex:facet>
+                        <apex:outputLink value="/{!dupe.CRMfusionDBR101__Scenario__c}" target="_blank">{!dupe.Scenario__r.Name}</apex:outputLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+            <apex:pageBlockSectionItem rendered="{!NOT(haveDupes)}">
+                <apex:outputText value="No duplicate warnings found." />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

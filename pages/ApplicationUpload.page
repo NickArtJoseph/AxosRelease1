@@ -1,0 +1,33 @@
+<apex:page controller="ApplicationUploadController" tabStyle="Application_SFDC2__c">
+    <apex:pageMessages />
+    <apex:sectionHeader title="Application Upload" description="Allows users to manually upload Application files"/>
+    <apex:form >
+    <apex:pageBlock title="File Information" id="fileBlock">
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!upload}" value="Process File" rendered="{!jobId = null}" />
+            <apex:commandButton action="{!startNewUpload}" value="Begin New Upload" rendered="{!jobId != null}" />
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection collapsible="false" columns="1" rendered="{!jobId = null}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Source System" for="SourceSystem" />
+                <apex:selectList id="SourceSystem" value="{!sourceSystem}" size="1" multiselect="false">
+                    <apex:selectOptions value="{!sourceSystemList}" />
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="File" for="FileUpload" />
+                <apex:inputFile id="FileUpload" value="{!fileUpload.body}" fileName="{!fileUpload.name}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection collapsible="false" columns="1" rendered="{!jobId != null}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Status" />
+                <apex:outputPanel >
+                    <apex:actionPoller action="{!pollResults}" reRender="fileBlock" interval="5" rendered="{!OR(jobStatus = "Queued", jobStatus="Processing")}"/>
+                    <apex:outputLabel value="{!jobStatus}" /><apex:image url="{!$Resource.Animated_Processing}" width="150" height="13" style="vertical-align: middle;" rendered="{!OR(jobStatus = "Queued", jobStatus="Processing")}"/>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+The BF Status for {!Boarding_Form__c.Opportunity__c} has been updated from 
+{!Boarding_Form__c.OldBFStatus__c}  to 
+{!Boarding_Form__c.BF_Status__c}
+
+{!Boarding_Form__c.OppLink__c}

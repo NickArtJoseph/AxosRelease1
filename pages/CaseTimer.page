@@ -1,0 +1,227 @@
+<apex:page standardController="Case" extensions="CaseTimeController"  showHeader="false" sidebar="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <apex:includeScript value="/support/console/39.0/integration.js"/>
+        <apex:stylesheet value="{!URLFOR($Resource.timerlightningdesign, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+        <apex:stylesheet value="{!$Resource.timercasetimercss}" />
+
+        <div class="slds timerContainer">
+            <input id="recordId" type="hidden" value="{!recordId}"/>
+            <input id="isClosedCase" type="hidden" value="{!isClosedCase}"/>
+
+            <!-- PAGE HEADER -->
+            <div class="slds-page-header" role="banner">
+
+                <!-- LAYOUT GRID -->
+                <div class="slds-grid">
+
+                    <!-- GRID COL -->
+                    <div class="slds-col">
+
+                        <!-- HEADING AREA -->
+                        <h3 class="slds-text-heading--small slds-truncate" style="line-height:41px;">Session Timer</h3>
+                        <!-- /HEADING AREA -->
+
+                    </div>
+
+                    <!-- GRID COL -->
+                    <div class="slds-col slds-no-flex slds-align-middle">
+                        <apex:outputPanel id="totalTimePanel">
+                            Total:  <c:TimeConversion seconds="{!cumulativeTime}"/>
+                        </apex:outputPanel>
+
+                    </div>
+                    <!-- / GRID COL -->
+
+                    <div class="slds-dropdown-trigger" style="padding-left:5px;">
+                        <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
+                            <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint">
+                                <use xlink:href="{!URLFOR($Resource.timerlightningdesign, 'assets/icons/utility-sprite/svg/symbols.svg#down')}"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Show More</span>
+                        </button>
+                        <div class="slds-dropdown slds-dropdown--right slds-text-heading--label slds-dropdown--menu">
+                            <ul class="slds-dropdown__list" role="menu">
+                                <li id="menu-51-0" href="#" class="slds-dropdown__item"><a id="addtime" href="#" class="slds-truncate" role="menuitem">Add Time</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- / LAYOUT GRID -->
+
+            </div>
+            <!-- / PAGE HEADER -->
+
+            <div class="slds-tabs--default">
+                <ul class="slds-tabs--default__nav" role="tablist">
+                    <li class="slds-tabs--default__item slds-text-heading--label timer-tab-size" title="Item One" role="presentation">
+
+                        <img id="active-auto-icon" src="{!$Resource.timerautoactive}"/> 
+                        <img id="inactive-auto-icon" src="{!$Resource.timerautoinactive}"/>
+                        <a class="slds-tabs--default__link" href="#void" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Auto</a>
+                  <!--  </li>
+                    <li class="slds-tabs--default__item slds-text-heading--label timer-tab-size slds-active" title="Item Two" role="presentation">
+                        <img id="active-manual-icon" src="{!$Resource.timermanualactive}"/>
+                        <img id="inactive-manual-icon" src="{!$Resource.timermanualinactive}"/>
+                        <a class="slds-tabs--default__link" href="#void" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Manual</a>-->
+                    </li> 
+                </ul>
+                <div class="timer">
+
+                    <center>
+                       <ul class="buttonAndTimer">
+                            <li><img id="play" src="{!$Resource.timerplay}" alt="playbutton" /> <!-- <img id="pause" src="{!$Resource.timerpause}" alt="pausebutton" /> -->
+                                  <p id="divId"/> 
+                                <input id="divId" type='text' name='timer' class='slds-input'/>
+                          </li>  
+
+                        </ul>
+                    </center>
+
+                </div>
+
+                <div id="tab-default-1" class="slds-tabs--default__content" role="tabpanel" aria-labelledby="tab-default-1__item">
+                    <div class="slds-scrollable--y" style="max-height:220px;">
+                        <table class="slds-table slds-table--bordered slds-no-row-hover">
+                            <thead>
+                                <tr>
+                                    <th class="slds-text-heading--label slds-size--1-of-3" scope="col">AGENT'S NAME</th>
+                                    <th class="slds-text-heading--label slds-size--1-of-3" scope="col">DATE</th>
+                                    <th class="slds-text-heading--label slds-size--1-of-3" scope="col">DURATION</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <apex:repeat value="{!sessions}" var="session">
+                                    <tr class="slds-hint-parent">
+                                        <td class="slds-size--1-of-3 agentname" data-label="AGENT'S NAME" >{!session.Agent__r.Name}</td>
+                                        <td class="slds-size--1-of-3" data-label="DATE">
+                                            <c:LocaleDate date_Value="{!session.Date__c}"/>
+                                        </td>
+                                        <td class="slds-size--1-of-3" data-label="DURATION" id="duration" data-duration="{!session.Duration__c}">
+                                            <c:TimeConversion seconds="{!session.Duration__c}"/>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div id="tab-default-2" class="slds-tabs--default__content" role="tabpanel" aria-labelledby="tab-default-2__item">
+                    <div class="slds-scrollable--y" style="max-height:220px;">
+                        <apex:outputPanel id="showTable">
+                            <table class="slds-table slds-table--bordered slds-no-row-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="slds-text-heading--label slds-size--1-of-3" scope="col">AGENT'S NAME</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-3" scope="col">DATE</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-3" scope="col">DURATION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!manualSessions}" var="session">
+                                        <tr class="slds-hint-parent">
+                                            <td class="slds-size--1-of-3 agentname" data-label="AGENT'S NAME" >{!session.Agent__r.Name}</td>
+                                            <td class="slds-size--1-of-3" data-label="DATE">
+                                                <c:LocaleDate date_Value="{!session.Date__c}"/>
+                                            </td>
+                                            <td class="slds-size--1-of-3" data-label="DURATION" id="duration" data-duration="{!session.Duration__c}">
+                                                <c:TimeConversion seconds="{!session.Duration__c}"/>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div id="popup" aria-hidden="false" role="dialog" class="slds-modal">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__header">
+                            <h2 class="slds-text-heading--medium">Manual Time Entry</h2>
+                            <button class="slds-button slds-modal__close" id="close">
+                                <svg aria-hidden="true" class="slds-button__icon slds-button__icon--inverse slds-button__icon--large">
+                                    <use xlink:href="{!URLFOR($Resource.timerlightningdesign, 'assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                        </div>
+                        <div class="slds-modal__content">
+
+                            <form class="slds-form--inline" style="overflow:hidden;">
+                                <div class="slds-form-element" style="float:left; max-width:46%; margin-right:8%;">
+                                    <label class="slds-form-element__label" for="name">Hours</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="hours" class="slds-input" type="text" placeholder="hh" />
+                                    </div>
+                                </div>
+                                <div class="slds-form-element" style="float:left; max-width:46%; margin:0;">
+                                    <label class="slds-form-element__label" for="email">Minutes</label>
+                                    <div class="slds-form-element__control">
+                                        <input id="minutes" class="slds-input" type="text" placeholder="mm" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="slds-form--stacked" style="clear:both; margin-top:10px;">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="textareaSample3">Comments</label>
+                                    <div class="slds-form-element__control">
+                                        <textarea id="comments" class="slds-textarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-modal__footer">
+                            <button class="slds-button slds-button--neutral" id="cancel">Cancel</button>
+                            <button class="slds-button slds-button--neutral slds-button--brand" id="save">Add</button>
+                        </div>
+                    </div>
+
+                    <apex:form >
+
+                        <apex:actionFunction action="{!recordManualSession}" name="addManualTime" rerender="showTable, totalTimePanel">
+                            <apex:param name="duration" assignTo="{!duration}" value="" />
+                            <apex:param name="comments" assignTo="{!comments}" value="" />
+                        </apex:actionFunction>
+                    </apex:form>
+
+                </div>
+                <div id="popup-backdrop" class="slds-modal-backdrop"></div>
+            </div>
+
+            <div class="slds-notify-container">
+                <div class="slds-notify slds-notify--toast" role="alert">
+                    <span class="slds-assistive-text">Info</span>
+                    <button class="slds-button slds-notify__close">
+                        <svg aria-hidden="true" class="slds-button__icon slds-button__icon--inverse">
+                            <use xlink:href="{!URLFOR($Resource.timerlightningdesign, 'assets/icons/action-sprite/svg/symbols.svg#close')}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <div class="notify__content">
+                        <h2 class="slds-text-heading--small" id="message"></h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <apex:includeScript value="{!$Resource.timerjqueryjs}"/>
+        <apex:includeScript value="{!$Resource.timercommonjs}"/>
+        <apex:includeScript value="{!$Resource.timerjs}"/>
+        <apex:includeScript value="{!$Resource.timercasetimerjs}"/>
+
+    </html>
+
+
+
+
+</apex:page>

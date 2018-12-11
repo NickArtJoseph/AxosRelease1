@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2: Opp 72h Reminder Template</name>
+    <style>none</style>
+    <subject>Reminder: 72 h SLA - {!Opportunity.Name} - {!Opportunity.CI_Projected_Close_Date__c} Boarding Form Due</subject>
+    <textOnly>Reminder: 72 h SLA. Please note {!Opportunity.Name} has a Projected Close Date of {!Opportunity.CI_Projected_Close_Date__c} and the Boarding Form has not been submitted for review.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

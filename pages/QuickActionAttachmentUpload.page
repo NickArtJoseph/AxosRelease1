@@ -1,0 +1,247 @@
+<apex:page showHeader="false" standardController="Case" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" extensions="QuickActionAttachmentUpload">    
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+
+<head>
+  <apex:slds />
+  <apex:includeScript value="/support/console/42.0/integration.js"/>
+  <title>Upload Attachments</title>
+</head>    
+<body>    
+	<div class="slds-scope" >
+  		<h1 class="slds-text-heading_large">
+	    	<apex:pageMessages />
+		</h1>      
+    	 <style>
+	        #holder { 
+	            border: 1px solid #015ba7; 
+	            width: 98%; 
+	            height:95%;  
+	            background-color: #fff; 
+	            -webkit-border-radius: 8px 8px 8px 8px;
+	            border-radius: 8px 8px 8px 8px;
+	            text-align: center; 
+	        }
+	        #holder span, #uploadCompleted span { 
+	            position: relative;
+	            top: 30%;
+	            transform: translateY(-50%);
+	            font-size:1em;
+	            color:#015ba7; 
+	        }  
+	   		
+	        #uploadprogress {
+	        	border-radius: 8px 8px 8px 8px;
+	        }
+
+	        #uploadStatus span{  
+	            font-size:1em;
+	        }
+	        
+	        #holder p { margin: 10px; font-size: 14px; }
+	        progress { width: 100%;  height:2em; }  
+	        .fail { background: #c00; padding: 2px; color: #fff; }
+	        .hidden { display: none;}
+	        .dragDropComponentSize{ height:90px ; overflow-y:auto; }
+	        body{width:98%;font-family: Helvetica,"Helvetica Neue",Arial,sans-serif;}
+	    </style>
+
+		<article class="dragDropComponentSize" id="dndContainer">
+		    <div id="holder" >
+		        <span id="holder_txt1" class="slds-text-heading--label slds-m-bottom--small"> Drag and Drop your file here </span>
+		        <span  id="holder_txt2" class="hidden slds-text-heading--label slds-m-bottom--small"> Upload </span>
+		    </div> 
+		    <p id="upload" class="hidden slds-text-heading--label slds-m-bottom--small"><label>Drag &amp; drop not supported by your browser, but you can still upload via this input field:<br /><input type="file" /></label></p>
+		    <p id="filereader" class="slds-text-heading--label slds-m-bottom--small">File API &amp; FileReader API not supported</p>
+		    <p id="formdata" class="slds-text-heading--label slds-m-bottom--small">XHR2's FormData is not supported</p>
+		    <p id="progress" class="slds-text-heading--label slds-m-bottom--small">XHR2's upload progress isn't supported</p>
+		    <p id="uploadStatus" class="hidden"><span class="slds-text-heading--label slds-m-bottom--small">Upload progress:</span> <progress id="uploadprogress" min="0" max="100" value="0"></progress></p> 
+		</article>
+		<script>
+		    var holder = document.getElementById('holder');
+		    var holder_txt1 = document.getElementById('holder_txt1');
+		    var holder_txt2 = document.getElementById('holder_txt2');
+		    var uploadStatus = document.getElementById('uploadStatus'); 
+
+		    var sfdcHostName = window.location.hostname;
+
+		    function refreshTab() {
+	            sforce.console.getFocusedPrimaryTabId(showTabId);
+	        }
+
+	         var showTabId = function showTabId(result) {
+            	var tabId = result.id
+            	sforce.console.refreshPrimaryTabById(tabId, true, refreshSuccess);
+	        };
+
+	        var refreshSuccess = function refreshSuccess(result) {
+	            //Report whether refreshing the primary tab was successful
+	            if (result.success == true) {
+	                console.log('Primary tab refreshed successfully');
+	            } 
+	            else {
+	                alert('Primary did not refresh');
+	            }
+        	};
+
+		    tests = {
+				filereader: typeof FileReader != 'undefined',
+				dnd: 'draggable' in document.createElement('span'),
+				formdata: !!window.FormData,
+				progress: "upload" in new XMLHttpRequest
+		    }, 
+		    support = {
+				filereader: document.getElementById('filereader'),
+				formdata: document.getElementById('formdata'),
+				progress: document.getElementById('progress')
+		    }, 
+			progress = document.getElementById('uploadprogress'),
+			fileupload = document.getElementById('upload');
+
+			"filereader formdata progress".split(' ').forEach(function (api) {
+				if (tests[api] === false) {
+					support[api].className = 'fail';
+				} 
+				else { 
+					support[api].className = 'hidden';
+				}
+			});
+			 
+
+			function textBeforeDrag(flag) {
+			    if(flag) {
+			        holder_txt1.className = '';
+			        holder_txt2.className = 'hidden';
+			    }
+			    else {
+			        holder_txt1.className = 'hidden';
+			        holder_txt2.className = '';
+			    }
+			}
+
+			function resetAll() {
+			    holder.className = holder_txt1.className = '';  
+			    holder_txt2.className = uploadStatus.className = 'hidden';
+			}
+
+			function readfiles(files) { 
+			    
+			    var formData = tests.formdata ? new FormData() : null;
+			      
+		      	//Not sure why multiple files dropping, so for time being disable multi file functionality
+		    	if(files.length > 1) {
+		        	alert('Multi Upload is not supported, please try to upload single file');
+		          	return;
+		      	}
+
+		      	if(files.size > 26214400) {
+		      		alert('Attachment size not supported');
+		      		return;
+		      	}
+		      	
+			    for (var i = 0; i < files.length; i++) {
+			        uploadStatus.className = '';  
+			        holder.className = 'hidden';
+			        if (tests.formdata) {
+						var xhr = new XMLHttpRequest();
+
+
+						var sfdcurl = 'https://'+sfdcHostName+'/services/apexrest/UploadAttachment?FileName='+encodeURIComponent(files[i].name)+'&parId={!$CurrentPage.parameters.id}';
+						console.log("URL> " + sfdcurl);
+
+						console.log(files);
+
+						var reader = new FileReader();
+						reader.readAsDataURL(files[i]);
+
+						var fName = files[i].name;
+						var allowedFiles = [".doc", ".docx", ".pdf", ".xls", ".csv", ".bmp", ".jpg", ".jpeg", ".png", ".tiff", ".key", ".odp", ".pps", ".ppt", ".pptx", ".xlsx", ".xlr", ".ods", ".pdf", ".rtf", ".tex", ".txt", ".wks", ".wps", ".wpd", ".msg"];
+				      	
+				      	var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + allowedFiles.join('|') + ")$");
+				        if (!regex.test(fName)) {
+				            alert("Please upload files having extensions: " + allowedFiles.join(', ') + ".");
+				            setTimeout(function() { location.reload(true); }, 200);
+					        refreshTab();
+				            return;
+				        }
+
+						var pId = '{!$CurrentPage.parameters.id}';
+						reader.onload = function(event) {
+							var base64FileString = event.target.result;
+
+						    // The file's text will be printed here
+						    Visualforce.remoting.Manager.invokeAction(
+					            '{!$RemoteAction.QuickActionAttachmentUpload.attachFile}', 
+					            fName, 
+					            pId,
+					            base64FileString,
+					            function(result, event){
+					                if (event.status) {
+					                	progressBar();
+					                	alert('Success: File Uploaded');
+					                	setTimeout(function() { location.reload(true); }, 200);
+					                	refreshTab();
+					                } else if (event.type === 'exception') {
+					                    alert('Error: Cant Upload the file');
+					                    setTimeout(function() { location.reload(true); }, 200);
+					                    refreshTab();
+					                } else {
+					                	alert('Error: Cant Upload the file');
+					                	setTimeout(function() { location.reload(true); }, 200);
+					                    refreshTab();
+					                }
+					            }
+					        );
+						    console.log(event.target.result);
+						};
+
+						function progressBar() { 
+							progress.value = progress.innerHTML = 100; 
+						};
+			    
+				        if (tests.progress) {
+				        	var p = document.getElementById('uploadprogress');
+				            function status(event) {
+				            	if (event.lengthComputable) {
+				            		reader.addEventListener('loadstart', function(evt) {
+									  if (evt.lengthComputable) p.max = evt.total;
+									}, false);
+									reader.addEventListener('progress', function(evt) {
+									  if (evt.lengthComputable) p.value = evt.loaded;
+									}, false);
+				              	}
+				            }
+				        }
+				    } 
+			    } 
+			}
+			if (tests.dnd) { 
+				holder.ondragover = function () { 
+				    this.className = 'hover'; 
+				    textBeforeDrag(false); 
+				    return false; 
+				};
+				holder.ondragend = function () { 
+				    this.className = ''; 
+				    textBeforeDrag(true); 
+				    return false; 
+				  };
+				holder.ondrop = function (e) {
+				    textBeforeDrag(true);
+				    this.className = '';
+				    
+				    e.preventDefault();
+				    readfiles(e.dataTransfer.files);
+				}
+			} 
+			else {
+				fileupload.className = 'hidden';
+				fileupload.querySelector('input').onchange = function () {
+					readfiles(this.files);
+			  	};
+			}
+		</script>
+	</div>
+</body>
+</html>
+</apex:page>

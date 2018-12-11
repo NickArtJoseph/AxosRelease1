@@ -1,0 +1,9 @@
+You have an approval awaiting for the account {!Account.Name}. 
+
+{!Account.BillingStreet}
+{!Account.BillingCity}, {!Account.BillingState} {!Account.BillingPostalCode}
+NMLSID: {!Account.NMLSID__c}
+
+From: {!User.Name}
+Prior Owner: *{!Account.Prior_Owner__c}*
+Click here to Approve or Deny: {!ApprovalRequest.Internal_URL}

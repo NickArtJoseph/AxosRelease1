@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CSI_Recording__c</fullName>
+        <description>For CSI Integration</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For CSI Integration</inlineHelpText>
+        <label>CSI Recording</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Call_Reason__c</fullName>
+        <description>Used by HRB call center to track inbound call reason</description>
+        <externalId>false</externalId>
+        <label>Call Reason</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Access Questions</fullName>
+                    <default>false</default>
+                    <label>Account Access Questions</label>
+                </value>
+                <value>
+                    <fullName>Call Center Hours</fullName>
+                    <default>false</default>
+                    <label>Call Center Hours</label>
+                </value>
+                <value>
+                    <fullName>Deposit Options</fullName>
+                    <default>false</default>
+                    <label>Deposit Options</label>
+                </value>
+                <value>
+                    <fullName>General Inquiry</fullName>
+                    <default>false</default>
+                    <label>General Inquiry</label>
+                </value>
+                <value>
+                    <fullName>Online Banking Questions</fullName>
+                    <default>false</default>
+                    <label>Online Banking Questions</label>
+                </value>
+                <value>
+                    <fullName>Products and Services</fullName>
+                    <default>false</default>
+                    <label>Products and Services</label>
+                </value>
+                <value>
+                    <fullName>Questions About BofI</fullName>
+                    <default>false</default>
+                    <label>Questions About BofI</label>
+                </value>
+                <value>
+                    <fullName>Transfer to BofI Customer Service</fullName>
+                    <default>false</default>
+                    <label>Transfer to BofI Customer Service</label>
+                </value>
+                <value>
+                    <fullName>Transfer to Consumer Sales</fullName>
+                    <default>false</default>
+                    <label>Transfer to Consumer Sales</label>
+                </value>
+                <value>
+                    <fullName>Transfer to HRB Servicing</fullName>
+                    <default>false</default>
+                    <label>Transfer to HRB Servicing</label>
+                </value>
+                <value>
+                    <fullName>Transfer to HRB - Emerald Card</fullName>
+                    <default>false</default>
+                    <label>Transfer to HRB - Emerald Card</label>
+                </value>
+                <value>
+                    <fullName>Transfer to HRB - Emerald Advance</fullName>
+                    <default>false</default>
+                    <label>Transfer to HRB - Emerald Advance</label>
+                </value>
+                <value>
+                    <fullName>Transfer to HRB - Refund Anticipation Check (RAC)</fullName>
+                    <default>false</default>
+                    <label>Transfer to HRB - Refund Anticipation Check (RAC)</label>
+                </value>
+                <value>
+                    <fullName>Transfer to HRB - Other Accounts</fullName>
+                    <default>false</default>
+                    <label>Transfer to HRB - Other Accounts</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Closed_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Status , &quot;Completed&quot;),  LastModifiedBy.FirstName + &quot; &quot; +  LastModifiedBy.LastName , NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Completed By</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Status , &quot;Completed&quot;), LastModifiedDate, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Completed Date and Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Read__c</fullName>
+        <description>Task for UDB</description>
+        <externalId>false</externalId>
+        <label>Customer Read</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DB_Activity_Type__c</fullName>
+        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package. If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and then delete this field.</description>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS( Subject , &quot;Email&quot;), &quot;Email&quot;, IF(CONTAINS( Subject , &quot;Cold Call&quot;), &quot;Cold Call&quot;, IF(CONTAINS( Subject , &quot;Call&quot;), &quot;Call&quot;, IF(CONTAINS( Subject , &quot;Meeting&quot;), &quot;Meeting&quot;, IF(CONTAINS( Subject , &quot;On Site Visit&quot;), &quot;Site Visit&quot;, IF(CONTAINS( Subject , &quot;Quote&quot;), &quot;Send Letter/Quote&quot;, &quot;Other&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DB Activity Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9ANI__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 ANI</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9AgentExtension__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Agent Extension</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9AgentName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Agent Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Agent__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Agent</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Call Type</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallbackCampaignId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9CallbackCampaignId</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallbackCampaignName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9CallbackCampaignName</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallbackId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9CallbackId</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9CallbackNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9CallbackNumber</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Campaign__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Campaign</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9Cost__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9DNIS__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 DNIS</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9HandleTime__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Handle Time</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9SessionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Session Id</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9TalkAndHoldTimeInSeconds__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Talk and Hold Duration</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9TaskType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 Task Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Chat</fullName>
+                    <default>false</default>
+                    <label>Chat</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Five9__Five9WrapTime__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Five9 After Call Work Time</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>( G4S__Glance_End_Time__c - G4S__Glance_Start_Time__c) * 60 *24</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Duration (min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_End_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Ended</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Guests__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number of Guests</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated from guest&apos;s Internet address</inlineHelpText>
+        <label>First Guest&apos;s Location</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Session_Key__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>4-digit key used by guests to join the session</inlineHelpText>
+        <label>Session Key</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Session_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Session Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Show</fullName>
+                    <default>false</default>
+                    <label>Show</label>
+                </value>
+                <value>
+                    <fullName>View</fullName>
+                    <default>false</default>
+                    <label>View</label>
+                </value>
+                <value>
+                    <fullName>CoBrowse</fullName>
+                    <default>false</default>
+                    <label>CoBrowse</label>
+                </value>
+                <value>
+                    <fullName>ViewApp</fullName>
+                    <default>false</default>
+                    <label>ViewApp</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Glance_Start_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Started</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Import_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Import Source</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inbound_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Inbound Phone #</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Assignment_Group__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Id for group assigned automatically assigned to specific tasks</description>
+        <externalId>false</externalId>
+        <label>Assignment Group</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Estimated_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Estimated number of hours/days to complete a Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter estimated time to complete a task</inlineHelpText>
+        <label>Estimated Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Assignment Group</label>
+        <referenceTo>nFORCE__Group__c</referenceTo>
+        <relationshipLabel>Activities</relationshipLabel>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Maintenance_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field describes the current Maintenance category for a particular Maintenance Task</description>
+        <externalId>false</externalId>
+        <label>Maintenance Category</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Add</fullName>
+                    <default>false</default>
+                    <label>Add</label>
+                </value>
+                <value>
+                    <fullName>Change</fullName>
+                    <default>false</default>
+                    <label>Change</label>
+                </value>
+                <value>
+                    <fullName>Remove</fullName>
+                    <default>false</default>
+                    <label>Remove</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Parent_Task__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a text field to house the parent Task Id for maintenance subtasks.</description>
+        <externalId>false</externalId>
+        <label>Parent Task</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__SubType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is not required. This field is manually populated. This field describes the current Maintenance type for a particluar Maintenance Task. It is dependent on the LLC_BI__Maintenance_Type__c (Maintenance Category)</description>
+        <externalId>false</externalId>
+        <label>Maintenance Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>LLC_BI__Maintenance_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Credit Limit Change</fullName>
+                    <default>false</default>
+                    <label>Credit Limit Change</label>
+                </value>
+                <value>
+                    <fullName>Address Change</fullName>
+                    <default>false</default>
+                    <label>Address Change</label>
+                </value>
+                <value>
+                    <fullName>Add Authorized User</fullName>
+                    <default>false</default>
+                    <label>Add Authorized User</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Add</controllingFieldValue>
+                <valueName>Add Authorized User</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Add</controllingFieldValue>
+                <controllingFieldValue>Change</controllingFieldValue>
+                <controllingFieldValue>Remove</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Change</controllingFieldValue>
+                <valueName>Credit Limit Change</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Change</controllingFieldValue>
+                <valueName>Address Change</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__isTemplate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This will show the Maintenance System that the task is a template task for Maintenance Subtasks.</description>
+        <externalId>false</externalId>
+        <label>Is Template</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Neustar_MPIC_Phone_Score__c</fullName>
+        <description>SF - Populated with Neustar MPIC phone score value at time of task creation via workflow rule [does not update after creation]</description>
+        <externalId>false</externalId>
+        <label>Neustar MPIC - Phone Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Neustar_Phone_Validation__c</fullName>
+        <description>SF - Populated with Neustar phone validation value at time of task creation via workflow rule [does not update after creation]</description>
+        <externalId>false</externalId>
+        <label>Neustar Phone - Validation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes_Research_Only__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes - Research Only</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Division</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Quality_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Quality Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Rate_Exception_Offered__c</fullName>
+        <description>Used by HRB</description>
+        <externalId>false</externalId>
+        <label>Rate Exception Offered</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Recording_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;will update once FTP server is live&quot;</formula>
+        <label>Recording URL</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recording__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(qbdialer__CallRecordingURL__c),&apos;&apos;,HYPERLINK(qbdialer__CallRecordingURL__c,&quot;Listen&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recording</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Record_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Reporting Record Type</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SF_Account_Owner__c</fullName>
+        <description>Hidden field used by Specialty Finance to capture Account owner at time of Task creation (populated via workflow)</description>
+        <externalId>false</externalId>
+        <label>SF - Account Owner</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SF_Correct_Contact_Details__c</fullName>
+        <description>Used by Specialty Finance; required value if Call Result field = &quot;Correct Contact&quot;</description>
+        <externalId>false</externalId>
+        <label>Correct Contact Details</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not available</fullName>
+                    <default>false</default>
+                    <label>Not available</label>
+                </value>
+                <value>
+                    <fullName>Not interested</fullName>
+                    <default>false</default>
+                    <label>Not interested</label>
+                </value>
+                <value>
+                    <fullName>Interested in the future</fullName>
+                    <default>false</default>
+                    <label>Interested in the future</label>
+                </value>
+                <value>
+                    <fullName>Pricing requested</fullName>
+                    <default>false</default>
+                    <label>Pricing requested</label>
+                </value>
+                <value>
+                    <fullName>VOB completed</fullName>
+                    <default>false</default>
+                    <label>VOB completed</label>
+                </value>
+                <value>
+                    <fullName>Pricing accepted</fullName>
+                    <default>false</default>
+                    <label>Pricing accepted</label>
+                </value>
+                <value>
+                    <fullName>Deal in progress</fullName>
+                    <default>false</default>
+                    <label>Deal in progress</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SF_Sales_Status__c</fullName>
+        <description>Hidden field used by Specialty Finance to capture Account Sales Status at time of Task creation (populated via workflow)</description>
+        <externalId>false</externalId>
+        <label>SF - Sales Status</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SQL_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SQL ID</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pricing</fullName>
+                    <default>false</default>
+                    <label>Pricing</label>
+                </value>
+                <value>
+                    <fullName>Docs Out</fullName>
+                    <default>false</default>
+                    <label>Docs Out</label>
+                </value>
+                <value>
+                    <fullName>Docs Back</fullName>
+                    <default>false</default>
+                    <label>Docs Back</label>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                    <label>Legal</label>
+                </value>
+                <value>
+                    <fullName>Prep to Fund</fullName>
+                    <default>false</default>
+                    <label>Prep to Fund</label>
+                </value>
+                <value>
+                    <fullName>Funded</fullName>
+                    <default>false</default>
+                    <label>Funded</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Summary</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Task_Completed__c</fullName>
+        <description>Used by SF. Populated through workflow with current date/time when status is set to &quot;Completed&quot;.</description>
+        <externalId>false</externalId>
+        <label>Task Completed</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Task_Completion_Time_in_minutes__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*days*/
+(FLOOR( Task_Completed__c - Task_Started__c ) * 24 * 60) +
+/*hours*/
+(FLOOR( MOD( (Task_Completed__c - Task_Started__c) * 24, 24 ) ) * 60)  +
+/*minutes*/
+(ROUND( MOD( (Task_Completed__c - Task_Started__c) * 24 * 60, 60 ), 0 ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Task Completion Time (in minutes)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Group</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TSBANKING</fullName>
+                    <default>false</default>
+                    <label>TSBANKING</label>
+                </value>
+                <value>
+                    <fullName>TSBREAKFIX</fullName>
+                    <default>false</default>
+                    <label>TSBREAKFIX</label>
+                </value>
+                <value>
+                    <fullName>TSCONVERSION</fullName>
+                    <default>false</default>
+                    <label>TSCONVERSION</label>
+                </value>
+                <value>
+                    <fullName>TSINVENTORY</fullName>
+                    <default>false</default>
+                    <label>TSINVENTORY</label>
+                </value>
+                <value>
+                    <fullName>TSPRODSUPPORT</fullName>
+                    <default>false</default>
+                    <label>TSPRODSUPPORT</label>
+                </value>
+                <value>
+                    <fullName>TSRESOLVE</fullName>
+                    <default>false</default>
+                    <label>TSRESOLVE</label>
+                </value>
+                <value>
+                    <fullName>TSTECHCOORD</fullName>
+                    <default>false</default>
+                    <label>TSTECHCOORD</label>
+                </value>
+                <value>
+                    <fullName>NONE</fullName>
+                    <default>false</default>
+                    <label>NONE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Task_Started__c</fullName>
+        <description>Used by SF. Workflow populates this field with current date/time when status changes to &quot;In Progress&quot; and a value is not already stored.</description>
+        <externalId>false</externalId>
+        <label>Task Started</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Time_Due__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Due</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>7:00 AM</fullName>
+                    <default>false</default>
+                    <label>7:00 AM</label>
+                </value>
+                <value>
+                    <fullName>7:30 AM</fullName>
+                    <default>false</default>
+                    <label>7:30 AM</label>
+                </value>
+                <value>
+                    <fullName>8:00 AM</fullName>
+                    <default>false</default>
+                    <label>8:00 AM</label>
+                </value>
+                <value>
+                    <fullName>8:30 AM</fullName>
+                    <default>false</default>
+                    <label>8:30 AM</label>
+                </value>
+                <value>
+                    <fullName>9:00 AM</fullName>
+                    <default>false</default>
+                    <label>9:00 AM</label>
+                </value>
+                <value>
+                    <fullName>9:30 AM</fullName>
+                    <default>false</default>
+                    <label>9:30 AM</label>
+                </value>
+                <value>
+                    <fullName>10:00 AM</fullName>
+                    <default>false</default>
+                    <label>10:00 AM</label>
+                </value>
+                <value>
+                    <fullName>10:30 AM</fullName>
+                    <default>false</default>
+                    <label>10:30 AM</label>
+                </value>
+                <value>
+                    <fullName>11:00 AM</fullName>
+                    <default>false</default>
+                    <label>11:00 AM</label>
+                </value>
+                <value>
+                    <fullName>11:30 AM</fullName>
+                    <default>false</default>
+                    <label>11:30 AM</label>
+                </value>
+                <value>
+                    <fullName>12:00 PM</fullName>
+                    <default>false</default>
+                    <label>12:00 PM</label>
+                </value>
+                <value>
+                    <fullName>12:30 PM</fullName>
+                    <default>false</default>
+                    <label>12:30 PM</label>
+                </value>
+                <value>
+                    <fullName>1:00 PM</fullName>
+                    <default>false</default>
+                    <label>1:00 PM</label>
+                </value>
+                <value>
+                    <fullName>1:30 PM</fullName>
+                    <default>false</default>
+                    <label>1:30 PM</label>
+                </value>
+                <value>
+                    <fullName>2:00 PM</fullName>
+                    <default>false</default>
+                    <label>2:00 PM</label>
+                </value>
+                <value>
+                    <fullName>2:30 PM</fullName>
+                    <default>false</default>
+                    <label>2:30 PM</label>
+                </value>
+                <value>
+                    <fullName>3:00 PM</fullName>
+                    <default>false</default>
+                    <label>3:00 PM</label>
+                </value>
+                <value>
+                    <fullName>3:30 PM</fullName>
+                    <default>false</default>
+                    <label>3:30 PM</label>
+                </value>
+                <value>
+                    <fullName>4:00 PM</fullName>
+                    <default>false</default>
+                    <label>4:00 PM</label>
+                </value>
+                <value>
+                    <fullName>4:30 PM</fullName>
+                    <default>false</default>
+                    <label>4:30 PM</label>
+                </value>
+                <value>
+                    <fullName>5:00 PM</fullName>
+                    <default>false</default>
+                    <label>5:00 PM</label>
+                </value>
+                <value>
+                    <fullName>5:30 PM</fullName>
+                    <default>false</default>
+                    <label>5:30 PM</label>
+                </value>
+                <value>
+                    <fullName>6:00 PM</fullName>
+                    <default>false</default>
+                    <label>6:00 PM</label>
+                </value>
+                <value>
+                    <fullName>6:30 PM</fullName>
+                    <default>false</default>
+                    <label>6:30 PM</label>
+                </value>
+                <value>
+                    <fullName>7:00 PM</fullName>
+                    <default>false</default>
+                    <label>7:00 PM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Time_Waiting_on_Someone_Else_mins__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*days*/ 
+(FLOOR( Waiting_on_Someone_Else_End__c - Waiting_on_Someone_Else_Start__c ) * 24 * 60) +
+/*hours*/
+(FLOOR( MOD( (Waiting_on_Someone_Else_End__c - Waiting_on_Someone_Else_Start__c) * 24, 24 ) ) * 60) +
+/*minutes*/
+(ROUND( MOD( (Waiting_on_Someone_Else_End__c - Waiting_on_Someone_Else_Start__c) * 24 * 60, 60 ), 0 ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Time Waiting on Someone Else (mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Waiting_on_Someone_Else_End__c</fullName>
+        <description>Used by Specialty Finance to capture when a Task leaves the Waiting on Someone Else status</description>
+        <externalId>false</externalId>
+        <label>Waiting on Someone Else End</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Waiting_on_Someone_Else_Start__c</fullName>
+        <description>Used by Specialty Finance to capture when a Task enters the Waiting on Someone Else status</description>
+        <externalId>false</externalId>
+        <label>Waiting on Someone Else Start</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>cnx__CTIInfo__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Additional CTI Information</description>
+        <externalId>false</externalId>
+        <label>CTI Info</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnx__UniqueId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>UniqueId</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_acd_name__c</fullName>
+        <externalId>false</externalId>
+        <label>ACD Name</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_day_week__c</fullName>
+        <externalId>false</externalId>
+        <label>Day of the Week</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_dialed_phone_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Dialed</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>isdc_dialer_call_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Dialer Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Click-to-Call</fullName>
+                    <default>false</default>
+                    <label>Click-to-Call</label>
+                </value>
+                <value>
+                    <fullName>Seek</fullName>
+                    <default>false</default>
+                    <label>Seek</label>
+                </value>
+                <value>
+                    <fullName>Domino</fullName>
+                    <default>false</default>
+                    <label>Domino</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>isdc_dialer_list_name__c</fullName>
+        <externalId>false</externalId>
+        <label>List Name</label>
+        <length>120</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_dialer_query_name__c</fullName>
+        <externalId>false</externalId>
+        <label>Query Name</label>
+        <length>120</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_call_answered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Call Answered</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_call_failover__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Call Failover</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_callerid__c</fullName>
+        <externalId>false</externalId>
+        <label>Inbound Caller-ID</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_failover_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Failover Number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_number_dialed__c</fullName>
+        <externalId>false</externalId>
+        <label>Inbound Number Dialed</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_routed_to_last_caller__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Route to Last Caller</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_routed_to_owner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Route to Owner</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isdc_inbound_wait_time__c</fullName>
+        <externalId>false</externalId>
+        <label>Wait Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isdc_local_presence_call__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Local Presence</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>qbdialer__CallRecordingURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Link to the call recording</description>
+        <externalId>false</externalId>
+        <label>Call Recording</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Call Date/Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Dial_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total number of dials on the record being called</description>
+        <externalId>false</externalId>
+        <label>Call Dial Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Hour__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hour in which the call was placed from the record&apos;s perspective</description>
+        <externalId>false</externalId>
+        <label>Call Hour</label>
+        <length>8</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Lead_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Lead Status of the record called</description>
+        <externalId>false</externalId>
+        <label>Call Lead Status</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Ring_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Ring Time of the phone call</description>
+        <externalId>false</externalId>
+        <label>Call Ring Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Call_Time_Zone__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time zone of the number being called</description>
+        <externalId>false</externalId>
+        <label>Call Time Zone</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__Callback_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Callback Date/Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>qbdialer__ImpressionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Impression ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>qbdialer__SMSReminder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Text message reminders will be sent to all attendees at the set reminder time.</inlineHelpText>
+        <label>Send text msg reminder to all attendees</label>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>Future_Tasks</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Future Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__AllActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>All Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__Ancillary_Service_Task_Templates</fullName>
+        <columns>LLC_BI__isTemplate__c</columns>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LLC_BI__isTemplate__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Ancillary Service Task Templates</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>Five9__Five9Campaign__c</columns>
+        <columns>TASK.CALLDISPOSITION</columns>
+        <columns>Five9__Five9HandleTime__c</columns>
+        <columns>Five9__Five9CallType__c</columns>
+        <columns>Recording_URL__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Completed_Tasks</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.STATUS</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>My Completed Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>Tasks_with_Time_Due</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>Time_Due__c</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <label>Tasks with Time Due</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <columns>TASK.SUBJECT</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <listViewButtons>qbdialer__Create_List</listViewButtons>
+        <listViewButtons>qbdialer__Manage_Lists</listViewButtons>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.CALLDISPOSITION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Five9__Five9Campaign__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Five9__Five9HandleTime__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Five9__Five9CallType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Recording_URL__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>qbdialer__Launch_Click_to_Call</fullName>
+        <availability>online</availability>
+        <description>For Beta</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Launch Click-to-Call</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var th = window.top.document.body;
+			var s = window.top.document.createElement(&apos;script&apos;);
+			s.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);
+			s.setAttribute(&apos;src&apos;,&quot;/resource/qbdialer__c2c_resources/2017071710334/c2c_console.js&quot;);
+			th.appendChild(s);</url>
+    </webLinks>
+</CustomObject>

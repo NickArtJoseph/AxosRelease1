@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is the email template for the daily ratesheet.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>RateSheet</name>
+    <style>none</style>
+    <subject>BOFI Federal Bank Rates for {!Today}</subject>
+    <textOnly>Enclosed is today&apos;s current rates for BOFI Federal Bank.  Sincerely,  {!Contact.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" controller="ExternalReferralOppApexController"> <!--inherit recordId attribute-->
+    <aura:attribute name="availableRecordTypes" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card iconName="custom:custom85" title="External Referral Opportunity">
+                <lightning:select aura:id="recordTypes" name="recordTypes" label="Select Record Type" required="false">
+                    <aura:iteration items="{!v.availableRecordTypes}" var="item" indexVar="i">
+                        <option value="{!item.value}" text="{!item.label}"> </option>
+                    </aura:iteration>
+                </lightning:select>
+                <lightning:button label="Create Lead" onclick="{!c.validateEntry}" variant="brand" class="slds-m-top--medium"/>
+    </lightning:card>
+    
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if>
+</aura:component>

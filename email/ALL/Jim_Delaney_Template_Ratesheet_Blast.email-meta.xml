@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Ratesheet Blast Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Jim Delaney Template Ratesheet Blast</name>
+    <style>none</style>
+    <subject>BOFI&apos;s New Years Rates for Income Property Lending</subject>
+    <textOnly>Ring in the New Year with BOFI&apos;s New Rates!
+
+
+Eligible Properties:
+Stabilized properties with at least 5 units in major MSA’s* and proven management.
+Up to 40% commercial component permitted; student and senior housing eligible for financing.
+Loan Amounts:
+$250,000 - $10,000,000
+Term &amp; Amortization:
+Adjustable, 3, 5, 7, and 10 year hybrid loans amortized out for 30 years.
+Prepayment Penalty:
+Typically step-down prepayment penalties during the fixed rate portion of the loan.
+Loan to Value Ratio:
+Maximum LTV 75% depending on the quality and program.
+Debt Coverage Ratio:
+Minimum 1.25:1 DCR
+Credit Score:
+Minimum middle credit score 680
+Application Fee:
+Generally $3,500, which will be applied towards third party costs to include but not limited to Credit Report, Appraisal Report, Property Inspection.
+Title/Escrow:
+Preferred carriers offer discounts to our clients.
+Pricing:
+Interest rates quoted daily. Please contact an Apartment Bank/BofI Federal Bank Representative for pricing parameters.
+Borrower:
+Individuals, Trusts, Limit Liability Companies, Limited Partnerships, COPs and Corporations.
+Territory:
+Nationwide MSA’s* with minimum population area of 100,000.
+Loan Features:
+Recourse Lender
+Assumable
+Secondary financing may be allowed on purchase transactions
+Layered risk-based pricing to ensure lowest rates
+Several prepayment options keep you in control</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

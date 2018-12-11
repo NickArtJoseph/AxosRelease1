@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>J. Shoop July 15</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>July15Webinar</name>
+    <style>none</style>
+    <subject>Join Us For A Webinar with BOFI Federal Bank</subject>
+    <textOnly>&quot;Become The Realtor&apos;s Obvious Choice&quot; with J. Shoop / B of I Federal Bank
+
+Join us for a Webinar on July 15
+
+Join National Account Executive J. Shoop to learn how to have three simple, purposeful conversations Realtors and other strategic partners to help separate yourself from the competition.
+
+Title:
+
+&quot;Become The Realtor&apos;s Obvious Choice&quot; with J. Shoop / B of I Federal Bank
+
+Date:
+
+Tuesday, July 15, 2014
+
+Time:
+
+11:30 AM - 12:00 PM PDT
+
+
+After registering you will receive a confirmation email containing information about joining the Webinar.
+
+
+System Requirements
+PC-based attendees
+Required: Windows® 8, 7, Vista, XP or 2003 Server
+
+Mac®-based attendees
+Required: Mac OS® X 10.6 or newer
+
+Mobile attendees
+Required: iPhone®, iPad®, Android™ phone or Android tablet
+
+
+Space is limited.
+Reserve your Webinar seat now at:
+https://www4.gotomeeting.com/register/772973591</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

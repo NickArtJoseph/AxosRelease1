@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-size: 12pt;"><font face="arial">We are sorry but your application has been declined due to a credit report security freeze.<br><br>***Please print this page for your records***<br><br>Thank you for your Axos Bank™ application.&nbsp;Unfortunately, due to a security freeze or alert on your credit report, we cannot process your application.<br><br>You can request a temporary Global Release or security freeze lift from the credit bureau by contacting them directly.&nbsp; <br><br>You can reach Trans Union at 888-909-8872 or through their website at <a href="https://freeze.transunion.com/sf/securityFreeze/landingPage.jsp">https://freeze.transunion.com/sf/securityFreeze/landingPage.jsp</a><br><br>You can reach Experian at 888-397-3742 or through their website at <a href="https://www.experian.com/freeze/center.html">https://www.experian.com/freeze/center.html</a><br><br>Please wait at least 30 minutes after requesting your Global Release before submitting a new application.<br><br><b>Questions?</b> If you have any questions, please call us at (888) 502-2967 or email us at <a href="mailto:customerservice@Axos%20Bank.com">customerservice@axosbank.com</a>.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank </font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

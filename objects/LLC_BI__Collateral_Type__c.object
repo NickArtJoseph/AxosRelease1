@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The type of a piece of Collateral.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>LLC_BI__Active__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional field indicates the collateral type. If the collateral type has an expiration date in the past this will be set to false. If the collateral type is inactive, it cannot be selected when adding collateral.</description>
+        <externalId>false</externalId>
+        <formula>TODAY() &lt; LLC_BI__Expire_Date__c || ISBLANK(LLC_BI__Expire_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Advance_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The percentage of the value of a collateral that a lender is willing to extend for a loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The percentage of the value of a collateral that a lender is willing to extend for a loan.</inlineHelpText>
+        <label>Advance Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is used to classify a piece of collateral to a specific category.</description>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>LLC_BI__Collateral_Category_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collateral_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The code for a piece of Collateral.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The code for a piece of Collateral.</inlineHelpText>
+        <label>Collateral Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collateral_Configuration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It holds the configuration data for the complex collateral user interface. It will contain information about screen to function mappings and field set types to use for collateral copy and cloning operations.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Complex Collateral configuration and control data</inlineHelpText>
+        <label>Collateral Configuration</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Condo_PUD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional field specifies if the collateral is a condo or planned unit development. It is manually populated.</description>
+        <externalId>false</externalId>
+        <label>Condo/PUD</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Expire_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The date that this type of collateral is no longer valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date that this type of collateral is no longer valid.</inlineHelpText>
+        <label>Expire Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Field_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. Determines the field set that is used for this Collateral Type on the Manage Collateral Page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the field set that is used for this Collateral Type on the Manage Collateral Page</inlineHelpText>
+        <label>Field Set</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Highest_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This lookup field is optional and is used to select the highest level parent record in a hierarchy for the Collateral Type record.</description>
+        <externalId>false</externalId>
+        <label>Highest Type</label>
+        <referenceTo>LLC_BI__Collateral_Type__c</referenceTo>
+        <relationshipLabel>Collateral Types (Highest Type)</relationshipLabel>
+        <relationshipName>HighestTypes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Icon_Background_Color__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the hexadecimal color for the background of the Icon.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a hexadecimal color.</inlineHelpText>
+        <label>Icon Background Color</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Icon_Color__c</fullName>
+        <defaultValue>&quot;#ffffff&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines the hexadecimal color for the background of the Icon.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a hexadecimal color.</inlineHelpText>
+        <label>Icon Color</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Icon_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the icon type for this record. The entry must include the following pattern: folderName/iconName. For example to display the &quot;client&quot; icon from the standard folder enter &apos;standard/client&apos;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the icon folder name then a &quot;/&quot; followed by the icon name. Example &quot;standard/client&quot;</inlineHelpText>
+        <label>Icon Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Complex__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional boolean field is used to determine if the record has a parent-child relationship. The default is false, where the record does not have a parent-child relationship.</description>
+        <externalId>false</externalId>
+        <label>Is Complex</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Leasing_Screen__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field with the screen that displays when users add or edit an asset on a lease. By default, the value is blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this optional field to define the screen that displays when users add or edit an asset on a lease. If a screen is not defined, the LLC_BI_Screen_c screen will be used by default.</inlineHelpText>
+        <label>Leasing Screen</label>
+        <referenceTo>nFORCE__Screen__c</referenceTo>
+        <relationshipLabel>Leasing Screen</relationshipLabel>
+        <relationshipName>Leasing_Screen</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Manufactured_Home__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field defaults to false and is manually populated. is a checkbox to be marked if this piece of collateral is a manufactured home.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a checkbox to be marked if this piece of collateral is a manufactured home.</inlineHelpText>
+        <label>Manufactured Home</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Parent_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This lookup field is optional and is used to select a parent record for the Collateral Type record. Information provided on a child record rolls up to the parent collateral for valuation.</description>
+        <externalId>false</externalId>
+        <label>Parent Type</label>
+        <referenceTo>LLC_BI__Collateral_Type__c</referenceTo>
+        <relationshipLabel>Collateral Types</relationshipLabel>
+        <relationshipName>Parent_Types</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Regulatory_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. Regulatory Advance Rate, typically used for real estate. An advance rate above this will require specific reporting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Regulatory Advance Rate, typically used for real estate. An advance rate above this will require specific reporting.</inlineHelpText>
+        <label>Regulatory Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Screen__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Administrators populate this optional text field with the screen that displays when users add or edit collateral on a loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this optional text field to define the screen that displays when users add or edit collateral on a loan.</inlineHelpText>
+        <label>Screen</label>
+        <referenceTo>nFORCE__Screen__c</referenceTo>
+        <relationshipLabel>Collateral Types</relationshipLabel>
+        <relationshipName>Collateral_Types</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The date the collateral type was put into effect.</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Subtype__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. The subtype of a piece of Collateral.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The subtype of a piece of Collateral.</inlineHelpText>
+        <label>Subtype</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>LLC_BI__Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Motor Vehicle</fullName>
+                    <default>false</default>
+                    <label>Motor Vehicle</label>
+                </value>
+                <value>
+                    <fullName>Pleasure Boat</fullName>
+                    <default>false</default>
+                    <label>Pleasure Boat</label>
+                </value>
+                <value>
+                    <fullName>Vessel</fullName>
+                    <default>false</default>
+                    <label>Vessel</label>
+                </value>
+                <value>
+                    <fullName>Aircraft</fullName>
+                    <default>false</default>
+                    <label>Aircraft</label>
+                </value>
+                <value>
+                    <fullName>Trailer</fullName>
+                    <default>false</default>
+                    <label>Trailer</label>
+                </value>
+                <value>
+                    <fullName>Other Titled</fullName>
+                    <default>false</default>
+                    <label>Other Titled</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Savings/CD&apos;s</fullName>
+                    <default>false</default>
+                    <label>Savings/CD&apos;s</label>
+                </value>
+                <value>
+                    <fullName>Securities</fullName>
+                    <default>false</default>
+                    <label>Securities</label>
+                </value>
+                <value>
+                    <fullName>Note/Instrument</fullName>
+                    <default>false</default>
+                    <label>Note/Instrument</label>
+                </value>
+                <value>
+                    <fullName>Receipts/Bills</fullName>
+                    <default>false</default>
+                    <label>Receipts/Bills</label>
+                </value>
+                <value>
+                    <fullName>Letter of Credit</fullName>
+                    <default>false</default>
+                    <label>Letter of Credit</label>
+                </value>
+                <value>
+                    <fullName>Other Possessory</fullName>
+                    <default>false</default>
+                    <label>Other Possessory</label>
+                </value>
+                <value>
+                    <fullName>Life Insurance</fullName>
+                    <default>false</default>
+                    <label>Life Insurance</label>
+                </value>
+                <value>
+                    <fullName>Inventory</fullName>
+                    <default>false</default>
+                    <label>Inventory</label>
+                </value>
+                <value>
+                    <fullName>Chattel Paper</fullName>
+                    <default>false</default>
+                    <label>Chattel Paper</label>
+                </value>
+                <value>
+                    <fullName>Relationships</fullName>
+                    <default>false</default>
+                    <label>Relationships</label>
+                </value>
+                <value>
+                    <fullName>Equipment</fullName>
+                    <default>false</default>
+                    <label>Equipment</label>
+                </value>
+                <value>
+                    <fullName>General Intangibles</fullName>
+                    <default>false</default>
+                    <label>General Intangibles</label>
+                </value>
+                <value>
+                    <fullName>Farm Products</fullName>
+                    <default>false</default>
+                    <label>Farm Products</label>
+                </value>
+                <value>
+                    <fullName>Livestock</fullName>
+                    <default>false</default>
+                    <label>Livestock</label>
+                </value>
+                <value>
+                    <fullName>Farm Equipment</fullName>
+                    <default>false</default>
+                    <label>Farm Equipment</label>
+                </value>
+                <value>
+                    <fullName>Consumer Goods</fullName>
+                    <default>false</default>
+                    <label>Consumer Goods</label>
+                </value>
+                <value>
+                    <fullName>Tort Claim</fullName>
+                    <default>false</default>
+                    <label>Tort Claim</label>
+                </value>
+                <value>
+                    <fullName>Crops</fullName>
+                    <default>false</default>
+                    <label>Crops</label>
+                </value>
+                <value>
+                    <fullName>Fixtures</fullName>
+                    <default>false</default>
+                    <label>Fixtures</label>
+                </value>
+                <value>
+                    <fullName>Standing Timber</fullName>
+                    <default>false</default>
+                    <label>Standing Timber</label>
+                </value>
+                <value>
+                    <fullName>Minerals, Oil and Gas</fullName>
+                    <default>false</default>
+                    <label>Minerals, Oil and Gas</label>
+                </value>
+                <value>
+                    <fullName>1-4 Family</fullName>
+                    <default>false</default>
+                    <label>1-4 Family</label>
+                </value>
+                <value>
+                    <fullName>Multi-Family</fullName>
+                    <default>false</default>
+                    <label>Multi-Family</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Lot</fullName>
+                    <default>false</default>
+                    <label>Lot</label>
+                </value>
+                <value>
+                    <fullName>Mobile Home</fullName>
+                    <default>false</default>
+                    <label>Mobile Home</label>
+                </value>
+                <value>
+                    <fullName>Land</fullName>
+                    <default>false</default>
+                    <label>Land</label>
+                </value>
+                <value>
+                    <fullName>Farm Land</fullName>
+                    <default>false</default>
+                    <label>Farm Land</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Warehouse</fullName>
+                    <default>false</default>
+                    <label>Warehouse</label>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Other RE</fullName>
+                    <default>false</default>
+                    <label>Other RE</label>
+                </value>
+                <value>
+                    <fullName>Government Contracts</fullName>
+                    <default>false</default>
+                    <label>Government Contracts</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Motor Vehicle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Pleasure Boat</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Vessel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Aircraft</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Trailer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Titled</controllingFieldValue>
+                <valueName>Other Titled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>1-4 Family</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Multi-Family</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Lot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Mobile Home</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Land</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Farm Land</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Office</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Warehouse</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Retail</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Real Estate</controllingFieldValue>
+                <valueName>Other RE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Inventory</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Chattel Paper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Relationships</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>General Intangibles</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Farm Products</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Livestock</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Farm Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Consumer Goods</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Tort Claim</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Crops</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Fixtures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Standing Timber</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>UCC</controllingFieldValue>
+                <valueName>Minerals, Oil and Gas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Other</controllingFieldValue>
+                <valueName>Government Contracts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>None</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Savings/CD&apos;s</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Securities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Note/Instrument</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Receipts/Bills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Letter of Credit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Other Possessory</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Possessory</controllingFieldValue>
+                <valueName>Life Insurance</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The type of Collateral.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The type of Collateral.</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Titled</fullName>
+                    <default>false</default>
+                    <label>Titled</label>
+                </value>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>UCC</fullName>
+                    <default>false</default>
+                    <label>UCC</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Possessory</fullName>
+                    <default>false</default>
+                    <label>Possessory</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Valuation_Source__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A picklist field used to capture the potential sources of collateral valuation. This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The potential sources of collateral valuation</inlineHelpText>
+        <label>Valuation Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Balance / Statement</fullName>
+                    <default>false</default>
+                    <label>Account Balance / Statement</label>
+                </value>
+                <value>
+                    <fullName>Appraisal</fullName>
+                    <default>false</default>
+                    <label>Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Credit Officer</fullName>
+                    <default>false</default>
+                    <label>Credit Officer</label>
+                </value>
+                <value>
+                    <fullName>Financial Statement</fullName>
+                    <default>false</default>
+                    <label>Financial Statement</label>
+                </value>
+                <value>
+                    <fullName>Insurance Agent</fullName>
+                    <default>false</default>
+                    <label>Insurance Agent</label>
+                </value>
+                <value>
+                    <fullName>Internal Valuation</fullName>
+                    <default>false</default>
+                    <label>Internal Valuation</label>
+                </value>
+                <value>
+                    <fullName>Inventory Report</fullName>
+                    <default>false</default>
+                    <label>Inventory Report</label>
+                </value>
+                <value>
+                    <fullName>Invoice / Bill of Sale</fullName>
+                    <default>false</default>
+                    <label>Invoice / Bill of Sale</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Abundance of Caution</fullName>
+                    <default>false</default>
+                    <label>Real Estate Abundance of Caution</label>
+                </value>
+                <value>
+                    <fullName>Receivables Aging</fullName>
+                    <default>false</default>
+                    <label>Receivables Aging</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Evaluation</fullName>
+                    <default>false</default>
+                    <label>Real Estate Evaluation</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Restricted Appraisal</fullName>
+                    <default>false</default>
+                    <label>Real Estate Restricted Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Third Party Source</fullName>
+                    <default>false</default>
+                    <label>Third Party Source</label>
+                </value>
+                <value>
+                    <fullName>Valuation Service Vendor</fullName>
+                    <default>false</default>
+                    <label>Valuation Service Vendor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Valuation_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A picklist field used to capture the potential types of collateral valuation. This would be entered by the user when a new valuation is entered. No default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The potential types of collateral valuation</inlineHelpText>
+        <label>Valuation Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Actual Cash Value</fullName>
+                    <default>false</default>
+                    <label>Actual Cash Value</label>
+                </value>
+                <value>
+                    <fullName>As Complete Value</fullName>
+                    <default>false</default>
+                    <label>As Complete Value</label>
+                </value>
+                <value>
+                    <fullName>As Is Value</fullName>
+                    <default>false</default>
+                    <label>As Is Value</label>
+                </value>
+                <value>
+                    <fullName>As Stabilized Value</fullName>
+                    <default>false</default>
+                    <label>As Stabilized Value</label>
+                </value>
+                <value>
+                    <fullName>Balance Sheet</fullName>
+                    <default>false</default>
+                    <label>Balance Sheet</label>
+                </value>
+                <value>
+                    <fullName>Book Value</fullName>
+                    <default>false</default>
+                    <label>Book Value</label>
+                </value>
+                <value>
+                    <fullName>Cash Balance</fullName>
+                    <default>false</default>
+                    <label>Cash Balance</label>
+                </value>
+                <value>
+                    <fullName>Contents Value</fullName>
+                    <default>false</default>
+                    <label>Contents Value</label>
+                </value>
+                <value>
+                    <fullName>Fair Market Value - Real Estate</fullName>
+                    <default>false</default>
+                    <label>Fair Market Value - Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Fair Market Value - Equipment / Transportation</fullName>
+                    <default>false</default>
+                    <label>Fair Market Value - Equipment / Transportation</label>
+                </value>
+                <value>
+                    <fullName>Net Orderly Liquidation Value</fullName>
+                    <default>false</default>
+                    <label>Net Orderly Liquidation Value</label>
+                </value>
+                <value>
+                    <fullName>Orderly Liquidation Value</fullName>
+                    <default>false</default>
+                    <label>Orderly Liquidation Value</label>
+                </value>
+                <value>
+                    <fullName>Preliminary Value</fullName>
+                    <default>false</default>
+                    <label>Preliminary Value</label>
+                </value>
+                <value>
+                    <fullName>Purchase Price</fullName>
+                    <default>false</default>
+                    <label>Purchase Price</label>
+                </value>
+                <value>
+                    <fullName>Replacement Cost Value</fullName>
+                    <default>false</default>
+                    <label>Replacement Cost Value</label>
+                </value>
+                <value>
+                    <fullName>Waived Value</fullName>
+                    <default>false</default>
+                    <label>Waived Value</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__lookupKey__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records, when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm.</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Collateral Type</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Collateral Type Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Collateral Types</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>LLC_BI__Advance_Rate_should_not_be_null</fullName>
+        <active>true</active>
+        <description>Advance Rate should not be null.</description>
+        <errorConditionFormula>ISNULL(LLC_BI__Advance_Rate__c)</errorConditionFormula>
+        <errorMessage>Please enter an advance rate for the collateral type.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>LLC_BI__CreateCollateralTypeScreen</fullName>
+        <availability>online</availability>
+        <description>Create duplicate of default collateral type screen and associate it with the Collateral Type record.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Collateral Type Screen</masterLabel>
+        <openType>sidebar</openType>
+        <page>LLC_BI__CreateCollateralTypeScreen</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

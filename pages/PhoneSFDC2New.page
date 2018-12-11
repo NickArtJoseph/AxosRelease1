@@ -1,0 +1,20 @@
+<apex:page standardController="Phone_SFDC2__c" extensions="PhoneSFDC2Controller">
+	<h1>New Phone</h1>
+	<apex:messages />
+	<apex:form >
+		<apex:pageBlock title="Phone">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!saveNew}" value="Save"/>
+				<apex:commandButton action="{!cancel}" value="Cancel"/>
+			</apex:pageblockButtons>
+			<apex:pageblockSection > 
+				<!-- list other fields you want user to input data -->
+				<apex:inputHidden value="{!objInstance.Account__c}"/>
+				<apex:inputHidden value="{!objInstance.Lead__c}"/>
+				<apex:inputField value="{!objInstance.Phone__c}"/>
+				<apex:inputField value="{!objInstance.Phone_Status__c}"/>
+				<apex:inputField value="{!objInstance.Phone_Type__c}"/>
+			</apex:pageblockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

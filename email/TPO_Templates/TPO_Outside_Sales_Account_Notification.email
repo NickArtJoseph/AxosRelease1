@@ -1,0 +1,10 @@
+Attention:
+
+The following account has been transferred to the TPO House Account:
+
+Account: {!Account.Name}
+NMLSID: {!Account.NMLSID__c}
+Current Status: {!Account.SFR_TPO_IPL_Client_Status__c}
+
+Address: 
+{!Account.BillingAddress}

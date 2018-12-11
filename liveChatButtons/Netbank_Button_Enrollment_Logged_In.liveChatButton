@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatButton xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <autoGreeting>Welcome to Netbank! You are chatting with {!User_FirstName}. How may I assist you?</autoGreeting>
+    <chasitorIdleTimeout>360</chasitorIdleTimeout>
+    <chasitorIdleTimeoutWarning>300</chasitorIdleTimeoutWarning>
+    <chatPage>CustomChat_Netbank</chatPage>
+    <deployments/>
+    <enableQueue>true</enableQueue>
+    <isActive>true</isActive>
+    <label>Netbank Button Enrollment Logged In</label>
+    <optionsCustomRoutingIsEnabled>false</optionsCustomRoutingIsEnabled>
+    <optionsHasChasitorIdleTimeout>true</optionsHasChasitorIdleTimeout>
+    <optionsHasInviteAfterAccept>false</optionsHasInviteAfterAccept>
+    <optionsHasInviteAfterReject>false</optionsHasInviteAfterReject>
+    <optionsHasRerouteDeclinedRequest>false</optionsHasRerouteDeclinedRequest>
+    <optionsIsAutoAccept>false</optionsIsAutoAccept>
+    <optionsIsInviteAutoRemove>false</optionsIsInviteAutoRemove>
+    <overallQueueLength>20</overallQueueLength>
+    <preChatFormPage>PreChatForm_Netbank_Enrollment_LoggedIn</preChatFormPage>
+    <routingType xsi:nil="true"/>
+    <site>ChatSite_Netbank</site>
+    <type>Standard</type>
+    <windowLanguage>en_US</windowLanguage>
+</LiveChatButton>

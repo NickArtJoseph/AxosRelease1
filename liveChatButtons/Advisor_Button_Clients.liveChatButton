@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatButton xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <autoGreeting>Welcome to Advisor! You are chatting with {!User_FirstName}. How may I assist you?
+Hide Section - Routing InformationRouting Information</autoGreeting>
+    <chasitorIdleTimeout>360</chasitorIdleTimeout>
+    <chasitorIdleTimeoutWarning>300</chasitorIdleTimeoutWarning>
+    <chatPage>CustomChat_Advisor</chatPage>
+    <deployments/>
+    <enableQueue>true</enableQueue>
+    <isActive>true</isActive>
+    <label>Advisor Button (Clients)</label>
+    <optionsCustomRoutingIsEnabled>false</optionsCustomRoutingIsEnabled>
+    <optionsHasChasitorIdleTimeout>true</optionsHasChasitorIdleTimeout>
+    <optionsHasInviteAfterAccept>false</optionsHasInviteAfterAccept>
+    <optionsHasInviteAfterReject>false</optionsHasInviteAfterReject>
+    <optionsHasRerouteDeclinedRequest>false</optionsHasRerouteDeclinedRequest>
+    <optionsIsAutoAccept>false</optionsIsAutoAccept>
+    <optionsIsInviteAutoRemove>false</optionsIsInviteAutoRemove>
+    <overallQueueLength>150</overallQueueLength>
+    <postChatPage>BOFI_PostChatPage_pag</postChatPage>
+    <preChatFormPage>PreChatForm_Advisor</preChatFormPage>
+    <routingType xsi:nil="true"/>
+    <site>ChatSite_Advisor</site>
+    <type>Standard</type>
+    <windowLanguage>en_US</windowLanguage>
+</LiveChatButton>

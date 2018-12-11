@@ -1,0 +1,1 @@
+{!Account.Name} with NMLSID: {!Account.NMLSID__c} has been suspended for 365 days and needs to be denied.

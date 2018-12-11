@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style=""><font face="Arial, sans-serif" style=""><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Hello {!Case.Contact},</span><font style="color: rgb(0, 0, 0);"><br></font><span style="color: rgb(0, 0, 0);"><br></span>A wire transfer may be
+initiated by filling out our Wire Transfer form. You can find our Wire Transfer
+form on our website; go to Axos Bank Home Page, hover over Customer
+Support, click on Online Banking Forms, and then Wire Transfer Form.<br><br><a href="https://www.axosbank.com/Customer-Support/Personal-Support/-/media/F8DF429849E147DEA0EFCEA5F66BE303.ashx">Axos Bank
+Wire Transfer Request Form</a><br><br>Please note that there is <b style="color: rgb(0, 0, 0);">$35 fee </b>to send a Domestic Wire and a <b style="color: rgb(0, 0, 0);">$45 fee for
+International Wires</b>. Wire Transfers cannot be future dated and must be received
+by <b style="color: rgb(0, 0, 0);">12:00pm (PT) </b>for Domestic wires and <b style="color: rgb(0, 0, 0);">12:00pm (PT)</b> for International wires to
+be processed the same day.&nbsp;Wires received on Saturday, Sunday, or a holiday
+will be processed on the next business day.<br><br><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">We appreciate your business and commit to providing superior Banking products, support and services.</span><br><br><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Best Regards,</font></font></p><p style=""><span style="background-color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p style=""><span style="background-color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}</span></p><p style=""><font face="Arial, sans-serif" style=""><font style="background-color: rgb(255, 255, 255);">Axos Bank</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" color="#ff0000">&nbsp;</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Customer Service</font></font></p>]]></td>
+</tr>
+</table>

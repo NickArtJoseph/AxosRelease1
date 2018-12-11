@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplicationComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buttonIconUrl>https://www.glance.net/salesforce/G4SConsoleComponentButtonIcon.png</buttonIconUrl>
+    <buttonText>Glance</buttonText>
+    <isHeightFixed>false</isHeightFixed>
+    <isHidden>false</isHidden>
+    <isWidthFixed>false</isWidthFixed>
+    <visualforcePage>GLA4SF__GlanceConsole</visualforcePage>
+</CustomApplicationComponent>

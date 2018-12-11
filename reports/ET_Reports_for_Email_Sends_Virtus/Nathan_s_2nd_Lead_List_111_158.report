@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <description>Virtus</description>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nathan Gwozdz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>00Qi000000pNTc8,00Qi000000pNTc9,00Qi000000pNTcA,00Qi000000pNTcB,00Qi000000pNTcC,00Qi000000pNTcD,00Qi000000pNTcE,00Qi000000pNTcF,00Qi000000pNTcG,00Qi000000pNTcH,00Qi000000pNTcI,00Qi000000pNTcJ,00Qi000000pNTcK,00Qi000000pNTcL,00Qi000000pNTcM,00Qi000000pNTcN,00Qi000000pNTcO,00Qi000000pNTcP,00Qi000000pNTcQ,00Qi000000pNTcR,00Qi000000pNTcS,00Qi000000pNTcT,00Qi000000pNTcU,00Qi000000pNTcV,00Qi000000pNTcW,00Qi000000pNTcX,00Qi000000pNTcY,00Qi000000pNTcZ,00Qi000000pNTca,00Qi000000pNTcb,00Qi000000pNTcc,00Qi000000pNTcd,00Qi000000pNTce,00Qi000000pNTcf,00Qi000000pNTcg,00Qi000000pNTch,00Qi000000pNTci,00Qi000000pNTcj,00Qi000000pNTck,00Qi000000pNTcl,00Qi000000pNTcm,00Qi000000pNTcn,00Qi000000pNTco,00Qi000000pNTcp,00Qi000000pNTcq,00Qi000000pNTcr,00Qi000000pNTcs,00Qi000000pNTct</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Nathan&apos;s 2nd Lead List 111-158</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

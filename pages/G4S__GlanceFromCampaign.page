@@ -1,0 +1,61 @@
+<apex:page showHeader="false" sidebar="false" standardController="Campaign" extensions="G4S.GlanceFromController">
+	<apex:variable var="cobrowseText" value="{!IF(universalJoinEnabled,'Join','Cobrowse')}" />
+
+<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.GlanceAssets, 'css/GlanceFrom.css')}"/>
+<link rel="stylesheet" type="text/css" href="https://{!URLENCODE(GLANCE_HOST)}/salesforce/G4SStylesheet.ashx?username={!JSENCODE(userSettings.Glance_Address__c)}{!IF(ssoEnabled,'&partnerid='+JSENCODE(partnerId)+'&partneruserid='+JSENCODE(NULLVALUE(partnerUserId,'')),'')}"/>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://{!URLENCODE(GLANCE_HOST)}/integration/GlanceClient3.js"></script>
+<script language="JavaScript">
+    var settings = {
+        defaultCobrowseKey: '{!JSENCODE(cobrowseVisitorId)}',
+        cobrowseJoinUrl: '{!JSENCODE(joinUrl)}',
+        openEvents: {!NOT(companySettings.Dont_Open_Glance_Session_Events__c)},
+        eventUrl: '{!JSENCODE(eventURL)}',
+        eventUrlWithoutKey: '{!JSENCODE(eventUrlWithoutKey)}',
+        partnerId: '{!partnerId}',
+        partnerUserId: '{!partnerUserId}',
+        loginKey: '{!loginKey}',
+        panoramaEnabled: '{!panoramaEnabled}',
+        presenceEnabled: '{!presenceEnabled}',
+        presenceAcceptTerms: '{!companySettings.Presence_Accept_Terms__c}',
+        getJoinUrlFunction: '{!$RemoteAction.GlanceFromController.lookupSession}',
+        getPresenceTokenForUserFunction: '{!$RemoteAction.GlanceFromController.getPresenceTokenForUser}',
+        glanceAddress: '{!JSENCODE(userSettings.Glance_Address__c)}',
+        glanceHost: '{!JSENCODE(GLANCE_HOST)}',
+        remoteControl: '{!remoteControl}',
+        hasUserSettings: '{!hasUserSettings}',
+        ssoEnabled: '{!ssoEnabled}',
+        ssoKey: '{!ssoKey}',
+        partnerLaunch: '{!partnerLaunch}',
+        universalJoinEnabled: '{!universalJoinEnabled}'
+    };
+</script>
+<script type="text/javascript" src="{!URLFOR($Resource.GlanceAssets, 'js/GlanceFrom.js')}"></script>
+
+<div id="glanceContainer" class="SFUI{!$User.UIThemeDisplayed} {!$CurrentPage.Name}">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr id="buttonsPanel" valign="top" style="display: block;">
+            <td><span id="glance-logo" title="Powered by Glance Networks - www.glance.net"></span></td>
+            <apex:outputPanel layout="none" rendered="{!hasCompanySettings && (hasUserSettings || ssoEnabled)}">
+                <apex:outputPanel layout="none" rendered="{!companySettings.G4S__Show_My_Screen_Enabled__c}">
+                    <td><a class="glance-btn" id="glance-show" href="#" onclick="launchGlance('{!JSENCODE(userSettings.Glance_Address__c)}', '{!JSENCODE(userSettings.Default_Session_Key__c)}', 'forward'); setTimeout('createShowEvent()', 100); return false;" title="Start Session - Show My Screen"><div>Show</div></a></td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!companySettings.G4S__View_Guests_Screen_Enabled__c}">
+                    <td><a class="glance-btn" id="glance-view" href="#" onclick="launchGlance('{!JSENCODE(userSettings.Glance_Address__c)}', '{!JSENCODE(userSettings.Default_Session_Key__c)}', 'reverse'); setTimeout('createViewEvent()', 100); return false;" title="Start Session - View Their Screen"><div>View</div></a></td>
+                </apex:outputPanel>
+                <td style="visibility: hidden;"><button id="glanceButton"></button></td>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!NOT(hasCompanySettings) || (NOT(hasUserSettings) && NOT(ssoEnabled))}">
+                <apex:outputPanel layout="none" rendered="{!NOT(hasCompanySettings) || companySettings.G4S__Show_My_Screen_Enabled__c}">
+                    <td><a class="glance-btn" id="glance-show" href="{!$Page.UserSettings}?returnId={!relatedObjectId}" target="_top" onclick="return missingUserSettings();" title="Start Session - Show My Screen"><div>Show</div></a></td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!NOT(hasCompanySettings) || companySettings.G4S__View_Guests_Screen_Enabled__c}">
+                    <td><a class="glance-btn" id="glance-view" href="{!$Page.UserSettings}?returnId={!relatedObjectId}" target="_top" onclick="return missingUserSettings();" title="Start Session - View Their Screen"><div>View</div></a></td>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </tr>
+    </table>
+</div>
+
+</apex:page>

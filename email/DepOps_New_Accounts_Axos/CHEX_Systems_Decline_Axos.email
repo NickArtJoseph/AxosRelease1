@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-size: 12pt;"><font face="arial">Thank you for contacting&nbsp;Axos&nbsp;Bank™.&nbsp;We regret to inform you that we cannot open the account(s) you requested due to information received from Chex Systems, a customer reporting agency. Please note, Chex Systems did not make the decision to decline your request and will therefore be unable to provide you with specific reasons why the decision was made.<br><br>You have rights under state and federal laws, included in these rights are:<br>1. The right to obtain a free copy of your Chex Systems consumer report if you make a request to Chex Systems within 60 days of receipt of this notice; and<br>2. The right to dispute the completeness or accuracy of any information contained in such report notifying Chex Systems directly of your dispute.<br><br>You may contact Chex Systems by visiting their website at <a href="http://www.chexhelp.com">www.chexhelp.com</a>. Alternatively, you can call them at (800) 428-9623, fax at (602) 659-2197, or contact them by mail at the following address:<br><br>Chex Systems, Attention Consumer Relations<br>7805 Hudson Road, Suite 100<br>Woodbury, MN 55125 <br><br>We understand that your time is valuable, and regret that we are unable to accommodate your request this time. There is no recourse to the decision the Bank has made to decline your application at this time. Thank you for visiting the Axos Bank website.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentWork$OriginalQueue</field>
+    </columns>
+    <columns>
+        <field>AgentWork$User</field>
+    </columns>
+    <columns>
+        <field>AgentWork$WorkItem</field>
+    </columns>
+    <columns>
+        <field>AgentWork$Name</field>
+    </columns>
+    <columns>
+        <field>AgentWork$ActiveTime</field>
+    </columns>
+    <columns>
+        <field>AgentWork$HandleTime</field>
+    </columns>
+    <columns>
+        <field>AgentWork$Status</field>
+    </columns>
+    <columns>
+        <field>AgentWork$CloseDateTime</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Agent Omni Time</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Agent_Work__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>AgentWork$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>AgentWork$CreatedDate</dateColumn>
+        <endDate>2017-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-08-01</startDate>
+    </timeFrameFilter>
+</Report>

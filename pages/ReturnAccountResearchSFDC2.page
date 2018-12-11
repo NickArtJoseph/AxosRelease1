@@ -1,0 +1,11 @@
+<apex:page standardController="Account" extensions="RequestAccountResearchSFDC2Controller" action="{!returnAccount}">
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+<apex:form >
+  <apex:inputHidden value="{!account.OwnerId}" />
+  <apex:inputHidden value="{!account.RecordTypeId}" />
+  <apex:inputHidden value="{!account.Research_Requested_By_SFDC2__c}" />
+  <apex:inputHidden value="{!account.Research_Request_Type_SFDC2__c}" />
+  <apex:inputHidden value="{!account.Research_Request_Notes_SFDC2__c}" />
+  <apex:commandButton action="{!cancel}" value="Return"/>
+</apex:form>
+</apex:page>

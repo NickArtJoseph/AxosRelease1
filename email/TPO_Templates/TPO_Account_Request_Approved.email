@@ -1,0 +1,5 @@
+Your account request for: {!Account.Name} has been approved.
+
+NMLSID: {!Account.NMLSID__c}
+
+Please allow 24 to 48 hours for account moves to take place.

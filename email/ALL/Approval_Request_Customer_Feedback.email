@@ -1,0 +1,12 @@
+{!Approval_Requesting_User.Name} has requested your approval for the following item: {!ApprovalRequest.External_URL}
+
+Please click this link to approve or reject this record.
+
+Feedback Reason: {!Case.Feedback_Reason__c}
+
+Feedback Reason Detail: {!Case.Feedback_Reason_Detail__c}
+
+Description: {!Case.Description}
+
+Thank you,
+Salesforce

@@ -1,0 +1,37 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-family: arial; font-size: 12pt;"><font face="Times New Roman">
+
+</font><p style="margin-bottom: 12pt;"><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">In accordance with your Deposit Account Agreement with Axos Bank™,
+please be advised we have elected to end our banking relationship. <br>
+<br>
+In order to provide you with sufficient time to procure alternative banking
+services, the effective date of the closing will be 30 days from the date of
+this email. Upon expiration of this 30-day period, the account will be closed
+and all related services terminated.&nbsp; <br>
+<br>
+We suggest you&nbsp;cease making deposits to, and writing checks against, your
+account at this time. After all outstanding items have cleared; a check payable
+to the current account&nbsp;holder(s)&nbsp;in the amount of&nbsp;any remaining
+balance (less any outstanding fees, service or other charges) will be sent to
+your mailing address on file.</span></p><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><br>
+Please make other arrangements for any automated transactions such as direct
+deposit and prearranged ACH credits and debits.<br>
+<br>
+Do not hesitate to contact us should you have any questions
+concerning this letter.</span></p><font face="Times New Roman">
+
+</font><br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

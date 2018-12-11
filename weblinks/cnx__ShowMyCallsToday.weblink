@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Show my calls today</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/00O?pc0=CALLTYPE&amp;pv0=&amp;type=te&amp;sort=CD&amp;pc1=DUE_DATE&amp;pv1=today&amp;pn1=eq&amp;c=CS&amp;c=OP&amp;c=CO&amp;c=LD&amp;c=AT&amp;c=CD_FMT&amp;c=CL_DISP&amp;c=CALLTYPE&amp;c=SU&amp;c=AS&amp;c=P1&amp;details=yes&amp;retURL=%2F00O%2Fo&amp;pn0=ne&amp;rt=24&amp;scope=user&amp;t=title_MyCallsToday&amp;closed=closed&amp;duel0=AS,SU,CALLTYPE,CL_DISP,AT,CO,P1,LD,OP,CS,CD_FMT</url>
+</CustomPageWebLink>

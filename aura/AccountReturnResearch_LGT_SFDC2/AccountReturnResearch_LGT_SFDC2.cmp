@@ -1,0 +1,106 @@
+<aura:component controller="AccountResearchSFDC2Controller" implements="force:hasRecordId,force:lightningQuickActionWithoutHeader">
+	<aura:attribute name="accountFullRecord" type="Object" />
+	<aura:attribute name="accountRecord" type="Object" />
+	<aura:attribute name="accountError" type="String" />
+	<aura:attribute name="newTask" type="Task" default="{ 'sobjectType': 'Task', 'Subject': 'Return Research' }" />
+
+	<force:recordData aura:id="accountRecordHandler"
+		recordId="{! v.recordId }"
+		targetRecord="{! v.accountFullRecord }"
+		targetFields="{! v.accountRecord }"
+		targetError="{! v.accountError }"
+		layoutType="FULL"
+		mode="VIEW" />
+
+	<aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+	<!-- <force:recordEdit recordId="00T2F000004cLiIUAU" /> -->
+
+	<aura:if isTrue="{! not(empty(v.newTask)) }">
+		<div class="slds-page-header">
+		    <div class="slds-grid">
+		        <div class="slds-col slds-has-flexi-truncate">
+		            <div class="slds-media slds-no-space slds-grow">
+		                <div class="slds-media__figure">
+		                    <lightning:icon iconName="standard:task" size="medium" alternativeText="Task" />
+		                </div>
+		                <div class="slds-media__body">
+		                    <nav>
+		                        <ol class="slds-breadcrumb slds-line-height_reset">
+		                            <li class="slds-breadcrumb__item">
+		                                <span>Task</span>
+		                            </li>
+		                        </ol>
+		                    </nav>
+		                    <h1 class="slds-page-header__title slds-p-right_x-small">
+		                        <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+	                                <span class="slds-truncate" title="Recently Viewed">Return Research</span>
+	                            </span>
+		                    </h1>
+		                </div>
+		            </div>
+		        </div>
+
+		    </div>
+
+		</div>
+
+		<div class="slds-form slds-form_stacked slds-m-top_small">
+			<div class="slds-form-element">
+				<ui:inputText value="{! v.accountRecord.Name }"
+					label="Related To"
+					labelClass="slds-form-element__label"
+					disabled="true"
+					class="slds-input"
+					required="true"
+					requiredIndicatorClass="slds-required" />
+			</div>
+
+			<div class="slds-form-element">
+				<ui:inputText value="{! v.newTask.Subject }"
+					label="Subject"
+					labelClass="slds-form-element__label"
+					disabled="true"
+					class="slds-input"
+					required="true"
+					requiredIndicatorClass="slds-required" />
+			</div>
+
+			<div class="slds-form-element">
+				<ui:inputText value="{! v.newTask.Priority }"
+					label="Priority"
+					labelClass="slds-form-element__label"
+					disabled="true"
+					class="slds-input"
+					required="true"
+					requiredIndicatorClass="slds-required" />
+			</div>
+
+			<!-- <div class="slds-form-element">
+				<ui:inputText value="{! v.newTask.Status }"
+					label="Status"
+					labelClass="slds-form-element__label"
+					disabled="false"
+					class="slds-input"
+					required="true"
+					requiredIndicatorClass="slds-required" />
+			</div> -->
+
+			<div class="slds-form-element">
+				<ui:inputTextarea aura:id="inputTaskDescription" value="{! v.newTask.Description }"
+					label="Description"
+					labelClass="slds-form-element__label"
+					disabled="false"
+					rows="3"
+					class="slds-textarea"
+					required="true"
+					requiredIndicatorClass="slds-required"
+					keydown="{! c.clearErrors }" />
+			</div>
+
+			<div class="slds-m-top_medium slds-text-align_center">
+				<lightning:button variant="brand" label="Return Research" iconName="utility:save" onclick="{! c.saveNewTask }" />
+				<lightning:button variant="neutral" label="Cancel" iconName="utility:close" onclick="{! c.cancelAction }" />
+			</div>
+		</div>
+	</aura:if>
+</aura:component>

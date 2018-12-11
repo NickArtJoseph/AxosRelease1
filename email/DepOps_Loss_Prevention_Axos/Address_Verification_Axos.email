@@ -1,0 +1,48 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-family: arial; font-size: 12pt;"><br></span><span style="font-size: 12pt;"><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;">To
+complete&nbsp;our address&nbsp;verification process, the Bank requires
+any one (1) of the following items:</span></p><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><br>
+•&nbsp;Electric bill <br>
+•&nbsp;Gas bill <br>
+•&nbsp;Trash bill <br>
+•&nbsp;Landline (phone bill) <br>
+•&nbsp;Water Bill<br>
+&nbsp;<br>
+<strong><span style="font-family: &quot;Arial&quot;,sans-serif;">Please note</span></strong>:&nbsp;
+The&nbsp;bill must not be more than 30 days old and should reflect your name
+and residential address from your application with the Bank.&nbsp; Please submit
+only&nbsp;documents that have been physically mailed to you.&nbsp; Electronic
+statements will not be accepted.&nbsp; Once your documents are received, an
+associate will contact you via email within two (2) business days.<br>
+&nbsp;<br>
+Please return your documentation via the following options:</span></p><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><br>
+1)&nbsp; Mail to:&nbsp;Axos Bank, Attn: Loss Prevention, P.O. Box 911039,
+San Diego, CA&nbsp; 92191-1039</span></p><font face="Times New Roman">
+
+</font><p><span style="color: black; font-family: &quot;Arial&quot;,sans-serif;"><br>
+2)&nbsp; Attach an image of the requested document and reply directly to this
+email<br>
+<br>
+If you would like further assistance, simply reply to this email or call us at (888) 502-2967.<br>
+<br>
+Thank you for your business.</span></p><font face="Times New Roman">
+
+</font><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">Axos Bank™&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

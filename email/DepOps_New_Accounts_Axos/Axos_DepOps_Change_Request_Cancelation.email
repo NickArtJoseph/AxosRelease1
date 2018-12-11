@@ -1,0 +1,52 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);"><span style='background: white; color: black; line-height: 115%; font-family: "Arial",sans-serif; font-size: 10pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;'>Hello {!Case.Contact},</span></span>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p></p><span style="background-color: rgb(255, 255, 255);"><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>The requested
+information was not received by the [INSERT DATE] deadline. Your change request
+has been canceled. </span></p><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>&nbsp;</span></p><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>If you would like
+to submit a new consumer change request please remember to include the<b style="mso-bidi-font-weight: normal;"> Change Request form </b>and all other
+requested documents. </span></p><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>&nbsp;</span></p><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>Send your new Change
+Request to:</span></p><p><font face="Times New Roman">
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>&nbsp;</span></p><p><font face="Times New Roman">
+
+</font></p><ol style="list-style-type: decimal; direction: ltr;"><li style="color: rgb(0, 0, 0); font-size: 12pt; font-style: normal; font-weight: normal;"><p style="color: rgb(0, 0, 0); font-size: 12pt; font-style: normal; font-weight: normal; mso-add-space: auto; mso-list: l0 level1 lfo1;"><span style='color: black; font-family: "Arial",sans-serif; font-size: 10pt;'>Mail to: Axos Bank, Attn: New Accounts, P.O. Box 911039, San
+Diego, CA&nbsp; 92191-1039</span></p></li><li style='font-family: "Times New Roman",serif; font-size: 12pt; font-style: normal; font-weight: normal;'><p style='font-family: "Times New Roman",serif; font-size: 12pt; font-style: normal; font-weight: normal; mso-add-space: auto; mso-list: l0 level1 lfo1;'><span style='color: black; font-family: "Arial",sans-serif; font-size: 10pt;'>Email to: <a href="mailto:customerservice@axosbank.com"><font color="#0000ff">customerservice@axosbank.com</font></a></span></p></li><li style='font-family: "Times New Roman",serif; font-size: 12pt; font-style: normal; font-weight: normal;'><p style='font-family: "Times New Roman",serif; font-size: 12pt; font-style: normal; font-weight: normal; mso-add-space: auto; mso-list: l0 level1 lfo1;'><span style='color: black; font-family: "Arial",sans-serif; font-size: 10pt;'>Fax to: 858-350-0443</span></p></li></ol><p><font face="Times New Roman">
+
+
+
+
+
+</font></p><p><span style='font-family: "Arial",sans-serif; font-size: 10pt;'>&nbsp;</span></p><p><font face="Times New Roman">
+
+</font></p><p><b><span style='color: black; font-family: "Arial",sans-serif; font-size: 10pt;'>Questions?
+</span></b><span style='color: black; font-family: "Arial",sans-serif; font-size: 10pt;'>If you have any questions, please call us at (888) 502-2967 or
+email us at <a href="mailto:customerservice@axosbank.com"><font color="#0000ff">customerservice@axosbank.com</font></a></span><span style='font-family: "Arial",sans-serif; font-size: 10pt;'><br>
+<br>
+Thank you.<br style="mso-special-character: line-break;">
+<br style="mso-special-character: line-break;">
+</span></p><p><font face="Times New Roman">
+
+</font><br></p></span><p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<span style='color: black; line-height: 115%; font-family: "Arial",sans-serif; font-size: 10pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;'>Best Regards,<br>
+{!User.FirstName}<br>
+Axos Bank Customer Service</span>]]></td>
+</tr>
+</table>

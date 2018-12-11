@@ -1,0 +1,6 @@
+<apex:page title="{!$Label.crmfusiondbr101__db_today_page_title}" showHeader="true" sidebar="false" controller="CRMfusionDBR101.DB_TodayController"
+    tabStyle="DupeBlocker_Today_VF__tab">
+    <apex:includeScript value="{!URLFOR($Resource.CRMfusionDBR101__DB_Javascript, 'jquery.min.js')}" />
+    <c:DB_License_Info />
+    <apex:iframe src="{!dbTodayURL}" width="100%" height="600px" frameborder="false" id="dbTodayFrame" scrolling="true" />
+</apex:page>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The field metadata for mapping the Sharepoint form</description>
+    <fields>
+        <fullName>Field__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field</label>
+        <metadataRelationshipControllingField>SharepointFieldMapping__mdt.Object__c</metadataRelationshipControllingField>
+        <referenceTo>FieldDefinition</referenceTo>
+        <relationshipLabel>Sharepoint_field_mappings</relationshipLabel>
+        <relationshipName>Sharepoint_field_mappings</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Object</label>
+        <referenceTo>EntityDefinition</referenceTo>
+        <relationshipLabel>Sharepoint Field Mappings</relationshipLabel>
+        <relationshipName>SharepointFieldMappings</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordTypeName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>RecordType Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SharepointSetting__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Sharepoint Setting</label>
+        <referenceTo>SharepointSetting__mdt</referenceTo>
+        <relationshipLabel>Sharepoint Field Mappings</relationshipLabel>
+        <relationshipName>SharepointFieldMappings</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UIVisible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>UI Visible</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Value</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sharepoint Field Mapping</label>
+    <listViews>
+        <fullName>Sharepoint_Mapping</fullName>
+        <columns>DeveloperName</columns>
+        <columns>MasterLabel</columns>
+        <columns>RecordTypeName__c</columns>
+        <columns>Object__c</columns>
+        <columns>Field__c</columns>
+        <columns>Value__c</columns>
+        <columns>Required__c</columns>
+        <columns>SharepointSetting__c</columns>
+        <columns>UIVisible__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Sharepoint Mapping</label>
+    </listViews>
+    <pluralLabel>Sharepoint Field Mappings</pluralLabel>
+    <validationRules>
+        <fullName>Validated_Non_UI_Value</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+NOT(UIVisible__c),
+ISBLANK(Value__c)
+)</errorConditionFormula>
+        <errorDisplayField>Value__c</errorDisplayField>
+        <errorMessage>Value is Required for Non UI Visible Fields</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

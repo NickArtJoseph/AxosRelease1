@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>S&amp;P Capital IQ Import</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom104: TV Widescreen</motif>
+    <page>SNPCAPIQ__MassAccountsImport</page>
+</CustomTab>

@@ -1,0 +1,60 @@
+<apex:page controller="qbdialer.InsideSalesSetup"  tabStyle="is_links__tab">
+<script type="text/javascript">
+var user_oauth_token = '{!JSENCODE($User.qbdialer__is_token__c)}';
+var user_subdomain = '{!JSENCODE($User.qbdialer__is_subdomain__c)}';
+if (!user_oauth_token || !user_subdomain) {
+    window.location.href="/apex/InsideSales_OAuth_Setup";
+}
+</script>
+<apex:outputPanel rendered="{!$CurrentPage.Parameters.target_label != ''}">
+  <nav role="navigation" >
+  <p id="bread-crumb-label" class="slds-assistive-text" style="font-weight: normal;font-size: 1.5em; font-family: Arial, Helvetica, sans-serif; display: block;">{!JSENCODE($CurrentPage.Parameters.target_label)}</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label" >
+    <ui class="slds-list__item slds-text-heading--label" >
+        <a href="/apex/qbdialer__is_links">InsideSales</a> > {!JSENCODE($CurrentPage.Parameters.target_label)}
+    </ui>
+  </ol>
+</nav>
+</apex:outputPanel>
+<form id="iframe_form" target="itarget" method="POST" action="{!InsideSalesHostSmart}do=load_frame">
+<input type="hidden" id="iframe_redirect_uri" name="redirect_uri" />
+<input type="hidden" name="Authorization" value="{!auth_token}" />
+</form>
+<!--
+<button class="btn" onClick="window.location.href='/apex/is_links';" style="float: right; padding-left: 10px; padding-right: 8px;">Back to IS Links</button>
+-->
+<iframe width="100%" height="600px" frameborder="0" scrolling="auto" title="Content" name="itarget" id="itarget"></iframe>
+<script type="text/javascript">
+var target_page     = '{!JSENCODE($CurrentPage.Parameters.target_page)}';
+var css_class       = '{!JSENCODE($CurrentPage.Parameters.css_class)}';
+var css_theme       = '{!JSENCODE($CurrentPage.Parameters.css_theme)}';
+var css_base        = '{!JSENCODE($CurrentPage.Parameters.css_base)}';
+var custom_height   = '{!JSENCODE($CurrentPage.Parameters.ch)}';
+var target_location = '{!JSENCODE(InsideSalesHostSmart)}' + target_page + '?';
+var phone           = '{!JSENCODE($User.Phone)}';
+var auth_mode_jwt   = '{!JSENCODE(auth_mode_jwt)}';
+var target_label 	= '{!JSENCODE($CurrentPage.Parameters.target_label)}';
+
+var parameters = "agent_phone="+encodeURIComponent(phone)
+    + "&css_base="+encodeURIComponent(css_base)
+    + "&css_class="+encodeURIComponent(css_class)
+    + "&salesforce_package_version=6.37.14"
+    + "&css_theme="+encodeURIComponent(css_theme);
+    if (css_theme != 'Theme3') {
+          parameters +=  "&target_label="+encodeURIComponent(target_label);  
+    }
+
+if (custom_height) {
+    document.getElementById('itarget').height = custom_height;
+}
+
+if (auth_mode_jwt == '1') {
+    document.getElementById('iframe_redirect_uri').value = target_location + parameters;
+    document.getElementById('iframe_form').submit();
+} else {
+    parameters = "token={!JSENCODE($User.is_token__c)}&" + parameters;
+    document.getElementById('itarget').src = target_location + parameters;
+}
+
+</script>
+</apex:page>

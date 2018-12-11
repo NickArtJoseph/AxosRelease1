@@ -1,0 +1,1 @@
+Reminder: 72 h SLA. Please note {!Opportunity.Name} has a Projected Close Date of {!Opportunity.CI_Projected_Close_Date__c} and the Boarding Form has not been submitted for review.

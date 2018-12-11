@@ -1,0 +1,8 @@
+PIC Submitter: {!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName}
+PIC Company Name: {!Opportunity.Account}
+
+Approval Step: {!ApprovalRequest.Process_Step_Name}
+Approver: {!ApprovalRequest.Process_Approver}
+Comments: {!ApprovalRequest.Comments}
+
+Link to PIC: {!Origination_Documentation__c.Org_URL__c}/{!Origination_Documentation__c.Id}

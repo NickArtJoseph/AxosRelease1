@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><span style="font-size: 12pt;"><font face="arial"><br></font></span><span style="font-size: 12pt;"><font face="arial">Thank you for choosing [INSERT BRAND]. Your account has been temporarily restricted due to discrepancies that were found on your application. <br></font></span><span style="font-size: 12pt;"><font face="arial"><br>Additional information is needed in order to remove the restriction on your account.&nbsp; If not received by [DATE] your account will be closed.<br><br>Please provide:<br>•&nbsp;An image of the ID provided on the application.<br>•&nbsp;Proof of Residence: Water bill, Electric bill, Gas bill or a Landline phone bill (Must be dated within the last 30 days)<br><br>After we receive the document(s), the decision regarding your account will be made. If we require additional information, we will contact you by email or phone. <br><br>Please return all requested documentation by;</font></span></p><p><span style="font-size: 12pt;"><font face="arial">1) Email to: <a href="mailto:customerservice@bofi.com">customerservice@bofi.com</a><br>2) Fax to: 858-350-0443<br>3) Mail to: BOFI Federal Bank P.O. Box 509127, San Diego, CA&nbsp; 92150-9948 <br><br>We appreciate your business and commit to delivering value that will make [INSERT BRAND] your first choice for all your banking needs.<br><br></font></span><span style="font-family: arial; font-size: 12pt;">Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,33 @@
+<apex:page standardcontroller="Address__c" extensions="Address_Extension" tabStyle="Account" showHeader="true"  standardStylesheets="true" cache="false" title="Address Edit: {!IF(ISNULL(Address__c.Id), 'New Address', Address__c.Name)}">
+
+	<c:USPSAddress AddressObject="{!Address__c}" CheckFullZip="true" USPS_USERID="{!USPSUserIDCode}" />
+
+	<apex:sectionHeader title="Address Edit" subtitle="{!IF(ISNULL(Address__c.Id), 'New Address', Address__c.Name)}" />
+	<apex:pageMessages />
+	<apex:form >
+	<apex:pageBlock title="Address Edit">
+		<apex:pageBlockButtons >
+			<apex:commandButton value="Save" action="{!save}" />
+			<apex:commandButton value="Cancel" action="{!cancel}" />
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection title="Information" collapsible="false">
+			<apex:inputField value="{!Address__c.Account_Name__c}" />
+			<apex:inputField value="{!Address__c.Address_Line__c}" />
+			<apex:inputField value="{!Address__c.Status__c}" />
+			<apex:inputField value="{!Address__c.City__c}" />
+			<apex:outputLabel />
+			<apex:inputField value="{!Address__c.State__c}" />
+			<apex:outputLabel />
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Zip" />
+				<apex:outputPanel layout="inline">
+					<apex:inputField value="{!Address__c.Zip__c}" />
+					<apex:commandButton action="{!validate}" value="Validate" />
+				</apex:outputPanel>
+			</apex:pageBlockSectionItem>
+			<apex:outputLabel />
+			<apex:inputField value="{!Address__c.County__c}" />
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>

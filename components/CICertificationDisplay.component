@@ -1,0 +1,22 @@
+<apex:component controller="CICertificationDisplayController">
+    <style type="text/css">
+        [id*=noRows] {
+            font-weight: normal;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <apex:attribute name="OpportunityId" description="Opportunity Id for retrieving appropriate certifications" type="String" required="true" assignTo="{!oppId}"/>
+    <apex:attribute name="CertificationRecordTypeId" description="CI Certification Record Type Id for retrieving appropriate certifications" type="String" required="true" assignTo="{!certRTId}"/>
+    <apex:pageBlock title="{!blockTitle}">
+        <apex:outputPanel id="dataTable" layout="block" style="overflow: auto; height: 150px;">
+            <apex:pageBlockTable value="{!CertificationList}" var="cert">
+                <apex:column id="noRows" headerValue="No records to display" rendered="{!CertificationList.size = 0}" />
+                <apex:column headerValue="{!$ObjectType.CI_Certification__c.fields.Name.label}" width="70%" rendered="{!CertificationList.size > 0}" >
+                    <apex:outputLink value="/{!cert.Id}" target="_top">{!cert.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="{!$ObjectType.CI_Certification__c.fields.Status__c.label}" value="{!cert.Status__c}" width="30%" rendered="{!CertificationList.size > 0}" />
+            </apex:pageBlockTable>
+        </apex:outputPanel>
+    </apex:pageBlock>
+</apex:component>

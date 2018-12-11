@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Enterprise_Wide_Visibility</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Enterprise-Wide Visibility</label>
+        <sharedTo>
+            <group>Enterprise_Group_SFDC2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>001</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>UDB_API_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>UDB API Access</description>
+        <label>UDB API Access</label>
+        <sharedTo>
+            <group>UDB_Integration</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>UDB_CIF__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>UDB Inquiry</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Deposit_Contact_Center</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Deposit Contact Center</label>
+        <sharedTo>
+            <roleAndSubordinates>Deposit_Contact_Center_Director</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Deposit_Contact_Center_Director</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Deposit_Ops</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Deposit Ops</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Deposit_Ops_Director</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Deposit_Ops_Director</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

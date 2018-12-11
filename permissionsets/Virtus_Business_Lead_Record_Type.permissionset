@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set just contains the record type to create the lead</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Virtus Business Lead Record Type</label>
+    <license>Salesforce</license>
+</PermissionSet>

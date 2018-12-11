@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Deposits_Letterhead</letterhead>
+    <name>SLA Warning: 1 Hour</name>
+    <style>freeForm</style>
+    <subject>Warning: SLA Violation Approaching in 1 Hour</subject>
+    <textOnly>Case ID {!Case.Id} will exceed SLA in one hour.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

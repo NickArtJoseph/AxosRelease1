@@ -1,0 +1,28 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);"><br></span><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;"><br></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><span style="font-family: Arial, sans-serif; font-size: 12pt;">The Bank requires any one (1) of the following documents to
+complete the review process along with your Driver's License;</span></p><ul style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><li><font face="Arial, sans-serif">Water bill</font></li><li><font face="Arial, sans-serif">Electric bill</font></li><li><font face="Arial, sans-serif">Gas bill</font></li><li><font face="Arial, sans-serif">Trash bill</font></li><li><font face="Arial, sans-serif">Landline (phone bill)</font></li></ul><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Alternative proof of address veriﬁcation that can be
+considered:<br><ul><li>Cable bill</li><li>Cell Phone bill</li><li>Credit Card bill</li><li>University /School Letter (this applies to individuals who
+are between 18- 23 yrs. of age.)</li></ul>The documents must not be more than 30 days old and should
+reflect your name and <b>residential
+address of the application</b>. Once your documents are received, an Associate
+will contact you via email with a decision within two (2) business days.<br><br><b>Please note</b>: There
+is no guarantee that we will be able to accept the documents you submit,
+however, please submit what you have (license and address proof) and our
+Enrollment Specialists will make the final decision.<br><br>Please return the documentation by;<br><ol><li>Mail to: <b>BOFI Federal
+Bank P.O. Box 509127, San Diego, CA&nbsp;
+92150-9948</b></li><li>Fax to:
+<b>858-350-0443</b>; or</li><li>Email to:
+<b>customerservice@[brand].com</b></li></ol><b><i>Personal Information at Account Opening</i></b>- Federal law, including
+the USA PATRIOT Act, requires all financial institutions to obtain, verify and
+record information that identifies each person or business that opens an
+account. When you apply for a personal account, we will ask for your legal
+name, residential address, date of birth and Social Security Number (SSN). We
+will require one or more forms of unexpired photo identification. We may
+validate the information you provide to us to ensure we have a reasonable
+belief of your identity. If we are not able to verify your identity to our
+satisfaction, we will not open your account.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br></font><font face="arial" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style="font-size: 12pt;">Best Regards,</span></font><br style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);"><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">{!User.FirstName}</span><br style="font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);"><font color="#ff0000" style="font-size: 12pt; background-color: rgb(255, 255, 255);">[INSERT BRAND]&nbsp;</font><font face="arial" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style="font-size: 12pt;">Customer Service</span></font>]]></td>
+</tr>
+</table>

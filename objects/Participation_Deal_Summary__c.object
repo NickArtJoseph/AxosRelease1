@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Participation_Deal_Summary_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Participation_Deal_Summary_Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Participation_Deal_Summary_Default</fullName>
+        <fields>Name</fields>
+        <fields>Opportunity__c</fields>
+        <fields>Global_Loan_Amount__c</fields>
+        <fields>Global_Rate_Index__c</fields>
+        <fields>Global_Rate_Spread__c</fields>
+        <fields>Global_Rate_Floor__c</fields>
+        <fields>Global_Eligible_for_Extension__c</fields>
+        <fields>Global_Loan_Structure__c</fields>
+        <label>Participation Deal Summary Default</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>C&amp;I Object</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Boarding_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Boarding Form</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Opportunity__c</field>
+                <operation>equals</operation>
+                <valueField>Boarding_Form__c.Opportunity__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Boarding_Form__c</referenceTo>
+        <relationshipLabel>Participation Deal Summaries</relationshipLabel>
+        <relationshipName>Participation_Deal_Summaries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Global_Advance_on_UPB__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Advance on UPB</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Eligible_for_Extension__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Global Eligible for Extension</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Global_Exit_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Exit Fee</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Extension_Duration_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Extension Duration (Months)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Global_Extension_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Extension Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Global_Interest_Reserve_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Months</inlineHelpText>
+        <label>Global Interest Reserve Coverage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Global_Interest_Reserve_Q__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Global Interest Reserve?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Global_Interest_Reserve__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Interest Reserve</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Global_LTC__c</fullName>
+        <externalId>false</externalId>
+        <label>Global LTC</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_LTPP__c</fullName>
+        <externalId>false</externalId>
+        <label>Global LTPP</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_LTV__c</fullName>
+        <externalId>false</externalId>
+        <label>Global LTV</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Global_Loan_Structure__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Loan Structure</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Revolving</fullName>
+                    <default>false</default>
+                    <label>Revolving</label>
+                </value>
+                <value>
+                    <fullName>Term</fullName>
+                    <default>false</default>
+                    <label>Term</label>
+                </value>
+                <value>
+                    <fullName>Multi-Draw Term</fullName>
+                    <default>false</default>
+                    <label>Multi-Draw Term</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Global_Lockout_Period_Yield_Maintenance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>(Months)</inlineHelpText>
+        <label>Global Lockout Period/Yield Maintenance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Global_Max_Accordion__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Max Accordion</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Global_Minimum_Usage_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Minimum Usage Fee</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Non_Usage_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Non-Usage Fee</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Number_of_Extensions__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Number of Extensions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Global_Origination_Fee_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Origination Fee ($)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Global_Origination_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Origination Fee (%)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Payment_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Payment Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Global_Prepayment_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Prepayment Fee</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Rate_Floor__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Rate Floor</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Rate_Index__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Rate Index</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>WSJP</fullName>
+                    <default>false</default>
+                    <label>WSJP</label>
+                </value>
+                <value>
+                    <fullName>30 Day LIBOR</fullName>
+                    <default>false</default>
+                    <label>30 Day LIBOR</label>
+                </value>
+                <value>
+                    <fullName>60 Day LIBOR</fullName>
+                    <default>false</default>
+                    <label>60 Day LIBOR</label>
+                </value>
+                <value>
+                    <fullName>90 Day LIBOR</fullName>
+                    <default>false</default>
+                    <label>90 Day LIBOR</label>
+                </value>
+                <value>
+                    <fullName>6 Month LIBOR</fullName>
+                    <default>false</default>
+                    <label>6 Month LIBOR</label>
+                </value>
+                <value>
+                    <fullName>3 Yr T Bill</fullName>
+                    <default>false</default>
+                    <label>3 Yr T Bill</label>
+                </value>
+                <value>
+                    <fullName>5 Yr T Bill</fullName>
+                    <default>false</default>
+                    <label>5 Yr T Bill</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Global_Rate_Spread__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Rate Spread</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Global_Term_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Global Term (Months)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Participation Deal Summaries</relationshipLabel>
+        <relationshipName>Participation_Deal_Summaries</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Origination_Summary__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Origination Summary</label>
+        <referenceTo>Origination_Summary__c</referenceTo>
+        <relationshipLabel>Participation Deal Summaries</relationshipLabel>
+        <relationshipName>Participation_Deal_Summaries</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Participation Deal Summary</label>
+    <nameField>
+        <displayFormat>PDS {000000}</displayFormat>
+        <label>Participation Deal Summary Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Participation Deal Summaries</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CRESL_SFDC2</fullName>
+        <active>true</active>
+        <description>CRESL SFDC2</description>
+        <label>CRESL SFDC2</label>
+        <picklistValues>
+            <picklist>Global_Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi-Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Global_Rate_Index__c</picklist>
+            <values>
+                <fullName>3 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Month LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WSJP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IPL_SFDC2</fullName>
+        <active>true</active>
+        <description>IPL SFDC2</description>
+        <label>IPL SFDC2</label>
+        <picklistValues>
+            <picklist>Global_Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi-Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Global_Rate_Index__c</picklist>
+            <values>
+                <fullName>3 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Month LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WSJP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>NRELF_SFDC2</fullName>
+        <active>true</active>
+        <description>NRELF SFDC2</description>
+        <label>NRELF SFDC2</label>
+        <picklistValues>
+            <picklist>Global_Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi-Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Global_Rate_Index__c</picklist>
+            <values>
+                <fullName>3 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Month LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WSJP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>RELF_SFDC2</fullName>
+        <active>true</active>
+        <description>RELF SFDC2</description>
+        <label>RELF SFDC2</label>
+        <picklistValues>
+            <picklist>Global_Loan_Structure__c</picklist>
+            <values>
+                <fullName>Multi-Draw Term</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolving</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Global_Rate_Index__c</picklist>
+            <values>
+                <fullName>3 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 Yr T Bill</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Month LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Day LIBOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WSJP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>PDS_Months_Need_to_be_Numbers</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND( NOT(ISBLANK(Global_Term_Months__c)), NOT (ISNUMBER (  Global_Term_Months__c  ))),
+AND( NOT(ISBLANK(Global_Extension_Duration_Months__c)),NOT (ISNUMBER (  Global_Extension_Duration_Months__c   )))
+)</errorConditionFormula>
+        <errorMessage>Global Term AND Global Extension Duration need to be Numerical Values</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

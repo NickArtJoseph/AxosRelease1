@@ -1,0 +1,24 @@
+<apex:page controller="SNPCAPIQ.NewRegistrationController">
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+    
+    <div class="snp snp-mass-account-import">
+        <apex:form >
+        <div class="snp-panel">
+            <div class="snp-container15 clearfix">
+                <c:Help styleClass="right" />
+                <div class="snp-logo">
+                    <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SnP_resources, 'img/snp-logo35.png')}"/>
+                </div>
+            </div>
+            <div class="snp-panel-title">Please click the button below to re-register S&amp;P Capital IQ application</div>
+            <div class="snp-container15">
+                <apex:outputPanel layout="block" rendered="{!Sandbox}">
+                	<apex:commandButton action="{!registration}" id="registration" value="Renew Registration" status="pageLoader" rerender="pageMessages" styleClass="snp-btn snp-btn-large"/>
+				</apex:outputPanel>
+                <apex:pageMessages id="pageMessages"/>
+            </div>
+        </div>
+        </apex:form>
+    </div>
+    
+</apex:page>

@@ -1,0 +1,78 @@
+<apex:page controller="CICertChecklistAdminController" tabStyle="Opportunity" showHeader="true" title="{!CertificationTypeName}: Administration">
+	<apex:sectionHeader title="{!CertificationTypeName}" subtitle="Administration" />
+	<apex:form >
+	<apex:pageMessages />
+	<apex:pageBlock title="Details">
+		<apex:pageBlockButtons location="top">
+			<apex:commandButton value="Return to Opportunity" action="{!returnToOpp}" />
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection columns="1" id="DetailSection">
+			<apex:outputField value="{!Opportunity.Name}" />
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Certification Type" />
+				<apex:outputText value="{!CertificationTypeName}" />
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Checklist Items Available" />
+				<apex:outputPanel layout="block">
+					<apex:outputPanel layout="block">
+					<apex:selectList id="selectedItem" value="{!selectedItem}" size="5" disabled="{!isAdd}">
+						<apex:selectOptions value="{!ChecklistItemOptions}" />
+					</apex:selectList>
+					</apex:outputPanel>
+					<apex:outputPanel layout="block" style="padding-top: 10px;">
+					<apex:commandButton value="Add" action="{!addItem}" rendered="{!AND(ChecklistItemOptions.size > 0, NOT(isAdd))}"/>
+					</apex:outputPanel>
+					<apex:outputPanel layout="block" rendered="{!isAdd}">
+					<table width="100%">
+						<tr>
+							<th width="10%">Action</th>
+							<th width="60%">Name</th>
+							<th width="30%">Grace Period</th>
+						</tr>
+						<tr>
+							<td>
+								<apex:commandLink value="Save" action="{!saveChecklistItem}" />
+								&nbsp;|&nbsp;
+								<apex:commandLink value="Cancel" action="{!cancelChecklistItem}" />
+							</td>
+							<td>
+								<apex:outputField value="{!modifyChecklistItem.Checklist_Item_Name__c}" />
+							</td>
+							<td>
+								<apex:inputField value="{!modifyChecklistItem.Grace_Period__c}" />
+							</td>
+						</tr>
+					</table>
+				</apex:outputPanel>
+				</apex:outputPanel>
+			</apex:pageBlockSectionItem>
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Required Checklist Items" />
+				<apex:outputPanel >
+					<apex:dataTable value="{!RequiredChecklistItemList}" var="citem" width="100%" columnsWidth="10%,60%,30%">
+						<apex:column headerValue="Action" headerClass="actionColumn">
+							<apex:commandLink value="Edit" action="{!editChecklistItem}" rendered="{!checklistId != citem.Id}">
+								<apex:param name="checklistId" value="{!citem.Id}" assignTo="{!checklistId}" />
+							</apex:commandLink>
+							<apex:commandLink value="Save" action="{!saveChecklistItem}" rendered="{!checklistId = citem.Id}" />
+							&nbsp;|&nbsp;
+							<apex:commandLink value="Del" action="{!deleteChecklistItem}" rendered="{!checklistId != citem.Id}">
+								<apex:param name="checklistId" value="{!citem.Id}" assignTo="{!checklistId}" />
+							</apex:commandLink>
+							<apex:commandLink value="Cancel" action="{!cancelChecklistItem}" rendered="{!checklistId = citem.Id}" />
+						</apex:column>
+						<apex:column headerValue="Name" value="{!citem.Checklist_Item_Name__c}" />
+						<apex:column headerValue="Grace Period" >
+							<apex:outputField value="{!citem.Grace_Period__c}" rendered="{!checklistId != citem.Id}" />
+							<apex:inputField value="{!modifyChecklistItem.Grace_Period__c}" rendered="{!checklistId = citem.Id}" />
+						</apex:column>
+					</apex:dataTable>
+				</apex:outputPanel>
+			</apex:pageBlockSectionItem>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection columns="1">
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>

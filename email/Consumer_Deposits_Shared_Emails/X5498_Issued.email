@@ -1,0 +1,18 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>The 5498 statement was mailed to your current address on
+file on [DATE]. This statement is also available within Online Banking and can
+be accessed by following these steps;<br></font></p><ol style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif">Click <b style="">Additional Services</b></font></li><li><font face="Arial, sans-serif">Click <b style="">eStatements</b></font></li><li><font face="Arial, sans-serif">On the left hand side, click on “<b style="">View Statement Histor</b>y” for
+the applicable account.</font></li><li><font face="Arial, sans-serif">Select the earlier dated statement for [DATE].&nbsp;</font></li></ol><font face="Arial, sans-serif" style=""><span style="color: rgb(0, 0, 0);">We appreciate your business and commit to providing superior
+Banking products, support and services.<br></span><span style="color: rgb(0, 0, 0);"><br>Best Regards,<br></span></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br><font color="#ff0000">[INSERT BRAND]&nbsp;</font><span style="color: rgb(0, 0, 0);">Customer Service</span></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

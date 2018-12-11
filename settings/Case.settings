@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseCreateNotificationTemplate>Case_Auto_Responses/Case_Creation_Autoreply</caseCreateNotificationTemplate>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <collapseThread>true</collapseThread>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseOwner>Deposit_CC_Customer_Service</defaultCaseOwner>
+    <defaultCaseOwnerType>Queue</defaultCaseOwnerType>
+    <emailToCase>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>false</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Bounce</overEmailLimitAction>
+        <preQuoteSignature>true</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank of Internet</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@asabankingcenter.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>ASA Banking Center</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>accountspecialist@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Account Specialist</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>accountspecialist@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Account Specialist</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Advisor</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@bofiadvisor.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Advisor Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Advisor</caseOrigin>
+            <caseOwner>Advisor_queue</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>advisordocs@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Advisor Documents</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Advisor</caseOrigin>
+            <caseOwner>Advisor_queue</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>advisordocs@bofiadvisor.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Advisor Documents</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Advisor Wires</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>advisorwires@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Advisor Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank of Internet</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@audubonbankingcenter.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Audubon Banking Center</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Axos Customer Service</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Axos Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Axos Wires</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>axoswires@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Axos Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Loan Servicing</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>servicing@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>BOFI Loan Servicing</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Loan Servicing</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>loanservicing@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>BOFI Loan Servicing</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank X Wires</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>bankxwires@bankx.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Bank X Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank of Internet</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@bankofinternet.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Bank of Internet Banking Center</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank of Internet Wires</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>bankofinternetwires@bankofinternet.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Bank of Internet Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Bank X</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@bankx.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>BankX Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: BofI Advisor Wires</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>bofiadvisorwires@bofiadvisor.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>BofI Advisor Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Business Banking</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>businessbanking@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Business Banking</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Business Banking</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>businessbanking@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Business Banking</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Business Banking Wires</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>businessbankingwires@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Business Banking Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Fax</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>deposit.fax@bankofinternet.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Consumer Deposits Fax</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: DepOps Secure</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>depopssecure@bofi.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Dep Ops Secure</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: DepOps</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>depops@bankofinternet.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>DepOps</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Fax</caseOrigin>
+            <caseOwner>LS_Fax</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>lservicing@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Loan Servicing Fax</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: NW Complaints</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>nwcomplaints@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>NW Complaints</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: NW Premier Complaints</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>nwpremiercomplaints@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>NW Premier Complaints</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Nationwide</caseOrigin>
+            <caseOwner>Deposit_CC_Customer_Service</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>nationwidecustomerservice@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Nationwide Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Net Bank</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@netbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Net Bank Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: RS Enrollment</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>rsenrollment@bofi.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>RS Enrollment</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: RS Enrollment</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>rsenrollment@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>RS Enrollment</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Fax: Retirement Services</caseOrigin>
+            <caseOwner>Deposit_Ops_Retirement</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>retirementservicessv@bofifederalbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Retirement Services</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Fax: Retirement Services</caseOrigin>
+            <caseOwner>Deposit_Ops_Retirement</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>retirementservicessv@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Retirement Services</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>testcustomerservice@bofi.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Test Customer Service</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: Treasury Management</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>treasurymanagement@axosbank.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Treasury Management</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: UFB</caseOrigin>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>customerservice@ufbdirect.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>UFB Direct</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email: UFB Direct Wires</caseOrigin>
+            <caseOwner>Deposit_Ops_Emails_Faxes</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Standard</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>ufbdirectwires@ufbdirect.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>UFB Direct Wires</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableDraftEmails>true</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>false</enableEmailActionDefaultsHandler>
+    <enableSuggestedSolutions>true</enableSuggestedSolutions>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>true</showFewerCloseActions>
+    <systemUserEmail>garce@bofifederalbank.com</systemUserEmail>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>true</useSystemUserAsDefaultCaseUser>
+    <webToCase>
+        <enableWebToCase>false</enableWebToCase>
+    </webToCase>
+</CaseSettings>

@@ -1,0 +1,52 @@
+<apex:page standardController="Account" tabStyle="Account" extensions="AccountSFDC2RollupSummaryExtension">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total number of deposit accounts"/>
+                <apex:outputText value="{!numDepositAccounts}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total deposit balance"/>
+                <apex:outputText value="{0,number,currency}">
+                    <apex:param value="{!balanceDepositAccounts}"/>
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total number of loan accounts"/>
+                <apex:outputText value="{!numLoanAccounts}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total loan balance"/>
+                <apex:outputText value="{0,number,currency}">
+                    <apex:param value="{!balanceLoanAccounts}"/>
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total number of CD accounts"/>
+                <apex:outputText value="{!numCDAccounts}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total CD balance"/>
+                <apex:outputText value="{0,number,currency}">
+                    <apex:param value="{!balanceCDAccounts}"/>
+                </apex:outputText>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total opportunities"/>
+                <apex:outputText value="{!numLTDOpportunities}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Opportunities this quarter"/>
+                <apex:outputText value="{!numQTDOpportunities}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Total calls"/>
+                <apex:outputText value="{!numLTDCalls}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem labelStyle="width: 15%" dataStyle="20%">
+                <apex:outputLabel value="Calls this quarter"/>
+                <apex:outputText value="{!numQTDCalls}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

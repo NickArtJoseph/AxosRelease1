@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global"
+                controller="ReferraltypeSFDC2LTGN">
+    
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="ReferToList" type="List" />
+    <aura:attribute name="checkUser" type="Boolean" />
+    <aura:attribute name="checkAccess" type="Boolean" />
+    <aura:attribute name="selectedItem" type="String" />
+    <aura:attribute name="Notes" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:select aura:id="select" name="select" label="Opportunity Status" value="{!v.selectedItem}">
+        <option value="Advisor Recruiting SFDC2">Advisor Recruiting SFDC2</option>
+        <option value="Advisory SFDC2">Advisory SFDC2</option>
+        <option value="Auto Loan Indirect SFDC2">Auto Loan Indirect SFDC2</option>
+        <option value="Business Banking SFDC2">Business Banking SFDC2</option>
+        <option value="Commercial Banking SFDC2">Commercial Banking SFDC2</option>
+        <option value="Consumer Deposits SFDC2">Consumer Deposits SFDC2</option>
+        <option value="Consumer Wholesale SFDC2">Consumer Wholesale SFDC2</option>
+        <option value="Dealership Recruiting SFDC2">Dealership Recruiting SFDC2</option>
+        <option value="Virtus SFDC2">Virtus SFDC2</option>
+        <option value="CRESL SFDC2">CRESL SFDC2</option>
+        <option value="EQF SFDC2">EQF SFDC2</option>
+        <option value="Factoring SFDC2">Factoring SFDC2</option>
+        <option value="NRELF SFDC2">NRELF SFDC2</option>
+        <option value="RELF SFDC2">RELF SFDC2</option>
+        <option value="IPL SFDC2">IPL SFDC2</option>
+    </lightning:select>
+    
+    <lightning:textarea name="myTextArea" value="{!v.Notes}" 
+                        label="New Opp detail" maxlength="300" />
+    
+    <lightning:buttonGroup >
+        <lightning:button label="Create Referral" onclick="{!c.createAction}"/>
+        <!--<lightning:button label="Cancel" onclick="{!c.cancelAction}"/>-->
+    </lightning:buttonGroup>
+    
+</aura:component>

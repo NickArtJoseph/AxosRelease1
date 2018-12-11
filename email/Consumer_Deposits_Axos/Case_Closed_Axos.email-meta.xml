@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Generic case closed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Axos Bank - Case Closed</name>
+    <style>none</style>
+    <subject>Case {!Case.Id} Has Been Closed</subject>
+    <textOnly>Hello {!Account.Name},  
+
+We&apos;ve resolved your case.  
+
+If you feel we haven&apos;t resolved your case, simply reply to this email and we will re-activate your case.  
+
+Best, 
+BankX</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+<apex:page controller="LLC_BI.FacilityHierarchyUIController">
+    <apex:outputPanel rendered="{!showMultiLevelHierarchyPage}">
+    <apex:composition template="nFORCE__Template_Heading">
+        <apex:define name="left">
+            <span>{!$Label.llc_bi__facility_hierarchy}</span>
+        </apex:define>
+        <apex:define name="right"></apex:define>
+    </apex:composition>
+    <apex:composition template="nFORCE__Template_View_1_Column">
+        <apex:define name="column-content">
+            <apex:composition template="nFORCE__Template_View_Container">
+                <apex:define name="content">
+                    <apex:include pageName="LLC_BI__Facility_Hierarchy" />
+                </apex:define>
+            </apex:composition>
+        </apex:define>
+    </apex:composition>
+    </apex:outputPanel>
+</apex:page>

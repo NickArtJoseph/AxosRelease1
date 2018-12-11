@@ -1,0 +1,4 @@
+<apex:page standardcontroller="LLC_BI__Risk_Grade_Template__c" showHeader="true" sidebar="true">
+	<c:Includes enableLifeCycleApp="true" />
+	<c:Risk_Grade_Template templateId="{!LLC_BI__Risk_Grade_Template__c.Id}" />
+</apex:page>

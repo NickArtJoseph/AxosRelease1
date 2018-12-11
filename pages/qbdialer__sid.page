@@ -1,0 +1,180 @@
+<apex:page showHeader="false"
+    showChat="false"
+    sidebar="false"
+    controller="qbdialer.IS_Basic"
+    contenttype="{!ContentType}"
+    action="{!handleSidRequest}"
+    >
+<apex:outputText value="{!$CurrentPage.parameters.callback}(" rendered="{!ShowCallback}"/>
+<apex:outputText value="'{!JSENCODE(SidResponse)}'"/>
+<apex:outputText value=")" rendered="{!ShowCallback}"/>
+<apex:pageBlock rendered="{!ISDataStore}">
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/jquery.min.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/jquery-migrate.min.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/json2.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/persist.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/jquery.postmessage.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'lib/jcookie.js')}"> </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.c2c_resources, 'ISStorage.js')}"> </script>
+    <script type="text/javascript">
+        var user_id = '{!UserId}';
+
+        $(document).ready(function() {
+            var getParameterByName = function (name) {
+                name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+                var regexS = "[\\?&]" + name + "=([^&#]*)";
+                var regex = new RegExp(regexS);
+                var results = regex.exec(window.location.search);
+                if(results == null) {
+                    return "";
+                } else {
+                    return decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+            }
+            var is_data_store = new ISPersist.Store('ISDataStore');
+            var parent_href   = getParameterByName('parent_href');
+
+            /**
+             * Perform a postMessage to the parent window
+             * @param {string} type The type of the message, indicating what parent window handler should run
+             * @param {*} data The message itself
+             * @param {function} [success] A handler to run once the parent window has processed the data
+             * @param {function} [error] A handler to run if an error occurs communicating with the parent window
+             */
+            function post(type, data, success, error) {
+                if (typeof type !== 'string' || type.length === 0) {
+                    throw new Error("A string for the post message type is required.");
+                }
+
+                $.pm({
+                    target:   window.parent,
+                    url:      parent_href,
+                    type: type,
+                    data: data,
+                    success: typeof success === 'function' ? success : function () {},
+                    error: typeof error === 'function' ? error : function () {}
+                });
+            };
+
+            $.pm.bind(
+                'getISData',
+                function(data) {
+                    var stored_value  = is_data_store.get(data.store_key);
+                    post('receiveISData', {callback_name: data.callback_name,data: stored_value});
+                    return stored_value;
+                }
+            );
+            $.pm.bind("setISData", function(data) {
+                is_data_store.set(data.key, data.value);
+            });
+            $.pm.bind("clearISData", function(data) {
+                return is_data_store.clear(data.key);
+            });
+            var ISDataStorePushEnabled = false;
+            var registered_ISDateStore = Array();
+            var handleISDataStoreEvent = function(e){
+                if (registered_ISDateStore[e.key]) {
+                    post('receiveISDataChangeEvent', {name: e.key, newValue: e.newValue, source:e.source});
+                }
+            };
+            var initPushISDataStore = function(){
+                is_data_store.onStorageEvent(handleISDataStoreEvent);
+                ISDataStorePushEnabled = true;
+            };
+            $.pm.bind("registerISData", function(data) {
+                if (!ISDataStorePushEnabled) {
+                    initPushISDataStore();
+                }
+                registered_ISDateStore[data.key] = true;
+            });
+
+            $.pm.bind("flushISData", function(data) {
+                is_data_store.flush();
+            });
+
+
+            /*
+            LoggingStorage support for ISDataStore
+            */
+            (function () {
+                /**
+                 * Indicates whether or not we are listening to change/clean events for a particular key
+                 * @var {object}
+                 */
+                var registered_event_handlers = {};
+
+                /**
+                 * Set up the default state for a particular key
+                 * @param {string} key
+                 */
+                function initHandlersForKey(key) {
+                    registered_event_handlers[key] = {
+                        on_change: false,
+                        on_clear: false
+                    }
+                }
+
+                $.pm.bind("setLoggingItem", function(data) {
+                    var committed = false;
+
+                    LoggingStorage.set(data.key, data.value, function () {
+                        // If performed synchronously, we'll be able to tell the parent window
+                        committed = true;
+                    });
+
+                    return committed;
+                });
+
+                $.pm.bind("getLoggingItem", function(data) {
+                    var value, metadata;
+
+                    LoggingStorage.get(data.key, function (val, meta) {
+                        value = val;
+                        metadata = meta;
+                    });
+
+                    return {value: value, metadata: metadata};
+                });
+
+                $.pm.bind("getLog", function(data) {
+                    return LoggingStorage.getLog(data.key);
+                });
+
+                $.pm.bind("registerLogChange", function(data) {
+                    if (!registered_event_handlers[data.key]) {
+                        initHandlersForKey(data.key);
+                    }
+
+                    if (!registered_event_handlers[data.key].on_change) {
+                        LoggingStorage.onChange(data.key, function (value, metadata) {
+                            post('receiveLogChangeEvent', {key: data.key, value: value, metadata: metadata});
+                        });
+                        registered_event_handlers[data.key].on_change = true;
+                    }
+                });
+
+                $.pm.bind("registerLogClear", function(data) {
+                    if (!registered_event_handlers[data.key]) {
+                        initHandlersForKey(data.key);
+                    }
+
+                    if (!registered_event_handlers[data.key].on_clear) {
+                        LoggingStorage.onClear(data.key, function (log) {
+                            post('receiveLogClearEvent', {key: data.key});
+                        });
+                        registered_event_handlers[data.key].on_clear = true;
+                    }
+                });
+
+                $.pm.bind("clearLogItem", function(data) {
+                    return LoggingStorage.clear(data.key);
+                });
+            }());
+
+            if(window.parent) {
+                post('storeReady', {'UserId': user_id});
+            }
+        });
+    </script>
+</apex:pageBlock>
+</apex:page>

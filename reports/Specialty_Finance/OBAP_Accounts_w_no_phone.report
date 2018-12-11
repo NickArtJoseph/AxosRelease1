@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>Account.Neustar_MPIC_Phone_Score__c</field>
+    </columns>
+    <columns>
+        <field>Account.LexisNexis_Trigger__c</field>
+    </columns>
+    <columns>
+        <field>Account.SF_LexisNexis_Data_Retrieval__c</field>
+    </columns>
+    <description>Outbound Accounts with MPIC = 0 or no Phone</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Outbound account pool</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Specialty_Finance_Lottery,PersonAccount.Specialty_Finance_Structured_Settlement,PersonAccount.Specialty_Finance_IGT_Winners</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Neustar_MPIC_Phone_Score__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PHONE1</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>-</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>OBAP Accounts w/ no phone</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

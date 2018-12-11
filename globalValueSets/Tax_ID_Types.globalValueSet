@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>I - Individual</fullName>
+        <default>false</default>
+        <label>I - Individual</label>
+    </customValue>
+    <customValue>
+        <fullName>T - TIN</fullName>
+        <default>false</default>
+        <label>T - TIN</label>
+    </customValue>
+    <masterLabel>Tax ID Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

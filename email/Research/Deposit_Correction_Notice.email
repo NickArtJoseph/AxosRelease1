@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br>Thank you for choosing BofI Federal Bank for your banking needs. This notice is provided to advise you that on XX/XX/XXXX a deposit correction was made to your account. Your deposit was XXXXX in the amount of $XXXX for the following reason:<br><br></span></p><p><span style="background-color: rgb(255, 255, 255);">•&nbsp;Check [#CHECK NUMBER] [CHOOSE AN ITEM]<br>•&nbsp;Check [#CHECK NUMBER] [CHOOSE AN ITEM]<br>•&nbsp; [CHOOSE AN ITEM]<br><br></span></p><p><span style="background-color: rgb(255, 255, 255);"><br></span></p><p><span style="background-color: rgb(255, 255, 255);"><strong>Questions</strong>? If you have any questions please call us toll free on (877) 247-8002 or email us at <a href="mailto:customerservice@bofi.com">customerservice@bofi.com</a>; our Direct Bankers are available Monday – Friday 6:00am to 6:00pm (PT) to take your call.</span></p><p><span style="background-color: rgb(255, 255, 255);"><br><br></span><span style="font-family: arial; font-size: 12pt;"><br>Thank you.<br></span><span style="font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><span style="font-size: 12pt;"><font face="Arial, sans-serif">{!User.FirstName}<br></font></span><font style="font-family: arial; font-size: 12pt;">[INSERT BRAND]&nbsp;</font><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

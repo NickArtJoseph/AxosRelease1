@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>HRB_Refund_Advance__c.CreatedAt__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>HRB_Refund_Advance__c.Refund_Advance_Application_ID__c</field>
+    </columns>
+    <columns>
+        <field>HRB_Refund_Advance__c.ManualDecision__c</field>
+    </columns>
+    <columns>
+        <field>HRB_Refund_Advance__c.HRBDecision__c</field>
+    </columns>
+    <columns>
+        <field>HRB_Refund_Advance__c.isCompleted__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_LAST_UPDATE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bradley Greer</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>HRB Uploads by Brad</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$HRB_Refund_Advance__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_LAST_UPDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-30</startDate>
+    </timeFrameFilter>
+</Report>

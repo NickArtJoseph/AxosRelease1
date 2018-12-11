@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ActivityDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Activity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>UDB_Secure_Messagings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Read__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Read</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Name__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>UDB Secure Messagings</relationshipLabel>
+        <relationshipName>UDB_Secure_Messagings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Normal</fullName>
+                    <default>false</default>
+                    <label>Normal</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Related_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related To</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>UDB Secure Messagings</relationshipLabel>
+        <relationshipName>UDB_Secure_Messagings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>false</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Waiting on someone else</fullName>
+                    <default>false</default>
+                    <label>Waiting on someone else</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advance</fullName>
+                    <default>false</default>
+                    <label>Advance</label>
+                </value>
+                <value>
+                    <fullName>Advance Review</fullName>
+                    <default>false</default>
+                    <label>Advance Review</label>
+                </value>
+                <value>
+                    <fullName>Annuity Schedule</fullName>
+                    <default>false</default>
+                    <label>Annuity Schedule</label>
+                </value>
+                <value>
+                    <fullName>Bankruptcy/Lien</fullName>
+                    <default>false</default>
+                    <label>Bankruptcy/Lien</label>
+                </value>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Case Search</fullName>
+                    <default>false</default>
+                    <label>Case Search</label>
+                </value>
+                <value>
+                    <fullName>Certified Court Orders</fullName>
+                    <default>false</default>
+                    <label>Certified Court Orders</label>
+                </value>
+                <value>
+                    <fullName>Claim Findings Review</fullName>
+                    <default>false</default>
+                    <label>Claim Findings Review</label>
+                </value>
+                <value>
+                    <fullName>Confirm FVR</fullName>
+                    <default>false</default>
+                    <label>Confirm FVR</label>
+                </value>
+                <value>
+                    <fullName>Contact Info Request</fullName>
+                    <default>false</default>
+                    <label>Contact Info Request</label>
+                </value>
+                <value>
+                    <fullName>Create New Account</fullName>
+                    <default>false</default>
+                    <label>Create New Account</label>
+                </value>
+                <value>
+                    <fullName>Credit Report</fullName>
+                    <default>false</default>
+                    <label>Credit Report</label>
+                </value>
+                <value>
+                    <fullName>Divorce Decree</fullName>
+                    <default>false</default>
+                    <label>Divorce Decree</label>
+                </value>
+                <value>
+                    <fullName>Doc Request</fullName>
+                    <default>false</default>
+                    <label>Doc Request</label>
+                </value>
+                <value>
+                    <fullName>Doc Request Review</fullName>
+                    <default>false</default>
+                    <label>Doc Request Review</label>
+                </value>
+                <value>
+                    <fullName>Draft Order Review</fullName>
+                    <default>false</default>
+                    <label>Draft Order Review</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>FOIA Request</fullName>
+                    <default>false</default>
+                    <label>FOIA Request</label>
+                </value>
+                <value>
+                    <fullName>FVR Request</fullName>
+                    <default>false</default>
+                    <label>FVR Request</label>
+                </value>
+                <value>
+                    <fullName>Gift Card</fullName>
+                    <default>false</default>
+                    <label>Gift Card</label>
+                </value>
+                <value>
+                    <fullName>Identity Report</fullName>
+                    <default>false</default>
+                    <label>Identity Report</label>
+                </value>
+                <value>
+                    <fullName>Loan Servicing Note</fullName>
+                    <default>false</default>
+                    <label>Loan Servicing Note</label>
+                </value>
+                <value>
+                    <fullName>Mail Processing</fullName>
+                    <default>false</default>
+                    <label>Mail Processing</label>
+                </value>
+                <value>
+                    <fullName>Meeting</fullName>
+                    <default>false</default>
+                    <label>Meeting</label>
+                </value>
+                <value>
+                    <fullName>Misc. Doc Review</fullName>
+                    <default>false</default>
+                    <label>Misc. Doc Review</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Pleadings Review</fullName>
+                    <default>false</default>
+                    <label>Pleadings Review</label>
+                </value>
+                <value>
+                    <fullName>Pricing Request</fullName>
+                    <default>false</default>
+                    <label>Pricing Request</label>
+                </value>
+                <value>
+                    <fullName>Processing Notes</fullName>
+                    <default>false</default>
+                    <label>Processing Notes</label>
+                </value>
+                <value>
+                    <fullName>Promotion</fullName>
+                    <default>false</default>
+                    <label>Promotion</label>
+                </value>
+                <value>
+                    <fullName>Retail Legal Closing Binder Review</fullName>
+                    <default>false</default>
+                    <label>Retail Legal Closing Binder Review</label>
+                </value>
+                <value>
+                    <fullName>Sales Request</fullName>
+                    <default>false</default>
+                    <label>Sales Request</label>
+                </value>
+                <value>
+                    <fullName>Settlement Agreement</fullName>
+                    <default>false</default>
+                    <label>Settlement Agreement</label>
+                </value>
+                <value>
+                    <fullName>Shipping Label</fullName>
+                    <default>false</default>
+                    <label>Shipping Label</label>
+                </value>
+                <value>
+                    <fullName>SSN Verification</fullName>
+                    <default>false</default>
+                    <label>SSN Verification</label>
+                </value>
+                <value>
+                    <fullName>UCC Search</fullName>
+                    <default>false</default>
+                    <label>UCC Search</label>
+                </value>
+                <value>
+                    <fullName>Verification of Benefits</fullName>
+                    <default>false</default>
+                    <label>Verification of Benefits</label>
+                </value>
+                <value>
+                    <fullName>Wholesale Legal Closing Binder Review</fullName>
+                    <default>false</default>
+                    <label>Wholesale Legal Closing Binder Review</label>
+                </value>
+                <value>
+                    <fullName>Secure Support</fullName>
+                    <default>false</default>
+                    <label>Secure Support</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>UDB Secure Messaging</label>
+    <nameField>
+        <displayFormat>SecureMessage-{0000}</displayFormat>
+        <label>Subject</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>UDB Secure Messagings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>UDB_Secure_Messaging</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>UDB Secure Messaging</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>window.open(&apos;/apex/Secure_Support_Email_Template?id={!Case.Id}&apos;)</url>
+    </webLinks>
+</CustomObject>

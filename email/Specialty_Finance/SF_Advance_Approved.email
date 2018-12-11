@@ -1,0 +1,4 @@
+<div style="font: 12px arial, sans-serif;">The Advance for {!Opportunity.Account} for {!Advance__c.Amount__c} has been approved and Processing will begin drafting the advance docs shortly.</div>
+<br/>
+<div style="font: 12px arial, sans-serif;">Click <a href="{!Opportunity.Link}">here</a> to view the Opportunity<br/>
+Click <a href="{!Advance__c.Link}">here</a> to view the Advance</div>

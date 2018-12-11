@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifies TPO Seller Coordinator of Changes</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TPO Account Change</name>
+    <style>none</style>
+    <subject>Automated Account Approval Notice for: {!Account.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

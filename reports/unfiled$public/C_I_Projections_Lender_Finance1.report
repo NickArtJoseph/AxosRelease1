@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>PROBABILITY</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CI_Rate__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CI_Projected_Close_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CI_Projected_Initial_Funding__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CI_Rate_Type__c</field>
+    </columns>
+    <description>Salesforce Pipeline. Treasury View</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.SubStage__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PIC Revision,PIC Submitted,LOI Preparation,LOI Sent,LOI Signed &amp; Received w/Deposit,CAM Preparation,CAM Revision,CAM Submitted,Legal Engagement - Internal,Legal Engagement - External,Document Negotiations,Document Execution,Pending Final Boarding,Final Loan Boarding,Loan Funded/Available</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Opportunity.CI_General,Opportunity.CI_Lender_Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>C&amp;I - PIC,C&amp;I - LOI</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>C&amp;I Projections - Lender Finance</name>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.CI_Projected_Close_Date__c</dateColumn>
+        <interval>INTERVAL_CURNEXTQ</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>nFORCE__UI_Config_Builder</fullName>
+        <availableFields>
+            <field>nFORCE__Icon_Class__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>nFORCE__Parameters__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used for route management by the UI Config Builder tool.</description>
+        <displayedFields>
+            <field>nFORCE__Screen__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__lookupKey__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__App__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Body__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Topbar__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Navigation__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>nFORCE__Sub_Navigation__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <label>UI Config Builder</label>
+    </fieldSets>
+    <fields>
+        <fullName>nFORCE__App__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is required. This field is a unique identifier for the route, and is used, in conjunction with a group&apos;s app, to uniquely identify a requested app.</description>
+        <externalId>false</externalId>
+        <label>App</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Body__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. The admin manually populates this field. This field controls what and how data is displayed in the route. If a screen is being used, a layout type must be set. Otherwise, specific values can be set for Visualforce pages in the system.</description>
+        <externalId>false</externalId>
+        <label>Body</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Group__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--
+
+            Moved to Group__c.</description>
+        <externalId>false</externalId>
+        <label>-D Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Icon_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is optional. The admin manually populates this field. It controls the icon that displays beside the name of a route on the secondary navigation menu. It is not used for tertiary routes.</description>
+        <externalId>false</externalId>
+        <label>Icon Class</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Is_Hidden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--
+
+            Moved to Route_Group__c.Is_Hidden__c.</description>
+        <externalId>false</externalId>
+        <label>-D Is Hidden</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Navigation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is required. The admin manually populates this field or it is automatically set via Install Updates. It is the secondary navigation page name for a route.</description>
+        <externalId>false</externalId>
+        <label>Navigation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--
+
+            Moved to Route_Group__c.Order__c.</description>
+        <externalId>false</externalId>
+        <label>-D Order</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parameters__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. A semicolon-separated set of key=value pairs passed as URL parameters to the content of this route.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A semicolon-separated set of key=value pairs passed as URL parameters to the content of this route.</inlineHelpText>
+        <label>Parameters</label>
+        <length>2048</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Parent_App__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--
+
+            Moved to Route_Group__c.Parent_Route__c.</description>
+        <externalId>false</externalId>
+        <label>-D Parent App</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Screen__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field looks up to the screen, which is typically used to determine what fields to display, and the view state (read only or editable) to display them in.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Screen used to render the content of this route.</inlineHelpText>
+        <label>Screen</label>
+        <referenceTo>nFORCE__Screen__c</referenceTo>
+        <relationshipLabel>Routes</relationshipLabel>
+        <relationshipName>Routes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Sub_Navigation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to determine which subnavigation bar to use for a given route.</description>
+        <externalId>false</externalId>
+        <label>Sub Navigation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Toolbar__c</fullName>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED--</description>
+        <externalId>false</externalId>
+        <label>-D Toolbar</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__Topbar__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually populated. It is optional. This field is used to determine which topbar to use for a given route.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The page include for the top bar region of the base UI template.</inlineHelpText>
+        <label>Topbar</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>nFORCE__lookupKey__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field is optional. If populated, the value must be unique across all the records of this type. The field typically contains an external identifier that is used to associate the record with its matching record in an external system. The field can also be used to efficiently associate related records when importing data into nCino, without the need to know the internal ID for the record. For more information, refer to https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_nested_object.htm</description>
+        <externalId>true</externalId>
+        <label>lookupKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Route</label>
+    <listViews>
+        <fullName>nFORCE__All</fullName>
+        <columns>nFORCE__Group__c</columns>
+        <columns>NAME</columns>
+        <columns>nFORCE__App__c</columns>
+        <columns>nFORCE__Order__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>nFORCE__Toolbar__c</columns>
+        <columns>nFORCE__Body__c</columns>
+        <columns>nFORCE__Icon_Class__c</columns>
+        <columns>nFORCE__Is_Hidden__c</columns>
+        <columns>nFORCE__Parent_App__c</columns>
+        <columns>nFORCE__Navigation__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>nFORCE__All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Route Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Routes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

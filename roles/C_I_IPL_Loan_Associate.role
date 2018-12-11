@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>C&amp;I - IPL Loan Associate</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>C&amp;I - IPL Loan Associate</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>IPL_Manager_SFDC2</parentRole>
+</Role>

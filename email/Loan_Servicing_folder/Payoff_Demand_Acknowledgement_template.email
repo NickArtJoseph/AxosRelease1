@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><span style="background-color: rgb(255, 255, 255);">Hello&nbsp;{!Case.Contact},</span><span style="background-color: rgb(255, 255, 255);"><br></span><br>This email is in reference to
+your Bank of Internet inquiry&nbsp;<span style="background-color: rgb(255, 255, 255);">{!Case.CaseNumber}.&nbsp;<br></span><br>Thank you for contacting&nbsp;us, we acknowledge receipt of&nbsp;the payoff demand you submitted and it has been
+forwarded to our Payoff Demand Department.&nbsp;They respond to requests in the order received and
+their normal turnaround time is 3-4 business days.&nbsp;</font><span style="font-size: 12pt; line-height: 107%; font-family: Arial, sans-serif;">Please advise if this transaction is due to the sale of the property or
+if this transaction is a refinance</span><span style="font-size: 12pt; line-height: 107%; font-family: Arial, sans-serif;">.</span><font face="Arial, sans-serif" style="color: rgb(0, 0, 0);"><br><br>If you would like further assistance, please reply to this
+email or we can also be reached by telephone at <b style="">1-866-923-7112</b>.<br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;"><br>We appreciate your business and commit to delivering
+value that will make BofI Federal Bank your first choice for all your banking
+needs.<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif;"><br><span style="font-size: 12pt;">Best Regards,<br></span></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}<br></span><b style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">BOFI Federal Bank<br></b><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 12pt;">Loan Servicing Customer Service</span>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

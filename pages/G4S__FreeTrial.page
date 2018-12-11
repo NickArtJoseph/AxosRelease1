@@ -1,0 +1,66 @@
+<apex:page sidebar="false" controller="G4S.FreeTrialController" action="{!initPage}" tabstyle="Glance_User_Settings__tab" title="Glance for Salesforce - Setup Account">
+
+<script>
+	function clearEnteredUsername() {
+		enteredUsernameField.value = '';
+		document.getElementById('enteredUsernameRadio').checked = false;
+	}
+
+	function selectEnteredUsernameRadio() {
+		document.getElementById('enteredUsernameRadio').checked = true;
+		
+		for (var i = 0; i < suggestedUsernameRadioList.length; i++) {
+			suggestedUsernameRadioList[i].checked = false;
+		}
+	}
+</script>
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Setup Account"/>
+
+<apex:form >
+<apex:pageMessages />
+
+<apex:pageBlock title="Choose Your Glance Address">
+	Often you will want to tell guests your Glance Address over the phone.  Choose one that is short and easy to understand.
+	<br></br><br></br>
+	<b>Please select one.</b><br/>
+	<apex:pageBlockSection columns="1">
+		<apex:selectRadio value="{!suggestedUsername}" layout="pageDirection" onclick="clearEnteredUsername();" id="suggestedUsername">
+			<apex:selectOptions value="{!suggestedUsernameOptions}" />
+		</apex:selectRadio>
+		<script>var suggestedUsernameRadioList = document.getElementsByName('{!$Component.suggestedUsername}');</script>
+		<apex:pageBlockSectionItem >
+			<apex:panelGroup >
+				If you prefer another address, please enter it and we'll see if it is available.<br/>
+				<apex:outputPanel rendered="{!NOT(enteredUsernameSelected)}">
+					&nbsp;&nbsp;<input type="radio" name="enteredUsernameRadio" value="entered" id="enteredUsernameRadio" onclick="selectEnteredUsernameRadio();"/>
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!enteredUsernameSelected}">
+					&nbsp;&nbsp;<input type="radio" name="enteredUsernameRadio" value="entered" id="enteredUsernameRadio" onclick="selectEnteredUsernameRadio();" checked="checked"/>
+				</apex:outputPanel>  
+				<apex:inputText value="{!enteredUsername}" id="enteredUsername" onclick="selectEnteredUsernameRadio();"/>.glance.net
+				<script>var enteredUsernameField = document.getElementById('{!$Component.enteredUsername}');</script>
+			</apex:panelGroup>
+		</apex:pageBlockSectionItem>
+		<apex:pageBlockSectionItem >
+			<apex:panelGrid columns="2" >
+   				Choose a Password&nbsp; <input type="password" name="password" value="{!password}"/><br/><br/>
+				Re-type Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="passwordConfirm" value="{!passwordConfirm}"/>
+			</apex:panelGrid>
+		</apex:pageBlockSectionItem>	
+		<apex:pageBlockSectionItem >
+			<apex:panelGroup >
+				<apex:inputCheckbox value="{!tosAccepted}" />
+				I have read and accept the <a href="http://www.glance.net/site/support/terms.asp">Glance Terms of Service</a>
+			</apex:panelGroup>
+		</apex:pageBlockSectionItem>		
+			
+	</apex:pageBlockSection>
+</apex:pageBlock>
+
+<apex:pageBlock >
+	<apex:commandButton action="{!addTrialUser}" value="Create Account"/>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

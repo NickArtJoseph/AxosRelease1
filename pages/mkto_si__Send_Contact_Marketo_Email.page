@@ -1,0 +1,6 @@
+<apex:page standardController="Contact" recordSetVar="contacts"
+  tabStyle="Marketo__tab">
+  
+  <c:SendMarketoEmail />
+  
+</apex:page>

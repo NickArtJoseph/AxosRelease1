@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatDeployment xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectionTimeoutDuration>0</connectionTimeoutDuration>
+    <connectionWarningDuration>0</connectionWarningDuration>
+    <displayQueuePosition>false</displayQueuePosition>
+    <enablePrechatApi>true</enablePrechatApi>
+    <enableTranscriptSave>true</enableTranscriptSave>
+    <label>Bank X Deployment</label>
+    <site>ChatSite_BankX</site>
+    <windowTitle>Bank X Chat</windowTitle>
+</LiveChatDeployment>

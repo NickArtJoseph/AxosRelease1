@@ -1,0 +1,18 @@
+The following opportunity requires Pricing approval:
+
+Opportunity Name: {!Opportunity.Name}
+Record Type: {!Opportunity.RecordType}
+Account Name: {!Opportunity.Account}
+Purchase Price to Customer: {!Opportunity.Purchase_Price_to_Customer__c}
+Payment Type: {!Opportunity.Payment_Type__c}
+Quoted WAL: {!Opportunity.Quoted_WAL__c}
+Quoted Spread: {!Opportunity.Qouted_Spread__c}
+Annuity Issuer: {!NullValue(Opportunity.Annuity_Issuer__c,"[Not Applicable]")}
+Issuer A.M. Best Rating: {!Opportunity.Issuer_A_M_Best_Rating__c}
+Issuer Moody's Rating: {!Opportunity.Issuer_Moody_s_Rating__c}
+Issuer S&P Rating: {!Opportunity.Issuer_S_P_Rating__c}
+
+To approve or reject this item, click this link {!ApprovalRequest.External_URL}.
+
+Thank you, 
+Salesforce

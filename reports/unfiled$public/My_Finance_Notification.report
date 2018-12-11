@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.CIF_SFDC2__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>7AA0038,AAA5581,AAB7452,AAB8264,AAB8301,AAB8307,AB8392,BAA9539,BAB0473,BAF2676,BAF6424,BAF7517,BAF7865,BAF7896,CAF3043,CAF4899,CAF5371,DAC0287,DAC0891,DAC1237,DAC1902,DAC2400,DAC2488,DAC2536,DAC2755,EAA8298,FAB5765,FAB6146,FAB6673,GAC5627,GAC5897,HAA9477,HAC8731,HAD1772,HAD1981,IAA2711,JAA3674,JAA4206,JAA4213,JAB4911,KAB4985,LAC1421,LAC3598,LAC3916,LAC4057,LAC4182,LAC4202,MAF9738,MAG0897,MAG1129,MAG1243,MAG1302,MAG1533,NAA8415,NAA8841,NAA8899,NAA9490,NAA9693,OAA7535,PAA4858,PAC3765,PAC3848,PAC4111,PAC4125,RAC5203,RAC6229,RAC6784,RAC6865,SAF9256,SAG0551,SAG0945,SAG0965,SAG1075,SAG1421,SAG1422,SAG1432,SAG1495,TAA4230,TAB7979,TAB8381,TAB8723,TAB9670,TAB9839,VAA8528,WAA1040,WAA4795,WAC6785,WAC7032,WAC7040,WAC7143,YAA3018</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>My Finance Notification</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

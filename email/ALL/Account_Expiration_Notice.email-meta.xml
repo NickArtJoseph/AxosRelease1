@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send AE notice when account nearing expiration</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Account Expiration Notice</name>
+    <style>none</style>
+    <subject>Account Nearing Expiration</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

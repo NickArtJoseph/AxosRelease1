@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Axos</letterhead>
+    <name>Change Request - Trust Certification</name>
+    <style>freeForm</style>
+    <subject>Axos Bank Inquiry {!Case.CaseNumber}</subject>
+    <textOnly>Hello {!Case.Contact},
+
+
+We will be happy to assist you with converting your personal account to a Trust account. This will be a two-step process:
+
+Step 1: Complete the Change Request: Trust Certification form.
+
+Step 2: Return the completed Trust Certification form for processing by;
+
+Secure Message: Login to Online Banking, click on Contact Us, and send a secure email with a scanned copy of the signed documents
+Fax to: 858-350-0443; or
+Mail to: Axos Bank Deposit Operations: New Accounts PO BOX 509127 San Diego, CA 92150-9948.
+
+Your trust modification request will be reviewed within three business days of receipt of the Account Vesting Change form and requested documentation. Once we have processed the information we will mail you an updated Signature Card for completion and return; upon receipt the process will be completed. If your trust has not been amended to reflect any additional trustees, we recommend you consult legal counsel for further clarification and guidance.
+
+
+
+Best Regards,
+
+
+{!User.FirstName}
+Axos Bank Customer Service</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

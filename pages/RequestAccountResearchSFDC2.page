@@ -1,0 +1,21 @@
+<apex:page standardController="Account" extensions="RequestAccountResearchSFDC2Controller">
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+<apex:form >
+	<apex:pageBlock title="Select a Research Request Type">
+		<apex:pageBlockSection >
+			<apex:selectList id="RequestType" size="1" value="{!RequestType}" title="Request Type">
+				<apex:selectOptions value="{!RequestTypeList}" />
+			</apex:selectList>
+			<apex:inputTextArea id="Notes" value="{!Notes}" label="Notes" style="width:360px; height:100px"/>
+		</apex:pageBlockSection>
+		<apex:pageBlockButtons >
+			<apex:commandButton action="{!sendAccount}" value="Send for Research"/>
+			<apex:commandButton action="{!cancel}" value="Cancel"/>
+		</apex:pageblockButtons>
+	</apex:pageBlock>	
+	<apex:inputHidden value="{!account.OwnerId}" />
+	<apex:inputHidden value="{!account.RecordTypeId}" />
+	<apex:inputHidden value="{!account.CIF_SFDC2__c}" />
+	<apex:inputHidden value="{!account.CIF_Person__c}" />
+</apex:form>
+</apex:page>

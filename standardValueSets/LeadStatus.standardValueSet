@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Active</fullName>
+        <default>false</default>
+        <label>Active</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Application</fullName>
+        <default>false</default>
+        <label>Application</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Declined</fullName>
+        <default>false</default>
+        <label>Application Declined</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Received - Incomplete</fullName>
+        <default>false</default>
+        <label>Application Received - Incomplete</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempt 1</fullName>
+        <default>false</default>
+        <label>Attempt 1</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempt 2</fullName>
+        <default>false</default>
+        <label>Attempt 2</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempt 3-Voicemail</fullName>
+        <default>false</default>
+        <label>Attempt 3-Voicemail</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempt 4-Not Contacted</fullName>
+        <default>false</default>
+        <label>Attempt 4-Not Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Bad Phone Number</fullName>
+        <default>false</default>
+        <label>Bad Phone Number</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Not Converted</fullName>
+        <default>false</default>
+        <label>Closed - Not Converted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Attempt</fullName>
+        <default>false</default>
+        <label>Contact Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted-Application Pending</fullName>
+        <default>false</default>
+        <label>Contacted-Application Pending</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Information Bad</fullName>
+        <default>false</default>
+        <label>Contact Information Bad</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted-Not Interested</fullName>
+        <default>false</default>
+        <label>Contacted-Not Interested</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted- Call Back</fullName>
+        <default>false</default>
+        <label>Contacted- Call Back</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Sent</fullName>
+        <default>false</default>
+        <label>Application Sent</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>CS-Commit to Fund</fullName>
+        <default>false</default>
+        <label>CS-Commit to Fund</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>CS-Contacted</fullName>
+        <default>false</default>
+        <label>CS-Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>CS-Hang Up</fullName>
+        <default>false</default>
+        <label>CS-Hang Up</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>CS-Suspicious Activity</fullName>
+        <default>false</default>
+        <label>CS-Suspicious Activity</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Currently / Approved Account</fullName>
+        <default>false</default>
+        <label>Currently / Approved Account</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Currently / Approved Branch</fullName>
+        <default>false</default>
+        <label>Currently / Approved Branch</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Dead</fullName>
+        <default>false</default>
+        <label>Dead</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Deceased</fullName>
+        <default>false</default>
+        <label>Deceased</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Denied</fullName>
+        <default>false</default>
+        <label>Denied</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Documents Sent</fullName>
+        <default>false</default>
+        <label>Documents Sent</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Exploration</fullName>
+        <default>false</default>
+        <label>Exploration</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up</fullName>
+        <default>false</default>
+        <label>Follow-up</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Funded</fullName>
+        <default>false</default>
+        <label>Funded</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Incompatible (Not Compatible)</fullName>
+        <default>false</default>
+        <label>Incompatible (Not Compatible)</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Information Gathering</fullName>
+        <default>false</default>
+        <label>Information Gathering</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Loan Quoted</fullName>
+        <default>false</default>
+        <label>Loan Quoted</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Loan Scenario</fullName>
+        <default>false</default>
+        <label>Loan Scenario</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>LOI issued</fullName>
+        <default>false</default>
+        <label>LOI issued</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>LOI Submitted</fullName>
+        <default>false</default>
+        <label>LOI Submitted</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Lost</fullName>
+        <default>false</default>
+        <label>Lost</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>NDA Signed</fullName>
+        <default>false</default>
+        <label>NDA Signed</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>New Assigned</fullName>
+        <default>false</default>
+        <label>New Assigned</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>New Researched</fullName>
+        <default>false</default>
+        <label>New Researched</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>New Unassigned</fullName>
+        <default>false</default>
+        <label>New Unassigned</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Compatible</fullName>
+        <default>false</default>
+        <label>Not Compatible</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Decided</fullName>
+        <default>false</default>
+        <label>Not Decided</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not staying with BofI</fullName>
+        <default>false</default>
+        <label>Not staying with BofI</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened Unfunded</fullName>
+        <default>false</default>
+        <label>Opened Unfunded</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Open - Not Contacted</fullName>
+        <default>false</default>
+        <label>Open - Not Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sale Lost</fullName>
+        <default>false</default>
+        <label>Sale Lost</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Sale Won</fullName>
+        <default>false</default>
+        <label>Sale Won</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Seller Agreement Sent</fullName>
+        <default>false</default>
+        <label>Seller Agreement Sent</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Staying with BofI</fullName>
+        <default>false</default>
+        <label>Staying with BofI</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Term Sheet</fullName>
+        <default>false</default>
+        <label>Term Sheet</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Unqualified</fullName>
+        <default>false</default>
+        <label>Unqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Unresponsive</fullName>
+        <default>false</default>
+        <label>Unresponsive</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting on Conditions</fullName>
+        <default>false</default>
+        <label>Waiting on Conditions</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Won</fullName>
+        <default>false</default>
+        <label>Won</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Working - Contacted</fullName>
+        <default>false</default>
+        <label>Working - Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Info Bad</fullName>
+        <default>false</default>
+        <label>Contact Info Bad</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Wrong Person</fullName>
+        <default>false</default>
+        <label>Wrong Person</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Hibernate</fullName>
+        <default>false</default>
+        <label>Hibernate</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard to Find</fullName>
+        <default>false</default>
+        <label>Hard to Find</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Bad Contact Information</fullName>
+        <default>false</default>
+        <label>Bad Contact Information</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted/Converted</fullName>
+        <default>false</default>
+        <label>Contacted/Converted</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempting to Contact</fullName>
+        <default>false</default>
+        <label>Attempting to Contact</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Researched</fullName>
+        <default>false</default>
+        <label>Researched</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted/Not Converted</fullName>
+        <default>false</default>
+        <label>Contacted/Not Converted</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

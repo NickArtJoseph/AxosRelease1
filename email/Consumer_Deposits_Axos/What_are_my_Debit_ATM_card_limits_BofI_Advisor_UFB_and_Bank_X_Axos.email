@@ -1,0 +1,17 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style=""><span style="background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br></span><span style="background-color: rgb(255, 255, 255);"><br></span>The daily limits for ATM/Debit cards are:</font></p><ul style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif">Cash withdrawal from an ATM using an ATM card - $1010.00</font></li><li><font face="Arial, sans-serif">Cash withdrawal from an ATM using a Visa® Debit card -
+$1010.00</font></li><li><font face="Arial, sans-serif">Point-of-sale transaction using your Visa® Debit card -
+$2,500.00</font></li></ul><font face="Arial, sans-serif" style="">We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Best Regards,</font><br style="background-color: rgb(255, 255, 255);"><span style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">{!User.FirstName}</span><br style="background-color: rgb(255, 255, 255);"><font style="background-color: rgb(255, 255, 255);"><font style="">Axos Bank</font>&nbsp;</font><font style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">Customer Service</font></font><p style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

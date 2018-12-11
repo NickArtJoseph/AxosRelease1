@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">Hello&nbsp;{!Case.Contact},<br><br></font></p><p class="MsoNormal" style="font-size: 12pt;"><font face="Arial, sans-serif">We sincerely apologize for the inconvenience and are aware of this issue affecting customers that use Quicken. We are actively working to have a solution to this issue in place by the end of August.</font></p><p style="font-family: arial;"></p><div style="font-family: arial; font-size: 12pt;"><br></div><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">We appreciate your business and thank you for continuing to Bank with Bank of Internet USA.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" style="font-family: arial; font-size: 12pt;"><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif"><br>Bank of Internet&nbsp;Customer Service</font></p><div style="font-family: arial;"><font face="Arial, sans-serif"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

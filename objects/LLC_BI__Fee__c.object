@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>The Fee Object is used to track details of the fees associated to a Loan (Product)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>LLC_BI__Commercial_Credit_Memo</fullName>
+        <availableFields>
+            <field>LLC_BI__Amount_Paid__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Street__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Zip_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Lender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Seller__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Standard__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Commercial Credit Memo</description>
+        <displayedFields>
+            <field>LLC_BI__Fee_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collection_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Payable_To__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Commercial Credit Memo</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Manage_Fees</fullName>
+        <availableFields>
+            <field>LLC_BI__Amount_Paid__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Date_Collected__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Loan_Aggregate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Street__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Zip_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Type_Description__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Lender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Seller__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Standard__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>On the manage fees page</description>
+        <displayedFields>
+            <field>LLC_BI__Fee_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Payable_To__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collection_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Manage Fees</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Product_Package_Fees</fullName>
+        <availableFields>
+            <field>LLC_BI__Amount_Paid__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Street__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Fee_Payable_To_Zip_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Borrower__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Lender__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_By_Seller__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LLC_BI__Is_Standard__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Product Package Fees</description>
+        <displayedFields>
+            <field>LLC_BI__Loan__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_at_Closing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Paid_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Collection_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Payable_To__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Product Package Fees</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__Standard_Product_Package_Credit_Memo</fullName>
+        <description>Credit Memo: Standard Product Package Credit Memo
+Screen Section: Product requests
+Object: Fees</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount_Collected__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Amount_Remaining__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Date_Collected__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Credit Memo Standard Product Package</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>LLC_BI__UI_Lookup_Fields</fullName>
+        <description>Generic field set for UI integration</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Fee_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>UI Lookup Fields</label>
+    </fieldSets>
+    <fields>
+        <fullName>LLC_BI__Add_To_Finance_Charge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional picklist field adds Reg. Z Finance Charge fees to APR.</description>
+        <externalId>false</externalId>
+        <label>Add To Finance Charge</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Add_To_MAPR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Administrators select this optional boolean field when a fee is included in the MAPR calculation. Fees added to the finance charge are always considered MAPR fees. By default, the value is false.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this field when a fee is included in the MAPR calculation.</inlineHelpText>
+        <label>Add To MAPR</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Add_To_Principal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This optional checkbox field adds fees to principal balance when charged.</description>
+        <externalId>false</externalId>
+        <label>Add To Principal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Add_To_Principle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>--DEPRECATED-- Deprecated field, no longer in use, replaced by Add_To_Principal__c</description>
+        <externalId>false</externalId>
+        <label>Add To Principle - D</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount_Collected__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amount Collected</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount_Paid__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and allows the user to specify the amount that has been paid on the fee.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount paid on the fee.</inlineHelpText>
+        <label>Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount_Remaining__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Amount__c - LLC_BI__Amount_Collected__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field allows the user to specify the total amount charged for the fee. This could be preset for standard fees using fee management templates, or added as a user is applying a non standard fee.</description>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Calculation_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This optional picklist field specifies how the fee is to be computed.</description>
+        <externalId>false</externalId>
+        <label>Calculation Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dollar</fullName>
+                    <default>false</default>
+                    <label>Dollar</label>
+                </value>
+                <value>
+                    <fullName>OnPrincipal</fullName>
+                    <default>false</default>
+                    <label>On Principal</label>
+                </value>
+                <value>
+                    <fullName>OnBalance</fullName>
+                    <default>false</default>
+                    <label>On Balance</label>
+                </value>
+                <value>
+                    <fullName>OnBalanceFlat</fullName>
+                    <default>false</default>
+                    <label>On Balance Flat</label>
+                </value>
+                <value>
+                    <fullName>ServChg</fullName>
+                    <default>false</default>
+                    <label>Service Charge</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Collection_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist that the user can manually select to specify the method of collection for the fee. The picklist can be edited to include any options that the financial institution has available to collect fees from their customers.</description>
+        <externalId>false</externalId>
+        <label>Collection Method</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cash</fullName>
+                    <default>false</default>
+                    <label>Cash</label>
+                </value>
+                <value>
+                    <fullName>Financed</fullName>
+                    <default>false</default>
+                    <label>Financed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Date_Collected__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Date Collected</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is configured to display all internal codes that the financial institution may have for fees. This field is a picklist and is used to specify the code associated to the Fee being applied. This can be preset for standard fees using fee management templates or added as a user is applying non standard fees.</description>
+        <externalId>false</externalId>
+        <label>Fee Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>001</fullName>
+                    <default>false</default>
+                    <label>001</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Loan_Aggregate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field links the fee to the Fee Loan Aggregate object, which rolls up data from fee to display on the fees summary tab section of the loan. This field is automatically populated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The object that rolls up data from fee for display on the Loan</inlineHelpText>
+        <label>Fee Loan Aggregate</label>
+        <referenceTo>LLC_BI__Fee_Loan_Aggregate__c</referenceTo>
+        <relationshipLabel>Fees</relationshipLabel>
+        <relationshipName>Fees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Payable_To_City__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a formula field that is auto-populated with the city associated to the &quot;payable to&quot; relationship.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Payable_To__r.BillingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fee Payable To City</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Payable_To_State__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a formula field that is auto-populated with the state associated to the &quot;payable to&quot; relationship.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Payable_To__r.BillingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fee Payable To State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Payable_To_Street__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a formula field that is auto-populated with the street address associated to the &quot;payable to&quot; relationship.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Payable_To__r.BillingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fee Payable To Street</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Payable_To_Zip_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is a formula field that is auto-populated with the postal code associated to the &quot;payable to&quot; relationship.</description>
+        <externalId>false</externalId>
+        <formula>LLC_BI__Fee_Payable_To__r.BillingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fee Payable To Zip Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Payable_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is manually entered and is used to lookup to a relationship that the fee is being paid to.</description>
+        <externalId>false</externalId>
+        <label>Fee Payable To</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Fees</relationshipLabel>
+        <relationshipName>Fees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Type_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field only appears when the fee type of &quot;other&quot; is selected. It is a free form text box that allows the user to enter in a description for the fee being applied to the loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When the fee type is other this field is a describes the fee type.</inlineHelpText>
+        <label>Fee Type Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Fee_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist that lets the user specify the type of fee that is being applied to the loan. This can be preset for standard fees using fee management templates, or added as a user is applying a non standard fee.</description>
+        <externalId>false</externalId>
+        <label>Fee Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Appraisal</fullName>
+                    <default>false</default>
+                    <label>Appraisal</label>
+                </value>
+                <value>
+                    <fullName>Attorney</fullName>
+                    <default>false</default>
+                    <label>Attorney</label>
+                </value>
+                <value>
+                    <fullName>Credit Report</fullName>
+                    <default>false</default>
+                    <label>Credit Report</label>
+                </value>
+                <value>
+                    <fullName>DMV</fullName>
+                    <default>false</default>
+                    <label>DMV</label>
+                </value>
+                <value>
+                    <fullName>Government Recording</fullName>
+                    <default>false</default>
+                    <label>Government Recording</label>
+                </value>
+                <value>
+                    <fullName>Loan Origination</fullName>
+                    <default>false</default>
+                    <label>Loan Origination</label>
+                </value>
+                <value>
+                    <fullName>Settlement/Close</fullName>
+                    <default>false</default>
+                    <label>Settlement/Close</label>
+                </value>
+                <value>
+                    <fullName>State Tax Stamps</fullName>
+                    <default>false</default>
+                    <label>State Tax Stamps</label>
+                </value>
+                <value>
+                    <fullName>Survey</fullName>
+                    <default>false</default>
+                    <label>Survey</label>
+                </value>
+                <value>
+                    <fullName>Title Insurance</fullName>
+                    <default>false</default>
+                    <label>Title Insurance</label>
+                </value>
+                <value>
+                    <fullName>Title Search</fullName>
+                    <default>false</default>
+                    <label>Title Search</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Paid_By_Borrower__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This checkbox is populated automatically if &quot;Borrower&quot; is selected from the &quot;Paid By&quot; picklist. This field is generally not made visible to the users and is used behind the scenes for reporting and workflow logic configuration needs.</description>
+        <externalId>false</externalId>
+        <formula>ISPICKVAL(  LLC_BI__Paid_By__c , &apos;Borrower&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Paid By Borrower</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Paid_By_Lender__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This checkbox is populated  automatically if  &quot;Lender&quot; is selected from the &quot;Paid By&quot; picklist. This field is generally not made visible to the users and is used behind the scenes for reporting and workflow logic configuration needs.</description>
+        <externalId>false</externalId>
+        <formula>ISPICKVAL(LLC_BI__Paid_By__c, &apos;Lender&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Paid By Lender</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Paid_By_Seller__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This checkbox is populated  automatically if  &quot;Seller&quot; is selected from the &quot;Paid By&quot; picklist. This field is generally not made visible to the users and is used behind the scenes for reporting and workflow logic configuration needs</description>
+        <externalId>false</externalId>
+        <formula>ISPICKVAL(  LLC_BI__Paid_By__c  , &apos;Seller&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Paid By Seller</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Paid_at_Closing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a checkbox that is populated automatically if &quot; At Closing&quot; is selected from the &quot;Paid at Closing&quot; picklist. This field is generally not made visible to the users and is used behind the scenes for reporting and workflow logic configuration needs.</description>
+        <externalId>false</externalId>
+        <formula>ISPICKVAL( LLC_BI__Paid_at_Closing__c , &apos;At Closing&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Paid at Closing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Is_Standard__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field determines if the fee is part of the standard set of fees (pre-configured using the fee management templates) for this product. This field is automatically set if the fee was selected from the standard fee list to apply to this loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines If the fee is part of the standard set of fees for this product.</inlineHelpText>
+        <label>Is Standard</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a master detail field that is automatically populated linking the fee being applied to the particular loan it is being applied to.</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>LLC_BI__Loan__c</referenceTo>
+        <relationshipLabel>Fees</relationshipLabel>
+        <relationshipName>Fees</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Paid_By__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist that allows the user to specify who is responsible for paying this fee. This value will determine if the &quot;is Paid by Seller&quot; , &quot;is Paid by Lender&quot; or &quot; is Paid by Borrower&quot; checkbox is populated. Each fee will only have 1 selection.</description>
+        <externalId>false</externalId>
+        <label>Paid By</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Borrower</fullName>
+                    <default>true</default>
+                    <label>Borrower</label>
+                </value>
+                <value>
+                    <fullName>Lender</fullName>
+                    <default>false</default>
+                    <label>Lender</label>
+                </value>
+                <value>
+                    <fullName>Seller</fullName>
+                    <default>false</default>
+                    <label>Seller</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Paid_at_Closing__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is a picklist that allows the user to specify whether the fees being applied to the loan are to be paid &quot;At Closing&quot; or &quot;Outside of Closing&quot;. This value will determine if the &quot;is Paid at Closing&quot; checkbox is populated.</description>
+        <externalId>false</externalId>
+        <label>Paid at Closing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>At Closing</fullName>
+                    <default>false</default>
+                    <label>At Closing</label>
+                </value>
+                <value>
+                    <fullName>Outside of Closing</fullName>
+                    <default>false</default>
+                    <label>Outside of Closing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LLC_BI__Template_Record__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This field is specific to Standard Fees, and it links the Template Record that the fee was created from with the fee that is being applied to the loan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Template Record that the fee was created from.</inlineHelpText>
+        <label>Template Record</label>
+        <referenceTo>LLC_BI__Template_Records__c</referenceTo>
+        <relationshipLabel>Fees</relationshipLabel>
+        <relationshipName>Fees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Fee</label>
+    <listViews>
+        <fullName>LLC_BI__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>FEE-{000000}</displayFormat>
+        <label>Fee Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Fees</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>LLC_BI__Fee_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LLC_BI__Paid_By__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__Fee_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__Amount__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LLC_BI__Paid_By__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>LLC_BI__Fee_Type__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__Amount__c</searchFilterFields>
+        <searchFilterFields>LLC_BI__Paid_By__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>LLC_BI__Manage_Fees</fullName>
+        <availability>online</availability>
+        <description>Button on the Fee Related List visible on Loan to Manage Fees</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Fees</masterLabel>
+        <openType>noSidebar</openType>
+        <page>LLC_BI__ManageFeeFromLoan</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

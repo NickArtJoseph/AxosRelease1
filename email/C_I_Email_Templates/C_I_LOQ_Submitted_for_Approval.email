@@ -1,0 +1,7 @@
+The Boarding Questionnaire for {!Loan_Ops_Questionnaire__c.Opportunity__c} is now complete and ready for review.  Please review and assign loan codes by clicking the link below:
+
+{!Loan_Ops_Questionnaire__c.Link}
+
+Thank you,
+
+Salesforce

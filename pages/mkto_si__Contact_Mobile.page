@@ -1,0 +1,22 @@
+<apex:page standardController="Contact" extensions="mkto_si.ObjectProxyController" showHeader="true" sidebar="false">
+    <c:CssAndJavascript2 />
+    <!-- CSS files from One Starter -->
+    <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/icons.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/styles.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.mkto_si__OneStarterZip,'onestarter-master/OneStarter.css')}"/>
+    <link rel="Stylesheet" type="text/css" href="{!$Resource.css_mobile}" />
+
+    <script src="{!$Resource.jqueryTools}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.OneStarterZip,'onestarter-master/jquery.onestarter.js')}" type="text/javascript"></script>
+    <script src="{!$Resource.jScroll}" type="text/javascript"></script>
+    <script src="{!$Resource.iScroll}" type="text/javascript"></script>
+    <c:DetailTabsMobile rendered="{!errorMessage == null}" mTabSObjectType="{!currentSObjectType}" mTabSObjectId="{!sObjectId}" mTabSObjectName="{!currentSObjectName}"/>
+    <apex:pageMessage severity="error" strength="1" rendered="{!errorMessage != null}" summary="{!errorMessage}" />
+    <script> 
+(function(){try{var a=navigator.userAgent; 
+if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1)&&(a.indexOf('Safari')==-1)){ 
+var s=document.createElement('style'); 
+s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+</script>
+</apex:page>

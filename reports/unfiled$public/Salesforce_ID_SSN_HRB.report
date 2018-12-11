@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>HRB_Refund_Advance__c.SSN_TIN__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Salesforce ID &amp; SSN - HRB</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$HRB_Refund_Advance__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>HRB_Refund_Advance__c.CreatedAt__c</dateColumn>
+        <endDate>2018-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-29</startDate>
+    </timeFrameFilter>
+</Report>

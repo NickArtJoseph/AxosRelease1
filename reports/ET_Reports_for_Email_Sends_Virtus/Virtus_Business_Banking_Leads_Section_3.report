@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <description>Virtus</description>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nathan Gwozdz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>00Qi000000pNh16,00Qi000000pNh17,00Qi000000pNh18,00Qi000000pNh19,00Qi000000pNh1A,00Qi000000pNh1B,00Qi000000pNh1C,00Qi000000pNh1D,00Qi000000pNh1E,00Qi000000pNh1F,00Qi000000pNh1G,00Qi000000pNh1H,00Qi000000pNh1I,00Qi000000pNh1J,00Qi000000pNh1K,00Qi000000pNh1L,00Qi000000pNh1M,00Qi000000pNh1N,00Qi000000pNh1O,00Qi000000pNh1P,00Qi000000pNh1Q,00Qi000000pNh1R,00Qi000000pNh1S,00Qi000000pNh1T,00Qi000000pNh1U,00Qi000000pNh1V,00Qi000000pNh1W,00Qi000000pNh1X</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Virtus Business Banking Leads Section 3</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

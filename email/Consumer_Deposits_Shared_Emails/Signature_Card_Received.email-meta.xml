@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Signature Card Received email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BOFI_Letterhead</letterhead>
+    <name>Signature Card Received</name>
+    <style>freeForm</style>
+    <subject>Your Signature Card was received</subject>
+    <textOnly>I am pleased to confirm we have received your Signature Card on [date].
+
+We appreciate your business and commit to providing superior Banking products, support and services.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

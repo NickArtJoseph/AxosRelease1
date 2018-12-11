@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Second notice letter to send to TPO accounts for recert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Second Notice - TPO Recertification Letter</name>
+    <style>none</style>
+    <subject>Account Recertification - {!Account.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

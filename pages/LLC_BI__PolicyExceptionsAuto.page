@@ -1,0 +1,39 @@
+<apex:page controller="LLC_BI.PolicyExceptionsController">
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__angularJS, '/angularJS/angular-1.5.7/angular.min.js')}" />
+	<nFORCE:Include_Design_System flavor="vf" />
+	<apex:stylesheet value="{!URLFOR($Resource.LLC_BI__loanAutoDecisionCSS)}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncDataProviders, 'providers/RemotingManagerProvider.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncUI, 'application/App.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncUI, 'directives/MessageDirective.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncUI, 'services/MessageService.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nFORCE__ncUI, 'components/Spinner/spinner.component.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.LLC_BI__policyExceptionAutoRunController)}"/>
+
+	<apex:composition template="nFORCE__Template_Heading">
+		<apex:define name="left" />
+		<apex:define name="right" />
+	</apex:composition>
+	<apex:composition template="nFORCE__Template_View_1_Column">
+		<apex:define name="column-content">
+			<apex:composition template="nFORCE__Template_View_Container">
+				<apex:define name="content">
+					<span
+						ng-app="ncPolicyExceptionAuto"
+						ng-controller="policyExceptionAutoRunController as vm"
+						ng-init="vm.generateAutoPolicyExceptions('{!$RemoteAction.PolicyExceptionsController.generateAutoPolicyExceptions}','{!$CurrentPage.parameters.id}')"
+						>
+						<message />
+						<div ng-if="!vm.error">
+							<div aria-hidden="false" role="dialog" class="slds-modal slds-fade-in-open">
+								<spinner size="large" message="{!$Label.Policy_Exceptions_Auto_Processing}" />
+							</div>
+							<div class="loanAutoDecisionBackdrop slds-backdrop slds-backdrop--open"></div>
+						</div>
+					</span>
+				</apex:define>
+			</apex:composition>
+		</apex:define>
+	</apex:composition>
+
+</apex:page>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__EmailName__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberSent__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Number_Delivered__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Deliverability_Rate__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberofUniqueOpens__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Open_Rate__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberofUniqueClicks__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Click_Through_Rate__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberUnsubscribed__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Unsubscribe_Rate__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>et4ae5__SendDefinition__c.et4ae5__EmailName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>DEC CRM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>DEC CRM Send Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__SendDefinition__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>et4ae5__SendDefinition__c.et4ae5__DateSent__c</dateColumn>
+        <endDate>2016-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-12-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>A 5498 statement is sent out when you have made
+contributions to your IRA account or rolled your IRA into another IRA account
+in the past year. Since you have not made any contributions/rollovers for the
+year [Date], we did not issue a 5498 statement.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif"><o:p></o:p></font></p>
+
+<p class="MsoNormal" style=""><font face="Arial, sans-serif" style=""><span style="color: rgb(0, 0, 0);"><br></span><span style="color: rgb(0, 0, 0);">Best Regards,<br></span></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br style=""><font style="" color="#ff0000">[INSERT BRAND]</font><span style="color: rgb(0, 0, 0);">&nbsp;Customer Service</span></font></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

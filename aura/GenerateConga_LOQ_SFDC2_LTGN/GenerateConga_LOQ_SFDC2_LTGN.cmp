@@ -1,0 +1,7 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" controller="LOQ_Conga_Doc_Generate_SFDC2">
+
+	<aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+	
+	<aura:attribute name="recordId" type="Id" />
+   
+</aura:component>

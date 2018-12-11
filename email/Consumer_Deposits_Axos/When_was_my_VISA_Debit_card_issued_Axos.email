@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello {!Case.Contact},<br><br>Your VISA® Debit card was issued on [date]. For security
+purposes, the VISA® Debit card is sent from a separate distribution center and will
+arrive in the mail within 5-7 business days from the issue date.<br><br>To activate your debit card:<br></font></p><ul style="color: rgb(0, 0, 0);"><li><font face="Arial, sans-serif" style="">Dial [Phone Number] (You must call from the phone number you
+added to your profile).</font></li><li><font face="Arial, sans-serif" style="">Select Option 1</font></li><li><font face="Arial, sans-serif" style="">Select Option 3</font></li><li><font face="Arial, sans-serif" style="">Enter your debit card number</font></li><li><font face="Arial, sans-serif" style="">Enter your full Social Security number</font></li></ul><font face="Arial, sans-serif" style="">Your card will now be active and ready for signature
+transactions.<br><br>To select a PIN for your debit card:<br>The first time you use your card for an ATM or any Point of
+Sale (POS) transaction where a PIN is used, the PIN entered on the first
+transaction becomes the permanent PIN.<br><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br>{!User.FirstName}<br><font style=""><font style="">Axos Bank</font>&nbsp;</font><font style="color: rgb(0, 0, 0);">Customer Service</font></font><p style="color: rgb(0, 0, 0);"></p><p style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-size: 12pt; font-family: arial;"><o:p></o:p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

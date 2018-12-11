@@ -1,0 +1,7 @@
+<apex:page standardController="LLC_BI__Underwriting_Summary__c" docType="html-5.0" showHeader="false" sidebar="false" >
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'polyfills.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'vendor.js')}" />
+	<apex:includeScript value="{!URLFOR($Resource.nCRED__vf_includes, 'underwriting-summary.js')}" />
+	<apex:stylesheet value="{!URLFOR($Resource.nCRED__vf_includes, 'underwriting-summary.css')}" />
+	<c:UnderwritingSummary underwritingId="{!LLC_BI__Underwriting_Summary__c.Id}"/>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Business Banking Mgr</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Business Banking Mgr</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Business_Banking_Group</parentRole>
+</Role>

@@ -1,0 +1,14 @@
+<apex:page standardController="Five9LSP__Five9_List__c" extensions="Five9LSP.Five9_List_Controller_Extension">
+ <apex:pageBlock >
+    <apex:pageBlockTable value="{!fieldMappings}" var="fieldMap" id="fieldMappings" columns="2" >
+        <apex:column >
+            <apex:facet name="header">Salesforce Field</apex:facet>
+            <apex:outputText value="{!fieldMap.sfdcField}"/>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">Five9 Field</apex:facet>
+            <apex:outputText value="{!fieldMap.five9Field}"/>
+        </apex:column>
+    </apex:pageBlockTable>
+ </apex:pageBlock>
+</apex:page>

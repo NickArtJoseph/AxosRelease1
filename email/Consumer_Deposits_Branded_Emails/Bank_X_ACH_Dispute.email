@@ -1,0 +1,20 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>We are sorry to hear of the unauthorized transaction. We
+will begin our investigation immediately to reclaim the money that was lost.
+Please complete and return the <a href="https://www.bankx.com/Portals/BankX/Documents/Bank%20Forms/written-statement-of-unauthorized-ach-debit-form.pdf?timestamp=1426551632811" target="_blank" style="">Written Statement
+of Unauthorized ACH Debit</a><span style="color: rgb(102, 102, 102);"> </span>by:<br></font></p><ol><li><font face="Arial, sans-serif" style="">Sending a <b style="">Secure message</b> through Online Banking with the
+completed form attached</font></li><li><font face="Arial, sans-serif" style="">Fax to: <b style="">858-350-0443</b>; or</font></li><li><font face="Arial, sans-serif" style="">Mail to: <b style="">BOFI Federal Bank P.O. Box 509127, San Diego,
+CA&nbsp; 92150-9948</b></font></li></ol><font face="Arial, sans-serif" style="">We appreciate your business and commit to providing superior
+Banking products, support and services.<br><br>Best Regards,<br></font><span style="font-family: Arial, sans-serif;">{!User.FirstName}</span><font face="Arial, sans-serif" style=""><br><font style="">Bank X</font>&nbsp;Customer Service</font><p></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

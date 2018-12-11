@@ -1,0 +1,5 @@
+The wholesale opportunity for {!Opportunity.Account} has been marked Funded - Closed Won. Please create an FVR and update the account with any available information.
+
+Please click the link below to access the task:
+
+{!Task.Link}

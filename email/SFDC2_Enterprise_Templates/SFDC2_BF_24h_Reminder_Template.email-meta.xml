@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2: BF 24h Reminder Template</name>
+    <style>none</style>
+    <subject>Reminder: 24 h SLA - {!Boarding_Form__c.Opportunity__c} - {!Boarding_Form__c.BF_Status__c} and Boarding Form not Approved</subject>
+    <textOnly>Please note the 24 h SLA for {!Boarding_Form__c.Opportunity__c} and the Boarding Form requires Review.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

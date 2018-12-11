@@ -1,0 +1,4 @@
+<apex:page standardController="Opportunity" extensions="mkto_si.ObjectProxyController" tabStyle="Marketo__tab">
+	<c:MSITabs rendered="{!errorMessage == null}" mTabSObjectType="{!currentSObjectType}" mTabSObjectId="{!sObjectId}" mTabSObjectName="{!currentSObjectName}" mTabFullList="true"/>
+	<apex:pageMessage severity="error" strength="1" rendered="{!errorMessage != null}" summary="{!errorMessage}" />
+</apex:page>

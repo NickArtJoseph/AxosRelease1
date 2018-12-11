@@ -1,0 +1,214 @@
+<apex:page standardController="Lead" extensions="SNPCAPIQ.LeadInfoController" title="S&P Capital IQ Details">
+
+    <c:IncludeResources_v1 ></c:IncludeResources_v1>
+
+    <apex:form >
+        <apex:actionFunction action="{!changeTab}" name="changeTab" rerender="companyProfileTab,keyDevelopmentTab,financialsTab,peopleTab,relationshipSubtabs,pageMessages">
+            <apex:param name="newTab" assignTo="{!currentTab}" value="" />
+        </apex:actionFunction>
+    </apex:form>
+
+    <script>
+        $$(function() {
+            // activate subtab
+            var subtab = getParameterByName('subtab');
+            if (subtab !== null) {
+                $$('#'+subtab).prop('checked', true);
+            }
+
+            $$('.snp').tabs({
+                create: function( event, ui ) {
+                    activateTab(ui.tab, ui.panel);
+                },
+                activate: function( event, ui ) {
+                    $$(getId('{!$Component.pageMessages}')).hide();
+                    activateTab(ui.newTab, ui.newPanel);
+                }
+            });
+
+            $$('.snp-subtabs input:radio').change(function(){
+                $$(this).closest('.ui-tabs-panel').find('.ui-tabs-content').empty();
+
+                var tabId = $$(this).val();
+                changeTab(tabId);
+                setCapIQlink(tabId);
+            });
+
+            function activateTab(tab, panel) {
+                if ( panel.find('.snp-subtabs').size() > 0 ) {
+                    var tabId = panel.find('.snp-subtabs input:radio:checked').val();
+                } else {
+                    var tabId = tab.find('a').attr('href').substring(1);
+                }
+                changeTab(tabId);
+                setCapIQlink(tabId);
+            }
+
+
+            function setCapIQlink(tabId) {
+                var url = "";
+                switch (tabId) {
+                    case "companyProfileTab":
+                        url = "https://www.capitaliq.com/ciqdotnet/ExternalRedirect.axd?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&redirectId=0";
+                        break;
+                    case "keyDevelopmentTab":
+                        url = "https://www.capitaliq.com/CIQDotNet/KeyDevs/KeyDevelopments.aspx?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&selDateRangeOption=m6&chkSubs=1";
+                        break;
+                    case "financialsTab":
+                        url = "https://www.capitaliq.com/CIQDotNet/Financial/IncomeStatement.aspx?companyid={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}";
+                        break;
+                    case "professionalsTab":
+                        url = "https://www.capitaliq.com/ciqdotnet/ExternalRedirect.axd?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&redirectId=401";
+                        break;
+                    case "boardmemberTab":
+                        url = "https://www.capitaliq.com/ciqdotnet/ExternalRedirect.axd?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&redirectId=402";
+                        break;
+                    case "subsidiariesTab":
+                        url = "https://www.capitaliq.com/ciqdotnet/ExternalRedirect.axd?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&redirectId=428";
+                        break;
+                    case "investmentsTab":
+                        url = "https://www.capitaliq.com/ciqdotnet/ExternalRedirect.axd?companyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}&redirectId=428";
+                        break;
+                    case "competitorTab":
+                        url = "https://www.capitaliq.com/CIQDotNet/BusinessRel/Competitors.aspx?CompanyId={!if(lead.SNPCAPIQ__CapitalIQCompanyID__c!=null,lead.SNPCAPIQ__CapitalIQCompanyID__c,companyId)}";
+                        break;
+                }
+                $$('#capIQlink').attr('href',url);
+            }
+
+            $$('.id-fullViewButton').click(function(){
+                var url = $$(this).attr('href').split('#')[0];
+                var tabHash = $$('.snp-tabs .ui-tabs-nav .ui-tabs-active a').attr('href');
+                var panelObj = $$(tabHash);
+
+                if ( panelObj.find('.snp-subtabs').size() > 0 ) {
+                    url = url+'&subtab='+panelObj.find('.snp-subtabs input:radio:checked').val();
+                }
+                url = url+tabHash;
+
+//              $$(this).attr('href', url);
+                window.top.location = url;
+                return false;
+            });
+        });
+    </script>
+    
+    <div class="snp">
+        <div class="snp-tabs-header clearfix">
+            <div class="snp-logo">
+                <img alt="S&P Capital IQ" src="{!URLFOR($Resource.SNPCAPIQ__SnP_resources, 'img/snp-logo35.png')}"/>
+            </div>
+            <h2><apex:outputText value="{!recordName}"/></h2>
+
+            <apex:form >
+            <div class="snp-btnpane">
+                <apex:outputLink value="/apex/LeadInfo?id={!recordID}&fullscreen=true" rendered="{!if((lead!= null && lead.SNPCAPIQ__CapitalIQCompanyID__c == null) || isFullScreen, false,true)}" title="Full View" target="_top" styleClass="snp-btn snp-btn-medium id-fullViewButton">
+                    <i class="snp-i snp-i-full"></i>
+                </apex:outputLink>
+
+                <apex:outputLink value="/apex/Tearsheet?companyId={!TEXT(lead.SNPCAPIQ__CapitalIQCompanyID__c)}&pdf=1" title="Tear sheet" target="_blank" styleClass="snp-btn snp-btn-medium">
+                    <i class="snp-i snp-i-pdf"></i>
+                </apex:outputLink>
+
+                <a id="capIQlink" href="" title="View on www.capitaliq.com" target="_blank" class="snp-btn snp-btn-medium">
+                    <i class="snp-i snp-i-capiq"></i>
+                </a>
+
+                <c:Help mode="button" />
+            </div>
+            </apex:form>
+        </div>
+
+        <apex:outputPanel layout="none" rendered="{!if(lead!= null && lead.SNPCAPIQ__CapitalIQCompanyID__c == null, false, true)}">
+            <div class="snp-tabs">
+                <ul>
+                    <li>
+                        <a href="#companyProfileTab">Company Profile</a>
+                    </li>
+                    <li>
+                        <a href="#keyDevelopmentTab">Key Developments</a>
+                    </li>
+                    <li>
+                        <a href="#financialsTab">Financials</a>
+                    </li>
+                    <li>
+                        <a href="#peopleTab">People</a>
+                    </li>
+                    <li>
+                        <a href="#relationshipTab">Relationships</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <apex:pageMessages id="pageMessages"/>
+
+            <div id="companyProfileTab">
+                <apex:outputPanel layout="block" styleClass="ui-tabs-content" id="companyProfileTab">
+                    <c:CompanyProfile_v1 custController="{!accProfileController}" rendered="{!if(currentTab=='companyProfileTab',true,false)}" rerenderItems="pageMessages" />
+                </apex:outputPanel>
+            </div>
+
+            <div id="keyDevelopmentTab">
+                <apex:outputPanel layout="block" styleClass="ui-tabs-content" id="keyDevelopmentTab">
+                    <c:KeyDevelopment_v1 custController="{!keyController}" rendered="{!if(currentTab=='keyDevelopmentTab',true,false)}" rerenderItems="pageMessages" />
+                </apex:outputPanel>
+            </div>
+
+            <div id="financialsTab">
+                <apex:outputPanel layout="block" styleClass="ui-tabs-content" id="financialsTab">
+                    <c:Financials custController="{!financialController}" rendered="{!if(currentTab=='financialsTab', true,false)}" rerenderItems="pageMessages" />
+                </apex:outputPanel>
+            </div>
+            <div id="peopleTab">
+                <div class="snp-subtabs clearfix">
+                    <label for="professionalsTab">
+                        <input type="radio" name="peopleSubtabs" id="professionalsTab" value="professionalsTab" checked="checked" />
+                        Professionals
+                    </label>
+                    <label for="boardmemberTab">
+                        <input type="radio" name="peopleSubtabs" id="boardmemberTab" value="boardmemberTab" />
+                        Board Member
+                    </label>
+                </div>
+                
+
+                <apex:outputPanel layout="block" styleClass="ui-tabs-content" id="peopleTab">
+                    <c:PeopleSearch custController="{!professionalsController}" typeTab="professionals" rendered="{!if(currentTab=='professionalsTab',true,false)}" rerenderItems="pageMessages" dataMessage="No Professionals found" hideAcctButton="true"/>
+                    <c:PeopleSearch custController="{!boardmemberController}" typeTab="boardmember" rendered="{!if(currentTab=='boardmemberTab',true,false)}" rerenderItems="pageMessages" dataMessage="No Board Member found" hideAcctButton="true"/>
+                </apex:outputPanel>
+            </div>
+            <div id="relationshipTab">
+                <div class="snp-subtabs clearfix">
+                    <label for="subsidiariesTab">
+                        <input type="radio" name="relationshipSubtabs" id="subsidiariesTab" value="subsidiariesTab" checked="checked" />
+                        Subsidiaries
+                    </label>
+                    <label for="investmentsTab">
+                        <input type="radio" name="relationshipSubtabs" id="investmentsTab" value="investmentsTab" />
+                        Direct Investments
+                    </label>
+                    <label for="competitorTab">
+                        <input type="radio" name="relationshipSubtabs" id="competitorTab" value="competitorTab" />
+                        Competitors
+                    </label>
+                </div>
+
+                <apex:outputPanel layout="block" styleClass="ui-tabs-content" id="relationshipSubtabs">
+                    <c:Competitor custController="{!subsidiariesController}" typeTab="subsidiaries" rendered="{!if(currentTab=='subsidiariesTab',true,false)}" rerenderItems="pageMessages" dataMessage="No Subsidiaries found" hideAcctButton="true" />
+                    <c:Competitor custController="{!investmentsController}" typeTab="investments" rendered="{!if(currentTab=='investmentsTab',true,false)}" rerenderItems="pageMessages" dataMessage="No Direct Investments found" hideAcctButton="true" />
+                    <c:Competitor custController="{!competitorController}" typeTab="competitors" rendered="{!if(currentTab=='competitorTab',true,false)}" rerenderItems="pageMessages" dataMessage="No Competitors found" hideAcctButton="true" />
+                </apex:outputPanel>
+            </div>
+        </apex:outputPanel>
+
+
+        <apex:outputPanel layout="none" rendered="{!if(lead!= null && lead.SNPCAPIQ__CapitalIQCompanyID__c == null, true, false)}">
+            <br/><br/><br/><br/>
+            <div class="snp-no-data">
+                This account is not linked to S&amp;P Capital IQ.
+            </div>
+        </apex:outputPanel>
+    </div>
+      
+</apex:page>

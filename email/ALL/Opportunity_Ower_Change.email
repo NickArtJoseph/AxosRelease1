@@ -1,0 +1,5 @@
+The opportunity owner has changed for the following opportunity: 
+
+{!Opportunity.Name}: {!Opportunity.Link}
+
+Thank you.

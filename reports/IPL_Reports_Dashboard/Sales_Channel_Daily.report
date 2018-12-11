@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>UserServicePresence$User</field>
+    </columns>
+    <columns>
+        <field>UserServicePresence$ServicePresenceStatus</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>UserServicePresence$IsCurrentState</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>UserServicePresence$User</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Aaron Shapiro,Andrew Williams,Brennan Weinstein,Connor Galvin,Liza Krylova,Michael Cheung</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UserServicePresence$StatusEndDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sales Channel-Daily</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Omni_Channel_User_Presence__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>UserServicePresence$StatusStartDate</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

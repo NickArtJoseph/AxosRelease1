@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style=""><font face="arial"><span style="font-size: 12pt;">Hello </span></font>{!Case.Contact}<font face="arial"><span style="font-size: 12pt;">,</span></font><br></font><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br>We will be happy to assist you with adding, removing or
+updating your beneficiaries on your IRA account. This will be a two-step
+process:<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br>Step 1: Complete the </span><a href="https://www.bankofinternet.com/portals/bofiusa/documents/forms/BOFI-IRA-Beneficiary-Designation.pdf?t=1496768395437" style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">IRA
+Beneficiary Designation</a><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"> forms.<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br>Step 2:&nbsp; Return the
+completed Beneficiary request forms for processing by;<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><ol><li><b>Secure Message</b><span style="font-size: 12pt;">: Login to Online Banking, click on Contact
+Us, and send a secure email with a scanned copy of the signed documents.</span></li><li>Fax to: <b style="font-size: 12pt;">858-350-0443</b><span style="font-size: 12pt;">; or</span></li><li>Mail to: <b style="font-size: 12pt;">Deposit Operations: New Accounts PO BOX 509127 San
+Diego, CA 92150-9948</b></li></ol></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">Your Beneficiary change will be processed within three
+business days on receipt of the Account Vesting Change form.<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br>Best Regards,<br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">{!User.FirstName}</span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;"><br></span><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12pt;">Bank of Internet USA Customer Service</span>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

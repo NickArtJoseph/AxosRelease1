@@ -1,0 +1,104 @@
+<apex:page showHeader="false" applyHtmlTag="false" applyBodyTag="false" docType="HTML-5.0" standardStylesheets="false">
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Consumer Deposits (USER LOGGED IN - QA) Pre-Chat Form</title>
+        <style type="text/css">
+        	.customer-data {
+        		text-decoration: underline;
+        	}
+        </style>
+    </head>
+
+    <body>
+		<!-- BRANDS: BankX, NetBank (User Logged In) -->
+
+        <p>Hello <span id="customer_first_name" class="customer-data"></span></p>
+
+        <!-- ********** THIS CODE IS REQUIRED ********** -->
+        <!-- TODO: 2. Validate inputs on form submit -->
+        <form method="post" id="prechat-form">
+            <div class="form-input">
+                <label>How may I assist you today?*</label>
+                <select id="chat-subject" name="liveagent.prechat:ChatInquiryType">
+                    <option value="">--- Select One ---</option>
+                    <option value="Bill Pay">Bill Pay</option>
+                    <option value="Debit card">Debit card</option>
+                    <option value="Deposit inquiry">Deposit inquiry</option>
+                    <option value="Dispute a transaction">Dispute a transaction</option>
+                    <option value="IRA">IRA</option>
+                    <option value="Wire">Wire</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <input type="hidden" name="liveagent.prechat:ContactFirstName" id="firstName" />
+			<input type="hidden" name="liveagent.prechat:ContactLastName" id="lastName" />
+			<input type="hidden" name="liveagent.prechat:ContactEmail" id="email" />
+			<input type="hidden" name="liveagent.prechat:ContactPhone" id="phone" />
+            
+            <!-- Save Inquiry type to Chat Transcript -->
+            <input type="hidden" name="liveagent.prechat.save:ChatInquiryType" value="Chat_Inquiry_Type__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactFirstName" value="ChatFirstName__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactLastName" value="ChatLastName__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactEmail" value="ChatEmail__c" />
+            <input type="hidden" name="liveagent.prechat.save:ContactPhone" value="ChatPhone__c" />
+
+            <!-- map: Use the data from prechat form to map it to the Salesforce record's fields -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map:Lead"    value="FirstName,ContactFirstName;LastName,ContactLastName;Phone,ContactPhone;Email,ContactEmail" />
+
+            <!-- Contact Search -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact"       value="LastName,true;Email,true;Phone,true" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="LastName,true;Email,true;Phone,true" />
+
+            <!-- Lead Search -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Lead"       value="LastName,true;Email,true;Phone,true" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Lead" value="LastName,true;Email,true;Phone,true" />
+
+            <!-- Save Contact and/or Lead to Transcript -->
+            <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+            <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Lead" value="LeadId" />
+
+            <div class="form-input">
+                <input type="submit" value="Begin Chat" id="prechat_submit" />
+            </div>
+        </form>
+
+        <script type="text/javascript" src="https://c.la4-c2cs-phx.salesforceliveagent.com/content/g/js/42.0/prechat.js"></script>
+        <script type="text/javascript">
+            // Callback for pre-chat initialization
+            var detailCallback = function (details) {
+            	var validParameters = ['firstName', 'lastName', 'email', 'phone'];
+
+                // Set prechat custom details
+                for (var i = 0; i < details.customDetails.length; i++) {
+                	var detailLabel = details.customDetails[i].label;
+                	var detailValue = details.customDetails[i].value;
+
+                	// Get only valid parameters
+                	if (validParameters.indexOf(detailLabel) == -1) {
+                		console.warn('Invalid Pre-Chat Parameter: ' + detailLabel);
+                		continue;
+                	}
+
+                	// Set the corresponding input field
+                    var inputField = document.getElementById(detailLabel);
+                    if (inputField) {
+                        inputField.value = detailValue;
+
+                        if (detailLabel == 'firstName') {
+                        	var firstName = document.getElementById('customer_first_name');
+                        	firstName.innerHTML = '';
+                        	firstName.appendChild(document.createTextNode(detailValue));
+                        }
+                    }
+                }
+            };
+
+            liveagent.details.preChatInit('https://d.la2-c1cs-iad.salesforceliveagent.com/chat', 'detailCallback', 'prechat-form');
+        </script>
+        <!-- ********** THIS CODE IS REQUIRED ********** -->
+    </body>
+</html>
+</apex:page>

@@ -1,0 +1,61 @@
+<apex:page controller="nFORCE.TemplateController"
+	extensions="nFORCE.ScreenController"
+	showHeader="false"
+	sideBar="false"
+	standardStylesheets="false">
+	<apex:slds />
+	<div id="ncScreenSectionFormBuilder" class="slds">
+		<apex:repeat value="{!screenSections}" var="section">
+			<apex:outputPanel layout="none" rendered="{!!sectionIdIsHierarchyMap[section.Id]}">
+				<apex:composition template="nFORCE__Template_Heading">
+					<apex:define name="left">
+						<span>{!section.name}</span>
+					</apex:define>
+					<apex:define name="right">
+						<apex:outputPanel layout="none" rendered="{!section.Section_Configurations__r.size > 0}">
+							<nc-edit-field-set-button
+								entity="{!section.sObject_Type__c}"
+								field-set-key="{!section.Section_Configurations__r[0].Field_Set_Key__c}">
+							</nc-edit-field-set-button>
+						</apex:outputPanel>
+					</apex:define>
+				</apex:composition>
+				<apex:composition template="nFORCE__Template_View_1_Column">
+					<apex:define name="column-content">
+						<apex:composition template="nFORCE__Template_View_Container">
+							<apex:define name="content">
+								<message></message>
+								<nc-screen-section-form-builder
+									section-id="{!section.id}"
+									context-id="{!contextObjectId}"
+									is-editable="{!section.Is_Editable__c}"
+									default-editable="{!section.Default_Editable__c}"
+									guid="{!section.id}{!guid}">
+								</nc-screen-section-form-builder>
+							</apex:define>
+						</apex:composition>
+					</apex:define>
+				</apex:composition>
+			</apex:outputPanel>
+		</apex:repeat>
+		<c:ncScreenSectionFormBuilderPartials />
+		<c:ncScreenSectionFormBuilderIncludes />
+	</div>
+	<div id="ncRelatedList" class="slds-p-left--medium slds-p-right--medium slds-m-bottom--medium">
+		<apex:repeat value="{!screenSections}" var="section">
+			<apex:outputPanel layout="none" rendered="{!sectionIdIsHierarchyMap[section.Id]}">
+				<div class="nds-section">
+					<nc-related-list
+						section-id="{!section.id}"
+						guid="{!section.id}{!guid}"
+						context-id="{!contextObjectId}"
+						column-size="{!section.Number_of_Columns__c}"
+						add-new-action-label="{!$CurrentPage.parameters.action_new_label}">
+					</nc-related-list>
+				</div>
+			</apex:outputPanel>
+		</apex:repeat>
+		<c:ncRelatedListPartials />
+		<c:ncRelatedListIncludes />
+	</div>
+</apex:page>

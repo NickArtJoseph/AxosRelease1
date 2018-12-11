@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bank of Internet</fullName>
+                    <default>false</default>
+                    <label>Bank of Internet</label>
+                </value>
+                <value>
+                    <fullName>Bank X</fullName>
+                    <default>false</default>
+                    <label>Bank X</label>
+                </value>
+                <value>
+                    <fullName>BofI Advisor</fullName>
+                    <default>false</default>
+                    <label>BofI Advisor</label>
+                </value>
+                <value>
+                    <fullName>BofI Federal Bank</fullName>
+                    <default>false</default>
+                    <label>BofI Federal Bank</label>
+                </value>
+                <value>
+                    <fullName>Nat&apos;l Wild Turkey Federation</fullName>
+                    <default>false</default>
+                    <label>Nat&apos;l Wild Turkey Federation</label>
+                </value>
+                <value>
+                    <fullName>Specialty Deposits</fullName>
+                    <default>false</default>
+                    <label>Specialty Deposits</label>
+                </value>
+                <value>
+                    <fullName>UFB Direct</fullName>
+                    <default>false</default>
+                    <label>UFB Direct</label>
+                </value>
+                <value>
+                    <fullName>Virtus</fullName>
+                    <default>false</default>
+                    <label>Virtus</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Capital Markets</fullName>
+                    <default>false</default>
+                    <label>Capital Markets</label>
+                </value>
+                <value>
+                    <fullName>CD</fullName>
+                    <default>false</default>
+                    <label>CD</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Home Equity</fullName>
+                    <default>false</default>
+                    <label>Home Equity</label>
+                </value>
+                <value>
+                    <fullName>MF Mtgs</fullName>
+                    <default>false</default>
+                    <label>MF Mtgs</label>
+                </value>
+                <value>
+                    <fullName>MMS</fullName>
+                    <default>false</default>
+                    <label>MMS</label>
+                </value>
+                <value>
+                    <fullName>ODL</fullName>
+                    <default>false</default>
+                    <label>ODL</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>RV/AUTO</fullName>
+                    <default>false</default>
+                    <label>RV/AUTO</label>
+                </value>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>SF Mtgs</fullName>
+                    <default>false</default>
+                    <label>SF Mtgs</label>
+                </value>
+                <value>
+                    <fullName>Specialty Financing</fullName>
+                    <default>false</default>
+                    <label>Specialty Financing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DisplayUrl</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExternalDataSourceId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>JH_Product_Id_SFDC2__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>JH Product ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Pric__c</fullName>
+        <externalId>false</externalId>
+        <label>Revenue Potential</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuantityUnitOfMeasure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Sub_Class__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IRA</fullName>
+                    <default>false</default>
+                    <label>IRA</label>
+                </value>
+                <value>
+                    <fullName>Money Market Savings</fullName>
+                    <default>false</default>
+                    <label>Money Market Savings</label>
+                </value>
+                <value>
+                    <fullName>Select CD</fullName>
+                    <default>false</default>
+                    <label>Select CD</label>
+                </value>
+                <value>
+                    <fullName>Select Checking</fullName>
+                    <default>false</default>
+                    <label>Select Checking</label>
+                </value>
+                <value>
+                    <fullName>Select Money Market Savings</fullName>
+                    <default>false</default>
+                    <label>Select Money Market Savings</label>
+                </value>
+                <value>
+                    <fullName>Select Savings</fullName>
+                    <default>false</default>
+                    <label>Select Savings</label>
+                </value>
+                <value>
+                    <fullName>Business Checking</fullName>
+                    <default>false</default>
+                    <label>Business Checking</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Personal CD</fullName>
+                    <default>false</default>
+                    <label>Personal CD</label>
+                </value>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>CD</fullName>
+                    <default>false</default>
+                    <label>CD</label>
+                </value>
+                <value>
+                    <fullName>High Interest Checking</fullName>
+                    <default>false</default>
+                    <label>High Interest Checking</label>
+                </value>
+                <value>
+                    <fullName>High Yield Savings</fullName>
+                    <default>false</default>
+                    <label>High Yield Savings</label>
+                </value>
+                <value>
+                    <fullName>Legacy Account</fullName>
+                    <default>false</default>
+                    <label>Legacy Account</label>
+                </value>
+                <value>
+                    <fullName>Special CD</fullName>
+                    <default>false</default>
+                    <label>Special CD</label>
+                </value>
+                <value>
+                    <fullName>RV/AUTO</fullName>
+                    <default>false</default>
+                    <label>RV/AUTO</label>
+                </value>
+                <value>
+                    <fullName>RV INDIRECT</fullName>
+                    <default>false</default>
+                    <label>RV INDIRECT</label>
+                </value>
+                <value>
+                    <fullName>DIRECT RV</fullName>
+                    <default>false</default>
+                    <label>DIRECT RV</label>
+                </value>
+                <value>
+                    <fullName>COMMERCIAL</fullName>
+                    <default>false</default>
+                    <label>COMMERCIAL</label>
+                </value>
+                <value>
+                    <fullName>RE/COMM ADJ-INHOUSE</fullName>
+                    <default>false</default>
+                    <label>RE/COMM ADJ-INHOUSE</label>
+                </value>
+                <value>
+                    <fullName>OVERDRAFT LOC</fullName>
+                    <default>false</default>
+                    <label>OVERDRAFT LOC</label>
+                </value>
+                <value>
+                    <fullName>MULTI FAMILY</fullName>
+                    <default>false</default>
+                    <label>MULTI FAMILY</label>
+                </value>
+                <value>
+                    <fullName>P-MULTI 5+ ADJ SBO</fullName>
+                    <default>false</default>
+                    <label>P-MULTI 5+ ADJ SBO</label>
+                </value>
+                <value>
+                    <fullName>MULTI 5+ NEG AM INS</fullName>
+                    <default>false</default>
+                    <label>MULTI 5+ NEG AM INS</label>
+                </value>
+                <value>
+                    <fullName>P-MULTI 5+ P&amp;I SBO</fullName>
+                    <default>false</default>
+                    <label>P-MULTI 5+ P&amp;I SBO</label>
+                </value>
+                <value>
+                    <fullName>SINGLE FAMLIY RES</fullName>
+                    <default>false</default>
+                    <label>SINGLE FAMLIY RES</label>
+                </value>
+                <value>
+                    <fullName>SINGLE FAMILY RES</fullName>
+                    <default>false</default>
+                    <label>SINGLE FAMILY RES</label>
+                </value>
+                <value>
+                    <fullName>PUR-SINGLE FAMILY RE</fullName>
+                    <default>false</default>
+                    <label>PUR-SINGLE FAMILY RE</label>
+                </value>
+                <value>
+                    <fullName>HOME EQUITY</fullName>
+                    <default>false</default>
+                    <label>HOME EQUITY</label>
+                </value>
+                <value>
+                    <fullName>HELOC</fullName>
+                    <default>false</default>
+                    <label>HELOC</label>
+                </value>
+                <value>
+                    <fullName>CONSTRUCTION LOAN</fullName>
+                    <default>false</default>
+                    <label>CONSTRUCTION LOAN</label>
+                </value>
+                <value>
+                    <fullName>COMMERICAL SEC</fullName>
+                    <default>false</default>
+                    <label>COMMERICAL SEC</label>
+                </value>
+                <value>
+                    <fullName>COMMERICAL SEC SBO</fullName>
+                    <default>false</default>
+                    <label>COMMERICAL SEC SBO</label>
+                </value>
+                <value>
+                    <fullName>CONSUMER UNSECURED</fullName>
+                    <default>false</default>
+                    <label>CONSUMER UNSECURED</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Products</label>
+    </listViews>
+    <listViews>
+        <fullName>LLC_BI__AllProducts</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Products</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.FAMILY</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,7 @@
+Amendment Name:{!Amendment_WHL__c.Name}
+
+Account Name:{!Amendment_WHL__c.Account__c}
+
+For more details, click the following link:
+
+{!Amendment_WHL__c.Link}

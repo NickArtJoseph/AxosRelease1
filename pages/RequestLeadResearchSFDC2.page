@@ -1,0 +1,21 @@
+<apex:page standardController="Lead" extensions="RequestLeadResearchSFDC2Controller">
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+<apex:form >
+    <apex:pageBlock title="Select a Research Request Type">
+        <apex:pageBlockSection >
+            <apex:selectList id="RequestType" size="1" value="{!RequestType}" title="Request Type">
+                <apex:selectOptions value="{!RequestTypeList}" />
+            </apex:selectList>
+            <apex:inputTextArea id="Notes" value="{!Notes}" label="Notes" style="width:360px; height:100px"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!sendLead}" value="Send for Research"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageblockButtons>
+    </apex:pageBlock>     
+    <apex:inputHidden value="{!lead.OwnerId}" />
+    <apex:inputHidden value="{!lead.RecordTypeId}" />
+    <apex:inputHidden value="{!lead.Return_Owner_SFDC2__c}" />
+    <apex:inputHidden value="{!lead.Return_Record_Type_SFDC2__c}" />
+</apex:form>
+</apex:page>

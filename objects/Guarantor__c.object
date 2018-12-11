@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Guarantor_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Guarantor_SFDC2</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Guarantor_SFDC2</fullName>
+        <fields>Boarding_Form__c</fields>
+        <fields>Name</fields>
+        <fields>GTR_1_Tax_ID_number__c</fields>
+        <fields>Message__c</fields>
+        <label>Guarantor</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is the name of anyone guarantying the loan with BofI. This may be recourse or non-recourse. Source doc (1 of the following): Guaranty Agreement, SS-4, IRS TIN Verification. The IRS TIN Verification can be requested from C&amp;I Operations.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Boarding_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Relationshio with the Boarding Form object</description>
+        <externalId>false</externalId>
+        <label>Boarding Form</label>
+        <referenceTo>Boarding_Form__c</referenceTo>
+        <relationshipLabel>Guarantors</relationshipLabel>
+        <relationshipName>Guarantors</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Birthdate_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Birthdate__c</fullName>
+        <description>Save Birthdate for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only applicable to individuals. Source doc: Credit Authorization/Application (for individuals only).	
+*Enter the birth year directly in the text field; do not use the dropdown</inlineHelpText>
+        <label>Birthdate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Class_Code_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Class_Code__c</fullName>
+        <description>Save  Class Code for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Option C requires additional verification from https://apps.irs.gov/app/eos/. Provide screenshot from website of findings. A, B, or D: No additional source doc required.</inlineHelpText>
+        <label>Class Code *</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A – Personal</fullName>
+                    <default>false</default>
+                    <label>A – Personal</label>
+                </value>
+                <value>
+                    <fullName>B – Business Profit</fullName>
+                    <default>false</default>
+                    <label>B – Business Profit</label>
+                </value>
+                <value>
+                    <fullName>C – Business Non-Profit</fullName>
+                    <default>false</default>
+                    <label>C – Business Non-Profit</label>
+                </value>
+                <value>
+                    <fullName>D – Employee/Direct Loan</fullName>
+                    <default>false</default>
+                    <label>D – Employee/Direct Loan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Contingent_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Contingent__c</fullName>
+        <description>Save the Contingent  for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select Yes if this a recourse guaranty. Select No for non-recourse. Source doc: Guaranty agreement(s).</inlineHelpText>
+        <label>Contingent ? *</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Email_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Email__c</fullName>
+        <description>Save the Email for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The email address of the main point of contact for notices. Source doc (1 of the following): Loan Agreement, Note, other legal agreement, email confirmation from Guarantor, Credit Authorization/Application (for individuals only).</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Gender_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Gender__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional. Source doc: Credit Authorization/Application (for individuals only).</inlineHelpText>
+        <label>Gender</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                    <label>Male</label>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                    <label>Female</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_City_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_City__c</fullName>
+        <description>Save the City Name for the Guarantor</description>
+        <externalId>false</externalId>
+        <label>Mailing City *</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_Country_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_Country__c</fullName>
+        <description>Save the Country Name for the Guarantor</description>
+        <externalId>false</externalId>
+        <label>Mailing Country *</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_Postal_Code_Zip__c</fullName>
+        <description>Save the Postal Code/Zip for the Guarantor</description>
+        <externalId>false</externalId>
+        <label>Mailing Postal Code/Zip *</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_State_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_State__c</fullName>
+        <description>Save the State Name for the Guarantor</description>
+        <externalId>false</externalId>
+        <label>Mailing State *</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_Street_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Mailing_Street__c</fullName>
+        <description>Save the Street Name for the Guarantor</description>
+        <externalId>false</externalId>
+        <label>Mailing Street *</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Name_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Phone_Number_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Phone_Number__c</fullName>
+        <description>Save the Phone Number  for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The phone number of the main point of contact for notices. Source doc (1 of the following): Loan Agreement, Note, other legal agreement, email confirmation from Guarantor, Credit Authorization/Application (for individuals only).</inlineHelpText>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Postal_Code_Zip_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Tax_ID_Number_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Tax_ID_Number_Type_Source_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Source &amp; Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Tax_ID_Number_Type__c</fullName>
+        <description>Save the Tax ID Number Type for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source doc: SS-4, IRS TIN Verification. The IRS TIN Verification can be requested from C&amp;I Operations.</inlineHelpText>
+        <label>Tax ID Number Type *</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>I - Individual</fullName>
+                    <default>false</default>
+                    <label>I - Individual</label>
+                </value>
+                <value>
+                    <fullName>T - TIN</fullName>
+                    <default>false</default>
+                    <label>T - TIN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GTR_1_Tax_ID_number__c</fullName>
+        <description>Save the Tax ID Number  for the Guarantor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source doc (1 of the following): IRS TIN Verification, Credit Authorization/Application (for individuals only). The IRS TIN Verification can be requested from C&amp;I Operations. If a foreign national, refer to BSA.</inlineHelpText>
+        <label>Tax ID Number *</label>
+        <length>11</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Message__c</fullName>
+        <description>Guideline for User to know if the record is populated correctly,</description>
+        <externalId>false</externalId>
+        <formula>IF( RecordReady__c , 
+&quot;This Guarantor has all required fields populated&quot;, 
+&quot;Please fill out all &apos;*&apos; required fields prior to submitting the related BF for Approval.&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Message</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordReady__c</fullName>
+        <description>Field to know if the record is ready to submmited for approval</description>
+        <externalId>false</externalId>
+        <formula>AND( NOT ( ISBLANK( GTR_1_Mailing_Street__c )               || ISNULL(GTR_1_Mailing_Street__c) ), 
+     NOT ( ISBLANK(GTR_1_Mailing_City__c)                   || ISNULL(GTR_1_Mailing_City__c ) ), 
+     NOT ( ISBLANK(GTR_1_Mailing_State__c)                  || ISNULL(GTR_1_Mailing_State__c ) ) , 
+     NOT ( ISBLANK(GTR_1_Mailing_Postal_Code_Zip__c)        || ISNULL(GTR_1_Mailing_Postal_Code_Zip__c) ), 
+     NOT ( ISBLANK(GTR_1_Mailing_Country__c)                || ISNULL(GTR_1_Mailing_Country__c) ), 
+     NOT ( ISBLANK(GTR_1_Tax_ID_number__c)                  || ISNULL(GTR_1_Tax_ID_number__c) ), 
+     NOT ( ISBLANK(text(GTR_1_Tax_ID_Number_Type__c) )      || ISNULL(text(GTR_1_Tax_ID_Number_Type__c) ) ) , 
+     NOT ( ISBLANK(text(GTR_1_Class_Code__c) )              || ISNULL(text(GTR_1_Class_Code__c) ) ) ,
+     NOT ( ISBLANK(text(GTR_1_Contingent__c) )              || ISNULL(text(GTR_1_Contingent__c) ) ) , 
+     NOT ( ISBLANK(GTR_1_Mailing_City_Source_Page__c)       || ISNULL(GTR_1_Mailing_City_Source_Page__c) ), 
+     NOT ( ISBLANK(GTR_1_Class_Code_Source_Page__c)         || ISNULL(GTR_1_Class_Code_Source_Page__c ) ), 
+     NOT ( ISBLANK(GTR_1_Mailing_Country_Source_Page__c)    || ISNULL(GTR_1_Mailing_Country_Source_Page__c ) ), 
+     NOT ( ISBLANK(GTR_1_Contingent_Source_Page__c)         || ISNULL(GTR_1_Contingent_Source_Page__c ) ) , 
+     NOT ( ISBLANK(GTR_1_Mailing_State_Source_Page__c)      || ISNULL(GTR_1_Mailing_State_Source_Page__c ) ), 
+     NOT ( ISBLANK(GTR_1_Mailing_Street_Source_Page__c)     || ISNULL(GTR_1_Mailing_Street_Source_Page__c) ), 
+     NOT ( ISBLANK(GTR_1_Name_Source_Page__c)               || ISNULL(GTR_1_Name_Source_Page__c) ) , 
+     NOT ( ISBLANK(GTR_1_Postal_Code_Zip_Source_Page__c)    || ISNULL(GTR_1_Postal_Code_Zip_Source_Page__c) ), 
+     NOT ( ISBLANK(GTR_1_Tax_ID_Number_Type_Source_Page__c) || ISNULL(GTR_1_Tax_ID_Number_Type_Source_Page__c) ), 
+     NOT ( ISBLANK(GTR_1_Tax_ID_Number_Source_Page__c)      || ISNULL(GTR_1_Tax_ID_Number_Source_Page__c) )
+   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecordReady</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Guarantor</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Guarantors</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>GTR_1_Phone_Number_Format</fullName>
+        <active>true</active>
+        <description>Enforces 10 digits, no characters. Allows parentheses and dash for the data loader.</description>
+        <errorConditionFormula>NOT(
+OR(
+ISBLANK( GTR_1_Phone_Number__c),
+REGEX( GTR_1_Phone_Number__c, &quot;\\D*?(\\d\\D*?){10}&quot;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>GTR_1_Phone_Number__c</errorDisplayField>
+        <errorMessage>Verify the phone number is in the format: (999) 999-9999</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GTR_1_Postal_Code_Numeric</fullName>
+        <active>true</active>
+        <description>Validates that the GTR 1 Postal Code field only contains numeric values</description>
+        <errorConditionFormula>AND(
+NOT(ISBLANK(GTR_1_Mailing_Postal_Code_Zip__c)),
+NOT(ISNUMBER(GTR_1_Mailing_Postal_Code_Zip__c))
+)</errorConditionFormula>
+        <errorDisplayField>GTR_1_Mailing_Postal_Code_Zip__c</errorDisplayField>
+        <errorMessage>Only numeric characters are allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GTR_1_State_Alphabetic</fullName>
+        <active>true</active>
+        <description>Validates that the GTR 1 Mailing State field only contains letters</description>
+        <errorConditionFormula>AND(
+NOT(ISBLANK(GTR_1_Mailing_State__c )),
+NOT(REGEX(GTR_1_Mailing_State__c , &quot;[a-zA-Z]*(\\s[a-zA-Z]*)?&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>GTR_1_Mailing_State__c</errorDisplayField>
+        <errorMessage>Only letters and a single space are allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Guarantor_1_Tax_ID_Number</fullName>
+        <active>true</active>
+        <description>Requires format &quot;XXX-XX-XXXX&quot;  where X is digit 0-9</description>
+        <errorConditionFormula>NOT(
+    OR( ISBLANK( GTR_1_Tax_ID_number__c  ),
+        REGEX( GTR_1_Tax_ID_number__c , &quot;[\\d]{3}-[\\d]{2}-[\\d]{4}&quot; ),
+        REGEX( GTR_1_Tax_ID_number__c , &quot;[\\d]{2}-[\\d]{7}&quot; )
+      )
+)</errorConditionFormula>
+        <errorDisplayField>GTR_1_Tax_ID_number__c</errorDisplayField>
+        <errorMessage>Guarantor Tax ID Number must be in format  &quot;XXX-XX-XXXX&quot; or &quot;XX-XXXXXXX&quot; including the dash(es), where X is a 0-9 digit</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SFDC2_Guarator_RecordLocked</fullName>
+        <active>false</active>
+        <description>The User can&apos;t change the valoues of this record to avoid modifications in the Approval Flow</description>
+        <errorConditionFormula>AND(
+      $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+      OR(  ISPICKVAL(Boarding_Form__r.BF_Status__c, &quot;BF Submitted for Pre-Approval&quot;) ,
+           ISPICKVAL(Boarding_Form__r.BF_Status__c, &quot;BF Submitted for Approval&quot;) ,
+           ISPICKVAL(Boarding_Form__r.BF_Status__c, &quot;BF Approved&quot;) 
+
+        ),
+      RecordReady__c     
+)</errorConditionFormula>
+        <errorMessage>You can not modify this record because the related BF is pending to be approved or approved, contact your administrator.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

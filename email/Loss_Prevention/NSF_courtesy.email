@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Hello {!Case.Contact},<br><br></span><font face="arial" style=""><br>This email is to notify you of an item presenting for payment that will overdraw your account ending in ____. Please cover the balance of the item plus any fees that may apply. If the item and overdraft balance are not covered by 10:00 AM PST, the item will be returned<span style="font-size: 12pt;">.</span><br></font><br><font face="arial">Please refer to your deposit account agreement to determine if your account is charged a fee (NSF fee is $25.00). You may call us to complete a telephone transfer, or log in to transfer funds online<span style="font-size: 12pt;">.</span></font><div><font face="arial"><br></font></div><div><font face="arial">If you would like further assistance, please call us at 1-877-247-8002<br></font><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><font face="arial">Best Regards,<br></font></span><font face="Arial, sans-serif">BOFI Customer Service</font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

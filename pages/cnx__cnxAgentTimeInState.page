@@ -1,0 +1,13 @@
+<apex:page sidebar="false" showheader="false" doctype="html-5.0" cache="false">
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/AgentTimeInState/js/jquery-1.11.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'js/ConnectsIntegrationAPI.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/AgentTimeInState/js/AgentStateVisualizer.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.cnx__CnxSfdcResources,'addons/AgentTimeInState/css/AgentStateVisualizer.min.css')}"/>
+
+    <div id="agentInState"></div>
+
+    <script>
+        var agentStateVisualizer = new AgentStateVisualizer($, ConnectsIntegrationAPI);
+        agentStateVisualizer.init();
+    </script>
+</apex:page>

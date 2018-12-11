@@ -1,0 +1,691 @@
+<apex:page sidebar="false" controller="G4S.CompanySettingsController" action="{!initPage}" tabstyle="Glance_Company_Settings__tab" title="Glance for Salesforce - Company Settings">
+
+<apex:sectionHeader title="Glance for Salesforce" subtitle="Company Settings"/>
+
+<apex:outputPanel layout="block" rendered="{!syncScheduledJobCancelled}" style="padding: 5px; border: 1px solid red; background-color: pink; border-radius: 4px; margin: 4px 20px;">
+<table>
+    <tr>
+        <td><img alt="WARNING" class="msgIcon" src="/img/msg_icons/error24.png" height="24" width="24" title="WARNING"/></td>
+        <td>The Glance Sync process is configured to run, however it has been manually cancelled. The Glance Sync process can be restarted by updating <a href="/apex/CompanySettings">Company Settings</a>.</td>
+    </tr>
+</table>
+</apex:outputPanel>
+
+<apex:pageMessages />
+
+<apex:form >
+
+<apex:pageBlock title="Settings" helpTitle="Help for this page" helpUrl="https://www.glance.net/sf_help_companysettings" id="settings">
+    <apex:pageBlockButtons location="top" rendered="{!canCustomizeApplication}">
+        <apex:commandButton action="{!edit}" value="Edit" rendered="{!mode == 'view'}" reRender="settings, singleSignOn, sessionTypes, liveAgent"/>
+        <apex:commandButton action="{!save}" value="Save" rendered="{!mode == 'edit'}"/>
+        <apex:commandButton action="{!cancel}" value="Cancel" rendered="{!mode == 'edit'}" immediate="true"/>
+        <apex:commandButton value="Create Free Company Trial" action="{!trial}" rendered="{!primaryAdminSelected == false}" />
+    </apex:pageBlockButtons>
+    
+    <apex:pageBlockSection columns="2" rendered="{!mode == 'edit'}">
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Primary_Glance_Admin__c.inlineHelpText}">
+            <apex:outputLabel value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Primary_Glance_Admin__c.Label}"/>
+            <apex:panelGroup >
+                <apex:selectList value="{!companySettings.G4S__Primary_Glance_Admin__c}" size="1" rendered="{!hasGlanceAdmins}">
+                    <apex:selectOptions value="{!glanceAdminOptions}"/>
+                </apex:selectList>
+                <apex:outputPanel layout="inline" style="font-style: italic;" rendered="{!NOT(hasGlanceAdmins)}">None available. Either enter User Settings for Glance Administrator or Create a Free Company Trial.</apex:outputPanel>
+            </apex:panelGroup>
+        </apex:pageBlockSectionItem>
+        <apex:inputField value="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c}"/>
+
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.inlineHelpText}">
+            <apex:outputLabel value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Create_Leads_From_Session_Guests__c.Label}"/>
+            <apex:selectList value="{!companySettings.G4S__Create_Leads_From_Session_Guests__c}" size="1">
+                <apex:selectOptions value="{!createLeadsFromSessionGuestsOptions}"/>
+            </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Sync"/>
+            <apex:selectList value="{!companySettings.G4S__Sync_Type__c}" size="1">
+                <apex:selectOption itemValue="Group" itemLabel="Group" rendered="{!glanceAdminOptions.size > 0}"/>
+                <apex:selectOption itemValue="Individual Users" itemLabel="Individual Users (deprecated)"/>
+            </apex:selectList>
+        </apex:pageBlockSectionItem>
+
+        <apex:inputField value="{!companySettings.G4S__Create_Events_From_Sessions__c}"/>
+        <apex:inputField value="{!companySettings.G4S__Sync_Frequency__c}" required="true"/>
+      
+        <apex:pageBlockSectionItem helpText="Glance creates and auto-saves an Event object each time you start a session. Do you want Glance to also open the Event (which would re-direct you away from the object where you started the session)?">
+            <apex:outputLabel value="Open Glance Session Events" for="openGlanceSessionEvents"/>
+            <apex:inputCheckbox id="openGlanceSessionEvents" value="{!openGlanceSessionEvents}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!chatterEnabled}">
+            <apex:outputLabel value="Chatter"/>
+            <apex:selectList value="{!chatterValues}" multiselect="true" size="2">
+                <apex:selectOptions value="{!chatterOptions}"/>
+            </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!NOT(chatterEnabled)}"/>
+        
+        <apex:inputField value="{!companySettings.G4S__Allow_Free_Trial__c}"/>
+        <apex:inputField value="{!companySettings.G4S__Free_Trial_Disabled_Message__c}"/>
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection columns="2" rendered="{!mode == 'view'}">
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Primary_Glance_Admin__c.inlineHelpText}" >
+            <apex:outputLabel value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Primary_Glance_Admin__c.Label}"/>
+            <apex:panelGroup >
+                <apex:outputText value="{!glanceAdminName}" rendered="{!hasGlanceAdmins}"/>
+                <apex:outputPanel layout="inline" style="font-style: italic;" rendered="{!NOT(hasGlanceAdmins)}">None available. Either enter User Settings for Glance Administrator or Create a Free Company Trial.</apex:outputPanel>
+            </apex:panelGroup>
+        </apex:pageBlockSectionItem>
+        <apex:outputField value="{!companySettings.G4S__How_Does_Your_Company_Use_Salesforce__c}"/>
+
+        <apex:outputField value="{!companySettings.G4S__Create_Leads_From_Session_Guests__c}"/>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Sync"/>
+            <apex:outputText value="{!companySettings.G4S__Sync_Type__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:outputField value="{!companySettings.G4S__Create_Events_From_Sessions__c}"/>
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Sync_Frequency__c.inlineHelpText}" >
+            <apex:outputLabel value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Sync_Frequency__c.Label}"/>
+            <apex:panelGroup >
+                <apex:outputText value="{!companySettings.G4S__Sync_Frequency__c}" rendered="{!companySettings.G4S__Sync_Frequency__c != 'Never'}"/>
+                <apex:outputText value="{!companySettings.G4S__Sync_Frequency__c}" style="color: red;" rendered="{!companySettings.G4S__Sync_Frequency__c == 'Never'}"/>
+            </apex:panelGroup>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem helpText="Glance creates and auto-saves an Event object each time you start a session. Do you want Glance to also open the Event (which would re-direct you away from the object where you started the session)?">
+            <apex:outputLabel value="Open Glance Session Events"/>
+            <apex:outputPanel >
+                <apex:image value="/img/checkbox_checked.gif" alt="Checked" width="21" height="16" styleClass="checkImg" title="Checked" rendered="{!openGlanceSessionEvents}"/>
+                <apex:image value="/img/checkbox_unchecked.gif" alt="Not Checked" width="21" height="16" styleClass="checkImg" title="Not Checked" rendered="{!NOT(openGlanceSessionEvents)}"/>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>        
+        <apex:pageBlockSectionItem rendered="{!chatterEnabled}">
+            <apex:outputLabel value="Chatter"/>
+            <apex:outputPanel >
+                <apex:outputPanel rendered="{!companySettings.G4S__Chatter_When_Scheduling_Glance_Meeting__c}">
+                    When scheduling meeting<br/>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{!companySettings.G4S__Chatter_When_Starting_Glance_Session__c}">
+                    When starting meeting
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!NOT(chatterEnabled)}"/>
+
+        <apex:outputField value="{!companySettings.G4S__Allow_Free_Trial__c}"/>
+        <apex:outputField value="{!companySettings.G4S__Free_Trial_Disabled_Message__c}"/>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+
+<apex:pageBlock title="Single Sign On" id="singleSignOn">
+    <apex:pageBlockSection rendered="{!NOT(ssoAvailable)}">
+        <apex:outputText >Contact Glance to enable Single Sign On.</apex:outputText>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="1"  rendered="{!mode == 'view' && ssoAvailable}">
+        <apex:outputField value="{!companySettings.G4S__Enable_SSO__c}"/>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Partner User ID Field"/>
+            <apex:outputText value="{!IF(ISBLANK(companySettings.G4S__Partner_User_Id_Field__c),'',userFields[companySettings.G4S__Partner_User_Id_Field__c].label)}"/>
+        </apex:pageBlockSectionItem>  
+        <apex:outputField value="{!companySettings.G4S__SSO_Login_Expiration__c}"/>
+        <apex:outputField value="{!companySettings.G4S__Enable_Universal_Join__c}"/>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection columns="1"  rendered="{!mode == 'edit' && ssoAvailable}">
+        <apex:inputField id="ssoEnabled" value="{!companySettings.G4S__Enable_SSO__c}"/>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Partner User ID Field"/>
+            <apex:selectList id="ssoUserFieldSelect" value="{!companySettings.G4S__Partner_User_Id_Field__c}" size="1" >
+                <apex:selectOptions value="{!ssoUserFieldOptions}"/>
+            </apex:selectList>            
+        </apex:pageBlockSectionItem>
+        <apex:inputField id="ssoLoginExpiration" value="{!companySettings.G4S__SSO_Login_Expiration__c}"/>
+        <apex:inputField id="ssoEnableUnivJoin" value="{!companySettings.G4S__Enable_Universal_Join__c}"/>
+        <apex:outputPanel layout="none" rendered="{!NOT(companySettings.G4S__Enable_SSO__c)}">
+            <script>
+            document.getElementById("{!$Component.ssoLoginExpiration}").disabled = true;
+            jQuery('select[id$="ssoUserFieldSelect"]').val('').attr('disabled', 'disabled');
+
+            </script>
+        </apex:outputPanel>                
+               
+    </apex:pageBlockSection>    
+</apex:pageBlock>
+    
+<apex:pageBlock title="Session Types" id="sessionTypes">
+    <apex:outputPanel layout="block" rendered="{!mode == 'edit'}">
+        <div class="pbSubsection">
+            <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">Show My Screen</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:inputField value="{!companySettings.G4S__Show_My_Screen_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">View Guest's Screen</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:inputField id="viewGuestsScreenEnabled" value="{!companySettings.G4S__View_Guests_Screen_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="viewGuestsScreenField" style="{!IF(companySettings.View_Guests_Screen_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol"><label>Remote Control</label></td>
+                    <td class="dataCol">
+                        <apex:selectList value="{!companySettings.G4S__View_Guests_Screen_Remote_Control__c}" size="1">
+                            <apex:selectOptions value="{!remoteControlOptions}"/>
+                        </apex:selectList>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">Cobrowse</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:inputField id="cobrowseEnabled" value="{!companySettings.G4S__Cobrowse_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol"><label>Lead</label></td>
+                    <td class="dataCol">
+                        <apex:inputCheckbox id="cobrowseLead" value="{!companySettings.G4S__Cobrowse_Lead_Enabled__c}"/>
+                        
+                        <apex:selectList id="cobrowseLeadSelect" value="{!companySettings.G4S__Cobrowse_Lead_Field__c}" size="1">
+                            <apex:selectOption itemValue="" itemLabel="--None--"/>
+                            <apex:selectOptions value="{!cobrowseLeadFieldOptions}"/>
+                        </apex:selectList>
+                        
+                        <apex:outputPanel layout="none" rendered="{!NOT(companySettings.G4S__Cobrowse_Lead_Enabled__c)}">
+                            <script>
+                                document.getElementById("{!$Component.cobrowseLeadSelect}").disabled = true;
+                            </script>
+                        </apex:outputPanel>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c && havePersonAccounts, '', 'display: none;')}">
+                    <td class="labelCol"><label>Person Account</label></td>
+                    <td class="dataCol">
+                        <apex:inputCheckbox id="cobrowseAccount" value="{!companySettings.G4S__Cobrowse_Account_Enabled__c}"/>
+                        
+                        <apex:selectList id="cobrowseAccountSelect" value="{!companySettings.G4S__Cobrowse_Account_Field__c}" size="1">
+                            <apex:selectOption itemValue="" itemLabel="--None--"/>
+                            <apex:selectOptions value="{!cobrowseAccountFieldOptions}"/>
+                        </apex:selectList>
+                        
+                        <apex:outputPanel layout="none" rendered="{!NOT(companySettings.G4S__Cobrowse_Account_Enabled__c)}">
+                            <script>
+                                document.getElementById("{!$Component.cobrowseAccountSelect}").disabled = true;
+                            </script>
+                        </apex:outputPanel>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol"><label>Contact</label></td>
+                    <td class="dataCol">
+                        <apex:inputCheckbox id="cobrowseContact" value="{!companySettings.G4S__Cobrowse_Contact_Enabled__c}"/>
+                        
+                        <apex:selectList id="cobrowseContactSelect" value="{!companySettings.G4S__Cobrowse_Contact_Field__c}" size="1">
+                            <apex:selectOption itemValue="" itemLabel="--None--"/>
+                            <apex:selectOptions value="{!cobrowseContactFieldOptions}"/>
+                        </apex:selectList>
+                        
+                        <apex:outputPanel layout="none" rendered="{!NOT(companySettings.G4S__Cobrowse_Contact_Enabled__c)}">
+                            <script>
+                                document.getElementById("{!$Component.cobrowseContactSelect}").disabled = true;
+                            </script>
+                        </apex:outputPanel>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol"><label>Case</label></td>
+                    <td class="dataCol">
+                        <apex:inputCheckbox id="cobrowseCase" value="{!companySettings.G4S__Cobrowse_Case_Enabled__c}"/>
+                        
+                        <apex:selectList id="cobrowseCaseSelect" value="{!companySettings.G4S__Cobrowse_Case_Field__c}" size="1">
+                            <apex:selectOption itemValue="" itemLabel="--None--"/>
+                            <apex:selectOptions value="{!cobrowseCaseFieldOptions}"/>
+                        </apex:selectList>
+                        
+                        <apex:outputPanel layout="none" rendered="{!NOT(companySettings.G4S__Cobrowse_Case_Enabled__c)}">
+                            <script>
+                                document.getElementById("{!$Component.cobrowseCaseSelect}").disabled = true;
+                            </script>
+                        </apex:outputPanel>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol last"><label>Presence Indicator</label></td>
+                    <td class="dataCol last">
+                        <apex:inputCheckbox id="cobrowsePresence" value="{!companySettings.G4S__Enable_Presence__c}"/>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr class="cobrowseField" style="{!IF(companySettings.Cobrowse_Enabled__c, '', 'display: none;')}">
+                    <td class="labelCol last"><label>Presence Accept Terms</label></td>
+                    <td class="dataCol last">
+                        <apex:inputCheckbox id="presenceTerms" value="{!companySettings.G4S__Presence_Accept_Terms__c}"/>
+                    </td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </apex:outputPanel>
+    
+    <apex:outputPanel layout="block" rendered="{!mode == 'view'}">
+        <div class="pbSubsection">
+            <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">Show My Screen</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:outputField value="{!companySettings.G4S__Show_My_Screen_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">View Guest's Screen</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:outputField value="{!companySettings.G4S__View_Guests_Screen_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <apex:outputPanel layout="none" rendered="{!companySettings.G4S__View_Guests_Screen_Enabled__c}">
+                    <tr>
+                        <td class="labelCol"><label>Remote Control</label></td>
+                        <td class="dataCol"><apex:outputField value="{!companySettings.G4S__View_Guests_Screen_Remote_Control__c}"/></td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                </apex:outputPanel>
+                <tr>
+                    <td class="labelCol first" style="text-align: left; font-size: 12px; color: #000; padding-left: 30px;">Cobrowse</td>
+                    <td class="dataCol first"></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="labelCol"><label>Enable</label></td>
+                    <td class="dataCol"><apex:outputField value="{!companySettings.G4S__Cobrowse_Enabled__c}"/></td>
+                    <td class="labelCol empty">&nbsp;</td>
+                    <td class="dataCol empty">&nbsp;</td>
+                </tr>
+                <apex:outputPanel layout="none" rendered="{!companySettings.G4S__Cobrowse_Enabled__c}">
+                    <tr>
+                        <td class="labelCol"><label>Lead</label></td>
+                        <td class="dataCol">
+                            <apex:outputField value="{!companySettings.G4S__Cobrowse_Lead_Enabled__c}"/>
+                            <apex:outputText value="{!leadFields[companySettings.G4S__Cobrowse_Lead_Field__c].label}" rendered="{!companySettings.G4S__Cobrowse_Lead_Field__c != null}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                    <tr style="{!IF(havePersonAccounts, '', 'display: none;')}">
+                        <td class="labelCol"><label>Person Account</label></td>
+                        <td class="dataCol">
+                            <apex:outputField value="{!companySettings.G4S__Cobrowse_Account_Enabled__c}"/>
+                            <apex:outputText value="{!accountFields[companySettings.G4S__Cobrowse_Account_Field__c].label}" rendered="{!companySettings.G4S__Cobrowse_Account_Field__c != null}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="labelCol"><label>Contact</label></td>
+                        <td class="dataCol">
+                            <apex:outputField value="{!companySettings.G4S__Cobrowse_Contact_Enabled__c}"/>
+                            <apex:outputText value="{!contactFields[companySettings.G4S__Cobrowse_Contact_Field__c].label}" rendered="{!companySettings.G4S__Cobrowse_Contact_Field__c != null}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="labelCol"><label>Case</label></td>
+                        <td class="dataCol">
+                            <apex:outputField value="{!companySettings.G4S__Cobrowse_Case_Enabled__c}"/>
+                            <apex:outputText value="{!caseFields[companySettings.G4S__Cobrowse_Case_Field__c].label}" rendered="{!companySettings.G4S__Cobrowse_Case_Field__c != null}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="labelCol last"><label>Presence Indicator</label></td>
+                        <td class="dataCol last">
+                            <apex:outputField value="{!companySettings.G4S__Enable_Presence__c}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="labelCol last"><label>Presence Accept Terms</label></td>
+                        <td class="dataCol last">
+                            <apex:outputField value="{!companySettings.G4S__Presence_Accept_Terms__c}"/>
+                        </td>
+                        <td class="labelCol empty">&nbsp;</td>
+                        <td class="dataCol empty">&nbsp;</td>
+                    </tr>
+                </apex:outputPanel>
+            </table>
+        </div>
+    </apex:outputPanel>
+</apex:pageBlock>
+
+<apex:pageBlock title="Live Agent" id="liveAgent">
+    <apex:pageBlockSection columns="2" rendered="{!mode == 'edit'}">
+        <apex:selectList id="initiationOptions" value="{!companySettings.G4S__Live_Agent_Initiation_Options__c}" size="1">
+            <apex:selectOptions value="{!liveAgentInitiationOptions}"/>
+        </apex:selectList>
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Cobrowse_Invitation_Text__c.inlineHelpText}">
+            <apex:outputLabel id="cobrowseInvitationTextLabel" value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Cobrowse_Invitation_Text__c.Label}" style="{!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat', '', 'display: none;')}"/>
+            <apex:outputPanel >
+                <apex:inputTextArea id="cobrowseInvitationTextInput" value="{!companySettings.G4S__Cobrowse_Invitation_Text__c}" style="width: 100%; {!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat', '', 'display: none;')}"/>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        
+        <apex:inputField id="ieFallbackOption" value="{!companySettings.G4S__IE_Fallback_Option__c}"/>
+        <apex:pageBlockSectionItem helptext="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Cobrowse_URL__c.inlineHelpText}">
+            <apex:outputLabel id="cobrowseUrlLabel" value="{!$ObjectType.G4S__Company_Settings__c.fields.G4S__Cobrowse_URL__c.Label}" style="{!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat', '', 'display: none;')}"/>
+            <apex:outputPanel >
+                <apex:inputText id="cobrowseUrlInput" value="{!companySettings.G4S__Cobrowse_URL__c}" style="width: 100%; {!IF(companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat', '', 'display: none;')}"/>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        
+        <apex:selectList value="{!companySettings.G4S__Cobrowse_Window_Options__c}" size="1">
+            <apex:selectOption itemValue="" itemLabel="--None--" rendered="{!companySettings.G4S__Cobrowse_Window_Options__c == null}"/>
+            <apex:selectOptions value="{!cobrowseWindowOptions}"/>
+        </apex:selectList>
+        
+        <apex:pageBlockSectionItem />
+        <apex:pageBlockSectionItem />
+        <apex:pageBlockSectionItem />        
+        <apex:inputField value="{!companySettings.G4S__Live_Agent_Chat_Prompt_Text__c }"/>
+        <apex:inputField value="{!companySettings.G4S__Live_Agent_Chat_Terms_Text__c }"/>
+        <apex:inputField value="{!companySettings.G4S__Live_Agent_Chat_Accept_Text__c }"/>
+        <apex:inputField value="{!companySettings.G4S__Live_Agent_Chat_Terms_Link__c }"/>
+        <apex:inputField value="{!companySettings.G4S__Live_Agent_Chat_Decline_Text__c }"/>
+        
+   </apex:pageBlockSection>
+    <apex:pageBlockSection columns="2" rendered="{!mode == 'view'}">
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Initiation_Options__c}"/>
+        <apex:outputField value="{!companySettings.G4S__Cobrowse_Invitation_Text__c}" rendered="{!companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat'}"/>
+        <apex:pageBlockSectionItem rendered="{!companySettings.G4S__Live_Agent_Initiation_Options__c != 'Link Via Chat' && companySettings.G4S__IE_Fallback_Option__c != 'Link Via Chat'}"/>
+        
+        <apex:outputField value="{!companySettings.G4S__IE_Fallback_Option__c}"/>
+        <apex:outputField value="{!companySettings.G4S__Cobrowse_URL__c}" rendered="{!companySettings.G4S__Live_Agent_Initiation_Options__c == 'Link Via Chat' || companySettings.G4S__IE_Fallback_Option__c == 'Link Via Chat'}"/>
+        <apex:pageBlockSectionItem rendered="{!companySettings.G4S__Live_Agent_Initiation_Options__c != 'Link Via Chat' && companySettings.G4S__IE_Fallback_Option__c != 'Link Via Chat'}"/>
+        
+        <apex:outputField value="{!companySettings.G4S__Cobrowse_Window_Options__c}"/>
+        <apex:pageBlockSectionItem />
+        <apex:pageBlockSectionItem />
+        <apex:pageBlockSectionItem />
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Chat_Prompt_Text__c }"/>
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Chat_Terms_Text__c }"/>
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Chat_Accept_Text__c }"/>
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Chat_Terms_Link__c }"/>
+        <apex:outputField value="{!companySettings.G4S__Live_Agent_Chat_Decline_Text__c }"/>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockButtons location="bottom" rendered="{!canCustomizeApplication}">
+        <apex:commandButton action="{!edit}" value="Edit" rendered="{!mode == 'view'}" reRender="settings, sessionTypes, liveAgent"/>
+        <apex:commandButton action="{!save}" value="Save" rendered="{!mode == 'edit'}"/>
+        <apex:commandButton action="{!cancel}" value="Cancel" rendered="{!mode == 'edit'}" immediate="true"/>
+        <apex:commandButton value="Create Free Company Trial" action="{!trial}" rendered="{!primaryAdminSelected == false}" />
+    </apex:pageBlockButtons>
+</apex:pageBlock>
+
+<apex:pageBlock title="Glance for Salesforce Users" id="users">
+    <apex:pageBlockTable value="{!glanceUsers}" var="user">
+        <apex:column headerValue="Action" rendered="{!canCustomizeApplication}">
+            <apex:commandLink value="Del" action="{!deleteUser}" immediate="true" onclick="if(!confirm('Delete this Glance for Salesforce User?')) return false;" rerender="settings, users">
+                <apex:param name="id" value="{!user.Id}"/>
+            </apex:commandLink>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByName}" rerender="users">Name</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'Name' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'Name' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            <apex:outputLink value="/{!user.G4S__User__c}">{!user.User__r.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByGlanceAddress}" rerender="users">Glance Address</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'GlanceAddress' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'GlanceAddress' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            {!user.G4S__Glance_Address__c}
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByGlanceAdmin}" rerender="users">Admin</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'GlanceAdmin' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'GlanceAdmin' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            <apex:image value="/img/checkbox_checked.gif" rendered="{!user.G4S__Glance_Admin__c}"/>
+            <apex:image value="/img/checkbox_unchecked.gif" rendered="{!NOT(user.G4S__Glance_Admin__c)}"/>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByGroupName}" rerender="users">Glance Group</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'GroupName' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'GroupName' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            {!user.G4S__Group_Name__c}
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByCreateLeadsFromSessionGuests}" rerender="users">Create New Leads for Session Guests</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'CreateLeadsFromSessionGuests' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'CreateLeadsFromSessionGuests' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            {!user.G4S__Create_Leads_From_Session_Guests__c}
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByHowDoYouUseSalesforce}" rerender="users">How Do You Use Salesforce?</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'HowDoYouUseSalesforce' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'HowDoYouUseSalesforce' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            {!user.G4S__How_Do_You_Use_Salesforce__c}
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByChatter}" rerender="users">Chatter</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'Chatter' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'Chatter' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            <apex:outputPanel rendered="{!user.G4S__Chatter_When_Scheduling_Glance_Meeting__c && NOT(user.G4S__Chatter_When_Starting_Glance_Session__c)}">On Schedule</apex:outputPanel>
+            <apex:outputPanel rendered="{!NOT(user.G4S__Chatter_When_Scheduling_Glance_Meeting__c) && user.G4S__Chatter_When_Starting_Glance_Session__c}">On Start</apex:outputPanel>
+            <apex:outputPanel rendered="{!user.G4S__Chatter_When_Scheduling_Glance_Meeting__c && user.G4S__Chatter_When_Starting_Glance_Session__c}">On Schedule &amp; Start</apex:outputPanel>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortByPlanName}" rerender="users">Subscription</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'PlanName' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'PlanName' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            {!user.G4S__Plan_Name__c}
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!sortBySubscriptionEndDate}" rerender="users">Expires</apex:commandLink>
+                    &nbsp;
+                    <apex:outputPanel rendered="{!sortColumn == 'SubscriptionEndDate' && sortDirection == 'asc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowAsc)}"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!sortColumn == 'SubscriptionEndDate' && sortDirection == 'desc'}">
+                        <apex:image value="{!URLFOR($Resource.G4S__SortArrowDesc)}"/>
+                    </apex:outputPanel>
+                </apex:panelGroup>
+            </apex:facet>
+            <apex:outputText value="{0,date,MM/dd/yyyy}"><apex:param value="{!user.G4S__Trial_End_Date__c}"/></apex:outputText>
+        </apex:column>
+    </apex:pageBlockTable>
+    
+    <apex:outputPanel layout="block" style="text-align: center;">
+        <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">&laquo; Previous</apex:commandlink>
+        <apex:outputPanel rendered="{!hasPrevious && hasNext}">&nbsp;&nbsp;</apex:outputPanel>
+        <apex:commandLink action="{!next}" rendered="{!hasNext}">Next &raquo;</apex:commandlink>
+    </apex:outputPanel>
+</apex:pageBlock>
+
+</apex:form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    jQuery(function() {
+
+        jQuery(document).on('click', 'input[id$="viewGuestsScreenEnabled"]', function() {
+            jQuery('.viewGuestsScreenField').toggle();
+        });
+        
+        jQuery(document).on('click', 'input[id$="cobrowseEnabled"]', function() {
+            jQuery('.cobrowseField').toggle();
+        });
+        
+        jQuery(document).on('click', 'input[id$="cobrowseLead"]', function() {
+            if (jQuery(this).is(':checked')) {
+                jQuery('select[id$="cobrowseLeadSelect"]').removeAttr('disabled');
+            } else {
+                jQuery('select[id$="cobrowseLeadSelect"]').val('').attr('disabled', 'disabled');
+            }
+        });
+        
+        jQuery(document).on('click', 'input[id$="cobrowseAccount"]', function() {
+            if (jQuery(this).is(':checked')) {
+                jQuery('select[id$="cobrowseAccountSelect"]').removeAttr('disabled');
+            } else {
+                jQuery('select[id$="cobrowseAccountSelect"]').val('').attr('disabled', 'disabled');
+            }
+        });
+        
+        jQuery(document).on('click', 'input[id$="cobrowseContact"]', function() {
+            if (jQuery(this).is(':checked')) {
+                jQuery('select[id$="cobrowseContactSelect"]').removeAttr('disabled');
+            } else {
+                jQuery('select[id$="cobrowseContactSelect"]').val('').attr('disabled', 'disabled');
+            }
+        });
+        
+        jQuery(document).on('click', 'input[id$="cobrowseCase"]', function() {
+            if (jQuery(this).is(':checked')) {
+                jQuery('select[id$="cobrowseCaseSelect"]').removeAttr('disabled');
+            } else {
+                jQuery('select[id$="cobrowseCaseSelect"]').val('').attr('disabled', 'disabled');
+            }
+        });
+
+        jQuery(document).on('click', 'input[id$="ssoEnabled"]', function() {
+            if (jQuery(this).is(':checked')) {
+                jQuery('select[id$="ssoUserFieldSelect"]').val('federationidentifier').removeAttr('disabled');
+                jQuery('input[id$="ssoLoginExpiration"]').removeAttr('disabled');
+            } else {
+                jQuery('select[id$="ssoUserFieldSelect"]').val('').attr('disabled', 'disabled');
+                jQuery('input[id$="ssoLoginExpiration"]').attr('disabled', 'disabled');
+            }
+        });        
+        
+        jQuery(document).on('change', 'select[id$="initiationOptions"], select[id$="ieFallbackOption"]', function() {
+            var showFields = (jQuery('select[id$="initiationOptions"]').val() == 'Link Via Chat' || jQuery('select[id$="ieFallbackOption"]').val() == 'Link Via Chat');
+        
+            jQuery('[id$="cobrowseInvitationTextLabel"], [id$="cobrowseInvitationTextInput"], [id$="cobrowseUrlLabel"], [id$="cobrowseUrlInput"]').toggle(showFields);
+        });
+
+    });
+</script>
+
+</apex:page>

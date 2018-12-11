@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Initial email sent each quarter to WLD clients to renew their certification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>WLD QC Request Email</name>
+    <style>none</style>
+    <subject>BofI Warehouse Quarterly Certification</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

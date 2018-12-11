@@ -1,0 +1,8 @@
+You have a new lead in Salesforce from an RMI form submitted: {!Lead.CreatedDate}. Please see contact details below.
+
+Name: {!Lead.Name}
+Email: {!Lead.Email}
+Phone: {!Lead.Phone}
+Lead Source: {!Lead.LeadSource}
+Other Lead Source: {!Lead.Other_Lead_Source__c}
+Lead Source Detail: {!Lead.Lead_Source_Detail_SFDC2__c}

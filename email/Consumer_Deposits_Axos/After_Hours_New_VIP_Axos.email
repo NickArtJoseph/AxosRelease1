@@ -1,0 +1,9 @@
+The following VIP case has been created after 3pm.  Please review and action the case as appropriate.
+
+Case Type: {!Case.RecordType}
+Case ID: {!Case.CaseNumber}
+Case Priority: {!Case.Priority}
+Case Owner: {!Case.OwnerFullName}
+
+
+{!Case.Link}

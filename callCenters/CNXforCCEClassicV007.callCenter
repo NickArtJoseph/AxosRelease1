@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenter xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <adapterUrl>https://sd-uccx-pub.mybofi.local:8445/3rdpartygadget/files/ConnectsGadgetv4_0/crm/Salesforce/connects.html</adapterUrl>
+    <customSettings>{&quot;reqTimeout&quot;:&quot;20000&quot;,&quot;reqStandbyUrl&quot;:&quot;https://az-uccx-sub.mybofi.local:8445/3rdpartygadget/files/ConnectsGadgetv4_0/crm/Salesforce/connects.html&quot;,&quot;reqSoftphoneHeight&quot;:&quot;500&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;300&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Classic&quot;}</customSettings>
+    <displayName>Connects for Cisco Contact Center Classic V7</displayName>
+    <displayNameLabel>Display Name</displayNameLabel>
+    <internalNameLabel>InternalName</internalNameLabel>
+    <sections>
+        <items>
+            <label>Description</label>
+            <name>reqDescription</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Use CTI API</label>
+            <name>reqUseApi</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Salesforce CTI Version</label>
+            <name>reqVersion</name>
+            <value>4.0</value>
+        </items>
+        <items>
+            <label>Connects Gadget URL A</label>
+            <name>reqAdapterUrl</name>
+            <value>https://sd-uccx-pub.mybofi.local:8445/3rdpartygadget/files/ConnectsGadgetv4_0/crm/Salesforce/connects.html</value>
+        </items>
+        <items>
+            <label>Connects Gadget URL B</label>
+            <name>reqStandbyUrl</name>
+            <value>https://az-uccx-sub.mybofi.local:8445/3rdpartygadget/files/ConnectsGadgetv4_0/crm/Salesforce/connects.html</value>
+        </items>
+        <items>
+            <label>Request Timeout</label>
+            <name>reqTimeout</name>
+            <value>20000</value>
+        </items>
+        <items>
+            <label>Finesse Server URL A</label>
+            <name>reqFinesseServerA</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Finesse Server URL B</label>
+            <name>reqFinesseServerB</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Finesse Server Timeout</label>
+            <name>reqFinesseServerTimeout</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Softphone Height</label>
+            <name>reqSoftphoneHeight</name>
+            <value>500</value>
+        </items>
+        <items>
+            <label>Softphone Width</label>
+            <name>reqSoftphoneWidth</name>
+            <value>300</value>
+        </items>
+        <items>
+            <label>Salesforce Compatibility Mode</label>
+            <name>reqSalesforceCompatibilityMode</name>
+            <value>Classic</value>
+        </items>
+        <label>General Information</label>
+        <name>reqGeneralInfo</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Dialing Rules</label>
+            <name>reqDialingRules</name>
+            <value>??????????-&gt;91</value>
+        </items>
+        <items>
+            <label>Lookup Rules</label>
+            <name>reqLookupRules</name>
+            <value>91-&gt;;9??????????-&gt;;</value>
+        </items>
+        <items>
+            <label>Internal number format RegEx</label>
+            <name>reqInternalNumberRegex</name>
+            <value>^\d{4}$</value>
+        </items>
+        <items>
+            <label>Edit number on click-to-dial</label>
+            <name>reqEditBeforeDial</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>New Record URL 1</label>
+            <name>reqNewRecordUrl1</name>
+            <value>00Q/e?lea8={ANI}</value>
+        </items>
+        <items>
+            <label>New Record URL 2</label>
+            <name>reqNewRecordUrl2</name>
+            <value>001/e?acc10={ANI}</value>
+        </items>
+        <items>
+            <label>New Record URL 3</label>
+            <name>reqNewRecordUrl3</name>
+            <value>003/e?con10={ANI}</value>
+        </items>
+        <items>
+            <label>New Record URL 4</label>
+            <name>reqNewRecordUrl4</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>New Record URL 5</label>
+            <name>reqNewRecordUrl5</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Campaign account number URL</label>
+            <name>reqCampaignAccountNumberUrl</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Variable for record sharing</label>
+            <name>reqScreenTransferPerVar</name>
+            <value>10</value>
+        </items>
+        <items>
+            <label>Search and Screen Pop Variable</label>
+            <name>reqSearchAndScreenPopVariable</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Additional Search Parameters</label>
+            <name>reqSearchParameter</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Enable Salesforce Interaction Log</label>
+            <name>reqEnableInteractionLog</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Enable Call Log</label>
+            <name>reqWriteCallLog</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Call Log Subject Format</label>
+            <name>reqCallLogSubjectFormat</name>
+            <value>YYYY-MM-DD HH:mm:ss</value>
+        </items>
+        <items>
+            <label>Date Time Locale</label>
+            <name>reqDateTimeLocale</name>
+            <value>en</value>
+        </items>
+        <items>
+            <label>Show Call Log Comment Field</label>
+            <name>reqCallLogCommentField</name>
+            <value>true</value>
+        </items>
+        <label>Voice Configuration</label>
+        <name>reqDialingOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Enable Omni-Channel</label>
+            <name>reqOmniChannelEnable</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Enable Live Agent</label>
+            <name>reqLiveAgentEnable</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Hide Omni-Channel work item after accepting</label>
+            <name>reqOmniChannelHideWorkItem</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Hide Live Agent chat after accepting</label>
+            <name>reqLiveAgentHideChat</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Switch to talking state on reserved</label>
+            <name>reqOmniChannelTalkingOnReserved</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Service Presence Status while talking</label>
+            <name>reqOmniChannelTalkingStatus</name>
+            <value>StatusAPIName</value>
+        </items>
+        <items>
+            <label>Live Agent chats to set voice Not Ready</label>
+            <name>reqVoiceNotReadyOnLiveAgentCount</name>
+            <value>0</value>
+        </items>
+        <items>
+            <label>Not Ready reason code while chat</label>
+            <name>reqVoiceNotReadyOnLiveAgentReasonCode</name>
+            <value>ReasonCode</value>
+        </items>
+        <items>
+            <label>Count Offered chats to set voice Not Ready</label>
+            <name>reqVoiceNotReadyOnLiveAgentOffered</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Allow Agents to Decline Requests</label>
+            <name>reqOmniChannelEnableDecline</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Service Presence Online Status</label>
+            <name>reqOmniChannelOnline</name>
+            <value>OnlineStatusAPIName1,OnlineStatusAPIName2</value>
+        </items>
+        <items>
+            <label>Service Presence Busy Status</label>
+            <name>reqOmniChannelBusy</name>
+            <value>BusyStatusAPIName1,BusyStatusAPIName2</value>
+        </items>
+        <label>Omni-Channel Federation / Live Agent - General Options</label>
+        <name>reqOmniChannelOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Agent Work Layout 1</label>
+            <name>reqAgentWorkLayout1</name>
+            <value>Case;Subject,Priority,Status,CaseNumber</value>
+        </items>
+        <items>
+            <label>Agent Work Layout 2</label>
+            <name>reqAgentWorkLayout2</name>
+            <value>Lead;Name,Title,Company,Phone,MobilePhone,Email</value>
+        </items>
+        <items>
+            <label>Agent Work Layout 3</label>
+            <name>reqAgentWorkLayout3</name>
+            <value>CustomEntityName;Field1,Field2,Field3</value>
+        </items>
+        <items>
+            <label>Agent Work Layout 4</label>
+            <name>reqAgentWorkLayout4</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Agent Work Layout 5</label>
+            <name>reqAgentWorkLayout5</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Agent Work Layout 6</label>
+            <name>reqAgentWorkLayout6</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Agent Work Layout 7</label>
+            <name>reqAgentWorkLayout7</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Agent Work Layout 8</label>
+            <name>reqAgentWorkLayout8</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Omni-Channel Federation / Live Agent - Agent Work Layout Options</label>
+        <name>reqAgentWorkOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Max Number of Directory Lookup Suggestions</label>
+            <name>reqMaxDirectorySuggestions</name>
+            <value>5</value>
+        </items>
+        <items>
+            <label>Max Number of CRM Lookup Suggestions</label>
+            <name>reqMaxCRMSuggestions</name>
+            <value>5</value>
+        </items>
+        <items>
+            <label>Types Excluded from Directory Lookup</label>
+            <name>reqExcludeTypes</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Enable HTML5 Desktop Notifications</label>
+            <name>reqEnableDesktopNotifications</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Issue report URL</label>
+            <name>reqAfterIssueReportUrl</name>
+            <value>mailto:support@mycompany.com?subject=Connects%20issue%20report&amp;body={message}</value>
+        </items>
+        <items>
+            <label>Disabled actions</label>
+            <name>reqDisabledActions</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Flags</label>
+            <name>reqFeatureFlags</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Customer-specific enhancements classname (deprecated)</label>
+            <name>reqCustomerSpecificEnhancementsClass</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Additional Options</label>
+        <name>reqAdditionalOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Enable Mobile Agent support</label>
+            <name>reqEnableMobileAgent</name>
+            <value>false</value>
+        </items>
+        <items>
+            <label>Force &apos;Nailed Connection&apos; (N) or &apos;Call-By-Call&apos; (C)</label>
+            <name>reqNailedConnection</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Mobile Agent Options (CCE only)</label>
+        <name>reqMobileAgentOptions</name>
+    </sections>
+    <sections>
+        <items>
+            <label>PerVar1</label>
+            <name>perVar1</name>
+            <value>1;1;CallType</value>
+        </items>
+        <items>
+            <label>PerVar2</label>
+            <name>perVar2</name>
+            <value>2;1;CallerId</value>
+        </items>
+        <items>
+            <label>PerVar3</label>
+            <name>perVar3</name>
+            <value>3;1;CalledNumber</value>
+        </items>
+        <items>
+            <label>PerVar4</label>
+            <name>perVar4</name>
+            <value>4;0;PerVar4</value>
+        </items>
+        <items>
+            <label>PerVar5</label>
+            <name>perVar5</name>
+            <value>5;0;PerVar5</value>
+        </items>
+        <items>
+            <label>PerVar6</label>
+            <name>perVar6</name>
+            <value>6;0;PerVar6</value>
+        </items>
+        <items>
+            <label>PerVar7</label>
+            <name>perVar7</name>
+            <value>7;0;PerVar7</value>
+        </items>
+        <items>
+            <label>PerVar8</label>
+            <name>perVar8</name>
+            <value>8;0;PerVar8</value>
+        </items>
+        <items>
+            <label>PerVar9</label>
+            <name>perVar9</name>
+            <value>9;0;PerVar9</value>
+        </items>
+        <items>
+            <label>PerVar10</label>
+            <name>perVar10</name>
+            <value>10;0;PerVar10</value>
+        </items>
+        <label>Call Data Display Options (Usage: &apos;Order;Active;Label&apos;)</label>
+        <name>perVarConfig</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Top Toolbar Component URL</label>
+            <name>reqCustomToolbarTopURL</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Top Toolbar Component Height</label>
+            <name>reqCustomToolbarTopHeight</name>
+            <value>40</value>
+        </items>
+        <items>
+            <label>Bottom Toolbar Component URL</label>
+            <name>reqCustomToolbarBottomURL</name>
+            <value>https://bofi--cnx.na46.visual.force.com/apex/cnxRealtimeView</value>
+        </items>
+        <items>
+            <label>Bottom Toolbar Component Height</label>
+            <name>reqCustomToolbarBottomHeight</name>
+            <value>150</value>
+        </items>
+        <items>
+            <label>Identifier Component 1</label>
+            <name>reqCustomCompKey1</name>
+            <value>RealtimeView</value>
+        </items>
+        <items>
+            <label>Settings Component 1</label>
+            <name>reqCustomCompValue1</name>
+            <value>showStateChangeTime=true;sortAgentNameBy=1;hideQueueView=true</value>
+        </items>
+        <items>
+            <label>Identifier Component 2</label>
+            <name>reqCustomCompKey2</name>
+            <value>RecordingControls</value>
+        </items>
+        <items>
+            <label>Settings Component 2</label>
+            <name>reqCustomCompValue2</name>
+            <value>recordingServer=cisco-qm.mybofi.local;peripheralId=1;writeRecordingLink=true;recordingLinkField=Recording_Link__c;</value>
+        </items>
+        <items>
+            <label>Identifier Component 3</label>
+            <name>reqCustomCompKey3</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Settings Component 3</label>
+            <name>reqCustomCompValue3</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Identifier Component 4</label>
+            <name>reqCustomCompKey4</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Settings Component 4</label>
+            <name>reqCustomCompValue4</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Identifier Component 5</label>
+            <name>reqCustomCompKey5</name>
+            <value xsi:nil="true"/>
+        </items>
+        <items>
+            <label>Settings Component 5</label>
+            <name>reqCustomCompValue5</name>
+            <value xsi:nil="true"/>
+        </items>
+        <label>Integration API Options</label>
+        <name>reqCustomToolbar</name>
+    </sections>
+    <version>4</version>
+</CallCenter>

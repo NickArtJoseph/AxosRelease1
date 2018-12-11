@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);"><font face="Arial, sans-serif" style="">Hello&nbsp;{!Case.Contact},<br><br>You can make your request for an official check by choosing
+one of the following options:<br></font></p><div style="color: rgb(0, 0, 0); text-indent: 0px;"><ol><li><font face="Arial, sans-serif" style="">Send a <b style="text-indent: -0.25in;">secure message</b><span style="text-indent: -0.25in;"> through our Online Banking
+facility</span></font></li><li><font face="Arial, sans-serif" style="">By <b>calling [Phone Number]</b>; my colleagues and I
+are available from 6:00am to 6:00pm (PT) to take your call.</font></li></ol></div><font face="Arial, sans-serif" style=""><div style="text-indent: 0px;">In your request, please provide us with the amount of the
+check and the payee. An official check can only be mailed to your address on
+file and is sent by standard USPS. There is a $10.00 fee for each official
+check request, we can also expedite the shipping but you will need to cover the
+cost for that service.<br><span style="text-indent: -0.25in;"><div style="text-indent: -24px;"><span style="text-indent: 0px;"><div style="text-indent: 0px;"><span style="text-indent: -24px;"><br>We appreciate your business and commit to providing superior
+Banking products, support and services.<br><div style="text-indent: -24px;"><span style="font-size: 12pt; text-indent: 0px;"><br>Best Regards,<br><div style="text-indent: 0px;">{!User.FirstName}<span style="font-size: 12pt; text-indent: -24px;"><br></span><font color="#ff0000" style="font-size: 12pt;">[INSERT BRAND]&nbsp;</font><span style="font-size: 12pt;">Customer Service</span></div></span></div></span></div></span></div></span></div></font>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

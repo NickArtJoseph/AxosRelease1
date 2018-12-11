@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>BusinessBanking</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Business Banking</label>
+        <sharedTo>
+            <group>Business_Banking</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Business_Banking</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>C_I_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>C&amp;I Sharing</label>
+        <sharedTo>
+            <group>C_I</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>C_I</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>FinancialAdvisors</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Financial Advisors</label>
+        <sharedTo>
+            <group>Financial_Advisors</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Financial_Advisors</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Healthcare_Finance</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Healthcare Finance</label>
+        <sharedTo>
+            <group>Commercial_and_Industrial_Lending</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Commercial_and_Industrial_Lending</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

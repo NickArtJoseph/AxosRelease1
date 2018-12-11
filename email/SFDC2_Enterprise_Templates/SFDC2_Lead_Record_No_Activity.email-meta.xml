@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SFDC2: Used when an unconverted Lead record has had no activity</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SFDC2: Lead Record No Activity</name>
+    <style>none</style>
+    <subject>Lead: No Activity for &quot;{!Lead.Name}&quot;</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

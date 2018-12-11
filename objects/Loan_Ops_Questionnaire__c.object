@@ -1,0 +1,2019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Loan_Ops_Questionnaire_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Loan Ops Questionnaire used by C&amp;I.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Addl_LOQ_Options__c</fullName>
+        <externalId>false</externalId>
+        <label>8. Select all that apply:</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>3rd Party Agent</fullName>
+                    <default>false</default>
+                    <label>3rd Party Agent</label>
+                </value>
+                <value>
+                    <fullName>Bridge A&amp;D</fullName>
+                    <default>false</default>
+                    <label>Bridge A&amp;D</label>
+                </value>
+                <value>
+                    <fullName>Bridge IR Requirement</fullName>
+                    <default>false</default>
+                    <label>Bridge IR Requirement</label>
+                </value>
+                <value>
+                    <fullName>Committed loan</fullName>
+                    <default>false</default>
+                    <label>Committed loan</label>
+                </value>
+                <value>
+                    <fullName>Construction financing</fullName>
+                    <default>false</default>
+                    <label>Construction financing</label>
+                </value>
+                <value>
+                    <fullName>Fund Control</fullName>
+                    <default>false</default>
+                    <label>Fund Control</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>Bridge Interest Reverse Requirement</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Bridge Interest Reverse Requirement</label>
+                </value>
+                <value>
+                    <fullName>Participation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Participation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ApprovalSubmitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used with trigger/approval to verify fields required for approval are not null.</description>
+        <externalId>false</externalId>
+        <label>ApprovalSubmitted</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Boarding_Form__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Boarding Form</label>
+        <referenceTo>Boarding_Form__c</referenceTo>
+        <relationshipLabel>Loan Ops Questionnaires</relationshipLabel>
+        <relationshipName>Loan_Ops_Questionnaires</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Relationship__c</fullName>
+        <externalId>false</externalId>
+        <label>4. Borrower to collateral relationship:</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Direct</fullName>
+                    <default>false</default>
+                    <label>Direct</label>
+                </value>
+                <value>
+                    <fullName>Lender</fullName>
+                    <default>false</default>
+                    <label>Lender</label>
+                </value>
+                <value>
+                    <fullName>Participation</fullName>
+                    <default>false</default>
+                    <label>Participation</label>
+                </value>
+                <value>
+                    <fullName>Lender Participation</fullName>
+                    <default>false</default>
+                    <label>Lender Participation</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>RE Acquisition</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>RE Acquisition</label>
+                </value>
+                <value>
+                    <fullName>RE Construction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>RE Construction</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C_I_Loan_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>C&amp;I Loan Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1A</fullName>
+                    <default>false</default>
+                    <label>1A</label>
+                </value>
+                <value>
+                    <fullName>1B</fullName>
+                    <default>false</default>
+                    <label>1B</label>
+                </value>
+                <value>
+                    <fullName>1C</fullName>
+                    <default>false</default>
+                    <label>1C</label>
+                </value>
+                <value>
+                    <fullName>1D</fullName>
+                    <default>false</default>
+                    <label>1D</label>
+                </value>
+                <value>
+                    <fullName>1E</fullName>
+                    <default>false</default>
+                    <label>1E</label>
+                </value>
+                <value>
+                    <fullName>1F</fullName>
+                    <default>false</default>
+                    <label>1F</label>
+                </value>
+                <value>
+                    <fullName>5A</fullName>
+                    <default>false</default>
+                    <label>5A</label>
+                </value>
+                <value>
+                    <fullName>5B</fullName>
+                    <default>false</default>
+                    <label>5B</label>
+                </value>
+                <value>
+                    <fullName>5C</fullName>
+                    <default>false</default>
+                    <label>5C</label>
+                </value>
+                <value>
+                    <fullName>5D</fullName>
+                    <default>false</default>
+                    <label>5D</label>
+                </value>
+                <value>
+                    <fullName>5E</fullName>
+                    <default>false</default>
+                    <label>5E</label>
+                </value>
+                <value>
+                    <fullName>5F</fullName>
+                    <default>false</default>
+                    <label>5F</label>
+                </value>
+                <value>
+                    <fullName>5G</fullName>
+                    <default>false</default>
+                    <label>5G</label>
+                </value>
+                <value>
+                    <fullName>5J</fullName>
+                    <default>false</default>
+                    <label>5J</label>
+                </value>
+                <value>
+                    <fullName>5L</fullName>
+                    <default>false</default>
+                    <label>5L</label>
+                </value>
+                <value>
+                    <fullName>5M</fullName>
+                    <default>false</default>
+                    <label>5M</label>
+                </value>
+                <value>
+                    <fullName>5N</fullName>
+                    <default>false</default>
+                    <label>5N</label>
+                </value>
+                <value>
+                    <fullName>5P</fullName>
+                    <default>false</default>
+                    <label>5P</label>
+                </value>
+                <value>
+                    <fullName>5R</fullName>
+                    <default>false</default>
+                    <label>5R</label>
+                </value>
+                <value>
+                    <fullName>5S</fullName>
+                    <default>false</default>
+                    <label>5S</label>
+                </value>
+                <value>
+                    <fullName>5T</fullName>
+                    <default>false</default>
+                    <label>5T</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Call_Report_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Call Report Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1C2A</fullName>
+                    <default>false</default>
+                    <label>1C2A</label>
+                </value>
+                <value>
+                    <fullName>1A1</fullName>
+                    <default>false</default>
+                    <label>1A1</label>
+                </value>
+                <value>
+                    <fullName>1D</fullName>
+                    <default>false</default>
+                    <label>1D</label>
+                </value>
+                <value>
+                    <fullName>1A2</fullName>
+                    <default>false</default>
+                    <label>1A2</label>
+                </value>
+                <value>
+                    <fullName>1E2</fullName>
+                    <default>false</default>
+                    <label>1E2</label>
+                </value>
+                <value>
+                    <fullName>4A</fullName>
+                    <default>false</default>
+                    <label>4A</label>
+                </value>
+                <value>
+                    <fullName>6D</fullName>
+                    <default>false</default>
+                    <label>6D</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Collateral_Code_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Collateral Code/Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>110 - SFR Construction</fullName>
+                    <default>false</default>
+                    <label>110 - SFR Construction</label>
+                </value>
+                <value>
+                    <fullName>120 - MF Construction</fullName>
+                    <default>false</default>
+                    <label>120 - MF Construction</label>
+                </value>
+                <value>
+                    <fullName>130 - CRE Construction</fullName>
+                    <default>false</default>
+                    <label>130 - CRE Construction</label>
+                </value>
+                <value>
+                    <fullName>160 - Real Estate - Raw Lots and Land</fullName>
+                    <default>false</default>
+                    <label>160 - Real Estate - Raw Lots and Land</label>
+                </value>
+                <value>
+                    <fullName>400 - Business-Unsecured</fullName>
+                    <default>false</default>
+                    <label>400 - Business-Unsecured</label>
+                </value>
+                <value>
+                    <fullName>441 - Business Secured by Non-Real Estate Collateral</fullName>
+                    <default>false</default>
+                    <label>441 - Business Secured by Non-Real Estate Collateral</label>
+                </value>
+                <value>
+                    <fullName>501 - SFR Notes</fullName>
+                    <default>false</default>
+                    <label>501 - SFR Notes</label>
+                </value>
+                <value>
+                    <fullName>502 - SFR NPL</fullName>
+                    <default>false</default>
+                    <label>502 - SFR NPL</label>
+                </value>
+                <value>
+                    <fullName>503 - SFR Tax Liens</fullName>
+                    <default>false</default>
+                    <label>503 - SFR Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>504 - MF Notes</fullName>
+                    <default>false</default>
+                    <label>504 - MF Notes</label>
+                </value>
+                <value>
+                    <fullName>505 - MF NPL</fullName>
+                    <default>false</default>
+                    <label>505 - MF NPL</label>
+                </value>
+                <value>
+                    <fullName>506 - MF Tax Liens</fullName>
+                    <default>false</default>
+                    <label>506 - MF Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>507 - CRE Notes</fullName>
+                    <default>false</default>
+                    <label>507 - CRE Notes</label>
+                </value>
+                <value>
+                    <fullName>508 - CRE NPL</fullName>
+                    <default>false</default>
+                    <label>508 - CRE NPL</label>
+                </value>
+                <value>
+                    <fullName>509 - CRE Tax Liens</fullName>
+                    <default>false</default>
+                    <label>509 - CRE Tax Liens</label>
+                </value>
+                <value>
+                    <fullName>510 - Health Care</fullName>
+                    <default>false</default>
+                    <label>510 - Health Care</label>
+                </value>
+                <value>
+                    <fullName>511 - SFR Direct</fullName>
+                    <default>false</default>
+                    <label>511 - SFR Direct</label>
+                </value>
+                <value>
+                    <fullName>512 - MF Direct</fullName>
+                    <default>false</default>
+                    <label>512 - MF Direct</label>
+                </value>
+                <value>
+                    <fullName>513 - CRE Direct</fullName>
+                    <default>false</default>
+                    <label>513 - CRE Direct</label>
+                </value>
+                <value>
+                    <fullName>620 - Consumer Note, Unsecured</fullName>
+                    <default>false</default>
+                    <label>620 - Consumer Note, Unsecured</label>
+                </value>
+                <value>
+                    <fullName>621 - Consumer, New Cars</fullName>
+                    <default>false</default>
+                    <label>621 - Consumer, New Cars</label>
+                </value>
+                <value>
+                    <fullName>622 - Consumer, Used Cars</fullName>
+                    <default>false</default>
+                    <label>622 - Consumer, Used Cars</label>
+                </value>
+                <value>
+                    <fullName>640 - Consumer, Secured by Other Collateral</fullName>
+                    <default>false</default>
+                    <label>640 - Consumer, Secured by Other Collateral</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Collateral_Secured__c</fullName>
+        <externalId>false</externalId>
+        <label>5. Is collateral?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Secured</fullName>
+                    <default>false</default>
+                    <label>Secured</label>
+                </value>
+                <value>
+                    <fullName>Unsecured</fullName>
+                    <default>false</default>
+                    <label>Unsecured</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Collateral_Type_RE__c</fullName>
+        <externalId>false</externalId>
+        <label>7. If RE, collateral type?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Notes</fullName>
+                    <default>false</default>
+                    <label>Notes</label>
+                </value>
+                <value>
+                    <fullName>NPL</fullName>
+                    <default>false</default>
+                    <label>NPL</label>
+                </value>
+                <value>
+                    <fullName>Tax Lines</fullName>
+                    <default>false</default>
+                    <label>Tax Lines</label>
+                </value>
+                <value>
+                    <fullName>Recorded Mortgage</fullName>
+                    <default>false</default>
+                    <label>Recorded Mortgage</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Collateral_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>1. Collateral Type:</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Business Loans</fullName>
+                    <default>false</default>
+                    <label>Business Loans</label>
+                </value>
+                <value>
+                    <fullName>Consumer Loans</fullName>
+                    <default>false</default>
+                    <label>Consumer Loans</label>
+                </value>
+                <value>
+                    <fullName>Account/Lease Receivable</fullName>
+                    <default>false</default>
+                    <label>Account/Lease Receivable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Created_By_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedBy.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Created By Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_Team_Member_1__c</fullName>
+        <description>Team Members on corresponding Opportunity</description>
+        <externalId>false</externalId>
+        <label>Deal Team Member 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_Team_Member_2__c</fullName>
+        <description>Team Members on corresponding Opportunity</description>
+        <externalId>false</externalId>
+        <label>Deal Team Member 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_Team_Member_3__c</fullName>
+        <description>Team Members on corresponding Opportunity</description>
+        <externalId>false</externalId>
+        <label>Deal Team Member 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FlagNotification_SFDC2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This fiels is used into SubmmitalSuccessfulNotification lightning component</description>
+        <externalId>false</externalId>
+        <label>FlagNotification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Submitter__c</fullName>
+        <description>Hidden field to capture the email address of the user who submitted the LOQ for approval</description>
+        <externalId>false</externalId>
+        <label>Initial Submitter</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>3. Interest Rate Type:</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Adjustable</fullName>
+                    <default>false</default>
+                    <label>Adjustable</label>
+                </value>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>false</default>
+                    <label>Fixed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LOQ_Status__c</fullName>
+        <description>Change in field values is controlled by approval process</description>
+        <externalId>false</externalId>
+        <label>LOQ Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>LOQ In Progress</fullName>
+                    <default>true</default>
+                    <label>LOQ In Progress</label>
+                </value>
+                <value>
+                    <fullName>LOQ Submitted for approval</fullName>
+                    <default>false</default>
+                    <label>LOQ Submitted for approval</label>
+                </value>
+                <value>
+                    <fullName>LOQ Approved</fullName>
+                    <default>false</default>
+                    <label>LOQ Approved</label>
+                </value>
+                <value>
+                    <fullName>LOQ Rejected</fullName>
+                    <default>false</default>
+                    <label>LOQ Rejected</label>
+                </value>
+                <value>
+                    <fullName>LOQ Recalled</fullName>
+                    <default>false</default>
+                    <label>LOQ Recalled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_by_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>LastModifiedBy.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Modified by Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OldLOQStatus__c</fullName>
+        <description>Save the Olv LOQ Status</description>
+        <externalId>false</externalId>
+        <label>OldLOQStatus</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OppLink__c</fullName>
+        <description>Link for Opportunity in LOQ records</description>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_410, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_410))&amp;Opportunity__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OppLink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Opportunity.RecordType.Name</field>
+                <operation>contains</operation>
+                <value>C&amp;I, EQF, CRESL, Factoring, NRELF, RELF, IPL</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Loan Ops Questionnaires</relationshipLabel>
+        <relationshipName>Loan_Ops_Questionnaires</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>6. If RE, property type?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SFR</fullName>
+                    <default>false</default>
+                    <label>SFR</label>
+                </value>
+                <value>
+                    <fullName>MF</fullName>
+                    <default>false</default>
+                    <label>MF</label>
+                </value>
+                <value>
+                    <fullName>CRE</fullName>
+                    <default>false</default>
+                    <label>CRE</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>NPL</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>NPL</label>
+                </value>
+                <value>
+                    <fullName>Notes</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Notes</label>
+                </value>
+                <value>
+                    <fullName>Tax Lines</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Tax Lines</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Purpose_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>30 - Lender Finance</fullName>
+                    <default>false</default>
+                    <label>30 - Lender Finance</label>
+                </value>
+                <value>
+                    <fullName>31 - Bridge/A and D</fullName>
+                    <default>false</default>
+                    <label>31 - Bridge/A and D</label>
+                </value>
+                <value>
+                    <fullName>34 - Farmland</fullName>
+                    <default>false</default>
+                    <label>34 - Farmland</label>
+                </value>
+                <value>
+                    <fullName>35 - Participation</fullName>
+                    <default>false</default>
+                    <label>35 - Participation</label>
+                </value>
+                <value>
+                    <fullName>36 - Lender Finance Participation</fullName>
+                    <default>false</default>
+                    <label>36 - Lender Finance Participation</label>
+                </value>
+                <value>
+                    <fullName>37 - Direct</fullName>
+                    <default>false</default>
+                    <label>37 - Direct</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SFDC2_24hReminderDate__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC2 24h Reminder Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Term_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>2. Term Type:</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Term</fullName>
+                    <default>false</default>
+                    <label>Term</label>
+                </value>
+                <value>
+                    <fullName>Revolving LOC</fullName>
+                    <default>false</default>
+                    <label>Revolving LOC</label>
+                </value>
+                <value>
+                    <fullName>Straight LOC</fullName>
+                    <default>false</default>
+                    <label>Straight LOC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Loan Ops Questionnaire</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Collateral_Type__c</columns>
+        <columns>Term_Type__c</columns>
+        <columns>Interest_Rate_Type__c</columns>
+        <columns>Borrower_Relationship__c</columns>
+        <columns>Collateral_Secured__c</columns>
+        <columns>Property_Type__c</columns>
+        <columns>Collateral_Type_RE__c</columns>
+        <columns>Addl_LOQ_Options__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Loan_Ops_Manager_Queue_Loan_Ops_Questionnaire</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Loan Ops Manager Queue</label>
+        <queue>Loan_Ops_Manager_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>LOQ{000000}</displayFormat>
+        <label>LOQ ID</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Ops Questionnaires</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>LOQ</fullName>
+        <active>true</active>
+        <label>LOQ</label>
+        <picklistValues>
+            <picklist>Addl_LOQ_Options__c</picklist>
+            <values>
+                <fullName>3rd Party Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bridge A%26D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bridge IR Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Committed loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fund Control</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Borrower_Relationship__c</picklist>
+            <values>
+                <fullName>Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lender Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Participation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C_I_Loan_Type__c</picklist>
+            <values>
+                <fullName>1A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5J</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5N</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5P</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5R</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5S</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Call_Report_Code__c</picklist>
+            <values>
+                <fullName>1A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1A2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1C2A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1E2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6D</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Code_Description__c</picklist>
+            <values>
+                <fullName>110 - SFR Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>120 - MF Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>130 - CRE Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>160 - Real Estate - Raw Lots and Land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>400 - Business-Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>441 - Business Secured by Non-Real Estate Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>501 - SFR Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>502 - SFR NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>503 - SFR Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>504 - MF Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>505 - MF NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>506 - MF Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>507 - CRE Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>508 - CRE NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>509 - CRE Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>510 - Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>511 - SFR Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>512 - MF Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>513 - CRE Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>620 - Consumer Note%2C Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>621 - Consumer%2C New Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>622 - Consumer%2C Used Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>640 - Consumer%2C Secured by Other Collateral</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Secured__c</picklist>
+            <values>
+                <fullName>Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Type_RE__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recorded Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Lines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Type__c</picklist>
+            <values>
+                <fullName>Account%2FLease Receivable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Adjustable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOQ_Status__c</picklist>
+            <values>
+                <fullName>LOQ Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>LOQ Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ Submitted for approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Type__c</picklist>
+            <values>
+                <fullName>CRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose_Code__c</picklist>
+            <values>
+                <fullName>30 - Lender Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31 - Bridge%2FA and D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34 - Farmland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35 - Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36 - Lender Finance Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37 - Direct</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_Type__c</picklist>
+            <values>
+                <fullName>Revolving LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Straight LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>LOQ_SubmmitedForApproval</fullName>
+        <active>true</active>
+        <description>This RT is for update the pageLayout</description>
+        <label>LOQ-SubmmitedForApproval</label>
+        <picklistValues>
+            <picklist>Addl_LOQ_Options__c</picklist>
+            <values>
+                <fullName>3rd Party Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bridge A%26D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bridge IR Requirement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Committed loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fund Control</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Borrower_Relationship__c</picklist>
+            <values>
+                <fullName>Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lender Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Participation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C_I_Loan_Type__c</picklist>
+            <values>
+                <fullName>1A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5F</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5J</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5L</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5M</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5N</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5P</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5R</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5S</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Call_Report_Code__c</picklist>
+            <values>
+                <fullName>1A1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1A2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1C2A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1E2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6D</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Code_Description__c</picklist>
+            <values>
+                <fullName>110 - SFR Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>120 - MF Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>130 - CRE Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>160 - Real Estate - Raw Lots and Land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>400 - Business-Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>441 - Business Secured by Non-Real Estate Collateral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>501 - SFR Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>502 - SFR NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>503 - SFR Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>504 - MF Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>505 - MF NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>506 - MF Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>507 - CRE Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>508 - CRE NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>509 - CRE Tax Liens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>510 - Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>511 - SFR Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>512 - MF Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>513 - CRE Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>620 - Consumer Note%2C Unsecured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>621 - Consumer%2C New Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>622 - Consumer%2C Used Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>640 - Consumer%2C Secured by Other Collateral</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Secured__c</picklist>
+            <values>
+                <fullName>Secured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsecured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Type_RE__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recorded Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Lines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collateral_Type__c</picklist>
+            <values>
+                <fullName>Account%2FLease Receivable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Adjustable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOQ_Status__c</picklist>
+            <values>
+                <fullName>LOQ Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>LOQ Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LOQ Submitted for approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Type__c</picklist>
+            <values>
+                <fullName>CRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SFR</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose_Code__c</picklist>
+            <values>
+                <fullName>30 - Lender Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>31 - Bridge%2FA and D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34 - Farmland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>35 - Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>36 - Lender Finance Participation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>37 - Direct</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Term_Type__c</picklist>
+            <values>
+                <fullName>Revolving LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Straight LOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Approved</fullName>
+        <active>true</active>
+        <description>Restrict field edits when Status is LOQ Approved. Only Julie can update a record</description>
+        <errorConditionFormula>AND(
+ TEXT(LOQ_Status__c) = &quot;LOQ Approved&quot;,
+ NOT(
+  OR(
+   $Profile.Name = &quot;System Administrator&quot;, 
+   $Profile.Name = &quot;API Service Account&quot;, 
+   $UserRole.Name = &quot;C&amp;I Manager - Loan Operations&quot; 
+  )
+ ),
+ OR(
+  ISCHANGED(Opportunity__c),
+  ISCHANGED(C_I_Loan_Type__c),
+  ISCHANGED(Purpose_Code__c),
+  ISCHANGED(Collateral_Code_Description__c),
+  ISCHANGED(Call_Report_Code__c),   
+  ISCHANGED(Collateral_Type__c),
+  ISCHANGED(Collateral_Secured__c),
+  ISCHANGED(Property_Type__c),
+  ISCHANGED(Collateral_Type_RE__c),
+  ISCHANGED(Borrower_Relationship__c),
+  ISCHANGED(Term_Type__c),
+  ISCHANGED(Interest_Rate_Type__c),
+  ISCHANGED(Addl_LOQ_Options__c)
+ )
+)</errorConditionFormula>
+        <errorMessage>Your profile is not able to make changes to the LOQ once it has been marked as Approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LOQ_Loan_Ops_Only_can_edit_top_section</fullName>
+        <active>true</active>
+        <description>Only Julie can edit that section</description>
+        <errorConditionFormula>AND(
+NOT(
+OR(
+$Profile.Name = &quot;System Administrator&quot;,
+$Profile.Name = &quot;API Service Account&quot;,
+$UserRole.Name = &quot;C&amp;I Manager - Loan Operations&quot;
+)
+),
+OR(
+ISCHANGED(C_I_Loan_Type__c),
+ISCHANGED(Purpose_Code__c),
+ISCHANGED(Collateral_Code_Description__c ),
+ISCHANGED(Call_Report_Code__c )
+)
+)</errorConditionFormula>
+        <errorMessage>Only Loan Operations can fill in the top section of the LOQ.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LOQ_PreApproval_Check</fullName>
+        <active>true</active>
+        <description>Checks to make sure all necessary fields are filled in</description>
+        <errorConditionFormula>AND(
+NOT( 
+OR( 
+$Profile.Name = &quot;System Administrator&quot;, 
+$Profile.Name = &quot;API Service Account&quot;, 
+$UserRole.Name = &quot;C&amp;I Manager - Loan Operations&quot; 
+) 
+), 
+OR(
+ISPICKVAL(Collateral_Type__c,&quot;&quot; ),
+ISPICKVAL( Term_Type__c ,&quot;&quot; ),
+ISPICKVAL( Interest_Rate_Type__c ,&quot;&quot; ),
+ISPICKVAL( Borrower_Relationship__c ,&quot;&quot; ),
+ISPICKVAL( Collateral_Secured__c ,&quot;&quot; ),
+ISPICKVAL( Property_Type__c ,&quot;&quot; ),
+ISPICKVAL( Collateral_Type_RE__c ,&quot;&quot; ),
+ISBLANK(Addl_LOQ_Options__c)
+)
+,
+OR( 
+ISPICKVAL(LOQ_Status__c, &quot;LOQ Submitted for approval&quot;),
+ISPICKVAL(LOQ_Status__c, &quot;LOQ Approved&quot;)
+)
+)</errorConditionFormula>
+        <errorMessage>All 8 LOQ questions must be answered before submitting to Approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Submitted_for_Approval</fullName>
+        <active>true</active>
+        <description>Restrict field edits when Status is LOQ Submitted for approval</description>
+        <errorConditionFormula>AND(
+ TEXT(LOQ_Status__c) = &quot;LOQ Submitted for approval&quot;,
+ NOT(
+  OR(
+   $Profile.Name = &quot;System Administrator&quot;,
+   $Profile.Name = &quot;API Service Account&quot;,
+   $UserRole.Name  = &quot;C&amp;I Manager - Loan Operations&quot;
+  )
+ ),
+ OR(
+  ISCHANGED(Collateral_Type__c),
+  ISCHANGED(Collateral_Secured__c),
+  ISCHANGED(Property_Type__c),
+  ISCHANGED(Collateral_Type_RE__c),
+  ISCHANGED(Borrower_Relationship__c),
+  ISCHANGED(Term_Type__c),
+  ISCHANGED(Interest_Rate_Type__c),
+  ISCHANGED(Addl_LOQ_Options__c)
+ )
+)</errorConditionFormula>
+        <errorMessage>Your profile is not able to make changes to the &quot;Questions to BU&quot; fields once the LOQ has been submitted for approval.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Generate_Conga_Document</fullName>
+        <availability>online</availability>
+        <description>Validates that the record meets criteria to allow for Conga document generation</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Conga Document</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+var outputMessage = { 
+title: &apos;&apos;, 
+message: &apos;&apos; 
+};
+var continueProcessing = true;
+
+if(&apos;{!Loan_Ops_Questionnaire__c.LOQ_Status__c}&apos; != &apos;LOQ Approved&apos;) {
+  outputMessage.title = &apos;STATUS ISSUE&apos;;
+  outputMessage.message = &apos;The current LOQ is not yet approved. The Conga Document cannot yet be generated.&apos;;
+  continueProcessing = false;
+}
+
+if(continueProcessing) {
+  window.open(&apos;https://composer.congamerge.com?sessionId={!API.Session_ID}&amp;serverUrl={!API.Partner_Server_URL_80}&amp;id={!Loan_Ops_Questionnaire__c.Id}&amp;DefaultPDF=1&amp;SC0=1&amp;SC1=Attachments&amp;TemplateGroup=CI_LOQ&amp;BML={!Loan_Ops_Questionnaire__c.Name + &quot; Boarding Form Questionnaire Creation&quot;}&amp;QueryId=a0ui0000009sY1x&amp;OFN={!Loan_Ops_Questionnaire__c.Name}+Boarding+Form+Questionnaire&amp;TemplateId=a0Ni000001wxUqt&apos;,&apos;_blank&apos;, &apos;toolbar=0,location=0,menubar=0&apos;);
+} else {
+  var box = new SimpleDialog(&quot;hersh&quot;+Math.random(), true); 
+  parent.box = box; 
+  box.setTitle(outputMessage.title); 
+  box.createDialog(); 
+  box.setWidth(350); 
+  box.setContentInnerHTML(outputMessage.message + &apos;&lt;p&gt;&lt;div style=&quot;width: 100%; text-align: center;&quot;&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();window.parent.location.href=window.parent.location.href;return false;&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;&apos;); 
+  box.setupDefaultButtons(); 
+  box.show();
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Next_Stage</fullName>
+        <availability>online</availability>
+        <description>Button to create Boarding Form if all reqs are met</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Next Stage</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+var outputMessage = { 
+title: &apos;&apos;, 
+message: &apos;&apos; 
+};
+var continueProcessing = true;
+
+if(&apos;{!Loan_Ops_Questionnaire__c.LOQ_Status__c}&apos; != &apos;LOQ Approved&apos;) {
+  outputMessage.title = &apos;STATUS ISSUE&apos;;
+  outputMessage.message = &apos;The current LOQ is not yet approved. You may not progress to the Next Stage.&apos;;
+  continueProcessing = false;
+}
+
+if(continueProcessing) {
+  var bfURL = &apos;/{!$ObjectType.Boarding_Form__c}/e?retURL={!Loan_Ops_Questionnaire__c.Id}&apos;;
+
+  //IMPORTANT: FIELD NAMES WILL CHANGE AFTER PUSHED TO NEW INSTANCE
+  var result = sforce.connection.query(&quot;select Id, Name, CI_Tax_ID__c, CI_Loan_Number__c, CI_Risk_Rating__c, CI_NAICS_Index__c, CI_Loan_Amount__c, CI_Closing_Fee_s__c, CI_Projected_Initial_Funding__c, CI_Rate__c, CI_Primary_Analyst__c, CI_Primary_Analyst__r.Name, OwnerId, Owner.Name, CI_Borrower_Legal_Name__r.Name, CI_Borrower_Legal_Name__r.Id, CI_Borrower_Legal_Name__r.Phone, CI_Borrower_Legal_Name__r.BillingStreet, CI_Borrower_Legal_Name__r.BillingCity, CI_Borrower_Legal_Name__r.BillingState, CI_Borrower_Legal_Name__r.BillingPostalCode, CI_Borrower_Legal_Name__r.BillingCountry from Opportunity where Id = &apos;{!Loan_Ops_Questionnaire__c.OpportunityId__c}&apos;&quot;);
+  var opp = result.getArray(&quot;records&quot;)[0];
+  var oppOwner = opp.getArray(&quot;Owner&quot;)[0];
+  var primAn = opp.getArray(&quot;CI_Primary_Analyst__r&quot;)[0];
+  var bwr = opp.getArray(&quot;CI_Borrower_Legal_Name__r&quot;)[0];
+
+  bfURL += &apos;&amp;CF00Ni000000HqyJz_lkid=&apos; + opp.Id; //Opportunity ID
+  bfURL += &apos;&amp;CF00Ni000000HqyJz=&apos; + escape(opp.Name); //Opportunity Name
+  bfURL += &apos;&amp;CF00Ni000000HqyJy_lkid={!Loan_Ops_Questionnaire__c.Id}&apos;; //Related LOQ ID
+  bfURL += &apos;&amp;CF00Ni000000HqyJy=&apos; + escape(&apos;{!Loan_Ops_Questionnaire__c.Name}&apos;); //Related LOQ Name
+  bfURL += &apos;&amp;00Ni000000HqyKu=&apos; + escape(&apos;{!Loan_Ops_Questionnaire__c.C_I_Loan_Type__c}&apos;); //CI Loan Type
+  bfURL += &apos;&amp;00Ni000000HqyO5=&apos; + escape(&apos;{!Loan_Ops_Questionnaire__c.Purpose_Code__c}&apos;); //Purpose Code
+  bfURL += &apos;&amp;00Ni000000HqyKz=&apos; + escape(&apos;{!Loan_Ops_Questionnaire__c.Collateral_Code_Description__c}&apos;); //Collateral Code Description
+  if(bwr != null) {
+    bfURL += &apos;&amp;00Ni000000I2zi0=&apos; + escape(bwr.Name || &apos;&apos;); //BWR Legal Name
+    bfURL += &apos;&amp;00Ni000000HqyKl=&apos; + escape(bwr.BillingStreet || &apos;&apos;); //Borrower Mailing Address Street
+    bfURL += &apos;&amp;00Ni000000HqyKh=&apos; + escape(bwr.BillingCity || &apos;&apos;); //Borrower Mailing Address City
+    bfURL += &apos;&amp;00Ni000000HqyKk=&apos; + escape(bwr.BillingState || &apos;&apos;); //Borrower Mailing Address State
+    bfURL += &apos;&amp;00Ni000000HqyKj=&apos; + escape(bwr.BillingPostalCode || &apos;&apos;); //Borrower Mailing Address Postal Code
+    bfURL += &apos;&amp;00Ni000000HqyKi=&apos; + escape(bwr.BillingCountry || &apos;&apos;); //Borrower Mailing Address Country
+    bfURL += &apos;&amp;00Ni000000HqyKm=&apos; + escape(bwr.Phone || &apos;&apos;); //Borrower Phone Number
+  }
+  bfURL += &apos;&amp;00Ni000000HqyKo=&apos;+ escape(opp.CI_Tax_ID__c || &apos;&apos;); //Borrower Tax ID Number
+  bfURL += &apos;&amp;00Ni000000HqyNG=&apos;+ escape(opp.CI_Loan_Number__c || &apos;&apos;); //Loan Number
+  bfURL += &apos;&amp;00Ni000000HqyOQ=&apos;+ escape(opp.CI_Risk_Rating__c || &apos;&apos;); //Risk Rating
+  bfURL += &apos;&amp;CF00Ni000000HqyOO_lkid=&apos; + opp.OwnerId; //Relationship Manager ID
+  bfURL += &apos;&amp;CF00Ni000000HqyOO=&apos; + escape(oppOwner.Name); //Relationship Manager Name
+  bfURL += &apos;&amp;00Ni000000HqyNO=&apos; +  escape(opp.CI_NAICS_Index__c || &apos;&apos;); //NAICS Code
+  bfURL += &apos;&amp;00Ni000000HqyNC=&apos; + escape(opp.CI_Loan_Amount__c || &apos;&apos;); //Loan Amount
+  bfURL += &apos;&amp;00Ni000000HqyNZ=&apos; + escape(opp.CI_Closing_Fee_s__c || &apos;&apos;); //Origination Fee Discount
+  bfURL += &apos;&amp;00Ni000000HqyNt=&apos; + escape(opp.CI_Projected_Initial_Funding__c || &apos;&apos;); //Projected Initial Funding
+  bfURL += &apos;&amp;00Ni000000HqyOL=&apos; + escape(opp.CI_Rate__c || &apos;&apos;); //Rate
+  bfURL += &apos;&amp;00Ni000000HqyKw=&apos; + escape(&apos;{!Loan_Ops_Questionnaire__c.Call_Report_Code__c}&apos;); //Call Report Code
+  if(primAn != null) {
+    bfURL += &apos;&amp;CF00Ni000000HqyNr_lkid=&apos; + opp.CI_Primary_Analyst__c; //Primary Analyst ID
+    bfURL += &apos;&amp;CF00Ni000000HqyNr=&apos; + escape(primAn.Name); //Primary Analyst Name
+  }
+
+  window.open(bfURL, &apos;_top&apos;);
+} else {
+  var box = new SimpleDialog(&quot;hersh&quot;+Math.random(), true); 
+  parent.box = box; 
+  box.setTitle(outputMessage.title); 
+  box.createDialog(); 
+  box.setWidth(350); 
+  box.setContentInnerHTML(outputMessage.message + &apos;&lt;p&gt;&lt;div style=&quot;width: 100%; text-align: center;&quot;&gt;&lt;button class=&quot;btn&quot; onclick=&quot;window.parent.box.hide();window.parent.location.href=window.parent.location.href;return false;&quot;&gt;Close&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;&apos;); 
+  box.setupDefaultButtons(); 
+  box.show();
+}</url>
+    </webLinks>
+</CustomObject>

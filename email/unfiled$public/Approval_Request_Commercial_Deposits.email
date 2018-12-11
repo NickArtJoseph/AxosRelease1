@@ -1,0 +1,7 @@
+{!Approval_Requesting_User.Name} has requested your approval for the following item: https://bofi.my.salesforce.com/ui/support/servicedesk/ServiceDeskPage#/{!Case.Id}
+
+Please click this link to approve or reject this record. 
+
+Thank you, 
+The Salesforce Team
+...
