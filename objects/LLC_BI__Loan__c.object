@@ -42,12 +42,22 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Loan</fullName>
+        <fields>Name</fields>
+        <fields>LLC_BI__lookupKey__c</fields>
+        <fields>LLC_BI__Amount__c</fields>
+        <fields>LLC_BI__Stage_And_Status__c</fields>
+        <fields>LLC_BI__Account__c</fields>
+        <fields>LLC_BI__Maturity_Date__c</fields>
+        <fields>LLC_BI__Closed_Date__c</fields>
+        <label>Loan</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>The Loan Object stores information of the details of a Loan.</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -3043,6 +3053,56 @@ Object: Loan</description>
             <isRequired>false</isRequired>
         </displayedFields>
         <label>UI Referral Information</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>SL_Syndication_Fields</fullName>
+        <description>Fields to display in the nCino top bar on Loan when it is a syndication.</description>
+        <displayedFields>
+            <field>LLC_BI__Total_Facility_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Is_Syndication__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Syndication_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>SL Syndication Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>SL_Top_Bar</fullName>
+        <description>Fields to display in nCino top bar on Loan.</description>
+        <displayedFields>
+            <field>LLC_BI__Total_Facility_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>SL Top Bar</label>
     </fieldSets>
     <fields>
         <fullName>LLC_BI__APR__c</fullName>
@@ -8733,6 +8793,20 @@ Object: Loan</description>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>nCino uses this field to identify which Opportunity this Loan is synced to.</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Loans</relationshipLabel>
+        <relationshipName>Loans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <label>Loan</label>
     <listViews>

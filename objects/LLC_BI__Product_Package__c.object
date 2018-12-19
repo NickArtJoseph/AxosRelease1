@@ -47,7 +47,6 @@
     <description>The Product Package Object allows the user to group relationships and loans in a singular view to work complex credit packages and exposure purposes</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
@@ -468,6 +467,71 @@
             <isRequired>false</isRequired>
         </displayedFields>
         <label>Total Exposure Summary</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>SL_Syndication_Fields</fullName>
+        <description>Fields rendered in the nCino top bar when a Product Package contains a syndicated loan.</description>
+        <displayedFields>
+            <field>LLC_BI__Total_Loan_Facilities_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Total_Affiliated_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Total_Syndicated_Facility_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Total_Allocated_Syndication_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Syndication Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>SL_Top_Bar</fullName>
+        <description>Fields to display in the nCino top bar on Product Package.</description>
+        <displayedFields>
+            <field>LLC_BI__Total_Loan_Facilities_Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Stage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Total_Affiliated_Exposure__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LLC_BI__Has_Syndicated_Loans__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Top Bar Fields</label>
     </fieldSets>
     <fields>
         <fullName>LLC_BI__Account__c</fullName>

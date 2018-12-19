@@ -462,6 +462,13 @@
         <fields>Secured_Party__c</fields>
         <relatedList>UCC_Filing_SFDC2__c.Lead__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>LEAD.COMPANY</fields>
+        <fields>LEAD.PHONE</fields>
+        <fields>LEAD.RECORDTYPE</fields>
+        <relatedList>Lead.Related_Lead__c</relatedList>
+    </relatedLists>
     <runAssignmentRulesDefault>true</runAssignmentRulesDefault>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

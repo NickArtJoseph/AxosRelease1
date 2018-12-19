@@ -46,7 +46,6 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -282,6 +281,29 @@
         <unique>false</unique>
     </fields>
     <label>Route Group</label>
+    <listViews>
+        <fullName>Product_Package_Details</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Group__c</columns>
+        <columns>nFORCE__Route__c</columns>
+        <columns>nFORCE__Parent_Route__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>nFORCE__Group__c</field>
+            <operation>equals</operation>
+            <value>Product Package Details</value>
+        </filters>
+        <label>Product Package Details</label>
+    </listViews>
+    <listViews>
+        <fullName>Route_Groups</fullName>
+        <columns>NAME</columns>
+        <columns>nFORCE__Group__c</columns>
+        <columns>nFORCE__Route__c</columns>
+        <columns>nFORCE__Parent_Route__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Route Groups</label>
+    </listViews>
     <listViews>
         <fullName>nFORCE__All</fullName>
         <filterScope>Everything</filterScope>

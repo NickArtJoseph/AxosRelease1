@@ -16,6 +16,10 @@
             <outputField>Advisor_Size__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>NMLS_ID__c</inputField>
+            <outputField>NMLSID__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Chk_Cashing_Money_Ords_Cashier_Chk__c</inputField>
             <outputField>Chk_Cashing_Money_Ords_Cashier_Chk__c</outputField>
         </mappingFields>
@@ -116,10 +120,6 @@
             <outputField>NAICS_Code_SFDC2__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>NMLS_ID__c</inputField>
-            <outputField>NMLSID__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Originate_Domestic_ACH__c</inputField>
             <outputField>Originate_Domestic_ACH__c</outputField>
         </mappingFields>
@@ -172,14 +172,6 @@
             <outputField>Size__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Verified_Lines_of_Credit_SFDC2__c</inputField>
-            <outputField>Verified_Lines_of_Credit_SFDC2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Years_at_location__c</inputField>
-            <outputField>Years_at_this_location__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Specialty_Industry__c</inputField>
             <outputField>Specialty_Industry_SFDC2__c</outputField>
         </mappingFields>
@@ -191,10 +183,26 @@
             <inputField>Sub_Branch_SFDC2__c</inputField>
             <outputField>Sub_Branch_SFDC2__c</outputField>
         </mappingFields>
+        <mappingFields>
+            <inputField>Verified_Lines_of_Credit_SFDC2__c</inputField>
+            <outputField>Verified_Lines_of_Credit_SFDC2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Years_at_location__c</inputField>
+            <outputField>Years_at_this_location__c</outputField>
+        </mappingFields>
         <outputObject>Account</outputObject>
     </objectMapping>
     <objectMapping>
         <inputObject>Lead</inputObject>
+        <mappingFields>
+            <inputField>Customer_Quality__c</inputField>
+            <outputField>Customer_Quality__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Date_of_Death_SFDC2__c</inputField>
+            <outputField>Date_of_Death_SFDC2__c</outputField>
+        </mappingFields>
         <mappingFields>
             <inputField>mkto71_Acquisition_Date__c</inputField>
             <outputField>mkto71_Acquisition_Date__c</outputField>
@@ -210,14 +218,6 @@
         <mappingFields>
             <inputField>Contact_Role__c</inputField>
             <outputField>Contact_Role__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Customer_Quality__c</inputField>
-            <outputField>Customer_Quality__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Date_of_Death_SFDC2__c</inputField>
-            <outputField>Date_of_Death_SFDC2__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Deceased_SFDC2__c</inputField>
@@ -388,6 +388,14 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
+            <inputField>Best_time_call_SFDC2__c</inputField>
+            <outputField>Best_Time_to_Call_SFDC2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Borrower_First_Name__c</inputField>
+            <outputField>Borrower_First_Name__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Account_Purpose__c</inputField>
             <outputField>Account_Purpose_SFDC2__c</outputField>
         </mappingFields>
@@ -398,14 +406,6 @@
         <mappingFields>
             <inputField>AmtTransferred__c</inputField>
             <outputField>Amount_Transferred__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Best_time_call_SFDC2__c</inputField>
-            <outputField>Best_Time_to_Call_SFDC2__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Borrower_First_Name__c</inputField>
-            <outputField>Borrower_First_Name__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Borrower_Last_Name__c</inputField>
@@ -540,6 +540,14 @@
             <outputField>Marketing_Source__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>Product_Line__c</inputField>
+            <outputField>Product_Line__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>LLC_BI__Product_Line__c</inputField>
+            <outputField>LLC_BI__Product_Line__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Notes__c</inputField>
             <outputField>Deal_Specific_Items__c</outputField>
         </mappingFields>
@@ -572,8 +580,12 @@
             <outputField>Potential_Funding__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Product_Line__c</inputField>
-            <outputField>Product_Line__c</outputField>
+            <inputField>LLC_BI__Product__c</inputField>
+            <outputField>LLC_BI__Product__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>LLC_BI__Product_Type__c</inputField>
+            <outputField>LLC_BI__Product_Type__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Program__c</inputField>

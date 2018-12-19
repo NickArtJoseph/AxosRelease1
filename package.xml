@@ -6697,6 +6697,7 @@
         <members>Lead.C%26I - General</members>
         <members>Lead.C%26I - Lender Finance</members>
         <members>Lead.Capital Markets</members>
+        <members>Lead.Commercial</members>
         <members>Lead.Consumer Deposits</members>
         <members>Lead.Consumer Wholesale</members>
         <members>Lead.Dealer Services</members>
@@ -6737,6 +6738,7 @@
         <members>Opportunity.TPO</members>
         <members>Opportunity.Virtus</members>
         <members>Opportunity.WLD</members>
+        <members>Opportunity.nCino Commercial Loan</members>
         <name>BusinessProcess</name>
     </types>
     <types>
@@ -6772,6 +6774,7 @@
         <members>Document_Tracking_SFDC2__c.Document_Tracking_Compact_Layout</members>
         <members>Guarantor__c.Guarantor_SFDC2</members>
         <members>HRBRefundStatus__c.HRBStatusCustomLayout</members>
+        <members>LLC_BI__Loan__c.Loan</members>
         <members>Lead.C_I_SFDC2</members>
         <members>Lead.IPL_SFDC2</members>
         <members>Loan__c.Loan_C_I_SFDC2</members>
@@ -6794,6 +6797,11 @@
         <name>ConnectedApp</name>
     </types>
     <types>
+        <members>Silverline_nCino_combo_logo</members>
+        <members>axoslogo</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
         <members>APXTConga4__CongaMerge</members>
         <members>APXT_CMM__Conga_Mail_Merge</members>
         <members>Advisor</members>
@@ -6810,11 +6818,13 @@
         <members>LLC_BI__Bankr_Base_Installation_Lightning</members>
         <members>Lightning_Sales_Console</members>
         <members>MetaDataSearch__Metadata_Search</members>
+        <members>SL_nCino_Administration</members>
         <members>SNPCAPIQ__SP_Capital_IQ</members>
         <members>Service_Cloud_Console</members>
         <members>Virtus</members>
         <members>WLD</members>
         <members>f2b__Mass_Contact_Transfer</members>
+        <members>nCino_Axos</members>
         <members>nDESIGN__nCino_Layout</members>
         <members>nFORCE__nCino_User_Interface</members>
         <members>standard__AppLauncher</members>
@@ -12116,6 +12126,7 @@
         <members>LLC_BI__Loan__c.LLC_BI__isConvert__c</members>
         <members>LLC_BI__Loan__c.LLC_BI__isRenewal__c</members>
         <members>LLC_BI__Loan__c.LLC_BI__lookupKey__c</members>
+        <members>LLC_BI__Loan__c.Opportunity__c</members>
         <members>LLC_BI__Lockbox_Service__c.LLC_BI__Treasury_Service_Reference__c</members>
         <members>LLC_BI__Lockbox_Service__c.LLC_BI__Type__c</members>
         <members>LLC_BI__Lockbox_Service__c.LLC_BI__Vendor_Selection__c</members>
@@ -13729,6 +13740,7 @@
         <members>Lead.Referring_Business_Unit__c</members>
         <members>Lead.Region_Dealer_Services__c</members>
         <members>Lead.Regional_Center_ID__c</members>
+        <members>Lead.Related_Lead__c</members>
         <members>Lead.Remote_Deposits__c</members>
         <members>Lead.Reporting_Record_Type__c</members>
         <members>Lead.Research_Request_Notes_SFDC2__c</members>
@@ -13751,6 +13763,9 @@
         <members>Lead.SIC_2_Description_SFDC2__c</members>
         <members>Lead.SIC_Code_SFDC2__c</members>
         <members>Lead.SIC_Description_SFDC2__c</members>
+        <members>Lead.SL_Lead_Source_Company__c</members>
+        <members>Lead.SL_Lead_Source_Name__c</members>
+        <members>Lead.SL_Loan__c</members>
         <members>Lead.SNPCAPIQ__Account_Description__c</members>
         <members>Lead.SNPCAPIQ__CapitalIQCompanyID__c</members>
         <members>Lead.SNPCAPIQ__CapitalIQCompanyId_txt__c</members>
@@ -14742,6 +14757,7 @@
         <members>Opportunity.SF_Effective_Rate__c</members>
         <members>Opportunity.SF_Purchase_Price__c</members>
         <members>Opportunity.SF_Sales_Rep_2__c</members>
+        <members>Opportunity.SL_Loan__c</members>
         <members>Opportunity.SQL_ID__c</members>
         <members>Opportunity.Sale_Effective_Rate__c</members>
         <members>Opportunity.Sale_PP_Received__c</members>
@@ -20210,6 +20226,8 @@
         <members>LLC_BI__Loan__c.LLC_BI__UI_Loan_Summary</members>
         <members>LLC_BI__Loan__c.LLC_BI__UI_Lookup_Fields</members>
         <members>LLC_BI__Loan__c.LLC_BI__UI_Referral_Information</members>
+        <members>LLC_BI__Loan__c.SL_Syndication_Fields</members>
+        <members>LLC_BI__Loan__c.SL_Top_Bar</members>
         <members>LLC_BI__Opportunity_History__c.LLC_BI__Opp_History_For_Dashboard</members>
         <members>LLC_BI__Participation__c.LLC_BI__Counterparty_Report</members>
         <members>LLC_BI__Participation__c.LLC_BI__Standard_Product_Package_Credit_Memo</members>
@@ -20236,6 +20254,8 @@
         <members>LLC_BI__Product_Package__c.LLC_BI__ReviewDisplay</members>
         <members>LLC_BI__Product_Package__c.LLC_BI__Standard_Product_Package_Credit_Memo</members>
         <members>LLC_BI__Product_Package__c.LLC_BI__Total_Exposure_Summary</members>
+        <members>LLC_BI__Product_Package__c.SL_Syndication_Fields</members>
+        <members>LLC_BI__Product_Package__c.SL_Top_Bar</members>
         <members>LLC_BI__Product__c.LLC_BI__Product_Line</members>
         <members>LLC_BI__Product__c.LLC_BI__Related_List</members>
         <members>LLC_BI__Rate__c.LLC_BI__Rates</members>
@@ -20323,17 +20343,20 @@
     <types>
         <members>Account_Record_Page</members>
         <members>Account_Record_Page1</members>
+        <members>Axos_nCino_UtilityBar</members>
         <members>BOFI_Federal_Bank_UtilityBar</members>
         <members>Boarding_Form_Record_Page</members>
         <members>Borrower_Record_Page</members>
         <members>Broker_Account_SFDC2</members>
         <members>Broker_Contact_SFDC2</members>
         <members>Case_Record_Page</members>
+        <members>Commercial_Loan_Page</members>
         <members>Contact_Record_Page</members>
         <members>Contact_Record_Page1</members>
         <members>Document_Tracking_Record_Page</members>
         <members>Financial_Account_Record_Page</members>
         <members>Guarantor_Record_Page</members>
+        <members>Home_Page_Default</members>
         <members>Lead_Record_Page</members>
         <members>Lead_SFDC2</members>
         <members>LightningSalesConsole_UtilityBar</members>
@@ -20345,8 +20368,11 @@
         <members>Opportunity_SFDC2</members>
         <members>Origination_Summary_Record_Page</members>
         <members>Participation_Deal_Summary_Record_Page</members>
+        <members>Product_Package_Page</members>
         <members>SL_UAT_Issue_Record_Page</members>
         <members>Sales_UtilityBar</members>
+        <members>nCino_Administration_UtilityBar</members>
+        <members>nCino_Tracker</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -20514,6 +20540,11 @@
         <members>SF_Opp_Petition_Status_is_Approved-1</members>
         <members>SF_Opp_Petition_Status_is_Approved-3</members>
         <members>SF_Opp_Petition_Status_is_Approved-5</members>
+        <members>SL_nCino_Loan_Create_Automations-1</members>
+        <members>SL_nCino_Loan_Create_Automations-2</members>
+        <members>SL_nCino_Loan_Create_Automations-3</members>
+        <members>SL_nCino_Loan_Create_Automations-4</members>
+        <members>SL_nCino_Opportunity_Create_Automations-1</members>
         <members>Sharepoint_Referral_Add_Broker_label-1</members>
         <members>TCI_Opportunity_related_to_Application-1</members>
         <members>TCI_applicant_CIF-1</members>
@@ -20605,6 +20636,8 @@
         <members>SFDC2_Set_Opportunity_72h_Reminder</members>
         <members>SF_Funded_Closed_Won_FVR_Notification</members>
         <members>SF_Opp_Petition_Status_is_Approved</members>
+        <members>SL_nCino_Loan_Create_Automations</members>
+        <members>SL_nCino_Opportunity_Create_Automations</members>
         <members>Sharepoint_Referral_Add_Broker_label</members>
         <members>TCI_Opportunity_related_to_Application</members>
         <members>TCI_applicant_CIF</members>
@@ -21418,6 +21451,7 @@
         <members>Lead-Prospecting Business SFDC2</members>
         <members>Lead-Prospecting Consumer SFDC2</members>
         <members>Lead-SFR%2C TPO%2C IPL</members>
+        <members>Lead-SL Commercial Loan Lead</members>
         <members>Lead-SNPCAPIQ__Capital IQ Lead Layout</members>
         <members>Lead-Specialty Finance</members>
         <members>Lead-Strategic Partnerships</members>
@@ -21501,6 +21535,7 @@
         <members>Opportunity-Virtus SFDC2</members>
         <members>Opportunity-WLD</members>
         <members>Opportunity-WME SFDC2</members>
+        <members>Opportunity-nCino Commercial Banking SFDC2</members>
         <members>OpportunityLineItem-LLC_BI__Opportunity Product Layout</members>
         <members>OpportunityLineItem-Opportunity Product Layout</members>
         <members>OpportunityTeamMember-Opportunity Team Member Layout</members>
@@ -21677,8 +21712,10 @@
         <members>nFORCE__Rule_Engine_Context_Rule__c-nFORCE__Rule Engine Context Rule Layout</members>
         <members>nFORCE__Rule_Engine_Context__c-nFORCE__Rule Engine Context Layout</members>
         <members>nFORCE__Rule_Engine_Rule__c-nFORCE__Rule Engine Rule Layout</members>
+        <members>nFORCE__Screen_Section__c-SL_Screen_Section_Layout</members>
         <members>nFORCE__Screen_Section__c-nFORCE__Screen Section Layout</members>
         <members>nFORCE__Screen_Segment__c-nFORCE__Screen Segment Layout</members>
+        <members>nFORCE__Screen__c-SL_Screen Layout</members>
         <members>nFORCE__Screen__c-nFORCE__Screen Layout</members>
         <members>nFORCE__Section_Configuration__c-nFORCE__Section Configuration Layout</members>
         <members>nFORCE__Section__mdt-nFORCE__Section Layout</members>
@@ -22300,6 +22337,8 @@
         <members>nFORCE__Option__c.nFORCE__All</members>
         <members>nFORCE__Question__c.nFORCE__All</members>
         <members>nFORCE__Route_Agreement__c.nFORCE__All</members>
+        <members>nFORCE__Route_Group__c.Product_Package_Details</members>
+        <members>nFORCE__Route_Group__c.Route_Groups</members>
         <members>nFORCE__Route_Group__c.nFORCE__All</members>
         <members>nFORCE__Route__c.nFORCE__All</members>
         <members>nFORCE__Route__c.nFORCE__All1</members>
@@ -22402,6 +22441,10 @@
     <types>
         <members>Commercial %26 Industrial Lending</members>
         <name>Network</name>
+    </types>
+    <types>
+        <members>SL_Loan_Stage</members>
+        <name>PathAssistant</name>
     </types>
     <types>
         <members>Ability_to_Download_Dataloader_Temporary</members>
@@ -23370,6 +23413,8 @@
         <members>et4ae5__S8_Rest</members>
         <members>et4ae5__S8_Soap</members>
         <members>et4ae5__s50_Rest</members>
+        <members>llc_bi</members>
+        <members>nForce</members>
         <members>qbdialer__InsideSales</members>
         <members>qbdialer__InsideSales_pdlmpapis</members>
         <name>RemoteSiteSetting</name>
@@ -27904,6 +27949,10 @@
         <name>StaticResource</name>
     </types>
     <types>
+        <members>en_US</members>
+        <name>Translations</name>
+    </types>
+    <types>
         <members>Account.Account_Purpose_if_Other</members>
         <members>Account.Advisor_ARMS_ID_enter_only_number_SFDC2</members>
         <members>Account.Agents_Cannot_Edit_Do_Not_Cross_Sell</members>
@@ -28365,6 +28414,7 @@
         <members>Lead.LTN_Request_Research</members>
         <members>Lead.Request_Research_SFDC2</members>
         <members>Lead.Return_Research_SFDC2</members>
+        <members>Lead.SL_Convert_to_ncino</members>
         <members>Lead.SendGmail</members>
         <members>Lead.YahooMaps</members>
         <members>Lead.Zillow</members>
